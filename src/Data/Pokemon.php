@@ -42,9 +42,13 @@ namespace Pogo\Data {
         const SCIZOR = 212;
         const HERACROSS = 214;
         const SNEASEL = 215;
+        const TEDDIURSA = 216;
+        const URSARING = 217;
         const SKARMORY = 227;
         const HOUNDOUR = 228;
         const HOUNDOOM = 229;
+        const PHANPY = 231;
+        const DONPHAN = 232;
         const ELEKID = 239;
         const RAIKOU = 243;
         const LARVITAR = 246;

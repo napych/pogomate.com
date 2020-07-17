@@ -60,8 +60,8 @@ class Top10
             Pokemon::BEARTIC,
             Pokemon::CLEFABLE,
             Pokemon::ALAKAZAM,
-            'Donphan',
-            'Ursaring',
+            Pokemon::DONPHAN,
+            Pokemon::URSARING,
             'Roserade',
             'Ninetails'
         ],

@@ -107,6 +107,10 @@ class Evolve
         Pokemon::ABRA => null,
         Pokemon::KADABRA => Pokemon::ABRA,
         Pokemon::ALAKAZAM => Pokemon::KADABRA,
+        Pokemon::PHANPY => null,
+        Pokemon::DONPHAN => Pokemon::PHANPY,
+        Pokemon::TEDDIURSA => null,
+        Pokemon::URSARING => Pokemon::TEDDIURSA,
     ];
 
     public static function getEvolveFrom($pokemon)
