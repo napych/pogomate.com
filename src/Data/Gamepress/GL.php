@@ -2,46 +2,46 @@
 
 namespace Pogo\Data\Gamepress {
 
-    use Pogo\Data\Pokemons;
+    use Pogo\Data\PokemonList;
 
     class GL
     {
         const DESCRIPTION = 'GamePress Greater League';
         const RANKS = [
-            'Tier 1' => [Pokemons::AZUMARILL, Pokemons::SKARMORY, Pokemons::ALTARIA, Pokemons::REGISTEEL],
+            'Tier 1' => [Pokemon::AZUMARILL, Pokemon::SKARMORY, Pokemon::ALTARIA, Pokemon::REGISTEEL],
             'Tier 1.5' => [
-                Pokemons::VENUSAUR,
-                Pokemons::UMBREON,
-                Pokemons::DEOXYS,
-                Pokemons::PROBOPASS,
-                Pokemons::BASTIODON,
-                Pokemons::TROPIUS,
-                Pokemons::SABLEYE,
-                Pokemons::SWAMPERT,
-                Pokemons::MEDICHAM,
-                Pokemons::STUNFISK,
-                Pokemons::HYPNO,
-                Pokemons::MEGANIUM
+                Pokemon::VENUSAUR,
+                Pokemon::UMBREON,
+                Pokemon::DEOXYS,
+                Pokemon::PROBOPASS,
+                Pokemon::BASTIODON,
+                Pokemon::TROPIUS,
+                Pokemon::SABLEYE,
+                Pokemon::SWAMPERT,
+                Pokemon::MEDICHAM,
+                Pokemon::STUNFISK,
+                Pokemon::HYPNO,
+                Pokemon::MEGANIUM
             ],
             'Tier 2' => [
-                Pokemons::ZWELIOUS,
-                Pokemons::STUNFISK,
-                Pokemons::MELMETAL,
-                Pokemons::HAUNTER,
-                Pokemons::RAICHU,
-                Pokemons::MAROWAK,
-                Pokemons::CRESSELIA,
-                Pokemons::QUAGSIRE,
-                Pokemons::TOXICROAK,
-                Pokemons::JUMPLUFF,
-                Pokemons::JIRACHI,
-                Pokemons::MEW,
-                Pokemons::WHISCASH,
-                Pokemons::DEWGONG,
-                Pokemons::VIGOROTH,
-                Pokemons::SHIFTRY,
-                Pokemons::LANTURN,
-                Pokemons::LAPRAS
+                Pokemon::ZWELIOUS,
+                Pokemon::STUNFISK,
+                Pokemon::MELMETAL,
+                Pokemon::HAUNTER,
+                Pokemon::RAICHU,
+                Pokemon::MAROWAK,
+                Pokemon::CRESSELIA,
+                Pokemon::QUAGSIRE,
+                Pokemon::TOXICROAK,
+                Pokemon::JUMPLUFF,
+                Pokemon::JIRACHI,
+                Pokemon::MEW,
+                Pokemon::WHISCASH,
+                Pokemon::DEWGONG,
+                Pokemon::VIGOROTH,
+                Pokemon::SHIFTRY,
+                Pokemon::LANTURN,
+                Pokemon::LAPRAS
             ]
         ];
     }

@@ -1,7 +1,7 @@
 <?php
 
 namespace Pogo\Data {
-    class Pokemons {
+    class PokemonList {
         const BULBASAUR = 1;
         const IVYSAUR = 2;
         const VENUSAUR = 3;
@@ -11,8 +11,29 @@ namespace Pogo\Data {
         const SQUIRTLE = 7;
         const WARTORTLE = 8;
         const BLASTOISE = 9;
+        const CATERPIE = 10;
+        const METAPOD = 11;
+        const BUTTERFREE = 12;
+        const WEEDLE = 13;
+        const KAKUNA = 14;
+        const BEEDRILL = 15;
+        const PIDGEY = 16;
+        const PIDGEOTTO = 17;
+        const PIDGEOT = 18;
+        const RATATTA = 19;
+        const RATICATE = 20;
+        const SPEAROW = 21;
+        const FEAROW = 22;
+        const EKANS = 23;
+        const ARBOK = 24;
         const PIKACHU = 25;
         const RAICHU = 26;
+        const SANDSHREW = 27;
+        const SANDSLASH = 28;
+        const NIDORAN_F = 29;
+        const NIDORINA = 30;
+        const NIDOQUEEN = 31;
+
         const CLEFAIRY = 35;
         const CLEFABLE = 36;
         const VULPIX = 37;

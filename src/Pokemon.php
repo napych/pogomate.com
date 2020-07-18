@@ -6,7 +6,7 @@ use Exception;
 use Pogo\Data\Evolve;
 use ReflectionClass;
 
-class Pokemon
+class Pokemon extends Data\PokemonList
 {
     /** @var self[] */
     protected static $list = [];
@@ -60,7 +60,7 @@ class Pokemon
     public function getName()
     {
         if (empty(static::$names)) {
-            $fooClass = new ReflectionClass('\\Pogo\\Data\\Pokemons');
+            $fooClass = new ReflectionClass('\\Pogo\\Data\\PokemonList');
             $constants = $fooClass->getConstants();
             foreach ($constants as $name => $value) {
                 static::$names[$value] = ucfirst(strtolower($name));
