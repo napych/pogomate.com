@@ -2,6 +2,8 @@
 
 namespace Pogo\Data;
 
+use Pogo\Pokemon;
+
 class Top10
 {
     const DESCRIPTION = 'Top10 by @JaceMakings';

@@ -2,13 +2,18 @@
 
 namespace Pogo\Data\Gamepress {
 
-    use Pogo\Data\PokemonList;
+    use Pogo\Pokemon;
 
     class GL
     {
         const DESCRIPTION = 'GamePress Greater League';
         const RANKS = [
-            'Tier 1' => [Pokemon::AZUMARILL, Pokemon::SKARMORY, Pokemon::ALTARIA, Pokemon::REGISTEEL],
+            'Tier 1' => [
+                Pokemon::AZUMARILL,
+                Pokemon::SKARMORY,
+                Pokemon::ALTARIA,
+                Pokemon::REGISTEEL
+            ],
             'Tier 1.5' => [
                 Pokemon::VENUSAUR,
                 Pokemon::UMBREON,
@@ -42,6 +47,32 @@ namespace Pogo\Data\Gamepress {
                 Pokemon::SHIFTRY,
                 Pokemon::LANTURN,
                 Pokemon::LAPRAS
+            ],
+            'Tier 2.5' => [
+                Pokemon::IVYSAUR,
+                Pokemon::GALLADE,
+                Pokemon::REGICE,
+                Pokemon::CHARIZARD,
+                Pokemon::SKUNTANK,
+                Pokemon::BRONZONG,
+                Pokemon::MUNCHLAX,
+                Pokemon::TOGEKISS,
+                Pokemon::UXIE,
+                Pokemon::MAWILE,
+                Pokemon::NINETALES,
+                Pokemon::MUK,
+                Pokemon::WORMADAM,
+                Pokemon::SCRAFTY,
+                Pokemon::GALVANTULA,
+                Pokemon::FERROTHORN,
+                Pokemon::SIRFETCH_D,
+                Pokemon::REGIROCK,
+                Pokemon::IVYSAUR,
+                Pokemon::VICTREEBEL,
+                Pokemon::CLEFABLE,
+                Pokemon::MANTINE,
+                Pokemon::WIGGLYTUFF,
+                Pokemon::NOCTOWL
             ]
         ];
     }
