@@ -8,6 +8,9 @@ namespace Pogo\Data {
         const CHARMANDER = 4;
         const CHARMELEON = 5;
         const CHARIZARD = 6;
+        const SQUIRTLE = 7;
+        const WARTORTLE = 8;
+        const BLASTOISE = 9;
         const CLEFAIRY = 35;
         const CLEFABLE = 36;
         const VULPIX = 37;
@@ -15,6 +18,8 @@ namespace Pogo\Data {
         const ODDISH = 43;
         const GLOOM = 44;
         const VILEPLUME = 45;
+        const GROWLITHE = 58;
+        const ARCANINE = 59;
         const ABRA = 63;
         const KADABRA = 64;
         const ALAKAZAM = 65;
@@ -45,6 +50,7 @@ namespace Pogo\Data {
         const SCYTHER = 123;
         const JYNX = 124;
         const ELECTABUZZ = 125;
+        const MAGMAR = 126;
         const PINSIR = 127;
         const MAGIKARP = 129;
         const GYARADOS = 130;
@@ -52,6 +58,7 @@ namespace Pogo\Data {
         const VAPOREON = 134;
         const JOLTEON = 135;
         const FLAREON = 136;
+        const PORYGON = 137;
         const OMANYTE = 138;
         const OMASTAR = 139;
         const AERODACTYL = 142;
@@ -89,8 +96,10 @@ namespace Pogo\Data {
         const HOUNDOOM = 229;
         const PHANPY = 231;
         const DONPHAN = 232;
+        const PORYGON2 = 233;
         const SMOOCHUM = 238;
         const ELEKID = 239;
+        const MAGBY = 240;
         const RAIKOU = 243;
         const ENTEI = 244;
         const LARVITAR = 246;
@@ -123,6 +132,13 @@ namespace Pogo\Data {
         const LAIRON = 305;
         const AGGRON = 306;
         const ROSELIA = 315;
+        const CARAVANHA = 318;
+        const SHARPEDO = 319;
+        const TRAPINCH = 328;
+        const VIBRAVA = 329;
+        const FLYGON = 330;
+        const CACNEA = 331;
+        const CACTURNE = 332;
         const SWABLU = 333;
         const ALTARIA = 334;
         const SHUPPET = 353;
@@ -181,11 +197,13 @@ namespace Pogo\Data {
         const RHYPERIOR = 464;
         const TANGROWTH = 465;
         const ELECTIVIRE = 466;
+        const MAGMORTAR = 467;
         const TOGEKISS = 468;
         const YANMEGA = 469;
         const LEAFEON = 470;
         const GLACEON = 471;
         const MAMOSWINE = 473;
+        const PORYGON_Z = 474;
         const GALLADE = 475;
         const PROBOPASS = 476;
         const AZELF = 482;
