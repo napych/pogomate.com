@@ -42,7 +42,7 @@ class Strings
             }
             echo "</p>";
         }
-        var_dump(static::$pokemon);
+//        var_dump(static::$pokemon);
 //        var_dump(static::$reasons);
     }
 
