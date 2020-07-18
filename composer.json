@@ -1,0 +1,12 @@
+{
+    "minimum-stability": "dev",
+    "repositories": [
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Pogo\\": "src/"
+        }
+    }
+}

@@ -1,7 +1,7 @@
 <?php
 
 namespace Pogo\Data {
-    class Pokemon {
+    class Pokemons {
         const BULBASAUR = 1;
         const IVYSAUR = 2;
         const VENUSAUR = 3;

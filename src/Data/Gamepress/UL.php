@@ -2,40 +2,40 @@
 
 namespace Pogo\Data\Gamepress;
 
-use Pogo\Data\Pokemon;
+use Pogo\Data\Pokemons;
 
 class UL
 {
     const DESCRIPTION = 'GamePress Ultra League';
     const RANKS = [
-        'Tier 1' => [Pokemon::REGISTEEL, Pokemon::GIRATINA],
+        'Tier 1' => [Pokemons::REGISTEEL, Pokemons::GIRATINA],
         'Tier 1.5' => [
-            Pokemon::SWAMPERT,
-            Pokemon::MUK,
-            Pokemon::SNORLAX,
-            Pokemon::CRESSELIA,
-            Pokemon::LICKILICKY
+            Pokemons::SWAMPERT,
+            Pokemons::MUK,
+            Pokemons::SNORLAX,
+            Pokemons::CRESSELIA,
+            Pokemons::LICKILICKY
         ],
         'Tier 2' => [
-            Pokemon::SHIFTRY,
-            Pokemon::ESCAVALIER,
-            Pokemon::SCRAFTY,
-            Pokemon::GIRATINA,
-            Pokemon::UXIE,
-            Pokemon::TOGEKISS,
-            Pokemon::ZANGOOSE,
-            Pokemon::CHARIZARD,
-            Pokemon::BLASTOISE,
-            Pokemon::STEELIX,
-            Pokemon::TYPHLOSION,
-            Pokemon::MEGANIUM,
-            Pokemon::MEW,
-            Pokemon::ARTICUNO,
-            Pokemon::LAPRAS,
-            Pokemon::GYARADOS,
-            Pokemon::POLIWRATH,
-            Pokemon::CLEFABLE,
-            Pokemon::SIRFETCH_D
+            Pokemons::SHIFTRY,
+            Pokemons::ESCAVALIER,
+            Pokemons::SCRAFTY,
+            Pokemons::GIRATINA,
+            Pokemons::UXIE,
+            Pokemons::TOGEKISS,
+            Pokemons::ZANGOOSE,
+            Pokemons::CHARIZARD,
+            Pokemons::BLASTOISE,
+            Pokemons::STEELIX,
+            Pokemons::TYPHLOSION,
+            Pokemons::MEGANIUM,
+            Pokemons::MEW,
+            Pokemons::ARTICUNO,
+            Pokemons::LAPRAS,
+            Pokemons::GYARADOS,
+            Pokemons::POLIWRATH,
+            Pokemons::CLEFABLE,
+            Pokemons::SIRFETCH_D
         ]
     ];
 }
