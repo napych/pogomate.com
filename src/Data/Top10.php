@@ -73,7 +73,7 @@ class Top10
             Pokemon::HARIYAMA,
             Pokemon::BLAZIKEN,
             Pokemon::HERACROSS,
-            Pokemon::SIRFETCHD,
+            Pokemon::SIRFETCH_D,
             Pokemon::TOXICROAK,
             Pokemon::REGIGIGAS
         ],
