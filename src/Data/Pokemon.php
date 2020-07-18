@@ -134,6 +134,7 @@ namespace Pogo\Data {
         const MAGBY = 240;
         const RAIKOU = 243;
         const ENTEI = 244;
+        const SUICUNE = 245;
         const LARVITAR = 246;
         const PUPITAR = 247;
         const TYRANITAR = 248;
@@ -194,6 +195,8 @@ namespace Pogo\Data {
         const BELDUM = 374;
         const METANG = 375;
         const METAGROSS = 376;
+        const REGIROCK = 377;
+        const REGICE = 378;
         const REGISTEEL = 379;
         const LATIAS = 380;
         const LATIOS = 381;

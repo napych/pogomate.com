@@ -322,5 +322,7 @@ class Evolve
         Pokemon::POLIWHIRL => Pokemon::POLIWAG,
         Pokemon::POLIWRATH => Pokemon::POLIWHIRL,
         Pokemon::POLITOED => Pokemon::POLIWHIRL,
+        Pokemon::REGICE => null,
+        Pokemon::SUICUNE => null,
     ];
 }
