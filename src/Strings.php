@@ -22,7 +22,7 @@ class Strings
                     $newPok = static::addPokemon($pokedexId, $reason);
                     isset($reasons[$pokedexId]) ? $reasons[$pokedexId][] = $reason : $reasons[$pokedexId] = [$reason];
 
-                    $reason = "Evolves to $pokedexId ($reason)";
+                    $reason = "Evolves to $pokedexId {$newPok->getName()} ($reason)";
                     while ($newPokId = $newPok->getEvolveFrom()) {
 //                        echo "[$newPokId]";
                         $newPok = static::addPokemon($newPokId, $reason);
