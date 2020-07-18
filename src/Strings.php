@@ -33,6 +33,7 @@ class Strings
 
         echo '<h2>String</h2>';
         echo '<p>' . static::getString() . '</p>';
+        sort(static::$pokemon);
         echo '<h2>Explanation</h2>';
         foreach (static::$pokemon as $pokemon) {
             $pokedexId = $pokemon->getPokedexId();
