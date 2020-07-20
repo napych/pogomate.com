@@ -124,7 +124,7 @@ class Top10
             Pokemon::BRELOOM,
             Pokemon::TORTERRA,
             Pokemon::EXEGGUTOR,
-            Pokemon::EXEGGUTOR,
+            Pokemon::EXEGGUTOR | Mods::ALOLAN,
             Pokemon::SIMISAGE
         ],
         'Ground' => [
@@ -132,7 +132,7 @@ class Top10
             Pokemon::EXCADRILL,
             Pokemon::GARCHOMP,
             Pokemon::RHYPERIOR,
-            Pokemon::LANDORUS,
+            Pokemon::LANDORUS | Mods::FORM2,
             Pokemon::RHYDON,
             Pokemon::GOLURK,
             Pokemon::DONPHAN,

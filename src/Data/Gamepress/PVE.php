@@ -7,7 +7,7 @@ use Pogo\Pokemon;
 
 class PVE
 {
-    const DESCRIPTION = 'GamePress PVE';
+    const DESCRIPTION = 'GamePress Attackers Tier List';
     const RANKS = [
         'Tier 1' => [
             Pokemon::SALAMENCE | Mods::SHADOW,
@@ -88,7 +88,7 @@ class PVE
             Pokemon::WEAVILE,
             Pokemon::MAGNEZONE,
             Pokemon::HYDREIGON,
-            Pokemon::LANDORUS,
+            Pokemon::LANDORUS | Mods::FORM2,
             Pokemon::PINSIR | Mods::SHADOW,
             Pokemon::SCIZOR | Mods::SHADOW,
             Pokemon::HOUNDOOM | Mods::SHADOW

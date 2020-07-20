@@ -9,10 +9,13 @@ class UL
 {
     const DESCRIPTION = 'GamePress Ultra League';
     const RANKS = [
-        'Tier 1' => [Pokemon::REGISTEEL, Pokemon::GIRATINA],
+        'Tier 1' => [
+            Pokemon::REGISTEEL,
+            Pokemon::GIRATINA | Mods::FORM2
+        ],
         'Tier 1.5' => [
             Pokemon::SWAMPERT,
-            Pokemon::MUK,
+            Pokemon::MUK | Mods::ALOLAN,
             Pokemon::SNORLAX,
             Pokemon::CRESSELIA,
             Pokemon::LICKILICKY
@@ -42,7 +45,7 @@ class UL
             Pokemon::VENUSAUR,
             Pokemon::SUICUNE,
             Pokemon::OBSTAGOON,
-            Pokemon::MEWTWO,
+            Pokemon::MEWTWO | Mods::FORM2,
             Pokemon::SEISMITOAD,
             Pokemon::CONKELDURR,
             Pokemon::MELMETAL,
