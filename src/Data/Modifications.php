@@ -5,7 +5,7 @@ namespace Pogo\Data;
 class Modifications
 {
     const BASE_SHIFT = 12;
-    const ID_MASK = (self::BASE_SHIFT - 1);
+    const ID_MASK = (1 << self::BASE_SHIFT) - 1;
 
     const FORM_BITS = 2;
     const FORM_MASK = 3 << self::BASE_SHIFT;
