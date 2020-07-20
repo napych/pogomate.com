@@ -5,7 +5,8 @@ namespace Pogo\Data;
 use Pogo\Pokemon;
 use ReflectionClass;
 
-class Names {
+class Names
+{
     const CUSTOM = [
         Pokemon::NIDORAN_F => 'Nidoran♀',
         Pokemon::NIDORAN_M => 'Nidoran♂',
@@ -17,6 +18,7 @@ class Names {
     ];
 
     protected static $names = [];
+    protected static $codes = [];
 
     /**
      * @param Pokemon|int $pokemon
@@ -24,19 +26,45 @@ class Names {
      */
     public static function getName($pokemon)
     {
-        if ($pokemon instanceof Pokemon) {
-            $pokemon = $pokemon->getPokedexId();
+        self::init();
+
+        if (isset(self::$codes[$pokemon->getCode()])) {
+            return self::$codes[$pokemon->getCode()];
         }
-        if (isset(self::CUSTOM[$pokemon])) {
-            return self::CUSTOM[$pokemon];
+
+        $pokedexId = $pokemon->getPokedexId();
+        if (isset(self::CUSTOM[$pokedexId])) {
+            $name = self::CUSTOM[$pokedexId];
+        } elseif (static::$names[$pokedexId]) {
+            $name = static::$names[$pokedexId];
+        } else {
+            $name = "Unknown $pokedexId";
         }
-        if (empty(static::$names)) {
-            $fooClass = new ReflectionClass('\\Pogo\\Data\\PokemonList');
-            $constants = $fooClass->getConstants();
-            foreach ($constants as $name => $value) {
-                static::$names[$value] = ucfirst(strtolower($name));
-            }
+        $flags = [];
+        if ($pokemon->isShadow()) {
+            $flags[] = 'Shadow';
         }
-        return static::$names[$pokemon] ?? "Unknown ({$pokemon})";
+        if ($pokemon->isAlolan()) {
+            $flags[] = 'Alolan';
+        }
+        if ($form = $pokemon->getFormName()) {
+            $flags[] = $form;
+        }
+        if (!empty($flags)) {
+            $name .= ' (' . implode(', ', $flags) . ')';
+        }
+        return self::$codes[$pokemon->getCode()] = $name;
+    }
+
+    protected static function init()
+    {
+        if (!empty(static::$names)) {
+            return;
+        }
+        $fooClass = new ReflectionClass('\\Pogo\\Data\\PokemonList');
+        $constants = $fooClass->getConstants();
+        foreach ($constants as $name => $value) {
+            static::$names[$value] = ucfirst(strtolower($name));
+        }
     }
 }

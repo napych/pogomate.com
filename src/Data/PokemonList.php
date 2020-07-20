@@ -662,6 +662,7 @@ namespace Pogo\Data {
         const MELTAN = 808;
         const MELMETAL = 809;
         const OBSTAGOON = 862;
+        const PERRSERKER = 863;
         const SIRFETCH_D = 865;
     }
 }
