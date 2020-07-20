@@ -6,7 +6,7 @@ use Pogo\Pokemon;
 
 class Top10
 {
-    const DESCRIPTION = 'Top10 by @JaceMakings';
+    const DESCRIPTION = 'Top attackers by @JaceMakings';
     const LISTS = [
         'Bug' => [
             Pokemon::GENESECT,

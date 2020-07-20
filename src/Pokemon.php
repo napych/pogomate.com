@@ -4,38 +4,73 @@ namespace Pogo;
 
 use Exception;
 use Pogo\Data\Evolve;
+use Pogo\Data\Forms;
+use Pogo\Data\Modifications;
+use Pogo\Data\Names;
 use ReflectionClass;
 
 class Pokemon extends Data\PokemonList
 {
     /** @var self[] */
     protected static $list = [];
-    /** @var string[] */
-    protected static $names = [];
 
-    /** @var mixed */
+    /** @var int */
+    protected $code;
+    /** @var int */
     protected $pokedexId;
+    /** @var string */
+    protected $name = null;
     /** @var int|null */
     protected $evolveFrom = -1;
+    /** @var int */
+    protected $form = 0;
+    /** @var bool */
+    protected $alolan = false;
+    /** @var bool */
+    protected $shadow = false;
 
     /**
-     * @param int $pokedexId
+     * @param int $code
      * @return Pokemon
      */
-    public static function get($pokedexId): Pokemon
+    public static function get($code): Pokemon
     {
-        if (isset($list[$pokedexId])) {
-            return $list[$pokedexId];
+        if (isset(static::$list[$code])) {
+            return static::$list[$code];
         }
         $obj = new static;
-        $obj->pokedexId = $pokedexId;
-        static::$list[$pokedexId] = $obj;
+        $obj->code = $code;
+        $obj->pokedexId = Modifications::getId($code);
+        $obj->alolan = Modifications::isAlolan($code);
+        $obj->shadow = Modifications::isShadow($code);
+        $obj->form = Modifications::getForm($code);
+        static::$list[$obj->pokedexId] = $obj;
         return $obj;
+    }
+
+    public function getCode()
+    {
+        return $this->code;
     }
 
     public function getPokedexId()
     {
         return $this->pokedexId;
+    }
+
+    public function isAlolan()
+    {
+        return $this->alolan;
+    }
+
+    public function isShadow()
+    {
+        return $this->shadow;
+    }
+
+    public function getFormName()
+    {
+        return Forms::FORMS[$this->pokedexId][$this->form] ?? '';
     }
 
     /**
@@ -47,11 +82,11 @@ class Pokemon extends Data\PokemonList
         if ($this->evolveFrom !== -1) {
             return $this->evolveFrom;
         }
-        if (!array_key_exists($this->pokedexId, Evolve::EVOLVE_FROM)) {
-            throw new Exception('Evolve from is not set for pokemon ' . $this->pokedexId);
+        if (!array_key_exists($this->code, Evolve::EVOLVE_FROM)) {
+            throw new Exception('Evolve from is not set for pokemon ' . $this->code);
         }
-        $this->evolveFrom = Evolve::EVOLVE_FROM[$this->pokedexId];
-        if ($this->evolveFrom == $this->pokedexId) {
+        $this->evolveFrom = Evolve::EVOLVE_FROM[$this->code];
+        if ($this->evolveFrom === $this->pokedexId) {
             throw new Exception("Pokemon {$this->pokedexId} evolve from is set to itself!");
         }
         return $this->evolveFrom;
@@ -59,13 +94,9 @@ class Pokemon extends Data\PokemonList
 
     public function getName()
     {
-        if (empty(static::$names)) {
-            $fooClass = new ReflectionClass('\\Pogo\\Data\\PokemonList');
-            $constants = $fooClass->getConstants();
-            foreach ($constants as $name => $value) {
-                static::$names[$value] = ucfirst(strtolower($name));
-            }
+        if (!$this->name) {
+            $this->name = Names::getName($this);
         }
-        return static::$names[$this->pokedexId] ?? "Unknown ({$this->pokedexId})";
+        return $this->name;
     }
 }

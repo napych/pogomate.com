@@ -4,47 +4,51 @@ namespace Pogo;
 
 class Strings
 {
-    const PREFIX = '!4*&cp0-1749&!shiny&!lucky&!legendary&!mythical&!@special&';
-    const HIGHEST = 890;
-
     /** @var Pokemon[] */
-    protected static $pokemon = [];
+    protected $pokemon = [];
     /** @var array[] */
-    protected static $reasons = [];
+    protected $reasons = [];
 
-    public static function run()
+    public function __construct()
     {
-        $lists = \Pogo\Data\Lists::getAll();
-        foreach ($lists as $volume => $parts) {
-            foreach ($parts as $title => $data) {
-                foreach ($data as $pokedexId) {
-                    $reason = "$volume: $title";
-                    $newPok = static::addPokemon($pokedexId, $reason);
-                    isset($reasons[$pokedexId]) ? $reasons[$pokedexId][] = $reason : $reasons[$pokedexId] = [$reason];
+    }
 
-                    $reason = "Evolves to $pokedexId {$newPok->getName()} ($reason)";
-                    while ($newPokId = $newPok->getEvolveFrom()) {
+    public function addLists($lists)
+    {
+        foreach ($lists as $volume => $parts) {
+            $this->addList($parts, $volume);
+        }
+    }
+
+    public function addList($list, $srcReason = null)
+    {
+        $reason = '';
+        foreach ($list as $title => $data) {
+            foreach ($data as $pokedexId) {
+                $reason = $srcReason ? "$srcReason: $title" : null;
+                $newPok = $this->addPokemon($pokedexId, $reason);
+
+                $reason = $reason ? "Evolves to $pokedexId {$newPok->getName()} ($reason)" : null;
+                while ($newPokId = $newPok->getEvolveFrom()) {
 //                        echo "[$newPokId]";
-                        $newPok = static::addPokemon($newPokId, $reason);
-                    }
+                    $newPok = $this->addPokemon($newPokId, $reason);
                 }
             }
         }
+    }
 
-        echo '<h2>String</h2>';
-        echo '<p>' . static::getString() . '</p>';
-        sort(static::$pokemon);
-        echo '<h2>Explanation</h2>';
-        foreach (static::$pokemon as $pokemon) {
+    public function showReasons()
+    {
+        $pokemonList = $this->pokemon;
+        sort($pokemonList);
+        foreach ($pokemonList as $pokemon) {
             $pokedexId = $pokemon->getPokedexId();
             echo "<p><strong> {$pokedexId} {$pokemon->getName()}</strong><br>";
-            foreach (static::$reasons[$pokedexId] as $reason) {
+            foreach ($this->reasons[$pokedexId] as $reason) {
                 echo "$reason<br>";
             }
             echo "</p>";
         }
-//        var_dump(static::$pokemon);
-//        var_dump(static::$reasons);
     }
 
     /**
@@ -52,27 +56,29 @@ class Strings
      * @param string $reason
      * @return Pokemon
      */
-    protected static function addPokemon($pokedexId, $reason)
+    protected function addPokemon($pokedexId, $reason = null)
     {
-        if (!isset(static::$pokemon[$pokedexId])) {
-            static::$pokemon[$pokedexId] = Pokemon::get($pokedexId);
+        if (!isset($this->pokemon[$pokedexId])) {
+            $this->pokemon[$pokedexId] = Pokemon::get($pokedexId);
         }
-        if (!isset(static::$reasons[$pokedexId])) {
-            static::$reasons[$pokedexId] = [];
+        if ($reason) {
+            if (!isset($this->reasons[$pokedexId])) {
+                $this->reasons[$pokedexId] = [];
+            }
+            $this->reasons[$pokedexId][] = $reason;
         }
-        static::$reasons[$pokedexId][] = $reason;
-        return static::$pokemon[$pokedexId];
+        return $this->pokemon[$pokedexId];
     }
 
-    protected function getString()
+    public function getExcludeString()
     {
         $includes = [];
         $excludes = [];
 
         $includeFrom = 0;
         $excludeFrom = 0;
-        for ($i = 1; $i <= static::HIGHEST; $i++) {
-            if (isset(static::$pokemon[$i])) {
+        for ($i = 1; $i <= Settings::MAX_POKEDEX_ID; $i++) {
+            if (isset($this->pokemon[$i])) {
 //                echo "[$i]";
                 if (!$excludeFrom) {
                     $excludeFrom = $i;
@@ -113,8 +119,37 @@ class Strings
                 $excludes[] .= "$excludeFrom-" . ($i - 1);
             }
         }
-        $include = static::PREFIX . implode(',', $includes);
-        $exclude = static::PREFIX . '!' . implode('&!', $excludes);
+        $include = implode(',', $includes);
+        $exclude = '!' . implode('&!', $excludes);
         return strlen($include) <= strlen($exclude) ? $include : $exclude;
+    }
+
+    public function getIncludeString()
+    {
+        $includes = [];
+        $includeFrom = 0;
+        for ($i = 1; $i <= Settings::MAX_POKEDEX_ID; $i++) {
+            if (isset($this->pokemon[$i])) {
+//                echo "[$i]";
+                if (!$includeFrom) {
+                    $includeFrom = $i;
+                }
+            } elseif ($includeFrom) {
+                if ($includeFrom == $i - 1) {
+                    $includes[] = $includeFrom;
+                } else {
+                    $includes[] .= "$includeFrom-" . ($i - 1);
+                }
+                $includeFrom = 0;
+            }
+        }
+        if ($includeFrom) {
+            if ($includeFrom == $i - 1) {
+                $includes[] = $includeFrom;
+            } else {
+                $includes[] .= "$includeFrom-" . ($i - 1);
+            }
+        }
+        return implode(',', $includes);
     }
 }
