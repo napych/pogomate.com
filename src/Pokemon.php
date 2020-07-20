@@ -4,6 +4,7 @@ namespace Pogo;
 
 use Exception;
 use Pogo\Data\Evolve;
+use Pogo\Data\Names;
 use ReflectionClass;
 
 class Pokemon extends Data\PokemonList
@@ -59,13 +60,6 @@ class Pokemon extends Data\PokemonList
 
     public function getName()
     {
-        if (empty(static::$names)) {
-            $fooClass = new ReflectionClass('\\Pogo\\Data\\PokemonList');
-            $constants = $fooClass->getConstants();
-            foreach ($constants as $name => $value) {
-                static::$names[$value] = ucfirst(strtolower($name));
-            }
-        }
-        return static::$names[$this->pokedexId] ?? "Unknown ({$this->pokedexId})";
+        return Names::getName($this);
     }
 }

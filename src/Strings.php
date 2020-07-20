@@ -4,8 +4,6 @@ namespace Pogo;
 
 class Strings
 {
-    const HIGHEST = 890;
-
     /** @var Pokemon[] */
     protected $pokemon = [];
     /** @var array[] */
@@ -79,7 +77,7 @@ class Strings
 
         $includeFrom = 0;
         $excludeFrom = 0;
-        for ($i = 1; $i <= static::HIGHEST; $i++) {
+        for ($i = 1; $i <= Settings::MAX_POKEDEX_ID; $i++) {
             if (isset($this->pokemon[$i])) {
 //                echo "[$i]";
                 if (!$excludeFrom) {
@@ -130,7 +128,7 @@ class Strings
     {
         $includes = [];
         $includeFrom = 0;
-        for ($i = 1; $i <= static::HIGHEST; $i++) {
+        for ($i = 1; $i <= Settings::MAX_POKEDEX_ID; $i++) {
             if (isset($this->pokemon[$i])) {
 //                echo "[$i]";
                 if (!$includeFrom) {
