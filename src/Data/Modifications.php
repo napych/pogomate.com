@@ -15,8 +15,8 @@ class Modifications
     const FORM4 = 3 << self::BASE_SHIFT;
 
     const FLAGS_SHIFT = (self::BASE_SHIFT + self::FORM_BITS);
-    const ALOLAN = self::FLAGS_SHIFT << 0;
-    const SHADOW = self::FLAGS_SHIFT << 1;
+    const ALOLAN = 1 << (self::FLAGS_SHIFT);
+    const SHADOW = 1 << (self::FLAGS_SHIFT + 1);
 
     public static function getId($flaggedId)
     {
