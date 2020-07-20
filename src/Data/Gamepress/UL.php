@@ -2,6 +2,7 @@
 
 namespace Pogo\Data\Gamepress;
 
+use Pogo\Data\Mods;
 use Pogo\Pokemon;
 
 class UL
@@ -54,7 +55,7 @@ class UL
             Pokemon::WIGGLYTUFF,
             Pokemon::WHISCASH,
             Pokemon::FLYGON,
-            Pokemon::MACHAMP,
+            Pokemon::MACHAMP | Mods::SHADOW,
             Pokemon::DRAGONITE,
             Pokemon::CLOYSTER,
             Pokemon::PRIMEAPE,

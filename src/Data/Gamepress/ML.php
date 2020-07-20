@@ -2,6 +2,7 @@
 
 namespace Pogo\Data\Gamepress;
 
+use Pogo\Data\Mods;
 use Pogo\Pokemon;
 
 class ML
@@ -24,6 +25,7 @@ class ML
             Pokemon::MAGNEZONE,
             Pokemon::LUCARIO,
             Pokemon::GYARADOS,
+            Pokemon::MACHAMP | Mods::SHADOW,
             Pokemon::REGICE,
             Pokemon::ZAPDOS,
             Pokemon::REGIROCK,

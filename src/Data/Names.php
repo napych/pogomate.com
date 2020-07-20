@@ -22,6 +22,7 @@ class Names
 
     /**
      * @param Pokemon|int $pokemon
+     * @param bool $short
      * @return mixed|string
      */
     public static function getName($pokemon)
@@ -32,26 +33,27 @@ class Names
             return self::$codes[$pokemon->getCode()];
         }
 
-        $pokedexId = $pokemon->getPokedexId();
-        if (isset(self::CUSTOM[$pokedexId])) {
-            $name = self::CUSTOM[$pokedexId];
-        } elseif (static::$names[$pokedexId]) {
-            $name = static::$names[$pokedexId];
-        } else {
-            $name = "Unknown $pokedexId";
-        }
-        $flags = [];
+        $name = '';
         if ($pokemon->isShadow()) {
-            $flags[] = 'Shadow';
+            $name .= 'Shadow ';
         }
         if ($pokemon->isAlolan()) {
-            $flags[] = 'Alolan';
+            $name .= 'Alolan ';
+        }
+        if ($pokemon->isGalarian()) {
+            $name .= 'Galarian ';
+        }
+
+        $pokedexId = $pokemon->getPokedexId();
+        if (isset(self::CUSTOM[$pokedexId])) {
+            $name .= self::CUSTOM[$pokedexId];
+        } elseif (static::$names[$pokedexId]) {
+            $name .= static::$names[$pokedexId];
+        } else {
+            $name .= "Unknown/$pokedexId";
         }
         if ($form = $pokemon->getFormName()) {
-            $flags[] = $form;
-        }
-        if (!empty($flags)) {
-            $name .= ' (' . implode(', ', $flags) . ')';
+            $name .= " ($form)";
         }
         return self::$codes[$pokemon->getCode()] = $name;
     }

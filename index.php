@@ -3,6 +3,7 @@
 require(dirname(__FILE__) . '/vendor/autoload.php');
 
 try {
+    ini_set('display_errors', 'on');
     $lists = \Pogo\Data\Lists::getAll();
     $all = new \Pogo\Strings();
     $all->addLists($lists);

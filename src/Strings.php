@@ -24,13 +24,16 @@ class Strings
     {
         $reason = '';
         foreach ($list as $title => $data) {
-            foreach ($data as $pokedexId) {
+            foreach ($data as $code) {
                 $reason = $srcReason ? "$srcReason: $title" : null;
-                $newPok = $this->addPokemon($pokedexId, $reason);
+                $newPok = $this->addPokemon($code, $reason);
 
-                $reason = $reason ? "Evolves to $pokedexId {$newPok->getName()} ($reason)" : null;
+                if ($reason) {
+                    $shortName = Pokemon::get($newPok->getPokedexId())->getName();
+                    $reason = "Evolves to {$newPok->getPokedexId()} {$shortName} ($reason)";
+                }
                 while ($newPokId = $newPok->getEvolveFrom()) {
-//                        echo "[$newPokId]";
+//                    echo "[$newPokId]";
                     $newPok = $this->addPokemon($newPokId, $reason);
                 }
             }
@@ -40,11 +43,21 @@ class Strings
     public function showReasons()
     {
         $pokemonList = $this->pokemon;
-        sort($pokemonList);
+        usort($pokemonList, function ($v1, $v2) {
+            if ($v1->getPokedexId() > $v2->getPokedexId()) {
+                return 1;
+            } elseif ($v1->getPokedexId() < $v2->getPokedexId()) {
+                return -1;
+            } elseif ($v1->getCode() > $v2->getCode()) {
+                return 1;
+            } elseif ($v1->getCode() < $v2->getCode()) {
+                return -1;
+            }
+            return 0;
+        });
         foreach ($pokemonList as $pokemon) {
-            $pokedexId = $pokemon->getPokedexId();
-            echo "<p><strong> {$pokedexId} {$pokemon->getName()}</strong><br>";
-            foreach ($this->reasons[$pokedexId] as $reason) {
+            echo "<p><strong> {$pokemon->getPokedexId()} {$pokemon->getName()}</strong><br>";
+            foreach ($this->reasons[$pokemon->getCode()] as $reason) {
                 echo "$reason<br>";
             }
             echo "</p>";
@@ -52,22 +65,22 @@ class Strings
     }
 
     /**
-     * @param mixed $pokedexId
+     * @param mixed $code
      * @param string $reason
      * @return Pokemon
      */
-    protected function addPokemon($pokedexId, $reason = null)
+    protected function addPokemon($code, $reason = null)
     {
-        if (!isset($this->pokemon[$pokedexId])) {
-            $this->pokemon[$pokedexId] = Pokemon::get($pokedexId);
+        if (!isset($this->pokemon[$code])) {
+            $this->pokemon[$code] = Pokemon::get($code);
         }
         if ($reason) {
-            if (!isset($this->reasons[$pokedexId])) {
-                $this->reasons[$pokedexId] = [];
+            if (!isset($this->reasons[$code])) {
+                $this->reasons[$code] = [];
             }
-            $this->reasons[$pokedexId][] = $reason;
+            $this->reasons[$code][] = $reason;
         }
-        return $this->pokemon[$pokedexId];
+        return $this->pokemon[$code];
     }
 
     public function getExcludeString()
@@ -77,8 +90,14 @@ class Strings
 
         $includeFrom = 0;
         $excludeFrom = 0;
+
+        $list = [];
+        foreach ($this->pokemon as $pokemon) {
+            $list[$pokemon->getPokedexId()] = 1;
+        }
+
         for ($i = 1; $i <= Settings::MAX_POKEDEX_ID; $i++) {
-            if (isset($this->pokemon[$i])) {
+            if (isset($list[$i])) {
 //                echo "[$i]";
                 if (!$excludeFrom) {
                     $excludeFrom = $i;
@@ -128,8 +147,14 @@ class Strings
     {
         $includes = [];
         $includeFrom = 0;
+
+        $list = [];
+        foreach ($this->pokemon as $pokemon) {
+            $list[$pokemon->getPokedexId()] = 1;
+        }
+
         for ($i = 1; $i <= Settings::MAX_POKEDEX_ID; $i++) {
-            if (isset($this->pokemon[$i])) {
+            if (isset($list[$i])) {
 //                echo "[$i]";
                 if (!$includeFrom) {
                     $includeFrom = $i;

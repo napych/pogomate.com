@@ -2,7 +2,7 @@
 
 namespace Pogo\Data;
 
-class Modifications
+class Mods
 {
     const BASE_SHIFT = 12;
     const ID_MASK = (1 << self::BASE_SHIFT) - 1;
@@ -16,7 +16,8 @@ class Modifications
 
     const FLAGS_SHIFT = (self::BASE_SHIFT + self::FORM_BITS);
     const ALOLAN = 1 << (self::FLAGS_SHIFT);
-    const SHADOW = 1 << (self::FLAGS_SHIFT + 1);
+    const GALARIAN = 1 << (self::FLAGS_SHIFT + 1);
+    const SHADOW = 1 << (self::FLAGS_SHIFT + 2);
 
     public static function getId($flaggedId)
     {
@@ -36,6 +37,11 @@ class Modifications
     public static function isShadow($flaggedId)
     {
         return (bool)($flaggedId & static::SHADOW);
+    }
+
+    public static function isGalarian($flaggedId)
+    {
+        return (bool)($flaggedId & static::GALARIAN);
     }
 
     public static function getForm($flaggedId)

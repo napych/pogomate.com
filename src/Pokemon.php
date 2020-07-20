@@ -5,9 +5,8 @@ namespace Pogo;
 use Exception;
 use Pogo\Data\Evolve;
 use Pogo\Data\Forms;
-use Pogo\Data\Modifications;
+use Pogo\Data\Mods;
 use Pogo\Data\Names;
-use ReflectionClass;
 
 class Pokemon extends Data\PokemonList
 {
@@ -28,6 +27,8 @@ class Pokemon extends Data\PokemonList
     protected $alolan = false;
     /** @var bool */
     protected $shadow = false;
+    /** @var bool */
+    protected $galarian = false;
 
     /**
      * @param int $code
@@ -40,11 +41,12 @@ class Pokemon extends Data\PokemonList
         }
         $obj = new static;
         $obj->code = $code;
-        $obj->pokedexId = Modifications::getId($code);
-        $obj->alolan = Modifications::isAlolan($code);
-        $obj->shadow = Modifications::isShadow($code);
-        $obj->form = Modifications::getForm($code);
-        static::$list[$obj->pokedexId] = $obj;
+        $obj->pokedexId = Mods::getId($code);
+        $obj->alolan = Mods::isAlolan($code);
+        $obj->galarian = Mods::isGalarian($code);
+        $obj->shadow = Mods::isShadow($code);
+        $obj->form = Mods::getForm($code);
+        static::$list[$code] = $obj;
         return $obj;
     }
 
@@ -61,6 +63,11 @@ class Pokemon extends Data\PokemonList
     public function isAlolan()
     {
         return $this->alolan;
+    }
+
+    public function isGalarian()
+    {
+        return $this->galarian;
     }
 
     public function isShadow()
@@ -82,12 +89,19 @@ class Pokemon extends Data\PokemonList
         if ($this->evolveFrom !== -1) {
             return $this->evolveFrom;
         }
-        if (!array_key_exists($this->code, Evolve::EVOLVE_FROM)) {
-            throw new Exception('Evolve from is not set for pokemon ' . $this->code);
+        $code = $this->code;
+        if ($this->shadow) {
+            $code -= Mods::SHADOW;
         }
-        $this->evolveFrom = Evolve::EVOLVE_FROM[$this->code];
-        if ($this->evolveFrom === $this->pokedexId) {
-            throw new Exception("Pokemon {$this->pokedexId} evolve from is set to itself!");
+        if (!array_key_exists($code, Evolve::EVOLVE_FROM)) {
+            throw new Exception('Evolve from is not set for pokemon ' . $code . ' ' . $this->getName());
+        }
+        $this->evolveFrom = Evolve::EVOLVE_FROM[$code];
+        if ($this->evolveFrom && $this->shadow) {
+             $this->evolveFrom += Mods::SHADOW;
+        }
+        if ($this->evolveFrom === $this->code) {
+            throw new Exception("Pokemon {$this->code} evolve from is set to itself!");
         }
         return $this->evolveFrom;
     }

@@ -2,6 +2,7 @@
 
 namespace Pogo\Data\Gamepress {
 
+    use Pogo\Data\Mods;
     use Pogo\Pokemon;
 
     class GL
@@ -67,7 +68,7 @@ namespace Pogo\Data\Gamepress {
                 Pokemon::FERROTHORN,
                 Pokemon::SIRFETCH_D,
                 Pokemon::REGIROCK,
-                Pokemon::IVYSAUR,
+                Pokemon::IVYSAUR | Mods::SHADOW,
                 Pokemon::VICTREEBEL,
                 Pokemon::CLEFABLE,
                 Pokemon::MANTINE,
