@@ -2,7 +2,7 @@
 
 namespace Pogo\Data\Gamepress;
 
-use Pogo\Data\PokemonList;
+use Pogo\Pokemon;
 
 class ML
 {

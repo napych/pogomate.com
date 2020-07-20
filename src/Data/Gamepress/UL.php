@@ -2,7 +2,7 @@
 
 namespace Pogo\Data\Gamepress;
 
-use Pogo\Data\PokemonList;
+use Pogo\Pokemon;
 
 class UL
 {
@@ -36,6 +36,33 @@ class UL
             Pokemon::POLIWRATH,
             Pokemon::CLEFABLE,
             Pokemon::SIRFETCH_D
+        ],
+        'Tier 2.5' => [
+            Pokemon::VENUSAUR,
+            Pokemon::SUICUNE,
+            Pokemon::OBSTAGOON,
+            Pokemon::MEWTWO,
+            Pokemon::SEISMITOAD,
+            Pokemon::CONKELDURR,
+            Pokemon::MELMETAL,
+            Pokemon::TOXICROAK,
+            Pokemon::DRAPION,
+            Pokemon::GARCHOMP,
+            Pokemon::DRIFBLIM,
+            Pokemon::JIRACHI,
+            Pokemon::REGICE,
+            Pokemon::WIGGLYTUFF,
+            Pokemon::WHISCASH,
+            Pokemon::FLYGON,
+            Pokemon::MACHAMP,
+            Pokemon::DRAGONITE,
+            Pokemon::CLOYSTER,
+            Pokemon::PRIMEAPE,
+            Pokemon::MACHAMP,
+            Pokemon::KINGDRA,
+            Pokemon::URSARING,
+            Pokemon::UMBREON,
+            Pokemon::POLITOED
         ]
     ];
 }

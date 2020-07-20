@@ -38,9 +38,13 @@ namespace Pogo\Data {
         const CLEFABLE = 36;
         const VULPIX = 37;
         const NINETALES = 38;
+        const JIGGLYPUFF = 39;
+        const WIGGLYTUFF = 40;
         const ODDISH = 43;
         const GLOOM = 44;
         const VILEPLUME = 45;
+        const MANKEY = 56;
+        const PRIMEAPE = 57;
         const GROWLITHE = 58;
         const ARCANINE = 59;
         const POLIWAG = 60;
@@ -65,6 +69,8 @@ namespace Pogo\Data {
         const DEWGONG = 87;
         const GRIMER = 88;
         const MUK = 89;
+        const SHELLDER = 90;
+        const CLOYSTER = 91;
         const GASTLY = 92;
         const HAUNTER = 93;
         const GENGAR = 94;
@@ -81,6 +87,8 @@ namespace Pogo\Data {
         const RHYHORN = 111;
         const RHYDON = 112;
         const TANGELA = 114;
+        const HORSEA = 116;
+        const SEADRA = 117;
         const SCYTHER = 123;
         const JYNX = 124;
         const ELECTABUZZ = 125;
@@ -115,9 +123,12 @@ namespace Pogo\Data {
         const TOTODILE = 158;
         const CROCONAW = 159;
         const FERALIGATR = 160;
+        const HOOTHOOT = 163;
+        const NOCTOWL = 164;
         const CHINCHOU = 170;
         const LANTURN = 171;
         const CLEFFA = 173;
+        const IGGLYBUFF = 174;
         const TOGEPI = 175;
         const TOGETIC = 176;
         const BELLOSSOM = 182;
@@ -144,9 +155,11 @@ namespace Pogo\Data {
         const URSARING = 217;
         const SWINUB = 220;
         const PILOSWINE = 221;
+        const MANTINE = 226;
         const SKARMORY = 227;
         const HOUNDOUR = 228;
         const HOUNDOOM = 229;
+        const KINGDRA = 230;
         const PHANPY = 231;
         const DONPHAN = 232;
         const PORYGON2 = 233;
@@ -170,6 +183,8 @@ namespace Pogo\Data {
         const MUDKIP = 258;
         const MARSHTOMP = 259;
         const SWAMPERT = 260;
+        const ZIGZAGOON = 263;
+        const LINOONE = 264;
         const SEEDOT = 273;
         const NUZLEAF = 274;
         const SHIFTRY = 275;
@@ -186,6 +201,7 @@ namespace Pogo\Data {
         const AZURILL = 298;
         const NOSEPASS = 299;
         const SABLEYE = 302;
+        const MAWILE = 303;
         const ARON = 304;
         const LAIRON = 305;
         const AGGRON = 306;
@@ -244,20 +260,28 @@ namespace Pogo\Data {
         const RAMPARDOS = 409;
         const SHIELDON = 410;
         const BASTIODON = 411;
+        const BURMY = 412;
+        const WORMADAM = 413;
+        const MOTHIM = 414;
         const DRIFLOON = 425;
         const DRIFBLIM = 426;
         const MISMAGIUS = 429;
         const HONCHKROW = 430;
         const STUNKY = 434;
         const SKUNTANK = 435;
+        const BRONZOR = 436;
+        const BRONZONG = 437;
         const GIBLE = 443;
         const GABITE = 444;
         const GARCHOMP = 445;
         const MUNCHLAX = 446;
         const RIOLU = 447;
         const LUCARIO = 448;
+        const SKORUPI = 451;
+        const DRAPION = 452;
         const CROAGUNK = 453;
         const TOXICROAK = 454;
+        const MANTYKE = 458;
         const WEAVILE = 461;
         const MAGNEZONE = 462;
         const LICKILICKY = 463;
@@ -298,6 +322,9 @@ namespace Pogo\Data {
         const TIMBURR = 532;
         const GURDURR = 533;
         const CONKELDURR = 534;
+        const TYMPOLE = 535;
+        const PALPITOAD = 536;
+        const SEISMITOAD = 537;
         const VENIPEDE = 543;
         const WHIRLIPEDE = 544;
         const SCOLIPEDE = 545;
@@ -310,6 +337,10 @@ namespace Pogo\Data {
         const VANILLUXE = 584;
         const KARRABLAST = 588;
         const ESCAVALIER = 589;
+        const JOLTIK = 595;
+        const GALVANTULA = 596;
+        const FERROSEED = 597;
+        const FERROTHORN = 598;
         const LITWICK = 607;
         const LAMPENT = 608;
         const CHANDELURE = 609;
@@ -337,6 +368,7 @@ namespace Pogo\Data {
         const GENESECT = 649;
         const MELTAN = 808;
         const MELMETAL = 809;
+        const OBSTAGOON = 862;
         const SIRFETCH_D = 865;
     }
 }

@@ -24,8 +24,8 @@ class Pokemon extends Data\PokemonList
      */
     public static function get($pokedexId): Pokemon
     {
-        if (isset($list[$pokedexId])) {
-            return $list[$pokedexId];
+        if (isset(static::$list[$pokedexId])) {
+            return static::$list[$pokedexId];
         }
         $obj = new static;
         $obj->pokedexId = $pokedexId;
