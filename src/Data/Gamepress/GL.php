@@ -62,7 +62,7 @@ namespace Pogo\Data\Gamepress {
                 Pokemon::MAWILE,
                 Pokemon::NINETALES | Mods::ALOLAN,
                 Pokemon::MUK | Mods::ALOLAN,
-                Pokemon::WORMADAM,
+                Pokemon::WORMADAM | Mods::FORM2,
                 Pokemon::SCRAFTY,
                 Pokemon::GALVANTULA,
                 Pokemon::FERROTHORN,

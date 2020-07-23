@@ -29,8 +29,8 @@ class Strings
                 $newPok = $this->addPokemon($code, $reason);
 
                 if ($reason) {
-                    $shortName = Pokemon::get($newPok->getPokedexId())->getName();
-                    $reason = "Evolves to {$newPok->getPokedexId()} {$shortName} ($reason)";
+//                    $shortName = Pokemon::get($newPok->getPokedexId())->getName();
+                    $reason = "Evolves to {$newPok->getPokedexId()} {$newPok->getName()} ($reason)";
                 }
                 while ($newPokId = $newPok->getEvolveFrom()) {
 //                    echo "[$newPokId]";
