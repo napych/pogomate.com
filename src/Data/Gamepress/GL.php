@@ -25,7 +25,7 @@ namespace Pogo\Data\Gamepress {
                 Pokemon::SABLEYE,
                 Pokemon::SWAMPERT,
                 Pokemon::MEDICHAM,
-                Pokemon::STUNFISK,
+                Pokemon::STUNFISK | Mods::GALARIAN,
                 Pokemon::HYPNO,
                 Pokemon::MEGANIUM
             ],

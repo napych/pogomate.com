@@ -18,6 +18,7 @@ class Mods
     const ALOLAN = 1 << (self::FLAGS_SHIFT);
     const GALARIAN = 1 << (self::FLAGS_SHIFT + 1);
     const SHADOW = 1 << (self::FLAGS_SHIFT + 2);
+    const MEGA = 1 << (self::FLAGS_SHIFT + 3);
 
     public static function getId($code)
     {

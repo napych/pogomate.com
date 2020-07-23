@@ -132,7 +132,7 @@ class Top10
             Pokemon::EXCADRILL,
             Pokemon::GARCHOMP,
             Pokemon::RHYPERIOR,
-            Pokemon::LANDORUS | Mods::FORM2,
+            Pokemon::LANDORUS | Mods::FORM1,
             Pokemon::RHYDON,
             Pokemon::GOLURK,
             Pokemon::DONPHAN,
