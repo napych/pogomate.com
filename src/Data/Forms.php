@@ -29,5 +29,6 @@ class Forms
         Pokemon::WISHIWASHI => ['Solo Form', 'School Form'],
         Pokemon::MINIOR => ['Meteor Form', 'Red Core'],
         Pokemon::NECROZMA => [null, 'Dusk Mane', 'Dawn Wings', 'Ultra Necrozma'],
+        Pokemon::TOXTRICITY => ['Low Key Form', 'Amped Form'],
     ];
 }

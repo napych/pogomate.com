@@ -826,8 +826,31 @@ namespace Pogo\Data {
         const BLIPBUG = 824;
         const DOTTLER = 825;
         const ORBEETLE = 826;
+        const NICKIT = 827;
+        const THIEVUL = 828;
+        const GOSSIFLEUR = 829;
+        const ELDEGOSS = 830;
+        const WOOLOO = 831;
+        const DUBWOOL = 832;
+        const CHEWTLE = 833;
+        const DREDNAW = 834;
+        const YAMPER = 835;
+        const BOLTUND = 836;
+        const ROLYCOLY = 837;
+        const CARKOL = 838;
+        const COALOSSAL = 839;
+        const APPLIN = 840;
+        const FLAPPLE = 841;
+        const APPLETUN = 842;
+        const SILICOBRA = 843;
+        const SANDACONDA = 844;
+        const CRAMORANT = 845;
+        const ARROKUDA = 846;
+        const BARRASKEWDA = 847;
+        const TOXEL = 848;
+        const TOXTRICITY = 849;
 
-        // next: https://www.pokemon.com/us/pokedex/nickit
+        // next: https://www.pokemon.com/us/pokedex/sizzlipede
 
         const OBSTAGOON = 862;
         const PERRSERKER = 863;

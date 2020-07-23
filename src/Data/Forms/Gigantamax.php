@@ -25,5 +25,11 @@ class Gigantamax
         Pokemon::INTELEON,
         Pokemon::CORVIKNIGHT,
         Pokemon::ORBEETLE,
+        Pokemon::DREDNAW,
+        Pokemon::COALOSSAL,
+        Pokemon::FLAPPLE,
+        Pokemon::APPLETUN,
+        Pokemon::SANDACONDA,
+        Pokemon::TOXTRICITY,
     ];
 }
