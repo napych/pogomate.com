@@ -80,6 +80,11 @@ class Pokemon extends Data\PokemonList
         return Forms::FORMS[$this->pokedexId][$this->form] ?? '';
     }
 
+    public function getForm()
+    {
+        return Mods::getForm($this->code);
+    }
+
     /**
      * @return mixed|null
      * @throws Exception

@@ -19,33 +19,38 @@ class Mods
     const GALARIAN = 1 << (self::FLAGS_SHIFT + 1);
     const SHADOW = 1 << (self::FLAGS_SHIFT + 2);
 
-    public static function getId($flaggedId)
+    public static function getId($code)
     {
-        return $flaggedId & static::ID_MASK;
+        return $code & static::ID_MASK;
     }
 
-    public static function hasFlags($flaggedId)
+    public static function hasFlags($code)
     {
-        return $flaggedId != static::getId($flaggedId);
+        return $code != static::getId($code);
     }
 
-    public static function isAlolan($flaggedID)
+    public static function isAlolan($code)
     {
-        return (bool)($flaggedID & static::ALOLAN);
+        return (bool)($code & static::ALOLAN);
     }
 
-    public static function isShadow($flaggedId)
+    public static function isShadow($code)
     {
-        return (bool)($flaggedId & static::SHADOW);
+        return (bool)($code & static::SHADOW);
     }
 
-    public static function isGalarian($flaggedId)
+    public static function isGalarian($code)
     {
-        return (bool)($flaggedId & static::GALARIAN);
+        return (bool)($code & static::GALARIAN);
     }
 
-    public static function getForm($flaggedId)
+    public static function getForm($code)
     {
-        return ($flaggedId & static::FORM_MASK) >> static::BASE_SHIFT;
+        return ($code & static::FORM_MASK) >> static::BASE_SHIFT;
+    }
+
+    public static function getFormFlags($form)
+    {
+        return $form << self::BASE_SHIFT;
     }
 }
