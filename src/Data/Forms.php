@@ -25,5 +25,9 @@ class Forms
         Pokemon::AEGISLASH => ['Shield Forme', 'Blade Forme'],
         Pokemon::ZYGARGE => ['50% Forme', '10% Forme', 'Complete Forme'],
         Pokemon::HOOPA => ['Hoopa Confined', 'Hoopa Unbound'],
+        Pokemon::LYCANROC => ['Midday Form', 'Midnight Form', 'Dusk Form'],
+        Pokemon::WISHIWASHI => ['Solo Form', 'School Form'],
+        Pokemon::MINIOR => ['Meteor Form', 'Red Core'],
+        Pokemon::NECROZMA => [null, 'Dusk Mane', 'Dawn Wings', 'Ultra Necrozma'],
     ];
 }

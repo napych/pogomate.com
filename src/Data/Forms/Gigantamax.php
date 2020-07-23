@@ -20,5 +20,10 @@ class Gigantamax
         Pokemon::EEVEE,
         Pokemon::SNORLAX,
         Pokemon::GARBODOR,
+        Pokemon::RILLABOOM,
+        Pokemon::CINDERACE,
+        Pokemon::INTELEON,
+        Pokemon::CORVIKNIGHT,
+        Pokemon::ORBEETLE,
     ];
 }

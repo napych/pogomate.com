@@ -14,7 +14,15 @@ class Names
         Pokemon::MR_MIME => 'Mr. Mime',
         Pokemon::HO_OH => 'Ho-Oh',
         Pokemon::MIME_JR => 'Mime Jr.',
-        Pokemon::SIRFETCH_D => 'Sirfetch\'d'
+        Pokemon::SIRFETCH_D => 'Sirfetch\'d',
+        Pokemon::TYPE_NULL => 'Type: Null',
+        Pokemon::JANGMO_O => 'Jangmo-o',
+        Pokemon::HAKAMO_O => 'Hakamo-o',
+        Pokemon::KOMMO_O => 'Kommo-o',
+        Pokemon::TAPU_KOKO => 'Tapu Koko',
+        Pokemon::TAPU_LELE => 'Tapu Lele',
+        Pokemon::TAPU_BULU => 'Tapu Bulu',
+        Pokemon::TAPU_FINI => 'Tapu Fini',
     ];
 
     protected static $names = [];
