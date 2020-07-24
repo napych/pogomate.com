@@ -1,0 +1,303 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "d86832633acaeb7640644f5cfe66e20a",
+    "packages": [
+        {
+            "name": "difra/cms",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/difra-org/cms.git",
+                "reference": "a87f81fd3038511dfa136377330c8e241186166b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/difra-org/cms/archive/1.0.2.zip",
+                "reference": "a87f81fd3038511dfa136377330c8e241186166b"
+            },
+            "require": {
+                "difra/difra": "~7.0.0",
+                "difra/editor": "~1.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "main.php"
+                ],
+                "classmap": [
+                    "src/CMS.php"
+                ],
+                "psr-4": {
+                    "Difra\\CMS\\": "src"
+                }
+            },
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Eduard Kutuev",
+                    "email": "nap@napych.com"
+                }
+            ],
+            "description": "CMS plugin for Difra framework",
+            "support": {
+                "source": "https://github.com/difra-org/cms/tree/master",
+                "issues": "https://github.com/difra-org/cms/issues"
+            },
+            "time": "2020-04-11T10:56:34+00:00"
+        },
+        {
+            "name": "difra/difra",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/difra-org/difra.git",
+                "reference": "4803a1ff7b862af9db4c5450604ca9eafcdaa58c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/difra-org/difra/zipball/4803a1ff7b862af9db4c5450604ca9eafcdaa58c",
+                "reference": "4803a1ff7b862af9db4c5450604ca9eafcdaa58c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ctype": "*",
+                "ext-curl": "*",
+                "ext-date": "*",
+                "ext-dom": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "ext-pdo_mysql": "*",
+                "ext-reflection": "*",
+                "ext-session": "*",
+                "ext-simplexml": "*",
+                "ext-xsl": "*",
+                "ext-zlib": "*",
+                "oyejorge/less.php": "~1.7.0",
+                "php": "7.x",
+                "scssphp/scssphp": "1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/main.php"
+                ],
+                "psr-4": {
+                    "Difra\\": "src"
+                }
+            },
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "description": "Difra framework",
+            "homepage": "https://www.difra.org",
+            "keywords": [
+                "framework",
+                "php"
+            ],
+            "support": {
+                "source": "https://github.com/difra-org/difra/tree/master"
+            },
+            "time": "2020-06-22T11:36:35+00:00"
+        },
+        {
+            "name": "difra/editor",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/difra-org/editor.git",
+                "reference": "151ed8a19634f0db6f958aedd24594b2cf6f96cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/difra-org/editor/archive/1.0.1.zip",
+                "reference": "151ed8a19634f0db6f958aedd24594b2cf6f96cc"
+            },
+            "require": {
+                "difra/difra": "~7.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "main.php"
+                ],
+                "psr-4": {
+                    "Difra\\Editor\\": "src"
+                }
+            },
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Eduard Kutuev",
+                    "email": "nap@napych.com"
+                }
+            ],
+            "description": "Editor plugin for Difra framework",
+            "support": {
+                "source": "https://github.com/difra-org/editor/tree/master",
+                "issues": "https://github.com/difra-org/editor/issues"
+            },
+            "time": "2020-04-11T10:54:42+00:00"
+        },
+        {
+            "name": "oyejorge/less.php",
+            "version": "1.7.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oyejorge/less.php.git",
+                "reference": "8f77f13bbc4d5997c76322523e1fb28376acf080"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oyejorge/less.php/zipball/8f77f13bbc4d5997c76322523e1fb28376acf080",
+                "reference": "8f77f13bbc4d5997c76322523e1fb28376acf080",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2"
+            },
+            "bin": [
+                "bin/lessc"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Less": "lib/"
+                },
+                "classmap": [
+                    "lessc.inc.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Matt Agar",
+                    "homepage": "https://github.com/agar"
+                },
+                {
+                    "name": "Martin Jantošovič",
+                    "homepage": "https://github.com/Mordred"
+                },
+                {
+                    "name": "Josh Schmidt",
+                    "homepage": "https://github.com/oyejorge"
+                }
+            ],
+            "description": "PHP port of the Javascript version of LESS http://lesscss.org",
+            "homepage": "http://lessphp.gpeasy.com",
+            "keywords": [
+                "css",
+                "less",
+                "less.js",
+                "lesscss",
+                "php",
+                "stylesheet"
+            ],
+            "abandoned": true,
+            "time": "2014-03-04T18:49:54+00:00"
+        },
+        {
+            "name": "scssphp/scssphp",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/scssphp/scssphp.git",
+                "reference": "4363ddce8d750f055c436833dd77d83517946532"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/scssphp/scssphp/zipball/4363ddce8d750f055c436833dd77d83517946532",
+                "reference": "4363ddce8d750f055c436833dd77d83517946532",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ctype": "*",
+                "ext-json": "*",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7 || ^6.5 || ^7.5 || ^8.3",
+                "squizlabs/php_codesniffer": "~3.5",
+                "twbs/bootstrap": "~4.3",
+                "zurb/foundation": "~6.5"
+            },
+            "bin": [
+                "bin/pscss"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ScssPhp\\ScssPhp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anthon Pang",
+                    "email": "apang@softwaredevelopment.ca",
+                    "homepage": "https://github.com/robocoder"
+                },
+                {
+                    "name": "Cédric Morin",
+                    "email": "cedric@yterium.com",
+                    "homepage": "https://github.com/Cerdic"
+                }
+            ],
+            "description": "scssphp is a compiler for SCSS written in PHP.",
+            "homepage": "http://scssphp.github.io/scssphp/",
+            "keywords": [
+                "css",
+                "less",
+                "sass",
+                "scss",
+                "stylesheet"
+            ],
+            "time": "2020-04-21T15:53:32+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [
+        {
+            "alias": "7.0.0",
+            "alias_normalized": "7.0.0.0",
+            "version": "9999999-dev",
+            "package": "difra/difra"
+        },
+        {
+            "alias": "1.0.2",
+            "alias_normalized": "1.0.2.0",
+            "version": "9999999-dev",
+            "package": "difra/editor"
+        },
+        {
+            "alias": "1.0.3",
+            "alias_normalized": "1.0.3.0",
+            "version": "9999999-dev",
+            "package": "difra/cms"
+        }
+    ],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "difra/difra": 20,
+        "difra/editor": 20,
+        "difra/cms": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
+}

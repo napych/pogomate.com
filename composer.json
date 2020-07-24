@@ -1,8 +1,23 @@
 {
     "minimum-stability": "dev",
     "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:difra-org/difra.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:difra-org/editor.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:difra-org/cms.git"
+        }
     ],
     "require": {
+        "difra/difra": "dev-master as 7.0.0",
+        "difra/editor": "dev-master as 1.0.2",
+        "difra/cms": "dev-master as 1.0.3"
     },
     "autoload": {
         "psr-4": {
