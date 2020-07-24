@@ -30,5 +30,10 @@ class Forms
         Pokemon::MINIOR => ['Meteor Form', 'Red Core'],
         Pokemon::NECROZMA => [null, 'Dusk Mane', 'Dawn Wings', 'Ultra Necrozma'],
         Pokemon::TOXTRICITY => ['Low Key Form', 'Amped Form'],
+        Pokemon::INDEEDEE => ['Female', 'Male'],
+//        Pokemon::MORPEKO => ['Full Belly Mode', 'Hangry Mode'],
+        Pokemon::ZACIAN => ['Hero of Many Battles', 'Crowned Sword'],
+        Pokemon::ZAMAZENTA => ['Hero of Many Battles', 'Crowned Shield'],
+        Pokemon::URSHIFU => ['Single Strike Style', 'Rapid Strike Style'],
     ];
 }

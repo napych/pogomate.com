@@ -849,11 +849,48 @@ namespace Pogo\Data {
         const BARRASKEWDA = 847;
         const TOXEL = 848;
         const TOXTRICITY = 849;
-
-        // next: https://www.pokemon.com/us/pokedex/sizzlipede
-
+        const SIZZLIPEDE = 850;
+        const CENTISKORCH = 851;
+        const CLOBBOPUS = 852;
+        const GRAPPLOCT = 853;
+        const SINISTEA = 854;
+        const POLTEAGEIST = 855;
+        const HATENNA = 856;
+        const HATTREM = 857;
+        const HATTERENE = 858;
+        const IMPIDIMP = 859;
+        const MORGREM = 860;
+        const GRIMMSNARL = 861;
         const OBSTAGOON = 862;
         const PERRSERKER = 863;
+        const CURSOLA = 864;
         const SIRFETCH_D = 865;
+        const MR_RIME = 866;
+        const RINERIGUS = 867;
+        const MILCERY = 868;
+        const ALCREMIE = 869;
+        const FALINKS = 870;
+        const PINCURCHIN = 871;
+        const SNOM = 872;
+        const FROSMOTH = 873;
+        const STONJOURNER = 874;
+        const EISCUE = 875;
+        const INDEEDEE = 876;
+        const MORPEKO = 877;
+        const CUFANT = 878;
+        const COPPERAJAH = 879;
+        const DRACOZOLT = 880;
+        const ARCTOZOLT = 881;
+        const DRACOVISH = 882;
+        const ARCTOVISH = 883;
+        const DURALUDON = 884;
+        const DREEPY = 885;
+        const DRAKLOAK = 886;
+        const DRAGAPULT = 887;
+        const ZACIAN = 888;
+        const ZAMAZENTA = 889;
+        const ETERNATUS = 890;
+        const KUBFU = 891;
+        const URSHIFU = 892;
     }
 }

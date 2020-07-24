@@ -23,6 +23,7 @@ class Names
         Pokemon::TAPU_LELE => 'Tapu Lele',
         Pokemon::TAPU_BULU => 'Tapu Bulu',
         Pokemon::TAPU_FINI => 'Tapu Fini',
+        Pokemon::MR_RIME => 'Mr. Rime',
     ];
 
     protected static $names = [];

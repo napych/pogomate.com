@@ -2,6 +2,7 @@
 
 namespace Pogo\Data\Forms;
 
+use Pogo\Data\Mods;
 use Pogo\Pokemon;
 
 class Gigantamax
@@ -31,5 +32,13 @@ class Gigantamax
         Pokemon::APPLETUN,
         Pokemon::SANDACONDA,
         Pokemon::TOXTRICITY,
+        Pokemon::CENTISKORCH,
+        Pokemon::HATTERENE,
+        Pokemon::GRIMMSNARL,
+        Pokemon::ALCREMIE,
+        Pokemon::COPPERAJAH,
+        Pokemon::DURALUDON,
+        Pokemon::URSHIFU | Mods::FORM1,
+        Pokemon::URSHIFU | Mods::FORM2,
     ];
 }
