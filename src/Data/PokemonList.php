@@ -129,6 +129,7 @@ namespace Pogo\Data {
         const ELECTABUZZ = 125;
         const MAGMAR = 126;
         const PINSIR = 127;
+        const TAUROS = 128;
         const MAGIKARP = 129;
         const GYARADOS = 130;
         const LAPRAS = 131;
@@ -481,6 +482,7 @@ namespace Pogo\Data {
         const FROSLASS = 478;
         const ROTOM = 479;
         const UXIE = 480;
+        const MESPRIT = 481;
         const AZELF = 482;
         const DIALGA = 483;
         const PALKIA = 484;
