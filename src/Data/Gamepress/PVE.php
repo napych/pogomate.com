@@ -10,6 +10,7 @@ class PVE
     const DESCRIPTION = 'GamePress Attackers Tier List';
     const RANKS = [
         'Tier 1' => [
+            Pokemon::MEWTWO | Mods::SHADOW,
             Pokemon::SALAMENCE | Mods::SHADOW,
             Pokemon::METAGROSS | Mods::SHADOW,
             Pokemon::MACHAMP | Mods::SHADOW,
@@ -26,21 +27,21 @@ class PVE
         ],
         'Tier 1.5' => [
             Pokemon::MEWTWO,
-            Pokemon::SALAMENCE,
-            Pokemon::KYOGRE,
-            Pokemon::RAYQUAZA,
-            Pokemon::RHYPERIOR,
-            Pokemon::DARKRAI,
-            Pokemon::GIRATINA | Mods::FORM1,
-            Pokemon::CONKELDURR,
-            Pokemon::CHANDELURE,
             Pokemon::ZAPDOS | Mods::SHADOW,
-            Pokemon::GARDEVOIR | Mods::SHADOW,
-            Pokemon::VENUSAUR | Mods::SHADOW,
-            Pokemon::TORTERRA | Mods::SHADOW,
-            Pokemon::ENTEI | Mods::SHADOW,
+            Pokemon::ELECTIVIRE | Mods::SHADOW,
             Pokemon::MAGNEZONE | Mods::SHADOW,
-            Pokemon::ELECTIVIRE | Mods::SHADOW
+            Pokemon::ENTEI | Mods::SHADOW,
+            Pokemon::TORTERRA | Mods::SHADOW,
+            Pokemon::VENUSAUR | Mods::SHADOW,
+            Pokemon::GARDEVOIR | Mods::SHADOW,
+            Pokemon::CHANDELURE,
+            Pokemon::SALAMENCE,
+            Pokemon::CONKELDURR,
+            Pokemon::GIRATINA | Mods::FORM1,
+            Pokemon::DARKRAI,
+            Pokemon::RHYPERIOR,
+            Pokemon::RAYQUAZA,
+            Pokemon::KYOGRE,
         ],
         'Tier 2' => [
             Pokemon::MACHAMP,

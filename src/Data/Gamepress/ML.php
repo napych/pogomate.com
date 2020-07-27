@@ -16,7 +16,7 @@ class ML
             Pokemon::PALKIA,
             Pokemon::GIRATINA | Mods::FORM2,
             Pokemon::GARCHOMP,
-            Pokemon::GIRATINA,
+            Pokemon::GIRATINA | Mods::FORM1,
             Pokemon::ZEKROM
         ],
         'Tier 2' => [Pokemon::DRAGONITE, Pokemon::MEWTWO, Pokemon::MEW, Pokemon::LUGIA, Pokemon::SWAMPERT, Pokemon::METAGROSS, Pokemon::MELMETAL, Pokemon::HYDREIGON],
