@@ -2,33 +2,39 @@
 
 namespace Controller;
 
+use Difra\View\HttpError;
+
 class Strings extends \Difra\Controller
 {
     protected function indexAction()
     {
+        $node = $this->root->appendChild($this->xml->createElement('page-strings'));
         try {
-            ini_set('display_errors', 'on');
             $lists = \Pogo\Data\Lists::getAll();
             $all = new \Pogo\Strings();
             $all->addLists($lists);
 
-            echo('<h2>Strings</h2>');
-
-            echo('<h3>Cleanup candidates</h3>');
-            echo('<p>!4*&cp0-1999&!shiny&!lucky&!legendary&!mythical&!@special&' . $all->getExcludeString() . '</p>');
+            $node->setAttribute('cleanup', '!4*&cp0-1999&!shiny&!lucky&!legendary&!mythical&!@special&' . $all->getExcludeString());
 
             foreach ($lists as $name => $list) {
-                ("<h3>$name</h3>");
                 $single = new \Pogo\Strings();
                 $single->addList($list);
-                echo($single->getIncludeString());
+                $listNode = $node->appendChild($this->xml->createElement('list'));
+                $listNode->setAttribute('name', $name);
+                $listNode->setAttribute('string', $single->getIncludeString());
             }
 
-            echo('<h2>Explanation</h2>');
-            $all->showReasons();
+            $reasons = $all->getReasons();
+            foreach ($reasons as $name => $reasonList) {
+                $reasonNode = $node->appendChild($this->xml->createElement('reasons'));
+                $reasonNode->setAttribute('name', $name);
+                foreach ($reasonList as $reasonEntry) {
+                    $entryNode = $reasonNode->appendChild($this->xml->createElement('reason'));
+                    $entryNode->setAttribute('text', $reasonEntry);
+                }
+            }
         } catch (\Exception $e) {
-            echo('Exception: ' . $e->getMessage());
+            throw new HttpError(500);
         }
-        die();
     }
 }

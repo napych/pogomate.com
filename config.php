@@ -22,8 +22,8 @@ return [
     'instances' => [
         'main' => [
             'include' => [
+                'bootstrap' => true,
                 'all' => true,
-                'bootstrap' => true
             ]
         ]
     ],

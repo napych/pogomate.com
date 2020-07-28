@@ -40,7 +40,7 @@ class Strings
         }
     }
 
-    public function showReasons()
+    public function getReasons()
     {
         $pokemonList = $this->pokemon;
         usort($pokemonList, function ($v1, $v2) {
@@ -55,13 +55,16 @@ class Strings
             }
             return 0;
         });
+        $result = [];
         foreach ($pokemonList as $pokemon) {
-            echo "<p><strong> {$pokemon->getPokedexId()} {$pokemon->getName()}</strong><br>";
+            $name = $pokemon->getPokedexId() . ' ' . $pokemon->getName();
+            $subResult = [];
             foreach ($this->reasons[$pokemon->getCode()] as $reason) {
-                echo "$reason<br>";
+                $subResult[] = $reason;
             }
-            echo "</p>";
+            $result[$name] = $subResult;
         }
+        return $result;
     }
 
     /**
