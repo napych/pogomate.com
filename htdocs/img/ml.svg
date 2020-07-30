@@ -1,0 +1,18 @@
+<svg width="189" height="181" viewBox="0 0 189 181" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.11228 1.3966e-06C64.1935 1.3966e-06 124.275 1.3966e-06 184.356 1.3966e-06C188.372 -0.00287899 190.123 4.45024 188.246 8.02288C158.273 65.0976 128.301 122.172 98.3274 179.247C97.0739 181.634 92.1388 181.554 90.8997 179.185C60.8091 121.695 30.7262 64.2095 0.633646 6.71902C-0.904603 3.77335 0.397008 1.3966e-06 4.11228 1.3966e-06Z" fill="#2B2A29" fill-opacity="0.270588"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 9H178L94.8637 167L12 9Z" fill="#FEFEFE"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18 12H172L94.8734 160L18 12Z" fill="url(#paint0_linear)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M59 16C70.0931 16 79.1802 24.5575 79.9923 35.4154H67.655C66.9066 31.3247 63.3169 28.2239 59 28.2239C54.6831 28.2239 51.0934 31.3247 50.345 35.4154H38.0077C38.8198 24.5575 47.9069 16 59 16ZM80 38.47C79.2439 49.3827 70.1317 58 59 58C47.8683 58 38.7561 49.3827 38 38.47H50.3258C51.0269 42.6175 54.6436 45.7761 59 45.7761C63.3564 45.7761 66.9732 42.6175 67.6743 38.47H80Z" fill="#FEFEFE"/>
+<path d="M58.5 42C61.5375 42 64 39.5376 64 36.5C64 33.4624 61.5375 31 58.5 31C55.4624 31 53 33.4624 53 36.5C53 39.5376 55.4624 42 58.5 42Z" fill="#FEFEFE"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M78.3294 128.925L126.348 99.3363L117.104 117.021L83.0584 138L78.3294 128.925ZM167.969 12H172L164.672 26.02L58.7281 91.3021L54 82.2258L167.969 12ZM150.572 52.9956L141.327 70.6794L70.6685 114.219L65.9404 105.144L150.572 52.9956Z" fill="url(#paint1_linear)"/>
+<defs>
+<linearGradient id="paint0_linear" x1="142.159" y1="33.1779" x2="53.3224" y2="87.5404" gradientUnits="userSpaceOnUse">
+<stop stop-color="#9361CF"/>
+<stop offset="1" stop-color="#321D82"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="65.9193" y1="107.904" x2="157.948" y2="46.8147" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BF27AE"/>
+<stop offset="1" stop-color="#F668D6"/>
+</linearGradient>
+</defs>
+</svg>
