@@ -3,22 +3,17 @@
     <xsl:template match="page-strings">
         <div class="container">
             <h1>Search strings</h1>
-            <div class="alert alert-primary" role="alert">
-                <xsl:text>To use a string, copy and paste it to the pokemon search field.</xsl:text>
-            </div>
 
-            <h3>Cleanup candidates</h3>
-            <p>
-                <xsl:value-of select="@cleanup"/>
-            </p>
+            <xsl:call-template name="snippet-string">
+                <xsl:with-param name="name" select="'Cleanup candidates'"/>
+                <xsl:with-param name="string" select="@cleanup"/>
+            </xsl:call-template>
 
             <xsl:for-each select="list">
-                <h3>
-                    <xsl:value-of select="@name"/>
-                </h3>
-                <p>
-                    <xsl:value-of select="@string"/>
-                </p>
+                <xsl:call-template name="snippet-string">
+                    <xsl:with-param name="name" select="@name"/>
+                    <xsl:with-param name="string" select="@string"/>
+                </xsl:call-template>
             </xsl:for-each>
 
             <h2>Explanation</h2>

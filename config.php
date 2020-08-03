@@ -23,6 +23,7 @@ return [
         'main' => [
             'include' => [
                 'bootstrap' => true,
+                'jquery' => true,
                 'all' => true,
             ]
         ]

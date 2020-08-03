@@ -1,0 +1,10 @@
+{
+  "background_color": "white",
+  "description": "Pokemon Go Tools",
+  "display": "fullscreen",
+  "icons": [
+  ],
+  "name": "PoGo Mate",
+  "short_name": "PoGo Mate",
+  "start_url": "/strings"
+}
