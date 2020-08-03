@@ -25,6 +25,11 @@
                     <xsl:with-param name="icon" select="'/img/ul.svg'"/>
                 </xsl:call-template>
                 <xsl:call-template name="menu-main-item">
+                    <xsl:with-param name="link" select="'/counters'"/>
+                    <xsl:with-param name="text" select="'Counters'"/>
+                    <xsl:with-param name="icon" select="'/img/ml.svg'"/>
+                </xsl:call-template>
+                <xsl:call-template name="menu-main-item">
                     <xsl:with-param name="link" select="'/pokemon'"/>
                     <xsl:with-param name="text" select="'Pokémon'"/>
                     <xsl:with-param name="icon" select="'/img/ml.svg'"/>
