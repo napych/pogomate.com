@@ -5,9 +5,9 @@
         <xsl:param name="string"/>
 
         <div class="string" data-string="{$string}">
-            <h3>
+            <h5>
                 <xsl:value-of select="$name"/>
-            </h3>
+            </h5>
             <p>
                 <a href="#" class="string-copy">Copy</a>
                 <xsl:text> </xsl:text>

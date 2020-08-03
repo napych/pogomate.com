@@ -1,0 +1,35 @@
+#menu-main {
+    @media (max-width: @max-width-tablet) {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1030;
+    }
+    @media (max-width: @max-width-phone) {
+        .navbar-brand {
+            display:none;
+        }
+        //ul {
+        //    width: 100%;
+        //    li {
+        //        flex: 1 1 0px;
+        //        img {
+        //            margin-right: 0;
+        //        }
+        //        &:last-child {
+        //            flex: 0;
+        //        }
+        //    }
+        //}
+        //.navbar-brand, .nav-link span {
+        //    display: none;
+        //}
+    }
+    img {
+        display: none; // remove this
+        width: 30px;
+        height: 30px;
+        margin-right: 4px;
+    }
+}

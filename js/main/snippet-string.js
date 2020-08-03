@@ -18,6 +18,6 @@ function snippetStringConceal(event) {
     event.preventDefault();
 }
 
-$(document).on('click dblclick touchend', '.string .string-copy', snippetStringCopy);
-$(document).on('click dblclick touchend', '.string .string-reveal', snippetStringReveal);
-$(document).on('click dblclick touchend', '.string .string-conceal', snippetStringConceal);
+$(document).on('click dblclick', '.string .string-copy', snippetStringCopy);
+$(document).on('click dblclick', '.string .string-reveal', snippetStringReveal);
+$(document).on('click dblclick', '.string .string-conceal', snippetStringConceal);

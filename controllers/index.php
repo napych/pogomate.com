@@ -12,6 +12,6 @@ class Index extends \Difra\Controller
         if (self::hasUnusedParameters()) {
             throw new View\HttpError(404);
         }
-        View::redirect('/strings');
+        View::redirect('/cleanup');
     }
 }
