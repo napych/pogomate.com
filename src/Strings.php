@@ -30,7 +30,7 @@ class Strings
 
                 if ($reason) {
 //                    $shortName = Pokemon::get($newPok->getPokedexId())->getName();
-                    $reason = "Evolves to {$newPok->getPokedexId()} {$newPok->getName()} ($reason)";
+                    $reason = "⇨ {$newPok->getPokedexId()} {$newPok->getName()} ($reason)";
                 }
                 while ($newPokId = $newPok->getEvolveFrom()) {
 //                    echo "[$newPokId]";
