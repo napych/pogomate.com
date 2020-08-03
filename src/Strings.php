@@ -30,7 +30,7 @@ class Strings
 
                 if ($reason) {
 //                    $shortName = Pokemon::get($newPok->getPokedexId())->getName();
-                    $reason = "⇨ {$newPok->getPokedexId()} {$newPok->getName()} ($reason)";
+                    $reason = "⇨ #{$newPok->getPokedexId()} {$newPok->getName()} ($reason)";
                 }
                 while ($newPokId = $newPok->getEvolveFrom()) {
 //                    echo "[$newPokId]";
@@ -57,7 +57,7 @@ class Strings
         });
         $result = [];
         foreach ($pokemonList as $pokemon) {
-            $name = $pokemon->getPokedexId() . ' ' . $pokemon->getName();
+            $name = '#' . $pokemon->getPokedexId() . ' ' . $pokemon->getName();
             $subResult = [];
             foreach ($this->reasons[$pokemon->getCode()] as $reason) {
                 $subResult[] = $reason;
