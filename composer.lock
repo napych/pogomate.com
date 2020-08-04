@@ -4,53 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d86832633acaeb7640644f5cfe66e20a",
+    "content-hash": "31a4c22e0a964b8790c45bf86979c6ca",
     "packages": [
-        {
-            "name": "difra/cms",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/difra-org/cms.git",
-                "reference": "a87f81fd3038511dfa136377330c8e241186166b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/difra-org/cms/archive/1.0.2.zip",
-                "reference": "a87f81fd3038511dfa136377330c8e241186166b"
-            },
-            "require": {
-                "difra/difra": "~7.0.0",
-                "difra/editor": "~1.0.0"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "main.php"
-                ],
-                "classmap": [
-                    "src/CMS.php"
-                ],
-                "psr-4": {
-                    "Difra\\CMS\\": "src"
-                }
-            },
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Eduard Kutuev",
-                    "email": "nap@napych.com"
-                }
-            ],
-            "description": "CMS plugin for Difra framework",
-            "support": {
-                "source": "https://github.com/difra-org/cms/tree/master",
-                "issues": "https://github.com/difra-org/cms/issues"
-            },
-            "time": "2020-04-11T10:56:34+00:00"
-        },
         {
             "name": "difra/difra",
             "version": "dev-master",
@@ -104,47 +59,6 @@
                 "source": "https://github.com/difra-org/difra/tree/master"
             },
             "time": "2020-06-22T11:36:35+00:00"
-        },
-        {
-            "name": "difra/editor",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/difra-org/editor.git",
-                "reference": "151ed8a19634f0db6f958aedd24594b2cf6f96cc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/difra-org/editor/archive/1.0.1.zip",
-                "reference": "151ed8a19634f0db6f958aedd24594b2cf6f96cc"
-            },
-            "require": {
-                "difra/difra": "~7.0.0"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "main.php"
-                ],
-                "psr-4": {
-                    "Difra\\Editor\\": "src"
-                }
-            },
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Eduard Kutuev",
-                    "email": "nap@napych.com"
-                }
-            ],
-            "description": "Editor plugin for Difra framework",
-            "support": {
-                "source": "https://github.com/difra-org/editor/tree/master",
-                "issues": "https://github.com/difra-org/editor/issues"
-            },
-            "time": "2020-04-11T10:54:42+00:00"
         },
         {
             "name": "oyejorge/less.php",
@@ -275,25 +189,11 @@
             "alias_normalized": "7.0.0.0",
             "version": "9999999-dev",
             "package": "difra/difra"
-        },
-        {
-            "alias": "1.0.2",
-            "alias_normalized": "1.0.2.0",
-            "version": "9999999-dev",
-            "package": "difra/editor"
-        },
-        {
-            "alias": "1.0.3",
-            "alias_normalized": "1.0.3.0",
-            "version": "9999999-dev",
-            "package": "difra/cms"
         }
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "difra/difra": 20,
-        "difra/editor": 20,
-        "difra/cms": 20
+        "difra/difra": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
