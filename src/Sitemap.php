@@ -8,6 +8,7 @@ class Sitemap
     {
         \Difra\Tools\Sitemap::add(
             [
+                ['loc' => '/', 'changefreq' => 'daily'],
                 ['loc' => '/cleanup'],
                 ['loc' => '/lists'],
                 ['loc' => '/counters'],
