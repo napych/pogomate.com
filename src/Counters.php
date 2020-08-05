@@ -2,6 +2,8 @@
 
 namespace Pogo;
 
+use Pogo\Data\Types;
+
 class Counters
 {
     protected $attackTypes = [];
@@ -34,6 +36,19 @@ class Counters
         if (empty($this->attackTypes)) {
             $this->attackTypes = $this->pokemonTypes;
         }
-        // todo
+        $attacks = [];
+        foreach ($this->pokemonTypes as $type) {
+            $attacks = array_merge($attacks, Types::getVulnerabilities($type));
+        }
+        $attacks = array_unique($attacks);
+        $string[] = '@1' . implode(',@1', $attacks);
+        $string[] = '@2' . implode(',@2', $attacks);
+        $vulnerabilities = [];
+        foreach ($this->attackTypes as $type) {
+            $vulnerabilities = array_merge($vulnerabilities, Types::getEffective($type));
+        }
+        $vulnerabilities = array_unique($vulnerabilities);
+        $string[] = '!' . implode(',!', $vulnerabilities);
+        return implode('&', $string);
     }
 }

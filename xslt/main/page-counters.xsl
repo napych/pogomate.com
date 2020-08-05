@@ -3,5 +3,11 @@
     <xsl:template match="page-counters">
         <h1>Counters</h1>
         <h2>Coming soon</h2>
+<!--
+        <p>
+            <xsl:text>Test: </xsl:text>
+            <xsl:value-of select="@test"/>
+        </p>
+-->
     </xsl:template>
 </xsl:stylesheet>

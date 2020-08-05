@@ -2,7 +2,8 @@
 
 namespace Pogo\Data;
 
-class Types {
+class Types
+{
     const FAIRY = 'Fairy';
     const STEEL = 'Steel';
     const DARK = 'Dark';
@@ -22,7 +23,7 @@ class Types {
     const FIRE = 'Fire';
     const NORMAL = 'Normal';
 
-    const VUNERABILITIES = [
+    const VULNERABILITIES = [
         self::FAIRY => [self::POISON, self::STEEL],
         self::STEEL => [self::FIRE, self::FIGHT, self::GROUND],
         self::DARK => [self::FIGHT, self::BUG, self::FAIRY],
@@ -32,6 +33,14 @@ class Types {
         self::BUG => [self::FIRE, self::FLYING, self::ROCK],
         self::PSYCHIC => [self::BUG, self::GHOST, self::DARK],
         self::FLYING => [self::ELECTRIC, self::ICE, self::ROCK],
+        self::GROUND => [self::WATER, self::GRASS, self::ICE],
+        self::POISON => [self::GROUND, self::PSYCHIC],
+        self::FIGHT => [self::FLYING, self::PSYCHIC, self::FAIRY],
+        self::ICE => [self::FIRE, self::FIGHT, self::ROCK, self::STEEL],
+        self::GRASS => [self::FIRE, self::ICE, self::POISON, self::FLYING, self::BUG],
+        self::ELECTRIC => [self::GROUND],
+        self::WATER => [self::ELECTRIC, self::GRASS],
+        self::FIRE => [self::WATER, self::GROUND, self::ROCK],
         self::NORMAL => [self::FIGHT]
     ];
 
@@ -43,20 +52,20 @@ class Types {
             return;
         }
         static::$effective = [];
-        foreach (static::VUNERABILITIES as $type => $vunerabilities) {
-            foreach ($vunerabilities as $vunerability) {
-                if (!isset(static::$effective[$vunerability])) {
-                    static::$effective[$vunerability] = [$type];
+        foreach (static::VULNERABILITIES as $type => $vulnerabilities) {
+            foreach ($vulnerabilities as $vulnerability) {
+                if (!isset(static::$effective[$vulnerability])) {
+                    static::$effective[$vulnerability] = [$type];
                 } else {
-                    static::$effective[$vunerability][] = $type;
+                    static::$effective[$vulnerability][] = $type;
                 }
             }
         }
     }
 
-    public static function getVunerabilities(string $type): array
+    public static function getVulnerabilities(string $type): array
     {
-        return self::VUNERABILITIES[$type] ?? [];
+        return self::VULNERABILITIES[$type] ?? [];
     }
 
     public static function getEffective(string $type): array
