@@ -15,7 +15,7 @@ class Types
     const FLYING = 'Flying';
     const GROUND = 'Ground';
     const POISON = 'Poison';
-    const FIGHT = 'Fight';
+    const FIGHT = 'Fighting';
     const ICE = 'Ice';
     const GRASS = 'Grass';
     const ELECTRIC = 'Electric';
