@@ -1,5 +1,7 @@
 <locale>
     <default>
         <title>PoGo Mate</title>
+        <keywords>Pokémon Go, Search strings, counters, team rocket, cleanup search strings</keywords>
+        <description>Pokémon Go tools</description>
     </default>
 </locale>
