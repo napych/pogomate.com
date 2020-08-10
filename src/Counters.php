@@ -22,6 +22,9 @@ class Counters
             }
             return;
         }
+        if (!Types::isValidType($attackTypes)) {
+            throw new \Exception('Invalid attack type: ' . $attackTypes);
+        }
         $this->attackTypes[] = $attackTypes;
     }
 

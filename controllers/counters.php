@@ -13,6 +13,8 @@ class Counters extends \Difra\Controller
         Types::getTypesXML($node, true);
         $node->setAttribute('type1', $_GET['type1'] ?? '');
         $node->setAttribute('type2', $_GET['type2'] ?? '');
+        $node->setAttribute('attack1', $_GET['attack1'] ?? '');
+        $node->setAttribute('attack2', $_GET['attack2'] ?? '');
         $this->setTitle('Counters');
         $this->setDescription('Pokémon Go Counters search strings generator');
         $this->setKeywords('pókemon go, team rocket, raid boss, counters');
@@ -29,6 +31,18 @@ class Counters extends \Difra\Controller
                 $counters->addTypes($types);
             } catch (\Exception $e) {
                 throw new HttpError(404);
+            }
+            $attacks = [];
+            if (!empty($_GET['attack1'])) {
+                $attacks[] = $_GET['attack1'];
+            }
+            if (!empty($_GET['attack2'])) {
+                $attacks[] = $_GET['attack2'];
+            }
+            try {
+                $counters->addAttackTypes($attacks);
+            } catch (\Exception $e) {
+                throw new \Exception(404);
             }
             $this->setTitle('Counters for ' . implode('/', $types));
             $this->setDescription(
