@@ -36,14 +36,14 @@
             </div>
             <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="specify-attacks">
-                    <xsl:if test="@attack1 or @attack2">
+                    <xsl:if test="@attack1!='' or @attack2!=''">
                         <xsl:attribute name="checked">checked</xsl:attribute>
                     </xsl:if>
                 </input>
                 <label class="form-check-label" for="specify-attacks">Specify attack types</label>
             </div>
             <div id="counter-attacks">
-                <xsl:if test="not(@attack1) and not(@attack2)">
+                <xsl:if test="@attack1='' and @attack2=''">
                     <xsl:attribute name="style">display:none</xsl:attribute>
                 </xsl:if>
                 <div class="form-group">
