@@ -6,6 +6,7 @@ class Cleanup extends \Difra\Controller
 {
     protected function indexAction()
     {
+        $this->setTitle('Cleanup');
         $node = $this->root->appendChild($this->xml->createElement('page-cleanup'));
         $lists = \Pogo\Data\Lists::getAll();
         $all = new \Pogo\Strings();

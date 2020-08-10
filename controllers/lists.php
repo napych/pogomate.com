@@ -6,6 +6,7 @@ class Lists extends \Difra\Controller
 {
     protected function indexAction()
     {
+        $this->setTitle('Lists');
         $node = $this->root->appendChild($this->xml->createElement('page-lists'));
         $lists = \Pogo\Data\Lists::getAll();
         foreach ($lists as $name => $list) {

@@ -6,6 +6,7 @@ class Pokemon extends \Difra\Controller
 {
     protected function indexAction()
     {
+        $this->setTitle('Pokémon');
         $node = $this->root->appendChild($this->xml->createElement('page-pokemon'));
 
         $lists = \Pogo\Data\Lists::getAll();
