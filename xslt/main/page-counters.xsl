@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
     <xsl:template match="page-counters">
-        <h1>Counters</h1>
-        <!--
-                <p>
-                    <xsl:text>Test: </xsl:text>
-                    <xsl:value-of select="@test"/>
-                </p>
-        -->
+        <h1>Counters finder</h1>
+        <div class="alert alert-primary" role="alert">
+            <xsl:text>To search for boss counters, please specify it's type and attack types.</xsl:text>
+        </div>
         <xsl:call-template name="page-counters-form-type"/>
         <br/>
         <xsl:apply-templates select="counters" mode="page-counters"/>
     </xsl:template>
 
     <xsl:template name="page-counters-form-type">
-        <h2>By type</h2>
+<!--        <h2>By type</h2>-->
         <form method="get" action="/counters">
             <div class="form-group">
-                <label for="type1">Pokémon type #1</label>
+                <label for="type1">Boss type #1</label>
                 <select name="type1" id="type1" class="form-control">
                     <option value="">- please select -</option>
                     <xsl:apply-templates select="types" mode="select">
@@ -26,7 +23,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="type2">Pokémon type #2</label>
+                <label for="type2">Boss type #2</label>
                 <select name="type2" id="type2" class="form-control">
                     <option value="">none</option>
                     <xsl:apply-templates select="types" mode="select">
@@ -40,7 +37,7 @@
                         <xsl:attribute name="checked">checked</xsl:attribute>
                     </xsl:if>
                 </input>
-                <label class="form-check-label" for="specify-attacks">Specify attack types</label>
+                <label class="form-check-label" for="specify-attacks">Boss attack types</label>
             </div>
             <div id="counter-attacks">
                 <xsl:if test="@attack1='' and @attack2=''">
@@ -84,7 +81,7 @@
 
     <xsl:template match="counters" mode="page-counters">
         <xsl:call-template name="snippet-string">
-            <xsl:with-param name="name" select="'Counters search string'"/>
+            <xsl:with-param name="name" select="concat('Counters search string for ', @typeStr)"/>
             <xsl:with-param name="string" select="@string"/>
         </xsl:call-template>
     </xsl:template>

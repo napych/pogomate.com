@@ -24,7 +24,7 @@ class Counters extends \Difra\Controller
             if (!empty($_GET['type1'])) {
                 $types[] = $_GET['type1'];
             }
-            if (!empty($_GET['type2'])) {
+            if (!empty($_GET['type2']) && (!isset($_GET['type1']) || $_GET['type1'] !== $_GET['type2'])) {
                 $types[] = $_GET['type2'];
             }
             try {
@@ -36,7 +36,7 @@ class Counters extends \Difra\Controller
             if (!empty($_GET['attack1'])) {
                 $attacks[] = $_GET['attack1'];
             }
-            if (!empty($_GET['attack2'])) {
+            if (!empty($_GET['attack2']) && (!isset($_GET['attack1']) || $_GET['attack1'] !== $_GET['attack2'])) {
                 $attacks[] = $_GET['attack2'];
             }
             try {
@@ -44,15 +44,20 @@ class Counters extends \Difra\Controller
             } catch (\Exception $e) {
                 throw new \Exception(404);
             }
-            $this->setTitle('Counters for ' . implode('/', $types));
+            $typeStr = implode('/', $types);
+            if (!empty($attacks)) {
+                $typeStr .= ' with ' . implode('/', $attacks) . ' attacks';
+            }
+            $this->setTitle('Counters for ' . $typeStr);
             $this->setDescription(
-                'Pokémon Go Counters search string for ' . implode(' and ', $types) . ' typed bosses, Team Rocket, etc.'
+                'Pokémon Go Counters search string for ' . $typeStr . ' bosses, Team Rocket, etc.'
             );
             $this->setKeywords(
                 $this->getKeywords() .
                 ', ' . implode(' type, ', $types) . ' type'
             );
-            $counters->getXML($node, true);
+            $subNode = $counters->getXML($node, true);
+            $subNode->setAttribute('typeStr', $typeStr);
         }
     }
 }
