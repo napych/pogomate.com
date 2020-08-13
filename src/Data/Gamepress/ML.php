@@ -9,7 +9,11 @@ class ML
 {
     const DESCRIPTION = 'GamePress Master League';
     const RANKS = [
-        'Tier 1' => [Pokemon::GROUDON, Pokemon::DIALGA, Pokemon::TOGEKISS],
+        'Tier 1' => [
+            Pokemon::GROUDON,
+            Pokemon::DIALGA,
+            Pokemon::TOGEKISS
+        ],
         'Tier 1.5' => [
             Pokemon::SNORLAX,
             Pokemon::KYOGRE,
@@ -19,10 +23,19 @@ class ML
             Pokemon::GIRATINA | Mods::FORM1,
             Pokemon::ZEKROM
         ],
-        'Tier 2' => [Pokemon::DRAGONITE, Pokemon::MEWTWO, Pokemon::MEW, Pokemon::LUGIA, Pokemon::SWAMPERT, Pokemon::METAGROSS, Pokemon::MELMETAL, Pokemon::HYDREIGON],
+        'Tier 2' => [
+            Pokemon::DRAGONITE,
+            Pokemon::MEWTWO,
+            Pokemon::MEW,
+            Pokemon::LUGIA,
+            Pokemon::SWAMPERT,
+            Pokemon::METAGROSS,
+            Pokemon::MELMETAL,
+            Pokemon::HYDREIGON
+        ],
         'Tier 2.5' => [
             Pokemon::MACHAMP,
-            Pokemon::LATIOS,
+            Pokemon::REGICE,
             Pokemon::LANDORUS | Mods::FORM2,
             Pokemon::RESHIRAM,
             Pokemon::CONKELDURR,
@@ -32,15 +45,15 @@ class ML
             Pokemon::RHYPERIOR,
             Pokemon::MAGNEZONE,
             Pokemon::LUCARIO,
-            Pokemon::GYARADOS,
+            Pokemon::LATIOS,
             Pokemon::MACHAMP | Mods::SHADOW,
-            Pokemon::REGICE,
-            Pokemon::ZAPDOS,
             Pokemon::REGIROCK,
+            Pokemon::ZAPDOS,
             Pokemon::HARIYAMA,
             Pokemon::TYRANITAR,
             Pokemon::SUICUNE,
-            Pokemon::RAIKOU
+            Pokemon::RAIKOU,
+            Pokemon::GYARADOS,
         ]
     ];
 }
