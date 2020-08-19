@@ -9,15 +9,16 @@ class Counters extends \Difra\Controller
 {
     protected function indexAction()
     {
+        $this->setTitle('Counters');
+        $this->setDescription('Pokémon Go Counters search strings generator');
+        $this->setKeywords('pókemon go, team rocket, raid boss, counters');
+
         $node = $this->root->appendChild($this->xml->createElement('page-counters'));
         Types::getTypesXML($node, true);
         $node->setAttribute('type1', $_GET['type1'] ?? '');
         $node->setAttribute('type2', $_GET['type2'] ?? '');
         $node->setAttribute('attack1', $_GET['attack1'] ?? '');
         $node->setAttribute('attack2', $_GET['attack2'] ?? '');
-        $this->setTitle('Counters');
-        $this->setDescription('Pokémon Go Counters search strings generator');
-        $this->setKeywords('pókemon go, team rocket, raid boss, counters');
         $types = [];
         if (!empty($_GET['type1']) || !empty($_GET['type2'])) {
             $counters = new \Pogo\Counters;

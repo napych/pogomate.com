@@ -6,7 +6,10 @@ class Lists extends \Difra\Controller
 {
     protected function indexAction()
     {
-        $this->setTitle('Lists');
+        $this->setTitle('Pokémon Go tier lists search strings');
+        $this->setDescription('Use search strings to find all matching pokémon');
+        $this->setKeywords('pokémon go, gamepress, tier list, search strings');
+
         $node = $this->root->appendChild($this->xml->createElement('page-lists'));
         $lists = \Pogo\Data\Lists::getAll();
         foreach ($lists as $name => $list) {

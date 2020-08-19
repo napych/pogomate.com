@@ -6,7 +6,10 @@ class Pokemon extends \Difra\Controller
 {
     protected function indexAction()
     {
-        $this->setTitle('Pokémon');
+        $this->setTitle('Useful pokémon list');
+        $this->setDescription('Search for a pokémon to find out what\'s it useful for');
+        $this->setKeywords('pokémon go, useful pokémon, pokémon list, tier list');
+
         $node = $this->root->appendChild($this->xml->createElement('page-pokemon'));
 
         $lists = \Pogo\Data\Lists::getAll();
