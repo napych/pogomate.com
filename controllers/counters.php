@@ -9,7 +9,7 @@ class Counters extends \Difra\Controller
 {
     protected function indexAction()
     {
-        $this->setTitle('Counters');
+        $this->setTitle('Pokémon Go raid counters search strings generator');
         $this->setDescription('Pokémon Go Counters search strings generator');
         $this->setKeywords('pókemon go, team rocket, raid boss, counters');
 
@@ -45,11 +45,11 @@ class Counters extends \Difra\Controller
             } catch (\Exception $e) {
                 throw new \Exception(404);
             }
-            $typeStr = implode('/', $types);
+            $typeStr = implode('/', $types) . ' type';
             if (!empty($attacks)) {
                 $typeStr .= ' with ' . implode('/', $attacks) . ' attacks';
             }
-            $this->setTitle('Counters for ' . $typeStr);
+            $this->setTitle('Pokémon counters for ' . $typeStr);
             $this->setDescription(
                 'Pokémon Go Counters search string for ' . $typeStr . ' bosses, Team Rocket, etc.'
             );
