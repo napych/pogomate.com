@@ -68,7 +68,9 @@ class Counters
             $vulnerabilities = array_merge($vulnerabilities, Types::getEffective($type));
         }
         $vulnerabilities = array_unique($vulnerabilities);
-        $string[] = '!' . implode(',!', $vulnerabilities);
+        if (!empty($vulnerabilities)) {
+            $string[] = '!' . implode(',!', $vulnerabilities);
+        }
         return implode('&', $string);
     }
 
