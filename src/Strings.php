@@ -4,6 +4,15 @@ namespace Pogo;
 
 class Strings
 {
+    const ALOLAN = 'alolan';
+    const GALARIAN = 'galar';
+    const SHADOW = 'shadow';
+    const FLAG_ENUM = [
+        self::ALOLAN,
+        self::GALARIAN,
+        self::SHADOW
+    ];
+
     /** @var Pokemon[] */
     protected $pokemon = [];
     /** @var array[] */
@@ -89,22 +98,51 @@ class Strings
     public function getExcludeString()
     {
         $includes = [];
-        $excludes = [];
-
         $includeFrom = 0;
-        $excludeFrom = 0;
+
+        $flagArr = [];
+        foreach (self::FLAG_ENUM as $flag) {
+            $flagArr[$flag] = 0;
+        }
 
         $list = [];
-        foreach ($this->pokemon as $pokemon) {
-            $list[$pokemon->getPokedexId()] = 1;
+        $clarify = [];
+        foreach ($this->pokemon as $code => $pokemon) {
+            $pokedexId = $pokemon->getPokedexId();
+            $list[$pokedexId] = 1;
+            if ($pokedexId !== $code && !isset($this->pokemon[$pokedexId])) {
+                if (!isset($clarify[$pokedexId])) {
+                    $clarify[$pokedexId] = $flagArr;
+                }
+                if ($pokemon->isAlolan()) {
+                    $clarify[$pokedexId][self::ALOLAN] = 1;
+                }
+                if ($pokemon->isGalarian()) {
+                    $clarify[$pokedexId][self::GALARIAN] = 1;
+                }
+                if ($pokemon->isShadow()) {
+                    $clarify[$pokedexId][self::SHADOW] = 1;
+                }
+            }
+        }
+
+        // combine includes & clarify
+        ksort($clarify);
+        foreach ($clarify as $id => $bits) {
+            $sortedBits = [];
+            foreach ($bits as $flag => $enabled) {
+                if ($enabled) {
+                    $sortedBits[] = $flag;
+                }
+            }
+            if (!empty($sortedBits)) {
+                $result[] = $id . ',!' . implode(',!', $sortedBits);
+            }
         }
 
         for ($i = 1; $i <= Settings::MAX_POKEDEX_ID; $i++) {
             if (isset($list[$i])) {
 //                echo "[$i]";
-                if (!$excludeFrom) {
-                    $excludeFrom = $i;
-                }
                 if ($includeFrom) {
                     if ($includeFrom == $i - 1) {
                         $includes[] .= $includeFrom;
@@ -117,14 +155,6 @@ class Strings
                 if (!$includeFrom) {
                     $includeFrom = $i;
                 }
-                if ($excludeFrom) {
-                    if ($excludeFrom == $i - 1) {
-                        $excludes[] = $excludeFrom;
-                    } else {
-                        $excludes[] .= "$excludeFrom-" . ($i - 1);
-                    }
-                    $excludeFrom = 0;
-                }
             }
         }
         if ($includeFrom) {
@@ -134,16 +164,8 @@ class Strings
                 $includes[] .= "$includeFrom-" . ($i - 1);
             }
         }
-        if ($excludeFrom) {
-            if ($excludeFrom == $i - 1) {
-                $excludes[] = $excludeFrom;
-            } else {
-                $excludes[] .= "$excludeFrom-" . ($i - 1);
-            }
-        }
-        $include = implode(',', $includes);
-        $exclude = '!' . implode('&!', $excludes);
-        return strlen($include) <= strlen($exclude) ? $include : $exclude;
+
+        return [implode(',', $includes)] . '&' . implode('&', $result);
     }
 
     public function getIncludeString()
