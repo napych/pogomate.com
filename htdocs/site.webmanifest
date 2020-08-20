@@ -1,10 +1,28 @@
 {
-  "background_color": "white",
-  "description": "Pokemon Go Tools",
-  "display": "fullscreen",
-  "icons": [
-  ],
   "name": "PoGo Mate",
   "short_name": "PoGo Mate",
+  "description": "Pokémon Go Tools",
+  "icons": [
+    {
+      "src": "/img/favicon-maskable.svg",
+      "type": "image/svg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/img/maskable-1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/img/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "display": "fullscreen",
   "start_url": "/cleanup"
 }
