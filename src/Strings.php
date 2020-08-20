@@ -101,13 +101,13 @@ class Strings
         $includeFrom = 0;
         $result = [];
 
+        // fill list and clarify arrays
+        $list = [];
+        $clarify = [];
         $flagArr = [];
         foreach (self::FLAG_ENUM as $flag) {
             $flagArr[$flag] = 0;
         }
-
-        $list = [];
-        $clarify = [];
         foreach ($this->pokemon as $code => $pokemon) {
             $pokedexId = $pokemon->getPokedexId();
             $nonRegular = false;
@@ -132,8 +132,7 @@ class Strings
                 $list[$pokedexId] = 1;
             }
         }
-
-        // combine includes & clarify
+        // get clarify strings
         ksort($clarify);
         foreach ($clarify as $id => $bits) {
             $sortedBits = [];
@@ -180,9 +179,42 @@ class Strings
         $includes = [];
         $includeFrom = 0;
 
+        // fill list and clarify arrays
         $list = [];
-        foreach ($this->pokemon as $pokemon) {
-            $list[$pokemon->getPokedexId()] = 1;
+        $clarify = [];
+        $flagArr = [];
+        foreach (self::FLAG_ENUM as $flag) {
+            $flagArr[$flag] = 0;
+        }
+        foreach ($this->pokemon as $code => $pokemon) {
+            $pokedexId = $pokemon->getPokedexId();
+            if ($pokedexId !== $code && !isset($this->pokemon[$pokedexId])) {
+                if (!isset($clarify[$pokedexId])) {
+                    $clarify[$pokedexId] = $flagArr;
+                }
+                if ($pokemon->isAlolan()) {
+                    $clarify[$pokedexId][self::ALOLAN] = 1;
+                }
+                if ($pokemon->isGalarian()) {
+                    $clarify[$pokedexId][self::GALARIAN] = 1;
+                }
+                if ($pokemon->isShadow()) {
+                    $clarify[$pokedexId][self::SHADOW] = 1;
+                }
+            }
+            $list[$pokedexId] = 1;
+        }
+        ksort($clarify);
+        foreach ($clarify as $id => $bits) {
+            $sortedBits = [];
+            foreach ($bits as $flag => $enabled) {
+                if ($enabled) {
+                    $sortedBits[] = $flag;
+                }
+            }
+            if (!empty($sortedBits)) {
+                $result[] = '!' . $id . ',' . implode(',', $sortedBits);
+            }
         }
 
         for ($i = 1; $i <= Settings::MAX_POKEDEX_ID; $i++) {
@@ -207,6 +239,7 @@ class Strings
                 $includes[] .= "$includeFrom-" . ($i - 1);
             }
         }
-        return implode(',', $includes);
+
+        return implode(',', $includes) . (!empty($result) ? '&' . implode('&', $result) : '');
     }
 }
