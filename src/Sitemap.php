@@ -8,6 +8,7 @@ class Sitemap
 {
     public static function fill()
     {
+        ini_set('memory_limit', '128M');
         $locs = [
             ['loc' => '/', 'changefreq' => 'daily'],
             ['loc' => '/cleanup'],
