@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://pogomate.com/sitemap.xml
