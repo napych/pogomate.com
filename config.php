@@ -1,14 +1,14 @@
 <?php
 
 return [
-    'version' => '0.99.1',
+    'version' => '0.99.2',
 
     'locale' => 'en_US',
     'plugins' => [
 //        'Editor' => true,
 //        'CMS' => true,
-        'Capcha' => true,
-        'Users' => true
+//        'Capcha' => false,
+//        'Users' => false
     ],
 
     'db' => [
