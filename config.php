@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'version' => '0.99.1',
+
     'locale' => 'en_US',
     'plugins' => [
 //        'Editor' => true,
@@ -32,5 +34,4 @@ return [
     'auth' => [
         'registration' => false
     ]
-
 ];
