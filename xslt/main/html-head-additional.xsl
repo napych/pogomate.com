@@ -3,7 +3,7 @@
     <xsl:template name="html-head-additional">
 <!--        <link rel="apple-touch-startup-image" href="/launch.png"/>-->
         <link rel="icon" href="/img/favicon-maskable.svg"/>
-        <link rel="mask-icon" href="/img/favicon-mask.svg" color="#000000"/>
+        <link rel="mask-icon" href="/img/ball-black.svg" color="#ffffff"/>
         <link rel="apple-touch-icon" href="/img/favicon-180.png"/>
         <meta name="apple-mobile-web-app-title" content="PoGo Mate"/>
         <meta name="apple-mobile-web-app-capable" content="yes"/>

@@ -5,6 +5,7 @@
   "icons": [
     {
       "src": "/img/favicon-maskable.svg",
+      "sizes": "1024x1024",
       "type": "image/svg",
       "purpose": "any maskable"
     },
