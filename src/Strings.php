@@ -99,6 +99,7 @@ class Strings
     {
         $includes = [];
         $includeFrom = 0;
+        $result = [];
 
         $flagArr = [];
         foreach (self::FLAG_ENUM as $flag) {
@@ -109,20 +110,26 @@ class Strings
         $clarify = [];
         foreach ($this->pokemon as $code => $pokemon) {
             $pokedexId = $pokemon->getPokedexId();
-            $list[$pokedexId] = 1;
+            $nonRegular = false;
             if ($pokedexId !== $code && !isset($this->pokemon[$pokedexId])) {
                 if (!isset($clarify[$pokedexId])) {
                     $clarify[$pokedexId] = $flagArr;
                 }
                 if ($pokemon->isAlolan()) {
                     $clarify[$pokedexId][self::ALOLAN] = 1;
+                    $nonRegular = true;
                 }
                 if ($pokemon->isGalarian()) {
                     $clarify[$pokedexId][self::GALARIAN] = 1;
+                    $nonRegular = true;
                 }
                 if ($pokemon->isShadow()) {
                     $clarify[$pokedexId][self::SHADOW] = 1;
+                    $nonRegular = true;
                 }
+            }
+            if (!$nonRegular) {
+                $list[$pokedexId] = 1;
             }
         }
 
@@ -165,7 +172,7 @@ class Strings
             }
         }
 
-        return [implode(',', $includes)] . '&' . implode('&', $result);
+        return implode(',', $includes) . (!empty($result) ? '&' . implode('&', $result) : '');
     }
 
     public function getIncludeString()
