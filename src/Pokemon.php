@@ -55,6 +55,26 @@ class Pokemon extends Data\PokemonList
         return $obj;
     }
 
+    /**
+     * @param $name
+     * @return Pokemon|null
+     */
+    public static function getByLink($name): ?Pokemon
+    {
+        $pokedexId = Names::link2id(strtolower($name));
+        if (!$pokedexId) {
+            return null;
+        }
+        $result = [];
+        $list = static::getList();
+        foreach ($list as $pokemon) {
+            if ($pokemon->getPokedexId() === $pokedexId) {
+                return $pokemon;
+            }
+        }
+        return null;
+    }
+
     public function getCode()
     {
         return $this->code;
@@ -135,22 +155,18 @@ class Pokemon extends Data\PokemonList
     public function getLinkName()
     {
         if (!$this->linkName) {
-            $this->linkName = Names::getShortName($this, true);
+            $this->linkName = strtolower(Names::getShortName($this, true));
         }
         return $this->linkName;
     }
 
-    public static function getList($baseOnly = false)
+    public static function getList()
     {
-        if ($baseOnly) {
-            $fooClass = new \ReflectionClass('\\Pogo\\Data\\PokemonList');
-            $constants = $fooClass->getConstants();
-            $source = [];
-            foreach ($constants as $code) {
-                $source[$code] = 1;
-            }
-        } else {
-            $source = Evolve::EVOLVE_FROM;
+        $fooClass = new \ReflectionClass('\\Pogo\\Data\\PokemonList');
+        $constants = $fooClass->getConstants();
+        $source = [];
+        foreach ($constants as $code) {
+            $source[$code] = 1;
         }
         foreach ($source as $code => $evolveFrom) {
             static::get($code);
@@ -179,17 +195,16 @@ class Pokemon extends Data\PokemonList
     /**
      * @param \DOMElement|\DOMNode $node
      * @param bool|string $addNode
-     * @param bool $baseOnly Base forms only
      * @return \DOMElement|\DOMNode
      */
-    public static function getListXML($node, $addNode = false, bool $baseOnly = false)
+    public static function getListXML($node, $addNode = false)
     {
         if ($addNode === true) {
             $node = $node->appendChild($node->ownerDocument->createElement('pokemonList'));
         } elseif ($addNode) {
             $node = $node->appendChild($node->ownerDocument->createElement($addNode));
         }
-        foreach (static::getList($baseOnly) as $code => $pokemon) {
+        foreach (static::getList() as $code => $pokemon) {
             $pokemon->getXML($node, true);
         }
         return $node;

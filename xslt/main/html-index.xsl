@@ -4,6 +4,8 @@
         <h1>PoGo Mate</h1>
         <div id="news">
             <h2>News</h2>
+            <b>21-aug-2020</b>
+            <p>Added pokémon search.</p>
             <b>20-aug-2020</b>
             <p>Added extended shadow, alolan, galar pokemon search support.</p>
         </div>

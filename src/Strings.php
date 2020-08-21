@@ -31,7 +31,6 @@ class Strings
 
     public function addList($list, $srcReason = null)
     {
-        $reason = '';
         foreach ($list as $title => $data) {
             foreach ($data as $code) {
                 $reason = $srcReason ? "$srcReason: $title" : null;
@@ -49,9 +48,19 @@ class Strings
         }
     }
 
-    public function getReasons()
+    public function getReasons(int $pokedexId = null)
     {
-        $pokemonList = $this->pokemon;
+        // sort pokemon list
+        if (!$pokedexId) {
+            $pokemonList = $this->pokemon;
+        } else {
+            $pokemonList = [];
+            foreach ($this->pokemon as $code => $pokemon) {
+                if ($pokemon->getPokedexId() === $pokedexId) {
+                    $pokemonList[$code] = $pokemon;
+                }
+            }
+        }
         usort($pokemonList, function ($v1, $v2) {
             if ($v1->getPokedexId() > $v2->getPokedexId()) {
                 return 1;
@@ -64,14 +73,19 @@ class Strings
             }
             return 0;
         });
+
         $result = [];
         foreach ($pokemonList as $pokemon) {
-            $name = '#' . $pokemon->getPokedexId() . ' ' . $pokemon->getName();
-            $subResult = [];
-            foreach ($this->reasons[$pokemon->getCode()] as $reason) {
-                $subResult[] = $reason;
-            }
-            $result[$name] = $subResult;
+            $result[] = [
+                'pokemon' => $pokemon,
+                'reasons' => $this->reasons[$pokemon->getCode()]
+            ];
+//            $name = '#' . $pokemon->getPokedexId() . ' ' . $pokemon->getName();
+//            $subResult = [];
+//            foreach ($this->reasons[$pokemon->getCode()] as $reason) {
+//                $subResult[] = $reason;
+//            }
+//            $result[$name] = $subResult;
         }
         return $result;
     }

@@ -31,7 +31,6 @@ class Names
 
     /**
      * @param Pokemon|int $pokemon
-     * @param bool $short
      * @return mixed|string
      */
     public static function getName($pokemon)
@@ -94,5 +93,18 @@ class Names
     {
         static::init();
         return static::$names;
+    }
+
+    public static function link2id(string $link)
+    {
+        static $link2id = null;
+        if ($link2id === null) {
+            $fooClass = new ReflectionClass('\\Pogo\\Data\\PokemonList');
+            $constants = $fooClass->getConstants();
+            foreach ($constants as $name => $value) {
+                $link2id[strtolower($name)] = $value;
+            }
+        }
+        return $link2id[$link] ?? null;
     }
 }

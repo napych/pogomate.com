@@ -3,8 +3,8 @@
 namespace Controller;
 
 use Difra\Param\AnyString;
+use Difra\View;
 use Difra\View\HttpError;
-use Difra\View\Output;
 
 class Pokemon extends \Difra\Controller
 {
@@ -12,17 +12,51 @@ class Pokemon extends \Difra\Controller
     {
         // search form
         if (!$name) {
-            $this->setTitle('Useful pokémon search');
-            $this->setDescription('Search for a pokémon to find out what\'s it useful for');
-            $this->setKeywords('pokémon go, useful pokémon, pokémon list, tier list');
+            $this->searchForm();
+        } else {
+            $this->pokemon($name->val());
+        }
+    }
 
-            $this->realRoot->setAttribute('pokemonSearch', 1);
-            $this->root->appendChild($this->xml->createElement('page-pokemon'));
+    private function searchForm()
+    {
+        $this->setTitle('Useful pokémon search');
+        $this->setDescription('Search for a pokémon to find out what\'s it useful for');
+        $this->setKeywords('pokémon go, useful pokémon, pokémon list, tier list');
 
-            return;
+        $this->realRoot->setAttribute('pokemonSearch', 1);
+        $this->root->appendChild($this->xml->createElement('page-pokemon-search'));
+    }
+
+    private function pokemon(string $name)
+    {
+        // pokemon page
+        $pokemon = \Pogo\Pokemon::getByLink($name);
+        if (empty($pokemon)) {
+            throw new HttpError(404);
+        }
+        if ($name !== $pokemon->getLinkName()) {
+            View::redirect($this->getUri() . '/' . $pokemon->getLinkName()); // fix link
         }
 
-        // pokemon page
+        $this->setTitle($pokemon->getShortName() . ' pokémon');
+        $this->setDescription($pokemon->getShortName() . ' pokémon information');
+        $this->setKeywords('pokémon go, ' . $pokemon->getShortName() . ' pokémon, tier list, pokémon usefulness, pvp, pve');
+
+        $node = $this->root->appendChild($this->xml->createElement('page-pokemon'));
+        $pokemon->getXML($node, false);
+
+        // load reasons
+        $all = new \Pogo\Strings();
+        $all->addLists(\Pogo\Data\Lists::getAll());
+        $reasons = $all->getReasons($pokemon->getPokedexId());
+        foreach ($reasons as $entry) {
+            $pokeNode = $entry['pokemon']->getXML($node, true);
+            foreach ($entry['reasons'] as $reason) {
+                $reasonNode = $pokeNode->appendChild($this->xml->createElement('reason'));
+                $reasonNode->setAttribute('text', $reason);
+            }
+        }
     }
 
 //    protected function listAction()
@@ -55,7 +89,7 @@ class Pokemon extends \Difra\Controller
 //        } catch (\Exception $e) {
 //            throw new HttpError(404);
 //        }
-        $list = \Pogo\Pokemon::getList(true);
+        $list = \Pogo\Pokemon::getList();
         $json = [];
         foreach ($list as $pokemon) {
             $shortName = $pokemon->getShortName();

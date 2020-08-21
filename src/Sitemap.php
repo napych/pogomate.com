@@ -11,11 +11,17 @@ class Sitemap
         ini_set('memory_limit', '128M');
         $locs = [
             ['loc' => '/', 'changefreq' => 'daily'],
-            ['loc' => '/cleanup'],
-            ['loc' => '/lists'],
-            ['loc' => '/pokemon'],
-            ['loc' => '/counters'],
+            ['loc' => '/cleanup', 'changefreq' => 'weekly'],
+            ['loc' => '/lists', 'changefreq' => 'weekly'],
+            ['loc' => '/pokemon', 'changefreq' => 'monthly']
         ];
+        foreach (Pokemon::getList() as $pokemon) {
+            $locs[] = [
+                'loc' => '/pokemon/' . $pokemon->getLinkName(),
+                'changefreq' => 'weekly'
+            ];
+        }
+        $locs[] = ['loc' => '/counters'];
         $types1 = Types::TYPE_ENUM;
         $types2 = $attacks1 = $attacks2 = array_merge([''], Types::TYPE_ENUM);
         foreach ($types1 as $type1) {
@@ -29,7 +35,8 @@ class Sitemap
                             'loc' =>
                                 '/counters?type1=' . $type1
                                 . '&type2=' . $type2
-                                . '&attack1=&attack2='
+                                . '&attack1=&attack2=',
+                            'changefreq' => 'monthly'
                         ];
                         continue;
                     }
@@ -42,7 +49,8 @@ class Sitemap
                                 '/counters?type1=' . $type1
                                 . '&type2=' . $type2
                                 . '&attack1=' . $attack1
-                                . '&attack2=' . $attack2
+                                . '&attack2=' . $attack2,
+                            'changefreq' => 'monthly'
                         ];
                     }
                 }

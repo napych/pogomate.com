@@ -1,36 +1,60 @@
-let pokemonSearch = {};
+let pokemonSearch = {'search': '', 'found_0': '', 'found_1': ''};
 
 pokemonSearch.update = function () {
-    pokemonSearch.clear();
     const searchStr = $('#pokemon-search').val().toLowerCase();
-    let found = false;
+    pokemonSearch.init(searchStr);
     for (const id in searchList) {
         if (!searchList.hasOwnProperty(id)) {
             continue;
         }
         const idStr = id.toString();
         const name = searchList[id].name;
-        if (idStr === searchStr || (searchStr.length > 2 && name.toLowerCase().indexOf(searchStr) >= 0)) {
-            found = true;
-            const link = searchList.hasOwnProperty('link') ? searchList[id].link : name;
-            pokemonSearch.add(idStr, name, link);
+        const nameL = name.toLowerCase();
+        if (idStr === searchStr) {
+            pokemonSearch.add(idStr, name, searchList[id].link, true);
+        } else if(searchStr.length > 2) {
+            const pos = nameL . indexOf(searchStr);
+            if (pos < 0) {
+                continue;
+            }
+            const nameS =
+                name.substr(0, pos) +
+                '<b>' +
+                name.substr(pos, searchStr.length) +
+                '</b>' +
+                name.substr(pos + searchStr.length);
+            if (pos === 0) {
+                pokemonSearch.add(idStr, nameS, searchList[id].link, true);
+            } else {
+                pokemonSearch.add(idStr, nameS, searchList[id].link, false);
+            }
         }
     }
-    if (!found && searchStr.length > 2) {
-        pokemonSearch.notFound();
+    pokemonSearch.done();
+}
+
+pokemonSearch.init = function (search) {
+    $('#pokemon-search-result').empty();
+    pokemonSearch.search = search;
+    pokemonSearch.found_0 = '';
+    pokemonSearch.found_1 = '';
+}
+
+pokemonSearch.add = function (id, name, link, priority) {
+    const str = '<p><a href="/pokemon/' + link + '">#' + id + ' ' + name + '</a></p>';
+    if (priority) {
+        pokemonSearch.found_0 += str;
+    } else {
+        pokemonSearch.found_1 += str;
     }
 }
 
-pokemonSearch.clear = function () {
-    $('#pokemon-search-result').empty();
-}
-
-pokemonSearch.add = function (id, name, link) {
-    $('#pokemon-search-result').append('<p><a href="/pokemon/' + link + '">#' + id + ' ' + name + '</a></p>')
-}
-
-pokemonSearch.notFound = function () {
-    $('#pokemon-search-result').html('Pokémon not found');
+pokemonSearch.done = function () {
+    if (pokemonSearch.found_0 === '' && pokemonSearch.found_1 === '' && pokemonSearch.search.length > 2) {
+        $('#pokemon-search-result').html('Pokémon not found');
+    } else {
+        $('#pokemon-search-result').append(pokemonSearch.found_0 + pokemonSearch.found_1);
+    }
 }
 
 $(document).on('input', '#pokemon-search', pokemonSearch.update);
