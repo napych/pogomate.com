@@ -7,6 +7,7 @@ use Pogo\Data\Evolve;
 use Pogo\Data\Forms;
 use Pogo\Data\Mods;
 use Pogo\Data\Names;
+use Pogo\Data\PokemonList;
 
 class Pokemon extends Data\PokemonList
 {
@@ -19,6 +20,10 @@ class Pokemon extends Data\PokemonList
     protected $pokedexId;
     /** @var string */
     protected $name = null;
+    /** @var string */
+    protected $shortName = null;
+    /** @var string */
+    protected $linkName = null;
     /** @var int|null */
     protected $evolveFrom = -1;
     /** @var int */
@@ -103,7 +108,7 @@ class Pokemon extends Data\PokemonList
         }
         $this->evolveFrom = Evolve::EVOLVE_FROM[$code];
         if ($this->evolveFrom && $this->shadow) {
-             $this->evolveFrom += Mods::SHADOW;
+            $this->evolveFrom += Mods::SHADOW;
         }
         if ($this->evolveFrom === $this->code) {
             throw new Exception("Pokemon {$this->code} evolve from is set to itself!");
@@ -117,5 +122,76 @@ class Pokemon extends Data\PokemonList
             $this->name = Names::getName($this);
         }
         return $this->name;
+    }
+
+    public function getShortName()
+    {
+        if (!$this->shortName) {
+            $this->shortName = Names::getShortName($this, false);
+        }
+        return $this->shortName;
+    }
+
+    public function getLinkName()
+    {
+        if (!$this->linkName) {
+            $this->linkName = Names::getShortName($this, true);
+        }
+        return $this->linkName;
+    }
+
+    public static function getList($baseOnly = false)
+    {
+        if ($baseOnly) {
+            $fooClass = new \ReflectionClass('\\Pogo\\Data\\PokemonList');
+            $constants = $fooClass->getConstants();
+            $source = [];
+            foreach ($constants as $code) {
+                $source[$code] = 1;
+            }
+        } else {
+            $source = Evolve::EVOLVE_FROM;
+        }
+        foreach ($source as $code => $evolveFrom) {
+            static::get($code);
+        }
+        return self::$list;
+    }
+
+    /**
+     * @param \DOMElement|\DOMNode $node
+     * @param bool|string $addNode
+     * @return \DOMElement|\DOMNode
+     */
+    public function getXML($node, $addNode = false)
+    {
+        if ($addNode === true) {
+            $node = $node->appendChild($node->ownerDocument->createElement('pokemon'));
+        } elseif ($addNode) {
+            $node = $node->appendChild($node->ownerDocument->createElement($addNode));
+        }
+        $node->setAttribute('pokedexId', $this->getPokedexId());
+        $node->setAttribute('code', $this->pokedexId);
+        $node->setAttribute('name', $this->getName());
+        return $node;
+    }
+
+    /**
+     * @param \DOMElement|\DOMNode $node
+     * @param bool|string $addNode
+     * @param bool $baseOnly Base forms only
+     * @return \DOMElement|\DOMNode
+     */
+    public static function getListXML($node, $addNode = false, bool $baseOnly = false)
+    {
+        if ($addNode === true) {
+            $node = $node->appendChild($node->ownerDocument->createElement('pokemonList'));
+        } elseif ($addNode) {
+            $node = $node->appendChild($node->ownerDocument->createElement($addNode));
+        }
+        foreach (static::getList($baseOnly) as $code => $pokemon) {
+            $pokemon->getXML($node, true);
+        }
+        return $node;
     }
 }

@@ -53,18 +53,26 @@ class Names
             $name .= 'Galarian ';
         }
 
-        $pokedexId = $pokemon->getPokedexId();
-        if (isset(self::CUSTOM[$pokedexId])) {
-            $name .= self::CUSTOM[$pokedexId];
-        } elseif (static::$names[$pokedexId]) {
-            $name .= static::$names[$pokedexId];
-        } else {
-            $name .= "Unknown/$pokedexId";
-        }
+        $name .= static::getShortName($pokemon);
+
         if ($form = $pokemon->getFormName()) {
             $name .= " ($form)";
         }
         return self::$codes[$pokemon->getCode()] = $name;
+    }
+
+    public static function getShortName($pokemon, $link = false)
+    {
+        self::init();
+
+        $pokedexId = $pokemon->getPokedexId();
+        if (!$link && isset(self::CUSTOM[$pokedexId])) {
+            return self::CUSTOM[$pokedexId];
+        } elseif (static::$names[$pokedexId]) {
+            return static::$names[$pokedexId];
+        } else {
+            return "Unknown/$pokedexId";
+        }
     }
 
     protected static function init()
@@ -77,5 +85,14 @@ class Names
         foreach ($constants as $name => $value) {
             static::$names[$value] = ucfirst(strtolower($name));
         }
+    }
+
+    /**
+     * @return static[]
+     */
+    public static function getList()
+    {
+        static::init();
+        return static::$names;
     }
 }
