@@ -12,6 +12,7 @@ class Counters extends \Difra\Controller
         $this->setTitle('Pokémon Go raid counters search strings generator');
         $this->setDescription('Pokémon Go Counters search strings generator');
         $this->setKeywords('pókemon go, team rocket, raid boss, counters');
+        $this->putExpires(86400);
 
         $node = $this->root->appendChild($this->xml->createElement('page-counters'));
         Types::getTypesXML($node, true);

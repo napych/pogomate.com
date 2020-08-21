@@ -10,6 +10,8 @@ class Pokemon extends \Difra\Controller
 {
     protected function indexAction(AnyString $name = null)
     {
+        $this->putExpires(86400);
+
         // search form
         if (!$name) {
             $this->searchForm();
@@ -84,11 +86,8 @@ class Pokemon extends \Difra\Controller
 
     protected function listJsAction()
     {
-//        try {
-//            $this->checkReferer();
-//        } catch (\Exception $e) {
-//            throw new HttpError(404);
-//        }
+        $this->putExpires(86400);
+
         $list = \Pogo\Pokemon::getList();
         $json = [];
         foreach ($list as $pokemon) {
