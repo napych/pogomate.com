@@ -5,7 +5,7 @@
             <xsl:value-of select="@name"/>
         </h1>
         <xsl:choose>
-            <xsl:when test="count(pokemon)>0">
+            <xsl:when test="count(pokemon)&gt;0">
                 <xsl:apply-templates select="pokemon" mode="reasons"/>
             </xsl:when>
             <xsl:otherwise>
@@ -15,12 +15,11 @@
     </xsl:template>
 
     <xsl:template match="pokemon" mode="reasons">
-        <h2>
-            <xsl:text>#</xsl:text>
-            <xsl:value-of select="@pokedexId"/>
-            <xsl:text> </xsl:text>
-            <xsl:value-of select="@name"/>
-        </h2>
+        <xsl:if test="count(../pokemon)&gt;1">
+            <h2>
+                <xsl:value-of select="@name"/>
+            </h2>
+        </xsl:if>
         <xsl:for-each select="reason">
             <p>
                 <xsl:value-of select="@text"/>

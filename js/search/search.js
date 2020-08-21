@@ -41,7 +41,7 @@ pokemonSearch.init = function (search) {
 }
 
 pokemonSearch.add = function (id, name, link, priority) {
-    const str = '<p><a href="/pokemon/' + link + '">#' + id + ' ' + name + '</a></p>';
+    const str = '<p><a href="/pokemon/' + link + '">' + name + '</a></p>';
     if (priority) {
         pokemonSearch.found_0 += str;
     } else {

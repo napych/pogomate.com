@@ -31,7 +31,7 @@
                 </xsl:call-template>
                 <xsl:call-template name="menu-main-item">
                     <xsl:with-param name="link" select="'/pokemon'"/>
-                    <xsl:with-param name="text" select="'Pokémon'"/>
+                    <xsl:with-param name="text" select="'Search'"/>
                     <xsl:with-param name="icon" select="'/img/ml.svg'"/>
                 </xsl:call-template>
             </ul>
@@ -54,7 +54,7 @@
                 </xsl:if>
             </xsl:attribute>
             <a class="nav-link" href="{$link}">
-                <img src="{$icon}"/>
+<!--                <img src="{$icon}"/>-->
                 <span>
                     <xsl:value-of select="$text"/>
                 </span>
