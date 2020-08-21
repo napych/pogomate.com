@@ -20,7 +20,7 @@ class Pokemon extends \Difra\Controller
 
     private function searchForm()
     {
-        $this->setTitle('Useful pokémon search');
+        $this->setTitle('Pokémon search');
         $this->setDescription('Search for a pokémon to find out what\'s it useful for');
         $this->setKeywords('pokémon go, useful pokémon, pokémon list, tier list');
 
