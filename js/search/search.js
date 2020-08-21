@@ -16,7 +16,7 @@ pokemonSearch.update = function () {
             pokemonSearch.add(idStr, name, link);
         }
     }
-    if (!found) {
+    if (!found && searchStr.length > 2) {
         pokemonSearch.notFound();
     }
 }
