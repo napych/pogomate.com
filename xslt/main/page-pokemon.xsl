@@ -5,7 +5,7 @@
             <xsl:value-of select="@name"/>
         </h1>
         <xsl:choose>
-            <xsl:when test="count(pokemon)>1">
+            <xsl:when test="count(pokemon)>0">
                 <xsl:apply-templates select="pokemon" mode="reasons"/>
             </xsl:when>
             <xsl:otherwise>
