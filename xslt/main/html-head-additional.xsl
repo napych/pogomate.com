@@ -13,8 +13,8 @@
         <meta name="theme-color" content="#ffffff"/>
         <script type="text/javascript" src="/js/clipboard-polyfill.promise.js"/>
         <xsl:if test="/root/@pokemonSearch">
-            <script type="text/javascript" src="/js/list.js"/>
-            <script type="text/javascript" src="/js/search.js"/>
+            <script type="text/javascript" src="/js/list.js?{/root/@build}"/>
+            <script type="text/javascript" src="/js/search.js?{/root/@build}"/>
         </xsl:if>
     </xsl:template>
 </xsl:stylesheet>
