@@ -9,9 +9,9 @@
         <meta name="apple-mobile-web-app-capable" content="yes"/>
         <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-        <link rel="manifest" href="/site.webmanifest"/>
+        <link rel="manifest" href="/site.webmanifest?{/root/@build}"/>
         <meta name="theme-color" content="#ffffff"/>
-        <script type="text/javascript" src="/js/clipboard-polyfill.promise.js"/>
+        <script type="text/javascript" src="/js/clipboard-polyfill.promise.js?{/root/@build}"/>
         <xsl:if test="/root/@pokemonSearch">
             <script type="text/javascript" src="/js/list.js?{/root/@build}"/>
             <script type="text/javascript" src="/js/search.js?{/root/@build}"/>
