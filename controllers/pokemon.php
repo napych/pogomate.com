@@ -26,7 +26,6 @@ class Pokemon extends \Difra\Controller
         $this->setDescription('Search for a pokémon to find out what\'s it useful for');
         $this->setKeywords('pokémon go, useful pokémon, pokémon list, tier list');
 
-        $this->realRoot->setAttribute('pokemonSearch', 1);
         $this->root->appendChild($this->xml->createElement('page-pokemon-search'));
     }
 

@@ -12,9 +12,5 @@
         <link rel="manifest" href="/site.webmanifest?{/root/@build}"/>
         <meta name="theme-color" content="#ffffff"/>
         <script type="text/javascript" src="/js/clipboard-polyfill.promise.js?{/root/@build}"/>
-        <xsl:if test="/root/@pokemonSearch">
-            <script type="text/javascript" src="/js/list.js?{/root/@build}"/>
-            <script type="text/javascript" src="/js/search.js?{/root/@build}"/>
-        </xsl:if>
     </xsl:template>
 </xsl:stylesheet>

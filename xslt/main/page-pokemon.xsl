@@ -12,6 +12,9 @@
                 <p>No usages found for this pokemon.</p>
             </xsl:otherwise>
         </xsl:choose>
+        <hr/>
+        <h2>Pokémon search</h2>
+        <xsl:call-template name="snippet-search"/>
     </xsl:template>
 
     <xsl:template match="pokemon" mode="reasons">
