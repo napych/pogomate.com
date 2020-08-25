@@ -31,9 +31,16 @@ class Strings
 
     public function addList($list, $srcReason = null)
     {
+        if (!is_array(reset($list))) {
+            $list = [$list];
+        }
         foreach ($list as $title => $data) {
             foreach ($data as $code) {
-                $reason = $srcReason ? "$srcReason: $title" : null;
+                if ($title) {
+                    $reason = $srcReason ? "$srcReason: $title" : null;
+                } else {
+                    $reason = $srcReason ?? null;
+                }
                 $newPok = $this->addPokemon($code, $reason);
 
                 if ($reason) {
