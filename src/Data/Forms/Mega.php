@@ -6,7 +6,7 @@ use Pogo\Pokemon;
 
 class Mega
 {
-    const DESCRIPTION = 'Mega evolution';
+    const DESCRIPTION = 'Mega evolutions';
     const MEGA = [
         Pokemon::VENUSAUR,
         Pokemon::CHARIZARD,

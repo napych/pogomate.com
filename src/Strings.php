@@ -2,6 +2,8 @@
 
 namespace Pogo;
 
+use Pogo\Data\Lists;
+
 class Strings
 {
     const ALOLAN = 'alola';
@@ -25,16 +27,20 @@ class Strings
     public function addLists($lists)
     {
         foreach ($lists as $volume => $parts) {
-            $this->addList($parts, $volume);
+            $this->addList($parts);
         }
     }
 
     public function addList($list, $srcReason = null)
     {
-        if (!is_array(reset($list))) {
-            $list = [$list];
+        if (!$srcReason) {
+            $srcReason = $list[Lists::ENT_DESCRIPTION];
         }
-        foreach ($list as $title => $data) {
+        $listData = $list[Lists::ENT_DATA];
+        if ($list[Lists::ENT_CONTENT] === Lists::CONTENT_LIST) {
+            $listData = [$listData];
+        }
+        foreach ($listData as $title => $data) {
             foreach ($data as $code) {
                 if ($title) {
                     $reason = $srcReason ? "$srcReason: $title" : null;

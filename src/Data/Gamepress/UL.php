@@ -8,7 +8,8 @@ use Pogo\Pokemon;
 class UL
 {
     const DESCRIPTION = 'GamePress Ultra League';
-    const RANKS = [
+
+    const TIERS = [
         'Tier 1' => [
             Pokemon::REGISTEEL,
             Pokemon::GIRATINA | Mods::FORM2

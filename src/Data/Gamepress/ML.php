@@ -8,7 +8,7 @@ use Pogo\Pokemon;
 class ML
 {
     const DESCRIPTION = 'GamePress Master League';
-    const RANKS = [
+    const TIERS = [
         'Tier 1' => [
             Pokemon::GROUDON,
             Pokemon::DIALGA,

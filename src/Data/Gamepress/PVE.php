@@ -2,13 +2,15 @@
 
 namespace Pogo\Data\Gamepress;
 
+use Pogo\Data\Lists;
 use Pogo\Data\Mods;
 use Pogo\Pokemon;
 
 class PVE
 {
     const DESCRIPTION = 'GamePress Attackers Tier List';
-    const RANKS = [
+
+    const TIERS = [
         'Tier 1' => [
             // S++
             Pokemon::MEWTWO | Mods::SHADOW,

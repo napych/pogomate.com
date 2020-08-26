@@ -8,7 +8,8 @@ namespace Pogo\Data\Gamepress {
     class GL
     {
         const DESCRIPTION = 'GamePress Greater League';
-        const RANKS = [
+
+        const TIERS = [
             'Tier 1' => [
                 Pokemon::AZUMARILL,
                 Pokemon::SKARMORY,

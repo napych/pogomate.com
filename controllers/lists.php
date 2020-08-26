@@ -14,11 +14,11 @@ class Lists extends \Difra\Controller
 
         $node = $this->root->appendChild($this->xml->createElement('page-lists'));
         $lists = \Pogo\Data\Lists::getAll();
-        foreach ($lists as $name => $list) {
+        foreach ($lists as $list) {
             $single = new \Pogo\Strings();
             $single->addList($list);
             $listNode = $node->appendChild($this->xml->createElement('list'));
-            $listNode->setAttribute('name', $name);
+            $listNode->setAttribute('name', $list[\Pogo\Data\Lists::ENT_DESCRIPTION]);
             $listNode->setAttribute('string', $single->getIncludeString());
         }
     }
