@@ -1,11 +1,12 @@
 .cleanup-form {
-    //.cleanup-block {
-    //    display: flex;
-    //    flex-flow: row wrap;
-    //
-    //    > .form-check, > .form-group {
-    //        width: auto;
-    //        box-sizing: border-box;
-    //    }
-    //}
+    &.unmodified {
+        .submit-button {
+            display: none;
+        }
+    }
+    &.modified {
+        .string {
+            display: none;
+        }
+    }
 }

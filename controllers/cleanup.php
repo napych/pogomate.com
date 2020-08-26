@@ -2,6 +2,7 @@
 
 namespace Controller;
 
+use Difra\Ajaxer;
 use Difra\Param\AjaxCheckbox;
 use Difra\Param\AjaxData;
 use Difra\Param\AjaxInt;
@@ -9,34 +10,13 @@ use Difra\Param\AjaxInt;
 class Cleanup extends \Difra\Controller
 {
     protected function indexAction(
-        AjaxCheckbox $submit,
-        AjaxCheckbox $perfect,
-        AjaxCheckbox $shiny,
-        AjaxCheckbox $lucky,
-        AjaxCheckbox $legendary,
-        AjaxCheckbox $mythical,
-        AjaxCheckbox $special,
-        AjaxData $list = null,
-        AjaxInt $cp = null
     ) {
         $this->setTitle('Pokémon storage cleanup search strings');
         $this->setDescription('Use a search string to clean up your pokémon storage fast');
         $this->setKeywords('pokémon go, pogo tools, pokémon cleanup, storage cleanup, search strings');
 
         // get form values/defaults
-        if ($submit->val()) {
-            $cleanup = [
-                'perfect' => $perfect->val(),
-                'shiny' => $shiny->val(),
-                'lucky' => $lucky->val(),
-                'legendary' => $legendary->val(),
-                'mythical' => $mythical->val(),
-                'special' => $special->val(),
-                'cp' => $cp->val(),
-                'list' => []
-            ];
-            $listArr = $list ? $list->val() : '';
-        } elseif (empty($_COOKIE['cleanup'])) {
+        if (empty($_COOKIE['cleanup'])) {
             $cleanup = [
                 'perfect' => 1,
                 'shiny' => 1,
@@ -59,7 +39,6 @@ class Cleanup extends \Difra\Controller
             $tag = $data[\Pogo\Data\Lists::ENT_TAG];
             $cleanup['list'][$tag] = (isset($listArr[$tag]) ? $listArr[$tag] : $data[\Pogo\Data\Lists::ENT_DEFAULT]) ? 1 : 0;
         }
-        \Difra\Libs\Cookies::getInstance()->set('cleanup', $cleanup);
 
         // fill XML with form values/defaults
         $node = $this->root->appendChild($this->xml->createElement('page-cleanup'));
@@ -98,10 +77,12 @@ class Cleanup extends \Difra\Controller
         if ($cleanup['special']) {
             $result[] = '!@special,@frustration,@return';
         }
+        if ($cleanup['cp']) {
+            $result[] = 'cp-' . ($cleanup['cp'] - 1);
+        }
 
         $lists = \Pogo\Data\Lists::getAll();
         $strings = new \Pogo\Strings();
-        $enabledLists = [];
         foreach ($lists as $list) {
             if ($cleanup['list'][$list[\Pogo\Data\Lists::ENT_TAG]]) {
                 $strings->addList($list);
@@ -110,5 +91,38 @@ class Cleanup extends \Difra\Controller
         $result[] = $strings->getExcludeString();
 
         $node->setAttribute('cleanup', implode('&', $result));
+    }
+
+    protected function indexAjaxAction(
+        AjaxCheckbox $perfect,
+        AjaxCheckbox $shiny,
+        AjaxCheckbox $lucky,
+        AjaxCheckbox $legendary,
+        AjaxCheckbox $mythical,
+        AjaxCheckbox $special,
+        AjaxInt $cp = null,
+        AjaxData $list = null
+    ) {
+        if ($cp && $cp->val() < 100) {
+            Ajaxer::invalid('cp');
+            return;
+        }
+        $cleanup = [
+            'perfect' => $perfect->val(),
+            'shiny' => $shiny->val(),
+            'lucky' => $lucky->val(),
+            'legendary' => $legendary->val(),
+            'mythical' => $mythical->val(),
+            'special' => $special->val(),
+            'cp' => $cp ? $cp->val() : 0,
+            'list' => []
+        ];
+        $listArr = $list ? $list->val() : '';
+        foreach (\Pogo\Data\Lists::getAll() as $data) {
+            $tag = $data[\Pogo\Data\Lists::ENT_TAG];
+            $cleanup['list'][$tag] = (isset($listArr[$tag]) ? $listArr[$tag] : $data[\Pogo\Data\Lists::ENT_DEFAULT]) ? 1 : 0;
+        }
+        \Difra\Libs\Cookies::getInstance()->set('cleanup', $cleanup);
+        Ajaxer::reload();
     }
 }

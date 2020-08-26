@@ -5,6 +5,7 @@
         <div id="news">
             <h2>News</h2>
             <strong>26-08-2020</strong>
+            <p>Added cleanup settings.</p>
             <p>Fixes for cleanup and counters search strings.</p>
             <strong>25-aug-2020</strong>
             <p>Added mega evolutions.</p>

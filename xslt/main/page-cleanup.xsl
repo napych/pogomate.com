@@ -65,14 +65,21 @@
             </div>
             <div class="form-group">
                 <label for="input-cp" class="col-form-label">High CP:</label>
-                <input type="number" class="form-control" id="input-cp" name="cp" value="{cleanup-defaults/@cp}"/>
+                <input type="number" class="form-control" id="input-cp" name="cp">
+                    <xsl:if test="cleanup-defaults/@cp&gt;0">
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="cleanup-defaults/@cp"/>
+                        </xsl:attribute>
+                    </xsl:if>
+                </input>
+                <small id="emailHelp" class="form-text text-muted">Always keep high CP pokémon, leave empty to disable.</small>
             </div>
             <h2>Lists</h2>
             <div class="cleanup-block">
                 <xsl:for-each select="lists/list">
                     <div class="form-check-inline">
-                        <input type="hidden" name="list['{@description}']" value="0"/>
-                        <input class="form-check-input" type="checkbox" value="1" name="list['{@description}']" id="input-list{@tag}">
+                        <input type="hidden" name="list[{@tag}]" value="0"/>
+                        <input class="form-check-input" type="checkbox" value="1" name="list[{@tag}]" id="input-list{@tag}">
                             <xsl:variable name="tag" select="@tag"/>
                             <xsl:if test="../../cleanup-defaults/list[@tag=$tag]/@enabled=1">
                                 <xsl:attribute name="checked">checked</xsl:attribute>
@@ -84,10 +91,12 @@
                     </div>
                 </xsl:for-each>
             </div>
+            <br/>
+            <input type="submit" value="Submit" class="btn btn-primary submit-button"/>
+            <xsl:call-template name="snippet-string">
+                <xsl:with-param name="name" select="''"/>
+                <xsl:with-param name="string" select="@cleanup"/>
+            </xsl:call-template>
         </form>
-        <xsl:call-template name="snippet-string">
-            <xsl:with-param name="name" select="''"/>
-            <xsl:with-param name="string" select="@cleanup"/>
-        </xsl:call-template>
     </xsl:template>
 </xsl:stylesheet>
