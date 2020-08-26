@@ -7,7 +7,7 @@
                     <xsl:text>To use a list, paste it to the pokemon search string.</xsl:text>
                 </div>
                 <div class="alert alert-warning" role="alert">
-                    <xsl:text>Ingame implementation of !alola and !galar filters are currently broken, some filters are disabled for now.</xsl:text>
+                    <xsl:text>Ingame implementation of !alola and !galar filters is currently broken, some filters are disabled for now.</xsl:text>
                 </div>
         -->
         <form action="/cleanup" method="post" class="ajaxer cleanup-form unmodified">
