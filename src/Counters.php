@@ -62,7 +62,7 @@ class Counters
         }
         $attacks = array_unique($attacks);
         $string[] = '@1' . implode(',@1', $attacks);
-        $string[] = '@2' . implode(',@2', $attacks);
+        $string[] = '@2' . implode(',@2', $attacks) . ',@3' . implode(',@3', $attacks);
         $vulnerabilities = [];
         foreach ($this->attackTypes as $type) {
             $vulnerabilities = array_merge($vulnerabilities, Types::getEffective($type));
