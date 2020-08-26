@@ -4,7 +4,7 @@ namespace Pogo;
 
 class Strings
 {
-    const ALOLAN = 'alolan';
+    const ALOLAN = 'alola';
     const GALARIAN = 'galar';
     const SHADOW = 'shadow';
     const FLAG_ENUM = [
@@ -163,7 +163,14 @@ class Strings
                 }
             }
             if (!empty($sortedBits)) {
-                $result[] = $id . ',!' . implode(',!', $sortedBits);
+                // TODO: re-enable this when !alola and !galar work again
+                //$result[] = '!' . $id . ',!' . implode(',!', $sortedBits);
+                // TODO: remove this when !alola and !galar work again
+                if (!empty($bits[self::SHADOW])) {
+                    $result[] = '!' . $id . ',!shadow';
+                } else {
+                    $result[] = '!' . $id;
+                }
             }
         }
 

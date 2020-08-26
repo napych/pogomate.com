@@ -15,6 +15,6 @@ class Cleanup extends \Difra\Controller
         $all = new \Pogo\Strings();
         $all->addLists($lists);
 
-        $node->setAttribute('cleanup', '!4*&cp0-1999&!shiny&!lucky&!legendary&!mythical&!@special&' . $all->getExcludeString());
+        $node->setAttribute('cleanup', '!4*&cp0-1999&!shiny&!lucky&!legendary&!mythical&!@special,@frustration,@return&' . $all->getExcludeString());
     }
 }
