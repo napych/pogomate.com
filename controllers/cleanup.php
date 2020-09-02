@@ -9,8 +9,8 @@ use Difra\Param\AjaxInt;
 
 class Cleanup extends \Difra\Controller
 {
-    protected function indexAction(
-    ) {
+    protected function indexAction()
+    {
         $this->setTitle('Pokémon storage cleanup search strings');
         $this->setDescription('Use a search string to clean up your pokémon storage fast');
         $this->setKeywords('pokémon go, pogo tools, pokémon cleanup, storage cleanup, search strings');
@@ -122,7 +122,9 @@ class Cleanup extends \Difra\Controller
             $tag = $data[\Pogo\Data\Lists::ENT_TAG];
             $cleanup['list'][$tag] = (isset($listArr[$tag]) ? $listArr[$tag] : $data[\Pogo\Data\Lists::ENT_DEFAULT]) ? 1 : 0;
         }
-        \Difra\Libs\Cookies::getInstance()->set('cleanup', $cleanup);
+        $cookies = \Difra\Libs\Cookies::getInstance();
+        $cookies->setExpire(time() + 60 * 60 * 24 * 365 * 10);
+        $cookies->set('cleanup', $cleanup);
         Ajaxer::reload();
     }
 }
