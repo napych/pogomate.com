@@ -4,13 +4,6 @@
         <h1>
             <xsl:value-of select="@name"/>
         </h1>
-        <xsl:if test="count(evolve/evolve)>0">
-            <div class="evolutions">
-                <xsl:text>Evolutions: </xsl:text>
-                <xsl:apply-templates select="evolve"/>
-            </div>
-            <hr/>
-        </xsl:if>
         <xsl:choose>
             <xsl:when test="count(pokemon)&gt;0">
                 <xsl:apply-templates select="pokemon" mode="reasons"/>
@@ -20,6 +13,17 @@
             </xsl:otherwise>
         </xsl:choose>
         <hr/>
+        <p>
+            <xsl:text>Pokedex ID: #</xsl:text>
+            <xsl:value-of select="@pokedexId"/>
+        </p>
+        <xsl:if test="count(evolve/evolve)>0">
+            <p class="evolutions">
+                <xsl:text>Evolutions: </xsl:text>
+                <xsl:apply-templates select="evolve"/>
+            </p>
+            <hr/>
+        </xsl:if>
         <h2>Pokémon search</h2>
         <xsl:call-template name="snippet-search"/>
     </xsl:template>
