@@ -9,7 +9,7 @@
                 <xsl:apply-templates select="pokemon" mode="reasons"/>
             </xsl:when>
             <xsl:otherwise>
-                <p>No usages found for this pokemon.</p>
+                <p>No known usages were found for this pokémon.</p>
             </xsl:otherwise>
         </xsl:choose>
         <hr/>
@@ -34,23 +34,55 @@
                 <xsl:value-of select="@name"/>
             </h2>
         </xsl:if>
-        <xsl:for-each select="reason">
+        <xsl:if test="reason[not(evolve)]">
+            <div class="evolution-reasons">
+                <xsl:apply-templates select="reason[not(evolve)]" mode="pokemon"/>
+            </div>
+        </xsl:if>
+        <xsl:for-each select="reason[evolve and not(evolve/@code=preceding-sibling::reason/evolve/@code)]">
             <xsl:sort select="evolve/@code" data-type="number"/>
-            <p>
-                <xsl:if test="evolve">
-                    <xsl:text> ⇨ </xsl:text>
-                    <a href="/pokemon/{evolve/@link}">
-                        <xsl:value-of select="evolve/@name"/>
-                    </a>
-                    <xsl:text> </xsl:text>
-                </xsl:if>
-                <xsl:value-of select="@list"/>
-                <xsl:if test="@subList!=''">
-                    <xsl:text>: </xsl:text>
-                    <xsl:value-of select="@subList"/>
-                </xsl:if>
-            </p>
+            <div class="evolution-reasons">
+                <xsl:choose>
+                    <xsl:when test="evolve">
+                        <p class="reason-title">
+                            <xsl:text> ⇨ </xsl:text>
+                            <a href="/pokemon/{evolve/@link}">
+                                <xsl:value-of select="evolve/@name"/>
+                            </a>
+                        </p>
+                        <div class="reason-list">
+                            <xsl:variable name="code" select="evolve/@code"/>
+                            <xsl:apply-templates select="../reason[evolve/@code=$code]" mode="pokemon"/>
+                        </div>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:apply-templates select="../reason[not(evolve)]" mode="pokemon"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </div>
         </xsl:for-each>
+    </xsl:template>
+
+    <xsl:template match="reason" mode="pokemon">
+        <p>
+            <img width="20" height="20" title="{@type}" alt="{@type}">
+                <xsl:attribute name="src">
+                    <xsl:text>/img/</xsl:text>
+                    <xsl:choose>
+                        <xsl:when test="@type='PVE'">pokeball-special.svg</xsl:when>
+                        <xsl:when test="@type='GL'">gl.svg</xsl:when>
+                        <xsl:when test="@type='UL'">ul.svg</xsl:when>
+                        <xsl:when test="@type='ML'">ml.svg</xsl:when>
+                    </xsl:choose>
+                </xsl:attribute>
+            </img>
+            <xsl:text> </xsl:text>
+            <xsl:value-of select="@list"/>
+            <xsl:if test="@subList!=''">
+                <xsl:text>: </xsl:text>
+                <xsl:value-of select="@subList"/>
+            </xsl:if>
+        </p>
     </xsl:template>
 
     <xsl:template match="evolve">

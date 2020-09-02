@@ -41,6 +41,7 @@ class Strings
             foreach ($data as $code) {
                 $reason = [
                     'list' => $list[Lists::ENT_DESCRIPTION],
+                    'type' => $list[Lists::ENT_TYPE],
                     'subList' => $title ?: null
                 ];
                 $newPok = $this->addPokemon($code, $reason);
