@@ -187,8 +187,10 @@ class Pokemon extends Data\PokemonList
             $node = $node->appendChild($node->ownerDocument->createElement($addNode));
         }
         $node->setAttribute('pokedexId', $this->getPokedexId());
-        $node->setAttribute('code', $this->pokedexId);
+        $node->setAttribute('code', $this->getCode());
         $node->setAttribute('name', $this->getName());
+        $node->setAttribute('shortName', $this->getShortName());
+        $node->setAttribute('link', $this->getLinkName());
         return $node;
     }
 
@@ -208,5 +210,45 @@ class Pokemon extends Data\PokemonList
             $pokemon->getXML($node, true);
         }
         return $node;
+    }
+
+    /**
+     * @param \DOMElement|\DOMNode $node
+     * @param bool $addNode
+     * @return \DOMElement|\DOMNode
+     */
+    public function getFamilyXML(\DOMElement $node, bool $addNode)
+    {
+        if ($addNode === true) {
+            $node = $node->appendChild($node->ownerDocument->createElement('pokemonFamily'));
+        } elseif ($addNode) {
+            $node = $node->appendChild($node->ownerDocument->createElement($addNode));
+        }
+
+        $first = $this->getCode();
+        while ($from = Evolve::getEvolveFrom($first)) {
+            $first = $from;
+        }
+
+        static::recurseEvolve($node, $first, $this->getCode());
+
+        return $node;
+    }
+
+    /**
+     * @param \DOMElement|\DOMNode $node
+     * @param int $code
+     * @param int $current
+     */
+    private static function recurseEvolve($node, $code, $current)
+    {
+        $subNode = Pokemon::get($code)->getXML($node, 'evolve');
+        if ($code === $current) {
+            $subNode->setAttribute('current', '1');
+        }
+        $toList = Evolve::getEvolveTo($code, true);
+        foreach ($toList as $to) {
+            static::recurseEvolve($subNode, $to, $current);
+        }
     }
 }

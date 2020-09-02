@@ -47,6 +47,8 @@ class Pokemon extends \Difra\Controller
         $node = $this->root->appendChild($this->xml->createElement('page-pokemon'));
         $pokemon->getXML($node, false);
 
+        $pokemon->getFamilyXML($node, false);
+
         // load reasons
         $all = new \Pogo\Strings();
         $all->addLists(\Pogo\Data\Lists::getAll());
@@ -55,7 +57,15 @@ class Pokemon extends \Difra\Controller
             $pokeNode = $entry['pokemon']->getXML($node, true);
             foreach ($entry['reasons'] as $reason) {
                 $reasonNode = $pokeNode->appendChild($this->xml->createElement('reason'));
-                $reasonNode->setAttribute('text', $reason);
+                foreach ($reason as $k => $v) {
+                    switch ($k) {
+                        case 'evolve':
+                            \Pogo\Pokemon::get($v)->getXML($reasonNode, 'evolve');
+                            break;
+                        default:
+                            $reasonNode->setAttribute($k, $v);
+                    }
+                }
             }
         }
     }

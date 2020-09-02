@@ -31,30 +31,22 @@ class Strings
         }
     }
 
-    public function addList($list, $srcReason = null)
+    public function addList($list)
     {
-        if (!$srcReason) {
-            $srcReason = $list[Lists::ENT_DESCRIPTION];
-        }
         $listData = $list[Lists::ENT_DATA];
         if ($list[Lists::ENT_CONTENT] === Lists::CONTENT_LIST) {
             $listData = [$listData];
         }
         foreach ($listData as $title => $data) {
             foreach ($data as $code) {
-                if ($title) {
-                    $reason = $srcReason ? "$srcReason: $title" : null;
-                } else {
-                    $reason = $srcReason ?? null;
-                }
+                $reason = [
+                    'list' => $list[Lists::ENT_DESCRIPTION],
+                    'subList' => $title ?: null
+                ];
                 $newPok = $this->addPokemon($code, $reason);
 
-                if ($reason) {
-//                    $shortName = Pokemon::get($newPok->getPokedexId())->getName();
-                    $reason = "⇨ {$newPok->getName()} ($reason)";
-                }
+                $reason['evolve'] = $newPok->getCode();
                 while ($newPokId = $newPok->getEvolveFrom()) {
-//                    echo "[$newPokId]";
                     $newPok = $this->addPokemon($newPokId, $reason);
                 }
             }

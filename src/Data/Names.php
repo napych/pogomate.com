@@ -30,10 +30,10 @@ class Names
     protected static $codes = [];
 
     /**
-     * @param Pokemon|int $pokemon
+     * @param Pokemon $pokemon
      * @return mixed|string
      */
-    public static function getName($pokemon)
+    public static function getName(Pokemon $pokemon)
     {
         self::init();
 
@@ -60,7 +60,12 @@ class Names
         return self::$codes[$pokemon->getCode()] = $name;
     }
 
-    public static function getShortName($pokemon, $link = false)
+    /**
+     * @param Pokemon $pokemon
+     * @param bool $link
+     * @return mixed|string
+     */
+    public static function getShortName(Pokemon $pokemon, $link = false)
     {
         self::init();
 
