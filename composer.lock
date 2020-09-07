@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bb94ab3bc8a21ca4f4534a457587fc34",
+    "content-hash": "f6fc1041c258eec93bc96670148d5546",
     "packages": [
         {
             "name": "difra/difra",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/difra-org/difra.git",
-                "reference": "548cd89e510e4eb24cd444d6a6908fcf0ad9c693"
+                "reference": "2a0e6eb71e4e5458698f8664790890e893a4c2d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/difra-org/difra/zipball/548cd89e510e4eb24cd444d6a6908fcf0ad9c693",
-                "reference": "548cd89e510e4eb24cd444d6a6908fcf0ad9c693",
+                "url": "https://api.github.com/repos/difra-org/difra/zipball/2a0e6eb71e4e5458698f8664790890e893a4c2d1",
+                "reference": "2a0e6eb71e4e5458698f8664790890e893a4c2d1",
                 "shasum": ""
             },
             "require": {
@@ -58,7 +58,7 @@
             "support": {
                 "source": "https://github.com/difra-org/difra/tree/master"
             },
-            "time": "2020-08-11T13:25:08+00:00"
+            "time": "2020-08-27T14:11:41+00:00"
         },
         {
             "name": "oyejorge/less.php",
@@ -198,7 +198,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "ext-dom": "*"
+        "ext-dom": "*",
+        "ext-json": "*"
     },
     "platform-dev": [],
     "plugin-api-version": "1.1.0"

@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'version' => '0.99.14',
+    'version' => '0.99.15',
 
     'locale' => 'en_US',
     'plugins' => [

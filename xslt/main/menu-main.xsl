@@ -3,7 +3,7 @@
     <xsl:template name="menu-main">
         <nav id="menu-main" class="switcher navbar navbar-expand navbar-dark bg-dark"><!-- for vertical: navbar-expand-lg -->
             <a class="navbar-brand" href="/">
-                <img src="/img/gl.svg"/>
+                <img src="/img/pokeball-special-noshade.svg"/>
                 <span>PoGo Mate</span>
             </a>
             <!--
@@ -17,22 +17,22 @@
                 <xsl:call-template name="menu-main-item">
                     <xsl:with-param name="link" select="'/cleanup'"/>
                     <xsl:with-param name="text" select="'Cleanup'"/>
-                    <xsl:with-param name="icon" select="'/img/gl.svg'"/>
+                    <xsl:with-param name="icon" select="'/fontawesome/svgs/solid/broom.svg'"/>
                 </xsl:call-template>
                 <xsl:call-template name="menu-main-item">
                     <xsl:with-param name="link" select="'/lists'"/>
                     <xsl:with-param name="text" select="'Lists'"/>
-                    <xsl:with-param name="icon" select="'/img/ul.svg'"/>
+                    <xsl:with-param name="icon" select="'/fontawesome/svgs/solid/list-ul.svg'"/>
                 </xsl:call-template>
                 <xsl:call-template name="menu-main-item">
                     <xsl:with-param name="link" select="'/counters'"/>
                     <xsl:with-param name="text" select="'Counters'"/>
-                    <xsl:with-param name="icon" select="'/img/ml.svg'"/>
+                    <xsl:with-param name="icon" select="'/fontawesome/svgs/solid/fire-alt.svg'"/>
                 </xsl:call-template>
                 <xsl:call-template name="menu-main-item">
                     <xsl:with-param name="link" select="'/pokemon'"/>
                     <xsl:with-param name="text" select="'Search'"/>
-                    <xsl:with-param name="icon" select="'/img/ml.svg'"/>
+                    <xsl:with-param name="icon" select="'/fontawesome/svgs/solid/search.svg'"/>
                 </xsl:call-template>
             </ul>
             <!--
@@ -53,8 +53,8 @@
                     <xsl:text> active</xsl:text>
                 </xsl:if>
             </xsl:attribute>
-            <a class="nav-link" href="{$link}">
-<!--                <img src="{$icon}"/>-->
+            <a class="nav-link" href="{$link}" aria-label="{$text}">
+                <img src="{$icon}" alt="{$text}"/>
                 <span>
                     <xsl:value-of select="$text"/>
                 </span>

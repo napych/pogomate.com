@@ -52,7 +52,7 @@
                             <xsl:attribute name="checked">checked</xsl:attribute>
                         </xsl:if>
                     </input>
-                    <label class="form-check-label" for="input-keep100">Mythical</label>
+                    <label class="form-check-label" for="input-mythical">Mythical</label>
                 </div>
                 <div class="form-check-inline">
                     <input class="form-check-input" type="checkbox" value="1" name="special" id="input-special">
