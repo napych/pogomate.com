@@ -60,11 +60,10 @@ class Counters
         $attacks = [];
         foreach (Types::TYPE_ENUM as $attackType) {
             $attacks[$attackType] = 1;
-//            $types[$attackType] = 0;
         }
         foreach ($this->bossTypes as $bossType) {
-            foreach (Types::TYPE_ENUM as $attackType) {
-                $attacks[$attackType] *= Types::EFFECTIVENESS[$attackType][$bossType] ?? 1;
+            foreach (Types::EFFECTIVENESS as $attackType => $effectivenessData) {
+                $attacks[$attackType] *= $effectivenessData[$bossType] ?? 1;
             }
         }
         $bestEffect = 0;
@@ -81,8 +80,6 @@ class Counters
                 $goodAttacks[] = $attackType;
             }
         }
-//        $bestAttacks = array_unique($bestAttacks);
-//        $goodAttacks = array_unique($goodAttacks);
         $bestAttacksString = '@1' . implode(',@1', $bestAttacks) . '&@2' . implode(',@2', $bestAttacks) . ',@3' . implode(',@3', $bestAttacks);
         if (empty($goodAttacks)) {
             $goodAttacksString = $bestAttacksString;

@@ -44,28 +44,6 @@ class Types
         self::WATER
     ];
 
-    /** @deprecated  */
-    const VULNERABILITIES = [
-        self::FAIRY => [self::POISON, self::STEEL],
-        self::STEEL => [self::FIRE, self::FIGHTING, self::GROUND],
-        self::DARK => [self::FIGHTING, self::BUG, self::FAIRY],
-        self::DRAGON => [self::ICE, self::DRAGON, self::FAIRY],
-        self::GHOST => [self::GHOST, self::DARK],
-        self::ROCK => [self::WATER, self::GRASS, self::FIGHTING, self::GROUND, self::STEEL],
-        self::BUG => [self::FIRE, self::FLYING, self::ROCK],
-        self::PSYCHIC => [self::BUG, self::GHOST, self::DARK],
-        self::FLYING => [self::ELECTRIC, self::ICE, self::ROCK],
-        self::GROUND => [self::WATER, self::GRASS, self::ICE],
-        self::POISON => [self::GROUND, self::PSYCHIC],
-        self::FIGHTING => [self::FLYING, self::PSYCHIC, self::FAIRY],
-        self::ICE => [self::FIRE, self::FIGHTING, self::ROCK, self::STEEL],
-        self::GRASS => [self::FIRE, self::ICE, self::POISON, self::FLYING, self::BUG],
-        self::ELECTRIC => [self::GROUND],
-        self::WATER => [self::ELECTRIC, self::GRASS],
-        self::FIRE => [self::WATER, self::GROUND, self::ROCK],
-        self::NORMAL => [self::FIGHTING]
-    ];
-
     const DOUBLE = 1.6;
     const HALF = 1 / self::DOUBLE;
     const RESISTANCE = 1 / self::DOUBLE / self::DOUBLE;
@@ -254,40 +232,6 @@ class Types
         ]
     ];
 
-    /** @deprecated  */
-    protected static $effective = null;
-
-    /** @deprecated */
-    protected static function fillEffective()
-    {
-        if (!empty(static::$effective)) {
-            return;
-        }
-        static::$effective = [];
-        foreach (static::VULNERABILITIES as $type => $vulnerabilities) {
-            foreach ($vulnerabilities as $vulnerability) {
-                if (!isset(static::$effective[$vulnerability])) {
-                    static::$effective[$vulnerability] = [$type];
-                } else {
-                    static::$effective[$vulnerability][] = $type;
-                }
-            }
-        }
-    }
-
-    /** @deprecated */
-    public static function getVulnerabilities(string $type): array
-    {
-        return self::VULNERABILITIES[$type] ?? [];
-    }
-
-    /** @deprecated */
-    public static function getEffective(string $type): array
-    {
-        static::fillEffective();
-        return self::$effective[$type] ?? [];
-    }
-
     /**
      * Get types list as XML
      * @param \DOMElement|\DOMNode $node
@@ -301,7 +245,7 @@ class Types
         } elseif ($addNode) {
             $node = $node->appendChild($node->ownerDocument->createElement($addNode));
         }
-        foreach (self::TYPE_ENUM as $type) {
+        foreach (self::EFFECTIVENESS as $type => $stuff) {
             /** @var \DOMElement $typeNode */
             $typeNode = $node->appendChild($node->ownerDocument->createElement('type'));
             $typeNode->setAttribute('name', $type);
