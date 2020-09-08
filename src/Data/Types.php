@@ -15,7 +15,7 @@ class Types
     const FLYING = 'Flying';
     const GROUND = 'Ground';
     const POISON = 'Poison';
-    const FIGHT = 'Fighting';
+    const FIGHTING = 'Fighting';
     const ICE = 'Ice';
     const GRASS = 'Grass';
     const ELECTRIC = 'Electric';
@@ -35,7 +35,7 @@ class Types
         self::FLYING,
         self::GROUND,
         self::POISON,
-        self::FIGHT,
+        self::FIGHTING,
         self::ICE,
         self::GRASS,
         self::ELECTRIC,
@@ -44,29 +44,220 @@ class Types
         self::NORMAL
     ];
 
+    /** @deprecated  */
     const VULNERABILITIES = [
         self::FAIRY => [self::POISON, self::STEEL],
-        self::STEEL => [self::FIRE, self::FIGHT, self::GROUND],
-        self::DARK => [self::FIGHT, self::BUG, self::FAIRY],
+        self::STEEL => [self::FIRE, self::FIGHTING, self::GROUND],
+        self::DARK => [self::FIGHTING, self::BUG, self::FAIRY],
         self::DRAGON => [self::ICE, self::DRAGON, self::FAIRY],
         self::GHOST => [self::GHOST, self::DARK],
-        self::ROCK => [self::WATER, self::GRASS, self::FIGHT, self::GROUND, self::STEEL],
+        self::ROCK => [self::WATER, self::GRASS, self::FIGHTING, self::GROUND, self::STEEL],
         self::BUG => [self::FIRE, self::FLYING, self::ROCK],
         self::PSYCHIC => [self::BUG, self::GHOST, self::DARK],
         self::FLYING => [self::ELECTRIC, self::ICE, self::ROCK],
         self::GROUND => [self::WATER, self::GRASS, self::ICE],
         self::POISON => [self::GROUND, self::PSYCHIC],
-        self::FIGHT => [self::FLYING, self::PSYCHIC, self::FAIRY],
-        self::ICE => [self::FIRE, self::FIGHT, self::ROCK, self::STEEL],
+        self::FIGHTING => [self::FLYING, self::PSYCHIC, self::FAIRY],
+        self::ICE => [self::FIRE, self::FIGHTING, self::ROCK, self::STEEL],
         self::GRASS => [self::FIRE, self::ICE, self::POISON, self::FLYING, self::BUG],
         self::ELECTRIC => [self::GROUND],
         self::WATER => [self::ELECTRIC, self::GRASS],
         self::FIRE => [self::WATER, self::GROUND, self::ROCK],
-        self::NORMAL => [self::FIGHT]
+        self::NORMAL => [self::FIGHTING]
     ];
 
+    const DOUBLE = 1.6;
+    const HALF = 1 / self::DOUBLE;
+    const RESISTANCE = 1 / self::DOUBLE / self::DOUBLE;
+
+    const EFFECTIVENESS = [
+        self::BUG => [
+            self::DARK => self::DOUBLE,
+            self::GRASS => self::DOUBLE,
+            self::PSYCHIC => self::DOUBLE,
+
+            self::FIGHTING => self::HALF,
+            self::FIRE => self::HALF,
+            self::FLYING => self::HALF,
+            self::FAIRY => self::HALF,
+            self::GHOST => self::HALF,
+            self::POISON => self::HALF,
+            self::STEEL => self::HALF
+        ],
+        self::DARK => [
+            self::GHOST => self::DOUBLE,
+            self::PSYCHIC => self::DOUBLE,
+
+            self::DARK => self::HALF,
+            self::FIGHTING => self::HALF,
+            self::FAIRY => self::HALF
+        ],
+        self::DRAGON => [
+            self::DRAGON => self::DOUBLE,
+
+            self::STEEL => self::HALF,
+
+            self::FAIRY => self::RESISTANCE
+        ],
+        self::ELECTRIC => [
+            self::FLYING => self::DOUBLE,
+            self::WATER => self::DOUBLE,
+
+            self::DRAGON => self::HALF,
+            self::ELECTRIC => self::HALF,
+            self::GRASS => self::HALF,
+
+            self::GROUND => self::RESISTANCE
+        ],
+        self::FAIRY => [
+            self::DARK => self::DOUBLE,
+            self::DRAGON => self::DOUBLE,
+            self::FIGHTING => self::DOUBLE,
+
+            self::FIRE => self::HALF,
+            self::POISON => self::HALF,
+            self::STEEL => self::HALF
+        ],
+        self::FIGHTING => [
+            self::DARK => self::DOUBLE,
+            self::ICE => self::DOUBLE,
+            self::NORMAL => self::DOUBLE,
+            self::ROCK => self::DOUBLE,
+            self::STEEL => self::DOUBLE,
+
+            self::BUG => self::HALF,
+            self::FAIRY => self::HALF,
+            self::FLYING => self::HALF,
+            self::POISON => self::HALF,
+            self::PSYCHIC => self::HALF,
+
+            self::GHOST => self::RESISTANCE
+        ],
+        self::FIRE => [
+            self::BUG => self::DOUBLE,
+            self::GRASS => self::DOUBLE,
+            self::ICE => self::DOUBLE,
+            self::STEEL => self::DOUBLE,
+
+            self::DRAGON => self::HALF,
+            self::FIRE => self::HALF,
+            self::ROCK => self::HALF,
+            self::WATER => self::HALF
+        ],
+        self::FLYING => [
+            self::BUG => self::DOUBLE,
+            self::FIGHTING => self::DOUBLE,
+            self::GRASS => self::DOUBLE,
+
+            self::ELECTRIC => self::HALF,
+            self::ROCK => self::HALF,
+            self::STEEL => self::HALF
+        ],
+        self::GHOST => [
+            self::GHOST => self::DOUBLE,
+            self::PSYCHIC => self::DOUBLE,
+
+            self::DARK => self::HALF,
+
+            self::NORMAL => self::RESISTANCE
+        ],
+        self::GRASS => [
+            self::GROUND => self::DOUBLE,
+            self::ROCK => self::DOUBLE,
+            self::WATER => self::DOUBLE,
+
+            self::BUG => self::HALF,
+            self::DRAGON => self::HALF,
+            self::FIRE => self::HALF,
+            self::FLYING => self::HALF,
+            self::GRASS => self::HALF,
+            self::POISON => self::HALF,
+            self::STEEL => self::HALF
+        ],
+        self::GROUND => [
+            self::ELECTRIC => self::DOUBLE,
+            self::FIRE => self::DOUBLE,
+            self::POISON => self::DOUBLE,
+            self::ROCK => self::DOUBLE,
+            self::STEEL => self::DOUBLE,
+
+            self::BUG => self::HALF,
+            self::GRASS => self::HALF,
+
+            self::FLYING => self::RESISTANCE
+        ],
+        self::ICE => [
+            self::DRAGON => self::DOUBLE,
+            self::FLYING => self::DOUBLE,
+            self::GRASS => self::DOUBLE,
+            self::GROUND => self::DOUBLE,
+
+            self::FIRE => self::HALF,
+            self::ICE => self::HALF,
+            self::STEEL => self::HALF,
+            self::WATER => self::HALF
+        ],
+        self::NORMAL => [
+            self::ROCK => self::HALF,
+            self::STEEL => self::HALF,
+
+            self::GHOST => self::RESISTANCE
+        ],
+        self::POISON => [
+            self::GRASS => self::DOUBLE,
+            self::FAIRY => self::DOUBLE,
+
+            self::GHOST => self::HALF,
+            self::GROUND => self::HALF,
+            self::POISON => self::HALF,
+            self::ROCK => self::HALF,
+
+            self::STEEL => self::RESISTANCE
+        ],
+        self::PSYCHIC => [
+            self::FIGHTING => self::DOUBLE,
+            self::POISON => self::DOUBLE,
+
+            self::PSYCHIC => self::HALF,
+            self::STEEL => self::HALF,
+
+            self::DARK => self::RESISTANCE
+        ],
+        self::ROCK => [
+            self::BUG => self::DOUBLE,
+            self::FIRE => self::DOUBLE,
+            self::FLYING => self::DOUBLE,
+            self::ICE => self::DOUBLE,
+
+            self::FIGHTING => self::HALF,
+            self::GROUND => self::HALF,
+            self::STEEL => self::HALF
+        ],
+        self::STEEL => [
+            self::FAIRY => self::DOUBLE,
+            self::ICE => self::DOUBLE,
+            self::ROCK => self::DOUBLE,
+
+            self::ELECTRIC => self::HALF,
+            self::FIRE => self::HALF,
+            self::STEEL => self::HALF,
+            self::WATER => self::HALF
+        ],
+        self::WATER => [
+            self::FIRE => self::DOUBLE,
+            self::GROUND => self::DOUBLE,
+            self::ROCK => self::DOUBLE,
+
+            self::DRAGON => self::HALF,
+            self::GRASS => self::HALF,
+            self::WATER => self::HALF
+        ]
+    ];
+
+    /** @deprecated  */
     protected static $effective = null;
 
+    /** @deprecated */
     protected static function fillEffective()
     {
         if (!empty(static::$effective)) {
@@ -84,11 +275,13 @@ class Types
         }
     }
 
+    /** @deprecated */
     public static function getVulnerabilities(string $type): array
     {
         return self::VULNERABILITIES[$type] ?? [];
     }
 
+    /** @deprecated */
     public static function getEffective(string $type): array
     {
         static::fillEffective();
