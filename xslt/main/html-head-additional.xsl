@@ -12,5 +12,12 @@
         <link rel="manifest" href="/site.webmanifest?{/root/@build}"/>
         <meta name="theme-color" content="#ffffff"/>
         <script type="text/javascript" src="/js/clipboard-polyfill.promise.js?{/root/@build}"/>
+        <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-177435892-1"/>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-177435892-1');
+        </script>
     </xsl:template>
 </xsl:stylesheet>

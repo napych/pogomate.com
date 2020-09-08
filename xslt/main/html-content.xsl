@@ -15,5 +15,4 @@
             <xsl:call-template name="content-wrapper"/>
         </body>
     </xsl:template>
-
 </xsl:stylesheet>
