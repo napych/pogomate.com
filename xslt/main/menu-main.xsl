@@ -3,7 +3,7 @@
     <xsl:template name="menu-main">
         <nav id="menu-main" class="switcher navbar navbar-expand navbar-dark bg-dark"><!-- for vertical: navbar-expand-lg -->
             <a class="navbar-brand" href="/">
-                <img src="/img/pokeball-special-noshade.svg"/>
+                <img src="/img/pokeball-special-noshade.svg" alt="Main"/>
                 <span>PoGo Mate</span>
             </a>
             <!--
