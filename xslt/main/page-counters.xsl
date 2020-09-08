@@ -11,7 +11,7 @@
     </xsl:template>
 
     <xsl:template name="page-counters-form-type">
-<!--        <h2>By type</h2>-->
+        <!--        <h2>By type</h2>-->
         <form method="get" action="/counters">
             <div class="form-group">
                 <label for="type1">Boss type #1</label>
@@ -80,9 +80,31 @@
     </xsl:template>
 
     <xsl:template match="counters" mode="page-counters">
-        <xsl:call-template name="snippet-string">
-            <xsl:with-param name="name" select="concat('Counters search string for ', @typeStr)"/>
-            <xsl:with-param name="string" select="@string"/>
-        </xsl:call-template>
+        <h2>
+            <xsl:text>Counters search string for </xsl:text>
+            <xsl:value-of select="@typeStr"/>
+        </h2>
+        <xsl:choose>
+            <xsl:when test="@front">
+                <h3>Front liners</h3>
+                <p>Use them first if you have high CP ones. Those are top DPS attackers, even if they won't last long.</p>
+                <xsl:call-template name="snippet-string">
+                    <xsl:with-param name="name" select="''"/>
+                    <xsl:with-param name="string" select="@front"/>
+                </xsl:call-template>
+                <h4>More</h4>
+                <p>The rest of the team.</p>
+                <xsl:call-template name="snippet-string">
+                    <xsl:with-param name="name" select="''"/>
+                    <xsl:with-param name="string" select="@team"/>
+                </xsl:call-template>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:call-template name="snippet-string">
+                    <xsl:with-param name="name" select="''"/>
+                    <xsl:with-param name="string" select="@team"/>
+                </xsl:call-template>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
 </xsl:stylesheet>

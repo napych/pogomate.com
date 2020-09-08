@@ -20,6 +20,7 @@ class Counters extends \Difra\Controller
         $node->setAttribute('type2', $_GET['type2'] ?? '');
         $node->setAttribute('attack1', $_GET['attack1'] ?? '');
         $node->setAttribute('attack2', $_GET['attack2'] ?? '');
+
         $types = [];
         if (!empty($_GET['type1']) || !empty($_GET['type2'])) {
             $counters = new \Pogo\Counters;

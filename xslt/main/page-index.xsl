@@ -4,7 +4,9 @@
         <h1>PoGo Mate</h1>
         <div id="news">
             <h2>News</h2>
-            <strong>26-08-2020</strong>
+            <strong>08-sep-2020</strong>
+            <p>Greatly improved counters finder logic.</p>
+            <strong>26-aug-2020</strong>
             <p>Added cleanup settings.</p>
             <p>Fixes for cleanup and counters search strings.</p>
             <strong>25-aug-2020</strong>

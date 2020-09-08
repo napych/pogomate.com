@@ -7,8 +7,8 @@ use Pogo\Data\Types;
 
 class Counters
 {
-    protected $attackTypes = [];
-    protected $pokemonTypes = [];
+    protected $bossAttacks = [];
+    protected $bossTypes = [];
 
     /**
      * Add attack type(s)
@@ -25,7 +25,7 @@ class Counters
         if (!Types::isValidType($attackTypes)) {
             throw new \Exception('Invalid attack type: ' . $attackTypes);
         }
-        $this->attackTypes[] = $attackTypes;
+        $this->bossAttacks[] = $attackTypes;
     }
 
     /**
@@ -44,34 +44,93 @@ class Counters
         if (!Types::isValidType($types)) {
             throw new \Exception('Wrong type: ' . $types);
         }
-        $this->pokemonTypes[] = $types;
+        $this->bossTypes[] = $types;
     }
 
     /**
      * Get search string
-     * @return string
+     * @return array
      */
-    public function getString()
+    public function getStrings()
     {
-        if (empty($this->attackTypes)) {
-            $this->attackTypes = $this->pokemonTypes;
+        if (empty($this->bossAttacks)) {
+            $this->bossAttacks = $this->bossTypes;
         }
+
         $attacks = [];
-        foreach ($this->pokemonTypes as $type) {
-            $attacks = array_merge($attacks, Types::getVulnerabilities($type));
+        foreach (Types::TYPE_ENUM as $attackType) {
+            $attacks[$attackType] = 1;
+//            $types[$attackType] = 0;
         }
-        $attacks = array_unique($attacks);
-        $string[] = '@1' . implode(',@1', $attacks);
-        $string[] = '@2' . implode(',@2', $attacks) . ',@3' . implode(',@3', $attacks);
-        $vulnerabilities = [];
-        foreach ($this->attackTypes as $type) {
-            $vulnerabilities = array_merge($vulnerabilities, Types::getEffective($type));
+        foreach ($this->bossTypes as $bossType) {
+            foreach (Types::TYPE_ENUM as $attackType) {
+                $attacks[$attackType] *= Types::EFFECTIVENESS[$attackType][$bossType] ?? 1;
+            }
         }
-        $vulnerabilities = array_unique($vulnerabilities);
-        if (!empty($vulnerabilities)) {
-            $string[] = '!' . implode(',!', $vulnerabilities);
+        $bestEffect = 0;
+        $bestAttacks = [];
+        $goodAttacks = [];
+        foreach ($attacks as $attackType => $effectiveness) {
+            if ($effectiveness > $bestEffect) {
+                $bestEffect = $effectiveness;
+                $bestAttacks = [$attackType];
+            } elseif ($effectiveness === $bestEffect) {
+                $bestAttacks[] = $attackType;
+            }
+            if ($effectiveness > 1) {
+                $goodAttacks[] = $attackType;
+            }
         }
-        return implode('&', $string);
+//        $bestAttacks = array_unique($bestAttacks);
+//        $goodAttacks = array_unique($goodAttacks);
+        $bestAttacksString = '@1' . implode(',@1', $bestAttacks) . '&@2' . implode(',@2', $bestAttacks) . ',@3' . implode(',@3', $bestAttacks);
+        if (empty($goodAttacks)) {
+            $goodAttacksString = $bestAttacksString;
+            $bestAttacksString = '';
+        } else {
+            $goodAttacksString = '@1' . implode(',@1', $goodAttacks) . '&@2' . implode(',@2', $goodAttacks) . ',@3' . implode(',@3', $goodAttacks);
+            if ($goodAttacksString === $bestAttacksString) {
+                $bestAttacksString = '';
+            }
+        }
+
+
+        $badTypes = [];
+        foreach ($this->bossAttacks as $n => $bossAttack) {
+            foreach (Types::TYPE_ENUM as $pokemonType) {
+                $effectiveness = Types::EFFECTIVENESS[$bossAttack][$pokemonType] ?? 1;
+                if ($effectiveness > 1) {
+                    $skip = [];
+                    foreach (Types::TYPE_ENUM as $pokemonType2) {
+                        $effectiveness2 = Types::EFFECTIVENESS[$bossAttack][$pokemonType2] ?? 1;
+                        if ($effectiveness * $effectiveness2 <= 1) {
+                            $skip[] = $pokemonType2;
+                        }
+                    }
+                    if (isset($badTypes[$pokemonType])) {
+                        $badTypes[$pokemonType] = array_intersect($badTypes[$pokemonType], $skip);
+                    } else {
+                        $badTypes[$pokemonType] = $skip;
+                    }
+                }
+            }
+        }
+//        $goodTypes = array_unique($goodTypes);
+        if (!empty($badTypes)) {
+            $badTypesString = '';
+            foreach ($badTypes as $badType => $skip) {
+                $badTypesString .= '&!' . $badType;
+                if (!empty($skip)) {
+                    $badTypesString .= ',' . implode(',', $skip);
+                }
+            }
+        } else {
+            $badTypesString = '';
+        }
+        return [
+            'front' => $bestAttacksString,
+            'team' => $goodAttacksString . $badTypesString
+        ];
     }
 
     /**
@@ -80,14 +139,21 @@ class Counters
      * @param bool|string $addNode
      * @return \DOMElement|\DOMNode
      */
-    public function getXML($node, $addNode = false)
-    {
+    public
+    function getXML(
+        $node,
+        $addNode = false
+    ) {
         if ($addNode === true) {
             $node = $node->appendChild($node->ownerDocument->createElement('counters'));
         } elseif ($addNode) {
             $node = $node->appendChild($node->ownerDocument->createElement($addNode));
         }
-        $node->setAttribute('string', $this->getString());
+        $data = $this->getStrings();
+        if (!empty($data['front'])) {
+            $node->setAttribute('front', $data['front']);
+        }
+        $node->setAttribute('team', $data['team']);
         return $node;
     }
 }

@@ -24,24 +24,24 @@ class Types
     const NORMAL = 'Normal';
 
     const TYPE_ENUM = [
-        self::FAIRY,
-        self::STEEL,
+        self::BUG,
         self::DARK,
         self::DRAGON,
-        self::GHOST,
-        self::ROCK,
-        self::BUG,
-        self::PSYCHIC,
-        self::FLYING,
-        self::GROUND,
-        self::POISON,
-        self::FIGHTING,
-        self::ICE,
-        self::GRASS,
         self::ELECTRIC,
-        self::WATER,
+        self::FIGHTING,
         self::FIRE,
-        self::NORMAL
+        self::FLYING,
+        self::GHOST,
+        self::GRASS,
+        self::GROUND,
+        self::FAIRY,
+        self::ICE,
+        self::NORMAL,
+        self::POISON,
+        self::PSYCHIC,
+        self::ROCK,
+        self::STEEL,
+        self::WATER
     ];
 
     /** @deprecated  */
