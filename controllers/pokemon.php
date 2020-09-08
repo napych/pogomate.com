@@ -24,7 +24,7 @@ class Pokemon extends \Difra\Controller
     {
         $this->setTitle('Pokémon search');
         $this->setDescription('Search for a pokémon to find out what\'s it useful for');
-        $this->setKeywords('pokémon go, useful pokémon, pokémon list, tier list');
+        $this->setKeywords('pokémon go, useful pokémon, pokémon list, tier list, pokémon species');
 
         $this->root->appendChild($this->xml->createElement('page-pokemon-search'));
     }
@@ -42,7 +42,7 @@ class Pokemon extends \Difra\Controller
 
         $this->setTitle($pokemon->getShortName() . ' pokémon');
         $this->setDescription($pokemon->getShortName() . ' pokémon information');
-        $this->setKeywords('pokémon go, ' . $pokemon->getShortName() . ' pokémon, tier list, pokémon usefulness, pvp, pve');
+        $this->setKeywords('pokémon go, ' . $pokemon->getShortName() . ' pokémon, tier list, pokémon usefulness, pvp, pve, pokémon species');
 
         $node = $this->root->appendChild($this->xml->createElement('page-pokemon'));
         $pokemon->getXML($node, false);
