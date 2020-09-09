@@ -68,7 +68,9 @@ appService.fetch1 = function (event) {
             return cachedResponse;
         }
         const networkResponse = await fetch(event.request);
-        await cache.put(event.request, networkResponse.clone());
+        if (networkResponse.status === 200) {
+            await cache.put(event.request, networkResponse.clone());
+        }
         return networkResponse;
     }())
 }
