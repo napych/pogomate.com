@@ -29,7 +29,7 @@
     </xsl:template>
 
     <xsl:template match="pokemon" mode="reasons">
-        <xsl:if test="count(../pokemon)&gt;1">
+        <xsl:if test="count(../pokemon)&gt;1 or @code!=@pokedexId">
             <h2>
                 <xsl:value-of select="@name"/>
             </h2>
