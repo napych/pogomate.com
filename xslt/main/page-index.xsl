@@ -2,6 +2,10 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:template match="page-index">
         <h1>PoGo Mate</h1>
+        <div id="search">
+            <h2>Pokémon search</h2>
+            <xsl:call-template name="snippet-search"/>
+        </div>
         <div id="news">
             <h2>News</h2>
             <strong>08-sep-2020</strong>
