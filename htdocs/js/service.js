@@ -55,24 +55,28 @@ appService.activate = function (e) {
 
 appService.fetch1 = function (event) {
     event.respondWith(async function () {
-        if (event.request.method !== 'GET') {
-            if (event.request.url.indexOf('/cleanup') >= 0) {
-                const cache = await caches.open(appService.cacheName);
-                await cache.delete(event.request, {ignoreSearch: true, ignoreMethod: true, ignoreVary: true});
+            if (event.request.method !== 'GET') {
+                if (event.request.url.indexOf(this.location.href) < 0) {
+                    return await fetch(event.request, {mode: 'cors', credentials: 'same-origin'});
+                }
+                if (event.request.url.indexOf('/cleanup') >= 0) {
+                    const cache = await caches.open(appService.cacheName);
+                    await cache.delete(event.request, {ignoreSearch: true, ignoreMethod: true, ignoreVary: true});
+                }
+                return await fetch(event.request);
             }
-            return await fetch(event.request);
-        }
-        const cache = await caches.open(appService.cacheName);
-        const cachedResponse = await cache.match(event.request);
-        if (cachedResponse) {
-            return cachedResponse;
-        }
-        const networkResponse = await fetch(event.request);
-        if (networkResponse && networkResponse.status === 200) {
-            await cache.put(event.request, networkResponse.clone());
-        }
-        return networkResponse;
-    }())
+            const cache = await caches.open(appService.cacheName);
+            const cachedResponse = await cache.match(event.request);
+            if (cachedResponse) {
+                return cachedResponse;
+            }
+            const networkResponse = await fetch(event.request, {credentials: 'same-origin'});
+            if (networkResponse && networkResponse.status === 200) {
+                await cache.put(event.request, networkResponse.clone());
+            }
+            return networkResponse;
+        }()
+    )
 }
 
 self.addEventListener('install', appService.install);

@@ -3,18 +3,17 @@ let a2hs = {};
 a2hs.installPrompt = null;
 
 a2hs.install = function (event) {
-    alert('123');
     $('#a2hs').hide();
     if (!a2hs.installPrompt) {
         return;
     }
     a2hs.installPrompt.prompt();
     a2hs.installPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === 'accepted') {
-            console.log('User accepted the A2HS prompt');
-        } else {
-            console.log('User dismissed the A2HS prompt');
-        }
+        // if (choiceResult.outcome === 'accepted') {
+        //     console.log('User accepted the A2HS prompt');
+        // } else {
+        //     console.log('User dismissed the A2HS prompt');
+        // }
         a2hs.installPrompt = null;
     });
 }

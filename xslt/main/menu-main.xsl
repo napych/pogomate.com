@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:template name="menu-main">
-        <nav id="menu-main" class="switcher navbar navbar-expand navbar-dark bg-dark"><!-- for vertical: navbar-expand-lg -->
-            <a class="navbar-brand" href="/">
+        <nav id="menu-main" class="switcher navbar navbar-expand navbar-dark bg-dark" role="menubar">
+            <a class="navbar-brand" href="/" aria-role="menuitem">
                 <img src="/img/pokeball-special-noshade.svg" alt="Main"/>
                 <span>PoGo Mate</span>
             </a>
@@ -53,7 +53,7 @@
                     <xsl:text> active</xsl:text>
                 </xsl:if>
             </xsl:attribute>
-            <a class="nav-link" href="{$link}" aria-label="{$text}">
+            <a class="nav-link" href="{$link}" aria-label="{$text}" role="menuitem">
                 <img src="{$icon}" alt="{$text}"/>
                 <span>
                     <xsl:value-of select="$text"/>
