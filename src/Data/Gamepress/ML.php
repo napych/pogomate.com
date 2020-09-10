@@ -31,7 +31,8 @@ class ML
             Pokemon::SWAMPERT,
             Pokemon::METAGROSS,
             Pokemon::MELMETAL,
-            Pokemon::HYDREIGON
+            Pokemon::HYDREIGON,
+            Pokemon::DRAGONITE | Mods::SHADOW,
         ],
         'Tier 2.5' => [
             Pokemon::MACHAMP,

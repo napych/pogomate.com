@@ -45,7 +45,8 @@ class UL
         ],
         'Tier 2.5' => [
             Pokemon::VENUSAUR,
-            Pokemon::SUICUNE,
+            Pokemon::FLYGON,
+            Pokemon::MACHAMP | Mods::SHADOW,
             Pokemon::OBSTAGOON,
             Pokemon::MEWTWO | Mods::FORM2,
             Pokemon::SEISMITOAD,
@@ -59,16 +60,16 @@ class UL
             Pokemon::REGICE,
             Pokemon::WIGGLYTUFF,
             Pokemon::WHISCASH,
-            Pokemon::FLYGON,
-            Pokemon::MACHAMP | Mods::SHADOW,
-            Pokemon::DRAGONITE,
+            Pokemon::DRAGONITE | Mods::SHADOW,
+            Pokemon::SUICUNE,
             Pokemon::CLOYSTER,
             Pokemon::PRIMEAPE,
             Pokemon::MACHAMP,
+            Pokemon::DRAGONITE,
             Pokemon::KINGDRA,
             Pokemon::URSARING,
+            Pokemon::POLITOED,
             Pokemon::UMBREON,
-            Pokemon::POLITOED
         ]
     ];
 }

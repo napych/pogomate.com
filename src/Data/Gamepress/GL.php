@@ -72,11 +72,11 @@ namespace Pogo\Data\Gamepress {
                 Pokemon::IVYSAUR | Mods::SHADOW,
                 Pokemon::CHARIZARD,
                 Pokemon::MACHAMP | Mods::SHADOW,
-                Pokemon::WIGGLYTUFF,
                 Pokemon::MANTINE,
                 Pokemon::NOCTOWL,
                 Pokemon::JUMPLUFF,
                 Pokemon::CLEFABLE,
+                Pokemon::WIGGLYTUFF,
                 Pokemon::VICTREEBEL,
             ]
         ];
