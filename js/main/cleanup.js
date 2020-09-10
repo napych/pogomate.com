@@ -5,9 +5,8 @@ cleanup.changed = function () {
 }
 
 cleanup.submit = async function () {
-    console.log('cleanup submit #2');
     const cache = await caches.open('PoGoMate-' + config.buildShort);
-    await cache.delete(window.location, {ignoreSearch: true, ignoreMethod: true, ignoreVary: true});
+    await cache.delete('/cleanup', {ignoreSearch: true, ignoreMethod: true, ignoreVary: true});
 }
 
 $(document).on('change modify input', '.cleanup-form.unmodified input', cleanup.changed);
