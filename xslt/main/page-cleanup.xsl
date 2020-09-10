@@ -10,7 +10,7 @@
                     <xsl:text>Ingame implementation of !alola and !galar filters is currently broken, some filters are disabled for now.</xsl:text>
                 </div>
         -->
-        <form action="/cleanup" method="post" class="ajaxer cleanup-form unmodified">
+        <form action="/cleanup" method="post" class="cleanup-form unmodified">
             <input type="hidden" name="submit" value="1"/>
             <h2>Keep</h2>
             <div class="cleanup-block">
