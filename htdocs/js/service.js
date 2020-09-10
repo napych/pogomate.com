@@ -70,7 +70,7 @@ appService.fetch1 = function (event) {
             if (cachedResponse) {
                 return cachedResponse;
             }
-            const networkResponse = await fetch(event.request, {credentials: 'same-origin'});
+            const networkResponse = await fetch(event.request, {credentials: 'same-origin', cache: "no-store"});
             if (networkResponse && networkResponse.status === 200) {
                 await cache.put(event.request, networkResponse.clone());
             }
