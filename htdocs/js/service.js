@@ -56,7 +56,7 @@ appService.activate = function (e) {
 appService.fetch1 = function (event) {
     event.respondWith(async function () {
         if (event.request.method !== 'GET') {
-            if (event.request.url.indexOf('/cleanup')) {
+            if (event.request.url.indexOf('/cleanup') >= 0) {
                 const cache = await caches.open(appService.cacheName);
                 await cache.delete(event.request, {ignoreSearch: true, ignoreMethod: true, ignoreVary: true});
             }
