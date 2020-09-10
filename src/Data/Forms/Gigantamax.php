@@ -7,6 +7,7 @@ use Pogo\Pokemon;
 
 class Gigantamax
 {
+    const DESCRIPTION = 'Gigantamax evolutions';
     const GIGANTAMAX = [
         Pokemon::VENUSAUR,
         Pokemon::CHARIZARD,

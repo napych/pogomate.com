@@ -13,13 +13,6 @@ class Lists extends \Difra\Controller
         $this->setKeywords('pokémon go, gamepress, tier list, search strings');
 
         $node = $this->root->appendChild($this->xml->createElement('page-lists'));
-        $lists = \Pogo\Data\Lists::getAll();
-        foreach ($lists as $list) {
-            $single = new \Pogo\Strings();
-            $single->addList($list);
-            $listNode = $node->appendChild($this->xml->createElement('list'));
-            $listNode->setAttribute('name', $list[\Pogo\Data\Lists::ENT_DESCRIPTION]);
-            $listNode->setAttribute('string', $single->getIncludeString());
-        }
+        \Pogo\Data\Lists::getAllXML($node, false, true);
     }
 }

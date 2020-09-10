@@ -8,7 +8,7 @@ use Pogo\Pokemon;
 
 class PVE
 {
-    const DESCRIPTION = 'GamePress Attackers Tier List';
+    const DESCRIPTION = 'GamePress Attackers';
 
     const TIERS = [
         'Tier 1' => [

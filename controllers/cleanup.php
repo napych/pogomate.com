@@ -77,9 +77,9 @@ class Cleanup extends \Difra\Controller
         if ($cleanup['special']) {
             $result[] = '!@special,@frustration,@return';
         }
-        if ($cleanup['cp']) {
-            $result[] = 'cp-' . ($cleanup['cp'] - 1);
-        }
+//        if ($cleanup['cp']) {
+//            $result[] = 'cp-' . ($cleanup['cp'] - 1);
+//        }
 
         $lists = \Pogo\Data\Lists::getAll();
         $strings = new \Pogo\Strings();
@@ -100,13 +100,13 @@ class Cleanup extends \Difra\Controller
         AjaxCheckbox $legendary,
         AjaxCheckbox $mythical,
         AjaxCheckbox $special,
-        AjaxInt $cp = null,
+//        AjaxInt $cp = null,
         AjaxData $list = null
     ) {
-        if ($cp && $cp->val() < 100) {
-            Ajaxer::invalid('cp');
-            return;
-        }
+//        if ($cp && $cp->val() < 100) {
+//            Ajaxer::invalid('cp');
+//            return;
+//        }
         $cleanup = [
             'perfect' => $perfect->val(),
             'shiny' => $shiny->val(),
@@ -114,7 +114,7 @@ class Cleanup extends \Difra\Controller
             'legendary' => $legendary->val(),
             'mythical' => $mythical->val(),
             'special' => $special->val(),
-            'cp' => $cp ? $cp->val() : 0,
+//            'cp' => $cp ? $cp->val() : 0,
             'list' => []
         ];
         $listArr = $list ? $list->val() : '';

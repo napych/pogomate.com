@@ -2,9 +2,11 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
     <xsl:template match="page-counters">
         <h1>Counters finder</h1>
+        <!--
         <div class="alert alert-primary" role="alert">
             <xsl:text>To search for boss counters, please specify it's type and attack types.</xsl:text>
         </div>
+        -->
         <xsl:call-template name="page-counters-form-type"/>
         <br/>
         <xsl:apply-templates select="counters" mode="page-counters"/>
@@ -12,6 +14,7 @@
 
     <xsl:template name="page-counters-form-type">
         <!--        <h2>By type</h2>-->
+        <h2 class="h3">Parameters</h2>
         <form method="get" action="/counters">
             <div class="form-group">
                 <label for="type1">Boss type #1</label>
@@ -80,19 +83,19 @@
     </xsl:template>
 
     <xsl:template match="counters" mode="page-counters">
-        <h2>
+        <h2 class="h3">
             <xsl:text>Counters search string for </xsl:text>
             <xsl:value-of select="@typeStr"/>
         </h2>
         <xsl:choose>
             <xsl:when test="@front">
-                <h3>Front liners</h3>
+                <h3 class="h5">Front liners</h3>
                 <p>Use them first if you have high CP ones. Those are top DPS attackers, even if they won't last long.</p>
                 <xsl:call-template name="snippet-string">
                     <xsl:with-param name="name" select="''"/>
                     <xsl:with-param name="string" select="@front"/>
                 </xsl:call-template>
-                <h4>More</h4>
+                <h3 class="h5">More</h3>
                 <p>The rest of the team.</p>
                 <xsl:call-template name="snippet-string">
                     <xsl:with-param name="name" select="''"/>

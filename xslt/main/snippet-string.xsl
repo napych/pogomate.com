@@ -9,9 +9,9 @@
                 <xsl:value-of select="$name"/>
             </h5>
             <p>
-                <a href="#" class="string-copy">Copy</a>
+                <a href="#" class="string-copy btn btn-primary">Copy</a>
                 <xsl:text> </xsl:text>
-                <a href="#" class="string-reveal">Reveal</a>
+                <a href="#" class="string-reveal btn btn-outline-secondary">Reveal</a>
             </p>
         </div>
     </xsl:template>

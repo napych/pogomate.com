@@ -24,7 +24,7 @@
             </p>
             <hr/>
         </xsl:if>
-        <h2>Pokémon search</h2>
+        <h2 class="h3">Pokémon search</h2>
         <xsl:call-template name="snippet-search"/>
     </xsl:template>
 
@@ -65,17 +65,10 @@
 
     <xsl:template match="reason" mode="pokemon">
         <p>
-            <img width="20" height="20" title="{@type}" alt="{@type}">
-                <xsl:attribute name="src">
-                    <xsl:text>/img/</xsl:text>
-                    <xsl:choose>
-                        <xsl:when test="@type='PVE'">pokeball-special.svg</xsl:when>
-                        <xsl:when test="@type='GL'">gl.svg</xsl:when>
-                        <xsl:when test="@type='UL'">ul.svg</xsl:when>
-                        <xsl:when test="@type='ML'">ml.svg</xsl:when>
-                    </xsl:choose>
-                </xsl:attribute>
-            </img>
+            <xsl:call-template name="snippet-icon">
+                <xsl:with-param name="name" select="@type"/>
+                <xsl:with-param name="size" select="20"/>
+            </xsl:call-template>
             <xsl:text> </xsl:text>
             <xsl:value-of select="@list"/>
             <xsl:if test="@subList!=''">
