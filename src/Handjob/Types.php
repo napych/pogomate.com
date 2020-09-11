@@ -1,6 +1,6 @@
 <?php
 
-namespace Pogo\Data;
+namespace Pogo\Handjob;
 
 class Types
 {

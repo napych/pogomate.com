@@ -1,7 +1,8 @@
 <?php
 
-namespace Pogo\Data;
+namespace Pogo\Lists;
 
+use Pogo\Handjob\Mods;
 use Pogo\Pokemon;
 
 class Top10

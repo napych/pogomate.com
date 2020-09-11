@@ -3,13 +3,13 @@
 namespace Pogo;
 
 use Exception;
-use Pogo\Data\Evolve;
-use Pogo\Data\Forms;
-use Pogo\Data\Mods;
-use Pogo\Data\Names;
-use Pogo\Data\PokemonList;
+use Pogo\Handjob\Evolve;
+use Pogo\Lists\Evolutions;
+use Pogo\Handjob\Mods;
+use Pogo\Handjob\Names;
+use Pogo\Pokemon\PokemonList;
 
-class Pokemon extends Data\PokemonList
+class Pokemon extends Pokemon\PokemonList
 {
     /** @var self[] */
     protected static $list = [];
@@ -162,7 +162,7 @@ class Pokemon extends Data\PokemonList
 
     public static function getList()
     {
-        $fooClass = new \ReflectionClass('\\Pogo\\Data\\PokemonList');
+        $fooClass = new \ReflectionClass('\\Pogo\\Pokemon\\PokemonList');
         $constants = $fooClass->getConstants();
         $source = [];
         foreach ($constants as $code) {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Pogo\Data;
+namespace Pogo;
 
-use Pogo\Data\Forms\Gigantamax;
-use Pogo\Data\Forms\Mega;
-use Pogo\Data\Gamepress\Defenders;
+use Pogo\Lists\Evolutions;
+use Pogo\Lists\Gamepress;
+use Pogo\Lists\Top10;
 
 class Lists
 {
@@ -37,10 +37,10 @@ class Lists
                 self::ENT_BLOCK => self::BLOCK_EVOLUTIONS,
                 self::ENT_TAG => 'MEGA',
                 self::ENT_NAME => 'Mega',
-                self::ENT_DESCRIPTION => Mega::DESCRIPTION,
+                self::ENT_DESCRIPTION => Evolutions\Mega::DESCRIPTION,
                 self::ENT_CONTENT => self::CONTENT_LIST,
                 self::ENT_TYPE => self::TYPE_PVE,
-                self::ENT_DATA => Mega::MEGA,
+                self::ENT_DATA => Evolutions\Mega::MEGA,
                 self::ENT_DEFAULT => true,
                 self::ENT_CLEANUP => true
             ],
@@ -48,10 +48,10 @@ class Lists
                 self::ENT_BLOCK => self::BLOCK_EVOLUTIONS,
                 self::ENT_TAG => 'GIGA',
                 self::ENT_NAME => 'Gigantamax',
-                self::ENT_DESCRIPTION => Gigantamax::DESCRIPTION,
+                self::ENT_DESCRIPTION => Evolutions\Gigantamax::DESCRIPTION,
                 self::ENT_CONTENT => self::CONTENT_LIST,
                 self::ENT_TYPE => self::TYPE_PVE,
-                self::ENT_DATA => Gigantamax::GIGANTAMAX,
+                self::ENT_DATA => Evolutions\Gigantamax::GIGANTAMAX,
                 self::ENT_DEFAULT => false,
                 self::ENT_CLEANUP => true
             ],
@@ -114,10 +114,10 @@ class Lists
                 self::ENT_BLOCK => self::BLOCK_GAMEPRESS,
                 self::ENT_TAG => 'GP_DEF',
                 self::ENT_NAME => 'Defenders',
-                self::ENT_DESCRIPTION => Defenders::DESCRIPTION,
+                self::ENT_DESCRIPTION => Gamepress\Defenders::DESCRIPTION,
                 self::ENT_CONTENT => self::CONTENT_TIERS,
                 self::ENT_TYPE => self::TYPE_PVE,
-                self::ENT_DATA => Defenders::TIERS,
+                self::ENT_DATA => Gamepress\Defenders::TIERS,
                 self::ENT_DEFAULT => false,
                 self::ENT_CLEANUP => true
             ],
@@ -168,7 +168,7 @@ class Lists
                 }
             }
             if ($strings) {
-                $single = new \Pogo\Strings();
+                $single = new Mate\Strings();
                 $single->addList($list);
                 $listNode->setAttribute('string', $single->getIncludeString());
             }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Pogo\Data\Forms;
+namespace Pogo\Lists\Evolutions;
 
 use Pogo\Pokemon;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Pogo;
+namespace Pogo\Handjob;
 
 class Settings
 {

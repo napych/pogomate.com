@@ -1,8 +1,10 @@
 <?php
 
-namespace Pogo;
+namespace Pogo\Mate;
 
-use Pogo\Data\Lists;
+use Pogo\Handjob\Settings;
+use Pogo\Lists;
+use Pogo\Pokemon;
 
 class Strings
 {

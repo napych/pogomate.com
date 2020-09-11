@@ -1,8 +1,8 @@
 <?php
 
-namespace Pogo\Data\Forms;
+namespace Pogo\Lists\Evolutions;
 
-use Pogo\Data\Mods;
+use Pogo\Handjob\Mods;
 use Pogo\Pokemon;
 
 class Gigantamax

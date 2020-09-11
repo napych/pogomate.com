@@ -1,9 +1,8 @@
 <?php
 
-namespace Pogo;
+namespace Pogo\Mate;
 
-use MongoDB\BSON\Type;
-use Pogo\Data\Types;
+use Pogo\Handjob\Types;
 
 class Counters
 {

@@ -50,8 +50,8 @@ class Pokemon extends \Difra\Controller
         $pokemon->getFamilyXML($node, false);
 
         // load reasons
-        $all = new \Pogo\Strings();
-        $all->addLists(\Pogo\Data\Lists::getAll());
+        $all = new \Pogo\Mate\Strings();
+        $all->addLists(\Pogo\Lists::getAll());
         $reasons = $all->getReasons($pokemon->getPokedexId());
         foreach ($reasons as $entry) {
             $pokeNode = $entry['pokemon']->getXML($node, true);

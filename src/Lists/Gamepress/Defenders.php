@@ -1,8 +1,8 @@
 <?php
 
-namespace Pogo\Data\Gamepress;
+namespace Pogo\Lists\Gamepress;
 
-use Pogo\Data\Mods;
+use Pogo\Handjob\Mods;
 use Pogo\Pokemon;
 
 class Defenders

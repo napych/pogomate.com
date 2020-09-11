@@ -1,8 +1,9 @@
 <?php
 
-namespace Pogo;
+namespace Pogo\Mate;
 
-use Pogo\Data\Types;
+use Pogo\Handjob\Types;
+use Pogo\Pokemon;
 
 class Sitemap
 {

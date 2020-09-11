@@ -35,12 +35,12 @@ class Cleanup extends \Difra\Controller
                 $cleanup['list'] = [];
             }
         }
-        foreach (\Pogo\Data\Lists::getAll() as $data) {
-            if (empty($data[\Pogo\Data\Lists::ENT_CLEANUP])) {
+        foreach (\Pogo\Lists::getAll() as $data) {
+            if (empty($data[\Pogo\Lists::ENT_CLEANUP])) {
                 continue;
             }
-            $tag = $data[\Pogo\Data\Lists::ENT_TAG];
-            $cleanup['list'][$tag] = (isset($listArr[$tag]) ? $listArr[$tag] : $data[\Pogo\Data\Lists::ENT_DEFAULT]) ? 1 : 0;
+            $tag = $data[\Pogo\Lists::ENT_TAG];
+            $cleanup['list'][$tag] = (isset($listArr[$tag]) ? $listArr[$tag] : $data[\Pogo\Lists::ENT_DEFAULT]) ? 1 : 0;
         }
 
         // fill XML with form values/defaults
@@ -59,7 +59,7 @@ class Cleanup extends \Difra\Controller
             }
         }
 
-        \Pogo\Data\Lists::getAllXML($node, true);
+        \Pogo\Lists::getAllXML($node, true);
 
         $result = [];
         if ($cleanup['perfect']) {
@@ -84,10 +84,10 @@ class Cleanup extends \Difra\Controller
 //            $result[] = 'cp-' . ($cleanup['cp'] - 1);
 //        }
 
-        $lists = \Pogo\Data\Lists::getAll();
-        $strings = new \Pogo\Strings();
+        $lists = \Pogo\Lists::getAll();
+        $strings = new \Pogo\Mate\Strings();
         foreach ($lists as $list) {
-            if ($list[\Pogo\Data\Lists::ENT_CLEANUP] && $cleanup['list'][$list[\Pogo\Data\Lists::ENT_TAG]]) {
+            if ($list[\Pogo\Lists::ENT_CLEANUP] && $cleanup['list'][$list[\Pogo\Lists::ENT_TAG]]) {
                 $strings->addList($list);
             }
         }
@@ -121,9 +121,9 @@ class Cleanup extends \Difra\Controller
             'list' => []
         ];
         $listArr = $list ? $list->val() : '';
-        foreach (\Pogo\Data\Lists::getAll() as $data) {
-            $tag = $data[\Pogo\Data\Lists::ENT_TAG];
-            $cleanup['list'][$tag] = (isset($listArr[$tag]) ? $listArr[$tag] : $data[\Pogo\Data\Lists::ENT_DEFAULT]) ? 1 : 0;
+        foreach (\Pogo\Lists::getAll() as $data) {
+            $tag = $data[\Pogo\Lists::ENT_TAG];
+            $cleanup['list'][$tag] = (isset($listArr[$tag]) ? $listArr[$tag] : $data[\Pogo\Lists::ENT_DEFAULT]) ? 1 : 0;
         }
         $cookies = \Difra\Libs\Cookies::getInstance();
         $cookies->setExpire(time() + 60 * 60 * 24 * 365 * 10);

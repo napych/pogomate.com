@@ -1,9 +1,8 @@
 <?php
 
-namespace Pogo\Data\Gamepress;
+namespace Pogo\Lists\Gamepress;
 
-use Pogo\Data\Lists;
-use Pogo\Data\Mods;
+use Pogo\Handjob\Mods;
 use Pogo\Pokemon;
 
 class PVE

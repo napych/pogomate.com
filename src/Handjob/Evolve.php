@@ -1,7 +1,8 @@
 <?php
 
-namespace Pogo\Data;
+namespace Pogo\Handjob;
 
+use Pogo\Handjob\Mods;
 use Pogo\Pokemon;
 
 class Evolve

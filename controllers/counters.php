@@ -3,7 +3,7 @@
 namespace Controller;
 
 use Difra\View\HttpError;
-use Pogo\Data\Types;
+use Pogo\Handjob\Types;
 
 class Counters extends \Difra\Controller
 {
@@ -23,7 +23,7 @@ class Counters extends \Difra\Controller
 
         $types = [];
         if (!empty($_GET['type1']) || !empty($_GET['type2'])) {
-            $counters = new \Pogo\Counters;
+            $counters = new \Pogo\Mate\Counters;
             if (!empty($_GET['type1'])) {
                 $types[] = $_GET['type1'];
             }
