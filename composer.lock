@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/difra-org/difra.git",
-                "reference": "2a0e6eb71e4e5458698f8664790890e893a4c2d1"
+                "reference": "bcf87f04efdb99cb4ecf6bf3b444552d2862f80d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/difra-org/difra/zipball/2a0e6eb71e4e5458698f8664790890e893a4c2d1",
-                "reference": "2a0e6eb71e4e5458698f8664790890e893a4c2d1",
+                "url": "https://api.github.com/repos/difra-org/difra/zipball/bcf87f04efdb99cb4ecf6bf3b444552d2862f80d",
+                "reference": "bcf87f04efdb99cb4ecf6bf3b444552d2862f80d",
                 "shasum": ""
             },
             "require": {
@@ -58,7 +58,7 @@
             "support": {
                 "source": "https://github.com/difra-org/difra/tree/master"
             },
-            "time": "2020-08-27T14:11:41+00:00"
+            "time": "2020-09-09T14:20:58+00:00"
         },
         {
             "name": "oyejorge/less.php",
