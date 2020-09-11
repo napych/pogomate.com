@@ -1,10 +1,10 @@
 let appService = {
     cacheName: 'PoGoMate',
-    version: 'undefined',
     build: 'undefined'
 };
 
 appService.install = function (e) {
+    self.skipWaiting();
     e.waitUntil(
         caches.open(appService.cacheName).then((cache) => {
             return cache.addAll([
@@ -53,7 +53,7 @@ appService.activate = function (e) {
     );
 }
 
-appService.fetch1 = function (event) {
+appService.fetch = function (event) {
     event.respondWith(async function () {
             if (event.request.method !== 'GET') {
                 if (event.request.url.indexOf(this.location.href) < 0) {
@@ -81,4 +81,4 @@ appService.fetch1 = function (event) {
 
 self.addEventListener('install', appService.install);
 self.addEventListener('activate', appService.activate);
-self.addEventListener('fetch', appService.fetch1);
+self.addEventListener('fetch', appService.fetch);

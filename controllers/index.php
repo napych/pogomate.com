@@ -21,9 +21,8 @@ class Index extends \Difra\Controller
         $this->outputType = 'application/javascript';
         $this->output =
             file_get_contents(__DIR__ . '/../htdocs/js/service.js')
-            . "\nappService.version='" . Envi\Version::getBuild(true) . "';"
-            . "\nappService.cacheName='PoGoMate-' + appService.version;"
-            . "\nappService.build='" . Envi\Version::getBuild() . "';";
+            . "\nappService.build='" . Envi\Version::getBuild(true) . "';"
+            . "\nappService.cacheName='PoGoMate-' + appService.build;";
     }
 
 }

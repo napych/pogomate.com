@@ -24,7 +24,7 @@ class Cleanup extends \Difra\Controller
                 'legendary' => 1,
                 'mythical' => 1,
                 'special' => 1,
-                'cp' => 2000,
+//                'cp' => 2000,
                 'list' => []
             ];
             $listArr = [];
@@ -36,6 +36,9 @@ class Cleanup extends \Difra\Controller
             }
         }
         foreach (\Pogo\Data\Lists::getAll() as $data) {
+            if (empty($data[\Pogo\Data\Lists::ENT_CLEANUP])) {
+                continue;
+            }
             $tag = $data[\Pogo\Data\Lists::ENT_TAG];
             $cleanup['list'][$tag] = (isset($listArr[$tag]) ? $listArr[$tag] : $data[\Pogo\Data\Lists::ENT_DEFAULT]) ? 1 : 0;
         }
@@ -84,7 +87,7 @@ class Cleanup extends \Difra\Controller
         $lists = \Pogo\Data\Lists::getAll();
         $strings = new \Pogo\Strings();
         foreach ($lists as $list) {
-            if ($cleanup['list'][$list[\Pogo\Data\Lists::ENT_TAG]]) {
+            if ($list[\Pogo\Data\Lists::ENT_CLEANUP] && $cleanup['list'][$list[\Pogo\Data\Lists::ENT_TAG]]) {
                 $strings->addList($list);
             }
         }

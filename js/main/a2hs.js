@@ -9,11 +9,11 @@ a2hs.install = function (event) {
     }
     a2hs.installPrompt.prompt();
     a2hs.installPrompt.userChoice.then((choiceResult) => {
-        // if (choiceResult.outcome === 'accepted') {
+        if (choiceResult.outcome === 'accepted') {
         //     console.log('User accepted the A2HS prompt');
-        // } else {
+        } else {
         //     console.log('User dismissed the A2HS prompt');
-        // }
+        }
         a2hs.installPrompt = null;
     });
 }
