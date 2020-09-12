@@ -2,7 +2,7 @@
 
 namespace Pogo\Mate;
 
-use Pogo\Handjob\Types;
+use Pogo\General\Types;
 
 class Counters
 {

@@ -3,7 +3,7 @@
 namespace Controller;
 
 use Difra\View\HttpError;
-use Pogo\Handjob\Types;
+use Pogo\General\Types;
 
 class Counters extends \Difra\Controller
 {

@@ -3,7 +3,7 @@
 namespace Pogo\Lists\Gamepress;
 
 use MongoDB\BSON\Type;
-use Pogo\Handjob\Types;
+use Pogo\General\Types;
 use Pogo\Pokemon;
 
 class Top

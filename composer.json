@@ -8,6 +8,7 @@
     ],
     "require": {
         "difra/difra": "dev-master as 7.0.0",
+        "symfony/console": "*",
         "ext-dom": "*",
         "ext-json": "*"
     },
