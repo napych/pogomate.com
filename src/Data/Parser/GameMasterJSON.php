@@ -260,7 +260,10 @@ class GameMasterJSON
             [
                 Result\Moves::FIELD_CONST => 'MOVE_' . $data['move']['movementId'],
                 Result\Moves::FIELD_CLASS => static::MOVE_TYPE_TRANSLATE[$data['move']['animationId']],
-                Result\Moves::FIELD_TYPE => static::TYPE_TRANSLATE[$data['move']['pokemonType']]
+                Result\Moves::FIELD_TYPE => static::TYPE_TRANSLATE[$data['move']['pokemonType']],
+                Result\Moves::FIELD_POWER => $data['move']['power'],
+                Result\Moves::FIELD_ACCURACY => $data['move']['accuracyChance'],
+                Result\Moves::FIELD_CRIT => $data['move']['criticalChance'],
             ]
         );
     }
