@@ -12,6 +12,7 @@ class Moves {
     const FIELD_POWER = 'power';
     const FIELD_ACCURACY = 'accuracyChance';
     const FIELD_CRIT = 'critChance';
+    const FIELD_ENERGY = 'energy';
 
     const MOVES_TYPE_FAST = 'fast';
     const MOVES_TYPE_CHARGE = 'charge';

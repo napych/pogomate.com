@@ -58,133 +58,106 @@ class GameMasterJSON
         if (empty($template['data'])) {
             throw new \Exception('Empty template data');
         }
-        $templateName = $template['templateId'];
-        $data = $template['data'];
-
-        // full match
-        switch ($templateName) {
-            case 'BACKGROUND_MODE_SETTINGS':
-            case 'BELUGA_POKEMON_WHITELIST':
-            case 'COMBAT_COMPETITIVE_SEASON_SETTINGS':
-            case 'COMBAT_RANKING_SETTINGS':
-            case 'COMBAT_SETTINGS':
-            case 'COMBAT_STAT_STAGE_SETTINGS':
-            case 'CROSS_GAME_SOCIAL_SETTING':
-            case 'ENCOUNTER_SETTINGS':
-            case 'EX_RAID_SETTINGS':
-            case 'GYM_BADGE_SETTINGS':
-            case 'GYM_LEVEL_SETTINGS':
-            case 'LUCKY_POKEMON_SETTINGS':
-            case 'MAP_DISPLAY_SETTINGS':
-            case 'MONODEPTH_SETTINGS':
-            case 'ONBOARDING_V2_SETTINGS':
-            case 'PARTY_RECOMMENDATION_SETTINGS':
-            case 'PLATYPUS_ROLLOUT_SETTINGS':
-            case 'PLAYER_LEVEL_SETTINGS':
-            case 'POKECOIN_PURCHASE_DISPLAY_GMT':
-            case 'POKEMON_UPGRADE_SETTINGS':
-            case 'QUEST_FIRST_CATCH_OF_THE_DAY':
-            case 'QUEST_FIRST_POKESTOP_OF_THE_DAY':
-            case 'RAID_CLIENT_SETTINGS':
-            case 'SMEARGLE_MOVES_SETTINGS':
-            case 'SPONSORED_GEOFENCE_GIFT_SETTINGS':
-            case 'WEATHER_BONUS_SETTINGS':
-            case 'adventure_sync_v2_gmt':
-                return;
-        }
-
-        $chunks = explode('_', $templateName);
-        if (sizeof($chunks) == 1) {
-            $chunks = explode('.', $templateName);
-        }
-
-        // first word match
-        switch ($chunks[0]) {
-            case 'AVATAR':
-            case 'AWARDS':
-            case 'BADGE':
-            case 'BATTLE':
-            case 'BUDDY':
-            case 'CHARACTER':
-            case 'IAP':
-            case 'INVASION':
-            case 'ITEM':
-            case 'LPSKU':
-            case 'STICKER':
-            case 'TRAINER': // trainer battles pokemon teams
-            case 'bundle':
-            case 'camera':
-            case 'general1':
-            case 'incenseordinary':
-            case 'itemleadermap':
-            case 'sequence':
-                return;
-        }
-
-        // first two words match
-        switch ($chunks[0] . '_' . $chunks[1]) {
-            case 'COMBAT_LEAGUE':
-            case 'FRIENDSHIP_LEVEL':
-            case 'VS_SEEKER': // Battle league combat rewards
-                return;
-            case 'POKEMON_TYPE':
-                $this->parseType($chunks, $data);
-                return;
-            case 'WEATHER_AFFINITY':
-                $this->parseWeatherAffinity($chunks, $data);
-                return;
-        }
-
-        // first and third words match
-        switch ($chunks[0] . '_' . $chunks[2]) {
-            case 'COMBAT_MOVE':
-                $this->parseCombatMove($chunks, $data);
-                return;
-            case 'FORMS_POKEMON':
-                $this->parsePokemonForms($chunks, $data);
-                return;
-            case 'SPAWN_POKEMON': // male / female ratio
-                return;
-        }
-
-        // three words match
-        switch ($chunks[0] . '_' . $chunks[1] . '_' . $chunks[2]) {
-            case 'COMBAT_POKEMON_TYPE':
-            case 'POKEMON_SCALE_SETTINGS':
-                return;
-        }
-
-        // first word is an ID and second word match
-        if ($chunks[0]{0} === 'V' && ctype_digit(substr($chunks[0], 1))) {
-            switch ($chunks[1]) {
-                case 'POKEMON':
-                    $this->parsePokemon($chunks, $data);
-                    return;
-                case 'MOVE':
-                    $this->parseMove($chunks, $data);
-                    return;
+        $templateId = $template['templateId'];
+        foreach ($template['data'] as $k => $v) {
+            // todo: sort data by $k first
+            // todo: process blocks one by one
+            switch ($k) {
+                case 'combatMove':
+                    $this->parseCombatMove($templateId, $v);
+                    break;
+                case 'weatherAffinities':
+                    $this->parseWeatherAffinity($templateId, $v);
+                    break;
+                case 'typeEffective':
+                    $this->parseType($templateId, $v);
+                    break;
+                case 'pokemon':
+                    $this->parsePokemon($templateId, $v);
+                    break;
+                case 'move':
+                    $this->parseMove($templateId, $v);
+                    break;
+                case 'templateId':
+                case 'avatarGroupOrderSettings':
+                case 'avatarCustomization':
+                case 'backgroundModeSettings':
+                case 'badge':
+                case 'battleHubBadgeSettings':
+                case 'battleHubOrderSettings':
+                case 'battleSettings':
+                case 'belugaPokemonWhitelist':
+                case 'buddyActivitySettings':
+                case 'buddyActivityCategorySettings':
+                case 'buddyEmotionLevelSettings':
+                case 'buddyEncounterCameoSettings':
+                case 'buddyHungerSettings':
+                case 'buddyInteractionSettings':
+                case 'buddyLevelSettings':
+                case 'buddySwapSettings':
+                case 'buddyWalkSettings':
+                case 'invasionNpcDisplaySettings':
+                case 'combatCompetitiveSeasonSettings':
+                case 'combatLeague':
+                case 'combatLeagueSettings':
+                case 'combatType':
+                case 'combatRankingProtoSettings':
+                case 'combatSettings':
+                case 'combatStatStageSettings':
+                case 'encounterSettings':
+                case 'gymBadgeSettings':
+                case 'gymLevel':
+                case 'iapSettings':
+                case 'item':
+                case 'luckyPokemonSettings':
+                case 'pokemonScaleSettings':
+                case 'questSettings':
+                case 'weatherBonusSettings': // weather bonuses, multipliers, etc.
+                case 'iapItemDisplay':
+                case 'camera':
+                case 'moveSequence':
+                case 'crossGameSocialSettings':
+                case 'exRaidSettings':
+                case 'formSettings':
+                case 'friendshipMilestoneSettings':
+                case 'iapCategoryDisplay':
+                case 'pokestopInvasionAvailabilitySettings':
+                case 'limitedPurchaseSkuSettings':
+                case 'mapDisplaySettings':
+                case 'monodepthSettings':
+                case 'onboardingV2Settings':
+                case 'partyRecommendationSettings':
+                case 'platypusRolloutSettings':
+                case 'playerLevel':
+                case 'pokecoinPurchaseDisplayGmt':
+                case 'pokemonUpgrades': // cost to lvl up
+                case 'raidSettingsProto':
+                case 'smeargleMovesSettings':
+                case 'genderSettings': // male to female ratio
+                case 'sponsoredGeofenceGiftSettings':
+                case 'stickerMetadata':
+                case 'combatNpcTrainer':
+                case 'combatNpcPersonality':
+                case 'vsSeekerClientSettings':
+                case 'vsSeekerLootProto':
+                case 'vsSeekerPokemonRewards':
+                case 'adventureSyncV2Gmt':
+                    break;
+                default:
+                    throw new \Exception("Unknown template key: " . $k);
             }
         }
-
-        throw new \Exception("Unknown templateId: " . $templateName);
     }
 
-    /**
-     * @param string[] $chunks
-     * @param array $data
-     */
-    public function parseCombatMove(array $chunks, array $data)
+    public function parseCombatMove(string $template, array $data)
     {
         /*
         $data = {
-            "templateId" => "COMBAT_V0013_MOVE_WRAP",
-            "combatMove" => {
-                "uniqueId" => "WRAP",
-                "type" => "POKEMON_TYPE_NORMAL",
-                "power" => 60.0,
-                "vfxName" => "wrap",
-                "energyDelta" => -45
-            }
+            "uniqueId" => "WRAP",
+            "type" => "POKEMON_TYPE_NORMAL",
+            "power" => 60.0,
+            "vfxName" => "wrap",
+            "energyDelta" => -45
         }
          */
         // todo
@@ -218,57 +191,45 @@ class GameMasterJSON
 
     protected $move2id = [];
 
-    public function parseMove(array $chunks, array $data)
+    public function parseMove(string $template, array $move)
     {
-        /*
-        $data = {
-            "templateId" => "V0013_MOVE_WRAP",
-            "move" => {
-                'movementId' => 'WRAP',
-                'animationId' => 'ATTACK_02',
-                'pokemonType' => 'POKEMON_TYPE_NORMAL',
-                'power' => 60.0,
-                'accuracyChance' => 1.0,
-                'criticalChance' => 0.05,
-                'staminaLossScalar' => 0.06,
-                'trainerLevelMin' => 1,
-                'trainerLevelMax' => 100,
-                'vfxName' => 'wrap',
-                'durationMs' => 2900,
-                'damageWindowStartMs' => 2050,
-                'damageWindowEndMs' => 2700,
-                'energyDelta' => -33
-            }
-        }
-         */
-        $id = (int)substr($chunks[0], 1);
-        if (empty($data['move']['movementId'])) {
+        if (empty($move['movementId'])) {
             throw new \Exception('Missing movementId');
         }
-        $this->move2id[$data['move']['movementId']] = $id;
-        if (empty($data['move']['animationId'])) {
+        $chunks = explode('_', $template);
+        $id = (int)substr($chunks[0], 1);
+        $this->move2id[$move['movementId']] = $id;
+        if (empty($move['animationId'])) {
             throw new \Exception('Missing animationId');
         }
-        if (!isset(static::MOVE_TYPE_TRANSLATE[$data['move']['animationId']])) {
-            throw new \Exception('Unknown animationId: ' . $data['move']['animationId']);
+        if (!isset(static::MOVE_TYPE_TRANSLATE[$move['animationId']])) {
+            throw new \Exception('Unknown animationId: ' . $move['animationId']);
         }
-        if (!isset(static::TYPE_TRANSLATE[$data['move']['pokemonType']])) {
-            throw new \Exception('Unknown pokemonType: ' . $data['move']['pokemonType']);
+        if (!isset(static::TYPE_TRANSLATE[$move['pokemonType']])) {
+            throw new \Exception('Unknown pokemonType: ' . $move['pokemonType']);
         }
         $this->result->moves->add(
             $id,
             [
-                Result\Moves::FIELD_CONST => 'MOVE_' . $data['move']['movementId'],
-                Result\Moves::FIELD_CLASS => static::MOVE_TYPE_TRANSLATE[$data['move']['animationId']],
-                Result\Moves::FIELD_TYPE => static::TYPE_TRANSLATE[$data['move']['pokemonType']],
-                Result\Moves::FIELD_POWER => $data['move']['power'],
-                Result\Moves::FIELD_ACCURACY => $data['move']['accuracyChance'],
-                Result\Moves::FIELD_CRIT => $data['move']['criticalChance'],
+                Result\Moves::FIELD_CONST => 'MOVE_' . $move['movementId'],
+                Result\Moves::FIELD_CLASS => static::MOVE_TYPE_TRANSLATE[$move['animationId']],
+                Result\Moves::FIELD_TYPE => static::TYPE_TRANSLATE[$move['pokemonType']],
+                Result\Moves::FIELD_POWER => $move['power'],
+                Result\Moves::FIELD_ACCURACY => $move['accuracyChance'],
+                Result\Moves::FIELD_CRIT => $move['criticalChance'],
+                Result\Moves::FIELD_ENERGY => $data['energyDelta'],
+//                'staminaLossScalar' => 0.06
+//                'trainerLevelMin' => 1,
+//                'trainerLevelMax' => 100,
+//                'vfxName' => 'wrap',
+//                'durationMs' => 2900,
+//                'damageWindowStartMs' => 2050,
+//                'damageWindowEndMs' => 2700,
             ]
         );
     }
 
-    public function parsePokemon(array $chunks, array $data)
+    public function parsePokemon(string $template, array $data)
     {
         /*
         $data = [
@@ -351,7 +312,7 @@ class GameMasterJSON
         // todo
     }
 
-    public function parsePokemonForms(array $chunks, array $data)
+    public function parsePokemonForms(string $template, array $data)
     {
         /*
         $data = [
@@ -372,7 +333,7 @@ class GameMasterJSON
         // todo
     }
 
-    public function parseType(array $chunks, array $data)
+    public function parseType(string $template, array $data)
     {
         /*
         $data = [
@@ -386,7 +347,7 @@ class GameMasterJSON
         // todo
     }
 
-    public function parseWeatherAffinity(array $chunks, $data)
+    public function parseWeatherAffinity(string $template, $data)
     {
         /*
         $chunks = ['WEATHER', 'AFFINITY', 'CLEAR'];
