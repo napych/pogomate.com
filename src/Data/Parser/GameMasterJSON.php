@@ -217,7 +217,7 @@ class GameMasterJSON
                 Result\Moves::FIELD_POWER => $move['power'],
                 Result\Moves::FIELD_ACCURACY => $move['accuracyChance'],
                 Result\Moves::FIELD_CRIT => $move['criticalChance'],
-                Result\Moves::FIELD_ENERGY => $data['energyDelta'],
+                Result\Moves::FIELD_ENERGY => $move['energyDelta'],
 //                'staminaLossScalar' => 0.06
 //                'trainerLevelMin' => 1,
 //                'trainerLevelMax' => 100,
