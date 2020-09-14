@@ -3,9 +3,9 @@
 namespace Controller;
 
 use Difra\Ajaxer;
+use Difra\Libs\Cookies;
 use Difra\Param\AjaxCheckbox;
 use Difra\Param\AjaxData;
-use Difra\Param\AjaxInt;
 
 class Cleanup extends \Difra\Controller
 {
@@ -45,6 +45,7 @@ class Cleanup extends \Difra\Controller
 
         // fill XML with form values/defaults
         $node = $this->root->appendChild($this->xml->createElement('page-cleanup'));
+        /** @var \DOMElement $cleanupNode */
         $cleanupNode = $node->appendChild($node->ownerDocument->createElement('cleanup-defaults'));
         foreach ($cleanup as $name => $value) {
             if (!is_array($value)) {
@@ -125,7 +126,7 @@ class Cleanup extends \Difra\Controller
             $tag = $data[\Pogo\Lists::ENT_TAG];
             $cleanup['list'][$tag] = (isset($listArr[$tag]) ? $listArr[$tag] : $data[\Pogo\Lists::ENT_DEFAULT]) ? 1 : 0;
         }
-        $cookies = \Difra\Libs\Cookies::getInstance();
+        $cookies = Cookies::getInstance();
         $cookies->setExpire(time() + 60 * 60 * 24 * 365 * 10);
         $cookies->set('cleanup', $cleanup);
         Ajaxer::reload();

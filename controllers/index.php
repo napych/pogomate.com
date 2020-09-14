@@ -3,7 +3,6 @@
 namespace Controller;
 
 use Difra\Envi;
-use Difra\View;
 
 class Index extends \Difra\Controller
 {

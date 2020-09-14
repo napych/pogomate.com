@@ -148,7 +148,6 @@ class Lists
         } elseif ($addNode) {
             $node = $node->appendChild($node->ownerDocument->createElement($addNode));
         }
-        $tmpId = 1;
         foreach (self::getAll() as $list) {
             /** @var \DOMElement $listNode */
             $listNode = $node->appendChild($node->ownerDocument->createElement('list'));

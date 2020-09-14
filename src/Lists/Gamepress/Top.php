@@ -2,7 +2,6 @@
 
 namespace Pogo\Lists\Gamepress;
 
-use MongoDB\BSON\Type;
 use Pogo\General\Types;
 use Pogo\Pokemon;
 

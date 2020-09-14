@@ -2,7 +2,6 @@
 
 namespace Pogo\Handjob;
 
-use Pogo\Handjob\Mods;
 use Pogo\Pokemon;
 
 class Forms
