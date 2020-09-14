@@ -3,6 +3,7 @@
 namespace Pogo\Mate;
 
 use Pogo\General\Types;
+use Pogo\Handjob\TypeEffectiveness;
 
 class Counters
 {
@@ -12,6 +13,7 @@ class Counters
     /**
      * Add attack type(s)
      * @param string|string[] $attackTypes
+     * @throws \Exception
      */
     public function addAttackTypes($attackTypes)
     {
@@ -61,7 +63,7 @@ class Counters
             $attacks[$attackType] = 1;
         }
         foreach ($this->bossTypes as $bossType) {
-            foreach (Types::EFFECTIVENESS as $attackType => $effectivenessData) {
+            foreach (TypeEffectiveness::EFFECTIVENESS as $attackType => $effectivenessData) {
                 $attacks[$attackType] *= $effectivenessData[$bossType] ?? 1;
             }
         }
@@ -94,11 +96,11 @@ class Counters
         $badTypes = [];
         foreach ($this->bossAttacks as $n => $bossAttack) {
             foreach (Types::TYPE_ENUM as $pokemonType) {
-                $effectiveness = Types::EFFECTIVENESS[$bossAttack][$pokemonType] ?? 1;
+                $effectiveness = TypeEffectiveness::EFFECTIVENESS[$bossAttack][$pokemonType] ?? 1;
                 if ($effectiveness > 1) {
                     $skip = [];
                     foreach (Types::TYPE_ENUM as $pokemonType2) {
-                        $effectiveness2 = Types::EFFECTIVENESS[$bossAttack][$pokemonType2] ?? 1;
+                        $effectiveness2 = TypeEffectiveness::EFFECTIVENESS[$bossAttack][$pokemonType2] ?? 1;
                         if ($effectiveness * $effectiveness2 <= 1) {
                             $skip[] = $pokemonType2;
                         }
