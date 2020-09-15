@@ -2,12 +2,13 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
     <xsl:template match="page-lists">
         <div id="page-lists">
-            <h1>Lists</h1>
+            <h1>Pokemon lists search strings</h1>
             <!--
             <div class="alert alert-primary" role="alert">
                 <xsl:text>To use a list, copy and paste it to the pokemon search string.</xsl:text>
             </div>
             -->
+<!--            <p>Search strings for all available lists. To use it, copy a string and paste it into the pokemon search string.</p>-->
 
             <xsl:for-each select="list[not(@block=preceding-sibling::list/@block)]">
                 <xsl:variable name="block" select="@block"/>

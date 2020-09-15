@@ -8,9 +8,9 @@ class Lists extends \Difra\Controller
     {
         $this->putExpires(86400);
 
-        $this->setTitle('Pokémon Go tier lists search strings');
-        $this->setDescription('Use search strings to find all matching pokémon');
-        $this->setKeywords('pokémon go, gamepress, tier list, search strings');
+        $this->setTitle('Pokémon Go search strings');
+        $this->setDescription('Pokémon Go search strings for finding all pokémon matching various lists');
+        $this->setKeywords('pokémon go, gamepress, tier list, search strings, top attackers, battle league');
 
         $node = $this->root->appendChild($this->xml->createElement('page-lists'));
         \Pogo\Lists::getAllXML($node, false, true);
