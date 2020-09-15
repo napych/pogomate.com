@@ -93,9 +93,15 @@ class GameMasterJSON
     public function parse($file = self::FILE)
     {
         $data = $this->prepare($file);
-        // combatMove, typeEffective, pokemon, move, weatherAffinities
+
         $this->parseTypeEffectives($data['typeEffective']);
         unset($data['typeEffective']);
+
+        $this->parseCombatMoves($data['combatMove']);
+        $this->parseMoves($data['move']);
+        unset($data['combatMove']);
+        unset($data['move']);
+
         if (!empty($data)) {
             echo '*** WARNING *** parse data has keys left: ' . implode(', ', array_keys($data)), PHP_EOL;
         }
@@ -103,7 +109,7 @@ class GameMasterJSON
 
     protected function prepare(string $file)
     {
-        $data = json_decode(file_get_contents(self::FILE), true);
+        $data = json_decode(file_get_contents($file), true);
         $templates = null;
         foreach ($data as $k => $v) {
             switch ($k) {
@@ -154,20 +160,6 @@ class GameMasterJSON
         return $stackedData;
     }
 
-    public function parseCombatMove(string $template, array $data)
-    {
-        /*
-        $data = {
-            "uniqueId" => "WRAP",
-            "type" => "POKEMON_TYPE_NORMAL",
-            "power" => 60.0,
-            "vfxName" => "wrap",
-            "energyDelta" => -45
-        }
-         */
-        // todo
-    }
-
     public $moves = [];
     const MOVE_TYPE_TRANSLATE = [
         'ATTACK_01' => Result\Moves::MOVES_TYPE_FAST,
@@ -194,44 +186,63 @@ class GameMasterJSON
         'POKEMON_TYPE_WATER' => Types::WATER
     ];
 
-    protected $move2id = [];
+//    protected $move2id = [];
 
-    public function parseMove(string $template, array $move)
+    public function parseMoves(array $data)
     {
-        if (empty($move['movementId'])) {
-            throw new \Exception('Missing movementId');
-        }
-        $chunks = explode('_', $template);
-        $id = (int)substr($chunks[0], 1);
-        $this->move2id[$move['movementId']] = $id;
-        if (empty($move['animationId'])) {
-            throw new \Exception('Missing animationId');
-        }
-        if (!isset(static::MOVE_TYPE_TRANSLATE[$move['animationId']])) {
-            throw new \Exception('Unknown animationId: ' . $move['animationId']);
-        }
-        if (!isset(static::TYPE_TRANSLATE[$move['pokemonType']])) {
-            throw new \Exception('Unknown pokemonType: ' . $move['pokemonType']);
-        }
-        $this->result->moves->add(
-            $id,
-            [
-                Result\Moves::FIELD_CONST => 'MOVE_' . $move['movementId'],
-                Result\Moves::FIELD_CLASS => static::MOVE_TYPE_TRANSLATE[$move['animationId']],
-                Result\Moves::FIELD_TYPE => static::TYPE_TRANSLATE[$move['pokemonType']],
-                Result\Moves::FIELD_POWER => $move['power'],
-                Result\Moves::FIELD_ACCURACY => $move['accuracyChance'],
-                Result\Moves::FIELD_CRIT => $move['criticalChance'],
-                Result\Moves::FIELD_ENERGY => $move['energyDelta'],
+        foreach ($data as $template => $move) {
+            $chunks = explode('_', $template);
+            $id = (int)substr($chunks[0], 1);
+//            $this->move2id[$move['movementId']] = $id;
+
+            $movementId = $move['movementId'];
+            if (!isset($this->pvpMoves[$movementId])) {
+                echo 'WARNING: missing combatMove data for ', $movementId, PHP_EOL;
+            }
+
+            $this->result->moves->add(
+                $id,
+                [
+                    Result\Moves::FIELD_CONST => 'MOVE_' . $movementId,
+                    Result\Moves::FIELD_CLASS => static::MOVE_TYPE_TRANSLATE[$move['animationId']],
+                    Result\Moves::FIELD_TYPE => static::TYPE_TRANSLATE[$move['pokemonType']],
+                    Result\Moves::FIELD_POWER => $move['power'],
+                    Result\Moves::FIELD_ACCURACY => $move['accuracyChance'],
+                    Result\Moves::FIELD_CRIT => $move['criticalChance'],
+                    Result\Moves::FIELD_ENERGY => $move['energyDelta'],
+                    Result\Moves::FIELD_DURATION => $move['durationMs'] / 1000,
+                    Result\Moves::FIELD_DMG_WINDOW_START => $move['damageWindowStartMs'],
+                    Result\Moves::FIELD_DMG_WINDOW_END => $move['damageWindowEndMs'],
+                    Result\Moves::FIELD_COMBAT_POWER => $this->pvpMoves[$movementId]['power'] ?? null,
+                    Result\Moves::FIELD_COMBAT_ENERGY => $this->pvpMoves[$movementId]['energy'] ?? null,
 //                'staminaLossScalar' => 0.06
 //                'trainerLevelMin' => 1,
 //                'trainerLevelMax' => 100,
 //                'vfxName' => 'wrap',
-//                'durationMs' => 2900,
-//                'damageWindowStartMs' => 2050,
-//                'damageWindowEndMs' => 2700,
-            ]
-        );
+                ]
+            );
+        }
+    }
+
+    protected $pvpMoves = [];
+
+    public function parseCombatMoves(array $data)
+    {
+        /*
+        $data = {
+            "uniqueId" => "WRAP",
+            "type" => "POKEMON_TYPE_NORMAL",
+            "power" => 60.0,
+            "vfxName" => "wrap",
+            "energyDelta" => -45
+        }
+         */
+        foreach ($data as $move) {
+            $this->pvpMoves[$move['uniqueId']] = [
+                'power' => $move['power'],
+                'energy' => $move['energy']
+            ];
+        }
     }
 
     public function parsePokemon(string $template, array $data)
@@ -361,20 +372,17 @@ class GameMasterJSON
 
     public function parseTypeEffectives(array $data)
     {
+        /*
+        $data = [
+            'attackScalar' => [1.0, 0.625, 0.625, 0.625, 1.0, 1.0, 1.0, 0.625, 0.625, 0.625, 1.0, 1.6, 1.0, 1.6, 1.0, 1.0, 1.6, 0.625],
+            'attackType' => 'POKEMON_TYPE_BUG',
+        ];
+         */
         foreach ($data as $templateName => $effective) {
             foreach ($effective['attackScalar'] as $k => $v) {
                 $this->result->types->setEffectiveness(self::TYPE_TRANSLATE[$effective['attackType']], self::TYPE_ORDER_TRANSLATE[$k], $v);
             }
         }
-        /*
-        $data = [
-          'templateId' => 'POKEMON_TYPE_BUG',
-          'typeEffective' => [
-            'attackScalar' => [1.0, 0.625, 0.625, 0.625, 1.0, 1.0, 1.0, 0.625, 0.625, 0.625, 1.0, 1.6, 1.0, 1.6, 1.0, 1.0, 1.6, 0.625],
-            'attackType' => 'POKEMON_TYPE_BUG',
-          ]
-        ];
-         */
     }
 
     public function parseWeatherAffinity(string $template, $data)

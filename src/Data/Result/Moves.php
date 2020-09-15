@@ -13,6 +13,11 @@ class Moves {
     const FIELD_ACCURACY = 'accuracyChance';
     const FIELD_CRIT = 'critChance';
     const FIELD_ENERGY = 'energy';
+    const FIELD_DURATION = 'duration';
+    const FIELD_DMG_WINDOW_START = 'dmgStart';
+    const FIELD_DMG_WINDOW_END = 'dmgEnd';
+    const FIELD_COMBAT_POWER = 'pvpPower';
+    const FIELD_COMBAT_ENERGY = 'pvpEnergy';
 
     const MOVES_TYPE_FAST = 'fast';
     const MOVES_TYPE_CHARGE = 'charge';
