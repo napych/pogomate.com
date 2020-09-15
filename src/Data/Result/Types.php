@@ -40,20 +40,12 @@ class TypeEffectiveness
     const EFFECTIVENESS = [
 
 PHP_CODE;
-        $reflection = new \ReflectionClass('\\Pogo\\General\\Types');
-        $constants = $reflection->getConstants();
-        $typeConst = [];
-        foreach ($constants as $name => $value) {
-            if (in_array($value, \Pogo\General\Types::TYPE_ENUM)) {
-                $typeConst[$value] = $name;
-            }
-        }
 
         foreach ($this->effectiveness as $type1 => $effectData) {
-            $type1Name = $typeConst[$type1];
+            $type1Name = \Pogo\General\Types::getConst($type1);
             $output .= "        Types::$type1Name => [\n";
             foreach ($effectData as $type2 => $effectiveness) {
-                $type2Name = $typeConst[$type2];
+                $type2Name = \Pogo\General\Types::getConst($type2);
                 $output .= "            Types::$type2Name => $effectiveness,\n";
             }
             $output .= "        ],\n";
