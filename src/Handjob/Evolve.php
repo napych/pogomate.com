@@ -649,7 +649,7 @@ class Evolve
         Pokemon::FERROTHORN => Pokemon::FERROSEED,
         Pokemon::KLINK => null,
         Pokemon::KLANG => Pokemon::KLINK,
-        Pokemon::KLINKLANG => Pokemon::KLINKLANG,
+        Pokemon::KLINKLANG => Pokemon::KLANG,
         Pokemon::TYNAMO => null,
         Pokemon::ELEKTRIK => Pokemon::TYNAMO,
         Pokemon::ELEKTROSS => Pokemon::ELEKTRIK,
