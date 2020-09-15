@@ -2,7 +2,7 @@
 
 namespace Pogo\General;
 
-use Pogo\Handjob\TypeEffectiveness;
+use Pogo\Data\PHP\TypeEffectiveness;
 
 class Types
 {

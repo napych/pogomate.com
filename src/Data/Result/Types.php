@@ -2,6 +2,67 @@
 
 namespace Pogo\Data\Result;
 
-class Types {
+class Types
+{
+    protected $effectiveness = [];
 
+    public function __construct()
+    {
+        foreach (\Pogo\General\Types::TYPE_ENUM as $type1) {
+            $this->effectiveness[$type1] = [];
+            foreach (\Pogo\General\Types::TYPE_ENUM as $type2) {
+                $this->effectiveness[$type1][$type2] = 1.0;
+            }
+        }
+    }
+
+    public function setEffectiveness($attacker, $defender, float $value)
+    {
+        $this->effectiveness[$attacker][$defender] = $value;
+    }
+
+    public function getEffectiveness()
+    {
+        return $this->effectiveness;
+    }
+
+    public function writePHP()
+    {
+        $output = <<<PHP_CODE
+<?php
+
+namespace Pogo\Data\PHP;
+
+use Pogo\General\Types;
+
+class TypeEffectiveness
+{
+    const EFFECTIVENESS = [
+
+PHP_CODE;
+        $reflection = new \ReflectionClass('\\Pogo\\General\\Types');
+        $constants = $reflection->getConstants();
+        $typeConst = [];
+        foreach ($constants as $name => $value) {
+            if (in_array($value, \Pogo\General\Types::TYPE_ENUM)) {
+                $typeConst[$value] = $name;
+            }
+        }
+
+        foreach ($this->effectiveness as $type1 => $effectData) {
+            $type1Name = $typeConst[$type1];
+            $output .= "        Types::$type1Name => [\n";
+            foreach ($effectData as $type2 => $effectiveness) {
+                $type2Name = $typeConst[$type2];
+                $output .= "            Types::$type2Name => $effectiveness,\n";
+            }
+            $output .= "        ],\n";
+        }
+
+        $output .= <<<PHP_CODE
+    ];
+}
+PHP_CODE;
+        file_put_contents(__DIR__ . '/../PHP/TypeEffectiveness.php', $output);
+    }
 }

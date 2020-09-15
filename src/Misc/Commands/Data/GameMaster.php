@@ -19,7 +19,7 @@ class GameMaster extends Command
     protected function configure()
     {
         $this
-            ->setName('data:GameMaster')
+            ->setName('data:master')
             ->setDescription('Process Game Master files');
 //            ->addOption('user', 'u', InputOption::VALUE_OPTIONAL, 'Ban user with login');
     }
@@ -32,13 +32,14 @@ class GameMaster extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $parser =  new \Pogo\Data\Parser\GameMasterJSON();
-        $parser->parse();
-        var_dump($parser->getResult()->moves->getList());
 //        if ($input->getOption('user')) {
 //            $user = User::getByLogin($input->getOption('user'));
 //            \Drafton\Security\Ban::singleUser($user);
 //        }
+        $parser =  new \Pogo\Data\Parser\GameMasterJSON();
+        $parser->parse();
+        $result = $parser->getResult();
+        $result->writePHP();
         return 0;
     }
 }

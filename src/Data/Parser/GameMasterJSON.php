@@ -8,9 +8,77 @@ use Pogo\General\Types;
 class GameMasterJSON
 {
     const FILE = __DIR__ . '/../blobs/master/1595879989869.json';
+    const IGNORE_KEYS = [
+        'templateId',
+        'avatarGroupOrderSettings',
+        'avatarCustomization',
+        'backgroundModeSettings',
+        'badge',
+        'battleHubBadgeSettings',
+        'battleHubOrderSettings',
+        'battleSettings',
+        'belugaPokemonWhitelist',
+        'buddyActivitySettings',
+        'buddyActivityCategorySettings',
+        'buddyEmotionLevelSettings',
+        'buddyEncounterCameoSettings',
+        'buddyHungerSettings',
+        'buddyInteractionSettings',
+        'buddyLevelSettings',
+        'buddySwapSettings',
+        'buddyWalkSettings',
+        'invasionNpcDisplaySettings',
+        'combatCompetitiveSeasonSettings',
+        'combatLeague',
+        'combatLeagueSettings',
+        'combatType',
+        'combatRankingProtoSettings',
+        'combatSettings',
+        'combatStatStageSettings',
+        'encounterSettings',
+        'gymBadgeSettings',
+        'gymLevel',
+        'iapSettings',
+        'item',
+        'luckyPokemonSettings',
+        'pokemonScaleSettings',
+        'questSettings',
+        'weatherBonusSettings', // weather bonuses, multipliers, etc.
+        'iapItemDisplay',
+        'camera',
+        'moveSequence',
+        'crossGameSocialSettings',
+        'exRaidSettings',
+        'formSettings',
+        'friendshipMilestoneSettings',
+        'iapCategoryDisplay',
+        'pokestopInvasionAvailabilitySettings',
+        'limitedPurchaseSkuSettings',
+        'mapDisplaySettings',
+        'monodepthSettings',
+        'onboardingV2Settings',
+        'partyRecommendationSettings',
+        'platypusRolloutSettings',
+        'playerLevel',
+        'pokecoinPurchaseDisplayGmt',
+        'pokemonUpgrades', // cost to lvl up
+        'raidSettingsProto',
+        'smeargleMovesSettings',
+        'genderSettings', // male to female ratio
+        'sponsoredGeofenceGiftSettings',
+        'stickerMetadata',
+        'combatNpcTrainer',
+        'combatNpcPersonality',
+        'vsSeekerClientSettings',
+        'vsSeekerLootProto',
+        'vsSeekerPokemonRewards',
+        'adventureSyncV2Gmt',
+    ];
 
     /** @var Result */
     protected $result = null;
+    /** @var int */
+    protected $batch = null;
 
     public function __construct()
     {
@@ -24,129 +92,66 @@ class GameMasterJSON
 
     public function parse($file = self::FILE)
     {
+        $data = $this->prepare($file);
+        // combatMove, typeEffective, pokemon, move, weatherAffinities
+        $this->parseTypeEffectives($data['typeEffective']);
+        unset($data['typeEffective']);
+        if (!empty($data)) {
+            echo '*** WARNING *** parse data has keys left: ' . implode(', ', array_keys($data)), PHP_EOL;
+        }
+    }
+
+    protected function prepare(string $file)
+    {
         $data = json_decode(file_get_contents(self::FILE), true);
+        $templates = null;
         foreach ($data as $k => $v) {
             switch ($k) {
                 case 'template':
-                    $this->parseTemplates($v);
+                    $templates = $this->prepareTemplates($v);
                     break;
                 case 'batchId': // timestamp
+                    $this->batch = $v;
+                    break;
                 case 'experimentId': // strange int[]
                     break;
                 default:
                     throw new \Exception("Unknown level 1 entry: " . $k);
             }
         }
-    }
-
-    public function parseTemplates($templates)
-    {
-        foreach ($templates as $template) {
-            $this->parseTemplate($template);
-        }
+        return $templates;
     }
 
     /**
-     * @param $template
+     * @param array[] $templates
+     * @return array[]
      * @throws \Exception
      */
-    public function parseTemplate($template)
+    protected function prepareTemplates(array $templates)
     {
-        if (empty($template['templateId'])) {
-            throw new \Exception('Missing templateId');
-        }
-        if (empty($template['data'])) {
-            throw new \Exception('Empty template data');
-        }
-        $templateId = $template['templateId'];
-        foreach ($template['data'] as $k => $v) {
-            // todo: sort data by $k first
-            // todo: process blocks one by one
-            switch ($k) {
-                case 'combatMove':
-                    $this->parseCombatMove($templateId, $v);
-                    break;
-                case 'weatherAffinities':
-                    $this->parseWeatherAffinity($templateId, $v);
-                    break;
-                case 'typeEffective':
-                    $this->parseType($templateId, $v);
-                    break;
-                case 'pokemon':
-                    $this->parsePokemon($templateId, $v);
-                    break;
-                case 'move':
-                    $this->parseMove($templateId, $v);
-                    break;
-                case 'templateId':
-                case 'avatarGroupOrderSettings':
-                case 'avatarCustomization':
-                case 'backgroundModeSettings':
-                case 'badge':
-                case 'battleHubBadgeSettings':
-                case 'battleHubOrderSettings':
-                case 'battleSettings':
-                case 'belugaPokemonWhitelist':
-                case 'buddyActivitySettings':
-                case 'buddyActivityCategorySettings':
-                case 'buddyEmotionLevelSettings':
-                case 'buddyEncounterCameoSettings':
-                case 'buddyHungerSettings':
-                case 'buddyInteractionSettings':
-                case 'buddyLevelSettings':
-                case 'buddySwapSettings':
-                case 'buddyWalkSettings':
-                case 'invasionNpcDisplaySettings':
-                case 'combatCompetitiveSeasonSettings':
-                case 'combatLeague':
-                case 'combatLeagueSettings':
-                case 'combatType':
-                case 'combatRankingProtoSettings':
-                case 'combatSettings':
-                case 'combatStatStageSettings':
-                case 'encounterSettings':
-                case 'gymBadgeSettings':
-                case 'gymLevel':
-                case 'iapSettings':
-                case 'item':
-                case 'luckyPokemonSettings':
-                case 'pokemonScaleSettings':
-                case 'questSettings':
-                case 'weatherBonusSettings': // weather bonuses, multipliers, etc.
-                case 'iapItemDisplay':
-                case 'camera':
-                case 'moveSequence':
-                case 'crossGameSocialSettings':
-                case 'exRaidSettings':
-                case 'formSettings':
-                case 'friendshipMilestoneSettings':
-                case 'iapCategoryDisplay':
-                case 'pokestopInvasionAvailabilitySettings':
-                case 'limitedPurchaseSkuSettings':
-                case 'mapDisplaySettings':
-                case 'monodepthSettings':
-                case 'onboardingV2Settings':
-                case 'partyRecommendationSettings':
-                case 'platypusRolloutSettings':
-                case 'playerLevel':
-                case 'pokecoinPurchaseDisplayGmt':
-                case 'pokemonUpgrades': // cost to lvl up
-                case 'raidSettingsProto':
-                case 'smeargleMovesSettings':
-                case 'genderSettings': // male to female ratio
-                case 'sponsoredGeofenceGiftSettings':
-                case 'stickerMetadata':
-                case 'combatNpcTrainer':
-                case 'combatNpcPersonality':
-                case 'vsSeekerClientSettings':
-                case 'vsSeekerLootProto':
-                case 'vsSeekerPokemonRewards':
-                case 'adventureSyncV2Gmt':
-                    break;
-                default:
-                    throw new \Exception("Unknown template key: " . $k);
+        $stackedData = [];
+        foreach ($templates as $template) {
+            if (empty($template['templateId'])) {
+                throw new \Exception('Missing templateId');
+            }
+            if (empty($template['data'])) {
+                throw new \Exception('Empty template data');
+            }
+            $templateId = $template['templateId'];
+            $templateData = $template['data'];
+            foreach ($templateData as $key => $value) {
+                if (in_array($key, self::IGNORE_KEYS)) {
+                    continue;
+                }
+                switch ($key) {
+                    case 'templateId':
+                        break;
+                    default:
+                        $stackedData[$key][$templateId] = $value;
+                }
             }
         }
+        return $stackedData;
     }
 
     public function parseCombatMove(string $template, array $data)
@@ -333,8 +338,34 @@ class GameMasterJSON
         // todo
     }
 
-    public function parseType(string $template, array $data)
+    const TYPE_ORDER_TRANSLATE = [
+        0 => Types::NORMAL,
+        1 => Types::FIGHTING,
+        2 => Types::FLYING,
+        3 => Types::POISON,
+        4 => Types::GROUND,
+        5 => Types::ROCK,
+        6 => Types::BUG,
+        7 => Types::GHOST,
+        8 => Types::STEEL,
+        9 => Types::FIRE,
+        10 => Types::WATER,
+        11 => Types::GRASS,
+        12 => Types::ELECTRIC,
+        13 => Types::PSYCHIC,
+        14 => Types::ICE,
+        15 => Types::DRAGON,
+        16 => Types::DARK,
+        17 => Types::FAIRY
+    ];
+
+    public function parseTypeEffectives(array $data)
     {
+        foreach ($data as $templateName => $effective) {
+            foreach ($effective['attackScalar'] as $k => $v) {
+                $this->result->types->setEffectiveness(self::TYPE_TRANSLATE[$effective['attackType']], self::TYPE_ORDER_TRANSLATE[$k], $v);
+            }
+        }
         /*
         $data = [
           'templateId' => 'POKEMON_TYPE_BUG',
@@ -344,7 +375,6 @@ class GameMasterJSON
           ]
         ];
          */
-        // todo
     }
 
     public function parseWeatherAffinity(string $template, $data)
