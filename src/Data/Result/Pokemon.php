@@ -3,6 +3,7 @@
 namespace Pogo\Data\Result;
 
 use Pogo\General\Mods;
+use Pogo\Handjob\FormsAlias;
 use Pogo\Handjob\Names;
 use Pogo\Pokemon\PokemonList;
 
@@ -58,25 +59,22 @@ class Pokemon
 
         foreach ($this->pokemon as $code => $pokemon) {
             $id = Mods::getId($code);
-            $idConst = $codeConst = 'Pokemon::' . PokemonList::getConst($id);
-            if ($code & Mods::SHADOW) {
-                $codeConst .= ' | Mods::SHADOW';
-            }
-            if ($code & Mods::ALOLAN) {
-                $codeConst .= ' | Mods::ALOLAN';
-            }
-            if ($code & Mods::PURIFIED) {
-                $codeConst .= ' | Mods::PURIFIED';
-            }
-            if ($code & Mods::GALARIAN) {
-                $codeConst .= ' | Mods::GALARIAN';
-            }
-            if ($form = Mods::getForm($code)) {
-                // todo: try to get pokemon form const
-                $codeConst .= ' | Mods::FORM' . $form;
-            }
 
-            echo "[$code]";
+            $shortConst = PokemonList::getConst($id);
+            $idConst = $codeConst = 'Pokemon::' . $shortConst;
+            if ($formBits = ($code & Mods::FORM_MASK)) {
+                $formConst = FormsAlias::getConst($shortConst, $formBits);
+                if ($formConst) {
+                    $codeConst .= ' | FormsAlias::' . $formConst;
+                } else {
+                    $codeConst .= ' | Mods::FORM' . Mods::getForm($code);
+                }
+            }
+            !($code & Mods::SHADOW) ?: $codeConst .= ' | Mods::SHADOW';
+            !($code & Mods::ALOLAN) ?: $codeConst .= ' | Mods::ALOLAN';
+            !($code & Mods::PURIFIED) ?: $codeConst .= ' | Mods::PURIFIED';
+            !($code & Mods::GALARIAN) ?: $codeConst .= ' | Mods::GALARIAN';
+
             // collect forms
             if (!isset($forms[$idConst])) {
                 $forms[$idConst] = [$codeConst];
@@ -95,7 +93,7 @@ class Pokemon
 
 namespace Pogo\Data\PHP;
 
-use Pogo\Pokemon, Pogo\General\Mods;
+use Pogo\Pokemon, Pogo\General\Mods, Pogo\Handjob\FormsAlias;
 
 class PokemonData
 {
@@ -105,6 +103,31 @@ $output
 } 
 PHP;
         file_put_contents(__DIR__ . '/../PHP/PokemonData.php', $output);
+
+        $output = '';
+        foreach ($forms as $k => $v) {
+            $output .= "        $k => [\n";
+            foreach ($v as $v1) {
+                $output .= "            $v1,\n";
+            }
+            $output .= "        ],\n";
+
+        }
+        $output = <<<PHP
+<?php
+
+namespace Pogo\Data\PHP;
+
+use Pogo\Pokemon, Pogo\General\Mods, Pogo\Handjob\FormsAlias;
+
+class PokemonForms
+{
+    const FORMS = [
+$output
+    ];
+}
+PHP;
+        file_put_contents(__DIR__ . '/../PHP/PokemonForms.php', $output);
     }
 
     /**

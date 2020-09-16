@@ -141,6 +141,7 @@ class Forms extends FormsAlias
         ]
     ];
 
+    /** @deprecated */
     const FORMS = [
         Pokemon::CHARIZARD | Mods::MEGA => ['Mega X', 'Mega Y'],
         Pokemon::MEWTWO | Mods::MEGA => ['Mega X', 'Mega Y'],

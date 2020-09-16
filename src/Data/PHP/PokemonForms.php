@@ -1,0 +1,2432 @@
+<?php
+
+namespace Pogo\Data\PHP;
+
+use Pogo\Pokemon, Pogo\General\Mods, Pogo\Handjob\FormsAlias;
+
+class PokemonForms
+{
+    const FORMS = [
+        Pokemon::BULBASAUR => [
+            Pokemon::BULBASAUR,
+            Pokemon::BULBASAUR | Mods::PURIFIED,
+            Pokemon::BULBASAUR | Mods::SHADOW,
+        ],
+        Pokemon::IVYSAUR => [
+            Pokemon::IVYSAUR,
+            Pokemon::IVYSAUR | Mods::PURIFIED,
+            Pokemon::IVYSAUR | Mods::SHADOW,
+        ],
+        Pokemon::VENUSAUR => [
+            Pokemon::VENUSAUR,
+            Pokemon::VENUSAUR | Mods::PURIFIED,
+            Pokemon::VENUSAUR | Mods::SHADOW,
+        ],
+        Pokemon::CHARMANDER => [
+            Pokemon::CHARMANDER,
+            Pokemon::CHARMANDER | Mods::PURIFIED,
+            Pokemon::CHARMANDER | Mods::SHADOW,
+        ],
+        Pokemon::CHARMELEON => [
+            Pokemon::CHARMELEON,
+            Pokemon::CHARMELEON | Mods::PURIFIED,
+            Pokemon::CHARMELEON | Mods::SHADOW,
+        ],
+        Pokemon::CHARIZARD => [
+            Pokemon::CHARIZARD,
+            Pokemon::CHARIZARD | Mods::PURIFIED,
+            Pokemon::CHARIZARD | Mods::SHADOW,
+        ],
+        Pokemon::SQUIRTLE => [
+            Pokemon::SQUIRTLE,
+            Pokemon::SQUIRTLE | Mods::PURIFIED,
+            Pokemon::SQUIRTLE | Mods::SHADOW,
+        ],
+        Pokemon::WARTORTLE => [
+            Pokemon::WARTORTLE,
+            Pokemon::WARTORTLE | Mods::PURIFIED,
+            Pokemon::WARTORTLE | Mods::SHADOW,
+        ],
+        Pokemon::BLASTOISE => [
+            Pokemon::BLASTOISE,
+            Pokemon::BLASTOISE | Mods::PURIFIED,
+            Pokemon::BLASTOISE | Mods::SHADOW,
+        ],
+        Pokemon::CATERPIE => [
+            Pokemon::CATERPIE,
+        ],
+        Pokemon::METAPOD => [
+            Pokemon::METAPOD,
+        ],
+        Pokemon::BUTTERFREE => [
+            Pokemon::BUTTERFREE,
+        ],
+        Pokemon::WEEDLE => [
+            Pokemon::WEEDLE,
+            Pokemon::WEEDLE | Mods::PURIFIED,
+            Pokemon::WEEDLE | Mods::SHADOW,
+        ],
+        Pokemon::KAKUNA => [
+            Pokemon::KAKUNA,
+            Pokemon::KAKUNA | Mods::PURIFIED,
+            Pokemon::KAKUNA | Mods::SHADOW,
+        ],
+        Pokemon::BEEDRILL => [
+            Pokemon::BEEDRILL,
+            Pokemon::BEEDRILL | Mods::PURIFIED,
+            Pokemon::BEEDRILL | Mods::SHADOW,
+        ],
+        Pokemon::PIDGEY => [
+            Pokemon::PIDGEY,
+        ],
+        Pokemon::PIDGEOTTO => [
+            Pokemon::PIDGEOTTO,
+        ],
+        Pokemon::PIDGEOT => [
+            Pokemon::PIDGEOT,
+        ],
+        Pokemon::RATATTA => [
+            Pokemon::RATATTA,
+            Pokemon::RATATTA | Mods::ALOLAN,
+            Pokemon::RATATTA | Mods::PURIFIED,
+            Pokemon::RATATTA | Mods::SHADOW,
+        ],
+        Pokemon::RATICATE => [
+            Pokemon::RATICATE,
+            Pokemon::RATICATE | Mods::ALOLAN,
+            Pokemon::RATICATE | Mods::PURIFIED,
+            Pokemon::RATICATE | Mods::SHADOW,
+        ],
+        Pokemon::SPEAROW => [
+            Pokemon::SPEAROW,
+        ],
+        Pokemon::FEAROW => [
+            Pokemon::FEAROW,
+        ],
+        Pokemon::EKANS => [
+            Pokemon::EKANS,
+            Pokemon::EKANS | Mods::PURIFIED,
+            Pokemon::EKANS | Mods::SHADOW,
+        ],
+        Pokemon::ARBOK => [
+            Pokemon::ARBOK,
+            Pokemon::ARBOK | Mods::PURIFIED,
+            Pokemon::ARBOK | Mods::SHADOW,
+        ],
+        Pokemon::PIKACHU => [
+            Pokemon::PIKACHU,
+        ],
+        Pokemon::RAICHU => [
+            Pokemon::RAICHU,
+            Pokemon::RAICHU | Mods::ALOLAN,
+        ],
+        Pokemon::SANDSHREW => [
+            Pokemon::SANDSHREW,
+            Pokemon::SANDSHREW | Mods::ALOLAN,
+            Pokemon::SANDSHREW | Mods::PURIFIED,
+            Pokemon::SANDSHREW | Mods::SHADOW,
+        ],
+        Pokemon::SANDSLASH => [
+            Pokemon::SANDSLASH,
+            Pokemon::SANDSLASH | Mods::ALOLAN,
+            Pokemon::SANDSLASH | Mods::PURIFIED,
+            Pokemon::SANDSLASH | Mods::SHADOW,
+        ],
+        Pokemon::NIDORAN_F => [
+            Pokemon::NIDORAN_F,
+            Pokemon::NIDORAN_F | Mods::PURIFIED,
+            Pokemon::NIDORAN_F | Mods::SHADOW,
+        ],
+        Pokemon::NIDORINA => [
+            Pokemon::NIDORINA,
+            Pokemon::NIDORINA | Mods::PURIFIED,
+            Pokemon::NIDORINA | Mods::SHADOW,
+        ],
+        Pokemon::NIDOQUEEN => [
+            Pokemon::NIDOQUEEN,
+            Pokemon::NIDOQUEEN | Mods::PURIFIED,
+            Pokemon::NIDOQUEEN | Mods::SHADOW,
+        ],
+        Pokemon::NIDORAN_M => [
+            Pokemon::NIDORAN_M,
+            Pokemon::NIDORAN_M | Mods::PURIFIED,
+            Pokemon::NIDORAN_M | Mods::SHADOW,
+        ],
+        Pokemon::NIDORINO => [
+            Pokemon::NIDORINO,
+            Pokemon::NIDORINO | Mods::PURIFIED,
+            Pokemon::NIDORINO | Mods::SHADOW,
+        ],
+        Pokemon::NIDOKING => [
+            Pokemon::NIDOKING,
+            Pokemon::NIDOKING | Mods::PURIFIED,
+            Pokemon::NIDOKING | Mods::SHADOW,
+        ],
+        Pokemon::CLEFAIRY => [
+            Pokemon::CLEFAIRY,
+        ],
+        Pokemon::CLEFABLE => [
+            Pokemon::CLEFABLE,
+        ],
+        Pokemon::VULPIX => [
+            Pokemon::VULPIX,
+            Pokemon::VULPIX | Mods::ALOLAN,
+            Pokemon::VULPIX | Mods::PURIFIED,
+            Pokemon::VULPIX | Mods::SHADOW,
+        ],
+        Pokemon::NINETALES => [
+            Pokemon::NINETALES,
+            Pokemon::NINETALES | Mods::ALOLAN,
+            Pokemon::NINETALES | Mods::PURIFIED,
+            Pokemon::NINETALES | Mods::SHADOW,
+        ],
+        Pokemon::JIGGLYPUFF => [
+            Pokemon::JIGGLYPUFF,
+        ],
+        Pokemon::WIGGLYTUFF => [
+            Pokemon::WIGGLYTUFF,
+        ],
+        Pokemon::ZUBAT => [
+            Pokemon::ZUBAT,
+            Pokemon::ZUBAT | Mods::PURIFIED,
+            Pokemon::ZUBAT | Mods::SHADOW,
+        ],
+        Pokemon::GOLBAT => [
+            Pokemon::GOLBAT,
+            Pokemon::GOLBAT | Mods::PURIFIED,
+            Pokemon::GOLBAT | Mods::SHADOW,
+        ],
+        Pokemon::ODDISH => [
+            Pokemon::ODDISH,
+            Pokemon::ODDISH | Mods::PURIFIED,
+            Pokemon::ODDISH | Mods::SHADOW,
+        ],
+        Pokemon::GLOOM => [
+            Pokemon::GLOOM,
+            Pokemon::GLOOM | Mods::PURIFIED,
+            Pokemon::GLOOM | Mods::SHADOW,
+        ],
+        Pokemon::VILEPLUME => [
+            Pokemon::VILEPLUME,
+            Pokemon::VILEPLUME | Mods::PURIFIED,
+            Pokemon::VILEPLUME | Mods::SHADOW,
+        ],
+        Pokemon::PARAS => [
+            Pokemon::PARAS,
+        ],
+        Pokemon::PARASECT => [
+            Pokemon::PARASECT,
+        ],
+        Pokemon::VENONAT => [
+            Pokemon::VENONAT,
+            Pokemon::VENONAT | Mods::PURIFIED,
+            Pokemon::VENONAT | Mods::SHADOW,
+        ],
+        Pokemon::VENOMOTH => [
+            Pokemon::VENOMOTH,
+            Pokemon::VENOMOTH | Mods::PURIFIED,
+            Pokemon::VENOMOTH | Mods::SHADOW,
+        ],
+        Pokemon::DIGLETT => [
+            Pokemon::DIGLETT,
+            Pokemon::DIGLETT | Mods::ALOLAN,
+            Pokemon::DIGLETT | Mods::PURIFIED,
+            Pokemon::DIGLETT | Mods::SHADOW,
+        ],
+        Pokemon::DUGTRIO => [
+            Pokemon::DUGTRIO,
+            Pokemon::DUGTRIO | Mods::ALOLAN,
+            Pokemon::DUGTRIO | Mods::PURIFIED,
+            Pokemon::DUGTRIO | Mods::SHADOW,
+        ],
+        Pokemon::MEOWTH => [
+            Pokemon::MEOWTH,
+            Pokemon::MEOWTH | Mods::ALOLAN,
+            Pokemon::MEOWTH | Mods::GALARIAN,
+            Pokemon::MEOWTH | Mods::PURIFIED,
+            Pokemon::MEOWTH | Mods::SHADOW,
+        ],
+        Pokemon::PERSIAN => [
+            Pokemon::PERSIAN,
+            Pokemon::PERSIAN | Mods::ALOLAN,
+            Pokemon::PERSIAN | Mods::PURIFIED,
+            Pokemon::PERSIAN | Mods::SHADOW,
+        ],
+        Pokemon::PSYDUCK => [
+            Pokemon::PSYDUCK,
+            Pokemon::PSYDUCK | Mods::PURIFIED,
+            Pokemon::PSYDUCK | Mods::SHADOW,
+        ],
+        Pokemon::GOLDUCK => [
+            Pokemon::GOLDUCK,
+            Pokemon::GOLDUCK | Mods::PURIFIED,
+            Pokemon::GOLDUCK | Mods::SHADOW,
+        ],
+        Pokemon::MANKEY => [
+            Pokemon::MANKEY,
+        ],
+        Pokemon::PRIMEAPE => [
+            Pokemon::PRIMEAPE,
+        ],
+        Pokemon::GROWLITHE => [
+            Pokemon::GROWLITHE,
+            Pokemon::GROWLITHE | Mods::PURIFIED,
+            Pokemon::GROWLITHE | Mods::SHADOW,
+        ],
+        Pokemon::ARCANINE => [
+            Pokemon::ARCANINE,
+            Pokemon::ARCANINE | Mods::PURIFIED,
+            Pokemon::ARCANINE | Mods::SHADOW,
+        ],
+        Pokemon::POLIWAG => [
+            Pokemon::POLIWAG,
+            Pokemon::POLIWAG | Mods::PURIFIED,
+            Pokemon::POLIWAG | Mods::SHADOW,
+        ],
+        Pokemon::POLIWHIRL => [
+            Pokemon::POLIWHIRL,
+            Pokemon::POLIWHIRL | Mods::PURIFIED,
+            Pokemon::POLIWHIRL | Mods::SHADOW,
+        ],
+        Pokemon::POLIWRATH => [
+            Pokemon::POLIWRATH,
+            Pokemon::POLIWRATH | Mods::PURIFIED,
+            Pokemon::POLIWRATH | Mods::SHADOW,
+        ],
+        Pokemon::ABRA => [
+            Pokemon::ABRA,
+            Pokemon::ABRA | Mods::PURIFIED,
+            Pokemon::ABRA | Mods::SHADOW,
+        ],
+        Pokemon::KADABRA => [
+            Pokemon::KADABRA,
+            Pokemon::KADABRA | Mods::PURIFIED,
+            Pokemon::KADABRA | Mods::SHADOW,
+        ],
+        Pokemon::ALAKAZAM => [
+            Pokemon::ALAKAZAM,
+            Pokemon::ALAKAZAM | Mods::PURIFIED,
+            Pokemon::ALAKAZAM | Mods::SHADOW,
+        ],
+        Pokemon::MACHOP => [
+            Pokemon::MACHOP,
+            Pokemon::MACHOP | Mods::PURIFIED,
+            Pokemon::MACHOP | Mods::SHADOW,
+        ],
+        Pokemon::MACHOKE => [
+            Pokemon::MACHOKE,
+            Pokemon::MACHOKE | Mods::PURIFIED,
+            Pokemon::MACHOKE | Mods::SHADOW,
+        ],
+        Pokemon::MACHAMP => [
+            Pokemon::MACHAMP,
+            Pokemon::MACHAMP | Mods::PURIFIED,
+            Pokemon::MACHAMP | Mods::SHADOW,
+        ],
+        Pokemon::BELLSPROUT => [
+            Pokemon::BELLSPROUT,
+            Pokemon::BELLSPROUT | Mods::PURIFIED,
+            Pokemon::BELLSPROUT | Mods::SHADOW,
+        ],
+        Pokemon::WEEPINBELL => [
+            Pokemon::WEEPINBELL,
+            Pokemon::WEEPINBELL | Mods::PURIFIED,
+            Pokemon::WEEPINBELL | Mods::SHADOW,
+        ],
+        Pokemon::VICTREEBEL => [
+            Pokemon::VICTREEBEL,
+            Pokemon::VICTREEBEL | Mods::PURIFIED,
+            Pokemon::VICTREEBEL | Mods::SHADOW,
+        ],
+        Pokemon::TENTACOOL => [
+            Pokemon::TENTACOOL,
+        ],
+        Pokemon::TENTACRUEL => [
+            Pokemon::TENTACRUEL,
+        ],
+        Pokemon::GEODUDE => [
+            Pokemon::GEODUDE,
+            Pokemon::GEODUDE | Mods::ALOLAN,
+            Pokemon::GEODUDE | Mods::PURIFIED,
+            Pokemon::GEODUDE | Mods::SHADOW,
+        ],
+        Pokemon::GRAVELER => [
+            Pokemon::GRAVELER,
+            Pokemon::GRAVELER | Mods::ALOLAN,
+            Pokemon::GRAVELER | Mods::PURIFIED,
+            Pokemon::GRAVELER | Mods::SHADOW,
+        ],
+        Pokemon::GOLEM => [
+            Pokemon::GOLEM,
+            Pokemon::GOLEM | Mods::ALOLAN,
+            Pokemon::GOLEM | Mods::PURIFIED,
+            Pokemon::GOLEM | Mods::SHADOW,
+        ],
+        Pokemon::PONYTA => [
+            Pokemon::PONYTA,
+        ],
+        Pokemon::RAPIDASH => [
+            Pokemon::RAPIDASH,
+        ],
+        Pokemon::SLOWPOKE => [
+            Pokemon::SLOWPOKE,
+        ],
+        Pokemon::SLOWBRO => [
+            Pokemon::SLOWBRO,
+        ],
+        Pokemon::MAGNEMITE => [
+            Pokemon::MAGNEMITE,
+            Pokemon::MAGNEMITE | Mods::PURIFIED,
+            Pokemon::MAGNEMITE | Mods::SHADOW,
+        ],
+        Pokemon::MAGNETON => [
+            Pokemon::MAGNETON,
+            Pokemon::MAGNETON | Mods::PURIFIED,
+            Pokemon::MAGNETON | Mods::SHADOW,
+        ],
+        Pokemon::FARFETCH_D => [
+            Pokemon::FARFETCH_D,
+            Pokemon::FARFETCH_D | Mods::GALARIAN,
+            Pokemon::FARFETCH_D | Mods::PURIFIED,
+            Pokemon::FARFETCH_D | Mods::SHADOW,
+        ],
+        Pokemon::DODUO => [
+            Pokemon::DODUO,
+        ],
+        Pokemon::DODRIO => [
+            Pokemon::DODRIO,
+        ],
+        Pokemon::SEEL => [
+            Pokemon::SEEL,
+        ],
+        Pokemon::DEWGONG => [
+            Pokemon::DEWGONG,
+        ],
+        Pokemon::GRIMER => [
+            Pokemon::GRIMER,
+            Pokemon::GRIMER | Mods::ALOLAN,
+            Pokemon::GRIMER | Mods::PURIFIED,
+            Pokemon::GRIMER | Mods::SHADOW,
+        ],
+        Pokemon::MUK => [
+            Pokemon::MUK,
+            Pokemon::MUK | Mods::ALOLAN,
+            Pokemon::MUK | Mods::PURIFIED,
+            Pokemon::MUK | Mods::SHADOW,
+        ],
+        Pokemon::SHELLDER => [
+            Pokemon::SHELLDER,
+            Pokemon::SHELLDER | Mods::PURIFIED,
+            Pokemon::SHELLDER | Mods::SHADOW,
+        ],
+        Pokemon::CLOYSTER => [
+            Pokemon::CLOYSTER,
+            Pokemon::CLOYSTER | Mods::PURIFIED,
+            Pokemon::CLOYSTER | Mods::SHADOW,
+        ],
+        Pokemon::GASTLY => [
+            Pokemon::GASTLY,
+        ],
+        Pokemon::HAUNTER => [
+            Pokemon::HAUNTER,
+        ],
+        Pokemon::GENGAR => [
+            Pokemon::GENGAR,
+        ],
+        Pokemon::ONIX => [
+            Pokemon::ONIX,
+            Pokemon::ONIX | Mods::PURIFIED,
+            Pokemon::ONIX | Mods::SHADOW,
+        ],
+        Pokemon::DROWZEE => [
+            Pokemon::DROWZEE,
+            Pokemon::DROWZEE | Mods::PURIFIED,
+            Pokemon::DROWZEE | Mods::SHADOW,
+        ],
+        Pokemon::HYPNO => [
+            Pokemon::HYPNO,
+            Pokemon::HYPNO | Mods::PURIFIED,
+            Pokemon::HYPNO | Mods::SHADOW,
+        ],
+        Pokemon::KRABBY => [
+            Pokemon::KRABBY,
+            Pokemon::KRABBY | Mods::PURIFIED,
+            Pokemon::KRABBY | Mods::SHADOW,
+        ],
+        Pokemon::KINGLER => [
+            Pokemon::KINGLER,
+            Pokemon::KINGLER | Mods::PURIFIED,
+            Pokemon::KINGLER | Mods::SHADOW,
+        ],
+        Pokemon::VOLTORB => [
+            Pokemon::VOLTORB,
+        ],
+        Pokemon::ELECTRODE => [
+            Pokemon::ELECTRODE,
+        ],
+        Pokemon::EXEGGCUTE => [
+            Pokemon::EXEGGCUTE,
+            Pokemon::EXEGGCUTE | Mods::PURIFIED,
+            Pokemon::EXEGGCUTE | Mods::SHADOW,
+        ],
+        Pokemon::EXEGGUTOR => [
+            Pokemon::EXEGGUTOR,
+            Pokemon::EXEGGUTOR | Mods::ALOLAN,
+            Pokemon::EXEGGUTOR | Mods::PURIFIED,
+            Pokemon::EXEGGUTOR | Mods::SHADOW,
+        ],
+        Pokemon::CUBONE => [
+            Pokemon::CUBONE,
+            Pokemon::CUBONE | Mods::PURIFIED,
+            Pokemon::CUBONE | Mods::SHADOW,
+        ],
+        Pokemon::MAROWAK => [
+            Pokemon::MAROWAK,
+            Pokemon::MAROWAK | Mods::ALOLAN,
+            Pokemon::MAROWAK | Mods::PURIFIED,
+            Pokemon::MAROWAK | Mods::SHADOW,
+        ],
+        Pokemon::HITMONLEE => [
+            Pokemon::HITMONLEE,
+            Pokemon::HITMONLEE | Mods::PURIFIED,
+            Pokemon::HITMONLEE | Mods::SHADOW,
+        ],
+        Pokemon::HITMONCHAN => [
+            Pokemon::HITMONCHAN,
+            Pokemon::HITMONCHAN | Mods::PURIFIED,
+            Pokemon::HITMONCHAN | Mods::SHADOW,
+        ],
+        Pokemon::LICKITUNG => [
+            Pokemon::LICKITUNG,
+        ],
+        Pokemon::KOFFING => [
+            Pokemon::KOFFING,
+            Pokemon::KOFFING | Mods::PURIFIED,
+            Pokemon::KOFFING | Mods::SHADOW,
+        ],
+        Pokemon::WEEZING => [
+            Pokemon::WEEZING,
+            Pokemon::WEEZING | Mods::GALARIAN,
+            Pokemon::WEEZING | Mods::PURIFIED,
+            Pokemon::WEEZING | Mods::SHADOW,
+        ],
+        Pokemon::RHYHORN => [
+            Pokemon::RHYHORN,
+            Pokemon::RHYHORN | Mods::PURIFIED,
+            Pokemon::RHYHORN | Mods::SHADOW,
+        ],
+        Pokemon::RHYDON => [
+            Pokemon::RHYDON,
+            Pokemon::RHYDON | Mods::PURIFIED,
+            Pokemon::RHYDON | Mods::SHADOW,
+        ],
+        Pokemon::CHANSEY => [
+            Pokemon::CHANSEY,
+        ],
+        Pokemon::TANGELA => [
+            Pokemon::TANGELA,
+        ],
+        Pokemon::KANGASKHAN => [
+            Pokemon::KANGASKHAN,
+            Pokemon::KANGASKHAN | Mods::PURIFIED,
+            Pokemon::KANGASKHAN | Mods::SHADOW,
+        ],
+        Pokemon::HORSEA => [
+            Pokemon::HORSEA,
+        ],
+        Pokemon::SEADRA => [
+            Pokemon::SEADRA,
+        ],
+        Pokemon::GOLDEEN => [
+            Pokemon::GOLDEEN,
+        ],
+        Pokemon::SEAKING => [
+            Pokemon::SEAKING,
+        ],
+        Pokemon::STARYU => [
+            Pokemon::STARYU,
+        ],
+        Pokemon::STARMIE => [
+            Pokemon::STARMIE,
+        ],
+        Pokemon::MR_MIME => [
+            Pokemon::MR_MIME,
+        ],
+        Pokemon::SCYTHER => [
+            Pokemon::SCYTHER,
+            Pokemon::SCYTHER | Mods::PURIFIED,
+            Pokemon::SCYTHER | Mods::SHADOW,
+        ],
+        Pokemon::JYNX => [
+            Pokemon::JYNX,
+        ],
+        Pokemon::ELECTABUZZ => [
+            Pokemon::ELECTABUZZ,
+            Pokemon::ELECTABUZZ | Mods::PURIFIED,
+            Pokemon::ELECTABUZZ | Mods::SHADOW,
+        ],
+        Pokemon::MAGMAR => [
+            Pokemon::MAGMAR,
+            Pokemon::MAGMAR | Mods::PURIFIED,
+            Pokemon::MAGMAR | Mods::SHADOW,
+        ],
+        Pokemon::PINSIR => [
+            Pokemon::PINSIR,
+            Pokemon::PINSIR | Mods::PURIFIED,
+            Pokemon::PINSIR | Mods::SHADOW,
+        ],
+        Pokemon::TAUROS => [
+            Pokemon::TAUROS,
+        ],
+        Pokemon::MAGIKARP => [
+            Pokemon::MAGIKARP,
+            Pokemon::MAGIKARP | Mods::PURIFIED,
+            Pokemon::MAGIKARP | Mods::SHADOW,
+        ],
+        Pokemon::GYARADOS => [
+            Pokemon::GYARADOS,
+            Pokemon::GYARADOS | Mods::PURIFIED,
+            Pokemon::GYARADOS | Mods::SHADOW,
+        ],
+        Pokemon::LAPRAS => [
+            Pokemon::LAPRAS,
+            Pokemon::LAPRAS | Mods::PURIFIED,
+            Pokemon::LAPRAS | Mods::SHADOW,
+        ],
+        Pokemon::DITTO => [
+            Pokemon::DITTO,
+        ],
+        Pokemon::EEVEE => [
+            Pokemon::EEVEE,
+        ],
+        Pokemon::VAPOREON => [
+            Pokemon::VAPOREON,
+        ],
+        Pokemon::JOLTEON => [
+            Pokemon::JOLTEON,
+        ],
+        Pokemon::FLAREON => [
+            Pokemon::FLAREON,
+        ],
+        Pokemon::PORYGON => [
+            Pokemon::PORYGON,
+            Pokemon::PORYGON | Mods::PURIFIED,
+            Pokemon::PORYGON | Mods::SHADOW,
+        ],
+        Pokemon::OMANYTE => [
+            Pokemon::OMANYTE,
+            Pokemon::OMANYTE | Mods::PURIFIED,
+            Pokemon::OMANYTE | Mods::SHADOW,
+        ],
+        Pokemon::OMASTAR => [
+            Pokemon::OMASTAR,
+            Pokemon::OMASTAR | Mods::PURIFIED,
+            Pokemon::OMASTAR | Mods::SHADOW,
+        ],
+        Pokemon::KABUTO => [
+            Pokemon::KABUTO,
+        ],
+        Pokemon::KABUTOPS => [
+            Pokemon::KABUTOPS,
+        ],
+        Pokemon::AERODACTYL => [
+            Pokemon::AERODACTYL,
+        ],
+        Pokemon::SNORLAX => [
+            Pokemon::SNORLAX,
+            Pokemon::SNORLAX | Mods::PURIFIED,
+            Pokemon::SNORLAX | Mods::SHADOW,
+        ],
+        Pokemon::ARTICUNO => [
+            Pokemon::ARTICUNO,
+            Pokemon::ARTICUNO | Mods::PURIFIED,
+            Pokemon::ARTICUNO | Mods::SHADOW,
+        ],
+        Pokemon::ZAPDOS => [
+            Pokemon::ZAPDOS,
+            Pokemon::ZAPDOS | Mods::PURIFIED,
+            Pokemon::ZAPDOS | Mods::SHADOW,
+        ],
+        Pokemon::MOLTRES => [
+            Pokemon::MOLTRES,
+            Pokemon::MOLTRES | Mods::PURIFIED,
+            Pokemon::MOLTRES | Mods::SHADOW,
+        ],
+        Pokemon::DRATINI => [
+            Pokemon::DRATINI,
+            Pokemon::DRATINI | Mods::PURIFIED,
+            Pokemon::DRATINI | Mods::SHADOW,
+        ],
+        Pokemon::DRAGONAIR => [
+            Pokemon::DRAGONAIR,
+            Pokemon::DRAGONAIR | Mods::PURIFIED,
+            Pokemon::DRAGONAIR | Mods::SHADOW,
+        ],
+        Pokemon::DRAGONITE => [
+            Pokemon::DRAGONITE,
+            Pokemon::DRAGONITE | Mods::PURIFIED,
+            Pokemon::DRAGONITE | Mods::SHADOW,
+        ],
+        Pokemon::MEWTWO => [
+            Pokemon::MEWTWO,
+            Pokemon::MEWTWO | FormsAlias::MEWTWO_ARMORED,
+            Pokemon::MEWTWO | Mods::PURIFIED,
+            Pokemon::MEWTWO | Mods::SHADOW,
+        ],
+        Pokemon::MEW => [
+            Pokemon::MEW,
+        ],
+        Pokemon::CHIKORITA => [
+            Pokemon::CHIKORITA,
+        ],
+        Pokemon::BAYLEEF => [
+            Pokemon::BAYLEEF,
+        ],
+        Pokemon::MEGANIUM => [
+            Pokemon::MEGANIUM,
+        ],
+        Pokemon::CYNDAQUIL => [
+            Pokemon::CYNDAQUIL,
+        ],
+        Pokemon::QUILAVA => [
+            Pokemon::QUILAVA,
+        ],
+        Pokemon::TYPHLOSION => [
+            Pokemon::TYPHLOSION,
+        ],
+        Pokemon::TOTODILE => [
+            Pokemon::TOTODILE,
+        ],
+        Pokemon::CROCONAW => [
+            Pokemon::CROCONAW,
+        ],
+        Pokemon::FERALIGATR => [
+            Pokemon::FERALIGATR,
+        ],
+        Pokemon::SENTRET => [
+            Pokemon::SENTRET,
+        ],
+        Pokemon::FURRET => [
+            Pokemon::FURRET,
+        ],
+        Pokemon::HOOTHOOT => [
+            Pokemon::HOOTHOOT,
+        ],
+        Pokemon::NOCTOWL => [
+            Pokemon::NOCTOWL,
+        ],
+        Pokemon::LEDYBA => [
+            Pokemon::LEDYBA,
+        ],
+        Pokemon::LEDIAN => [
+            Pokemon::LEDIAN,
+        ],
+        Pokemon::SPINARAK => [
+            Pokemon::SPINARAK,
+        ],
+        Pokemon::ARIADOS => [
+            Pokemon::ARIADOS,
+        ],
+        Pokemon::CROBAT => [
+            Pokemon::CROBAT,
+            Pokemon::CROBAT | Mods::PURIFIED,
+            Pokemon::CROBAT | Mods::SHADOW,
+        ],
+        Pokemon::CHINCHOU => [
+            Pokemon::CHINCHOU,
+        ],
+        Pokemon::LANTURN => [
+            Pokemon::LANTURN,
+        ],
+        Pokemon::PICHU => [
+            Pokemon::PICHU,
+        ],
+        Pokemon::CLEFFA => [
+            Pokemon::CLEFFA,
+        ],
+        Pokemon::IGGLYBUFF => [
+            Pokemon::IGGLYBUFF,
+        ],
+        Pokemon::TOGEPI => [
+            Pokemon::TOGEPI,
+        ],
+        Pokemon::TOGETIC => [
+            Pokemon::TOGETIC,
+        ],
+        Pokemon::NATU => [
+            Pokemon::NATU,
+        ],
+        Pokemon::XATU => [
+            Pokemon::XATU,
+        ],
+        Pokemon::MAREEP => [
+            Pokemon::MAREEP,
+            Pokemon::MAREEP | Mods::PURIFIED,
+            Pokemon::MAREEP | Mods::SHADOW,
+        ],
+        Pokemon::FLAAFFY => [
+            Pokemon::FLAAFFY,
+            Pokemon::FLAAFFY | Mods::PURIFIED,
+            Pokemon::FLAAFFY | Mods::SHADOW,
+        ],
+        Pokemon::AMPHAROS => [
+            Pokemon::AMPHAROS,
+            Pokemon::AMPHAROS | Mods::PURIFIED,
+            Pokemon::AMPHAROS | Mods::SHADOW,
+        ],
+        Pokemon::BELLOSSOM => [
+            Pokemon::BELLOSSOM,
+            Pokemon::BELLOSSOM | Mods::PURIFIED,
+            Pokemon::BELLOSSOM | Mods::SHADOW,
+        ],
+        Pokemon::MARILL => [
+            Pokemon::MARILL,
+        ],
+        Pokemon::AZUMARILL => [
+            Pokemon::AZUMARILL,
+        ],
+        Pokemon::SUDOWOODO => [
+            Pokemon::SUDOWOODO,
+        ],
+        Pokemon::POLITOED => [
+            Pokemon::POLITOED,
+            Pokemon::POLITOED | Mods::PURIFIED,
+            Pokemon::POLITOED | Mods::SHADOW,
+        ],
+        Pokemon::HOPPIP => [
+            Pokemon::HOPPIP,
+        ],
+        Pokemon::SKIPLOOM => [
+            Pokemon::SKIPLOOM,
+        ],
+        Pokemon::JUMPLUFF => [
+            Pokemon::JUMPLUFF,
+        ],
+        Pokemon::AIPOM => [
+            Pokemon::AIPOM,
+        ],
+        Pokemon::SUNKERN => [
+            Pokemon::SUNKERN,
+        ],
+        Pokemon::SUNFLORA => [
+            Pokemon::SUNFLORA,
+        ],
+        Pokemon::YANMA => [
+            Pokemon::YANMA,
+        ],
+        Pokemon::WOOPER => [
+            Pokemon::WOOPER,
+        ],
+        Pokemon::QUAGSIRE => [
+            Pokemon::QUAGSIRE,
+        ],
+        Pokemon::ESPEON => [
+            Pokemon::ESPEON,
+        ],
+        Pokemon::UMBREON => [
+            Pokemon::UMBREON,
+        ],
+        Pokemon::MURKROW => [
+            Pokemon::MURKROW,
+            Pokemon::MURKROW | Mods::PURIFIED,
+            Pokemon::MURKROW | Mods::SHADOW,
+        ],
+        Pokemon::SLOWKING => [
+            Pokemon::SLOWKING,
+        ],
+        Pokemon::MISDREAVUS => [
+            Pokemon::MISDREAVUS,
+            Pokemon::MISDREAVUS | Mods::PURIFIED,
+            Pokemon::MISDREAVUS | Mods::SHADOW,
+        ],
+        Pokemon::UNOWN => [
+            Pokemon::UNOWN,
+        ],
+        Pokemon::WOBBUFFET => [
+            Pokemon::WOBBUFFET,
+            Pokemon::WOBBUFFET | Mods::PURIFIED,
+            Pokemon::WOBBUFFET | Mods::SHADOW,
+        ],
+        Pokemon::GIRAFARIG => [
+            Pokemon::GIRAFARIG,
+        ],
+        Pokemon::PINECO => [
+            Pokemon::PINECO,
+            Pokemon::PINECO | Mods::PURIFIED,
+            Pokemon::PINECO | Mods::SHADOW,
+        ],
+        Pokemon::FORRETRESS => [
+            Pokemon::FORRETRESS,
+            Pokemon::FORRETRESS | Mods::PURIFIED,
+            Pokemon::FORRETRESS | Mods::SHADOW,
+        ],
+        Pokemon::DUNSPARCE => [
+            Pokemon::DUNSPARCE,
+        ],
+        Pokemon::GLIGAR => [
+            Pokemon::GLIGAR,
+            Pokemon::GLIGAR | Mods::PURIFIED,
+            Pokemon::GLIGAR | Mods::SHADOW,
+        ],
+        Pokemon::STEELIX => [
+            Pokemon::STEELIX,
+            Pokemon::STEELIX | Mods::PURIFIED,
+            Pokemon::STEELIX | Mods::SHADOW,
+        ],
+        Pokemon::SNUBBULL => [
+            Pokemon::SNUBBULL,
+        ],
+        Pokemon::GRANBULL => [
+            Pokemon::GRANBULL,
+        ],
+        Pokemon::QWILFISH => [
+            Pokemon::QWILFISH,
+        ],
+        Pokemon::SCIZOR => [
+            Pokemon::SCIZOR,
+            Pokemon::SCIZOR | Mods::PURIFIED,
+            Pokemon::SCIZOR | Mods::SHADOW,
+        ],
+        Pokemon::SHUCKLE => [
+            Pokemon::SHUCKLE,
+            Pokemon::SHUCKLE | Mods::PURIFIED,
+            Pokemon::SHUCKLE | Mods::SHADOW,
+        ],
+        Pokemon::HERACROSS => [
+            Pokemon::HERACROSS,
+        ],
+        Pokemon::SNEASEL => [
+            Pokemon::SNEASEL,
+            Pokemon::SNEASEL | Mods::PURIFIED,
+            Pokemon::SNEASEL | Mods::SHADOW,
+        ],
+        Pokemon::TEDDIURSA => [
+            Pokemon::TEDDIURSA,
+        ],
+        Pokemon::URSARING => [
+            Pokemon::URSARING,
+        ],
+        Pokemon::SLUGMA => [
+            Pokemon::SLUGMA,
+        ],
+        Pokemon::MAGCARGO => [
+            Pokemon::MAGCARGO,
+        ],
+        Pokemon::SWINUB => [
+            Pokemon::SWINUB,
+        ],
+        Pokemon::PILOSWINE => [
+            Pokemon::PILOSWINE,
+        ],
+        Pokemon::CORSOLA => [
+            Pokemon::CORSOLA,
+        ],
+        Pokemon::REMORAID => [
+            Pokemon::REMORAID,
+        ],
+        Pokemon::OCTILLERY => [
+            Pokemon::OCTILLERY,
+        ],
+        Pokemon::DELIBIRD => [
+            Pokemon::DELIBIRD,
+            Pokemon::DELIBIRD | Mods::PURIFIED,
+            Pokemon::DELIBIRD | Mods::SHADOW,
+        ],
+        Pokemon::MANTINE => [
+            Pokemon::MANTINE,
+        ],
+        Pokemon::SKARMORY => [
+            Pokemon::SKARMORY,
+        ],
+        Pokemon::HOUNDOUR => [
+            Pokemon::HOUNDOUR,
+            Pokemon::HOUNDOUR | Mods::PURIFIED,
+            Pokemon::HOUNDOUR | Mods::SHADOW,
+        ],
+        Pokemon::HOUNDOOM => [
+            Pokemon::HOUNDOOM,
+            Pokemon::HOUNDOOM | Mods::PURIFIED,
+            Pokemon::HOUNDOOM | Mods::SHADOW,
+        ],
+        Pokemon::KINGDRA => [
+            Pokemon::KINGDRA,
+        ],
+        Pokemon::PHANPY => [
+            Pokemon::PHANPY,
+        ],
+        Pokemon::DONPHAN => [
+            Pokemon::DONPHAN,
+        ],
+        Pokemon::PORYGON2 => [
+            Pokemon::PORYGON2,
+            Pokemon::PORYGON2 | Mods::PURIFIED,
+            Pokemon::PORYGON2 | Mods::SHADOW,
+        ],
+        Pokemon::STANTLER => [
+            Pokemon::STANTLER,
+            Pokemon::STANTLER | Mods::PURIFIED,
+            Pokemon::STANTLER | Mods::SHADOW,
+        ],
+        Pokemon::SMEARGLE => [
+            Pokemon::SMEARGLE,
+        ],
+        Pokemon::TYROGUE => [
+            Pokemon::TYROGUE,
+        ],
+        Pokemon::HITMONTOP => [
+            Pokemon::HITMONTOP,
+        ],
+        Pokemon::SMOOCHUM => [
+            Pokemon::SMOOCHUM,
+        ],
+        Pokemon::ELEKID => [
+            Pokemon::ELEKID,
+        ],
+        Pokemon::MAGBY => [
+            Pokemon::MAGBY,
+        ],
+        Pokemon::MILTANK => [
+            Pokemon::MILTANK,
+        ],
+        Pokemon::BLISSEY => [
+            Pokemon::BLISSEY,
+        ],
+        Pokemon::RAIKOU => [
+            Pokemon::RAIKOU,
+            Pokemon::RAIKOU | Mods::PURIFIED,
+            Pokemon::RAIKOU | Mods::SHADOW,
+        ],
+        Pokemon::ENTEI => [
+            Pokemon::ENTEI,
+            Pokemon::ENTEI | Mods::PURIFIED,
+            Pokemon::ENTEI | Mods::SHADOW,
+        ],
+        Pokemon::SUICUNE => [
+            Pokemon::SUICUNE,
+            Pokemon::SUICUNE | Mods::PURIFIED,
+            Pokemon::SUICUNE | Mods::SHADOW,
+        ],
+        Pokemon::LARVITAR => [
+            Pokemon::LARVITAR,
+            Pokemon::LARVITAR | Mods::PURIFIED,
+            Pokemon::LARVITAR | Mods::SHADOW,
+        ],
+        Pokemon::PUPITAR => [
+            Pokemon::PUPITAR,
+            Pokemon::PUPITAR | Mods::PURIFIED,
+            Pokemon::PUPITAR | Mods::SHADOW,
+        ],
+        Pokemon::TYRANITAR => [
+            Pokemon::TYRANITAR,
+            Pokemon::TYRANITAR | Mods::PURIFIED,
+            Pokemon::TYRANITAR | Mods::SHADOW,
+        ],
+        Pokemon::LUGIA => [
+            Pokemon::LUGIA,
+        ],
+        Pokemon::HO_OH => [
+            Pokemon::HO_OH,
+        ],
+        Pokemon::CELEBI => [
+            Pokemon::CELEBI,
+        ],
+        Pokemon::TREECKO => [
+            Pokemon::TREECKO,
+        ],
+        Pokemon::GROVYLE => [
+            Pokemon::GROVYLE,
+        ],
+        Pokemon::SCEPTILE => [
+            Pokemon::SCEPTILE,
+        ],
+        Pokemon::TORCHIC => [
+            Pokemon::TORCHIC,
+        ],
+        Pokemon::COMBUSKEN => [
+            Pokemon::COMBUSKEN,
+        ],
+        Pokemon::BLAZIKEN => [
+            Pokemon::BLAZIKEN,
+        ],
+        Pokemon::MUDKIP => [
+            Pokemon::MUDKIP,
+            Pokemon::MUDKIP | Mods::PURIFIED,
+            Pokemon::MUDKIP | Mods::SHADOW,
+        ],
+        Pokemon::MARSHTOMP => [
+            Pokemon::MARSHTOMP,
+            Pokemon::MARSHTOMP | Mods::PURIFIED,
+            Pokemon::MARSHTOMP | Mods::SHADOW,
+        ],
+        Pokemon::SWAMPERT => [
+            Pokemon::SWAMPERT,
+            Pokemon::SWAMPERT | Mods::PURIFIED,
+            Pokemon::SWAMPERT | Mods::SHADOW,
+        ],
+        Pokemon::POOCHYENA => [
+            Pokemon::POOCHYENA,
+        ],
+        Pokemon::MIGTYENA => [
+            Pokemon::MIGTYENA,
+        ],
+        Pokemon::ZIGZAGOON => [
+            Pokemon::ZIGZAGOON,
+            Pokemon::ZIGZAGOON | Mods::GALARIAN,
+            Pokemon::ZIGZAGOON | Mods::PURIFIED,
+            Pokemon::ZIGZAGOON | Mods::SHADOW,
+        ],
+        Pokemon::LINOONE => [
+            Pokemon::LINOONE,
+            Pokemon::LINOONE | Mods::GALARIAN,
+            Pokemon::LINOONE | Mods::PURIFIED,
+            Pokemon::LINOONE | Mods::SHADOW,
+        ],
+        Pokemon::WURMPLE => [
+            Pokemon::WURMPLE,
+        ],
+        Pokemon::SILCOON => [
+            Pokemon::SILCOON,
+        ],
+        Pokemon::BEAUTIFLY => [
+            Pokemon::BEAUTIFLY,
+        ],
+        Pokemon::CASCOON => [
+            Pokemon::CASCOON,
+        ],
+        Pokemon::DUSTOX => [
+            Pokemon::DUSTOX,
+        ],
+        Pokemon::LOTAD => [
+            Pokemon::LOTAD,
+        ],
+        Pokemon::LOMBRE => [
+            Pokemon::LOMBRE,
+        ],
+        Pokemon::LUDICOLO => [
+            Pokemon::LUDICOLO,
+        ],
+        Pokemon::SEEDOT => [
+            Pokemon::SEEDOT,
+            Pokemon::SEEDOT | Mods::PURIFIED,
+            Pokemon::SEEDOT | Mods::SHADOW,
+        ],
+        Pokemon::NUZLEAF => [
+            Pokemon::NUZLEAF,
+            Pokemon::NUZLEAF | Mods::PURIFIED,
+            Pokemon::NUZLEAF | Mods::SHADOW,
+        ],
+        Pokemon::SHIFTRY => [
+            Pokemon::SHIFTRY,
+            Pokemon::SHIFTRY | Mods::PURIFIED,
+            Pokemon::SHIFTRY | Mods::SHADOW,
+        ],
+        Pokemon::TAILLOW => [
+            Pokemon::TAILLOW,
+        ],
+        Pokemon::SWELLOW => [
+            Pokemon::SWELLOW,
+        ],
+        Pokemon::WINGULL => [
+            Pokemon::WINGULL,
+        ],
+        Pokemon::PELIPPER => [
+            Pokemon::PELIPPER,
+        ],
+        Pokemon::RALTS => [
+            Pokemon::RALTS,
+            Pokemon::RALTS | Mods::PURIFIED,
+            Pokemon::RALTS | Mods::SHADOW,
+        ],
+        Pokemon::KIRLIA => [
+            Pokemon::KIRLIA,
+            Pokemon::KIRLIA | Mods::PURIFIED,
+            Pokemon::KIRLIA | Mods::SHADOW,
+        ],
+        Pokemon::GARDEVOIR => [
+            Pokemon::GARDEVOIR,
+            Pokemon::GARDEVOIR | Mods::PURIFIED,
+            Pokemon::GARDEVOIR | Mods::SHADOW,
+        ],
+        Pokemon::SURSKIT => [
+            Pokemon::SURSKIT,
+        ],
+        Pokemon::MASQUERAIN => [
+            Pokemon::MASQUERAIN,
+        ],
+        Pokemon::SHROOMISH => [
+            Pokemon::SHROOMISH,
+        ],
+        Pokemon::BRELOOM => [
+            Pokemon::BRELOOM,
+        ],
+        Pokemon::SLAKOTH => [
+            Pokemon::SLAKOTH,
+        ],
+        Pokemon::VIGOROTH => [
+            Pokemon::VIGOROTH,
+        ],
+        Pokemon::SLAKING => [
+            Pokemon::SLAKING,
+        ],
+        Pokemon::NINCADA => [
+            Pokemon::NINCADA,
+        ],
+        Pokemon::NINJASK => [
+            Pokemon::NINJASK,
+        ],
+        Pokemon::SHEDINJA => [
+            Pokemon::SHEDINJA,
+        ],
+        Pokemon::WHISMUR => [
+            Pokemon::WHISMUR,
+        ],
+        Pokemon::LOUDRED => [
+            Pokemon::LOUDRED,
+        ],
+        Pokemon::EXPLOUD => [
+            Pokemon::EXPLOUD,
+        ],
+        Pokemon::MAKUHITA => [
+            Pokemon::MAKUHITA,
+        ],
+        Pokemon::HARIYAMA => [
+            Pokemon::HARIYAMA,
+        ],
+        Pokemon::AZURILL => [
+            Pokemon::AZURILL,
+        ],
+        Pokemon::NOSEPASS => [
+            Pokemon::NOSEPASS,
+        ],
+        Pokemon::SKITTY => [
+            Pokemon::SKITTY,
+        ],
+        Pokemon::DELCATTY => [
+            Pokemon::DELCATTY,
+        ],
+        Pokemon::SABLEYE => [
+            Pokemon::SABLEYE,
+            Pokemon::SABLEYE | Mods::PURIFIED,
+            Pokemon::SABLEYE | Mods::SHADOW,
+        ],
+        Pokemon::MAWILE => [
+            Pokemon::MAWILE,
+            Pokemon::MAWILE | Mods::PURIFIED,
+            Pokemon::MAWILE | Mods::SHADOW,
+        ],
+        Pokemon::ARON => [
+            Pokemon::ARON,
+        ],
+        Pokemon::LAIRON => [
+            Pokemon::LAIRON,
+        ],
+        Pokemon::AGGRON => [
+            Pokemon::AGGRON,
+        ],
+        Pokemon::MEDITITE => [
+            Pokemon::MEDITITE,
+        ],
+        Pokemon::MEDICHAM => [
+            Pokemon::MEDICHAM,
+        ],
+        Pokemon::ELECTRIKE => [
+            Pokemon::ELECTRIKE,
+        ],
+        Pokemon::MANELECTRIC => [
+            Pokemon::MANELECTRIC,
+        ],
+        Pokemon::PLUSLE => [
+            Pokemon::PLUSLE,
+        ],
+        Pokemon::MINUN => [
+            Pokemon::MINUN,
+        ],
+        Pokemon::VOLBEAT => [
+            Pokemon::VOLBEAT,
+        ],
+        Pokemon::ILLUMISE => [
+            Pokemon::ILLUMISE,
+        ],
+        Pokemon::ROSELIA => [
+            Pokemon::ROSELIA,
+        ],
+        Pokemon::GULPIN => [
+            Pokemon::GULPIN,
+        ],
+        Pokemon::SWALOT => [
+            Pokemon::SWALOT,
+        ],
+        Pokemon::CARAVANHA => [
+            Pokemon::CARAVANHA,
+            Pokemon::CARAVANHA | Mods::PURIFIED,
+            Pokemon::CARAVANHA | Mods::SHADOW,
+        ],
+        Pokemon::SHARPEDO => [
+            Pokemon::SHARPEDO,
+            Pokemon::SHARPEDO | Mods::PURIFIED,
+            Pokemon::SHARPEDO | Mods::SHADOW,
+        ],
+        Pokemon::WAILMER => [
+            Pokemon::WAILMER,
+        ],
+        Pokemon::WAILORD => [
+            Pokemon::WAILORD,
+        ],
+        Pokemon::NUMEL => [
+            Pokemon::NUMEL,
+        ],
+        Pokemon::CAMERUPT => [
+            Pokemon::CAMERUPT,
+        ],
+        Pokemon::TORKOAL => [
+            Pokemon::TORKOAL,
+        ],
+        Pokemon::SPOINK => [
+            Pokemon::SPOINK,
+        ],
+        Pokemon::GRUMPIG => [
+            Pokemon::GRUMPIG,
+        ],
+        Pokemon::SPINDA => [
+            Pokemon::SPINDA,
+        ],
+        Pokemon::TRAPINCH => [
+            Pokemon::TRAPINCH,
+            Pokemon::TRAPINCH | Mods::PURIFIED,
+            Pokemon::TRAPINCH | Mods::SHADOW,
+        ],
+        Pokemon::VIBRAVA => [
+            Pokemon::VIBRAVA,
+            Pokemon::VIBRAVA | Mods::PURIFIED,
+            Pokemon::VIBRAVA | Mods::SHADOW,
+        ],
+        Pokemon::FLYGON => [
+            Pokemon::FLYGON,
+            Pokemon::FLYGON | Mods::PURIFIED,
+            Pokemon::FLYGON | Mods::SHADOW,
+        ],
+        Pokemon::CACNEA => [
+            Pokemon::CACNEA,
+            Pokemon::CACNEA | Mods::PURIFIED,
+            Pokemon::CACNEA | Mods::SHADOW,
+        ],
+        Pokemon::CACTURNE => [
+            Pokemon::CACTURNE,
+            Pokemon::CACTURNE | Mods::PURIFIED,
+            Pokemon::CACTURNE | Mods::SHADOW,
+        ],
+        Pokemon::SWABLU => [
+            Pokemon::SWABLU,
+        ],
+        Pokemon::ALTARIA => [
+            Pokemon::ALTARIA,
+        ],
+        Pokemon::ZANGOOSE => [
+            Pokemon::ZANGOOSE,
+        ],
+        Pokemon::SEVIPER => [
+            Pokemon::SEVIPER,
+        ],
+        Pokemon::LUNATONE => [
+            Pokemon::LUNATONE,
+        ],
+        Pokemon::SOLROCK => [
+            Pokemon::SOLROCK,
+        ],
+        Pokemon::BARBOACH => [
+            Pokemon::BARBOACH,
+        ],
+        Pokemon::WHISCASH => [
+            Pokemon::WHISCASH,
+        ],
+        Pokemon::CORPHISH => [
+            Pokemon::CORPHISH,
+        ],
+        Pokemon::CRAWDAUNT => [
+            Pokemon::CRAWDAUNT,
+        ],
+        Pokemon::BALTOY => [
+            Pokemon::BALTOY,
+        ],
+        Pokemon::CLAYDOL => [
+            Pokemon::CLAYDOL,
+        ],
+        Pokemon::LILEEP => [
+            Pokemon::LILEEP,
+        ],
+        Pokemon::CRADILY => [
+            Pokemon::CRADILY,
+        ],
+        Pokemon::ANORITH => [
+            Pokemon::ANORITH,
+        ],
+        Pokemon::ARMALDO => [
+            Pokemon::ARMALDO,
+        ],
+        Pokemon::FEEBAS => [
+            Pokemon::FEEBAS,
+        ],
+        Pokemon::MILOTIC => [
+            Pokemon::MILOTIC,
+        ],
+        Pokemon::CASTFORM => [
+            Pokemon::CASTFORM,
+            Pokemon::CASTFORM | FormsAlias::CASTFORM_RAINY,
+            Pokemon::CASTFORM | FormsAlias::CASTFORM_SNOWY,
+            Pokemon::CASTFORM | FormsAlias::CASTFORM_SUNNY,
+        ],
+        Pokemon::KECLEON => [
+            Pokemon::KECLEON,
+        ],
+        Pokemon::SHUPPET => [
+            Pokemon::SHUPPET,
+            Pokemon::SHUPPET | Mods::PURIFIED,
+            Pokemon::SHUPPET | Mods::SHADOW,
+        ],
+        Pokemon::BANETTE => [
+            Pokemon::BANETTE,
+            Pokemon::BANETTE | Mods::PURIFIED,
+            Pokemon::BANETTE | Mods::SHADOW,
+        ],
+        Pokemon::DUSKULL => [
+            Pokemon::DUSKULL,
+            Pokemon::DUSKULL | Mods::PURIFIED,
+            Pokemon::DUSKULL | Mods::SHADOW,
+        ],
+        Pokemon::DUSCLOPS => [
+            Pokemon::DUSCLOPS,
+            Pokemon::DUSCLOPS | Mods::PURIFIED,
+            Pokemon::DUSCLOPS | Mods::SHADOW,
+        ],
+        Pokemon::TROPIUS => [
+            Pokemon::TROPIUS,
+        ],
+        Pokemon::CHIMECHO => [
+            Pokemon::CHIMECHO,
+        ],
+        Pokemon::ABSOL => [
+            Pokemon::ABSOL,
+            Pokemon::ABSOL | Mods::PURIFIED,
+            Pokemon::ABSOL | Mods::SHADOW,
+        ],
+        Pokemon::WYNAUT => [
+            Pokemon::WYNAUT,
+        ],
+        Pokemon::SNORUNT => [
+            Pokemon::SNORUNT,
+        ],
+        Pokemon::GLALIE => [
+            Pokemon::GLALIE,
+        ],
+        Pokemon::SPHEAL => [
+            Pokemon::SPHEAL,
+        ],
+        Pokemon::SEALEO => [
+            Pokemon::SEALEO,
+        ],
+        Pokemon::WALREIN => [
+            Pokemon::WALREIN,
+        ],
+        Pokemon::CLAMPERL => [
+            Pokemon::CLAMPERL,
+        ],
+        Pokemon::HUNTAIL => [
+            Pokemon::HUNTAIL,
+        ],
+        Pokemon::GOREBYSS => [
+            Pokemon::GOREBYSS,
+        ],
+        Pokemon::RELICANTH => [
+            Pokemon::RELICANTH,
+        ],
+        Pokemon::LUVDISC => [
+            Pokemon::LUVDISC,
+        ],
+        Pokemon::BAGON => [
+            Pokemon::BAGON,
+            Pokemon::BAGON | Mods::PURIFIED,
+            Pokemon::BAGON | Mods::SHADOW,
+        ],
+        Pokemon::SHELGON => [
+            Pokemon::SHELGON,
+            Pokemon::SHELGON | Mods::PURIFIED,
+            Pokemon::SHELGON | Mods::SHADOW,
+        ],
+        Pokemon::SALAMENCE => [
+            Pokemon::SALAMENCE,
+            Pokemon::SALAMENCE | Mods::PURIFIED,
+            Pokemon::SALAMENCE | Mods::SHADOW,
+        ],
+        Pokemon::BELDUM => [
+            Pokemon::BELDUM,
+            Pokemon::BELDUM | Mods::PURIFIED,
+            Pokemon::BELDUM | Mods::SHADOW,
+        ],
+        Pokemon::METANG => [
+            Pokemon::METANG,
+            Pokemon::METANG | Mods::PURIFIED,
+            Pokemon::METANG | Mods::SHADOW,
+        ],
+        Pokemon::METAGROSS => [
+            Pokemon::METAGROSS,
+            Pokemon::METAGROSS | Mods::PURIFIED,
+            Pokemon::METAGROSS | Mods::SHADOW,
+        ],
+        Pokemon::REGIROCK => [
+            Pokemon::REGIROCK,
+        ],
+        Pokemon::REGICE => [
+            Pokemon::REGICE,
+        ],
+        Pokemon::REGISTEEL => [
+            Pokemon::REGISTEEL,
+        ],
+        Pokemon::LATIAS => [
+            Pokemon::LATIAS,
+        ],
+        Pokemon::LATIOS => [
+            Pokemon::LATIOS,
+        ],
+        Pokemon::KYOGRE => [
+            Pokemon::KYOGRE,
+        ],
+        Pokemon::GROUDON => [
+            Pokemon::GROUDON,
+        ],
+        Pokemon::RAYQUAZA => [
+            Pokemon::RAYQUAZA,
+        ],
+        Pokemon::JIRACHI => [
+            Pokemon::JIRACHI,
+        ],
+        Pokemon::DEOXYS => [
+            Pokemon::DEOXYS,
+            Pokemon::DEOXYS | FormsAlias::DEOXYS_ATTACK,
+            Pokemon::DEOXYS | FormsAlias::DEOXYS_DEFENSE,
+            Pokemon::DEOXYS | FormsAlias::DEOXYS_SPEED,
+        ],
+        Pokemon::TURTWIG => [
+            Pokemon::TURTWIG,
+            Pokemon::TURTWIG | Mods::PURIFIED,
+            Pokemon::TURTWIG | Mods::SHADOW,
+        ],
+        Pokemon::GROTLE => [
+            Pokemon::GROTLE,
+            Pokemon::GROTLE | Mods::PURIFIED,
+            Pokemon::GROTLE | Mods::SHADOW,
+        ],
+        Pokemon::TORTERRA => [
+            Pokemon::TORTERRA,
+            Pokemon::TORTERRA | Mods::PURIFIED,
+            Pokemon::TORTERRA | Mods::SHADOW,
+        ],
+        Pokemon::CHIMCHAR => [
+            Pokemon::CHIMCHAR,
+            Pokemon::CHIMCHAR | Mods::PURIFIED,
+            Pokemon::CHIMCHAR | Mods::SHADOW,
+        ],
+        Pokemon::MONFERNO => [
+            Pokemon::MONFERNO,
+            Pokemon::MONFERNO | Mods::PURIFIED,
+            Pokemon::MONFERNO | Mods::SHADOW,
+        ],
+        Pokemon::INFERNAPE => [
+            Pokemon::INFERNAPE,
+            Pokemon::INFERNAPE | Mods::PURIFIED,
+            Pokemon::INFERNAPE | Mods::SHADOW,
+        ],
+        Pokemon::PILUP => [
+            Pokemon::PILUP,
+        ],
+        Pokemon::PRINPLUP => [
+            Pokemon::PRINPLUP,
+        ],
+        Pokemon::EMPOLEON => [
+            Pokemon::EMPOLEON,
+        ],
+        Pokemon::STARLY => [
+            Pokemon::STARLY,
+        ],
+        Pokemon::STARAVIA => [
+            Pokemon::STARAVIA,
+        ],
+        Pokemon::STARAPTOR => [
+            Pokemon::STARAPTOR,
+        ],
+        Pokemon::BIDOOF => [
+            Pokemon::BIDOOF,
+        ],
+        Pokemon::BIBAREL => [
+            Pokemon::BIBAREL,
+        ],
+        Pokemon::KRICKETOT => [
+            Pokemon::KRICKETOT,
+        ],
+        Pokemon::KRICKETUNE => [
+            Pokemon::KRICKETUNE,
+        ],
+        Pokemon::SHINX => [
+            Pokemon::SHINX,
+        ],
+        Pokemon::LUXIO => [
+            Pokemon::LUXIO,
+        ],
+        Pokemon::LUXRAY => [
+            Pokemon::LUXRAY,
+        ],
+        Pokemon::BUDEW => [
+            Pokemon::BUDEW,
+        ],
+        Pokemon::ROSERADE => [
+            Pokemon::ROSERADE,
+        ],
+        Pokemon::CRANIDOS => [
+            Pokemon::CRANIDOS,
+        ],
+        Pokemon::RAMPARDOS => [
+            Pokemon::RAMPARDOS,
+        ],
+        Pokemon::SHIELDON => [
+            Pokemon::SHIELDON,
+        ],
+        Pokemon::BASTIODON => [
+            Pokemon::BASTIODON,
+        ],
+        Pokemon::BURMY => [
+            Pokemon::BURMY,
+            Pokemon::BURMY | FormsAlias::BURMY_SANDY,
+            Pokemon::BURMY | FormsAlias::BURMY_TRASH,
+        ],
+        Pokemon::WORMADAM => [
+            Pokemon::WORMADAM,
+            Pokemon::WORMADAM | FormsAlias::WORMADAM_SANDY,
+            Pokemon::WORMADAM | FormsAlias::WORMADAM_TRASH,
+        ],
+        Pokemon::MOTHIM => [
+            Pokemon::MOTHIM,
+        ],
+        Pokemon::COMBEE => [
+            Pokemon::COMBEE,
+        ],
+        Pokemon::VESPIQUEN => [
+            Pokemon::VESPIQUEN,
+        ],
+        Pokemon::PACHIRISU => [
+            Pokemon::PACHIRISU,
+        ],
+        Pokemon::BUZIEL => [
+            Pokemon::BUZIEL,
+        ],
+        Pokemon::FLOATZEL => [
+            Pokemon::FLOATZEL,
+        ],
+        Pokemon::CHERUBI => [
+            Pokemon::CHERUBI,
+        ],
+        Pokemon::CHERRIM => [
+            Pokemon::CHERRIM,
+            Pokemon::CHERRIM | FormsAlias::CHERRIM_OVERCAST,
+        ],
+        Pokemon::SHELLOS => [
+            Pokemon::SHELLOS,
+            Pokemon::SHELLOS | FormsAlias::SHELLOS_WEST_SEA,
+        ],
+        Pokemon::GASTRODON => [
+            Pokemon::GASTRODON,
+            Pokemon::GASTRODON | FormsAlias::GASTRODON_WEST_SEA,
+        ],
+        Pokemon::AMBIPOM => [
+            Pokemon::AMBIPOM,
+        ],
+        Pokemon::DRIFLOON => [
+            Pokemon::DRIFLOON,
+        ],
+        Pokemon::DRIFBLIM => [
+            Pokemon::DRIFBLIM,
+        ],
+        Pokemon::BUNEARY => [
+            Pokemon::BUNEARY,
+        ],
+        Pokemon::LOPUNNY => [
+            Pokemon::LOPUNNY,
+        ],
+        Pokemon::MISMAGIUS => [
+            Pokemon::MISMAGIUS,
+            Pokemon::MISMAGIUS | Mods::PURIFIED,
+            Pokemon::MISMAGIUS | Mods::SHADOW,
+        ],
+        Pokemon::HONCHKROW => [
+            Pokemon::HONCHKROW,
+            Pokemon::HONCHKROW | Mods::PURIFIED,
+            Pokemon::HONCHKROW | Mods::SHADOW,
+        ],
+        Pokemon::GLAMEOW => [
+            Pokemon::GLAMEOW,
+        ],
+        Pokemon::PURUGLY => [
+            Pokemon::PURUGLY,
+        ],
+        Pokemon::CHINGLING => [
+            Pokemon::CHINGLING,
+        ],
+        Pokemon::STUNKY => [
+            Pokemon::STUNKY,
+            Pokemon::STUNKY | Mods::PURIFIED,
+            Pokemon::STUNKY | Mods::SHADOW,
+        ],
+        Pokemon::SKUNTANK => [
+            Pokemon::SKUNTANK,
+            Pokemon::SKUNTANK | Mods::PURIFIED,
+            Pokemon::SKUNTANK | Mods::SHADOW,
+        ],
+        Pokemon::BRONZOR => [
+            Pokemon::BRONZOR,
+        ],
+        Pokemon::BRONZONG => [
+            Pokemon::BRONZONG,
+        ],
+        Pokemon::BONSLY => [
+            Pokemon::BONSLY,
+        ],
+        Pokemon::MIME_JR => [
+            Pokemon::MIME_JR,
+        ],
+        Pokemon::HAPPINY => [
+            Pokemon::HAPPINY,
+        ],
+        Pokemon::CHATOT => [
+            Pokemon::CHATOT,
+        ],
+        Pokemon::SPIRITOMB => [
+            Pokemon::SPIRITOMB,
+        ],
+        Pokemon::GIBLE => [
+            Pokemon::GIBLE,
+            Pokemon::GIBLE | Mods::PURIFIED,
+            Pokemon::GIBLE | Mods::SHADOW,
+        ],
+        Pokemon::GABITE => [
+            Pokemon::GABITE,
+            Pokemon::GABITE | Mods::PURIFIED,
+            Pokemon::GABITE | Mods::SHADOW,
+        ],
+        Pokemon::GARCHOMP => [
+            Pokemon::GARCHOMP,
+            Pokemon::GARCHOMP | Mods::PURIFIED,
+            Pokemon::GARCHOMP | Mods::SHADOW,
+        ],
+        Pokemon::MUNCHLAX => [
+            Pokemon::MUNCHLAX,
+        ],
+        Pokemon::RIOLU => [
+            Pokemon::RIOLU,
+        ],
+        Pokemon::LUCARIO => [
+            Pokemon::LUCARIO,
+        ],
+        Pokemon::HIPPOPOTAS => [
+            Pokemon::HIPPOPOTAS,
+            Pokemon::HIPPOPOTAS | Mods::PURIFIED,
+            Pokemon::HIPPOPOTAS | Mods::SHADOW,
+        ],
+        Pokemon::HIPPOWDON => [
+            Pokemon::HIPPOWDON,
+            Pokemon::HIPPOWDON | Mods::PURIFIED,
+            Pokemon::HIPPOWDON | Mods::SHADOW,
+        ],
+        Pokemon::SKORUPI => [
+            Pokemon::SKORUPI,
+        ],
+        Pokemon::DRAPION => [
+            Pokemon::DRAPION,
+        ],
+        Pokemon::CROAGUNK => [
+            Pokemon::CROAGUNK,
+        ],
+        Pokemon::TOXICROAK => [
+            Pokemon::TOXICROAK,
+        ],
+        Pokemon::CARNIVINE => [
+            Pokemon::CARNIVINE,
+        ],
+        Pokemon::FINNEON => [
+            Pokemon::FINNEON,
+        ],
+        Pokemon::LUMINEON => [
+            Pokemon::LUMINEON,
+        ],
+        Pokemon::MANTYKE => [
+            Pokemon::MANTYKE,
+        ],
+        Pokemon::SNOVER => [
+            Pokemon::SNOVER,
+            Pokemon::SNOVER | Mods::PURIFIED,
+            Pokemon::SNOVER | Mods::SHADOW,
+        ],
+        Pokemon::ABOMASNOW => [
+            Pokemon::ABOMASNOW,
+            Pokemon::ABOMASNOW | Mods::PURIFIED,
+            Pokemon::ABOMASNOW | Mods::SHADOW,
+        ],
+        Pokemon::WEAVILE => [
+            Pokemon::WEAVILE,
+            Pokemon::WEAVILE | Mods::PURIFIED,
+            Pokemon::WEAVILE | Mods::SHADOW,
+        ],
+        Pokemon::MAGNEZONE => [
+            Pokemon::MAGNEZONE,
+            Pokemon::MAGNEZONE | Mods::PURIFIED,
+            Pokemon::MAGNEZONE | Mods::SHADOW,
+        ],
+        Pokemon::LICKILICKY => [
+            Pokemon::LICKILICKY,
+        ],
+        Pokemon::RHYPERIOR => [
+            Pokemon::RHYPERIOR,
+            Pokemon::RHYPERIOR | Mods::PURIFIED,
+            Pokemon::RHYPERIOR | Mods::SHADOW,
+        ],
+        Pokemon::TANGROWTH => [
+            Pokemon::TANGROWTH,
+        ],
+        Pokemon::ELECTIVIRE => [
+            Pokemon::ELECTIVIRE,
+            Pokemon::ELECTIVIRE | Mods::PURIFIED,
+            Pokemon::ELECTIVIRE | Mods::SHADOW,
+        ],
+        Pokemon::MAGMORTAR => [
+            Pokemon::MAGMORTAR,
+            Pokemon::MAGMORTAR | Mods::PURIFIED,
+            Pokemon::MAGMORTAR | Mods::SHADOW,
+        ],
+        Pokemon::TOGEKISS => [
+            Pokemon::TOGEKISS,
+        ],
+        Pokemon::YANMEGA => [
+            Pokemon::YANMEGA,
+        ],
+        Pokemon::LEAFEON => [
+            Pokemon::LEAFEON,
+        ],
+        Pokemon::GLACEON => [
+            Pokemon::GLACEON,
+        ],
+        Pokemon::GLISCOR => [
+            Pokemon::GLISCOR,
+            Pokemon::GLISCOR | Mods::PURIFIED,
+            Pokemon::GLISCOR | Mods::SHADOW,
+        ],
+        Pokemon::MAMOSWINE => [
+            Pokemon::MAMOSWINE,
+        ],
+        Pokemon::PORYGON_Z => [
+            Pokemon::PORYGON_Z,
+            Pokemon::PORYGON_Z | Mods::PURIFIED,
+            Pokemon::PORYGON_Z | Mods::SHADOW,
+        ],
+        Pokemon::GALLADE => [
+            Pokemon::GALLADE,
+            Pokemon::GALLADE | Mods::PURIFIED,
+            Pokemon::GALLADE | Mods::SHADOW,
+        ],
+        Pokemon::PROBOPASS => [
+            Pokemon::PROBOPASS,
+        ],
+        Pokemon::DUSKNOIR => [
+            Pokemon::DUSKNOIR,
+            Pokemon::DUSKNOIR | Mods::PURIFIED,
+            Pokemon::DUSKNOIR | Mods::SHADOW,
+        ],
+        Pokemon::FROSLASS => [
+            Pokemon::FROSLASS,
+        ],
+        Pokemon::ROTOM => [
+            Pokemon::ROTOM,
+            Pokemon::ROTOM | FormsAlias::ROTOM_FAN,
+            Pokemon::ROTOM | FormsAlias::ROTOM_FROST,
+            Pokemon::ROTOM | FormsAlias::ROTOM_HEAT,
+            Pokemon::ROTOM | FormsAlias::ROTOM_MOW,
+            Pokemon::ROTOM | FormsAlias::ROTOM_WASH,
+        ],
+        Pokemon::UXIE => [
+            Pokemon::UXIE,
+        ],
+        Pokemon::MESPRIT => [
+            Pokemon::MESPRIT,
+        ],
+        Pokemon::AZELF => [
+            Pokemon::AZELF,
+        ],
+        Pokemon::DIALGA => [
+            Pokemon::DIALGA,
+        ],
+        Pokemon::PALKIA => [
+            Pokemon::PALKIA,
+        ],
+        Pokemon::HEATRAN => [
+            Pokemon::HEATRAN,
+        ],
+        Pokemon::REGIGIGAS => [
+            Pokemon::REGIGIGAS,
+        ],
+        Pokemon::GIRATINA => [
+            Pokemon::GIRATINA,
+            Pokemon::GIRATINA | FormsAlias::GIRATINA_ALTERED,
+        ],
+        Pokemon::CRESSELIA => [
+            Pokemon::CRESSELIA,
+        ],
+        Pokemon::PHIONE => [
+            Pokemon::PHIONE,
+        ],
+        Pokemon::MANAPHY => [
+            Pokemon::MANAPHY,
+        ],
+        Pokemon::DARKRAI => [
+            Pokemon::DARKRAI,
+        ],
+        Pokemon::SHAYMIN => [
+            Pokemon::SHAYMIN,
+            Pokemon::SHAYMIN | FormsAlias::SHAYMIN_SKY,
+        ],
+        Pokemon::ARCEUS => [
+            Pokemon::ARCEUS,
+            Pokemon::ARCEUS | FormsAlias::ARCEUS_BUG,
+            Pokemon::ARCEUS | FormsAlias::ARCEUS_DARK,
+            Pokemon::ARCEUS | FormsAlias::ARCEUS_DRAGON,
+            Pokemon::ARCEUS | FormsAlias::ARCEUS_ELECTRIC,
+            Pokemon::ARCEUS | FormsAlias::ARCEUS_FAIRY,
+            Pokemon::ARCEUS | FormsAlias::ARCEUS_FIGHTING,
+            Pokemon::ARCEUS | FormsAlias::ARCEUS_FIRE,
+            Pokemon::ARCEUS | FormsAlias::ARCEUS_FLYING,
+            Pokemon::ARCEUS | FormsAlias::ARCEUS_GHOST,
+            Pokemon::ARCEUS | FormsAlias::ARCEUS_GRASS,
+            Pokemon::ARCEUS | FormsAlias::ARCEUS_GROUND,
+            Pokemon::ARCEUS | FormsAlias::ARCEUS_ICE,
+            Pokemon::ARCEUS | FormsAlias::ARCEUS_POISON,
+            Pokemon::ARCEUS | FormsAlias::ARCEUS_PSYCHIC,
+            Pokemon::ARCEUS | FormsAlias::ARCEUS_ROCK,
+            Pokemon::ARCEUS | FormsAlias::ARCEUS_STEEL,
+            Pokemon::ARCEUS | FormsAlias::ARCEUS_WATER,
+        ],
+        Pokemon::VICTINI => [
+            Pokemon::VICTINI,
+        ],
+        Pokemon::SNIVY => [
+            Pokemon::SNIVY,
+        ],
+        Pokemon::SERVINE => [
+            Pokemon::SERVINE,
+        ],
+        Pokemon::SERPERIOR => [
+            Pokemon::SERPERIOR,
+        ],
+        Pokemon::TEPIG => [
+            Pokemon::TEPIG,
+        ],
+        Pokemon::PIGNITE => [
+            Pokemon::PIGNITE,
+        ],
+        Pokemon::EMBOAR => [
+            Pokemon::EMBOAR,
+        ],
+        Pokemon::OSHAWOTT => [
+            Pokemon::OSHAWOTT,
+        ],
+        Pokemon::DEWOTT => [
+            Pokemon::DEWOTT,
+        ],
+        Pokemon::SAMUROTT => [
+            Pokemon::SAMUROTT,
+        ],
+        Pokemon::PATRAT => [
+            Pokemon::PATRAT,
+        ],
+        Pokemon::WATCHDOG => [
+            Pokemon::WATCHDOG,
+        ],
+        Pokemon::LILLIPUP => [
+            Pokemon::LILLIPUP,
+        ],
+        Pokemon::HERDIER => [
+            Pokemon::HERDIER,
+        ],
+        Pokemon::STOUTLAND => [
+            Pokemon::STOUTLAND,
+        ],
+        Pokemon::PURROLIN => [
+            Pokemon::PURROLIN,
+        ],
+        Pokemon::LIEPARD => [
+            Pokemon::LIEPARD,
+        ],
+        Pokemon::PANSAGE => [
+            Pokemon::PANSAGE,
+        ],
+        Pokemon::SIMISAGE => [
+            Pokemon::SIMISAGE,
+        ],
+        Pokemon::PANSEAR => [
+            Pokemon::PANSEAR,
+        ],
+        Pokemon::SMISEAR => [
+            Pokemon::SMISEAR,
+        ],
+        Pokemon::PANPOUR => [
+            Pokemon::PANPOUR,
+        ],
+        Pokemon::SMIPOUR => [
+            Pokemon::SMIPOUR,
+        ],
+        Pokemon::MUNNA => [
+            Pokemon::MUNNA,
+        ],
+        Pokemon::MUSHARNA => [
+            Pokemon::MUSHARNA,
+        ],
+        Pokemon::PIDOVE => [
+            Pokemon::PIDOVE,
+        ],
+        Pokemon::TRANQUILL => [
+            Pokemon::TRANQUILL,
+        ],
+        Pokemon::UNFEZANT => [
+            Pokemon::UNFEZANT,
+        ],
+        Pokemon::BLITZLE => [
+            Pokemon::BLITZLE,
+        ],
+        Pokemon::ZEBSTRIKA => [
+            Pokemon::ZEBSTRIKA,
+        ],
+        Pokemon::ROGGENROLA => [
+            Pokemon::ROGGENROLA,
+        ],
+        Pokemon::BOLDORE => [
+            Pokemon::BOLDORE,
+        ],
+        Pokemon::GIGALITH => [
+            Pokemon::GIGALITH,
+        ],
+        Pokemon::WOOBAT => [
+            Pokemon::WOOBAT,
+        ],
+        Pokemon::SWOOBAT => [
+            Pokemon::SWOOBAT,
+        ],
+        Pokemon::DRILBUR => [
+            Pokemon::DRILBUR,
+        ],
+        Pokemon::EXCADRILL => [
+            Pokemon::EXCADRILL,
+        ],
+        Pokemon::AUDINO => [
+            Pokemon::AUDINO,
+        ],
+        Pokemon::TIMBURR => [
+            Pokemon::TIMBURR,
+        ],
+        Pokemon::GURDURR => [
+            Pokemon::GURDURR,
+        ],
+        Pokemon::CONKELDURR => [
+            Pokemon::CONKELDURR,
+        ],
+        Pokemon::TYMPOLE => [
+            Pokemon::TYMPOLE,
+        ],
+        Pokemon::PALPITOAD => [
+            Pokemon::PALPITOAD,
+        ],
+        Pokemon::SEISMITOAD => [
+            Pokemon::SEISMITOAD,
+        ],
+        Pokemon::THROH => [
+            Pokemon::THROH,
+        ],
+        Pokemon::SAWK => [
+            Pokemon::SAWK,
+        ],
+        Pokemon::SEWADDLE => [
+            Pokemon::SEWADDLE,
+        ],
+        Pokemon::SWADLOON => [
+            Pokemon::SWADLOON,
+        ],
+        Pokemon::LEVANNY => [
+            Pokemon::LEVANNY,
+        ],
+        Pokemon::VENIPEDE => [
+            Pokemon::VENIPEDE,
+        ],
+        Pokemon::WHIRLIPEDE => [
+            Pokemon::WHIRLIPEDE,
+        ],
+        Pokemon::SCOLIPEDE => [
+            Pokemon::SCOLIPEDE,
+        ],
+        Pokemon::COTTONEE => [
+            Pokemon::COTTONEE,
+        ],
+        Pokemon::WHIMSICOTT => [
+            Pokemon::WHIMSICOTT,
+        ],
+        Pokemon::PETILIL => [
+            Pokemon::PETILIL,
+        ],
+        Pokemon::LILLIGANT => [
+            Pokemon::LILLIGANT,
+        ],
+        Pokemon::BASCULIN => [
+            Pokemon::BASCULIN,
+            Pokemon::BASCULIN | FormsAlias::BASCULIN_RED_STRIPED,
+        ],
+        Pokemon::SANDILE => [
+            Pokemon::SANDILE,
+        ],
+        Pokemon::KROKOROK => [
+            Pokemon::KROKOROK,
+        ],
+        Pokemon::KROOKODILE => [
+            Pokemon::KROOKODILE,
+        ],
+        Pokemon::DARUMAKA => [
+            Pokemon::DARUMAKA,
+            Pokemon::DARUMAKA | Mods::GALARIAN,
+            Pokemon::DARUMAKA | Mods::PURIFIED,
+            Pokemon::DARUMAKA | Mods::SHADOW,
+        ],
+        Pokemon::DARMANITAN => [
+            Pokemon::DARMANITAN,
+            Pokemon::DARMANITAN | Mods::GALARIAN,
+            Pokemon::DARMANITAN | FormsAlias::DARMANITAN_ZEN | Mods::GALARIAN,
+            Pokemon::DARMANITAN | FormsAlias::DARMANITAN_ZEN,
+        ],
+        Pokemon::MARACTUS => [
+            Pokemon::MARACTUS,
+        ],
+        Pokemon::DWEBBLE => [
+            Pokemon::DWEBBLE,
+        ],
+        Pokemon::CRUSTLE => [
+            Pokemon::CRUSTLE,
+        ],
+        Pokemon::SCRAGGY => [
+            Pokemon::SCRAGGY,
+        ],
+        Pokemon::SCRAFTY => [
+            Pokemon::SCRAFTY,
+        ],
+        Pokemon::SIGILYPH => [
+            Pokemon::SIGILYPH,
+        ],
+        Pokemon::YAMASK => [
+            Pokemon::YAMASK,
+        ],
+        Pokemon::COFAGRIGUS => [
+            Pokemon::COFAGRIGUS,
+        ],
+        Pokemon::TIRTOUGA => [
+            Pokemon::TIRTOUGA,
+        ],
+        Pokemon::CARRACOSTA => [
+            Pokemon::CARRACOSTA,
+        ],
+        Pokemon::ARCHEN => [
+            Pokemon::ARCHEN,
+        ],
+        Pokemon::ARCHEOPS => [
+            Pokemon::ARCHEOPS,
+        ],
+        Pokemon::TRUBBISH => [
+            Pokemon::TRUBBISH,
+        ],
+        Pokemon::GARBODOR => [
+            Pokemon::GARBODOR,
+        ],
+        Pokemon::ZORUA => [
+            Pokemon::ZORUA,
+        ],
+        Pokemon::ZOROARK => [
+            Pokemon::ZOROARK,
+        ],
+        Pokemon::MINCCINO => [
+            Pokemon::MINCCINO,
+        ],
+        Pokemon::CINCCINO => [
+            Pokemon::CINCCINO,
+        ],
+        Pokemon::GOTHITA => [
+            Pokemon::GOTHITA,
+        ],
+        Pokemon::GOTHORITA => [
+            Pokemon::GOTHORITA,
+        ],
+        Pokemon::GOTHITELLE => [
+            Pokemon::GOTHITELLE,
+        ],
+        Pokemon::SOLOSIS => [
+            Pokemon::SOLOSIS,
+        ],
+        Pokemon::DUOSION => [
+            Pokemon::DUOSION,
+        ],
+        Pokemon::REUNICLUS => [
+            Pokemon::REUNICLUS,
+        ],
+        Pokemon::DUCKLETT => [
+            Pokemon::DUCKLETT,
+        ],
+        Pokemon::SWANNA => [
+            Pokemon::SWANNA,
+        ],
+        Pokemon::VANILLITE => [
+            Pokemon::VANILLITE,
+        ],
+        Pokemon::VANILLISH => [
+            Pokemon::VANILLISH,
+        ],
+        Pokemon::VANILLUXE => [
+            Pokemon::VANILLUXE,
+        ],
+        Pokemon::DEERLING => [
+            Pokemon::DEERLING,
+            Pokemon::DEERLING | FormsAlias::DEERLING_AUTUMN,
+            Pokemon::DEERLING | FormsAlias::DEERLING_SUMMER,
+            Pokemon::DEERLING | FormsAlias::DEERLING_WINTER,
+        ],
+        Pokemon::SAWSBUCK => [
+            Pokemon::SAWSBUCK,
+            Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_AUTUMN,
+            Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_SUMMER,
+            Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_WINTER,
+        ],
+        Pokemon::EMOLGA => [
+            Pokemon::EMOLGA,
+        ],
+        Pokemon::KARRABLAST => [
+            Pokemon::KARRABLAST,
+        ],
+        Pokemon::ESCAVALIER => [
+            Pokemon::ESCAVALIER,
+        ],
+        Pokemon::FOONGUS => [
+            Pokemon::FOONGUS,
+        ],
+        Pokemon::AMOONGUSS => [
+            Pokemon::AMOONGUSS,
+        ],
+        Pokemon::FRILLISH => [
+            Pokemon::FRILLISH,
+            Pokemon::FRILLISH | FormsAlias::FRILLISH_FEMALE,
+        ],
+        Pokemon::JELLICENT => [
+            Pokemon::JELLICENT,
+            Pokemon::JELLICENT | FormsAlias::JELLICENT_FEMALE,
+        ],
+        Pokemon::ALOMOMOLA => [
+            Pokemon::ALOMOMOLA,
+        ],
+        Pokemon::JOLTIK => [
+            Pokemon::JOLTIK,
+        ],
+        Pokemon::GALVANTULA => [
+            Pokemon::GALVANTULA,
+        ],
+        Pokemon::FERROSEED => [
+            Pokemon::FERROSEED,
+        ],
+        Pokemon::FERROTHORN => [
+            Pokemon::FERROTHORN,
+        ],
+        Pokemon::KLINK => [
+            Pokemon::KLINK,
+        ],
+        Pokemon::KLANG => [
+            Pokemon::KLANG,
+        ],
+        Pokemon::KLINKLANG => [
+            Pokemon::KLINKLANG,
+        ],
+        Pokemon::TYNAMO => [
+            Pokemon::TYNAMO,
+        ],
+        Pokemon::ELEKTRIK => [
+            Pokemon::ELEKTRIK,
+        ],
+        Pokemon::ELEKTROSS => [
+            Pokemon::ELEKTROSS,
+        ],
+        Pokemon::ELGYEM => [
+            Pokemon::ELGYEM,
+        ],
+        Pokemon::BEHEEYEM => [
+            Pokemon::BEHEEYEM,
+        ],
+        Pokemon::LITWICK => [
+            Pokemon::LITWICK,
+        ],
+        Pokemon::LAMPENT => [
+            Pokemon::LAMPENT,
+        ],
+        Pokemon::CHANDELURE => [
+            Pokemon::CHANDELURE,
+        ],
+        Pokemon::AXEW => [
+            Pokemon::AXEW,
+        ],
+        Pokemon::FRAXURE => [
+            Pokemon::FRAXURE,
+        ],
+        Pokemon::HAXORUS => [
+            Pokemon::HAXORUS,
+        ],
+        Pokemon::CUBCHOO => [
+            Pokemon::CUBCHOO,
+        ],
+        Pokemon::BEARTIC => [
+            Pokemon::BEARTIC,
+        ],
+        Pokemon::CRYOGONAL => [
+            Pokemon::CRYOGONAL,
+        ],
+        Pokemon::SHELMET => [
+            Pokemon::SHELMET,
+        ],
+        Pokemon::ACCELGOR => [
+            Pokemon::ACCELGOR,
+        ],
+        Pokemon::STUNFISK => [
+            Pokemon::STUNFISK,
+            Pokemon::STUNFISK | Mods::GALARIAN,
+            Pokemon::STUNFISK | Mods::PURIFIED,
+            Pokemon::STUNFISK | Mods::SHADOW,
+        ],
+        Pokemon::MIENFOO => [
+            Pokemon::MIENFOO,
+        ],
+        Pokemon::MIENSHAO => [
+            Pokemon::MIENSHAO,
+        ],
+        Pokemon::DRUDDIGON => [
+            Pokemon::DRUDDIGON,
+        ],
+        Pokemon::GOLETT => [
+            Pokemon::GOLETT,
+        ],
+        Pokemon::GOLURK => [
+            Pokemon::GOLURK,
+        ],
+        Pokemon::PAWNIARD => [
+            Pokemon::PAWNIARD,
+        ],
+        Pokemon::BISHARP => [
+            Pokemon::BISHARP,
+        ],
+        Pokemon::BOUFFALANT => [
+            Pokemon::BOUFFALANT,
+        ],
+        Pokemon::RUFFLET => [
+            Pokemon::RUFFLET,
+        ],
+        Pokemon::BRAVIARY => [
+            Pokemon::BRAVIARY,
+        ],
+        Pokemon::VULLABY => [
+            Pokemon::VULLABY,
+        ],
+        Pokemon::MANDIBUZZ => [
+            Pokemon::MANDIBUZZ,
+        ],
+        Pokemon::HEATMOR => [
+            Pokemon::HEATMOR,
+        ],
+        Pokemon::DURANT => [
+            Pokemon::DURANT,
+        ],
+        Pokemon::DEINO => [
+            Pokemon::DEINO,
+        ],
+        Pokemon::ZWELIOUS => [
+            Pokemon::ZWELIOUS,
+        ],
+        Pokemon::HYDREIGON => [
+            Pokemon::HYDREIGON,
+        ],
+        Pokemon::LARVESTA => [
+            Pokemon::LARVESTA,
+        ],
+        Pokemon::VOLCARONA => [
+            Pokemon::VOLCARONA,
+        ],
+        Pokemon::COBALLION => [
+            Pokemon::COBALLION,
+        ],
+        Pokemon::TERRAKION => [
+            Pokemon::TERRAKION,
+        ],
+        Pokemon::VIRIZION => [
+            Pokemon::VIRIZION,
+        ],
+        Pokemon::TORNADUS => [
+            Pokemon::TORNADUS,
+            Pokemon::TORNADUS | FormsAlias::TORNADUS_THERIAN,
+        ],
+        Pokemon::THUNDURUS => [
+            Pokemon::THUNDURUS,
+            Pokemon::THUNDURUS | FormsAlias::THUNDURUS_THERIAN,
+        ],
+        Pokemon::RESHIRAM => [
+            Pokemon::RESHIRAM,
+        ],
+        Pokemon::ZEKROM => [
+            Pokemon::ZEKROM,
+        ],
+        Pokemon::LANDORUS => [
+            Pokemon::LANDORUS,
+            Pokemon::LANDORUS | FormsAlias::LANDORUS_THERIAN,
+        ],
+        Pokemon::KYUREM => [
+            Pokemon::KYUREM,
+            Pokemon::KYUREM | FormsAlias::KYUREM_BLACK,
+            Pokemon::KYUREM | FormsAlias::KYUREM_WHITE,
+        ],
+        Pokemon::KELDEO => [
+            Pokemon::KELDEO,
+            Pokemon::KELDEO | FormsAlias::KELDEO_RESOLUTE,
+        ],
+        Pokemon::MELOETTA => [
+            Pokemon::MELOETTA,
+            Pokemon::MELOETTA | FormsAlias::MELOETTA_PIROUETTE,
+        ],
+        Pokemon::GENESECT => [
+            Pokemon::GENESECT,
+            Pokemon::GENESECT | FormsAlias::GENESECT_BURN,
+            Pokemon::GENESECT | FormsAlias::GENESECT_CHILL,
+            Pokemon::GENESECT | FormsAlias::GENESECT_DOUSE,
+            Pokemon::GENESECT | FormsAlias::GENESECT_SHOCK,
+        ],
+        Pokemon::MELTAN => [
+            Pokemon::MELTAN,
+        ],
+        Pokemon::MELMETAL => [
+            Pokemon::MELMETAL,
+        ],
+        Pokemon::OBSTAGOON => [
+            Pokemon::OBSTAGOON,
+            Pokemon::OBSTAGOON | Mods::PURIFIED,
+            Pokemon::OBSTAGOON | Mods::SHADOW,
+        ],
+        Pokemon::PERRSERKER => [
+            Pokemon::PERRSERKER,
+            Pokemon::PERRSERKER | Mods::PURIFIED,
+            Pokemon::PERRSERKER | Mods::SHADOW,
+        ],
+        Pokemon::SIRFETCH_D => [
+            Pokemon::SIRFETCH_D,
+            Pokemon::SIRFETCH_D | Mods::PURIFIED,
+            Pokemon::SIRFETCH_D | Mods::SHADOW,
+        ],
+
+    ];
+}

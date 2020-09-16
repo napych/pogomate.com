@@ -2,7 +2,7 @@
 
 namespace Pogo\Data\PHP;
 
-use Pogo\Pokemon, Pogo\General\Mods;
+use Pogo\Pokemon, Pogo\General\Mods, Pogo\Handjob\FormsAlias;
 
 class PokemonData
 {
@@ -733,7 +733,7 @@ class PokemonData
     ],
     Pokemon::MEWTWO => [
     ],
-    Pokemon::MEWTWO | Mods::FORM2 => [
+    Pokemon::MEWTWO | FormsAlias::MEWTWO_ARMORED => [
     ],
     Pokemon::MEWTWO | Mods::PURIFIED => [
     ],
@@ -1333,11 +1333,11 @@ class PokemonData
     ],
     Pokemon::CASTFORM => [
     ],
-    Pokemon::CASTFORM | Mods::FORM2 => [
+    Pokemon::CASTFORM | FormsAlias::CASTFORM_RAINY => [
     ],
-    Pokemon::CASTFORM | Mods::FORM3 => [
+    Pokemon::CASTFORM | FormsAlias::CASTFORM_SNOWY => [
     ],
-    Pokemon::CASTFORM | Mods::FORM4 => [
+    Pokemon::CASTFORM | FormsAlias::CASTFORM_SUNNY => [
     ],
     Pokemon::KECLEON => [
     ],
@@ -1453,11 +1453,11 @@ class PokemonData
     ],
     Pokemon::DEOXYS => [
     ],
-    Pokemon::DEOXYS | Mods::FORM2 => [
+    Pokemon::DEOXYS | FormsAlias::DEOXYS_ATTACK => [
     ],
-    Pokemon::DEOXYS | Mods::FORM3 => [
+    Pokemon::DEOXYS | FormsAlias::DEOXYS_DEFENSE => [
     ],
-    Pokemon::DEOXYS | Mods::FORM4 => [
+    Pokemon::DEOXYS | FormsAlias::DEOXYS_SPEED => [
     ],
     Pokemon::TURTWIG => [
     ],
@@ -1535,15 +1535,15 @@ class PokemonData
     ],
     Pokemon::BURMY => [
     ],
-    Pokemon::BURMY | Mods::FORM3 => [
+    Pokemon::BURMY | FormsAlias::BURMY_SANDY => [
     ],
-    Pokemon::BURMY | Mods::FORM2 => [
+    Pokemon::BURMY | FormsAlias::BURMY_TRASH => [
     ],
     Pokemon::WORMADAM => [
     ],
-    Pokemon::WORMADAM | Mods::FORM3 => [
+    Pokemon::WORMADAM | FormsAlias::WORMADAM_SANDY => [
     ],
-    Pokemon::WORMADAM | Mods::FORM2 => [
+    Pokemon::WORMADAM | FormsAlias::WORMADAM_TRASH => [
     ],
     Pokemon::MOTHIM => [
     ],
@@ -1561,15 +1561,15 @@ class PokemonData
     ],
     Pokemon::CHERRIM => [
     ],
-    Pokemon::CHERRIM | Mods::FORM2 => [
+    Pokemon::CHERRIM | FormsAlias::CHERRIM_OVERCAST => [
     ],
     Pokemon::SHELLOS => [
     ],
-    Pokemon::SHELLOS | Mods::FORM2 => [
+    Pokemon::SHELLOS | FormsAlias::SHELLOS_WEST_SEA => [
     ],
     Pokemon::GASTRODON => [
     ],
-    Pokemon::GASTRODON | Mods::FORM2 => [
+    Pokemon::GASTRODON | FormsAlias::GASTRODON_WEST_SEA => [
     ],
     Pokemon::AMBIPOM => [
     ],
@@ -1763,15 +1763,15 @@ class PokemonData
     ],
     Pokemon::ROTOM => [
     ],
-    Pokemon::ROTOM | Mods::FORM2 => [
+    Pokemon::ROTOM | FormsAlias::ROTOM_FAN => [
     ],
-    Pokemon::ROTOM | Mods::FORM3 => [
+    Pokemon::ROTOM | FormsAlias::ROTOM_FROST => [
     ],
-    Pokemon::ROTOM | Mods::FORM4 => [
+    Pokemon::ROTOM | FormsAlias::ROTOM_HEAT => [
     ],
-    Pokemon::ROTOM | Mods::FORM5 => [
+    Pokemon::ROTOM | FormsAlias::ROTOM_MOW => [
     ],
-    Pokemon::ROTOM | Mods::FORM6 => [
+    Pokemon::ROTOM | FormsAlias::ROTOM_WASH => [
     ],
     Pokemon::UXIE => [
     ],
@@ -1789,7 +1789,7 @@ class PokemonData
     ],
     Pokemon::GIRATINA => [
     ],
-    Pokemon::GIRATINA | Mods::FORM2 => [
+    Pokemon::GIRATINA | FormsAlias::GIRATINA_ALTERED => [
     ],
     Pokemon::CRESSELIA => [
     ],
@@ -1801,43 +1801,43 @@ class PokemonData
     ],
     Pokemon::SHAYMIN => [
     ],
-    Pokemon::SHAYMIN | Mods::FORM2 => [
+    Pokemon::SHAYMIN | FormsAlias::SHAYMIN_SKY => [
     ],
     Pokemon::ARCEUS => [
     ],
-    Pokemon::ARCEUS | Mods::FORM2 => [
+    Pokemon::ARCEUS | FormsAlias::ARCEUS_BUG => [
     ],
-    Pokemon::ARCEUS | Mods::FORM3 => [
+    Pokemon::ARCEUS | FormsAlias::ARCEUS_DARK => [
     ],
-    Pokemon::ARCEUS | Mods::FORM4 => [
+    Pokemon::ARCEUS | FormsAlias::ARCEUS_DRAGON => [
     ],
-    Pokemon::ARCEUS | Mods::FORM5 => [
+    Pokemon::ARCEUS | FormsAlias::ARCEUS_ELECTRIC => [
     ],
-    Pokemon::ARCEUS | Mods::FORM6 => [
+    Pokemon::ARCEUS | FormsAlias::ARCEUS_FAIRY => [
     ],
-    Pokemon::ARCEUS | Mods::FORM7 => [
+    Pokemon::ARCEUS | FormsAlias::ARCEUS_FIGHTING => [
     ],
-    Pokemon::ARCEUS | Mods::FORM8 => [
+    Pokemon::ARCEUS | FormsAlias::ARCEUS_FIRE => [
     ],
-    Pokemon::ARCEUS | Mods::FORM9 => [
+    Pokemon::ARCEUS | FormsAlias::ARCEUS_FLYING => [
     ],
-    Pokemon::ARCEUS | Mods::FORM10 => [
+    Pokemon::ARCEUS | FormsAlias::ARCEUS_GHOST => [
     ],
-    Pokemon::ARCEUS | Mods::FORM11 => [
+    Pokemon::ARCEUS | FormsAlias::ARCEUS_GRASS => [
     ],
-    Pokemon::ARCEUS | Mods::FORM12 => [
+    Pokemon::ARCEUS | FormsAlias::ARCEUS_GROUND => [
     ],
-    Pokemon::ARCEUS | Mods::FORM13 => [
+    Pokemon::ARCEUS | FormsAlias::ARCEUS_ICE => [
     ],
-    Pokemon::ARCEUS | Mods::FORM14 => [
+    Pokemon::ARCEUS | FormsAlias::ARCEUS_POISON => [
     ],
-    Pokemon::ARCEUS | Mods::FORM15 => [
+    Pokemon::ARCEUS | FormsAlias::ARCEUS_PSYCHIC => [
     ],
-    Pokemon::ARCEUS | Mods::FORM16 => [
+    Pokemon::ARCEUS | FormsAlias::ARCEUS_ROCK => [
     ],
-    Pokemon::ARCEUS | Mods::FORM17 => [
+    Pokemon::ARCEUS | FormsAlias::ARCEUS_STEEL => [
     ],
-    Pokemon::ARCEUS | Mods::FORM18 => [
+    Pokemon::ARCEUS | FormsAlias::ARCEUS_WATER => [
     ],
     Pokemon::VICTINI => [
     ],
@@ -1953,7 +1953,7 @@ class PokemonData
     ],
     Pokemon::BASCULIN => [
     ],
-    Pokemon::BASCULIN | Mods::FORM2 => [
+    Pokemon::BASCULIN | FormsAlias::BASCULIN_RED_STRIPED => [
     ],
     Pokemon::SANDILE => [
     ],
@@ -1973,9 +1973,9 @@ class PokemonData
     ],
     Pokemon::DARMANITAN | Mods::GALARIAN => [
     ],
-    Pokemon::DARMANITAN | Mods::GALARIAN | Mods::FORM2 => [
+    Pokemon::DARMANITAN | FormsAlias::DARMANITAN_ZEN | Mods::GALARIAN => [
     ],
-    Pokemon::DARMANITAN | Mods::FORM2 => [
+    Pokemon::DARMANITAN | FormsAlias::DARMANITAN_ZEN => [
     ],
     Pokemon::MARACTUS => [
     ],
@@ -2037,19 +2037,19 @@ class PokemonData
     ],
     Pokemon::DEERLING => [
     ],
-    Pokemon::DEERLING | Mods::FORM3 => [
+    Pokemon::DEERLING | FormsAlias::DEERLING_AUTUMN => [
     ],
-    Pokemon::DEERLING | Mods::FORM2 => [
+    Pokemon::DEERLING | FormsAlias::DEERLING_SUMMER => [
     ],
-    Pokemon::DEERLING | Mods::FORM4 => [
+    Pokemon::DEERLING | FormsAlias::DEERLING_WINTER => [
     ],
     Pokemon::SAWSBUCK => [
     ],
-    Pokemon::SAWSBUCK | Mods::FORM3 => [
+    Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_AUTUMN => [
     ],
-    Pokemon::SAWSBUCK | Mods::FORM2 => [
+    Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_SUMMER => [
     ],
-    Pokemon::SAWSBUCK | Mods::FORM4 => [
+    Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_WINTER => [
     ],
     Pokemon::EMOLGA => [
     ],
@@ -2063,11 +2063,11 @@ class PokemonData
     ],
     Pokemon::FRILLISH => [
     ],
-    Pokemon::FRILLISH | Mods::FORM2 => [
+    Pokemon::FRILLISH | FormsAlias::FRILLISH_FEMALE => [
     ],
     Pokemon::JELLICENT => [
     ],
-    Pokemon::JELLICENT | Mods::FORM2 => [
+    Pokemon::JELLICENT | FormsAlias::JELLICENT_FEMALE => [
     ],
     Pokemon::ALOMOMOLA => [
     ],
@@ -2171,11 +2171,11 @@ class PokemonData
     ],
     Pokemon::TORNADUS => [
     ],
-    Pokemon::TORNADUS | Mods::FORM2 => [
+    Pokemon::TORNADUS | FormsAlias::TORNADUS_THERIAN => [
     ],
     Pokemon::THUNDURUS => [
     ],
-    Pokemon::THUNDURUS | Mods::FORM2 => [
+    Pokemon::THUNDURUS | FormsAlias::THUNDURUS_THERIAN => [
     ],
     Pokemon::RESHIRAM => [
     ],
@@ -2183,31 +2183,31 @@ class PokemonData
     ],
     Pokemon::LANDORUS => [
     ],
-    Pokemon::LANDORUS | Mods::FORM2 => [
+    Pokemon::LANDORUS | FormsAlias::LANDORUS_THERIAN => [
     ],
     Pokemon::KYUREM => [
     ],
-    Pokemon::KYUREM | Mods::FORM2 => [
+    Pokemon::KYUREM | FormsAlias::KYUREM_BLACK => [
     ],
-    Pokemon::KYUREM | Mods::FORM3 => [
+    Pokemon::KYUREM | FormsAlias::KYUREM_WHITE => [
     ],
     Pokemon::KELDEO => [
     ],
-    Pokemon::KELDEO | Mods::FORM2 => [
+    Pokemon::KELDEO | FormsAlias::KELDEO_RESOLUTE => [
     ],
     Pokemon::MELOETTA => [
     ],
-    Pokemon::MELOETTA | Mods::FORM2 => [
+    Pokemon::MELOETTA | FormsAlias::MELOETTA_PIROUETTE => [
     ],
     Pokemon::GENESECT => [
     ],
-    Pokemon::GENESECT | Mods::FORM2 => [
+    Pokemon::GENESECT | FormsAlias::GENESECT_BURN => [
     ],
-    Pokemon::GENESECT | Mods::FORM3 => [
+    Pokemon::GENESECT | FormsAlias::GENESECT_CHILL => [
     ],
-    Pokemon::GENESECT | Mods::FORM4 => [
+    Pokemon::GENESECT | FormsAlias::GENESECT_DOUSE => [
     ],
-    Pokemon::GENESECT | Mods::FORM5 => [
+    Pokemon::GENESECT | FormsAlias::GENESECT_SHOCK => [
     ],
     Pokemon::MELTAN => [
     ],

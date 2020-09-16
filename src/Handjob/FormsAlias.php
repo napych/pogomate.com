@@ -4,7 +4,8 @@ namespace Pogo\Handjob;
 
 use Pogo\General\Mods;
 
-class FormsAlias {
+class FormsAlias
+{
     const MEWTWO_NORMAL = Mods::FORM1;
     const MEWTWO_ARMORED = Mods::FORM2;
     const CASTFORM_NORMAL = Mods::FORM1;
@@ -89,4 +90,22 @@ class FormsAlias {
     const GENESECT_CHILL = Mods::FORM3;
     const GENESECT_DOUSE = Mods::FORM4;
     const GENESECT_SHOCK = Mods::FORM5;
+
+    /**
+     * Get constant name from code (for code generation)
+     * @param string $prefix
+     * @param int $form
+     * @return string|null
+     */
+    public static function getConst(string $prefix, int $form): ?string
+    {
+        $reflection = new \ReflectionClass(__CLASS__);
+        $constants = $reflection->getConstants();
+        foreach ($constants as $name => $value) {
+            if ($value === $form && strpos($name, $prefix) === 0) {
+                return $name;
+            }
+        }
+        return null;
+    }
 }
