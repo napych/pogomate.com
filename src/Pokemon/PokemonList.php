@@ -895,4 +895,25 @@ class PokemonList
     const ETERNATUS = 890;
     const KUBFU = 891;
     const URSHIFU = 892;
+
+    /**
+     * Get constant name from value (for code generation)
+     * @param string $type
+     * @return string|null
+     */
+    public static function getConst(string $type): ?string
+    {
+        static $typeConst = null;
+        if ($typeConst) {
+            return $typeConst[$type] ?? null;
+        }
+        $reflection = new \ReflectionClass(__CLASS__);
+        $constants = $reflection->getConstants();
+        $typeConst = [];
+        foreach ($constants as $name => $value) {
+            $typeConst[$value] = $name;
+        }
+        return $typeConst[$type] ?? null;
+    }
+
 }

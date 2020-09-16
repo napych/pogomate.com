@@ -107,6 +107,7 @@ class GameMasterJSON
         unset($data['move']);
 
         $this->parsePokemon($data['pokemon']);
+        unset($data['pokemon']);
 
         if (!empty($data)) {
             echo '*** WARNING *** parse data has keys left: ' . implode(', ', array_keys($data)), PHP_EOL;
@@ -281,47 +282,10 @@ class GameMasterJSON
             // Result\Pokemon::FIELD_SHADOW => !empty($pokemon['shadow']),
 
             if (!empty($pokemon['form'])) {
-                $cut = str_replace($pokemon['uniqueId'], '', $pokemon['form']);
-                $flags = explode('_', $cut);
-                for ($i = 0; $i < sizeof($flags); $i++) {
-                    switch ($flags[$i]) {
-                        case '':
-                        case 'NORMAL':
-                        case 'NIDORAN':
-                            break;
-                        case 'PURIFIED':
-                            $code |= Mods::PURIFIED;
-                            break;
-                        case 'SHADOW':
-                            $code |= Mods::SHADOW;
-                            break;
-                        case 'GALARIAN':
-                            $code |= Mods::GALARIAN;
-                            break;
-                        case 'ALOLA':
-                            $code |= Mods::ALOLAN;
-                            break;
-                        case 'COSTUME':
-                        case 'COPY':
-                        case 'VS':
-                        case 'FALL':
-                            continue 3;
-                        default:
-                            if (isset(self::FLAG2FORM[$id][$flags[$i]])) {
-                                $code |= self::FLAG2FORM[$id][$flags[$i]];
-                                break;
-                            }
-                            if (isset($flags[$i + 1])) {
-                                $tw = $flags[$i] . '_' . $flags[$i + 1];
-                                if (isset(self::FLAG2FORM[$id][$tw])) {
-                                    $code |= self::FLAG2FORM[$id][$tw];
-                                    ++$i;
-                                    break;
-                                }
-                            }
-                            echo 'WARNING: unknown flag ', $flags[$i], ' (', $pokemon['form'], ')', PHP_EOL;
-                            continue 3;
-                    }
+                try {
+                    $code = $this->getCode($id, $pokemon['uniqueId'], $pokemon['form']);
+                } catch (\Exception $e) {
+                    continue;
                 }
             }
 
@@ -421,8 +385,56 @@ class GameMasterJSON
                 }
             }
 
-            $this->result->pokemon->add($id, $add);
+            $this->result->pokemon->add($code, $add);
         }
+    }
+
+    protected function getCode(int $id, string $uniqueId, string $form)
+    {
+        $code = $id;
+        $cut = str_replace($uniqueId, '', $form);
+        $flags = explode('_', $cut);
+        for ($i = 0; $i < sizeof($flags); $i++) {
+            switch ($flags[$i]) {
+                case '':
+                case 'NORMAL':
+                case 'NIDORAN':
+                    break;
+                case 'PURIFIED':
+                    $code |= Mods::PURIFIED;
+                    break;
+                case 'SHADOW':
+                    $code |= Mods::SHADOW;
+                    break;
+                case 'GALARIAN':
+                    $code |= Mods::GALARIAN;
+                    break;
+                case 'ALOLA':
+                    $code |= Mods::ALOLAN;
+                    break;
+                case 'COSTUME':
+                case 'COPY':
+                case 'VS':
+                case 'FALL':
+                    throw new \Exception('Skip thrash pokemon');
+                default:
+                    if (isset(self::FLAG2FORM[$id][$flags[$i]])) {
+                        $code |= self::FLAG2FORM[$id][$flags[$i]];
+                        break;
+                    }
+                    if (isset($flags[$i + 1])) {
+                        $tw = $flags[$i] . '_' . $flags[$i + 1];
+                        if (isset(self::FLAG2FORM[$id][$tw])) {
+                            $code |= self::FLAG2FORM[$id][$tw];
+                            ++$i;
+                            break;
+                        }
+                    }
+                    echo 'WARNING: unknown flag ', $flags[$i], ' (', $form, ')', PHP_EOL;
+                    throw new \Exception('Invalid flag');
+            }
+        }
+        return $code;
     }
 
     protected function checkBranch(array $branch)

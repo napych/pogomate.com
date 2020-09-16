@@ -2,6 +2,10 @@
 
 namespace Pogo\Data\Result;
 
+use Pogo\General\Mods;
+use Pogo\Handjob\Names;
+use Pogo\Pokemon\PokemonList;
+
 class Pokemon
 {
     const FIELD_CONST = 'const';
@@ -23,7 +27,6 @@ class Pokemon
     const FIELD_DEPLOYABLE = 'deployable';
     const FIELD_PARENT = 'parent';
     const FIELD_BUDDY_DISTANCE = 'buddyDistance';
-    const FIELD_SHADOW = 'shadow';
     const FIELD_LEGENDARY = 'legendary';
     const FIELD_MYTHIC = 'mythic';
 
@@ -38,9 +41,9 @@ class Pokemon
 
     protected $pokemon = [];
 
-    public function add(int $id, array $data)
+    public function add(int $code, array $data)
     {
-        $this->pokemon[$id] = $data;
+        $this->pokemon[$code] = $data;
     }
 
     public function getList()
@@ -50,6 +53,80 @@ class Pokemon
 
     public function writePHP()
     {
-        // todo
+        $output = [];
+        $forms = [];
+
+        foreach ($this->pokemon as $code => $pokemon) {
+            $id = Mods::getId($code);
+            $idConst = $codeConst = 'Pokemon::' . PokemonList::getConst($id);
+            if ($code & Mods::SHADOW) {
+                $codeConst .= ' | Mods::SHADOW';
+            }
+            if ($code & Mods::ALOLAN) {
+                $codeConst .= ' | Mods::ALOLAN';
+            }
+            if ($code & Mods::PURIFIED) {
+                $codeConst .= ' | Mods::PURIFIED';
+            }
+            if ($code & Mods::GALARIAN) {
+                $codeConst .= ' | Mods::GALARIAN';
+            }
+            if ($form = Mods::getForm($code)) {
+                // todo: try to get pokemon form const
+                $codeConst .= ' | Mods::FORM' . $form;
+            }
+
+            echo "[$code]";
+            // collect forms
+            if (!isset($forms[$idConst])) {
+                $forms[$idConst] = [$codeConst];
+            } else {
+                $forms[$idConst][] = $codeConst;
+            }
+
+            $str = "    $codeConst => [\n";
+            $str .= "    ]";
+            $output[] = $str;
+        }
+
+        $output = implode(",\n", $output);
+        $output = <<<PHP
+<?php
+
+namespace Pogo\Data\PHP;
+
+use Pogo\Pokemon, Pogo\General\Mods;
+
+class PokemonData
+{
+    const POKEMON = [
+$output    
+    ];
+} 
+PHP;
+        file_put_contents(__DIR__ . '/../PHP/PokemonData.php', $output);
+    }
+
+    /**
+     * Get constant name from value (for code generation)
+     * @param string $type
+     * @return string|null
+     */
+    public static function getConst(string $type): ?string
+    {
+        static $typeConst = null;
+        if ($typeConst) {
+            return $typeConst[$type] ?? null;
+        }
+        $reflection = new \ReflectionClass(__CLASS__);
+        $constants = $reflection->getConstants();
+        $typeConst = [];
+        foreach ($constants as $name => $value) {
+            if (!is_string($value)) {
+                continue;
+            }
+            $typeConst[$value] = $name;
+        }
+        return $typeConst[$type] ?? null;
     }
 }

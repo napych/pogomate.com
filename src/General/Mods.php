@@ -76,7 +76,10 @@ class Mods
 
     public static function getForm($code)
     {
-        return ($code & static::FORM_MASK) >> static::BASE_SHIFT;
+        if (!($code & static::FORM_MASK)) {
+            return null;
+        }
+        return (($code & static::FORM_MASK) >> static::BASE_SHIFT) + 1;
     }
 
     public static function getFormFlags($form)
