@@ -322,8 +322,8 @@ class GameMasterJSON
                 Result\Pokemon::FIELD_DEPLOYABLE => (bool)$pokemon['isDeployable'] ?? false,
                 Result\Pokemon::FIELD_PARENT => $pokemon['parentId'] ?? null,
                 Result\Pokemon::FIELD_BUDDY_DISTANCE => $pokemon['kmBuddyDistance'] ?? null,
-                Result\Pokemon::FIELD_PURIFY_CANDY => $pokemon['shadow']['purificationStardustNeeded'],
-                Result\Pokemon::FIELD_PURIFY_DUST => $pokemon['shadow']['purificationCandyNeeded'],
+                Result\Pokemon::FIELD_PURIFY_CANDY => $pokemon['shadow']['purificationCandyNeeded'],
+                Result\Pokemon::FIELD_PURIFY_DUST => $pokemon['shadow']['purificationStardustNeeded'],
                 Result\Pokemon::FIELD_LEGENDARY => isset ($pokemon['pokemonClass']) && $pokemon['pokemonClass'] === 'POKEMON_CLASS_LEGENDARY',
                 Result\Pokemon::FIELD_MYTHIC => isset ($pokemon['pokemonClass']) && $pokemon['pokemonClass'] === 'POKEMON_CLASS_MYTHIC'
             ];
