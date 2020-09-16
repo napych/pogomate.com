@@ -2,7 +2,7 @@
 
 namespace Pogo\Lists;
 
-use Pogo\Handjob\Mods;
+use Pogo\General\Mods;
 use Pogo\Pokemon;
 
 class Top10

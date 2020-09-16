@@ -2,8 +2,8 @@
 
 namespace Pogo\Data\Result;
 
-class Moves {
-
+class Moves
+{
     protected $moves = [];
 
     const FIELD_CONST = 'const';
@@ -125,6 +125,9 @@ PHP;
         $constants = $reflection->getConstants();
         $typeConst = [];
         foreach ($constants as $name => $value) {
+            if (!is_string($value)) {
+                continue;
+            }
             $typeConst[$value] = $name;
         }
         return $typeConst[$type] ?? null;

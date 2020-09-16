@@ -26,5 +26,6 @@ class Result
     {
         $this->types->writePHP();
         $this->moves->writePHP();
+        $this->pokemon->writePHP();
     }
 }

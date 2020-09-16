@@ -3,7 +3,11 @@
 namespace Pogo\Data\Parser;
 
 use Pogo\Data\Result;
+use Pogo\General\Mods;
 use Pogo\General\Types;
+use Pogo\Handjob\Forms;
+use Pogo\Pokemon;
+use Pogo\Pokemon\PokemonList;
 
 class GameMasterJSON
 {
@@ -102,6 +106,8 @@ class GameMasterJSON
         unset($data['combatMove']);
         unset($data['move']);
 
+        $this->parsePokemon($data['pokemon']);
+
         if (!empty($data)) {
             echo '*** WARNING *** parse data has keys left: ' . implode(', ', array_keys($data)), PHP_EOL;
         }
@@ -136,6 +142,18 @@ class GameMasterJSON
     protected function prepareTemplates(array $templates)
     {
         $stackedData = [];
+
+        // move Smeargle moves to it's template
+        $smeargleMoves = null;
+        foreach ($templates as $template) {
+            if ($template['templateId'] === 'SMEARGLE_MOVES_SETTINGS') {
+                $smeargleMoves = $template['data']['smeargleMovesSettings'];
+            }
+        }
+        if (!$smeargleMoves) {
+            echo 'WARNING: smeargleMovesSettings are missing', PHP_EOL;
+        }
+
         foreach ($templates as $template) {
             if (empty($template['templateId'])) {
                 throw new \Exception('Missing templateId');
@@ -157,6 +175,12 @@ class GameMasterJSON
                 }
             }
         }
+
+        if ($smeargleMoves) {
+            $stackedData['pokemon']['V0235_POKEMON_SMEARGLE']['quickMoves'] = $smeargleMoves['quickMoves'];
+            $stackedData['pokemon']['V0235_POKEMON_SMEARGLE']['cinematicMoves'] = $smeargleMoves['cinematicMoves'];
+        }
+
         return $stackedData;
     }
 
@@ -186,14 +210,14 @@ class GameMasterJSON
         'POKEMON_TYPE_WATER' => Types::WATER
     ];
 
-//    protected $move2id = [];
+    protected $move2id = [];
 
     public function parseMoves(array $data)
     {
         foreach ($data as $template => $move) {
             $chunks = explode('_', $template);
             $id = (int)substr($chunks[0], 1);
-//            $this->move2id[$move['movementId']] = $id;
+            $this->move2id[$move['movementId']] = $id;
 
             $movementId = $move['movementId'];
             if (!isset($this->pvpMoves[$movementId])) {
@@ -245,108 +269,220 @@ class GameMasterJSON
         }
     }
 
-    public function parsePokemon(string $template, array $data)
+    public function parsePokemon(array $data)
     {
-        /*
-        $data = [
-          'templateId' => 'V0001_POKEMON_BULBASAUR',
-          'pokemon' => [
-            'uniqueId' => 'BULBASAUR',
-            'modelScale' => 1.09,
-            'type1' => 'POKEMON_TYPE_GRASS',
-            'type2' => 'POKEMON_TYPE_POISON',
-            'camera' => [
-              'diskRadiusM' => 0.5723,
-              'cylinderRadiusM' => 0.5,
-              'cylinderHeightM' => 0.763,
-              'shoulderModeScale' => 0.5,
-            ],
-            'encounter' => [
-              'baseCaptureRate' => 0.2,
-              'baseFleeRate' => 0.1,
-              'collisionRadiusM' => 0.3815,
-              'collisionHeightM' => 0.654,
-              'collisionHeadRadiusM' => 0.2725,
-              'movementType' => 'MOVEMENT_JUMP',
-              'movementTimerS' => 10.0,
-              'jumpTimeS' => 1.15,
-              'attackTimerS' => 29.0,
-              'attackProbability' => 0.1,
-              'dodgeProbability' => 0.15,
-              'dodgeDurationS' => 1.0,
-              'dodgeDistance' => 1.0,
-              'cameraDistance' => 3.75,
-              'minPokemonActionFrequencyS' => 0.2,
-              'maxPokemonActionFrequencyS' => 1.6,
-            ],
-            'stats' => [
-              'baseStamina' => 128,
-              'baseAttack' => 118,
-              'baseDefense' => 111,
-            ],
-            'quickMoves' => [
-              'VINE_WHIP_FAST',
-              'TACKLE_FAST',
-            ],
-            'cinematicMoves' => [
-              'SLUDGE_BOMB',
-              'SEED_BOMB',
-              'POWER_WHIP',
-            ],
-            'animTime' => [1.6667, 0.6667, 1.6667, 1.8333, 0.0, 2.1667, 1.4, 1.466667],
-            'evolution' => ['IVYSAUR'],
-            'evolutionPips' => 1,
-            'pokedexHeightM' => 0.7,
-            'pokedexWeightKg' => 6.9,
-            'heightStdDev' => 0.0875,
-            'weightStdDev' => 0.8625,
-            'familyId' => 'FAMILY_BULBASAUR',
-            'candyToEvolve' => 25,
-            'kmBuddyDistance' => 3.0,
-            'modelHeight' => 0.7,
-            'evolutionBranch' => [
-              [
-                'evolution' => 'IVYSAUR',
-                'candyCost' => 25,
-                'form' => 'IVYSAUR_NORMAL',
-              ],
-            ],
-            'modelScaleV2' => 0.89,
-            'buddyOffsetMale' => [0.0, 0.0, 0.0],
-            'buddyOffsetFemale' => [0.0, 0.0, 0.0],
-            'buddyScale' => 19.0,
-            'thirdMove' => [
-              'stardustToUnlock' => 10000,
-              'candyToUnlock' => 25,
-            ],
-            'isTransferable' => true,
-            'isDeployable' => true,
-            'buddyGroupNumber' => 2,
-          ],
-        ]
-         */
-        // todo
+        foreach ($data as $template => $pokemon) {
+            $this->checkPokemon($pokemon);
+            $chunks = explode('_', $template);
+            $id = (int)substr($chunks[0], 1);
+            $code = $id;
+
+            // TODO: detect forms
+            // Result\Pokemon::FIELD_SHADOW => !empty($pokemon['shadow']),
+
+            if (!empty($pokemon['form'])) {
+                $cut = str_replace($pokemon['uniqueId'], '', $pokemon['form']);
+                $flags = explode('_', $cut);
+                for ($i = 0; $i < sizeof($flags); $i++) {
+                    switch ($flags[$i]) {
+                        case '':
+                        case 'NORMAL':
+                        case 'NIDORAN':
+                            break;
+                        case 'PURIFIED':
+                            $code |= Mods::PURIFIED;
+                            break;
+                        case 'SHADOW':
+                            $code |= Mods::SHADOW;
+                            break;
+                        case 'GALARIAN':
+                            $code |= Mods::GALARIAN;
+                            break;
+                        case 'ALOLA':
+                            $code |= Mods::ALOLAN;
+                            break;
+                        case 'COSTUME':
+                        case 'COPY':
+                        case 'VS':
+                        case 'FALL':
+                            continue 3;
+                        default:
+                            if (isset(self::FLAG2FORM[$id][$flags[$i]])) {
+                                $code |= self::FLAG2FORM[$id][$flags[$i]];
+                                break;
+                            }
+                            if (isset($flags[$i + 1])) {
+                                $tw = $flags[$i] . '_' . $flags[$i + 1];
+                                if (isset(self::FLAG2FORM[$id][$tw])) {
+                                    $code |= self::FLAG2FORM[$id][$tw];
+                                    ++$i;
+                                    break;
+                                }
+                            }
+                            echo 'WARNING: unknown flag ', $flags[$i], ' (', $pokemon['form'], ')', PHP_EOL;
+                            continue 3;
+                    }
+                }
+            }
+
+            $add = [
+                Result\Pokemon::FIELD_CONST => $pokemon['form'] ?? $pokemon['uniqueId'],
+                Result\Pokemon::FIELD_NAME => $pokemon['uniqueId'],
+                Result\Pokemon::FIELD_FORM => $pokemon['form'],
+                Result\Pokemon::FIELD_TYPE1 => self::TYPE_TRANSLATE[$pokemon['type1']],
+                Result\Pokemon::FIELD_TYPE2 => self::TYPE_TRANSLATE[$pokemon['type2']] ?? null,
+                // 'encounter' => ['baseCaptureRate' => 0.2, 'baseFleeRate' => 0.1, 'collisionRadiusM' => 0.3815, 'collisionHeightM' => 0.654,
+                //                 'collisionHeadRadiusM' => 0.2725, 'movementType' => 'MOVEMENT_JUMP', 'movementTimerS' => 10.0, 'jumpTimeS' => 1.15,
+                //                 'attackTimerS' => 29.0, 'attackProbability' => 0.1, 'dodgeProbability' => 0.15, 'dodgeDurationS' => 1.0,
+                //                 'dodgeDistance' => 1.0, 'cameraDistance' => 3.75, 'minPokemonActionFrequencyS' => 0.2, 'maxPokemonActionFrequencyS' => 1.6],
+                Result\Pokemon::FIELD_ATTACK => $pokemon['stats']['baseAttack'],
+                Result\Pokemon::FIELD_DEFENSE => $pokemon['stats']['baseDefense'],
+                Result\Pokemon::FIELD_STAMINA => $pokemon['stats']['baseStamina'],
+                Result\Pokemon::FIELD_FAST_MOVES => [], // fill later
+                Result\Pokemon::FIELD_FAST_MOVES_ELITE => [], // fill later
+                Result\Pokemon::FIELD_CHARGE_MOVES => [], // fill later
+                Result\Pokemon::FIELD_CHARGE_MOVES_ELITE => [], // fill later
+                // 'evolution' => ['IVYSAUR'],
+                // 'evolutionPips' => 1,
+                // 'pokedexHeightM' => 0.7,
+                // 'pokedexWeightKg' => 6.9,
+                // 'heightStdDev' => 0.0875,
+                // 'weightStdDev' => 0.8625,
+                // 'familyId' => 'FAMILY_BULBASAUR',
+                // 'candyToEvolve' => 25,
+                // 'kmBuddyDistance' => 3.0,
+                Result\Pokemon::FIELD_EVOLUTIONS => [], // fill later
+                Result\Pokemon::FIELD_THIRD_MOVE_CANDY => $pokemon['thirdMove']['candyToUnlock'] ?? null,
+                Result\Pokemon::FIELD_THIRD_MOVE_DUST => $pokemon['thirdMove']['stardustToUnlock'] ?? null,
+                Result\Pokemon::FIELD_TRANSFERABLE => (bool)$pokemon['isTransferable'] ?? false,
+                Result\Pokemon::FIELD_DEPLOYABLE => (bool)$pokemon['isDeployable'] ?? false,
+                Result\Pokemon::FIELD_PARENT => $pokemon['parentId'] ?? null,
+                Result\Pokemon::FIELD_BUDDY_DISTANCE => $pokemon['kmBuddyDistance'] ?? null,
+                Result\Pokemon::FIELD_PURIFY_CANDY => $pokemon['shadow']['purificationStardustNeeded'],
+                Result\Pokemon::FIELD_PURIFY_DUST => $pokemon['shadow']['purificationCandyNeeded'],
+                Result\Pokemon::FIELD_LEGENDARY => isset ($pokemon['pokemonClass']) && $pokemon['pokemonClass'] === 'POKEMON_CLASS_LEGENDARY',
+                Result\Pokemon::FIELD_MYTHIC => isset ($pokemon['pokemonClass']) && $pokemon['pokemonClass'] === 'POKEMON_CLASS_MYTHIC'
+            ];
+
+            // fast moves
+            if (empty($pokemon['quickMoves'])) {
+                echo 'WARNING: no quickMoves for ', $template, PHP_EOL;
+            } else {
+                foreach ($pokemon['quickMoves'] as $quickMove) {
+                    if (!isset($this->move2id[$quickMove])) {
+                        echo 'WARNING: quickMove ID is missing: ', $quickMove, PHP_EOL;
+                    }
+                    $add[Result\Pokemon::FIELD_FAST_MOVES][] = $this->move2id[$quickMove];
+                }
+            }
+
+            // elite fast moves
+            if (!empty($pokemon['eliteQuickMove'])) {
+                foreach ($pokemon['eliteQuickMove'] as $eliteQuickMove) {
+                    if (!isset($this->move2id[$eliteQuickMove])) {
+                        echo 'WARNING: quickMove ID is missing: ', $eliteQuickMove, PHP_EOL;
+                    }
+                    $add[Result\Pokemon::FIELD_FAST_MOVES_ELITE][] = $this->move2id[$eliteQuickMove];
+                }
+            }
+
+            // charge moves
+            if (empty($pokemon['cinematicMoves'])) {
+                echo 'WARNING: no cinematicMoves for ', $template, PHP_EOL;
+            } else {
+                foreach ($pokemon['cinematicMoves'] as $cinematicMove) {
+                    if (!isset($this->move2id[$cinematicMove])) {
+                        echo 'WARNING: cinematicMove ID is missing: ', $cinematicMove, PHP_EOL;
+                    }
+                    $add[Result\Pokemon::FIELD_CHARGE_MOVES][] = $this->move2id[$cinematicMove];
+                }
+            }
+
+            // elite charge moves
+            if (!empty($pokemon['eliteCinematicMove'])) {
+                foreach ($pokemon['eliteCinematicMove'] as $eliteCinematicMove) {
+                    if (!isset($this->move2id[$eliteCinematicMove])) {
+                        echo 'WARNING: cinematicMove ID is missing: ', $eliteCinematicMove, PHP_EOL;
+                    }
+                    $add[Result\Pokemon::FIELD_FAST_MOVES_ELITE][] = $this->move2id[$eliteCinematicMove];
+                }
+            }
+
+            // evolutions
+            if (!empty($pokemon['evolutionBranch'])) {
+                foreach ($pokemon['evolutionBranch'] as $branch) {
+                    $add[Result\Pokemon::FIELD_EVOLUTIONS][] = [
+                        Result\Pokemon::FIELD_EVOLUTION_POKEMON => $branch['evolution'],
+                        Result\Pokemon::FIELD_EVOLUTION_CANDY => $branch['candyCost'],
+                        Result\Pokemon::FIELD_EVOLUTION_FORM => $branch['form'] ?? null,
+                        Result\Pokemon::FIELD_EVOLUTION_FREE_TRADED => !empty($branch['noCandyCostViaTrade']),
+                        Result\Pokemon::FIELD_EVOLUTION_ITEM => $branch['evolutionItemRequirement'] ?? null
+                    ];
+                }
+            }
+
+            $this->result->pokemon->add($id, $add);
+        }
+    }
+
+    protected function checkBranch(array $branch)
+    {
+        if (empty($branch['candyCost']) || empty($branch['evolution'])) {
+            echo 'WARNING: strange evolutionBranch (check #1):', print_r($branch, true), PHP_EOL;
+            return;
+        }
+        foreach ($branch as $k => $v) {
+            switch ($k) {
+                case 'evolution':
+                case 'candyCost':
+                case 'form':
+                case 'noCandyCostViaTrade':
+                case 'evolutionItemRequirement':
+                    break;
+                default:
+                    echo 'WARNING: strange evolutionBranch (check #2):', print_r($branch, true), PHP_EOL;
+                    return;
+            }
+        }
+    }
+
+    protected function checkPokemon(array $pokemon)
+    {
+        $requires = ['uniqueId', 'type1', 'stats', 'quickMoves', 'cinematicMoves'];
+        foreach ($requires as $require) {
+            if (empty($pokemon[$require])) {
+                echo 'WARNING: missing ', $require, ' field for ', $pokemon['uniqueId'], PHP_EOL;
+            }
+        }
+
+        foreach ($pokemon as $k => $v) {
+            if (!in_array($k, $this->pokemonKnownFields)) {
+                echo 'WARNING: unknown field ', $k, ' for ', $pokemon['uniqueId'], PHP_EOL;
+            }
+        }
     }
 
     public function parsePokemonForms(string $template, array $data)
     {
         /*
         $data = [
-          'templateId' => 'FORMS_V0001_POKEMON_BULBASAUR',
-          'formSettings' => [
-            'pokemon' => 'BULBASAUR',
-            'forms' => [
-                ['form' => 'BULBASAUR_NORMAL'],
-                ['form' => 'BULBASAUR_SHADOW'],
-                ['form' => 'BULBASAUR_PURIFIED'],
-                [
-                    'form' => 'BULBASAUR_FALL_2019'
+            'templateId' => 'FORMS_V0001_POKEMON_BULBASAUR',
+            'formSettings' => [
+                'pokemon' => 'BULBASAUR',
+                'forms' => [
+                    ['form' => 'BULBASAUR_NORMAL'],
+                    ['form' => 'BULBASAUR_SHADOW'],
+                    ['form' => 'BULBASAUR_PURIFIED'],
+                    [
+                        'form' => 'BULBASAUR_FALL_2019'
                     'assetBundleSuffix' => 'pm0001_00_pgo_fall2019',
                 ],
             ]
         ];
          */
-        // todo
+        foreach ($data as $pokemonForm) {
+            // todo
+        }
     }
 
     const TYPE_ORDER_TRANSLATE = [
@@ -402,4 +538,181 @@ class GameMasterJSON
          */
         // todo
     }
+
+    protected $pokemonKnownFields = [
+        'uniqueId',
+        'form',
+        'familyId',
+        'type1',
+        'type2',
+        'cinematicMoves',
+        'eliteCinematicMove',
+        'quickMoves',
+        'eliteQuickMove',
+        'stats',
+        'evolution',
+        'evolutionBranch',
+        'camera',
+        'buddyGroupNumber',
+        'buddyOffsetMale',
+        'buddyOffsetFemale',
+        'isTransferable',
+        'isDeployable',
+        'modelHeight',
+        'modelScaleV2',
+        'thirdMove',
+        'pokedexHeightM',
+        'pokedexWeightKg',
+        'animTime',
+        'heightStdDev',
+        'weightStdDev',
+        'modelScale',
+        'buddyScale',
+        'buddyPortraitOffset',
+        'parentId',
+        'kmBuddyDistance',
+        'shadow',
+        'encounter',
+        'combatShoulderCameraAngle',
+        'buddySize',
+        'candyToEvolve',
+        'evolutionPips',
+        'pokemonClass',
+        'combatDefaultCameraAngle',
+        'combatPlayerFocusCameraAngle',
+        'combatOpponentFocusCameraAngle',
+        'combatPlayerPokemonPositionOffset'
+    ];
+
+    const FLAG2FORM = [
+        Pokemon::MEWTWO => [
+            'A' => Forms::MEWTWO_ARMORED
+        ],
+        Pokemon::CASTFORM => [
+            'RAINY' => Forms::CASTFORM_RAINY,
+            'SNOWY' => Forms::CASTFORM_SNOWY,
+            'SUNNY' => Forms::CASTFORM_SUNNY
+        ],
+        Pokemon::DEOXYS => [
+            'ATTACK' => Forms::DEOXYS_ATTACK,
+            'DEFENSE' => Forms::DEOXYS_DEFENSE,
+            'SPEED' => Forms::DEOXYS_SPEED
+        ],
+        Pokemon::BURMY => [
+            'PLANT' => Forms::BURMY_PLANT,
+            'TRASH' => Forms::BURMY_TRASH,
+            'SANDY' => Forms::BURMY_SANDY
+        ],
+        Pokemon::WORMADAM => [
+            'PLANT' => Forms::WORMADAM_PLANT,
+            'TRASH' => Forms::WORMADAM_TRASH,
+            'SANDY' => Forms::WORMADAM_SANDY
+        ],
+        Pokemon::CHERRIM => [
+            'OVERCAST' => Forms::CHERRIM_OVERCAST,
+            'SUNNY' => Forms::CHERRIM_SUNNY
+        ],
+        Pokemon::GIRATINA => [
+            'ORIGIN' => Forms::GIRATINA_ORIGIN,
+            'ALTERED' => Forms::GIRATINA_ALTERED
+        ],
+        Pokemon::ROTOM => [
+            'FAN' => Forms::ROTOM_FAN,
+            'FROST' => Forms::ROTOM_FROST,
+            'HEAT' => Forms::ROTOM_HEAT,
+            'MOW' => Forms::ROTOM_MOW,
+            'WASH' => Forms::ROTOM_WASH
+        ],
+        Pokemon::SHELLOS => [
+            'EAST_SEA' => Forms::SHELLOS_EAST_SEA,
+            'WEST_SEA' => Forms::SHELLOS_WEST_SEA
+        ],
+        Pokemon::GASTRODON => [
+            'EAST_SEA' => Forms::GASTRODON_EAST_SEA,
+            'WEST_SEA' => Forms::GASTRODON_WEST_SEA
+        ],
+        Pokemon::SHAYMIN => [
+            'LAND' => Forms::SHAYMIN_LAND,
+            'SKY' => Forms::SHAYMIN_SKY
+        ],
+        Pokemon::ARCEUS => [
+            'NORMAL' => Forms::ARCEUS_NORMAL,
+            'BUG' => Forms::ARCEUS_BUG,
+            'DARK' => Forms::ARCEUS_DARK,
+            'DRAGON' => Forms::ARCEUS_DRAGON,
+            'ELECTRIC' => Forms::ARCEUS_ELECTRIC,
+            'FAIRY' => Forms::ARCEUS_FAIRY,
+            'FIGHTING' => Forms::ARCEUS_FIGHTING,
+            'FIRE' => Forms::ARCEUS_FIRE,
+            'FLYING' => Forms::ARCEUS_FLYING,
+            'GHOST' => Forms::ARCEUS_GHOST,
+            'GRASS' => Forms::ARCEUS_GRASS,
+            'GROUND' => Forms::ARCEUS_GROUND,
+            'ICE' => Forms::ARCEUS_ICE,
+            'POISON' => Forms::ARCEUS_POISON,
+            'PSYCHIC' => Forms::ARCEUS_PSYCHIC,
+            'ROCK' => Forms::ARCEUS_ROCK,
+            'STEEL' => Forms::ARCEUS_STEEL,
+            'WATER' => Forms::ARCEUS_WATER
+        ],
+        Pokemon::BASCULIN => [
+            'BLUE_STRIPED' => Forms::BASCULIN_BLUE_STRIPED,
+            'RED_STRIPED' => Forms::BASCULIN_RED_STRIPED
+        ],
+        Pokemon::DARMANITAN => [
+            'STANDARD' => Forms::DARMANITAN_STANDARD,
+            'ZEN' => Forms::DARMANITAN_ZEN
+        ],
+        Pokemon::KYUREM => [
+            'BLACK' => Forms::KYUREM_BLACK,
+            'WHITE' => Forms::KYUREM_WHITE
+        ],
+        Pokemon::DEERLING => [
+            'SPRING' => Forms::DEERLING_SPRING,
+            'SUMMER' => Forms::DEERLING_SUMMER,
+            'AUTUMN' => Forms::DEERLING_AUTUMN,
+            'WINTER' => Forms::DEERLING_WINTER
+        ],
+        Pokemon::SAWSBUCK => [
+            'SPRING' => Forms::SAWSBUCK_SPRING,
+            'SUMMER' => Forms::SAWSBUCK_SUMMER,
+            'AUTUMN' => Forms::SAWSBUCK_AUTUMN,
+            'WINTER' => Forms::SAWSBUCK_WINTER
+        ],
+        Pokemon::FRILLISH => [
+            'NORMAL' => Forms::FRILLISH_MALE,
+            'FEMALE' => Forms::FRILLISH_FEMALE
+        ],
+        Pokemon::JELLICENT => [
+            'NORMAL' => Forms::JELLICENT_MALE,
+            'FEMALE' => Forms::JELLICENT_FEMALE
+        ],
+        Pokemon::TORNADUS => [
+            'INCARNATE' => Forms::TORNADUS_INCARNATE,
+            'THERIAN' => Forms::TORNADUS_THERIAN
+        ],
+        Pokemon::THUNDURUS => [
+            'INCARNATE' => Forms::THUNDURUS_INCARNATE,
+            'THERIAN' => Forms::THUNDURUS_THERIAN
+        ],
+        Pokemon::LANDORUS => [
+            'INCARNATE' => Forms::LANDORUS_INCARNATE,
+            'THERIAN' => Forms::LANDORUS_THERIAN
+        ],
+        Pokemon::KELDEO => [
+            'ORDINARY' => Forms::KELDEO_ORDINARY,
+            'RESOLUTE' => Forms::KELDEO_RESOLUTE
+        ],
+        Pokemon::MELOETTA => [
+            'ARIA' => Forms::MELOETTA_ARIA,
+            'PIROUETTE' => Forms::MELOETTA_PIROUETTE
+        ],
+        Pokemon::GENESECT => [
+            'BURN' => Forms::GENESECT_BURN,
+            'CHILL' => Forms::GENESECT_CHILL,
+            'DOUSE' => Forms::GENESECT_DOUSE,
+            'SHOCK' => Forms::GENESECT_SHOCK
+        ]
+    ];
+
 }

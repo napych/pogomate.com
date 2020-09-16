@@ -5,7 +5,7 @@ namespace Pogo;
 use Exception;
 use Pogo\Handjob\Evolve;
 use Pogo\Handjob\Forms;
-use Pogo\Handjob\Mods;
+use Pogo\General\Mods;
 use Pogo\Handjob\Names;
 
 class Pokemon extends Pokemon\PokemonList
