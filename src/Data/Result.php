@@ -25,5 +25,6 @@ class Result
     public function writePHP()
     {
         $this->types->writePHP();
+        $this->moves->writePHP();
     }
 }

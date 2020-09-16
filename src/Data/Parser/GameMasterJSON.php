@@ -162,8 +162,8 @@ class GameMasterJSON
 
     public $moves = [];
     const MOVE_TYPE_TRANSLATE = [
-        'ATTACK_01' => Result\Moves::MOVES_TYPE_FAST,
-        'ATTACK_02' => Result\Moves::MOVES_TYPE_CHARGE
+        'ATTACK_01' => Result\Moves::MOVES_CLASS_FAST,
+        'ATTACK_02' => Result\Moves::MOVES_CLASS_CHARGE
     ];
     const TYPE_TRANSLATE = [
         'POKEMON_TYPE_BUG' => Types::BUG,
@@ -240,7 +240,7 @@ class GameMasterJSON
         foreach ($data as $move) {
             $this->pvpMoves[$move['uniqueId']] = [
                 'power' => $move['power'],
-                'energy' => $move['energy']
+                'energy' => $move['energyDelta']
             ];
         }
     }
