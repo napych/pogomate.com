@@ -106,6 +106,13 @@ class Pokemon
                 $data[] = 'self::FIELD_MYTHIC => true';
                 $mythics[$shortConst] = 1;
             }
+            if ($pokemon[Pokemon::FIELD_TRANSFERABLE]) {
+                $data[] = 'self::FIELD_TRANSFERABLE => true';
+            }
+            if ($pokemon[Pokemon::FIELD_DEPLOYABLE]) {
+                $data[] = 'self::FIELD_DEPLOYABLE => true';
+            }
+            $data[] = 'self::FIELD_BUDDY_DISTANCE => ' . $pokemon[Pokemon::FIELD_BUDDY_DISTANCE];
 //            const FIELD_FAST_MOVES = 'fastMoves';
 //            const FIELD_FAST_MOVES_ELITE = 'fastMovesElite';
 //            const FIELD_CHARGE_MOVES = 'chargeMoves';
@@ -116,9 +123,6 @@ class Pokemon
 //            const FIELD_TRANSFERABLE = 'transferable';
 //            const FIELD_DEPLOYABLE = 'deployable';
 //            const FIELD_PARENT = 'parent';
-//            const FIELD_BUDDY_DISTANCE = 'buddyDistance';
-//            const FIELD_LEGENDARY = 'legendary';
-//            const FIELD_MYTHIC = 'mythic';
 //            const FIELD_EVOLUTION_POKEMON = 'pokemon';
 //            const FIELD_EVOLUTION_FORM = 'form';
 //            const FIELD_EVOLUTION_CANDY = 'candy';
@@ -151,6 +155,9 @@ class PokemonData
     const FIELD_PURIFY_STARDUST = 'purifyDust';
     const FIELD_LEGENDARY = 'legendary';
     const FIELD_MYTHIC = 'mythic';
+    const FIELD_TRANSFERABLE = 'transfer';
+    const FIELD_DEPLOYABLE = 'deploy';
+    const FIELD_BUDDY_DISTANCE = 'distance'; 
     
     const POKEMON = [
 $output    
