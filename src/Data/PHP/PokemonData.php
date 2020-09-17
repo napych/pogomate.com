@@ -18,6 +18,13 @@ class PokemonData
     const FIELD_TRANSFERABLE = 'transfer';
     const FIELD_DEPLOYABLE = 'deploy';
     const FIELD_BUDDY_DISTANCE = 'distance'; 
+    const FIELD_THIRD_MOVE_CANDY = 'moveCandy';
+    const FIELD_THIRD_MOVE_STARDUST = 'moveDust';
+    const FIELD_EVOLVES = 'evolves';
+    const FIELD_FAST_MOVES = 'fastMoves';
+    const FIELD_FAST_MOVES_ELITE = 'fastMovesElite';
+    const FIELD_CHARGE_MOVES = 'chargeMoves';
+    const FIELD_CHARGE_MOVES_ELITE = 'chargeMovesElite';
     
     const POKEMON = [
         Pokemon::BULBASAUR => [
@@ -28,7 +35,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::IVYSAUR],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_VINE_WHIP_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SEED_BOMB, Moves::MOVE_POWER_WHIP]
         ],
         Pokemon::BULBASAUR | Mods::PURIFIED => [
             self::FIELD_ATTACK => 118,
@@ -38,7 +50,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 20,
+            self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_EVOLVES => [Pokemon::IVYSAUR | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_VINE_WHIP_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SEED_BOMB, Moves::MOVE_POWER_WHIP]
         ],
         Pokemon::BULBASAUR | Mods::SHADOW => [
             self::FIELD_ATTACK => 118,
@@ -50,7 +67,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 30,
+            self::FIELD_THIRD_MOVE_STARDUST => 12000,
+            self::FIELD_EVOLVES => [Pokemon::IVYSAUR | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_VINE_WHIP_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SEED_BOMB, Moves::MOVE_POWER_WHIP]
         ],
         Pokemon::IVYSAUR => [
             self::FIELD_ATTACK => 151,
@@ -60,7 +82,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::VENUSAUR],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_VINE_WHIP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_POWER_WHIP]
         ],
         Pokemon::IVYSAUR | Mods::PURIFIED => [
             self::FIELD_ATTACK => 151,
@@ -70,7 +97,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 20,
+            self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_EVOLVES => [Pokemon::VENUSAUR | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_VINE_WHIP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_POWER_WHIP]
         ],
         Pokemon::IVYSAUR | Mods::SHADOW => [
             self::FIELD_ATTACK => 151,
@@ -82,7 +114,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 30,
+            self::FIELD_THIRD_MOVE_STARDUST => 12000,
+            self::FIELD_EVOLVES => [Pokemon::VENUSAUR | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_VINE_WHIP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_POWER_WHIP]
         ],
         Pokemon::VENUSAUR => [
             self::FIELD_ATTACK => 198,
@@ -92,7 +129,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_VINE_WHIP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_SOLAR_BEAM],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FRENZY_PLANT]
         ],
         Pokemon::VENUSAUR | Mods::PURIFIED => [
             self::FIELD_ATTACK => 198,
@@ -102,7 +144,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 20,
+            self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_VINE_WHIP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_SOLAR_BEAM],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FRENZY_PLANT]
         ],
         Pokemon::VENUSAUR | Mods::SHADOW => [
             self::FIELD_ATTACK => 198,
@@ -114,7 +161,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 30,
+            self::FIELD_THIRD_MOVE_STARDUST => 12000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_VINE_WHIP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_SOLAR_BEAM],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FRENZY_PLANT]
         ],
         Pokemon::CHARMANDER => [
             self::FIELD_ATTACK => 116,
@@ -123,7 +175,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::CHARMELEON],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_SCRATCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_CHARGE, Moves::MOVE_FLAME_BURST, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::CHARMANDER | Mods::PURIFIED => [
             self::FIELD_ATTACK => 116,
@@ -132,7 +189,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 20,
+            self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_EVOLVES => [Pokemon::CHARMELEON | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_SCRATCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_CHARGE, Moves::MOVE_FLAME_BURST, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::CHARMANDER | Mods::SHADOW => [
             self::FIELD_ATTACK => 116,
@@ -143,7 +205,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 30,
+            self::FIELD_THIRD_MOVE_STARDUST => 12000,
+            self::FIELD_EVOLVES => [Pokemon::CHARMELEON | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_SCRATCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_CHARGE, Moves::MOVE_FLAME_BURST, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::CHARMELEON => [
             self::FIELD_ATTACK => 158,
@@ -152,7 +219,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::CHARIZARD],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_FIRE_FANG_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_SCRATCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_PUNCH, Moves::MOVE_FLAME_BURST, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::CHARMELEON | Mods::PURIFIED => [
             self::FIELD_ATTACK => 158,
@@ -161,7 +234,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 20,
+            self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_EVOLVES => [Pokemon::CHARIZARD | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_FIRE_FANG_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_SCRATCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_PUNCH, Moves::MOVE_FLAME_BURST, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::CHARMELEON | Mods::SHADOW => [
             self::FIELD_ATTACK => 158,
@@ -172,7 +251,13 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 30,
+            self::FIELD_THIRD_MOVE_STARDUST => 12000,
+            self::FIELD_EVOLVES => [Pokemon::CHARIZARD | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_FIRE_FANG_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_SCRATCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_PUNCH, Moves::MOVE_FLAME_BURST, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::CHARIZARD => [
             self::FIELD_ATTACK => 223,
@@ -182,7 +267,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FIRE_SPIN_FAST, Moves::MOVE_AIR_SLASH_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_EMBER_FAST, Moves::MOVE_WING_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_DRAGON_CLAW, Moves::MOVE_OVERHEAT],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BLAST_BURN, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::CHARIZARD | Mods::PURIFIED => [
             self::FIELD_ATTACK => 223,
@@ -192,7 +283,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 20,
+            self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FIRE_SPIN_FAST, Moves::MOVE_AIR_SLASH_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_EMBER_FAST, Moves::MOVE_WING_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_DRAGON_CLAW, Moves::MOVE_OVERHEAT],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BLAST_BURN, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::CHARIZARD | Mods::SHADOW => [
             self::FIELD_ATTACK => 223,
@@ -204,7 +301,13 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 30,
+            self::FIELD_THIRD_MOVE_STARDUST => 12000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FIRE_SPIN_FAST, Moves::MOVE_AIR_SLASH_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_EMBER_FAST, Moves::MOVE_WING_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_DRAGON_CLAW, Moves::MOVE_OVERHEAT],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BLAST_BURN, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::SQUIRTLE => [
             self::FIELD_ATTACK => 94,
@@ -213,7 +316,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::WARTORTLE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_AQUA_TAIL, Moves::MOVE_WATER_PULSE]
         ],
         Pokemon::SQUIRTLE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 94,
@@ -222,7 +330,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 20,
+            self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_EVOLVES => [Pokemon::WARTORTLE | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_AQUA_TAIL, Moves::MOVE_WATER_PULSE]
         ],
         Pokemon::SQUIRTLE | Mods::SHADOW => [
             self::FIELD_ATTACK => 94,
@@ -233,7 +346,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 30,
+            self::FIELD_THIRD_MOVE_STARDUST => 12000,
+            self::FIELD_EVOLVES => [Pokemon::WARTORTLE | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_AQUA_TAIL, Moves::MOVE_WATER_PULSE]
         ],
         Pokemon::WARTORTLE => [
             self::FIELD_ATTACK => 126,
@@ -242,7 +360,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::BLASTOISE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_ICE_BEAM, Moves::MOVE_HYDRO_PUMP]
         ],
         Pokemon::WARTORTLE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 126,
@@ -251,7 +374,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 20,
+            self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_EVOLVES => [Pokemon::BLASTOISE | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_ICE_BEAM, Moves::MOVE_HYDRO_PUMP]
         ],
         Pokemon::WARTORTLE | Mods::SHADOW => [
             self::FIELD_ATTACK => 126,
@@ -262,7 +390,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 30,
+            self::FIELD_THIRD_MOVE_STARDUST => 12000,
+            self::FIELD_EVOLVES => [Pokemon::BLASTOISE | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_ICE_BEAM, Moves::MOVE_HYDRO_PUMP]
         ],
         Pokemon::BLASTOISE => [
             self::FIELD_ATTACK => 171,
@@ -271,7 +404,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLASH_CANNON, Moves::MOVE_ICE_BEAM, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_SKULL_BASH],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_HYDRO_CANNON]
         ],
         Pokemon::BLASTOISE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 171,
@@ -280,7 +418,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 20,
+            self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLASH_CANNON, Moves::MOVE_ICE_BEAM, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_SKULL_BASH],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_HYDRO_CANNON]
         ],
         Pokemon::BLASTOISE | Mods::SHADOW => [
             self::FIELD_ATTACK => 171,
@@ -291,7 +434,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 30,
+            self::FIELD_THIRD_MOVE_STARDUST => 12000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLASH_CANNON, Moves::MOVE_ICE_BEAM, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_SKULL_BASH],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_HYDRO_CANNON]
         ],
         Pokemon::CATERPIE => [
             self::FIELD_ATTACK => 55,
@@ -300,7 +448,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::METAPOD],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUG_BITE_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::METAPOD => [
             self::FIELD_ATTACK => 45,
@@ -309,7 +462,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::BUTTERFREE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUG_BITE_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::BUTTERFREE => [
             self::FIELD_ATTACK => 167,
@@ -319,7 +477,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_STRUGGLE_BUG_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUG_BUZZ, Moves::MOVE_PSYCHIC, Moves::MOVE_SIGNAL_BEAM]
         ],
         Pokemon::WEEDLE => [
             self::FIELD_ATTACK => 63,
@@ -329,7 +492,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::KAKUNA],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUG_BITE_FAST, Moves::MOVE_POISON_STING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::WEEDLE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 63,
@@ -339,7 +507,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 20,
+            self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_EVOLVES => [Pokemon::KAKUNA | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUG_BITE_FAST, Moves::MOVE_POISON_STING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::WEEDLE | Mods::SHADOW => [
             self::FIELD_ATTACK => 63,
@@ -351,7 +524,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 1000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 30,
+            self::FIELD_THIRD_MOVE_STARDUST => 12000,
+            self::FIELD_EVOLVES => [Pokemon::KAKUNA | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUG_BITE_FAST, Moves::MOVE_POISON_STING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::KAKUNA => [
             self::FIELD_ATTACK => 46,
@@ -361,7 +539,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::BEEDRILL],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUG_BITE_FAST, Moves::MOVE_POISON_STING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::KAKUNA | Mods::PURIFIED => [
             self::FIELD_ATTACK => 46,
@@ -371,7 +554,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 20,
+            self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_EVOLVES => [Pokemon::BEEDRILL | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUG_BITE_FAST, Moves::MOVE_POISON_STING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::KAKUNA | Mods::SHADOW => [
             self::FIELD_ATTACK => 46,
@@ -383,7 +571,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 1000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 30,
+            self::FIELD_THIRD_MOVE_STARDUST => 12000,
+            self::FIELD_EVOLVES => [Pokemon::BEEDRILL | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUG_BITE_FAST, Moves::MOVE_POISON_STING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::BEEDRILL => [
             self::FIELD_ATTACK => 169,
@@ -393,7 +586,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_INFESTATION_FAST, Moves::MOVE_POISON_JAB_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_AERIAL_ACE, Moves::MOVE_X_SCISSOR, Moves::MOVE_FELL_STINGER],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRILL_RUN]
         ],
         Pokemon::BEEDRILL | Mods::PURIFIED => [
             self::FIELD_ATTACK => 169,
@@ -403,7 +602,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 20,
+            self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_INFESTATION_FAST, Moves::MOVE_POISON_JAB_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_AERIAL_ACE, Moves::MOVE_X_SCISSOR, Moves::MOVE_FELL_STINGER],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRILL_RUN]
         ],
         Pokemon::BEEDRILL | Mods::SHADOW => [
             self::FIELD_ATTACK => 169,
@@ -415,7 +620,13 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 1000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 30,
+            self::FIELD_THIRD_MOVE_STARDUST => 12000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_INFESTATION_FAST, Moves::MOVE_POISON_JAB_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_AERIAL_ACE, Moves::MOVE_X_SCISSOR, Moves::MOVE_FELL_STINGER],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRILL_RUN]
         ],
         Pokemon::PIDGEY => [
             self::FIELD_ATTACK => 85,
@@ -425,7 +636,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::PIDGEOTTO],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_QUICK_ATTACK_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_TWISTER, Moves::MOVE_AERIAL_ACE, Moves::MOVE_AIR_CUTTER]
         ],
         Pokemon::PIDGEOTTO => [
             self::FIELD_ATTACK => 117,
@@ -435,7 +651,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::PIDGEOT],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WING_ATTACK_FAST, Moves::MOVE_STEEL_WING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_TWISTER, Moves::MOVE_AERIAL_ACE, Moves::MOVE_AIR_CUTTER]
         ],
         Pokemon::PIDGEOT => [
             self::FIELD_ATTACK => 166,
@@ -445,7 +666,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_AIR_SLASH_FAST, Moves::MOVE_STEEL_WING_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_WING_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HURRICANE, Moves::MOVE_AERIAL_ACE, Moves::MOVE_BRAVE_BIRD],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_AIR_CUTTER]
         ],
         Pokemon::RATATTA => [
             self::FIELD_ATTACK => 103,
@@ -454,7 +681,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::RATICATE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_HYPER_FANG, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::RATATTA | Mods::ALOLAN => [
             self::FIELD_ATTACK => 103,
@@ -464,7 +696,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::RATICATE | Mods::ALOLAN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_HYPER_FANG, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::RATATTA | Mods::PURIFIED => [
             self::FIELD_ATTACK => 103,
@@ -473,7 +710,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 20,
+            self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_EVOLVES => [Pokemon::RATICATE | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_HYPER_FANG, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::RATATTA | Mods::SHADOW => [
             self::FIELD_ATTACK => 103,
@@ -484,7 +726,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 1000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 30,
+            self::FIELD_THIRD_MOVE_STARDUST => 12000,
+            self::FIELD_EVOLVES => [Pokemon::RATICATE | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_HYPER_FANG, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::RATICATE => [
             self::FIELD_ATTACK => 161,
@@ -493,7 +740,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_HYPER_FANG, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::RATICATE | Mods::ALOLAN => [
             self::FIELD_ATTACK => 135,
@@ -503,7 +754,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_HYPER_FANG, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::RATICATE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 161,
@@ -512,7 +767,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 20,
+            self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_HYPER_FANG, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::RATICATE | Mods::SHADOW => [
             self::FIELD_ATTACK => 161,
@@ -523,7 +782,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 1000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 30,
+            self::FIELD_THIRD_MOVE_STARDUST => 12000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_HYPER_FANG, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::SPEAROW => [
             self::FIELD_ATTACK => 112,
@@ -533,7 +796,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::FEAROW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PECK_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AERIAL_ACE, Moves::MOVE_DRILL_PECK, Moves::MOVE_SKY_ATTACK],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_TWISTER]
         ],
         Pokemon::FEAROW => [
             self::FIELD_ATTACK => 182,
@@ -543,7 +812,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PECK_FAST, Moves::MOVE_STEEL_WING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AERIAL_ACE, Moves::MOVE_DRILL_RUN, Moves::MOVE_SKY_ATTACK],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_TWISTER]
         ],
         Pokemon::EKANS => [
             self::FIELD_ATTACK => 110,
@@ -552,7 +826,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::ARBOK],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_STING_FAST, Moves::MOVE_ACID_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WRAP, Moves::MOVE_POISON_FANG, Moves::MOVE_SLUDGE_BOMB],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_GUNK_SHOT]
         ],
         Pokemon::EKANS | Mods::PURIFIED => [
             self::FIELD_ATTACK => 110,
@@ -561,7 +841,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::ARBOK | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_STING_FAST, Moves::MOVE_ACID_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WRAP, Moves::MOVE_POISON_FANG, Moves::MOVE_SLUDGE_BOMB],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_GUNK_SHOT]
         ],
         Pokemon::EKANS | Mods::SHADOW => [
             self::FIELD_ATTACK => 110,
@@ -572,7 +858,13 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::ARBOK | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_STING_FAST, Moves::MOVE_ACID_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WRAP, Moves::MOVE_POISON_FANG, Moves::MOVE_SLUDGE_BOMB],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_GUNK_SHOT]
         ],
         Pokemon::ARBOK => [
             self::FIELD_ATTACK => 167,
@@ -581,7 +873,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_ACID_FAST, Moves::MOVE_DRAGON_TAIL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_GUNK_SHOT, Moves::MOVE_ACID_SPRAY]
         ],
         Pokemon::ARBOK | Mods::PURIFIED => [
             self::FIELD_ATTACK => 167,
@@ -590,7 +886,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_ACID_FAST, Moves::MOVE_DRAGON_TAIL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_GUNK_SHOT, Moves::MOVE_ACID_SPRAY]
         ],
         Pokemon::ARBOK | Mods::SHADOW => [
             self::FIELD_ATTACK => 167,
@@ -601,7 +901,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_ACID_FAST, Moves::MOVE_DRAGON_TAIL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_GUNK_SHOT, Moves::MOVE_ACID_SPRAY]
         ],
         Pokemon::PIKACHU => [
             self::FIELD_ATTACK => 112,
@@ -610,7 +914,14 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::RAICHU],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_THUNDER_SHOCK_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_PRESENT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DISCHARGE, Moves::MOVE_THUNDERBOLT, Moves::MOVE_WILD_CHARGE],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SURF, Moves::MOVE_THUNDER]
         ],
         Pokemon::RAICHU => [
             self::FIELD_ATTACK => 193,
@@ -619,7 +930,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_VOLT_SWITCH_FAST, Moves::MOVE_SPARK_FAST, Moves::MOVE_CHARM_FAST, Moves::MOVE_THUNDER_SHOCK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRICK_BREAK, Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_WILD_CHARGE, Moves::MOVE_SKULL_BASH],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_THUNDER]
         ],
         Pokemon::RAICHU | Mods::ALOLAN => [
             self::FIELD_ATTACK => 201,
@@ -629,7 +945,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_VOLT_SWITCH_FAST, Moves::MOVE_SPARK_FAST, Moves::MOVE_THUNDER_SHOCK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_WILD_CHARGE, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::SANDSHREW => [
             self::FIELD_ATTACK => 126,
@@ -638,7 +958,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::SANDSLASH],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_SAND_TOMB],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_TOMB]
         ],
         Pokemon::SANDSHREW | Mods::ALOLAN => [
             self::FIELD_ATTACK => 125,
@@ -648,7 +974,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::SANDSLASH | Mods::ALOLAN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_METAL_CLAW_FAST, Moves::MOVE_POWDER_SNOW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BLIZZARD, Moves::MOVE_GYRO_BALL, Moves::MOVE_NIGHT_SLASH]
         ],
         Pokemon::SANDSHREW | Mods::PURIFIED => [
             self::FIELD_ATTACK => 126,
@@ -657,7 +988,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::SANDSLASH | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_SAND_TOMB],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_TOMB]
         ],
         Pokemon::SANDSHREW | Mods::SHADOW => [
             self::FIELD_ATTACK => 126,
@@ -668,7 +1005,13 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::SANDSLASH | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_SAND_TOMB],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_TOMB]
         ],
         Pokemon::SANDSLASH => [
             self::FIELD_ATTACK => 182,
@@ -677,7 +1020,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_METAL_CLAW_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_ROCK_TOMB, Moves::MOVE_BULLDOZE]
         ],
         Pokemon::SANDSLASH | Mods::ALOLAN => [
             self::FIELD_ATTACK => 177,
@@ -687,7 +1034,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_METAL_CLAW_FAST, Moves::MOVE_POWDER_SNOW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BLIZZARD, Moves::MOVE_GYRO_BALL, Moves::MOVE_BULLDOZE, Moves::MOVE_ICE_PUNCH]
         ],
         Pokemon::SANDSLASH | Mods::PURIFIED => [
             self::FIELD_ATTACK => 182,
@@ -696,7 +1047,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_METAL_CLAW_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_ROCK_TOMB, Moves::MOVE_BULLDOZE]
         ],
         Pokemon::SANDSLASH | Mods::SHADOW => [
             self::FIELD_ATTACK => 182,
@@ -707,7 +1062,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_METAL_CLAW_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_ROCK_TOMB, Moves::MOVE_BULLDOZE]
         ],
         Pokemon::NIDORAN_F => [
             self::FIELD_ATTACK => 86,
@@ -716,7 +1075,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::NIDORINA],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_POISON_STING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_POISON_FANG, Moves::MOVE_BODY_SLAM, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::NIDORAN_F | Mods::PURIFIED => [
             self::FIELD_ATTACK => 86,
@@ -725,7 +1089,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::NIDORINA | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_POISON_STING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_POISON_FANG, Moves::MOVE_BODY_SLAM, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::NIDORAN_F | Mods::SHADOW => [
             self::FIELD_ATTACK => 86,
@@ -736,7 +1105,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::NIDORINA | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_POISON_STING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_POISON_FANG, Moves::MOVE_BODY_SLAM, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::NIDORINA => [
             self::FIELD_ATTACK => 117,
@@ -745,7 +1119,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::NIDOQUEEN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_POISON_STING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_POISON_FANG, Moves::MOVE_DIG, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::NIDORINA | Mods::PURIFIED => [
             self::FIELD_ATTACK => 117,
@@ -754,7 +1133,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::NIDOQUEEN | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_POISON_STING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_POISON_FANG, Moves::MOVE_DIG, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::NIDORINA | Mods::SHADOW => [
             self::FIELD_ATTACK => 117,
@@ -765,7 +1149,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::NIDOQUEEN | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_POISON_STING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_POISON_FANG, Moves::MOVE_DIG, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::NIDOQUEEN => [
             self::FIELD_ATTACK => 180,
@@ -775,7 +1164,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_STONE_EDGE, Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::NIDOQUEEN | Mods::PURIFIED => [
             self::FIELD_ATTACK => 180,
@@ -785,7 +1178,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_STONE_EDGE, Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::NIDOQUEEN | Mods::SHADOW => [
             self::FIELD_ATTACK => 180,
@@ -797,7 +1194,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_STONE_EDGE, Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::NIDORAN_M => [
             self::FIELD_ATTACK => 105,
@@ -806,7 +1207,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::NIDORINO],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PECK_FAST, Moves::MOVE_POISON_STING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HORN_ATTACK, Moves::MOVE_BODY_SLAM, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::NIDORAN_M | Mods::PURIFIED => [
             self::FIELD_ATTACK => 105,
@@ -815,7 +1221,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::NIDORINO | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PECK_FAST, Moves::MOVE_POISON_STING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HORN_ATTACK, Moves::MOVE_BODY_SLAM, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::NIDORAN_M | Mods::SHADOW => [
             self::FIELD_ATTACK => 105,
@@ -826,7 +1237,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::NIDORINO | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PECK_FAST, Moves::MOVE_POISON_STING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HORN_ATTACK, Moves::MOVE_BODY_SLAM, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::NIDORINO => [
             self::FIELD_ATTACK => 137,
@@ -835,7 +1251,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::NIDOKING],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_POISON_STING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HORN_ATTACK, Moves::MOVE_DIG, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::NIDORINO | Mods::PURIFIED => [
             self::FIELD_ATTACK => 137,
@@ -844,7 +1265,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::NIDOKING | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_POISON_STING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HORN_ATTACK, Moves::MOVE_DIG, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::NIDORINO | Mods::SHADOW => [
             self::FIELD_ATTACK => 137,
@@ -855,7 +1281,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::NIDOKING | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_POISON_STING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HORN_ATTACK, Moves::MOVE_DIG, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::NIDOKING => [
             self::FIELD_ATTACK => 204,
@@ -865,7 +1296,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_IRON_TAIL_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_FURY_CUTTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_MEGAHORN, Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::NIDOKING | Mods::PURIFIED => [
             self::FIELD_ATTACK => 204,
@@ -875,7 +1311,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_IRON_TAIL_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_FURY_CUTTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_MEGAHORN, Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::NIDOKING | Mods::SHADOW => [
             self::FIELD_ATTACK => 204,
@@ -887,7 +1328,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_IRON_TAIL_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_FURY_CUTTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_MEGAHORN, Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::CLEFAIRY => [
             self::FIELD_ATTACK => 107,
@@ -896,7 +1342,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FAIRY,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::CLEFABLE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POUND_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DISARMING_VOICE, Moves::MOVE_BODY_SLAM, Moves::MOVE_MOONBLAST]
         ],
         Pokemon::CLEFABLE => [
             self::FIELD_ATTACK => 178,
@@ -905,7 +1356,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FAIRY,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CHARGE_BEAM_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST, Moves::MOVE_CHARM_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_POUND_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_PSYCHIC, Moves::MOVE_MOONBLAST, Moves::MOVE_METEOR_MASH]
         ],
         Pokemon::VULPIX => [
             self::FIELD_ATTACK => 96,
@@ -914,7 +1370,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::NINETALES],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_QUICK_ATTACK_FAST, Moves::MOVE_EMBER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BODY_SLAM, Moves::MOVE_FLAMETHROWER, Moves::MOVE_FLAME_CHARGE]
         ],
         Pokemon::VULPIX | Mods::ALOLAN => [
             self::FIELD_ATTACK => 96,
@@ -923,7 +1384,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ICE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::NINETALES | Mods::ALOLAN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ZEN_HEADBUTT_FAST, Moves::MOVE_POWDER_SNOW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_ICE_BEAM, Moves::MOVE_BLIZZARD]
         ],
         Pokemon::VULPIX | Mods::PURIFIED => [
             self::FIELD_ATTACK => 96,
@@ -932,7 +1398,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::NINETALES | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_QUICK_ATTACK_FAST, Moves::MOVE_EMBER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BODY_SLAM, Moves::MOVE_FLAMETHROWER, Moves::MOVE_FLAME_CHARGE]
         ],
         Pokemon::VULPIX | Mods::SHADOW => [
             self::FIELD_ATTACK => 96,
@@ -943,7 +1414,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::NINETALES | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_QUICK_ATTACK_FAST, Moves::MOVE_EMBER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BODY_SLAM, Moves::MOVE_FLAMETHROWER, Moves::MOVE_FLAME_CHARGE]
         ],
         Pokemon::NINETALES => [
             self::FIELD_ATTACK => 169,
@@ -952,7 +1428,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_FIRE_SPIN_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_EMBER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAT_WAVE, Moves::MOVE_OVERHEAT, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_PSYSHOCK],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::NINETALES | Mods::ALOLAN => [
             self::FIELD_ATTACK => 170,
@@ -962,7 +1444,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_POWDER_SNOW_FAST, Moves::MOVE_CHARM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_ICE_BEAM, Moves::MOVE_BLIZZARD, Moves::MOVE_PSYSHOCK]
         ],
         Pokemon::NINETALES | Mods::PURIFIED => [
             self::FIELD_ATTACK => 169,
@@ -971,7 +1457,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_FIRE_SPIN_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_EMBER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAT_WAVE, Moves::MOVE_OVERHEAT, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_PSYSHOCK],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::NINETALES | Mods::SHADOW => [
             self::FIELD_ATTACK => 169,
@@ -982,7 +1474,13 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_FIRE_SPIN_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_EMBER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAT_WAVE, Moves::MOVE_OVERHEAT, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_PSYSHOCK],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::JIGGLYPUFF => [
             self::FIELD_ATTACK => 80,
@@ -992,7 +1490,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::WIGGLYTUFF],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POUND_FAST, Moves::MOVE_FEINT_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DISARMING_VOICE, Moves::MOVE_GYRO_BALL, Moves::MOVE_DAZZLING_GLEAM],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_PLAY_ROUGH, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::WIGGLYTUFF => [
             self::FIELD_ATTACK => 156,
@@ -1002,7 +1506,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POUND_FAST, Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_CHARM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_HYPER_BEAM, Moves::MOVE_PLAY_ROUGH, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::ZUBAT => [
             self::FIELD_ATTACK => 83,
@@ -1012,7 +1520,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::GOLBAT],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_QUICK_ATTACK_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_POISON_FANG, Moves::MOVE_AIR_CUTTER, Moves::MOVE_SWIFT],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::ZUBAT | Mods::PURIFIED => [
             self::FIELD_ATTACK => 83,
@@ -1022,7 +1536,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 20,
+            self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_EVOLVES => [Pokemon::GOLBAT | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_QUICK_ATTACK_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_POISON_FANG, Moves::MOVE_AIR_CUTTER, Moves::MOVE_SWIFT],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::ZUBAT | Mods::SHADOW => [
             self::FIELD_ATTACK => 83,
@@ -1034,7 +1554,13 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 1000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 30,
+            self::FIELD_THIRD_MOVE_STARDUST => 12000,
+            self::FIELD_EVOLVES => [Pokemon::GOLBAT | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_QUICK_ATTACK_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_POISON_FANG, Moves::MOVE_AIR_CUTTER, Moves::MOVE_SWIFT],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::GOLBAT => [
             self::FIELD_ATTACK => 161,
@@ -1044,7 +1570,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::CROBAT],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WING_ATTACK_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_AIR_CUTTER, Moves::MOVE_POISON_FANG],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_OMINOUS_WIND]
         ],
         Pokemon::GOLBAT | Mods::PURIFIED => [
             self::FIELD_ATTACK => 161,
@@ -1054,7 +1586,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 20,
+            self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_EVOLVES => [Pokemon::CROBAT | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WING_ATTACK_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_AIR_CUTTER, Moves::MOVE_POISON_FANG],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_OMINOUS_WIND]
         ],
         Pokemon::GOLBAT | Mods::SHADOW => [
             self::FIELD_ATTACK => 161,
@@ -1066,7 +1604,13 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 1000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 30,
+            self::FIELD_THIRD_MOVE_STARDUST => 12000,
+            self::FIELD_EVOLVES => [Pokemon::CROBAT | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WING_ATTACK_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_AIR_CUTTER, Moves::MOVE_POISON_FANG],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_OMINOUS_WIND]
         ],
         Pokemon::ODDISH => [
             self::FIELD_ATTACK => 131,
@@ -1076,7 +1620,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::GLOOM],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_ACID_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SEED_BOMB, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_MOONBLAST]
         ],
         Pokemon::ODDISH | Mods::PURIFIED => [
             self::FIELD_ATTACK => 131,
@@ -1086,7 +1635,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::GLOOM | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_ACID_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SEED_BOMB, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_MOONBLAST]
         ],
         Pokemon::ODDISH | Mods::SHADOW => [
             self::FIELD_ATTACK => 131,
@@ -1098,7 +1652,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::GLOOM | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_ACID_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SEED_BOMB, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_MOONBLAST]
         ],
         Pokemon::GLOOM => [
             self::FIELD_ATTACK => 153,
@@ -1108,7 +1667,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::VILEPLUME, Pokemon::BELLOSSOM],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_ACID_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_MOONBLAST]
         ],
         Pokemon::GLOOM | Mods::PURIFIED => [
             self::FIELD_ATTACK => 153,
@@ -1118,7 +1682,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::VILEPLUME | Mods::PURIFIED, Pokemon::BELLOSSOM | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_ACID_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_MOONBLAST]
         ],
         Pokemon::GLOOM | Mods::SHADOW => [
             self::FIELD_ATTACK => 153,
@@ -1130,7 +1699,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::VILEPLUME | Mods::SHADOW, Pokemon::BELLOSSOM | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_ACID_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_MOONBLAST]
         ],
         Pokemon::VILEPLUME => [
             self::FIELD_ATTACK => 202,
@@ -1140,7 +1714,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_ACID_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_MOONBLAST, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::VILEPLUME | Mods::PURIFIED => [
             self::FIELD_ATTACK => 202,
@@ -1150,7 +1728,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_ACID_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_MOONBLAST, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::VILEPLUME | Mods::SHADOW => [
             self::FIELD_ATTACK => 202,
@@ -1162,7 +1744,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_ACID_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_MOONBLAST, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::PARAS => [
             self::FIELD_ATTACK => 121,
@@ -1172,7 +1758,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::PARASECT],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CROSS_POISON, Moves::MOVE_X_SCISSOR, Moves::MOVE_SEED_BOMB]
         ],
         Pokemon::PARASECT => [
             self::FIELD_ATTACK => 165,
@@ -1182,7 +1773,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_STRUGGLE_BUG_FAST, Moves::MOVE_FURY_CUTTER_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CROSS_POISON, Moves::MOVE_X_SCISSOR, Moves::MOVE_SOLAR_BEAM]
         ],
         Pokemon::VENONAT => [
             self::FIELD_ATTACK => 100,
@@ -1192,7 +1788,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::VENOMOTH],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUG_BITE_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_POISON_FANG, Moves::MOVE_PSYBEAM, Moves::MOVE_SIGNAL_BEAM]
         ],
         Pokemon::VENONAT | Mods::PURIFIED => [
             self::FIELD_ATTACK => 100,
@@ -1202,7 +1803,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::VENOMOTH | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUG_BITE_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_POISON_FANG, Moves::MOVE_PSYBEAM, Moves::MOVE_SIGNAL_BEAM]
         ],
         Pokemon::VENONAT | Mods::SHADOW => [
             self::FIELD_ATTACK => 100,
@@ -1214,7 +1820,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::VENOMOTH | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUG_BITE_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_POISON_FANG, Moves::MOVE_PSYBEAM, Moves::MOVE_SIGNAL_BEAM]
         ],
         Pokemon::VENOMOTH => [
             self::FIELD_ATTACK => 179,
@@ -1224,7 +1835,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_INFESTATION_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SILVER_WIND, Moves::MOVE_PSYCHIC, Moves::MOVE_BUG_BUZZ, Moves::MOVE_POISON_FANG]
         ],
         Pokemon::VENOMOTH | Mods::PURIFIED => [
             self::FIELD_ATTACK => 179,
@@ -1234,7 +1850,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_INFESTATION_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SILVER_WIND, Moves::MOVE_PSYCHIC, Moves::MOVE_BUG_BUZZ, Moves::MOVE_POISON_FANG]
         ],
         Pokemon::VENOMOTH | Mods::SHADOW => [
             self::FIELD_ATTACK => 179,
@@ -1246,7 +1867,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_INFESTATION_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SILVER_WIND, Moves::MOVE_PSYCHIC, Moves::MOVE_BUG_BUZZ, Moves::MOVE_POISON_FANG]
         ],
         Pokemon::DIGLETT => [
             self::FIELD_ATTACK => 109,
@@ -1255,7 +1881,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::DUGTRIO],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_SCRATCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_MUD_BOMB, Moves::MOVE_ROCK_TOMB]
         ],
         Pokemon::DIGLETT | Mods::ALOLAN => [
             self::FIELD_ATTACK => 108,
@@ -1265,7 +1896,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::DUGTRIO | Mods::ALOLAN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_METAL_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_MUD_BOMB, Moves::MOVE_ROCK_TOMB]
         ],
         Pokemon::DIGLETT | Mods::PURIFIED => [
             self::FIELD_ATTACK => 109,
@@ -1274,7 +1910,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::DUGTRIO | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_SCRATCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_MUD_BOMB, Moves::MOVE_ROCK_TOMB]
         ],
         Pokemon::DIGLETT | Mods::SHADOW => [
             self::FIELD_ATTACK => 109,
@@ -1285,7 +1926,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::DUGTRIO | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_SCRATCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_MUD_BOMB, Moves::MOVE_ROCK_TOMB]
         ],
         Pokemon::DUGTRIO => [
             self::FIELD_ATTACK => 167,
@@ -1294,7 +1940,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SUCKER_PUNCH_FAST, Moves::MOVE_MUD_SLAP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_MUD_BOMB, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::DUGTRIO | Mods::ALOLAN => [
             self::FIELD_ATTACK => 201,
@@ -1304,7 +1954,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_METAL_CLAW_FAST, Moves::MOVE_MUD_SLAP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_MUD_BOMB, Moves::MOVE_IRON_HEAD]
         ],
         Pokemon::DUGTRIO | Mods::PURIFIED => [
             self::FIELD_ATTACK => 167,
@@ -1313,7 +1967,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SUCKER_PUNCH_FAST, Moves::MOVE_MUD_SLAP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_MUD_BOMB, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::DUGTRIO | Mods::SHADOW => [
             self::FIELD_ATTACK => 167,
@@ -1324,7 +1982,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SUCKER_PUNCH_FAST, Moves::MOVE_MUD_SLAP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_MUD_BOMB, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::MEOWTH => [
             self::FIELD_ATTACK => 92,
@@ -1333,7 +1995,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::PERSIAN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SLASH, Moves::MOVE_DARK_PULSE, Moves::MOVE_FOUL_PLAY],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::MEOWTH | Mods::ALOLAN => [
             self::FIELD_ATTACK => 99,
@@ -1342,7 +2010,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::PERSIAN | Mods::ALOLAN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SLASH, Moves::MOVE_DARK_PULSE, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::MEOWTH | Mods::GALARIAN => [
             self::FIELD_ATTACK => 115,
@@ -1351,7 +2024,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::PERRSERKER],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_METAL_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SLASH, Moves::MOVE_GYRO_BALL, Moves::MOVE_DIG]
         ],
         Pokemon::MEOWTH | Mods::PURIFIED => [
             self::FIELD_ATTACK => 92,
@@ -1360,7 +2038,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::PERSIAN | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SLASH, Moves::MOVE_DARK_PULSE, Moves::MOVE_FOUL_PLAY],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::MEOWTH | Mods::SHADOW => [
             self::FIELD_ATTACK => 92,
@@ -1371,7 +2055,13 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::PERSIAN | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SLASH, Moves::MOVE_DARK_PULSE, Moves::MOVE_FOUL_PLAY],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::PERSIAN => [
             self::FIELD_ATTACK => 150,
@@ -1380,7 +2070,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_FEINT_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FOUL_PLAY, Moves::MOVE_POWER_GEM, Moves::MOVE_PLAY_ROUGH],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_NIGHT_SLASH]
         ],
         Pokemon::PERSIAN | Mods::ALOLAN => [
             self::FIELD_ATTACK => 158,
@@ -1389,7 +2084,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_FEINT_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FOUL_PLAY, Moves::MOVE_DARK_PULSE, Moves::MOVE_PLAY_ROUGH]
         ],
         Pokemon::PERSIAN | Mods::PURIFIED => [
             self::FIELD_ATTACK => 150,
@@ -1398,7 +2097,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_FEINT_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FOUL_PLAY, Moves::MOVE_POWER_GEM, Moves::MOVE_PLAY_ROUGH],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_NIGHT_SLASH]
         ],
         Pokemon::PERSIAN | Mods::SHADOW => [
             self::FIELD_ATTACK => 150,
@@ -1409,7 +2113,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_FEINT_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FOUL_PLAY, Moves::MOVE_POWER_GEM, Moves::MOVE_PLAY_ROUGH],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_NIGHT_SLASH]
         ],
         Pokemon::PSYDUCK => [
             self::FIELD_ATTACK => 122,
@@ -1418,7 +2127,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::GOLDUCK],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_AQUA_TAIL, Moves::MOVE_CROSS_CHOP]
         ],
         Pokemon::PSYDUCK | Mods::PURIFIED => [
             self::FIELD_ATTACK => 122,
@@ -1427,7 +2141,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::GOLDUCK | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_AQUA_TAIL, Moves::MOVE_CROSS_CHOP]
         ],
         Pokemon::PSYDUCK | Mods::SHADOW => [
             self::FIELD_ATTACK => 122,
@@ -1438,7 +2157,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::GOLDUCK | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_AQUA_TAIL, Moves::MOVE_CROSS_CHOP]
         ],
         Pokemon::GOLDUCK => [
             self::FIELD_ATTACK => 191,
@@ -1447,7 +2171,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_ICE_BEAM, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_SYNCHRONOISE, Moves::MOVE_CROSS_CHOP]
         ],
         Pokemon::GOLDUCK | Mods::PURIFIED => [
             self::FIELD_ATTACK => 191,
@@ -1456,7 +2184,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_ICE_BEAM, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_SYNCHRONOISE, Moves::MOVE_CROSS_CHOP]
         ],
         Pokemon::GOLDUCK | Mods::SHADOW => [
             self::FIELD_ATTACK => 191,
@@ -1467,7 +2199,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_ICE_BEAM, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_SYNCHRONOISE, Moves::MOVE_CROSS_CHOP]
         ],
         Pokemon::MANKEY => [
             self::FIELD_ATTACK => 148,
@@ -1476,7 +2212,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::PRIMEAPE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_KARATE_CHOP_FAST, Moves::MOVE_SCRATCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CROSS_CHOP, Moves::MOVE_LOW_SWEEP, Moves::MOVE_BRICK_BREAK]
         ],
         Pokemon::PRIMEAPE => [
             self::FIELD_ATTACK => 207,
@@ -1485,7 +2226,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_LOW_KICK_FAST, Moves::MOVE_COUNTER_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_KARATE_CHOP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_LOW_SWEEP, Moves::MOVE_NIGHT_SLASH],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_CROSS_CHOP]
         ],
         Pokemon::GROWLITHE => [
             self::FIELD_ATTACK => 136,
@@ -1494,7 +2241,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::ARCANINE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_WHEEL, Moves::MOVE_BODY_SLAM, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::GROWLITHE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 136,
@@ -1503,7 +2255,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::ARCANINE | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_WHEEL, Moves::MOVE_BODY_SLAM, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::GROWLITHE | Mods::SHADOW => [
             self::FIELD_ATTACK => 136,
@@ -1514,7 +2271,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::ARCANINE | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_WHEEL, Moves::MOVE_BODY_SLAM, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::ARCANINE => [
             self::FIELD_ATTACK => 227,
@@ -1523,7 +2285,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FIRE_FANG_FAST, Moves::MOVE_SNARL_FAST, Moves::MOVE_THUNDER_FANG_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_WILD_CHARGE, Moves::MOVE_CRUNCH, Moves::MOVE_FLAMETHROWER],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BULLDOZE]
         ],
         Pokemon::ARCANINE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 227,
@@ -1532,7 +2300,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FIRE_FANG_FAST, Moves::MOVE_SNARL_FAST, Moves::MOVE_THUNDER_FANG_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_WILD_CHARGE, Moves::MOVE_CRUNCH, Moves::MOVE_FLAMETHROWER],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BULLDOZE]
         ],
         Pokemon::ARCANINE | Mods::SHADOW => [
             self::FIELD_ATTACK => 227,
@@ -1543,7 +2317,13 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FIRE_FANG_FAST, Moves::MOVE_SNARL_FAST, Moves::MOVE_THUNDER_FANG_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_WILD_CHARGE, Moves::MOVE_CRUNCH, Moves::MOVE_FLAMETHROWER],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BULLDOZE]
         ],
         Pokemon::POLIWAG => [
             self::FIELD_ATTACK => 101,
@@ -1552,7 +2332,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::POLIWHIRL],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_MUD_BOMB, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::POLIWAG | Mods::PURIFIED => [
             self::FIELD_ATTACK => 101,
@@ -1561,7 +2346,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::POLIWHIRL | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_MUD_BOMB, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::POLIWAG | Mods::SHADOW => [
             self::FIELD_ATTACK => 101,
@@ -1572,7 +2362,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::POLIWHIRL | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_MUD_BOMB, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::POLIWHIRL => [
             self::FIELD_ATTACK => 130,
@@ -1581,7 +2376,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::POLIWRATH, Pokemon::POLITOED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_MUD_BOMB, Moves::MOVE_BUBBLE_BEAM],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SCALD]
         ],
         Pokemon::POLIWHIRL | Mods::PURIFIED => [
             self::FIELD_ATTACK => 130,
@@ -1590,7 +2391,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::POLIWRATH | Mods::PURIFIED, Pokemon::POLITOED | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_MUD_BOMB, Moves::MOVE_BUBBLE_BEAM],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SCALD]
         ],
         Pokemon::POLIWHIRL | Mods::SHADOW => [
             self::FIELD_ATTACK => 130,
@@ -1601,7 +2408,13 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::POLIWRATH | Mods::SHADOW, Pokemon::POLITOED | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_MUD_BOMB, Moves::MOVE_BUBBLE_BEAM],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SCALD]
         ],
         Pokemon::POLIWRATH => [
             self::FIELD_ATTACK => 182,
@@ -1611,7 +2424,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_ROCK_SMASH_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_DYNAMIC_PUNCH, Moves::MOVE_ICE_PUNCH, Moves::MOVE_POWER_UP_PUNCH],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SUBMISSION]
         ],
         Pokemon::POLIWRATH | Mods::PURIFIED => [
             self::FIELD_ATTACK => 182,
@@ -1621,7 +2439,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_ROCK_SMASH_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_DYNAMIC_PUNCH, Moves::MOVE_ICE_PUNCH, Moves::MOVE_POWER_UP_PUNCH],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SUBMISSION]
         ],
         Pokemon::POLIWRATH | Mods::SHADOW => [
             self::FIELD_ATTACK => 182,
@@ -1633,7 +2456,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_ROCK_SMASH_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_DYNAMIC_PUNCH, Moves::MOVE_ICE_PUNCH, Moves::MOVE_POWER_UP_PUNCH],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SUBMISSION]
         ],
         Pokemon::ABRA => [
             self::FIELD_ATTACK => 195,
@@ -1642,7 +2470,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::KADABRA],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ZEN_HEADBUTT_FAST, Moves::MOVE_CHARGE_BEAM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYSHOCK, Moves::MOVE_SIGNAL_BEAM, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::ABRA | Mods::PURIFIED => [
             self::FIELD_ATTACK => 195,
@@ -1651,7 +2484,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::KADABRA | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ZEN_HEADBUTT_FAST, Moves::MOVE_CHARGE_BEAM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYSHOCK, Moves::MOVE_SIGNAL_BEAM, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::ABRA | Mods::SHADOW => [
             self::FIELD_ATTACK => 195,
@@ -1662,7 +2500,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::KADABRA | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ZEN_HEADBUTT_FAST, Moves::MOVE_CHARGE_BEAM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYSHOCK, Moves::MOVE_SIGNAL_BEAM, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::KADABRA => [
             self::FIELD_ATTACK => 232,
@@ -1671,7 +2514,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::ALAKAZAM],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PSYCHO_CUT_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::KADABRA | Mods::PURIFIED => [
             self::FIELD_ATTACK => 232,
@@ -1680,7 +2528,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::ALAKAZAM | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PSYCHO_CUT_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::KADABRA | Mods::SHADOW => [
             self::FIELD_ATTACK => 232,
@@ -1691,7 +2544,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::ALAKAZAM | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PSYCHO_CUT_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::ALAKAZAM => [
             self::FIELD_ATTACK => 271,
@@ -1700,7 +2558,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PSYCHO_CUT_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_COUNTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_SHADOW_BALL, Moves::MOVE_FIRE_PUNCH],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::ALAKAZAM | Mods::PURIFIED => [
             self::FIELD_ATTACK => 271,
@@ -1709,7 +2573,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PSYCHO_CUT_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_COUNTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_SHADOW_BALL, Moves::MOVE_FIRE_PUNCH],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::ALAKAZAM | Mods::SHADOW => [
             self::FIELD_ATTACK => 271,
@@ -1720,7 +2590,13 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PSYCHO_CUT_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_COUNTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_SHADOW_BALL, Moves::MOVE_FIRE_PUNCH],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::MACHOP => [
             self::FIELD_ATTACK => 137,
@@ -1729,7 +2605,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::MACHOKE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_SMASH_FAST, Moves::MOVE_KARATE_CHOP_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_LOW_KICK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_LOW_SWEEP, Moves::MOVE_BRICK_BREAK, Moves::MOVE_CROSS_CHOP]
         ],
         Pokemon::MACHOP | Mods::PURIFIED => [
             self::FIELD_ATTACK => 137,
@@ -1738,7 +2620,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::MACHOKE | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_SMASH_FAST, Moves::MOVE_KARATE_CHOP_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_LOW_KICK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_LOW_SWEEP, Moves::MOVE_BRICK_BREAK, Moves::MOVE_CROSS_CHOP]
         ],
         Pokemon::MACHOP | Mods::SHADOW => [
             self::FIELD_ATTACK => 137,
@@ -1749,7 +2637,13 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::MACHOKE | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_SMASH_FAST, Moves::MOVE_KARATE_CHOP_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_LOW_KICK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_LOW_SWEEP, Moves::MOVE_BRICK_BREAK, Moves::MOVE_CROSS_CHOP]
         ],
         Pokemon::MACHOKE => [
             self::FIELD_ATTACK => 177,
@@ -1758,7 +2652,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::MACHAMP],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_LOW_KICK_FAST, Moves::MOVE_KARATE_CHOP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SUBMISSION, Moves::MOVE_BRICK_BREAK, Moves::MOVE_DYNAMIC_PUNCH],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_CROSS_CHOP]
         ],
         Pokemon::MACHOKE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 177,
@@ -1767,7 +2667,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::MACHAMP | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_LOW_KICK_FAST, Moves::MOVE_KARATE_CHOP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SUBMISSION, Moves::MOVE_BRICK_BREAK, Moves::MOVE_DYNAMIC_PUNCH],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_CROSS_CHOP]
         ],
         Pokemon::MACHOKE | Mods::SHADOW => [
             self::FIELD_ATTACK => 177,
@@ -1778,7 +2684,13 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::MACHAMP | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_LOW_KICK_FAST, Moves::MOVE_KARATE_CHOP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SUBMISSION, Moves::MOVE_BRICK_BREAK, Moves::MOVE_DYNAMIC_PUNCH],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_CROSS_CHOP]
         ],
         Pokemon::MACHAMP => [
             self::FIELD_ATTACK => 234,
@@ -1787,7 +2699,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BULLET_PUNCH_FAST, Moves::MOVE_COUNTER_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_KARATE_CHOP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAVY_SLAM, Moves::MOVE_DYNAMIC_PUNCH, Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_CROSS_CHOP],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_STONE_EDGE, Moves::MOVE_SUBMISSION]
         ],
         Pokemon::MACHAMP | Mods::PURIFIED => [
             self::FIELD_ATTACK => 234,
@@ -1796,7 +2714,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BULLET_PUNCH_FAST, Moves::MOVE_COUNTER_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_KARATE_CHOP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAVY_SLAM, Moves::MOVE_DYNAMIC_PUNCH, Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_CROSS_CHOP],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_STONE_EDGE, Moves::MOVE_SUBMISSION]
         ],
         Pokemon::MACHAMP | Mods::SHADOW => [
             self::FIELD_ATTACK => 234,
@@ -1807,7 +2731,13 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BULLET_PUNCH_FAST, Moves::MOVE_COUNTER_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_KARATE_CHOP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAVY_SLAM, Moves::MOVE_DYNAMIC_PUNCH, Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_CROSS_CHOP],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_STONE_EDGE, Moves::MOVE_SUBMISSION]
         ],
         Pokemon::BELLSPROUT => [
             self::FIELD_ATTACK => 139,
@@ -1817,7 +2747,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::WEEPINBELL],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_VINE_WHIP_FAST, Moves::MOVE_ACID_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_POWER_WHIP, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_WRAP]
         ],
         Pokemon::BELLSPROUT | Mods::PURIFIED => [
             self::FIELD_ATTACK => 139,
@@ -1827,7 +2762,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::WEEPINBELL | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_VINE_WHIP_FAST, Moves::MOVE_ACID_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_POWER_WHIP, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_WRAP]
         ],
         Pokemon::BELLSPROUT | Mods::SHADOW => [
             self::FIELD_ATTACK => 139,
@@ -1839,7 +2779,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::WEEPINBELL | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_VINE_WHIP_FAST, Moves::MOVE_ACID_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_POWER_WHIP, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_WRAP]
         ],
         Pokemon::WEEPINBELL => [
             self::FIELD_ATTACK => 172,
@@ -1849,7 +2794,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::VICTREEBEL],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BULLET_SEED_FAST, Moves::MOVE_ACID_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_RAZOR_LEAF_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_POWER_WHIP, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SEED_BOMB]
         ],
         Pokemon::WEEPINBELL | Mods::PURIFIED => [
             self::FIELD_ATTACK => 172,
@@ -1859,7 +2810,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::VICTREEBEL | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BULLET_SEED_FAST, Moves::MOVE_ACID_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_RAZOR_LEAF_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_POWER_WHIP, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SEED_BOMB]
         ],
         Pokemon::WEEPINBELL | Mods::SHADOW => [
             self::FIELD_ATTACK => 172,
@@ -1871,7 +2828,13 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::VICTREEBEL | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BULLET_SEED_FAST, Moves::MOVE_ACID_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_RAZOR_LEAF_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_POWER_WHIP, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SEED_BOMB]
         ],
         Pokemon::VICTREEBEL => [
             self::FIELD_ATTACK => 207,
@@ -1881,7 +2844,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_ACID_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_LEAF_BLADE, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_LEAF_TORNADO, Moves::MOVE_ACID_SPRAY]
         ],
         Pokemon::VICTREEBEL | Mods::PURIFIED => [
             self::FIELD_ATTACK => 207,
@@ -1891,7 +2858,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_ACID_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_LEAF_BLADE, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_LEAF_TORNADO, Moves::MOVE_ACID_SPRAY]
         ],
         Pokemon::VICTREEBEL | Mods::SHADOW => [
             self::FIELD_ATTACK => 207,
@@ -1903,7 +2874,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_ACID_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_LEAF_BLADE, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_LEAF_TORNADO, Moves::MOVE_ACID_SPRAY]
         ],
         Pokemon::TENTACOOL => [
             self::FIELD_ATTACK => 97,
@@ -1913,7 +2888,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::TENTACRUEL],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_POISON_STING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_WATER_PULSE, Moves::MOVE_WRAP]
         ],
         Pokemon::TENTACRUEL => [
             self::FIELD_ATTACK => 166,
@@ -1923,7 +2903,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ACID_FAST, Moves::MOVE_POISON_JAB_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_BLIZZARD, Moves::MOVE_ACID_SPRAY]
         ],
         Pokemon::GEODUDE => [
             self::FIELD_ATTACK => 132,
@@ -1933,7 +2917,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::GRAVELER],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_THROW_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_SLIDE, Moves::MOVE_ROCK_TOMB, Moves::MOVE_DIG]
         ],
         Pokemon::GEODUDE | Mods::ALOLAN => [
             self::FIELD_ATTACK => 132,
@@ -1943,7 +2932,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::GRAVELER | Mods::ALOLAN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_THROW_FAST, Moves::MOVE_VOLT_SWITCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_SLIDE, Moves::MOVE_ROCK_TOMB, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::GEODUDE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 132,
@@ -1953,7 +2947,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 20,
+            self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_EVOLVES => [Pokemon::GRAVELER | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_THROW_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_SLIDE, Moves::MOVE_ROCK_TOMB, Moves::MOVE_DIG]
         ],
         Pokemon::GEODUDE | Mods::SHADOW => [
             self::FIELD_ATTACK => 132,
@@ -1965,7 +2964,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 1000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 30,
+            self::FIELD_THIRD_MOVE_STARDUST => 12000,
+            self::FIELD_EVOLVES => [Pokemon::GRAVELER | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_THROW_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_SLIDE, Moves::MOVE_ROCK_TOMB, Moves::MOVE_DIG]
         ],
         Pokemon::GRAVELER => [
             self::FIELD_ATTACK => 164,
@@ -1975,7 +2979,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::GOLEM],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_THROW_FAST, Moves::MOVE_MUD_SLAP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_STONE_EDGE, Moves::MOVE_ROCK_BLAST],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::GRAVELER | Mods::ALOLAN => [
             self::FIELD_ATTACK => 164,
@@ -1985,7 +2995,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::GOLEM | Mods::ALOLAN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_THROW_FAST, Moves::MOVE_VOLT_SWITCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDERBOLT, Moves::MOVE_STONE_EDGE, Moves::MOVE_ROCK_BLAST]
         ],
         Pokemon::GRAVELER | Mods::PURIFIED => [
             self::FIELD_ATTACK => 164,
@@ -1995,7 +3010,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 20,
+            self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_EVOLVES => [Pokemon::GOLEM | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_THROW_FAST, Moves::MOVE_MUD_SLAP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_STONE_EDGE, Moves::MOVE_ROCK_BLAST],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::GRAVELER | Mods::SHADOW => [
             self::FIELD_ATTACK => 164,
@@ -2007,7 +3028,13 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 1000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 30,
+            self::FIELD_THIRD_MOVE_STARDUST => 12000,
+            self::FIELD_EVOLVES => [Pokemon::GOLEM | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_THROW_FAST, Moves::MOVE_MUD_SLAP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_STONE_EDGE, Moves::MOVE_ROCK_BLAST],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::GOLEM => [
             self::FIELD_ATTACK => 211,
@@ -2017,7 +3044,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_THROW_FAST, Moves::MOVE_MUD_SLAP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STONE_EDGE, Moves::MOVE_ROCK_BLAST, Moves::MOVE_EARTHQUAKE, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::GOLEM | Mods::ALOLAN => [
             self::FIELD_ATTACK => 211,
@@ -2027,7 +3058,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_THROW_FAST, Moves::MOVE_VOLT_SWITCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STONE_EDGE, Moves::MOVE_ROCK_BLAST, Moves::MOVE_WILD_CHARGE]
         ],
         Pokemon::GOLEM | Mods::PURIFIED => [
             self::FIELD_ATTACK => 211,
@@ -2037,7 +3072,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 20,
+            self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_THROW_FAST, Moves::MOVE_MUD_SLAP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STONE_EDGE, Moves::MOVE_ROCK_BLAST, Moves::MOVE_EARTHQUAKE, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::GOLEM | Mods::SHADOW => [
             self::FIELD_ATTACK => 211,
@@ -2049,7 +3088,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 1000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 30,
+            self::FIELD_THIRD_MOVE_STARDUST => 12000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_THROW_FAST, Moves::MOVE_MUD_SLAP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STONE_EDGE, Moves::MOVE_ROCK_BLAST, Moves::MOVE_EARTHQUAKE, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::PONYTA => [
             self::FIELD_ATTACK => 170,
@@ -2058,7 +3101,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::RAPIDASH],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_EMBER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_CHARGE, Moves::MOVE_FLAME_WHEEL, Moves::MOVE_STOMP],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FIRE_BLAST]
         ],
         Pokemon::RAPIDASH => [
             self::FIELD_ATTACK => 207,
@@ -2067,7 +3116,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_LOW_KICK_FAST, Moves::MOVE_FIRE_SPIN_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_EMBER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_DRILL_RUN, Moves::MOVE_HEAT_WAVE]
         ],
         Pokemon::SLOWPOKE => [
             self::FIELD_ATTACK => 109,
@@ -2077,7 +3131,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::SLOWBRO, Pokemon::SLOWKING],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_PSYSHOCK, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::SLOWBRO => [
             self::FIELD_ATTACK => 177,
@@ -2087,7 +3146,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_PSYCHIC, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::MAGNEMITE => [
             self::FIELD_ATTACK => 165,
@@ -2097,7 +3160,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::MAGNETON],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SPARK_FAST, Moves::MOVE_THUNDER_SHOCK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DISCHARGE, Moves::MOVE_MAGNET_BOMB, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::MAGNEMITE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 165,
@@ -2107,7 +3175,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::MAGNETON | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SPARK_FAST, Moves::MOVE_THUNDER_SHOCK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DISCHARGE, Moves::MOVE_MAGNET_BOMB, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::MAGNEMITE | Mods::SHADOW => [
             self::FIELD_ATTACK => 165,
@@ -2119,7 +3192,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::MAGNETON | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SPARK_FAST, Moves::MOVE_THUNDER_SHOCK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DISCHARGE, Moves::MOVE_MAGNET_BOMB, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::MAGNETON => [
             self::FIELD_ATTACK => 223,
@@ -2129,7 +3207,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::MAGNEZONE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SPARK_FAST, Moves::MOVE_CHARGE_BEAM_FAST, Moves::MOVE_THUNDER_SHOCK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ZAP_CANNON, Moves::MOVE_MAGNET_BOMB, Moves::MOVE_FLASH_CANNON, Moves::MOVE_DISCHARGE]
         ],
         Pokemon::MAGNETON | Mods::PURIFIED => [
             self::FIELD_ATTACK => 223,
@@ -2139,7 +3222,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::MAGNEZONE | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SPARK_FAST, Moves::MOVE_CHARGE_BEAM_FAST, Moves::MOVE_THUNDER_SHOCK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ZAP_CANNON, Moves::MOVE_MAGNET_BOMB, Moves::MOVE_FLASH_CANNON, Moves::MOVE_DISCHARGE]
         ],
         Pokemon::MAGNETON | Mods::SHADOW => [
             self::FIELD_ATTACK => 223,
@@ -2151,7 +3239,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::MAGNEZONE | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SPARK_FAST, Moves::MOVE_CHARGE_BEAM_FAST, Moves::MOVE_THUNDER_SHOCK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ZAP_CANNON, Moves::MOVE_MAGNET_BOMB, Moves::MOVE_FLASH_CANNON, Moves::MOVE_DISCHARGE]
         ],
         Pokemon::FARFETCH_D => [
             self::FIELD_ATTACK => 124,
@@ -2161,7 +3254,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_AIR_SLASH_FAST, Moves::MOVE_FURY_CUTTER_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_CUT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AERIAL_ACE, Moves::MOVE_AIR_CUTTER, Moves::MOVE_LEAF_BLADE]
         ],
         Pokemon::FARFETCH_D | Mods::GALARIAN => [
             self::FIELD_ATTACK => 174,
@@ -2170,7 +3268,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_SMASH_FAST, Moves::MOVE_FURY_CUTTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRICK_BREAK, Moves::MOVE_BRAVE_BIRD, Moves::MOVE_LEAF_BLADE]
         ],
         Pokemon::FARFETCH_D | Mods::PURIFIED => [
             self::FIELD_ATTACK => 124,
@@ -2180,7 +3282,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_AIR_SLASH_FAST, Moves::MOVE_FURY_CUTTER_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_CUT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AERIAL_ACE, Moves::MOVE_AIR_CUTTER, Moves::MOVE_LEAF_BLADE]
         ],
         Pokemon::FARFETCH_D | Mods::SHADOW => [
             self::FIELD_ATTACK => 124,
@@ -2192,7 +3299,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_AIR_SLASH_FAST, Moves::MOVE_FURY_CUTTER_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_CUT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AERIAL_ACE, Moves::MOVE_AIR_CUTTER, Moves::MOVE_LEAF_BLADE]
         ],
         Pokemon::DODUO => [
             self::FIELD_ATTACK => 158,
@@ -2202,7 +3314,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::DODRIO],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PECK_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRILL_PECK, Moves::MOVE_AERIAL_ACE, Moves::MOVE_BRAVE_BIRD],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SWIFT]
         ],
         Pokemon::DODRIO => [
             self::FIELD_ATTACK => 218,
@@ -2212,7 +3330,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_STEEL_WING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRILL_PECK, Moves::MOVE_AERIAL_ACE, Moves::MOVE_BRAVE_BIRD],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_AIR_CUTTER]
         ],
         Pokemon::SEEL => [
             self::FIELD_ATTACK => 85,
@@ -2221,7 +3344,14 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::DEWGONG],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ICE_SHARD_FAST, Moves::MOVE_LICK_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AURORA_BEAM, Moves::MOVE_ICY_WIND, Moves::MOVE_AQUA_TAIL],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_AQUA_JET]
         ],
         Pokemon::DEWGONG => [
             self::FIELD_ATTACK => 139,
@@ -2231,7 +3361,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ICE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FROST_BREATH_FAST, Moves::MOVE_IRON_TAIL_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_ICE_SHARD_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AURORA_BEAM, Moves::MOVE_WATER_PULSE, Moves::MOVE_BLIZZARD],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_AQUA_JET, Moves::MOVE_ICY_WIND]
         ],
         Pokemon::GRIMER => [
             self::FIELD_ATTACK => 135,
@@ -2240,7 +3376,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::MUK],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_MUD_SLAP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE, Moves::MOVE_MUD_BOMB, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::GRIMER | Mods::ALOLAN => [
             self::FIELD_ATTACK => 135,
@@ -2250,7 +3391,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::MUK | Mods::ALOLAN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_GUNK_SHOT, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::GRIMER | Mods::PURIFIED => [
             self::FIELD_ATTACK => 135,
@@ -2259,7 +3405,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::MUK | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_MUD_SLAP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE, Moves::MOVE_MUD_BOMB, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::GRIMER | Mods::SHADOW => [
             self::FIELD_ATTACK => 135,
@@ -2270,7 +3421,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::MUK | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_MUD_SLAP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE, Moves::MOVE_MUD_BOMB, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::MUK => [
             self::FIELD_ATTACK => 190,
@@ -2279,7 +3435,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_INFESTATION_FAST, Moves::MOVE_POISON_JAB_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_LICK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_GUNK_SHOT, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_ACID_SPRAY]
         ],
         Pokemon::MUK | Mods::ALOLAN => [
             self::FIELD_ATTACK => 190,
@@ -2289,7 +3450,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_SNARL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_GUNK_SHOT, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_ACID_SPRAY]
         ],
         Pokemon::MUK | Mods::PURIFIED => [
             self::FIELD_ATTACK => 190,
@@ -2298,7 +3463,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_INFESTATION_FAST, Moves::MOVE_POISON_JAB_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_LICK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_GUNK_SHOT, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_ACID_SPRAY]
         ],
         Pokemon::MUK | Mods::SHADOW => [
             self::FIELD_ATTACK => 190,
@@ -2309,7 +3479,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_INFESTATION_FAST, Moves::MOVE_POISON_JAB_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_LICK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_GUNK_SHOT, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_ACID_SPRAY]
         ],
         Pokemon::SHELLDER => [
             self::FIELD_ATTACK => 116,
@@ -2318,7 +3493,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::CLOYSTER],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ICE_SHARD_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_WATER_PULSE, Moves::MOVE_ICY_WIND]
         ],
         Pokemon::SHELLDER | Mods::PURIFIED => [
             self::FIELD_ATTACK => 116,
@@ -2327,7 +3507,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::CLOYSTER | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ICE_SHARD_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_WATER_PULSE, Moves::MOVE_ICY_WIND]
         ],
         Pokemon::SHELLDER | Mods::SHADOW => [
             self::FIELD_ATTACK => 116,
@@ -2338,7 +3523,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::CLOYSTER | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ICE_SHARD_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_WATER_PULSE, Moves::MOVE_ICY_WIND]
         ],
         Pokemon::CLOYSTER => [
             self::FIELD_ATTACK => 186,
@@ -2348,7 +3538,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ICE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FROST_BREATH_FAST, Moves::MOVE_ICE_SHARD_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AURORA_BEAM, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_AVALANCHE, Moves::MOVE_ICY_WIND],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BLIZZARD]
         ],
         Pokemon::CLOYSTER | Mods::PURIFIED => [
             self::FIELD_ATTACK => 186,
@@ -2358,7 +3553,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ICE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FROST_BREATH_FAST, Moves::MOVE_ICE_SHARD_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AURORA_BEAM, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_AVALANCHE, Moves::MOVE_ICY_WIND],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BLIZZARD]
         ],
         Pokemon::CLOYSTER | Mods::SHADOW => [
             self::FIELD_ATTACK => 186,
@@ -2370,7 +3570,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FROST_BREATH_FAST, Moves::MOVE_ICE_SHARD_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AURORA_BEAM, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_AVALANCHE, Moves::MOVE_ICY_WIND],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BLIZZARD]
         ],
         Pokemon::GASTLY => [
             self::FIELD_ATTACK => 186,
@@ -2380,7 +3585,14 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::HAUNTER],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_LICK_FAST, Moves::MOVE_ASTONISH_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_SUCKER_PUNCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SHADE, Moves::MOVE_DARK_PULSE, Moves::MOVE_SLUDGE_BOMB],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_OMINOUS_WIND]
         ],
         Pokemon::HAUNTER => [
             self::FIELD_ATTACK => 223,
@@ -2390,7 +3602,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::GENGAR],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SHADOW_CLAW_FAST, Moves::MOVE_ASTONISH_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_LICK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_PUNCH, Moves::MOVE_DARK_PULSE, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::GENGAR => [
             self::FIELD_ATTACK => 261,
@@ -2400,7 +3618,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SUCKER_PUNCH_FAST, Moves::MOVE_HEX_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_LICK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_SLUDGE_BOMB],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_DARK_PULSE, Moves::MOVE_PSYCHIC, Moves::MOVE_SHADOW_PUNCH]
         ],
         Pokemon::ONIX => [
             self::FIELD_ATTACK => 85,
@@ -2410,7 +3634,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::STEELIX],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_THROW_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SAND_TOMB, Moves::MOVE_STONE_EDGE, Moves::MOVE_HEAVY_SLAM],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_IRON_HEAD, Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::ONIX | Mods::PURIFIED => [
             self::FIELD_ATTACK => 85,
@@ -2420,7 +3650,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::STEELIX | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_THROW_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SAND_TOMB, Moves::MOVE_STONE_EDGE, Moves::MOVE_HEAVY_SLAM],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_IRON_HEAD, Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::ONIX | Mods::SHADOW => [
             self::FIELD_ATTACK => 85,
@@ -2432,7 +3668,13 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_EVOLVES => [Pokemon::STEELIX | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_THROW_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SAND_TOMB, Moves::MOVE_STONE_EDGE, Moves::MOVE_HEAVY_SLAM],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_IRON_HEAD, Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::DROWZEE => [
             self::FIELD_ATTACK => 89,
@@ -2441,7 +3683,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::HYPNO],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POUND_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_PSYSHOCK, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::DROWZEE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 89,
@@ -2450,7 +3697,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::HYPNO | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POUND_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_PSYSHOCK, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::DROWZEE | Mods::SHADOW => [
             self::FIELD_ATTACK => 89,
@@ -2461,7 +3713,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::HYPNO | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POUND_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_PSYSHOCK, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::HYPNO => [
             self::FIELD_ATTACK => 144,
@@ -2470,7 +3727,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ZEN_HEADBUTT_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_PSYCHIC, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_FIRE_PUNCH, Moves::MOVE_ICE_PUNCH, Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_SHADOW_BALL],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_PSYSHOCK]
         ],
         Pokemon::HYPNO | Mods::PURIFIED => [
             self::FIELD_ATTACK => 144,
@@ -2479,7 +3741,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ZEN_HEADBUTT_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_PSYCHIC, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_FIRE_PUNCH, Moves::MOVE_ICE_PUNCH, Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_SHADOW_BALL],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_PSYSHOCK]
         ],
         Pokemon::HYPNO | Mods::SHADOW => [
             self::FIELD_ATTACK => 144,
@@ -2490,7 +3757,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ZEN_HEADBUTT_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_PSYCHIC, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_FIRE_PUNCH, Moves::MOVE_ICE_PUNCH, Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_SHADOW_BALL],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_PSYSHOCK]
         ],
         Pokemon::KRABBY => [
             self::FIELD_ATTACK => 181,
@@ -2499,7 +3771,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::KINGLER],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_VICE_GRIP, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_WATER_PULSE]
         ],
         Pokemon::KRABBY | Mods::PURIFIED => [
             self::FIELD_ATTACK => 181,
@@ -2508,7 +3785,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::KINGLER | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_VICE_GRIP, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_WATER_PULSE]
         ],
         Pokemon::KRABBY | Mods::SHADOW => [
             self::FIELD_ATTACK => 181,
@@ -2519,7 +3801,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::KINGLER | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_VICE_GRIP, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_WATER_PULSE]
         ],
         Pokemon::KINGLER => [
             self::FIELD_ATTACK => 240,
@@ -2528,7 +3815,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_METAL_CLAW_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_VICE_GRIP, Moves::MOVE_X_SCISSOR, Moves::MOVE_WATER_PULSE, Moves::MOVE_CRABHAMMER]
         ],
         Pokemon::KINGLER | Mods::PURIFIED => [
             self::FIELD_ATTACK => 240,
@@ -2537,7 +3829,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_METAL_CLAW_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_VICE_GRIP, Moves::MOVE_X_SCISSOR, Moves::MOVE_WATER_PULSE, Moves::MOVE_CRABHAMMER]
         ],
         Pokemon::KINGLER | Mods::SHADOW => [
             self::FIELD_ATTACK => 240,
@@ -2548,7 +3845,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_METAL_CLAW_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_VICE_GRIP, Moves::MOVE_X_SCISSOR, Moves::MOVE_WATER_PULSE, Moves::MOVE_CRABHAMMER]
         ],
         Pokemon::VOLTORB => [
             self::FIELD_ATTACK => 109,
@@ -2557,7 +3859,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::ELECTRODE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SPARK_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DISCHARGE, Moves::MOVE_THUNDERBOLT, Moves::MOVE_GYRO_BALL],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SIGNAL_BEAM]
         ],
         Pokemon::ELECTRODE => [
             self::FIELD_ATTACK => 173,
@@ -2566,7 +3874,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SPARK_FAST, Moves::MOVE_VOLT_SWITCH_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DISCHARGE, Moves::MOVE_THUNDERBOLT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::EXEGGCUTE => [
             self::FIELD_ATTACK => 107,
@@ -2576,7 +3889,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::EXEGGUTOR],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_BULLET_SEED_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SEED_BOMB, Moves::MOVE_PSYCHIC, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::EXEGGCUTE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 107,
@@ -2586,7 +3904,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::EXEGGUTOR | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_BULLET_SEED_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SEED_BOMB, Moves::MOVE_PSYCHIC, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::EXEGGCUTE | Mods::SHADOW => [
             self::FIELD_ATTACK => 107,
@@ -2598,7 +3921,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::EXEGGUTOR | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_BULLET_SEED_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SEED_BOMB, Moves::MOVE_PSYCHIC, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::EXEGGUTOR => [
             self::FIELD_ATTACK => 233,
@@ -2608,7 +3936,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BULLET_SEED_FAST, Moves::MOVE_EXTRASENSORY_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SEED_BOMB, Moves::MOVE_PSYCHIC, Moves::MOVE_SOLAR_BEAM]
         ],
         Pokemon::EXEGGUTOR | Mods::ALOLAN => [
             self::FIELD_ATTACK => 230,
@@ -2618,7 +3951,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DRAGON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BULLET_SEED_FAST, Moves::MOVE_DRAGON_TAIL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SEED_BOMB, Moves::MOVE_DRAGON_PULSE, Moves::MOVE_SOLAR_BEAM]
         ],
         Pokemon::EXEGGUTOR | Mods::PURIFIED => [
             self::FIELD_ATTACK => 233,
@@ -2628,7 +3965,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BULLET_SEED_FAST, Moves::MOVE_EXTRASENSORY_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SEED_BOMB, Moves::MOVE_PSYCHIC, Moves::MOVE_SOLAR_BEAM]
         ],
         Pokemon::EXEGGUTOR | Mods::SHADOW => [
             self::FIELD_ATTACK => 233,
@@ -2640,7 +3982,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BULLET_SEED_FAST, Moves::MOVE_EXTRASENSORY_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SEED_BOMB, Moves::MOVE_PSYCHIC, Moves::MOVE_SOLAR_BEAM]
         ],
         Pokemon::CUBONE => [
             self::FIELD_ATTACK => 90,
@@ -2649,7 +3996,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::MAROWAK],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BONE_CLUB, Moves::MOVE_DIG, Moves::MOVE_BULLDOZE]
         ],
         Pokemon::CUBONE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 90,
@@ -2658,7 +4010,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::MAROWAK | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BONE_CLUB, Moves::MOVE_DIG, Moves::MOVE_BULLDOZE]
         ],
         Pokemon::CUBONE | Mods::SHADOW => [
             self::FIELD_ATTACK => 90,
@@ -2669,7 +4026,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::MAROWAK | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BONE_CLUB, Moves::MOVE_DIG, Moves::MOVE_BULLDOZE]
         ],
         Pokemon::MAROWAK => [
             self::FIELD_ATTACK => 144,
@@ -2678,7 +4040,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BONE_CLUB, Moves::MOVE_DIG, Moves::MOVE_EARTHQUAKE]
         ],
         Pokemon::MAROWAK | Mods::ALOLAN => [
             self::FIELD_ATTACK => 144,
@@ -2688,7 +4054,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GHOST,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HEX_FAST, Moves::MOVE_ROCK_SMASH_FAST, Moves::MOVE_FIRE_SPIN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BONE_CLUB, Moves::MOVE_SHADOW_BALL, Moves::MOVE_FIRE_BLAST, Moves::MOVE_FLAME_WHEEL]
         ],
         Pokemon::MAROWAK | Mods::PURIFIED => [
             self::FIELD_ATTACK => 144,
@@ -2697,7 +4067,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BONE_CLUB, Moves::MOVE_DIG, Moves::MOVE_EARTHQUAKE]
         ],
         Pokemon::MAROWAK | Mods::SHADOW => [
             self::FIELD_ATTACK => 144,
@@ -2708,7 +4082,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BONE_CLUB, Moves::MOVE_DIG, Moves::MOVE_EARTHQUAKE]
         ],
         Pokemon::HITMONLEE => [
             self::FIELD_ATTACK => 224,
@@ -2717,7 +4095,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_LOW_KICK_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_LOW_SWEEP, Moves::MOVE_STONE_EDGE],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_STOMP, Moves::MOVE_BRICK_BREAK]
         ],
         Pokemon::HITMONLEE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 224,
@@ -2726,7 +4109,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_LOW_KICK_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_LOW_SWEEP, Moves::MOVE_STONE_EDGE],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_STOMP, Moves::MOVE_BRICK_BREAK]
         ],
         Pokemon::HITMONLEE | Mods::SHADOW => [
             self::FIELD_ATTACK => 224,
@@ -2737,7 +4125,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_LOW_KICK_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_LOW_SWEEP, Moves::MOVE_STONE_EDGE],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_STOMP, Moves::MOVE_BRICK_BREAK]
         ],
         Pokemon::HITMONCHAN => [
             self::FIELD_ATTACK => 193,
@@ -2746,7 +4139,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BULLET_PUNCH_FAST, Moves::MOVE_COUNTER_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_PUNCH, Moves::MOVE_ICE_PUNCH, Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_POWER_UP_PUNCH],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BRICK_BREAK]
         ],
         Pokemon::HITMONCHAN | Mods::PURIFIED => [
             self::FIELD_ATTACK => 193,
@@ -2755,7 +4154,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BULLET_PUNCH_FAST, Moves::MOVE_COUNTER_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_PUNCH, Moves::MOVE_ICE_PUNCH, Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_POWER_UP_PUNCH],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BRICK_BREAK]
         ],
         Pokemon::HITMONCHAN | Mods::SHADOW => [
             self::FIELD_ATTACK => 193,
@@ -2766,7 +4171,13 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BULLET_PUNCH_FAST, Moves::MOVE_COUNTER_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_PUNCH, Moves::MOVE_ICE_PUNCH, Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_POWER_UP_PUNCH],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BRICK_BREAK]
         ],
         Pokemon::LICKITUNG => [
             self::FIELD_ATTACK => 108,
@@ -2775,7 +4186,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::LICKILICKY],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_LICK_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYPER_BEAM, Moves::MOVE_STOMP, Moves::MOVE_POWER_WHIP],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::KOFFING => [
             self::FIELD_ATTACK => 119,
@@ -2784,7 +4201,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::WEEZING],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_INFESTATION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::KOFFING | Mods::PURIFIED => [
             self::FIELD_ATTACK => 119,
@@ -2793,7 +4215,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::WEEZING | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_INFESTATION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::KOFFING | Mods::SHADOW => [
             self::FIELD_ATTACK => 119,
@@ -2804,7 +4231,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::WEEZING | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_INFESTATION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::WEEZING => [
             self::FIELD_ATTACK => 174,
@@ -2813,7 +4245,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_INFESTATION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SHADOW_BALL, Moves::MOVE_DARK_PULSE, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::WEEZING | Mods::GALARIAN => [
             self::FIELD_ATTACK => 174,
@@ -2823,7 +4259,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE, Moves::MOVE_HYPER_BEAM, Moves::MOVE_PLAY_ROUGH, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OVERHEAT]
         ],
         Pokemon::WEEZING | Mods::PURIFIED => [
             self::FIELD_ATTACK => 174,
@@ -2832,7 +4272,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_INFESTATION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SHADOW_BALL, Moves::MOVE_DARK_PULSE, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::WEEZING | Mods::SHADOW => [
             self::FIELD_ATTACK => 174,
@@ -2843,7 +4287,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_INFESTATION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SHADOW_BALL, Moves::MOVE_DARK_PULSE, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::RHYHORN => [
             self::FIELD_ATTACK => 140,
@@ -2853,7 +4301,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ROCK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::RHYDON],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BULLDOZE, Moves::MOVE_HORN_ATTACK, Moves::MOVE_STOMP]
         ],
         Pokemon::RHYHORN | Mods::PURIFIED => [
             self::FIELD_ATTACK => 140,
@@ -2863,7 +4316,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ROCK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::RHYDON | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BULLDOZE, Moves::MOVE_HORN_ATTACK, Moves::MOVE_STOMP]
         ],
         Pokemon::RHYHORN | Mods::SHADOW => [
             self::FIELD_ATTACK => 140,
@@ -2875,7 +4333,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::RHYDON | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BULLDOZE, Moves::MOVE_HORN_ATTACK, Moves::MOVE_STOMP]
         ],
         Pokemon::RHYDON => [
             self::FIELD_ATTACK => 222,
@@ -2885,7 +4348,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ROCK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::RHYPERIOR],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SURF, Moves::MOVE_EARTHQUAKE, Moves::MOVE_STONE_EDGE],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_MEGAHORN]
         ],
         Pokemon::RHYDON | Mods::PURIFIED => [
             self::FIELD_ATTACK => 222,
@@ -2895,7 +4364,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ROCK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::RHYPERIOR | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SURF, Moves::MOVE_EARTHQUAKE, Moves::MOVE_STONE_EDGE],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_MEGAHORN]
         ],
         Pokemon::RHYDON | Mods::SHADOW => [
             self::FIELD_ATTACK => 222,
@@ -2907,7 +4382,13 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::RHYPERIOR | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SURF, Moves::MOVE_EARTHQUAKE, Moves::MOVE_STONE_EDGE],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_MEGAHORN]
         ],
         Pokemon::CHANSEY => [
             self::FIELD_ATTACK => 60,
@@ -2916,7 +4397,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::BLISSEY],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POUND_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_HYPER_BEAM, Moves::MOVE_DAZZLING_GLEAM]
         ],
         Pokemon::TANGELA => [
             self::FIELD_ATTACK => 183,
@@ -2925,7 +4411,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::TANGROWTH],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_VINE_WHIP_FAST, Moves::MOVE_INFESTATION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_GRASS_KNOT, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SOLAR_BEAM],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_POWER_WHIP]
         ],
         Pokemon::KANGASKHAN => [
             self::FIELD_ATTACK => 181,
@@ -2934,7 +4426,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_LOW_KICK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_EARTHQUAKE, Moves::MOVE_OUTRAGE, Moves::MOVE_POWER_UP_PUNCH],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BRICK_BREAK, Moves::MOVE_STOMP]
         ],
         Pokemon::KANGASKHAN | Mods::PURIFIED => [
             self::FIELD_ATTACK => 181,
@@ -2943,7 +4440,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_LOW_KICK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_EARTHQUAKE, Moves::MOVE_OUTRAGE, Moves::MOVE_POWER_UP_PUNCH],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BRICK_BREAK, Moves::MOVE_STOMP]
         ],
         Pokemon::KANGASKHAN | Mods::SHADOW => [
             self::FIELD_ATTACK => 181,
@@ -2954,7 +4456,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_LOW_KICK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_EARTHQUAKE, Moves::MOVE_OUTRAGE, Moves::MOVE_POWER_UP_PUNCH],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BRICK_BREAK, Moves::MOVE_STOMP]
         ],
         Pokemon::HORSEA => [
             self::FIELD_ATTACK => 129,
@@ -2963,7 +4470,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::SEADRA],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_BUBBLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_DRAGON_PULSE, Moves::MOVE_FLASH_CANNON]
         ],
         Pokemon::SEADRA => [
             self::FIELD_ATTACK => 187,
@@ -2972,7 +4484,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::KINGDRA],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_DRAGON_BREATH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AURORA_BEAM, Moves::MOVE_DRAGON_PULSE, Moves::MOVE_HYDRO_PUMP],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BLIZZARD]
         ],
         Pokemon::GOLDEEN => [
             self::FIELD_ATTACK => 123,
@@ -2981,7 +4499,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::SEAKING],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PECK_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_HORN_ATTACK, Moves::MOVE_AQUA_TAIL]
         ],
         Pokemon::SEAKING => [
             self::FIELD_ATTACK => 175,
@@ -2990,7 +4513,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PECK_FAST, Moves::MOVE_WATERFALL_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_POISON_JAB_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_BEAM, Moves::MOVE_WATER_PULSE, Moves::MOVE_MEGAHORN],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ICY_WIND, Moves::MOVE_DRILL_RUN]
         ],
         Pokemon::STARYU => [
             self::FIELD_ATTACK => 137,
@@ -2999,7 +4528,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::STARMIE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SWIFT, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_POWER_GEM]
         ],
         Pokemon::STARMIE => [
             self::FIELD_ATTACK => 210,
@@ -3009,7 +4543,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HIDDEN_POWER_FAST, Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_POWER_GEM, Moves::MOVE_PSYCHIC, Moves::MOVE_THUNDER, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::MR_MIME => [
             self::FIELD_ATTACK => 192,
@@ -3019,7 +4558,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_PSYCHIC, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::SCYTHER => [
             self::FIELD_ATTACK => 218,
@@ -3029,7 +4572,14 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::SCIZOR],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FURY_CUTTER_FAST, Moves::MOVE_AIR_SLASH_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_STEEL_WING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SLASH, Moves::MOVE_X_SCISSOR, Moves::MOVE_AERIAL_ACE],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BUG_BUZZ]
         ],
         Pokemon::SCYTHER | Mods::PURIFIED => [
             self::FIELD_ATTACK => 218,
@@ -3039,7 +4589,14 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::SCIZOR | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FURY_CUTTER_FAST, Moves::MOVE_AIR_SLASH_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_STEEL_WING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SLASH, Moves::MOVE_X_SCISSOR, Moves::MOVE_AERIAL_ACE],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BUG_BUZZ]
         ],
         Pokemon::SCYTHER | Mods::SHADOW => [
             self::FIELD_ATTACK => 218,
@@ -3051,7 +4608,14 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_EVOLVES => [Pokemon::SCIZOR | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FURY_CUTTER_FAST, Moves::MOVE_AIR_SLASH_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_STEEL_WING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SLASH, Moves::MOVE_X_SCISSOR, Moves::MOVE_AERIAL_ACE],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BUG_BUZZ]
         ],
         Pokemon::JYNX => [
             self::FIELD_ATTACK => 223,
@@ -3061,7 +4625,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FROST_BREATH_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_POUND_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAINING_KISS, Moves::MOVE_AVALANCHE, Moves::MOVE_PSYSHOCK, Moves::MOVE_FOCUS_BLAST],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ICE_PUNCH]
         ],
         Pokemon::ELECTABUZZ => [
             self::FIELD_ATTACK => 198,
@@ -3070,7 +4640,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::ELECTIVIRE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_THUNDER_SHOCK_FAST, Moves::MOVE_LOW_KICK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_THUNDERBOLT, Moves::MOVE_THUNDER]
         ],
         Pokemon::ELECTABUZZ | Mods::PURIFIED => [
             self::FIELD_ATTACK => 198,
@@ -3079,7 +4654,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::ELECTIVIRE | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_THUNDER_SHOCK_FAST, Moves::MOVE_LOW_KICK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_THUNDERBOLT, Moves::MOVE_THUNDER]
         ],
         Pokemon::ELECTABUZZ | Mods::SHADOW => [
             self::FIELD_ATTACK => 198,
@@ -3090,7 +4670,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_EVOLVES => [Pokemon::ELECTIVIRE | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_THUNDER_SHOCK_FAST, Moves::MOVE_LOW_KICK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_THUNDERBOLT, Moves::MOVE_THUNDER]
         ],
         Pokemon::MAGMAR => [
             self::FIELD_ATTACK => 206,
@@ -3099,7 +4684,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::MAGMORTAR],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_KARATE_CHOP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_FIRE_PUNCH, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::MAGMAR | Mods::PURIFIED => [
             self::FIELD_ATTACK => 206,
@@ -3108,7 +4698,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::MAGMORTAR | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_KARATE_CHOP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_FIRE_PUNCH, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::MAGMAR | Mods::SHADOW => [
             self::FIELD_ATTACK => 206,
@@ -3119,7 +4714,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_EVOLVES => [Pokemon::MAGMORTAR | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_KARATE_CHOP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_FIRE_PUNCH, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::PINSIR => [
             self::FIELD_ATTACK => 238,
@@ -3128,7 +4728,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_SMASH_FAST, Moves::MOVE_BUG_BITE_FAST, Moves::MOVE_FURY_CUTTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_VICE_GRIP, Moves::MOVE_X_SCISSOR, Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_SUPER_POWER],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SUBMISSION]
         ],
         Pokemon::PINSIR | Mods::PURIFIED => [
             self::FIELD_ATTACK => 238,
@@ -3137,7 +4742,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_SMASH_FAST, Moves::MOVE_BUG_BITE_FAST, Moves::MOVE_FURY_CUTTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_VICE_GRIP, Moves::MOVE_X_SCISSOR, Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_SUPER_POWER],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SUBMISSION]
         ],
         Pokemon::PINSIR | Mods::SHADOW => [
             self::FIELD_ATTACK => 238,
@@ -3148,7 +4758,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_SMASH_FAST, Moves::MOVE_BUG_BITE_FAST, Moves::MOVE_FURY_CUTTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_VICE_GRIP, Moves::MOVE_X_SCISSOR, Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_SUPER_POWER],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SUBMISSION]
         ],
         Pokemon::TAUROS => [
             self::FIELD_ATTACK => 198,
@@ -3157,7 +4772,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HORN_ATTACK, Moves::MOVE_IRON_HEAD, Moves::MOVE_EARTHQUAKE]
         ],
         Pokemon::MAGIKARP => [
             self::FIELD_ATTACK => 29,
@@ -3166,7 +4785,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::GYARADOS],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SPLASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::MAGIKARP | Mods::PURIFIED => [
             self::FIELD_ATTACK => 29,
@@ -3175,7 +4799,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 20,
+            self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_EVOLVES => [Pokemon::GYARADOS | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SPLASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::MAGIKARP | Mods::SHADOW => [
             self::FIELD_ATTACK => 29,
@@ -3186,7 +4815,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 1000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 30,
+            self::FIELD_THIRD_MOVE_STARDUST => 12000,
+            self::FIELD_EVOLVES => [Pokemon::GYARADOS | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SPLASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::GYARADOS => [
             self::FIELD_ATTACK => 237,
@@ -3196,7 +4830,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_WATERFALL_FAST, Moves::MOVE_DRAGON_BREATH_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_DRAGON_TAIL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_CRUNCH, Moves::MOVE_OUTRAGE, Moves::MOVE_TWISTER],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRAGON_PULSE]
         ],
         Pokemon::GYARADOS | Mods::PURIFIED => [
             self::FIELD_ATTACK => 237,
@@ -3206,7 +4846,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 20,
+            self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_WATERFALL_FAST, Moves::MOVE_DRAGON_BREATH_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_DRAGON_TAIL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_CRUNCH, Moves::MOVE_OUTRAGE, Moves::MOVE_TWISTER],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRAGON_PULSE]
         ],
         Pokemon::GYARADOS | Mods::SHADOW => [
             self::FIELD_ATTACK => 237,
@@ -3218,7 +4864,13 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 1000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 30,
+            self::FIELD_THIRD_MOVE_STARDUST => 12000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_WATERFALL_FAST, Moves::MOVE_DRAGON_BREATH_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_DRAGON_TAIL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_CRUNCH, Moves::MOVE_OUTRAGE, Moves::MOVE_TWISTER],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRAGON_PULSE]
         ],
         Pokemon::LAPRAS => [
             self::FIELD_ATTACK => 165,
@@ -3228,7 +4880,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ICE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FROST_BREATH_FAST, Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_ICE_SHARD_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_SURF, Moves::MOVE_BLIZZARD, Moves::MOVE_SKULL_BASH],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRAGON_PULSE, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::LAPRAS | Mods::PURIFIED => [
             self::FIELD_ATTACK => 165,
@@ -3238,7 +4896,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ICE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FROST_BREATH_FAST, Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_ICE_SHARD_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_SURF, Moves::MOVE_BLIZZARD, Moves::MOVE_SKULL_BASH],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRAGON_PULSE, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::LAPRAS | Mods::SHADOW => [
             self::FIELD_ATTACK => 165,
@@ -3250,7 +4914,13 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FROST_BREATH_FAST, Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_ICE_SHARD_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_SURF, Moves::MOVE_BLIZZARD, Moves::MOVE_SKULL_BASH],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRAGON_PULSE, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::DITTO => [
             self::FIELD_ATTACK => 91,
@@ -3259,7 +4929,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TRANSFORM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::EEVEE => [
             self::FIELD_ATTACK => 104,
@@ -3268,7 +4942,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::VAPOREON, Pokemon::JOLTEON, Pokemon::FLAREON, Pokemon::ESPEON, Pokemon::UMBREON, Pokemon::LEAFEON, Pokemon::GLACEON],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_QUICK_ATTACK_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_SWIFT],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_LAST_RESORT, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::VAPOREON => [
             self::FIELD_ATTACK => 205,
@@ -3277,7 +4957,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_AQUA_TAIL],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_LAST_RESORT]
         ],
         Pokemon::JOLTEON => [
             self::FIELD_ATTACK => 232,
@@ -3286,7 +4971,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_THUNDER_SHOCK_FAST, Moves::MOVE_VOLT_SWITCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DISCHARGE, Moves::MOVE_THUNDERBOLT, Moves::MOVE_THUNDER],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_LAST_RESORT]
         ],
         Pokemon::FLAREON => [
             self::FIELD_ATTACK => 246,
@@ -3295,7 +4985,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_FIRE_SPIN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_FLAMETHROWER, Moves::MOVE_OVERHEAT],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_LAST_RESORT, Moves::MOVE_HEAT_WAVE]
         ],
         Pokemon::PORYGON => [
             self::FIELD_ATTACK => 153,
@@ -3304,7 +4999,14 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::PORYGON2],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CHARGE_BEAM_FAST, Moves::MOVE_HIDDEN_POWER_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SOLAR_BEAM, Moves::MOVE_HYPER_BEAM, Moves::MOVE_ZAP_CANNON],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SIGNAL_BEAM, Moves::MOVE_PSYBEAM, Moves::MOVE_DISCHARGE]
         ],
         Pokemon::PORYGON | Mods::PURIFIED => [
             self::FIELD_ATTACK => 153,
@@ -3313,7 +5015,14 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::PORYGON2 | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CHARGE_BEAM_FAST, Moves::MOVE_HIDDEN_POWER_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SOLAR_BEAM, Moves::MOVE_HYPER_BEAM, Moves::MOVE_ZAP_CANNON],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SIGNAL_BEAM, Moves::MOVE_PSYBEAM, Moves::MOVE_DISCHARGE]
         ],
         Pokemon::PORYGON | Mods::SHADOW => [
             self::FIELD_ATTACK => 153,
@@ -3324,7 +5033,14 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::PORYGON2 | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CHARGE_BEAM_FAST, Moves::MOVE_HIDDEN_POWER_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SOLAR_BEAM, Moves::MOVE_HYPER_BEAM, Moves::MOVE_ZAP_CANNON],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SIGNAL_BEAM, Moves::MOVE_PSYBEAM, Moves::MOVE_DISCHARGE]
         ],
         Pokemon::OMANYTE => [
             self::FIELD_ATTACK => 155,
@@ -3334,7 +5050,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::OMASTAR],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ANCIENT_POWER, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_ROCK_BLAST],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_TOMB, Moves::MOVE_BRINE]
         ],
         Pokemon::OMANYTE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 155,
@@ -3344,7 +5066,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::OMASTAR | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ANCIENT_POWER, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_ROCK_BLAST],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_TOMB, Moves::MOVE_BRINE]
         ],
         Pokemon::OMANYTE | Mods::SHADOW => [
             self::FIELD_ATTACK => 155,
@@ -3356,7 +5084,13 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_EVOLVES => [Pokemon::OMASTAR | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ANCIENT_POWER, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_ROCK_BLAST],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_TOMB, Moves::MOVE_BRINE]
         ],
         Pokemon::OMASTAR => [
             self::FIELD_ATTACK => 207,
@@ -3366,7 +5100,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_ROCK_THROW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ANCIENT_POWER, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_ROCK_BLAST],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::OMASTAR | Mods::PURIFIED => [
             self::FIELD_ATTACK => 207,
@@ -3376,7 +5116,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_ROCK_THROW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ANCIENT_POWER, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_ROCK_BLAST],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::OMASTAR | Mods::SHADOW => [
             self::FIELD_ATTACK => 207,
@@ -3388,7 +5134,13 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_ROCK_THROW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ANCIENT_POWER, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_ROCK_BLAST],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::KABUTO => [
             self::FIELD_ATTACK => 148,
@@ -3398,7 +5150,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::KABUTOPS],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ANCIENT_POWER, Moves::MOVE_AQUA_JET, Moves::MOVE_ROCK_TOMB]
         ],
         Pokemon::KABUTOPS => [
             self::FIELD_ATTACK => 220,
@@ -3408,7 +5165,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_ROCK_SMASH_FAST, Moves::MOVE_WATERFALL_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_FURY_CUTTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ANCIENT_POWER, Moves::MOVE_WATER_PULSE, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::AERODACTYL => [
             self::FIELD_ATTACK => 221,
@@ -3418,7 +5180,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_STEEL_WING_FAST, Moves::MOVE_BITE_FAST, Moves::MOVE_ROCK_THROW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ANCIENT_POWER, Moves::MOVE_IRON_HEAD, Moves::MOVE_HYPER_BEAM, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::SNORLAX => [
             self::FIELD_ATTACK => 190,
@@ -3427,7 +5193,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ZEN_HEADBUTT_FAST, Moves::MOVE_LICK_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_YAWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAVY_SLAM, Moves::MOVE_HYPER_BEAM, Moves::MOVE_EARTHQUAKE, Moves::MOVE_OUTRAGE, Moves::MOVE_SKULL_BASH, Moves::MOVE_BODY_SLAM, Moves::MOVE_SUPER_POWER]
         ],
         Pokemon::SNORLAX | Mods::PURIFIED => [
             self::FIELD_ATTACK => 190,
@@ -3436,7 +5207,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ZEN_HEADBUTT_FAST, Moves::MOVE_LICK_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_YAWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAVY_SLAM, Moves::MOVE_HYPER_BEAM, Moves::MOVE_EARTHQUAKE, Moves::MOVE_OUTRAGE, Moves::MOVE_SKULL_BASH, Moves::MOVE_BODY_SLAM, Moves::MOVE_SUPER_POWER]
         ],
         Pokemon::SNORLAX | Mods::SHADOW => [
             self::FIELD_ATTACK => 190,
@@ -3447,7 +5223,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ZEN_HEADBUTT_FAST, Moves::MOVE_LICK_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_YAWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAVY_SLAM, Moves::MOVE_HYPER_BEAM, Moves::MOVE_EARTHQUAKE, Moves::MOVE_OUTRAGE, Moves::MOVE_SKULL_BASH, Moves::MOVE_BODY_SLAM, Moves::MOVE_SUPER_POWER]
         ],
         Pokemon::ARTICUNO => [
             self::FIELD_ATTACK => 192,
@@ -3457,7 +5238,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FROST_BREATH_FAST, Moves::MOVE_ICE_SHARD_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_BEAM, Moves::MOVE_ICY_WIND, Moves::MOVE_BLIZZARD, Moves::MOVE_ANCIENT_POWER],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_HURRICANE]
         ],
         Pokemon::ARTICUNO | Mods::PURIFIED => [
             self::FIELD_ATTACK => 192,
@@ -3467,7 +5253,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 80,
+            self::FIELD_THIRD_MOVE_STARDUST => 80000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FROST_BREATH_FAST, Moves::MOVE_ICE_SHARD_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_BEAM, Moves::MOVE_ICY_WIND, Moves::MOVE_BLIZZARD, Moves::MOVE_ANCIENT_POWER],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_HURRICANE]
         ],
         Pokemon::ARTICUNO | Mods::SHADOW => [
             self::FIELD_ATTACK => 192,
@@ -3479,7 +5270,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 20000,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 120,
+            self::FIELD_THIRD_MOVE_STARDUST => 120000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FROST_BREATH_FAST, Moves::MOVE_ICE_SHARD_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_BEAM, Moves::MOVE_ICY_WIND, Moves::MOVE_BLIZZARD, Moves::MOVE_ANCIENT_POWER],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_HURRICANE]
         ],
         Pokemon::ZAPDOS => [
             self::FIELD_ATTACK => 253,
@@ -3489,7 +5285,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CHARGE_BEAM_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_THUNDER_SHOCK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ZAP_CANNON, Moves::MOVE_THUNDERBOLT, Moves::MOVE_THUNDER, Moves::MOVE_ANCIENT_POWER, Moves::MOVE_DRILL_PECK]
         ],
         Pokemon::ZAPDOS | Mods::PURIFIED => [
             self::FIELD_ATTACK => 253,
@@ -3499,7 +5300,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 80,
+            self::FIELD_THIRD_MOVE_STARDUST => 80000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CHARGE_BEAM_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_THUNDER_SHOCK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ZAP_CANNON, Moves::MOVE_THUNDERBOLT, Moves::MOVE_THUNDER, Moves::MOVE_ANCIENT_POWER, Moves::MOVE_DRILL_PECK]
         ],
         Pokemon::ZAPDOS | Mods::SHADOW => [
             self::FIELD_ATTACK => 253,
@@ -3511,7 +5317,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 20000,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 120,
+            self::FIELD_THIRD_MOVE_STARDUST => 120000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CHARGE_BEAM_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_THUNDER_SHOCK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ZAP_CANNON, Moves::MOVE_THUNDERBOLT, Moves::MOVE_THUNDER, Moves::MOVE_ANCIENT_POWER, Moves::MOVE_DRILL_PECK]
         ],
         Pokemon::MOLTRES => [
             self::FIELD_ATTACK => 251,
@@ -3521,7 +5332,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FIRE_SPIN_FAST, Moves::MOVE_WING_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_HEAT_WAVE, Moves::MOVE_OVERHEAT, Moves::MOVE_ANCIENT_POWER],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SKY_ATTACK]
         ],
         Pokemon::MOLTRES | Mods::PURIFIED => [
             self::FIELD_ATTACK => 251,
@@ -3531,7 +5347,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 80,
+            self::FIELD_THIRD_MOVE_STARDUST => 80000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FIRE_SPIN_FAST, Moves::MOVE_WING_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_HEAT_WAVE, Moves::MOVE_OVERHEAT, Moves::MOVE_ANCIENT_POWER],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SKY_ATTACK]
         ],
         Pokemon::MOLTRES | Mods::SHADOW => [
             self::FIELD_ATTACK => 251,
@@ -3543,7 +5364,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 20000,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 120,
+            self::FIELD_THIRD_MOVE_STARDUST => 120000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FIRE_SPIN_FAST, Moves::MOVE_WING_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_HEAT_WAVE, Moves::MOVE_OVERHEAT, Moves::MOVE_ANCIENT_POWER],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SKY_ATTACK]
         ],
         Pokemon::DRATINI => [
             self::FIELD_ATTACK => 119,
@@ -3552,7 +5378,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::DRAGON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::DRAGONAIR],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_DRAGON_BREATH_FAST, Moves::MOVE_IRON_TAIL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WRAP, Moves::MOVE_TWISTER, Moves::MOVE_AQUA_TAIL]
         ],
         Pokemon::DRATINI | Mods::PURIFIED => [
             self::FIELD_ATTACK => 119,
@@ -3561,7 +5392,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::DRAGON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::DRAGONAIR | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_DRAGON_BREATH_FAST, Moves::MOVE_IRON_TAIL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WRAP, Moves::MOVE_TWISTER, Moves::MOVE_AQUA_TAIL]
         ],
         Pokemon::DRATINI | Mods::SHADOW => [
             self::FIELD_ATTACK => 119,
@@ -3572,7 +5408,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_EVOLVES => [Pokemon::DRAGONAIR | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_DRAGON_BREATH_FAST, Moves::MOVE_IRON_TAIL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WRAP, Moves::MOVE_TWISTER, Moves::MOVE_AQUA_TAIL]
         ],
         Pokemon::DRAGONAIR => [
             self::FIELD_ATTACK => 163,
@@ -3581,7 +5422,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::DRAGON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::DRAGONITE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_DRAGON_BREATH_FAST, Moves::MOVE_IRON_TAIL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WRAP, Moves::MOVE_AQUA_TAIL, Moves::MOVE_DRAGON_PULSE]
         ],
         Pokemon::DRAGONAIR | Mods::PURIFIED => [
             self::FIELD_ATTACK => 163,
@@ -3590,7 +5436,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::DRAGON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::DRAGONITE | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_DRAGON_BREATH_FAST, Moves::MOVE_IRON_TAIL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WRAP, Moves::MOVE_AQUA_TAIL, Moves::MOVE_DRAGON_PULSE]
         ],
         Pokemon::DRAGONAIR | Mods::SHADOW => [
             self::FIELD_ATTACK => 163,
@@ -3601,7 +5452,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_EVOLVES => [Pokemon::DRAGONITE | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_DRAGON_BREATH_FAST, Moves::MOVE_IRON_TAIL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WRAP, Moves::MOVE_AQUA_TAIL, Moves::MOVE_DRAGON_PULSE]
         ],
         Pokemon::DRAGONITE => [
             self::FIELD_ATTACK => 263,
@@ -3611,7 +5467,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_DRAGON_TAIL_FAST, Moves::MOVE_STEEL_WING_FAST, Moves::MOVE_DRAGON_BREATH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HURRICANE, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE, Moves::MOVE_DRAGON_CLAW],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRACO_METEOR, Moves::MOVE_DRAGON_PULSE]
         ],
         Pokemon::DRAGONITE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 263,
@@ -3621,7 +5482,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_DRAGON_TAIL_FAST, Moves::MOVE_STEEL_WING_FAST, Moves::MOVE_DRAGON_BREATH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HURRICANE, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE, Moves::MOVE_DRAGON_CLAW],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRACO_METEOR, Moves::MOVE_DRAGON_PULSE]
         ],
         Pokemon::DRAGONITE | Mods::SHADOW => [
             self::FIELD_ATTACK => 263,
@@ -3633,16 +5499,26 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_DRAGON_TAIL_FAST, Moves::MOVE_STEEL_WING_FAST, Moves::MOVE_DRAGON_BREATH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HURRICANE, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE, Moves::MOVE_DRAGON_CLAW],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRACO_METEOR, Moves::MOVE_DRAGON_PULSE]
         ],
-        Pokemon::MEWTWO => [
+        Pokemon::MEWTWO | FormsAlias::MEWTWO_NORMAL => [
             self::FIELD_ATTACK => 300,
             self::FIELD_DEFENSE => 182,
             self::FIELD_STAMINA => 214,
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PSYCHO_CUT_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_THUNDERBOLT, Moves::MOVE_ICE_BEAM, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_FLAMETHROWER],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_PSYSTRIKE, Moves::MOVE_SHADOW_BALL, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::MEWTWO | FormsAlias::MEWTWO_ARMORED => [
             self::FIELD_ATTACK => 182,
@@ -3651,18 +5527,28 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_IRON_TAIL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_SLIDE, Moves::MOVE_DYNAMIC_PUNCH, Moves::MOVE_EARTHQUAKE, Moves::MOVE_FUTURESIGHT],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_PSYSTRIKE]
         ],
-        Pokemon::MEWTWO | Mods::PURIFIED => [
+        Pokemon::MEWTWO | FormsAlias::MEWTWO_NORMAL | Mods::PURIFIED => [
             self::FIELD_ATTACK => 300,
             self::FIELD_DEFENSE => 182,
             self::FIELD_STAMINA => 214,
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 80,
+            self::FIELD_THIRD_MOVE_STARDUST => 80000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PSYCHO_CUT_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_THUNDERBOLT, Moves::MOVE_ICE_BEAM, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_FLAMETHROWER],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_PSYSTRIKE, Moves::MOVE_SHADOW_BALL, Moves::MOVE_HYPER_BEAM]
         ],
-        Pokemon::MEWTWO | Mods::SHADOW => [
+        Pokemon::MEWTWO | FormsAlias::MEWTWO_NORMAL | Mods::SHADOW => [
             self::FIELD_ATTACK => 300,
             self::FIELD_DEFENSE => 182,
             self::FIELD_STAMINA => 214,
@@ -3671,7 +5557,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 20000,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 120,
+            self::FIELD_THIRD_MOVE_STARDUST => 120000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PSYCHO_CUT_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_THUNDERBOLT, Moves::MOVE_ICE_BEAM, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_FLAMETHROWER],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_PSYSTRIKE, Moves::MOVE_SHADOW_BALL, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::MEW => [
             self::FIELD_ATTACK => 210,
@@ -3679,7 +5570,11 @@ class PokemonData
             self::FIELD_STAMINA => 225,
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_MYTHIC => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POUND_FAST, Moves::MOVE_STEEL_WING_FAST, Moves::MOVE_CHARGE_BEAM_FAST, Moves::MOVE_SHADOW_CLAW_FAST, Moves::MOVE_VOLT_SWITCH_FAST, Moves::MOVE_STRUGGLE_BUG_FAST, Moves::MOVE_FROST_BREATH_FAST, Moves::MOVE_DRAGON_TAIL_FAST, Moves::MOVE_INFESTATION_FAST, Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_ROCK_SMASH_FAST, Moves::MOVE_SNARL_FAST, Moves::MOVE_CUT_FAST, Moves::MOVE_WATERFALL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_ANCIENT_POWER, Moves::MOVE_DRAGON_CLAW, Moves::MOVE_PSYSHOCK, Moves::MOVE_ICE_BEAM, Moves::MOVE_BLIZZARD, Moves::MOVE_HYPER_BEAM, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_THUNDERBOLT, Moves::MOVE_THUNDER, Moves::MOVE_FLAME_CHARGE, Moves::MOVE_LOW_SWEEP, Moves::MOVE_OVERHEAT, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_ENERGY_BALL, Moves::MOVE_STONE_EDGE, Moves::MOVE_GYRO_BALL, Moves::MOVE_BULLDOZE, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_GRASS_KNOT, Moves::MOVE_FLASH_CANNON, Moves::MOVE_WILD_CHARGE, Moves::MOVE_DARK_PULSE, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_SURF]
         ],
         Pokemon::CHIKORITA => [
             self::FIELD_ATTACK => 92,
@@ -3688,7 +5583,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::BAYLEEF],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_VINE_WHIP_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_GRASS_KNOT, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::BAYLEEF => [
             self::FIELD_ATTACK => 122,
@@ -3697,7 +5597,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::MEGANIUM],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_GRASS_KNOT, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::MEGANIUM => [
             self::FIELD_ATTACK => 168,
@@ -3706,7 +5611,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_VINE_WHIP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_EARTHQUAKE],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FRENZY_PLANT]
         ],
         Pokemon::CYNDAQUIL => [
             self::FIELD_ATTACK => 116,
@@ -3715,7 +5625,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::QUILAVA],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_CHARGE, Moves::MOVE_SWIFT, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::QUILAVA => [
             self::FIELD_ATTACK => 158,
@@ -3724,7 +5639,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::TYPHLOSION],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_CHARGE, Moves::MOVE_DIG, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::TYPHLOSION => [
             self::FIELD_ATTACK => 223,
@@ -3733,7 +5653,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_OVERHEAT, Moves::MOVE_SOLAR_BEAM],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BLAST_BURN]
         ],
         Pokemon::TOTODILE => [
             self::FIELD_ATTACK => 117,
@@ -3742,7 +5667,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::CROCONAW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_SCRATCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_AQUA_JET, Moves::MOVE_WATER_PULSE]
         ],
         Pokemon::CROCONAW => [
             self::FIELD_ATTACK => 150,
@@ -3751,7 +5681,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::FERALIGATR],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_SCRATCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_ICE_PUNCH, Moves::MOVE_WATER_PULSE]
         ],
         Pokemon::FERALIGATR => [
             self::FIELD_ATTACK => 205,
@@ -3760,7 +5695,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATERFALL_FAST, Moves::MOVE_BITE_FAST, Moves::MOVE_ICE_FANG_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_ICE_BEAM],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_HYDRO_CANNON]
         ],
         Pokemon::SENTRET => [
             self::FIELD_ATTACK => 79,
@@ -3769,7 +5710,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::FURRET],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_BRICK_BREAK, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::FURRET => [
             self::FIELD_ATTACK => 148,
@@ -3778,7 +5724,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_QUICK_ATTACK_FAST, Moves::MOVE_SUCKER_PUNCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_BRICK_BREAK, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::HOOTHOOT => [
             self::FIELD_ATTACK => 67,
@@ -3788,7 +5738,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::NOCTOWL],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_PECK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AERIAL_ACE, Moves::MOVE_SKY_ATTACK, Moves::MOVE_NIGHT_SHADE]
         ],
         Pokemon::NOCTOWL => [
             self::FIELD_ATTACK => 145,
@@ -3798,7 +5753,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WING_ATTACK_FAST, Moves::MOVE_EXTRASENSORY_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_SKY_ATTACK, Moves::MOVE_NIGHT_SHADE]
         ],
         Pokemon::LEDYBA => [
             self::FIELD_ATTACK => 72,
@@ -3808,7 +5767,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::LEDIAN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SILVER_WIND, Moves::MOVE_SWIFT, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::LEDIAN => [
             self::FIELD_ATTACK => 107,
@@ -3818,7 +5782,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_STRUGGLE_BUG_FAST, Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUG_BUZZ, Moves::MOVE_SILVER_WIND, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::SPINARAK => [
             self::FIELD_ATTACK => 105,
@@ -3828,7 +5796,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::ARIADOS],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_STING_FAST, Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SLASH, Moves::MOVE_SIGNAL_BEAM, Moves::MOVE_CROSS_POISON]
         ],
         Pokemon::ARIADOS => [
             self::FIELD_ATTACK => 161,
@@ -3838,7 +5811,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_STING_FAST, Moves::MOVE_INFESTATION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_SNEAK, Moves::MOVE_MEGAHORN, Moves::MOVE_CROSS_POISON]
         ],
         Pokemon::CROBAT => [
             self::FIELD_ATTACK => 194,
@@ -3848,7 +5825,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_AIR_SLASH_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_AIR_CUTTER, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::CROBAT | Mods::PURIFIED => [
             self::FIELD_ATTACK => 194,
@@ -3858,7 +5839,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 20,
+            self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_AIR_SLASH_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_AIR_CUTTER, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::CROBAT | Mods::SHADOW => [
             self::FIELD_ATTACK => 194,
@@ -3870,7 +5855,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 1000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 30,
+            self::FIELD_THIRD_MOVE_STARDUST => 12000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_AIR_SLASH_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_AIR_CUTTER, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::CHINCHOU => [
             self::FIELD_ATTACK => 106,
@@ -3880,7 +5869,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::LANTURN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_SPARK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_THUNDERBOLT, Moves::MOVE_BUBBLE_BEAM]
         ],
         Pokemon::LANTURN => [
             self::FIELD_ATTACK => 146,
@@ -3890,7 +5884,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_CHARGE_BEAM_FAST, Moves::MOVE_SPARK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_THUNDERBOLT, Moves::MOVE_THUNDER]
         ],
         Pokemon::PICHU => [
             self::FIELD_ATTACK => 77,
@@ -3899,7 +5897,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::PIKACHU],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_THUNDER_SHOCK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDERBOLT, Moves::MOVE_DISARMING_VOICE, Moves::MOVE_THUNDER_PUNCH]
         ],
         Pokemon::CLEFFA => [
             self::FIELD_ATTACK => 75,
@@ -3908,7 +5911,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FAIRY,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::CLEFAIRY],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POUND_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_GRASS_KNOT, Moves::MOVE_PSYSHOCK, Moves::MOVE_SIGNAL_BEAM],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_PSYCHIC, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::IGGLYBUFF => [
             self::FIELD_ATTACK => 69,
@@ -3918,7 +5927,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::JIGGLYPUFF],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POUND_FAST, Moves::MOVE_FEINT_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WILD_CHARGE, Moves::MOVE_SHADOW_BALL, Moves::MOVE_PSYCHIC],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::TOGEPI => [
             self::FIELD_ATTACK => 67,
@@ -3927,7 +5942,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FAIRY,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::TOGETIC],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HIDDEN_POWER_FAST, Moves::MOVE_PECK_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ANCIENT_POWER, Moves::MOVE_PSYSHOCK, Moves::MOVE_DAZZLING_GLEAM]
         ],
         Pokemon::TOGETIC => [
             self::FIELD_ATTACK => 139,
@@ -3937,7 +5958,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::TOGEKISS],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EXTRASENSORY_FAST, Moves::MOVE_HIDDEN_POWER_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_STEEL_WING_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ANCIENT_POWER, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::NATU => [
             self::FIELD_ATTACK => 134,
@@ -3947,7 +5974,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::XATU],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PECK_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SHADE, Moves::MOVE_PSYSHOCK, Moves::MOVE_DRILL_PECK]
         ],
         Pokemon::XATU => [
             self::FIELD_ATTACK => 192,
@@ -3957,7 +5989,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_AIR_SLASH_FAST, Moves::MOVE_FEINT_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_OMINOUS_WIND, Moves::MOVE_FUTURESIGHT, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::MAREEP => [
             self::FIELD_ATTACK => 114,
@@ -3966,7 +6002,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::FLAAFFY],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_THUNDER_SHOCK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BODY_SLAM, Moves::MOVE_THUNDERBOLT, Moves::MOVE_DISCHARGE]
         ],
         Pokemon::MAREEP | Mods::PURIFIED => [
             self::FIELD_ATTACK => 114,
@@ -3975,7 +6016,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::FLAAFFY | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_THUNDER_SHOCK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BODY_SLAM, Moves::MOVE_THUNDERBOLT, Moves::MOVE_DISCHARGE]
         ],
         Pokemon::MAREEP | Mods::SHADOW => [
             self::FIELD_ATTACK => 114,
@@ -3986,7 +6032,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_EVOLVES => [Pokemon::FLAAFFY | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_THUNDER_SHOCK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BODY_SLAM, Moves::MOVE_THUNDERBOLT, Moves::MOVE_DISCHARGE]
         ],
         Pokemon::FLAAFFY => [
             self::FIELD_ATTACK => 145,
@@ -3995,7 +6046,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::AMPHAROS],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_CHARGE_BEAM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_POWER_GEM, Moves::MOVE_THUNDERBOLT, Moves::MOVE_DISCHARGE]
         ],
         Pokemon::FLAAFFY | Mods::PURIFIED => [
             self::FIELD_ATTACK => 145,
@@ -4004,7 +6060,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::AMPHAROS | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_CHARGE_BEAM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_POWER_GEM, Moves::MOVE_THUNDERBOLT, Moves::MOVE_DISCHARGE]
         ],
         Pokemon::FLAAFFY | Mods::SHADOW => [
             self::FIELD_ATTACK => 145,
@@ -4015,7 +6076,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_EVOLVES => [Pokemon::AMPHAROS | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_CHARGE_BEAM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_POWER_GEM, Moves::MOVE_THUNDERBOLT, Moves::MOVE_DISCHARGE]
         ],
         Pokemon::AMPHAROS => [
             self::FIELD_ATTACK => 211,
@@ -4024,7 +6090,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CHARGE_BEAM_FAST, Moves::MOVE_VOLT_SWITCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ZAP_CANNON, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_THUNDER, Moves::MOVE_POWER_GEM, Moves::MOVE_THUNDER_PUNCH],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRAGON_PULSE]
         ],
         Pokemon::AMPHAROS | Mods::PURIFIED => [
             self::FIELD_ATTACK => 211,
@@ -4033,7 +6104,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CHARGE_BEAM_FAST, Moves::MOVE_VOLT_SWITCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ZAP_CANNON, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_THUNDER, Moves::MOVE_POWER_GEM, Moves::MOVE_THUNDER_PUNCH],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRAGON_PULSE]
         ],
         Pokemon::AMPHAROS | Mods::SHADOW => [
             self::FIELD_ATTACK => 211,
@@ -4044,7 +6120,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CHARGE_BEAM_FAST, Moves::MOVE_VOLT_SWITCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ZAP_CANNON, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_THUNDER, Moves::MOVE_POWER_GEM, Moves::MOVE_THUNDER_PUNCH],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRAGON_PULSE]
         ],
         Pokemon::BELLOSSOM => [
             self::FIELD_ATTACK => 169,
@@ -4053,7 +6134,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_ACID_FAST, Moves::MOVE_BULLET_SEED_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_LEAF_BLADE, Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_DAZZLING_GLEAM]
         ],
         Pokemon::BELLOSSOM | Mods::PURIFIED => [
             self::FIELD_ATTACK => 169,
@@ -4062,7 +6147,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_ACID_FAST, Moves::MOVE_BULLET_SEED_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_LEAF_BLADE, Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_DAZZLING_GLEAM]
         ],
         Pokemon::BELLOSSOM | Mods::SHADOW => [
             self::FIELD_ATTACK => 169,
@@ -4073,7 +6162,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_ACID_FAST, Moves::MOVE_BULLET_SEED_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_LEAF_BLADE, Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_DAZZLING_GLEAM]
         ],
         Pokemon::MARILL => [
             self::FIELD_ATTACK => 37,
@@ -4083,7 +6176,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::AZUMARILL],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_BUBBLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_AQUA_TAIL, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::AZUMARILL => [
             self::FIELD_ATTACK => 112,
@@ -4093,7 +6191,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_SMASH_FAST, Moves::MOVE_BUBBLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PLAY_ROUGH, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::SUDOWOODO => [
             self::FIELD_ATTACK => 167,
@@ -4102,7 +6204,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ROCK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_THROW_FAST, Moves::MOVE_COUNTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STONE_EDGE, Moves::MOVE_EARTHQUAKE, Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::POLITOED => [
             self::FIELD_ATTACK => 174,
@@ -4111,7 +6217,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_BUBBLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_BLIZZARD, Moves::MOVE_SURF],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_EARTHQUAKE]
         ],
         Pokemon::POLITOED | Mods::PURIFIED => [
             self::FIELD_ATTACK => 174,
@@ -4120,7 +6231,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_BUBBLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_BLIZZARD, Moves::MOVE_SURF],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_EARTHQUAKE]
         ],
         Pokemon::POLITOED | Mods::SHADOW => [
             self::FIELD_ATTACK => 174,
@@ -4131,7 +6247,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_BUBBLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_BLIZZARD, Moves::MOVE_SURF],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_EARTHQUAKE]
         ],
         Pokemon::HOPPIP => [
             self::FIELD_ATTACK => 67,
@@ -4141,7 +6262,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::SKIPLOOM],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_BULLET_SEED_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_GRASS_KNOT, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_SEED_BOMB]
         ],
         Pokemon::SKIPLOOM => [
             self::FIELD_ATTACK => 91,
@@ -4151,7 +6277,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::JUMPLUFF],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_BULLET_SEED_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_GRASS_KNOT, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_ENERGY_BALL]
         ],
         Pokemon::JUMPLUFF => [
             self::FIELD_ATTACK => 118,
@@ -4161,7 +6292,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_INFESTATION_FAST, Moves::MOVE_BULLET_SEED_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::AIPOM => [
             self::FIELD_ATTACK => 136,
@@ -4170,7 +6305,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::AMBIPOM],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_ASTONISH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_LOW_SWEEP, Moves::MOVE_SWIFT, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::SUNKERN => [
             self::FIELD_ATTACK => 55,
@@ -4179,7 +6319,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::SUNFLORA],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_CUT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_GRASS_KNOT, Moves::MOVE_SEED_BOMB]
         ],
         Pokemon::SUNFLORA => [
             self::FIELD_ATTACK => 185,
@@ -4188,7 +6333,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_BULLET_SEED_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SOLAR_BEAM, Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::YANMA => [
             self::FIELD_ATTACK => 154,
@@ -4198,7 +6347,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::YANMEGA],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_QUICK_ATTACK_FAST, Moves::MOVE_WING_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ANCIENT_POWER, Moves::MOVE_AERIAL_ACE, Moves::MOVE_SILVER_WIND]
         ],
         Pokemon::WOOPER => [
             self::FIELD_ATTACK => 75,
@@ -4208,7 +6362,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::QUAGSIRE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_MUD_BOMB, Moves::MOVE_DIG, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::QUAGSIRE => [
             self::FIELD_ATTACK => 152,
@@ -4218,7 +6377,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_EARTHQUAKE, Moves::MOVE_STONE_EDGE, Moves::MOVE_ACID_SPRAY]
         ],
         Pokemon::ESPEON => [
             self::FIELD_ATTACK => 261,
@@ -4227,7 +6390,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_PSYCHIC, Moves::MOVE_FUTURESIGHT],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_LAST_RESORT]
         ],
         Pokemon::UMBREON => [
             self::FIELD_ATTACK => 126,
@@ -4236,7 +6404,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_SNARL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_FOUL_PLAY],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_LAST_RESORT]
         ],
         Pokemon::MURKROW => [
             self::FIELD_ATTACK => 175,
@@ -4246,7 +6419,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::HONCHKROW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PECK_FAST, Moves::MOVE_FEINT_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRILL_PECK, Moves::MOVE_FOUL_PLAY, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::MURKROW | Mods::PURIFIED => [
             self::FIELD_ATTACK => 175,
@@ -4256,7 +6434,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::HONCHKROW | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PECK_FAST, Moves::MOVE_FEINT_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRILL_PECK, Moves::MOVE_FOUL_PLAY, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::MURKROW | Mods::SHADOW => [
             self::FIELD_ATTACK => 175,
@@ -4268,7 +6451,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::HONCHKROW | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PECK_FAST, Moves::MOVE_FEINT_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRILL_PECK, Moves::MOVE_FOUL_PLAY, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::SLOWKING => [
             self::FIELD_ATTACK => 177,
@@ -4278,7 +6466,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BLIZZARD, Moves::MOVE_PSYCHIC, Moves::MOVE_FIRE_BLAST]
         ],
         Pokemon::MISDREAVUS => [
             self::FIELD_ATTACK => 167,
@@ -4287,7 +6479,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GHOST,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::MISMAGIUS],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ASTONISH_FAST, Moves::MOVE_HEX_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_SNEAK, Moves::MOVE_DARK_PULSE, Moves::MOVE_OMINOUS_WIND]
         ],
         Pokemon::MISDREAVUS | Mods::PURIFIED => [
             self::FIELD_ATTACK => 167,
@@ -4296,7 +6493,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GHOST,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::MISMAGIUS | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ASTONISH_FAST, Moves::MOVE_HEX_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_SNEAK, Moves::MOVE_DARK_PULSE, Moves::MOVE_OMINOUS_WIND]
         ],
         Pokemon::MISDREAVUS | Mods::SHADOW => [
             self::FIELD_ATTACK => 167,
@@ -4307,7 +6509,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::MISMAGIUS | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ASTONISH_FAST, Moves::MOVE_HEX_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_SNEAK, Moves::MOVE_DARK_PULSE, Moves::MOVE_OMINOUS_WIND]
         ],
         Pokemon::UNOWN => [
             self::FIELD_ATTACK => 136,
@@ -4316,7 +6523,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HIDDEN_POWER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::WOBBUFFET => [
             self::FIELD_ATTACK => 60,
@@ -4325,7 +6536,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_COUNTER_FAST, Moves::MOVE_SPLASH_FAST, Moves::MOVE_CHARM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_MIRROR_COAT]
         ],
         Pokemon::WOBBUFFET | Mods::PURIFIED => [
             self::FIELD_ATTACK => 60,
@@ -4334,7 +6549,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_COUNTER_FAST, Moves::MOVE_SPLASH_FAST, Moves::MOVE_CHARM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_MIRROR_COAT]
         ],
         Pokemon::WOBBUFFET | Mods::SHADOW => [
             self::FIELD_ATTACK => 60,
@@ -4345,7 +6564,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_COUNTER_FAST, Moves::MOVE_SPLASH_FAST, Moves::MOVE_CHARM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_MIRROR_COAT]
         ],
         Pokemon::GIRAFARIG => [
             self::FIELD_ATTACK => 182,
@@ -4355,7 +6578,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_THUNDERBOLT, Moves::MOVE_MIRROR_COAT]
         ],
         Pokemon::PINECO => [
             self::FIELD_ATTACK => 108,
@@ -4364,7 +6591,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::FORRETRESS],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_GYRO_BALL, Moves::MOVE_ROCK_TOMB, Moves::MOVE_SAND_TOMB]
         ],
         Pokemon::PINECO | Mods::PURIFIED => [
             self::FIELD_ATTACK => 108,
@@ -4373,7 +6605,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::FORRETRESS | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_GYRO_BALL, Moves::MOVE_ROCK_TOMB, Moves::MOVE_SAND_TOMB]
         ],
         Pokemon::PINECO | Mods::SHADOW => [
             self::FIELD_ATTACK => 108,
@@ -4384,7 +6621,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_EVOLVES => [Pokemon::FORRETRESS | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_GYRO_BALL, Moves::MOVE_ROCK_TOMB, Moves::MOVE_SAND_TOMB]
         ],
         Pokemon::FORRETRESS => [
             self::FIELD_ATTACK => 161,
@@ -4394,7 +6636,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUG_BITE_FAST, Moves::MOVE_STRUGGLE_BUG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAVY_SLAM, Moves::MOVE_EARTHQUAKE, Moves::MOVE_ROCK_TOMB, Moves::MOVE_SAND_TOMB, Moves::MOVE_MIRROR_SHOT]
         ],
         Pokemon::FORRETRESS | Mods::PURIFIED => [
             self::FIELD_ATTACK => 161,
@@ -4404,7 +6650,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUG_BITE_FAST, Moves::MOVE_STRUGGLE_BUG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAVY_SLAM, Moves::MOVE_EARTHQUAKE, Moves::MOVE_ROCK_TOMB, Moves::MOVE_SAND_TOMB, Moves::MOVE_MIRROR_SHOT]
         ],
         Pokemon::FORRETRESS | Mods::SHADOW => [
             self::FIELD_ATTACK => 161,
@@ -4416,7 +6666,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUG_BITE_FAST, Moves::MOVE_STRUGGLE_BUG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAVY_SLAM, Moves::MOVE_EARTHQUAKE, Moves::MOVE_ROCK_TOMB, Moves::MOVE_SAND_TOMB, Moves::MOVE_MIRROR_SHOT]
         ],
         Pokemon::DUNSPARCE => [
             self::FIELD_ATTACK => 131,
@@ -4425,7 +6679,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_ASTONISH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_DRILL_RUN]
         ],
         Pokemon::GLIGAR => [
             self::FIELD_ATTACK => 143,
@@ -4435,7 +6693,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::GLISCOR],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FURY_CUTTER_FAST, Moves::MOVE_WING_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_AERIAL_ACE, Moves::MOVE_NIGHT_SLASH]
         ],
         Pokemon::GLIGAR | Mods::PURIFIED => [
             self::FIELD_ATTACK => 143,
@@ -4445,7 +6708,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::GLISCOR | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FURY_CUTTER_FAST, Moves::MOVE_WING_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_AERIAL_ACE, Moves::MOVE_NIGHT_SLASH]
         ],
         Pokemon::GLIGAR | Mods::SHADOW => [
             self::FIELD_ATTACK => 143,
@@ -4457,7 +6725,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_EVOLVES => [Pokemon::GLISCOR | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FURY_CUTTER_FAST, Moves::MOVE_WING_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_AERIAL_ACE, Moves::MOVE_NIGHT_SLASH]
         ],
         Pokemon::STEELIX => [
             self::FIELD_ATTACK => 148,
@@ -4467,7 +6740,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_IRON_TAIL_FAST, Moves::MOVE_DRAGON_TAIL_FAST, Moves::MOVE_THUNDER_FANG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_HEAVY_SLAM, Moves::MOVE_CRUNCH]
         ],
         Pokemon::STEELIX | Mods::PURIFIED => [
             self::FIELD_ATTACK => 148,
@@ -4477,7 +6754,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_IRON_TAIL_FAST, Moves::MOVE_DRAGON_TAIL_FAST, Moves::MOVE_THUNDER_FANG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_HEAVY_SLAM, Moves::MOVE_CRUNCH]
         ],
         Pokemon::STEELIX | Mods::SHADOW => [
             self::FIELD_ATTACK => 148,
@@ -4489,7 +6770,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_IRON_TAIL_FAST, Moves::MOVE_DRAGON_TAIL_FAST, Moves::MOVE_THUNDER_FANG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_HEAVY_SLAM, Moves::MOVE_CRUNCH]
         ],
         Pokemon::SNUBBULL => [
             self::FIELD_ATTACK => 137,
@@ -4498,7 +6783,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FAIRY,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::GRANBULL],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_BRICK_BREAK]
         ],
         Pokemon::GRANBULL => [
             self::FIELD_ATTACK => 212,
@@ -4507,7 +6797,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FAIRY,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_SNARL_FAST, Moves::MOVE_CHARM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_PLAY_ROUGH, Moves::MOVE_CLOSE_COMBAT]
         ],
         Pokemon::QWILFISH => [
             self::FIELD_ATTACK => 184,
@@ -4517,7 +6811,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_STING_FAST, Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_TAIL, Moves::MOVE_ICE_BEAM, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_ACID_SPRAY, Moves::MOVE_FELL_STINGER]
         ],
         Pokemon::SCIZOR => [
             self::FIELD_ATTACK => 236,
@@ -4527,7 +6825,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BULLET_PUNCH_FAST, Moves::MOVE_FURY_CUTTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_X_SCISSOR, Moves::MOVE_IRON_HEAD, Moves::MOVE_NIGHT_SLASH]
         ],
         Pokemon::SCIZOR | Mods::PURIFIED => [
             self::FIELD_ATTACK => 236,
@@ -4537,7 +6839,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BULLET_PUNCH_FAST, Moves::MOVE_FURY_CUTTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_X_SCISSOR, Moves::MOVE_IRON_HEAD, Moves::MOVE_NIGHT_SLASH]
         ],
         Pokemon::SCIZOR | Mods::SHADOW => [
             self::FIELD_ATTACK => 236,
@@ -4549,7 +6855,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BULLET_PUNCH_FAST, Moves::MOVE_FURY_CUTTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_X_SCISSOR, Moves::MOVE_IRON_HEAD, Moves::MOVE_NIGHT_SLASH]
         ],
         Pokemon::SHUCKLE => [
             self::FIELD_ATTACK => 17,
@@ -4559,7 +6869,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ROCK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_STRUGGLE_BUG_FAST, Moves::MOVE_ROCK_THROW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_BLAST, Moves::MOVE_STONE_EDGE, Moves::MOVE_GYRO_BALL]
         ],
         Pokemon::SHUCKLE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 17,
@@ -4569,7 +6883,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ROCK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_STRUGGLE_BUG_FAST, Moves::MOVE_ROCK_THROW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_BLAST, Moves::MOVE_STONE_EDGE, Moves::MOVE_GYRO_BALL]
         ],
         Pokemon::SHUCKLE | Mods::SHADOW => [
             self::FIELD_ATTACK => 17,
@@ -4581,7 +6899,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_STRUGGLE_BUG_FAST, Moves::MOVE_ROCK_THROW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_BLAST, Moves::MOVE_STONE_EDGE, Moves::MOVE_GYRO_BALL]
         ],
         Pokemon::HERACROSS => [
             self::FIELD_ATTACK => 234,
@@ -4591,7 +6913,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_COUNTER_FAST, Moves::MOVE_STRUGGLE_BUG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_MEGAHORN, Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_EARTHQUAKE]
         ],
         Pokemon::SNEASEL => [
             self::FIELD_ATTACK => 189,
@@ -4601,7 +6927,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ICE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::WEAVILE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ICE_SHARD_FAST, Moves::MOVE_FEINT_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AVALANCHE, Moves::MOVE_ICE_PUNCH, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::SNEASEL | Mods::PURIFIED => [
             self::FIELD_ATTACK => 189,
@@ -4611,7 +6942,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ICE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::WEAVILE | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ICE_SHARD_FAST, Moves::MOVE_FEINT_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AVALANCHE, Moves::MOVE_ICE_PUNCH, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::SNEASEL | Mods::SHADOW => [
             self::FIELD_ATTACK => 189,
@@ -4623,7 +6959,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::WEAVILE | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ICE_SHARD_FAST, Moves::MOVE_FEINT_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AVALANCHE, Moves::MOVE_ICE_PUNCH, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::TEDDIURSA => [
             self::FIELD_ATTACK => 142,
@@ -4632,7 +6973,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::URSARING],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_LICK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CROSS_CHOP, Moves::MOVE_CRUNCH, Moves::MOVE_PLAY_ROUGH]
         ],
         Pokemon::URSARING => [
             self::FIELD_ATTACK => 236,
@@ -4641,7 +6987,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_METAL_CLAW_FAST, Moves::MOVE_COUNTER_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_PLAY_ROUGH]
         ],
         Pokemon::SLUGMA => [
             self::FIELD_ATTACK => 118,
@@ -4650,7 +7000,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::MAGCARGO],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_ROCK_THROW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_BURST, Moves::MOVE_FLAME_CHARGE, Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::MAGCARGO => [
             self::FIELD_ATTACK => 139,
@@ -4660,7 +7015,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ROCK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_ROCK_THROW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAT_WAVE, Moves::MOVE_OVERHEAT, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::SWINUB => [
             self::FIELD_ATTACK => 90,
@@ -4670,7 +7029,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::PILOSWINE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_POWDER_SNOW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICY_WIND, Moves::MOVE_BODY_SLAM, Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::PILOSWINE => [
             self::FIELD_ATTACK => 181,
@@ -4680,7 +7044,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::MAMOSWINE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ICE_SHARD_FAST, Moves::MOVE_POWDER_SNOW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AVALANCHE, Moves::MOVE_BULLDOZE, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::CORSOLA => [
             self::FIELD_ATTACK => 118,
@@ -4690,7 +7059,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ROCK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_BUBBLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_BLAST, Moves::MOVE_POWER_GEM, Moves::MOVE_BUBBLE_BEAM]
         ],
         Pokemon::REMORAID => [
             self::FIELD_ATTACK => 127,
@@ -4699,7 +7072,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::OCTILLERY],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AURORA_BEAM, Moves::MOVE_WATER_PULSE, Moves::MOVE_ROCK_BLAST]
         ],
         Pokemon::OCTILLERY => [
             self::FIELD_ATTACK => 197,
@@ -4708,7 +7086,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_GUNK_SHOT, Moves::MOVE_WATER_PULSE, Moves::MOVE_AURORA_BEAM, Moves::MOVE_ACID_SPRAY, Moves::MOVE_OCTAZOOKA]
         ],
         Pokemon::DELIBIRD => [
             self::FIELD_ATTACK => 128,
@@ -4718,7 +7100,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PRESENT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_PUNCH, Moves::MOVE_ICY_WIND, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::DELIBIRD | Mods::PURIFIED => [
             self::FIELD_ATTACK => 128,
@@ -4728,7 +7114,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PRESENT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_PUNCH, Moves::MOVE_ICY_WIND, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::DELIBIRD | Mods::SHADOW => [
             self::FIELD_ATTACK => 128,
@@ -4740,7 +7130,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PRESENT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_PUNCH, Moves::MOVE_ICY_WIND, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::MANTINE => [
             self::FIELD_ATTACK => 148,
@@ -4750,7 +7144,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_WING_ATTACK_FAST, Moves::MOVE_BULLET_SEED_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_ICE_BEAM, Moves::MOVE_AERIAL_ACE, Moves::MOVE_BUBBLE_BEAM]
         ],
         Pokemon::SKARMORY => [
             self::FIELD_ATTACK => 148,
@@ -4760,7 +7158,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_STEEL_WING_FAST, Moves::MOVE_AIR_SLASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRAVE_BIRD, Moves::MOVE_SKY_ATTACK, Moves::MOVE_FLASH_CANNON]
         ],
         Pokemon::HOUNDOUR => [
             self::FIELD_ATTACK => 152,
@@ -4770,7 +7172,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::HOUNDOOM],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_EMBER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_FLAMETHROWER, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::HOUNDOUR | Mods::PURIFIED => [
             self::FIELD_ATTACK => 152,
@@ -4780,7 +7187,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::HOUNDOOM | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_EMBER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_FLAMETHROWER, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::HOUNDOUR | Mods::SHADOW => [
             self::FIELD_ATTACK => 152,
@@ -4792,7 +7204,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::HOUNDOOM | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_EMBER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_FLAMETHROWER, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::HOUNDOOM => [
             self::FIELD_ATTACK => 224,
@@ -4802,7 +7219,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SNARL_FAST, Moves::MOVE_FIRE_FANG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_FIRE_BLAST, Moves::MOVE_FOUL_PLAY, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::HOUNDOOM | Mods::PURIFIED => [
             self::FIELD_ATTACK => 224,
@@ -4812,7 +7233,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SNARL_FAST, Moves::MOVE_FIRE_FANG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_FIRE_BLAST, Moves::MOVE_FOUL_PLAY, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::HOUNDOOM | Mods::SHADOW => [
             self::FIELD_ATTACK => 224,
@@ -4824,7 +7249,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SNARL_FAST, Moves::MOVE_FIRE_FANG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_FIRE_BLAST, Moves::MOVE_FOUL_PLAY, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::KINGDRA => [
             self::FIELD_ATTACK => 194,
@@ -4834,7 +7263,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DRAGON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATERFALL_FAST, Moves::MOVE_DRAGON_BREATH_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_BLIZZARD, Moves::MOVE_OUTRAGE, Moves::MOVE_OCTAZOOKA]
         ],
         Pokemon::PHANPY => [
             self::FIELD_ATTACK => 107,
@@ -4843,7 +7277,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::DONPHAN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BULLDOZE, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::DONPHAN => [
             self::FIELD_ATTACK => 214,
@@ -4852,7 +7291,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_COUNTER_FAST, Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_CHARM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_HEAVY_SLAM, Moves::MOVE_PLAY_ROUGH]
         ],
         Pokemon::PORYGON2 => [
             self::FIELD_ATTACK => 198,
@@ -4861,7 +7304,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::PORYGON_Z],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HIDDEN_POWER_FAST, Moves::MOVE_CHARGE_BEAM_FAST, Moves::MOVE_LOCK_ON_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SOLAR_BEAM, Moves::MOVE_HYPER_BEAM, Moves::MOVE_ZAP_CANNON]
         ],
         Pokemon::PORYGON2 | Mods::PURIFIED => [
             self::FIELD_ATTACK => 198,
@@ -4870,7 +7318,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::PORYGON_Z | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HIDDEN_POWER_FAST, Moves::MOVE_CHARGE_BEAM_FAST, Moves::MOVE_LOCK_ON_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SOLAR_BEAM, Moves::MOVE_HYPER_BEAM, Moves::MOVE_ZAP_CANNON]
         ],
         Pokemon::PORYGON2 | Mods::SHADOW => [
             self::FIELD_ATTACK => 198,
@@ -4881,7 +7334,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::PORYGON_Z | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HIDDEN_POWER_FAST, Moves::MOVE_CHARGE_BEAM_FAST, Moves::MOVE_LOCK_ON_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SOLAR_BEAM, Moves::MOVE_HYPER_BEAM, Moves::MOVE_ZAP_CANNON]
         ],
         Pokemon::STANTLER => [
             self::FIELD_ATTACK => 192,
@@ -4890,7 +7348,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STOMP, Moves::MOVE_WILD_CHARGE, Moves::MOVE_MEGAHORN]
         ],
         Pokemon::STANTLER | Mods::PURIFIED => [
             self::FIELD_ATTACK => 192,
@@ -4899,7 +7361,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STOMP, Moves::MOVE_WILD_CHARGE, Moves::MOVE_MEGAHORN]
         ],
         Pokemon::STANTLER | Mods::SHADOW => [
             self::FIELD_ATTACK => 192,
@@ -4910,7 +7376,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STOMP, Moves::MOVE_WILD_CHARGE, Moves::MOVE_MEGAHORN]
         ],
         Pokemon::SMEARGLE => [
             self::FIELD_ATTACK => 40,
@@ -4919,7 +7389,10 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 9999999,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_FURY_CUTTER_FAST, Moves::MOVE_BUG_BITE_FAST, Moves::MOVE_BITE_FAST, Moves::MOVE_SUCKER_PUNCH_FAST, Moves::MOVE_DRAGON_BREATH_FAST, Moves::MOVE_THUNDER_SHOCK_FAST, Moves::MOVE_SPARK_FAST, Moves::MOVE_LOW_KICK_FAST, Moves::MOVE_KARATE_CHOP_FAST, Moves::MOVE_EMBER_FAST, Moves::MOVE_WING_ATTACK_FAST, Moves::MOVE_PECK_FAST, Moves::MOVE_LICK_FAST, Moves::MOVE_SHADOW_CLAW_FAST, Moves::MOVE_VINE_WHIP_FAST, Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_ICE_SHARD_FAST, Moves::MOVE_FROST_BREATH_FAST, Moves::MOVE_QUICK_ATTACK_FAST, Moves::MOVE_SCRATCH_FAST, Moves::MOVE_POUND_FAST, Moves::MOVE_CUT_FAST, Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_ACID_FAST, Moves::MOVE_PSYCHO_CUT_FAST, Moves::MOVE_ROCK_THROW_FAST, Moves::MOVE_METAL_CLAW_FAST, Moves::MOVE_BULLET_PUNCH_FAST, Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_SPLASH_FAST, Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST, Moves::MOVE_CONFUSION_FAST, Moves::MOVE_POISON_STING_FAST, Moves::MOVE_BUBBLE_FAST, Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_STEEL_WING_FAST, Moves::MOVE_FIRE_FANG_FAST, Moves::MOVE_ROCK_SMASH_FAST, Moves::MOVE_COUNTER_FAST, Moves::MOVE_POWDER_SNOW_FAST, Moves::MOVE_CHARGE_BEAM_FAST, Moves::MOVE_VOLT_SWITCH_FAST, Moves::MOVE_DRAGON_TAIL_FAST, Moves::MOVE_AIR_SLASH_FAST, Moves::MOVE_INFESTATION_FAST, Moves::MOVE_STRUGGLE_BUG_FAST, Moves::MOVE_ASTONISH_FAST, Moves::MOVE_HEX_FAST, Moves::MOVE_IRON_TAIL_FAST, Moves::MOVE_FIRE_SPIN_FAST, Moves::MOVE_BULLET_SEED_FAST, Moves::MOVE_EXTRASENSORY_FAST, Moves::MOVE_SNARL_FAST, Moves::MOVE_HIDDEN_POWER_FAST, Moves::MOVE_TAKE_DOWN_FAST, Moves::MOVE_WATERFALL_FAST, Moves::MOVE_YAWN_FAST, Moves::MOVE_PRESENT_FAST, Moves::MOVE_SMACK_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE, Moves::MOVE_WRAP, Moves::MOVE_HYPER_BEAM, Moves::MOVE_DARK_PULSE, Moves::MOVE_SLUDGE, Moves::MOVE_VICE_GRIP, Moves::MOVE_FLAME_WHEEL, Moves::MOVE_MEGAHORN, Moves::MOVE_FLAMETHROWER, Moves::MOVE_DIG, Moves::MOVE_CROSS_CHOP, Moves::MOVE_PSYBEAM, Moves::MOVE_EARTHQUAKE, Moves::MOVE_STONE_EDGE, Moves::MOVE_ICE_PUNCH, Moves::MOVE_DISCHARGE, Moves::MOVE_FLASH_CANNON, Moves::MOVE_DRILL_PECK, Moves::MOVE_ICE_BEAM, Moves::MOVE_BLIZZARD, Moves::MOVE_HEAT_WAVE, Moves::MOVE_AERIAL_ACE, Moves::MOVE_DRILL_RUN, Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_BUG_BUZZ, Moves::MOVE_POISON_FANG, Moves::MOVE_NIGHT_SLASH, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_SUBMISSION, Moves::MOVE_LOW_SWEEP, Moves::MOVE_AQUA_JET, Moves::MOVE_AQUA_TAIL, Moves::MOVE_SEED_BOMB, Moves::MOVE_PSYSHOCK, Moves::MOVE_ANCIENT_POWER, Moves::MOVE_ROCK_TOMB, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_POWER_GEM, Moves::MOVE_SHADOW_SNEAK, Moves::MOVE_SHADOW_PUNCH, Moves::MOVE_OMINOUS_WIND, Moves::MOVE_SHADOW_BALL, Moves::MOVE_MAGNET_BOMB, Moves::MOVE_IRON_HEAD, Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_THUNDER, Moves::MOVE_THUNDERBOLT, Moves::MOVE_TWISTER, Moves::MOVE_DRAGON_PULSE, Moves::MOVE_DRAGON_CLAW, Moves::MOVE_DISARMING_VOICE, Moves::MOVE_DRAINING_KISS, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_MOONBLAST, Moves::MOVE_PLAY_ROUGH, Moves::MOVE_CROSS_POISON, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_GUNK_SHOT, Moves::MOVE_BONE_CLUB, Moves::MOVE_BULLDOZE, Moves::MOVE_MUD_BOMB, Moves::MOVE_SIGNAL_BEAM, Moves::MOVE_X_SCISSOR, Moves::MOVE_FLAME_CHARGE, Moves::MOVE_FLAME_BURST, Moves::MOVE_FIRE_BLAST, Moves::MOVE_WATER_PULSE, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_PSYCHIC, Moves::MOVE_ICY_WIND, Moves::MOVE_FIRE_PUNCH, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_LEAF_BLADE, Moves::MOVE_POWER_WHIP, Moves::MOVE_AIR_CUTTER, Moves::MOVE_HURRICANE, Moves::MOVE_BRICK_BREAK, Moves::MOVE_SWIFT, Moves::MOVE_HORN_ATTACK, Moves::MOVE_STOMP, Moves::MOVE_HYPER_FANG, Moves::MOVE_BODY_SLAM, Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_DYNAMIC_PUNCH, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_AURORA_BEAM, Moves::MOVE_WILD_CHARGE, Moves::MOVE_ZAP_CANNON, Moves::MOVE_AVALANCHE, Moves::MOVE_BRAVE_BIRD, Moves::MOVE_SKY_ATTACK, Moves::MOVE_SAND_TOMB, Moves::MOVE_ROCK_BLAST, Moves::MOVE_SILVER_WIND, Moves::MOVE_NIGHT_SHADE, Moves::MOVE_GYRO_BALL, Moves::MOVE_HEAVY_SLAM, Moves::MOVE_OVERHEAT, Moves::MOVE_GRASS_KNOT, Moves::MOVE_ENERGY_BALL, Moves::MOVE_FUTURESIGHT, Moves::MOVE_MIRROR_COAT, Moves::MOVE_OUTRAGE, Moves::MOVE_CRUNCH, Moves::MOVE_FOUL_PLAY, Moves::MOVE_SURF, Moves::MOVE_DRACO_METEOR, Moves::MOVE_PSYCHO_BOOST, Moves::MOVE_FRENZY_PLANT, Moves::MOVE_BLAST_BURN, Moves::MOVE_HYDRO_CANNON, Moves::MOVE_LAST_RESORT, Moves::MOVE_METEOR_MASH]
         ],
         Pokemon::TYROGUE => [
             self::FIELD_ATTACK => 64,
@@ -4928,7 +7401,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::HITMONLEE, Pokemon::HITMONCHAN, Pokemon::HITMONTOP],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_SMASH_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRICK_BREAK, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_LOW_SWEEP]
         ],
         Pokemon::HITMONTOP => [
             self::FIELD_ATTACK => 173,
@@ -4937,7 +7415,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_SMASH_FAST, Moves::MOVE_COUNTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_GYRO_BALL, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::SMOOCHUM => [
             self::FIELD_ATTACK => 153,
@@ -4947,7 +7429,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::JYNX],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POWDER_SNOW_FAST, Moves::MOVE_POUND_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_FROST_BREATH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_BEAM, Moves::MOVE_ICE_PUNCH, Moves::MOVE_PSYSHOCK]
         ],
         Pokemon::ELEKID => [
             self::FIELD_ATTACK => 135,
@@ -4956,7 +7444,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::ELECTABUZZ],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_THUNDER_SHOCK_FAST, Moves::MOVE_LOW_KICK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_BRICK_BREAK, Moves::MOVE_DISCHARGE],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::MAGBY => [
             self::FIELD_ATTACK => 151,
@@ -4965,7 +7459,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::MAGMAR],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_KARATE_CHOP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRICK_BREAK, Moves::MOVE_FIRE_PUNCH, Moves::MOVE_FLAME_BURST],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::MILTANK => [
             self::FIELD_ATTACK => 157,
@@ -4974,7 +7474,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STOMP, Moves::MOVE_BODY_SLAM, Moves::MOVE_GYRO_BALL, Moves::MOVE_THUNDERBOLT, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::BLISSEY => [
             self::FIELD_ATTACK => 129,
@@ -4983,7 +7487,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POUND_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_HYPER_BEAM, Moves::MOVE_DAZZLING_GLEAM]
         ],
         Pokemon::RAIKOU => [
             self::FIELD_ATTACK => 241,
@@ -4992,7 +7500,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_THUNDER_SHOCK_FAST, Moves::MOVE_VOLT_SWITCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDER, Moves::MOVE_THUNDERBOLT, Moves::MOVE_WILD_CHARGE, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::RAIKOU | Mods::PURIFIED => [
             self::FIELD_ATTACK => 241,
@@ -5001,7 +7513,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 80,
+            self::FIELD_THIRD_MOVE_STARDUST => 80000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_THUNDER_SHOCK_FAST, Moves::MOVE_VOLT_SWITCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDER, Moves::MOVE_THUNDERBOLT, Moves::MOVE_WILD_CHARGE, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::RAIKOU | Mods::SHADOW => [
             self::FIELD_ATTACK => 241,
@@ -5012,7 +7528,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 20000,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 120,
+            self::FIELD_THIRD_MOVE_STARDUST => 120000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_THUNDER_SHOCK_FAST, Moves::MOVE_VOLT_SWITCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDER, Moves::MOVE_THUNDERBOLT, Moves::MOVE_WILD_CHARGE, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::ENTEI => [
             self::FIELD_ATTACK => 235,
@@ -5021,7 +7541,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FIRE_SPIN_FAST, Moves::MOVE_FIRE_FANG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAMETHROWER, Moves::MOVE_FIRE_BLAST, Moves::MOVE_OVERHEAT, Moves::MOVE_IRON_HEAD]
         ],
         Pokemon::ENTEI | Mods::PURIFIED => [
             self::FIELD_ATTACK => 235,
@@ -5030,7 +7554,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 80,
+            self::FIELD_THIRD_MOVE_STARDUST => 80000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FIRE_SPIN_FAST, Moves::MOVE_FIRE_FANG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAMETHROWER, Moves::MOVE_FIRE_BLAST, Moves::MOVE_OVERHEAT, Moves::MOVE_IRON_HEAD]
         ],
         Pokemon::ENTEI | Mods::SHADOW => [
             self::FIELD_ATTACK => 235,
@@ -5041,7 +7569,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 20000,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 120,
+            self::FIELD_THIRD_MOVE_STARDUST => 120000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FIRE_SPIN_FAST, Moves::MOVE_FIRE_FANG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAMETHROWER, Moves::MOVE_FIRE_BLAST, Moves::MOVE_OVERHEAT, Moves::MOVE_IRON_HEAD]
         ],
         Pokemon::SUICUNE => [
             self::FIELD_ATTACK => 180,
@@ -5050,7 +7582,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EXTRASENSORY_FAST, Moves::MOVE_SNARL_FAST, Moves::MOVE_ICE_FANG_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_HIDDEN_POWER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_WATER_PULSE, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::SUICUNE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 180,
@@ -5059,7 +7596,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 80,
+            self::FIELD_THIRD_MOVE_STARDUST => 80000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EXTRASENSORY_FAST, Moves::MOVE_SNARL_FAST, Moves::MOVE_ICE_FANG_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_HIDDEN_POWER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_WATER_PULSE, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::SUICUNE | Mods::SHADOW => [
             self::FIELD_ATTACK => 180,
@@ -5070,7 +7612,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 20000,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 120,
+            self::FIELD_THIRD_MOVE_STARDUST => 120000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EXTRASENSORY_FAST, Moves::MOVE_SNARL_FAST, Moves::MOVE_ICE_FANG_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_HIDDEN_POWER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_WATER_PULSE, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::LARVITAR => [
             self::FIELD_ATTACK => 115,
@@ -5080,7 +7627,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::PUPITAR],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STOMP, Moves::MOVE_CRUNCH, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::LARVITAR | Mods::PURIFIED => [
             self::FIELD_ATTACK => 115,
@@ -5090,7 +7642,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::PUPITAR | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STOMP, Moves::MOVE_CRUNCH, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::LARVITAR | Mods::SHADOW => [
             self::FIELD_ATTACK => 115,
@@ -5102,7 +7659,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_EVOLVES => [Pokemon::PUPITAR | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STOMP, Moves::MOVE_CRUNCH, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::PUPITAR => [
             self::FIELD_ATTACK => 155,
@@ -5112,7 +7674,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::TYRANITAR],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_CRUNCH, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::PUPITAR | Mods::PURIFIED => [
             self::FIELD_ATTACK => 155,
@@ -5122,7 +7689,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::TYRANITAR | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_CRUNCH, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::PUPITAR | Mods::SHADOW => [
             self::FIELD_ATTACK => 155,
@@ -5134,7 +7706,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_EVOLVES => [Pokemon::TYRANITAR | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_CRUNCH, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::TYRANITAR => [
             self::FIELD_ATTACK => 251,
@@ -5144,7 +7721,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_IRON_TAIL_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_SMACK_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_CRUNCH, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::TYRANITAR | Mods::PURIFIED => [
             self::FIELD_ATTACK => 251,
@@ -5154,7 +7736,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_IRON_TAIL_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_SMACK_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_CRUNCH, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::TYRANITAR | Mods::SHADOW => [
             self::FIELD_ATTACK => 251,
@@ -5166,7 +7753,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_IRON_TAIL_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_SMACK_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_CRUNCH, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::LUGIA => [
             self::FIELD_ATTACK => 193,
@@ -5176,7 +7768,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EXTRASENSORY_FAST, Moves::MOVE_DRAGON_TAIL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SKY_ATTACK, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_FUTURESIGHT]
         ],
         Pokemon::HO_OH => [
             self::FIELD_ATTACK => 239,
@@ -5186,7 +7782,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EXTRASENSORY_FAST, Moves::MOVE_STEEL_WING_FAST, Moves::MOVE_HIDDEN_POWER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRAVE_BIRD, Moves::MOVE_FIRE_BLAST, Moves::MOVE_SOLAR_BEAM],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_EARTHQUAKE]
         ],
         Pokemon::CELEBI => [
             self::FIELD_ATTACK => 210,
@@ -5195,7 +7796,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TYPE2 => Types::GRASS,
             self::FIELD_MYTHIC => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_CHARGE_BEAM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYPER_BEAM, Moves::MOVE_PSYCHIC, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_SEED_BOMB]
         ],
         Pokemon::TREECKO => [
             self::FIELD_ATTACK => 124,
@@ -5204,7 +7809,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::GROVYLE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POUND_FAST, Moves::MOVE_BULLET_SEED_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_AERIAL_ACE, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::GROVYLE => [
             self::FIELD_ATTACK => 172,
@@ -5213,7 +7823,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::SCEPTILE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_QUICK_ATTACK_FAST, Moves::MOVE_BULLET_SEED_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_LEAF_BLADE, Moves::MOVE_AERIAL_ACE, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::SCEPTILE => [
             self::FIELD_ATTACK => 223,
@@ -5222,7 +7837,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FURY_CUTTER_FAST, Moves::MOVE_BULLET_SEED_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_LEAF_BLADE, Moves::MOVE_AERIAL_ACE, Moves::MOVE_EARTHQUAKE, Moves::MOVE_DRAGON_CLAW],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FRENZY_PLANT]
         ],
         Pokemon::TORCHIC => [
             self::FIELD_ATTACK => 130,
@@ -5231,7 +7851,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::COMBUSKEN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_EMBER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_CHARGE, Moves::MOVE_FLAMETHROWER, Moves::MOVE_ROCK_TOMB]
         ],
         Pokemon::COMBUSKEN => [
             self::FIELD_ATTACK => 163,
@@ -5241,7 +7866,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::BLAZIKEN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PECK_FAST, Moves::MOVE_EMBER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_CHARGE, Moves::MOVE_FLAMETHROWER, Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::BLAZIKEN => [
             self::FIELD_ATTACK => 240,
@@ -5251,7 +7881,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_COUNTER_FAST, Moves::MOVE_FIRE_SPIN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FOCUS_BLAST, Moves::MOVE_OVERHEAT, Moves::MOVE_BRAVE_BIRD, Moves::MOVE_BLAZE_KICK],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BLAST_BURN, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::MUDKIP => [
             self::FIELD_ATTACK => 126,
@@ -5260,7 +7895,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::MARSHTOMP],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_SLUDGE, Moves::MOVE_STOMP]
         ],
         Pokemon::MUDKIP | Mods::PURIFIED => [
             self::FIELD_ATTACK => 126,
@@ -5269,7 +7909,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 20,
+            self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_EVOLVES => [Pokemon::MARSHTOMP | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_SLUDGE, Moves::MOVE_STOMP]
         ],
         Pokemon::MUDKIP | Mods::SHADOW => [
             self::FIELD_ATTACK => 126,
@@ -5280,7 +7925,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 30,
+            self::FIELD_THIRD_MOVE_STARDUST => 12000,
+            self::FIELD_EVOLVES => [Pokemon::MARSHTOMP | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_SLUDGE, Moves::MOVE_STOMP]
         ],
         Pokemon::MARSHTOMP => [
             self::FIELD_ATTACK => 156,
@@ -5290,7 +7940,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::SWAMPERT],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_MUD_BOMB, Moves::MOVE_SLUDGE, Moves::MOVE_SURF]
         ],
         Pokemon::MARSHTOMP | Mods::PURIFIED => [
             self::FIELD_ATTACK => 156,
@@ -5300,7 +7955,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 20,
+            self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_EVOLVES => [Pokemon::SWAMPERT | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_MUD_BOMB, Moves::MOVE_SLUDGE, Moves::MOVE_SURF]
         ],
         Pokemon::MARSHTOMP | Mods::SHADOW => [
             self::FIELD_ATTACK => 156,
@@ -5312,7 +7972,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 30,
+            self::FIELD_THIRD_MOVE_STARDUST => 12000,
+            self::FIELD_EVOLVES => [Pokemon::SWAMPERT | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_MUD_BOMB, Moves::MOVE_SLUDGE, Moves::MOVE_SURF]
         ],
         Pokemon::SWAMPERT => [
             self::FIELD_ATTACK => 208,
@@ -5322,7 +7987,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_SURF, Moves::MOVE_MUDDY_WATER],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_HYDRO_CANNON]
         ],
         Pokemon::SWAMPERT | Mods::PURIFIED => [
             self::FIELD_ATTACK => 208,
@@ -5332,7 +8002,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 20,
+            self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_SURF, Moves::MOVE_MUDDY_WATER],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_HYDRO_CANNON]
         ],
         Pokemon::SWAMPERT | Mods::SHADOW => [
             self::FIELD_ATTACK => 208,
@@ -5344,7 +8019,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 30,
+            self::FIELD_THIRD_MOVE_STARDUST => 12000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_SURF, Moves::MOVE_MUDDY_WATER],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_HYDRO_CANNON]
         ],
         Pokemon::POOCHYENA => [
             self::FIELD_ATTACK => 96,
@@ -5353,7 +8033,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::MIGTYENA],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_SNARL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_DIG, Moves::MOVE_POISON_FANG]
         ],
         Pokemon::MIGTYENA => [
             self::FIELD_ATTACK => 171,
@@ -5362,7 +8047,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_FIRE_FANG_FAST, Moves::MOVE_THUNDER_FANG_FAST, Moves::MOVE_ICE_FANG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_PLAY_ROUGH, Moves::MOVE_POISON_FANG]
         ],
         Pokemon::ZIGZAGOON => [
             self::FIELD_ATTACK => 58,
@@ -5371,7 +8060,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::LINOONE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_GRASS_KNOT, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::ZIGZAGOON | Mods::GALARIAN => [
             self::FIELD_ATTACK => 58,
@@ -5381,7 +8075,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::LINOONE | Mods::GALARIAN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_TAKE_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_BODY_SLAM, Moves::MOVE_SWIFT]
         ],
         Pokemon::ZIGZAGOON | Mods::PURIFIED => [
             self::FIELD_ATTACK => 58,
@@ -5390,7 +8089,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::LINOONE | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_GRASS_KNOT, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::ZIGZAGOON | Mods::SHADOW => [
             self::FIELD_ATTACK => 58,
@@ -5401,7 +8105,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::LINOONE | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_GRASS_KNOT, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::LINOONE => [
             self::FIELD_ATTACK => 142,
@@ -5410,7 +8119,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SHADOW_CLAW_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_GRASS_KNOT, Moves::MOVE_THUNDER]
         ],
         Pokemon::LINOONE | Mods::GALARIAN => [
             self::FIELD_ATTACK => 142,
@@ -5420,7 +8133,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::OBSTAGOON],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SNARL_FAST, Moves::MOVE_LICK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_BODY_SLAM, Moves::MOVE_GUNK_SHOT]
         ],
         Pokemon::LINOONE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 142,
@@ -5429,7 +8147,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SHADOW_CLAW_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_GRASS_KNOT, Moves::MOVE_THUNDER]
         ],
         Pokemon::LINOONE | Mods::SHADOW => [
             self::FIELD_ATTACK => 142,
@@ -5440,7 +8162,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SHADOW_CLAW_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_GRASS_KNOT, Moves::MOVE_THUNDER]
         ],
         Pokemon::WURMPLE => [
             self::FIELD_ATTACK => 75,
@@ -5449,7 +8175,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::SILCOON, Pokemon::CASCOON],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::SILCOON => [
             self::FIELD_ATTACK => 60,
@@ -5458,7 +8189,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::BEAUTIFLY],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_STING_FAST, Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::BEAUTIFLY => [
             self::FIELD_ATTACK => 189,
@@ -5468,7 +8204,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_STRUGGLE_BUG_FAST, Moves::MOVE_INFESTATION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SILVER_WIND, Moves::MOVE_AIR_CUTTER, Moves::MOVE_BUG_BUZZ]
         ],
         Pokemon::CASCOON => [
             self::FIELD_ATTACK => 60,
@@ -5477,7 +8217,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::DUSTOX],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_STING_FAST, Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::DUSTOX => [
             self::FIELD_ATTACK => 98,
@@ -5487,7 +8232,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_STRUGGLE_BUG_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SILVER_WIND, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_BUG_BUZZ]
         ],
         Pokemon::LOTAD => [
             self::FIELD_ATTACK => 71,
@@ -5497,7 +8246,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::LOMBRE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_RAZOR_LEAF_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_ENERGY_BALL]
         ],
         Pokemon::LOMBRE => [
             self::FIELD_ATTACK => 112,
@@ -5507,7 +8261,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::LUDICOLO],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_RAZOR_LEAF_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_ICE_BEAM, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::LUDICOLO => [
             self::FIELD_ATTACK => 173,
@@ -5517,7 +8276,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_RAZOR_LEAF_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_BLIZZARD, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_ICE_BEAM, Moves::MOVE_ENERGY_BALL]
         ],
         Pokemon::SEEDOT => [
             self::FIELD_ATTACK => 71,
@@ -5526,7 +8289,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::NUZLEAF],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BULLET_SEED_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_GRASS_KNOT, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::SEEDOT | Mods::PURIFIED => [
             self::FIELD_ATTACK => 71,
@@ -5535,7 +8303,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::NUZLEAF | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BULLET_SEED_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_GRASS_KNOT, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::SEEDOT | Mods::SHADOW => [
             self::FIELD_ATTACK => 71,
@@ -5546,7 +8319,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::NUZLEAF | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BULLET_SEED_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_GRASS_KNOT, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::NUZLEAF => [
             self::FIELD_ATTACK => 134,
@@ -5556,7 +8334,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::SHIFTRY],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_FEINT_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_LEAF_BLADE, Moves::MOVE_GRASS_KNOT, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::NUZLEAF | Mods::PURIFIED => [
             self::FIELD_ATTACK => 134,
@@ -5566,7 +8349,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::SHIFTRY | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_FEINT_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_LEAF_BLADE, Moves::MOVE_GRASS_KNOT, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::NUZLEAF | Mods::SHADOW => [
             self::FIELD_ATTACK => 134,
@@ -5578,7 +8366,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::SHIFTRY | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_FEINT_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_LEAF_BLADE, Moves::MOVE_GRASS_KNOT, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::SHIFTRY => [
             self::FIELD_ATTACK => 200,
@@ -5588,7 +8381,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_SNARL_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_BULLET_SEED_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_LEAF_BLADE, Moves::MOVE_HURRICANE, Moves::MOVE_FOUL_PLAY, Moves::MOVE_LEAF_TORNADO]
         ],
         Pokemon::SHIFTRY | Mods::PURIFIED => [
             self::FIELD_ATTACK => 200,
@@ -5598,7 +8396,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_SNARL_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_BULLET_SEED_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_LEAF_BLADE, Moves::MOVE_HURRICANE, Moves::MOVE_FOUL_PLAY, Moves::MOVE_LEAF_TORNADO]
         ],
         Pokemon::SHIFTRY | Mods::SHADOW => [
             self::FIELD_ATTACK => 200,
@@ -5610,7 +8413,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_SNARL_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_BULLET_SEED_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_LEAF_BLADE, Moves::MOVE_HURRICANE, Moves::MOVE_FOUL_PLAY, Moves::MOVE_LEAF_TORNADO]
         ],
         Pokemon::TAILLOW => [
             self::FIELD_ATTACK => 106,
@@ -5620,7 +8428,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::SWELLOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PECK_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::SWELLOW => [
             self::FIELD_ATTACK => 185,
@@ -5630,7 +8443,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WING_ATTACK_FAST, Moves::MOVE_STEEL_WING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AERIAL_ACE, Moves::MOVE_BRAVE_BIRD, Moves::MOVE_SKY_ATTACK]
         ],
         Pokemon::WINGULL => [
             self::FIELD_ATTACK => 106,
@@ -5640,7 +8457,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::PELIPPER],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_AIR_CUTTER, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::PELIPPER => [
             self::FIELD_ATTACK => 175,
@@ -5650,7 +8472,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_WING_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_HURRICANE, Moves::MOVE_BLIZZARD, Moves::MOVE_WEATHER_BALL_WATER]
         ],
         Pokemon::RALTS => [
             self::FIELD_ATTACK => 79,
@@ -5660,7 +8486,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::KIRLIA],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_CHARGE_BEAM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYSHOCK, Moves::MOVE_DISARMING_VOICE, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::RALTS | Mods::PURIFIED => [
             self::FIELD_ATTACK => 79,
@@ -5670,7 +8501,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::KIRLIA | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_CHARGE_BEAM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYSHOCK, Moves::MOVE_DISARMING_VOICE, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::RALTS | Mods::SHADOW => [
             self::FIELD_ATTACK => 79,
@@ -5682,7 +8518,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_EVOLVES => [Pokemon::KIRLIA | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_CHARGE_BEAM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYSHOCK, Moves::MOVE_DISARMING_VOICE, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::KIRLIA => [
             self::FIELD_ATTACK => 117,
@@ -5692,7 +8533,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::GALLADE, Pokemon::GARDEVOIR],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_CHARGE_BEAM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_DISARMING_VOICE, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::KIRLIA | Mods::PURIFIED => [
             self::FIELD_ATTACK => 117,
@@ -5702,7 +8548,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::GALLADE | Mods::PURIFIED, Pokemon::GARDEVOIR | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_CHARGE_BEAM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_DISARMING_VOICE, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::KIRLIA | Mods::SHADOW => [
             self::FIELD_ATTACK => 117,
@@ -5714,7 +8565,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_EVOLVES => [Pokemon::GALLADE | Mods::SHADOW, Pokemon::GARDEVOIR | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_CHARGE_BEAM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_DISARMING_VOICE, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::GARDEVOIR => [
             self::FIELD_ATTACK => 237,
@@ -5724,7 +8580,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_CHARGE_BEAM_FAST, Moves::MOVE_CHARM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_SHADOW_BALL],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SYNCHRONOISE]
         ],
         Pokemon::GARDEVOIR | Mods::PURIFIED => [
             self::FIELD_ATTACK => 237,
@@ -5734,7 +8595,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_CHARGE_BEAM_FAST, Moves::MOVE_CHARM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_SHADOW_BALL],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SYNCHRONOISE]
         ],
         Pokemon::GARDEVOIR | Mods::SHADOW => [
             self::FIELD_ATTACK => 237,
@@ -5746,7 +8612,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_CHARGE_BEAM_FAST, Moves::MOVE_CHARM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_SHADOW_BALL],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SYNCHRONOISE]
         ],
         Pokemon::SURSKIT => [
             self::FIELD_ATTACK => 93,
@@ -5756,7 +8627,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::MASQUERAIN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_SIGNAL_BEAM]
         ],
         Pokemon::MASQUERAIN => [
             self::FIELD_ATTACK => 192,
@@ -5766,7 +8642,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_INFESTATION_FAST, Moves::MOVE_AIR_SLASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AIR_CUTTER, Moves::MOVE_OMINOUS_WIND, Moves::MOVE_SILVER_WIND, Moves::MOVE_BUBBLE_BEAM]
         ],
         Pokemon::SHROOMISH => [
             self::FIELD_ATTACK => 74,
@@ -5775,7 +8655,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::BRELOOM],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_BULLET_SEED_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SEED_BOMB, Moves::MOVE_GRASS_KNOT, Moves::MOVE_ENERGY_BALL]
         ],
         Pokemon::BRELOOM => [
             self::FIELD_ATTACK => 241,
@@ -5785,7 +8670,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_COUNTER_FAST, Moves::MOVE_BULLET_SEED_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DYNAMIC_PUNCH, Moves::MOVE_SEED_BOMB, Moves::MOVE_SLUDGE_BOMB],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::SLAKOTH => [
             self::FIELD_ATTACK => 104,
@@ -5794,7 +8684,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::VIGOROTH],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_YAWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BODY_SLAM, Moves::MOVE_NIGHT_SLASH, Moves::MOVE_BRICK_BREAK]
         ],
         Pokemon::VIGOROTH => [
             self::FIELD_ATTACK => 159,
@@ -5803,7 +8698,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::SLAKING],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_COUNTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BODY_SLAM, Moves::MOVE_BULLDOZE, Moves::MOVE_BRICK_BREAK]
         ],
         Pokemon::SLAKING => [
             self::FIELD_ATTACK => 290,
@@ -5812,7 +8712,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_YAWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYPER_BEAM, Moves::MOVE_PLAY_ROUGH, Moves::MOVE_EARTHQUAKE],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::NINCADA => [
             self::FIELD_ATTACK => 80,
@@ -5822,7 +8727,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::NINJASK],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SLASH, Moves::MOVE_BUG_BUZZ, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::NINJASK => [
             self::FIELD_ATTACK => 199,
@@ -5832,7 +8742,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FURY_CUTTER_FAST, Moves::MOVE_METAL_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_BUG_BUZZ, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::SHEDINJA => [
             self::FIELD_ATTACK => 153,
@@ -5842,7 +8756,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GHOST,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUG_BITE_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_STRUGGLE_BUG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_SNEAK, Moves::MOVE_AERIAL_ACE, Moves::MOVE_DIG]
         ],
         Pokemon::WHISMUR => [
             self::FIELD_ATTACK => 92,
@@ -5851,7 +8770,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::LOUDRED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POUND_FAST, Moves::MOVE_ASTONISH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STOMP, Moves::MOVE_DISARMING_VOICE, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::LOUDRED => [
             self::FIELD_ATTACK => 134,
@@ -5860,7 +8784,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::EXPLOUD],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STOMP, Moves::MOVE_DISARMING_VOICE, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::EXPLOUD => [
             self::FIELD_ATTACK => 179,
@@ -5869,7 +8798,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_ASTONISH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_DISARMING_VOICE, Moves::MOVE_FIRE_BLAST]
         ],
         Pokemon::MAKUHITA => [
             self::FIELD_ATTACK => 99,
@@ -5878,7 +8811,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::HARIYAMA],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_SMASH_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAVY_SLAM, Moves::MOVE_LOW_SWEEP, Moves::MOVE_CROSS_CHOP]
         ],
         Pokemon::HARIYAMA => [
             self::FIELD_ATTACK => 209,
@@ -5887,7 +8825,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_COUNTER_FAST, Moves::MOVE_BULLET_PUNCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAVY_SLAM, Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_DYNAMIC_PUNCH, Moves::MOVE_SUPER_POWER]
         ],
         Pokemon::AZURILL => [
             self::FIELD_ATTACK => 36,
@@ -5897,7 +8839,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::MARILL],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SPLASH_FAST, Moves::MOVE_BUBBLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_ICE_BEAM, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::NOSEPASS => [
             self::FIELD_ATTACK => 82,
@@ -5906,7 +8853,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ROCK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::PROBOPASS],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_THROW_FAST, Moves::MOVE_SPARK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_BLAST, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::SKITTY => [
             self::FIELD_ATTACK => 84,
@@ -5915,7 +8867,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::DELCATTY],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_DISARMING_VOICE, Moves::MOVE_WILD_CHARGE]
         ],
         Pokemon::DELCATTY => [
             self::FIELD_ATTACK => 132,
@@ -5924,7 +8881,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST, Moves::MOVE_CHARM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PLAY_ROUGH, Moves::MOVE_DISARMING_VOICE, Moves::MOVE_WILD_CHARGE]
         ],
         Pokemon::SABLEYE => [
             self::FIELD_ATTACK => 141,
@@ -5934,7 +8895,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GHOST,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SHADOW_CLAW_FAST, Moves::MOVE_FEINT_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_POWER_GEM, Moves::MOVE_FOUL_PLAY, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::SABLEYE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 141,
@@ -5944,7 +8909,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GHOST,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SHADOW_CLAW_FAST, Moves::MOVE_FEINT_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_POWER_GEM, Moves::MOVE_FOUL_PLAY, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::SABLEYE | Mods::SHADOW => [
             self::FIELD_ATTACK => 141,
@@ -5956,7 +8925,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SHADOW_CLAW_FAST, Moves::MOVE_FEINT_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_POWER_GEM, Moves::MOVE_FOUL_PLAY, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::MAWILE => [
             self::FIELD_ATTACK => 155,
@@ -5966,7 +8939,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_ASTONISH_FAST, Moves::MOVE_ICE_FANG_FAST, Moves::MOVE_FIRE_FANG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PLAY_ROUGH, Moves::MOVE_VICE_GRIP, Moves::MOVE_IRON_HEAD, Moves::MOVE_POWER_UP_PUNCH]
         ],
         Pokemon::MAWILE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 155,
@@ -5976,7 +8953,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_ASTONISH_FAST, Moves::MOVE_ICE_FANG_FAST, Moves::MOVE_FIRE_FANG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PLAY_ROUGH, Moves::MOVE_VICE_GRIP, Moves::MOVE_IRON_HEAD, Moves::MOVE_POWER_UP_PUNCH]
         ],
         Pokemon::MAWILE | Mods::SHADOW => [
             self::FIELD_ATTACK => 155,
@@ -5988,7 +8969,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_ASTONISH_FAST, Moves::MOVE_ICE_FANG_FAST, Moves::MOVE_FIRE_FANG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PLAY_ROUGH, Moves::MOVE_VICE_GRIP, Moves::MOVE_IRON_HEAD, Moves::MOVE_POWER_UP_PUNCH]
         ],
         Pokemon::ARON => [
             self::FIELD_ATTACK => 121,
@@ -5998,7 +8983,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ROCK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::LAIRON],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_METAL_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_IRON_HEAD, Moves::MOVE_ROCK_TOMB, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::LAIRON => [
             self::FIELD_ATTACK => 158,
@@ -6008,7 +8998,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ROCK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::AGGRON],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_METAL_CLAW_FAST, Moves::MOVE_IRON_TAIL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BODY_SLAM, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_HEAVY_SLAM]
         ],
         Pokemon::AGGRON => [
             self::FIELD_ATTACK => 198,
@@ -6018,7 +9013,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ROCK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_DRAGON_TAIL_FAST, Moves::MOVE_IRON_TAIL_FAST, Moves::MOVE_SMACK_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDER, Moves::MOVE_STONE_EDGE, Moves::MOVE_HEAVY_SLAM]
         ],
         Pokemon::MEDITITE => [
             self::FIELD_ATTACK => 78,
@@ -6028,7 +9027,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::MEDICHAM],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_PUNCH, Moves::MOVE_PSYSHOCK, Moves::MOVE_LOW_SWEEP]
         ],
         Pokemon::MEDICHAM => [
             self::FIELD_ATTACK => 121,
@@ -6038,7 +9042,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PSYCHO_CUT_FAST, Moves::MOVE_COUNTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_PUNCH, Moves::MOVE_PSYCHIC, Moves::MOVE_DYNAMIC_PUNCH, Moves::MOVE_POWER_UP_PUNCH]
         ],
         Pokemon::ELECTRIKE => [
             self::FIELD_ATTACK => 123,
@@ -6047,7 +9055,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::MANELECTRIC],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_QUICK_ATTACK_FAST, Moves::MOVE_SPARK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDERBOLT, Moves::MOVE_DISCHARGE, Moves::MOVE_SWIFT]
         ],
         Pokemon::MANELECTRIC => [
             self::FIELD_ATTACK => 215,
@@ -6056,7 +9069,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SNARL_FAST, Moves::MOVE_CHARGE_BEAM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDER, Moves::MOVE_WILD_CHARGE, Moves::MOVE_FLAME_BURST]
         ],
         Pokemon::PLUSLE => [
             self::FIELD_ATTACK => 167,
@@ -6065,7 +9082,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SPARK_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDERBOLT, Moves::MOVE_DISCHARGE, Moves::MOVE_SWIFT, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::MINUN => [
             self::FIELD_ATTACK => 147,
@@ -6074,7 +9095,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SPARK_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDERBOLT, Moves::MOVE_DISCHARGE, Moves::MOVE_SWIFT, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::VOLBEAT => [
             self::FIELD_ATTACK => 143,
@@ -6083,7 +9108,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_STRUGGLE_BUG_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SIGNAL_BEAM, Moves::MOVE_BUG_BUZZ, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::ILLUMISE => [
             self::FIELD_ATTACK => 143,
@@ -6092,7 +9121,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_STRUGGLE_BUG_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SILVER_WIND, Moves::MOVE_BUG_BUZZ, Moves::MOVE_DAZZLING_GLEAM]
         ],
         Pokemon::ROSELIA => [
             self::FIELD_ATTACK => 186,
@@ -6102,7 +9135,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::ROSERADE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_RAZOR_LEAF_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_DAZZLING_GLEAM]
         ],
         Pokemon::GULPIN => [
             self::FIELD_ATTACK => 80,
@@ -6111,7 +9149,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::SWALOT],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POUND_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE, Moves::MOVE_GUNK_SHOT, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::SWALOT => [
             self::FIELD_ATTACK => 140,
@@ -6120,7 +9163,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_SMASH_FAST, Moves::MOVE_INFESTATION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_GUNK_SHOT, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_ICE_BEAM, Moves::MOVE_ACID_SPRAY]
         ],
         Pokemon::CARAVANHA => [
             self::FIELD_ATTACK => 171,
@@ -6130,7 +9177,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::SHARPEDO],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_SNARL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_CRUNCH, Moves::MOVE_POISON_FANG]
         ],
         Pokemon::CARAVANHA | Mods::PURIFIED => [
             self::FIELD_ATTACK => 171,
@@ -6140,7 +9192,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::SHARPEDO | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_SNARL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_CRUNCH, Moves::MOVE_POISON_FANG]
         ],
         Pokemon::CARAVANHA | Mods::SHADOW => [
             self::FIELD_ATTACK => 171,
@@ -6152,7 +9209,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::SHARPEDO | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_SNARL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_CRUNCH, Moves::MOVE_POISON_FANG]
         ],
         Pokemon::SHARPEDO => [
             self::FIELD_ATTACK => 243,
@@ -6162,7 +9224,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_WATERFALL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_CRUNCH, Moves::MOVE_POISON_FANG]
         ],
         Pokemon::SHARPEDO | Mods::PURIFIED => [
             self::FIELD_ATTACK => 243,
@@ -6172,7 +9238,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_WATERFALL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_CRUNCH, Moves::MOVE_POISON_FANG]
         ],
         Pokemon::SHARPEDO | Mods::SHADOW => [
             self::FIELD_ATTACK => 243,
@@ -6184,7 +9254,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_WATERFALL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_CRUNCH, Moves::MOVE_POISON_FANG]
         ],
         Pokemon::WAILMER => [
             self::FIELD_ATTACK => 136,
@@ -6193,7 +9267,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::WAILORD],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SPLASH_FAST, Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAVY_SLAM, Moves::MOVE_WATER_PULSE, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::WAILORD => [
             self::FIELD_ATTACK => 175,
@@ -6202,7 +9281,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ZEN_HEADBUTT_FAST, Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SURF, Moves::MOVE_BLIZZARD, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::NUMEL => [
             self::FIELD_ATTACK => 119,
@@ -6212,7 +9295,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::CAMERUPT],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BULLDOZE, Moves::MOVE_HEAT_WAVE, Moves::MOVE_STOMP]
         ],
         Pokemon::CAMERUPT => [
             self::FIELD_ATTACK => 194,
@@ -6222,7 +9310,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_OVERHEAT, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::TORKOAL => [
             self::FIELD_ATTACK => 151,
@@ -6231,7 +9323,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FIRE_SPIN_FAST, Moves::MOVE_EMBER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_OVERHEAT, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_EARTHQUAKE]
         ],
         Pokemon::SPOINK => [
             self::FIELD_ATTACK => 125,
@@ -6240,7 +9336,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::GRUMPIG],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SPLASH_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_SHADOW_BALL, Moves::MOVE_MIRROR_COAT]
         ],
         Pokemon::GRUMPIG => [
             self::FIELD_ATTACK => 171,
@@ -6249,7 +9350,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CHARGE_BEAM_FAST, Moves::MOVE_EXTRASENSORY_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_SHADOW_BALL, Moves::MOVE_MIRROR_COAT]
         ],
         Pokemon::SPINDA => [
             self::FIELD_ATTACK => 116,
@@ -6258,7 +9363,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SUCKER_PUNCH_FAST, Moves::MOVE_PSYCHO_CUT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_ROCK_TOMB, Moves::MOVE_ICY_WIND]
         ],
         Pokemon::TRAPINCH => [
             self::FIELD_ATTACK => 162,
@@ -6267,7 +9376,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::VIBRAVA],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_STRUGGLE_BUG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SAND_TOMB, Moves::MOVE_DIG, Moves::MOVE_CRUNCH]
         ],
         Pokemon::TRAPINCH | Mods::PURIFIED => [
             self::FIELD_ATTACK => 162,
@@ -6276,7 +9390,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::VIBRAVA | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_STRUGGLE_BUG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SAND_TOMB, Moves::MOVE_DIG, Moves::MOVE_CRUNCH]
         ],
         Pokemon::TRAPINCH | Mods::SHADOW => [
             self::FIELD_ATTACK => 162,
@@ -6287,7 +9406,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_EVOLVES => [Pokemon::VIBRAVA | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_STRUGGLE_BUG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SAND_TOMB, Moves::MOVE_DIG, Moves::MOVE_CRUNCH]
         ],
         Pokemon::VIBRAVA => [
             self::FIELD_ATTACK => 134,
@@ -6297,7 +9421,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DRAGON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::FLYGON],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_DRAGON_BREATH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SAND_TOMB, Moves::MOVE_BULLDOZE, Moves::MOVE_BUG_BUZZ]
         ],
         Pokemon::VIBRAVA | Mods::PURIFIED => [
             self::FIELD_ATTACK => 134,
@@ -6307,7 +9436,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DRAGON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::FLYGON | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_DRAGON_BREATH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SAND_TOMB, Moves::MOVE_BULLDOZE, Moves::MOVE_BUG_BUZZ]
         ],
         Pokemon::VIBRAVA | Mods::SHADOW => [
             self::FIELD_ATTACK => 134,
@@ -6319,7 +9453,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_EVOLVES => [Pokemon::FLYGON | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_DRAGON_BREATH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SAND_TOMB, Moves::MOVE_BULLDOZE, Moves::MOVE_BUG_BUZZ]
         ],
         Pokemon::FLYGON => [
             self::FIELD_ATTACK => 205,
@@ -6329,7 +9468,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DRAGON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_DRAGON_TAIL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_DRAGON_CLAW, Moves::MOVE_STONE_EDGE],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::FLYGON | Mods::PURIFIED => [
             self::FIELD_ATTACK => 205,
@@ -6339,7 +9483,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DRAGON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_DRAGON_TAIL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_DRAGON_CLAW, Moves::MOVE_STONE_EDGE],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::FLYGON | Mods::SHADOW => [
             self::FIELD_ATTACK => 205,
@@ -6351,7 +9500,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_DRAGON_TAIL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_DRAGON_CLAW, Moves::MOVE_STONE_EDGE],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::CACNEA => [
             self::FIELD_ATTACK => 156,
@@ -6360,7 +9514,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::CACTURNE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_STING_FAST, Moves::MOVE_SUCKER_PUNCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_GRASS_KNOT, Moves::MOVE_BRICK_BREAK, Moves::MOVE_SEED_BOMB]
         ],
         Pokemon::CACNEA | Mods::PURIFIED => [
             self::FIELD_ATTACK => 156,
@@ -6369,7 +9528,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::CACTURNE | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_STING_FAST, Moves::MOVE_SUCKER_PUNCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_GRASS_KNOT, Moves::MOVE_BRICK_BREAK, Moves::MOVE_SEED_BOMB]
         ],
         Pokemon::CACNEA | Mods::SHADOW => [
             self::FIELD_ATTACK => 156,
@@ -6380,7 +9544,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::CACTURNE | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_STING_FAST, Moves::MOVE_SUCKER_PUNCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_GRASS_KNOT, Moves::MOVE_BRICK_BREAK, Moves::MOVE_SEED_BOMB]
         ],
         Pokemon::CACTURNE => [
             self::FIELD_ATTACK => 221,
@@ -6390,7 +9559,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_SUCKER_PUNCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_DYNAMIC_PUNCH, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::CACTURNE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 221,
@@ -6400,7 +9573,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_SUCKER_PUNCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_DYNAMIC_PUNCH, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::CACTURNE | Mods::SHADOW => [
             self::FIELD_ATTACK => 221,
@@ -6412,7 +9589,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_SUCKER_PUNCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_DYNAMIC_PUNCH, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::SWABLU => [
             self::FIELD_ATTACK => 76,
@@ -6422,7 +9603,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::ALTARIA],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PECK_FAST, Moves::MOVE_ASTONISH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DISARMING_VOICE, Moves::MOVE_AERIAL_ACE, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::ALTARIA => [
             self::FIELD_ATTACK => 141,
@@ -6432,7 +9618,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PECK_FAST, Moves::MOVE_DRAGON_BREATH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SKY_ATTACK, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_DRAGON_PULSE]
         ],
         Pokemon::ZANGOOSE => [
             self::FIELD_ATTACK => 222,
@@ -6441,7 +9631,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FURY_CUTTER_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_NIGHT_SLASH, Moves::MOVE_DIG]
         ],
         Pokemon::SEVIPER => [
             self::FIELD_ATTACK => 196,
@@ -6450,7 +9644,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_IRON_TAIL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_POISON_FANG, Moves::MOVE_CRUNCH, Moves::MOVE_WRAP]
         ],
         Pokemon::LUNATONE => [
             self::FIELD_ATTACK => 178,
@@ -6460,7 +9658,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_THROW_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_MOONBLAST]
         ],
         Pokemon::SOLROCK => [
             self::FIELD_ATTACK => 178,
@@ -6470,7 +9672,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_THROW_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_SOLAR_BEAM]
         ],
         Pokemon::BARBOACH => [
             self::FIELD_ATTACK => 93,
@@ -6480,7 +9686,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::WHISCASH],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_TAIL, Moves::MOVE_ICE_BEAM, Moves::MOVE_MUD_BOMB]
         ],
         Pokemon::WHISCASH => [
             self::FIELD_ATTACK => 151,
@@ -6490,7 +9701,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_BLIZZARD, Moves::MOVE_MUD_BOMB]
         ],
         Pokemon::CORPHISH => [
             self::FIELD_ATTACK => 141,
@@ -6499,7 +9714,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::CRAWDAUNT],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_VICE_GRIP, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_AQUA_JET]
         ],
         Pokemon::CRAWDAUNT => [
             self::FIELD_ATTACK => 224,
@@ -6509,7 +9729,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATERFALL_FAST, Moves::MOVE_SNARL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_VICE_GRIP, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_NIGHT_SLASH, Moves::MOVE_CRABHAMMER]
         ],
         Pokemon::BALTOY => [
             self::FIELD_ATTACK => 77,
@@ -6519,7 +9743,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::CLAYDOL],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_EXTRASENSORY_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_GYRO_BALL, Moves::MOVE_PSYBEAM, Moves::MOVE_DIG]
         ],
         Pokemon::CLAYDOL => [
             self::FIELD_ATTACK => 140,
@@ -6529,7 +9758,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EXTRASENSORY_FAST, Moves::MOVE_CONFUSION_FAST, Moves::MOVE_MUD_SLAP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_GYRO_BALL, Moves::MOVE_PSYCHIC, Moves::MOVE_EARTHQUAKE, Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::LILEEP => [
             self::FIELD_ATTACK => 105,
@@ -6539,7 +9772,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::CRADILY],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ACID_FAST, Moves::MOVE_INFESTATION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_GRASS_KNOT, Moves::MOVE_MIRROR_COAT, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::CRADILY => [
             self::FIELD_ATTACK => 152,
@@ -6549,7 +9787,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ACID_FAST, Moves::MOVE_INFESTATION_FAST, Moves::MOVE_BULLET_SEED_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_GRASS_KNOT, Moves::MOVE_BULLDOZE, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::ANORITH => [
             self::FIELD_ATTACK => 176,
@@ -6559,7 +9801,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::BUG,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::ARMALDO],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_STRUGGLE_BUG_FAST, Moves::MOVE_SCRATCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CROSS_POISON, Moves::MOVE_AQUA_JET, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::ARMALDO => [
             self::FIELD_ATTACK => 222,
@@ -6569,7 +9816,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::BUG,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FURY_CUTTER_FAST, Moves::MOVE_STRUGGLE_BUG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CROSS_POISON, Moves::MOVE_WATER_PULSE, Moves::MOVE_ROCK_BLAST]
         ],
         Pokemon::FEEBAS => [
             self::FIELD_ATTACK => 29,
@@ -6578,7 +9829,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::MILOTIC],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SPLASH_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_MIRROR_COAT]
         ],
         Pokemon::MILOTIC => [
             self::FIELD_ATTACK => 192,
@@ -6587,16 +9843,24 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATERFALL_FAST, Moves::MOVE_DRAGON_TAIL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SURF, Moves::MOVE_BLIZZARD, Moves::MOVE_HYPER_BEAM]
         ],
-        Pokemon::CASTFORM => [
+        Pokemon::CASTFORM | FormsAlias::CASTFORM_NORMAL => [
             self::FIELD_ATTACK => 139,
             self::FIELD_DEFENSE => 139,
             self::FIELD_STAMINA => 172,
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_HEX_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HURRICANE, Moves::MOVE_ENERGY_BALL, Moves::MOVE_WEATHER_BALL_ROCK]
         ],
         Pokemon::CASTFORM | FormsAlias::CASTFORM_RAINY => [
             self::FIELD_ATTACK => 139,
@@ -6605,7 +9869,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_THUNDER, Moves::MOVE_WEATHER_BALL_WATER]
         ],
         Pokemon::CASTFORM | FormsAlias::CASTFORM_SNOWY => [
             self::FIELD_ATTACK => 139,
@@ -6614,7 +9882,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ICE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POWDER_SNOW_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BLIZZARD, Moves::MOVE_ICE_BEAM, Moves::MOVE_WEATHER_BALL_ICE]
         ],
         Pokemon::CASTFORM | FormsAlias::CASTFORM_SUNNY => [
             self::FIELD_ATTACK => 139,
@@ -6623,7 +9895,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_WEATHER_BALL_FIRE]
         ],
         Pokemon::KECLEON => [
             self::FIELD_ATTACK => 161,
@@ -6632,7 +9908,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_LICK_FAST, Moves::MOVE_SUCKER_PUNCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FOUL_PLAY, Moves::MOVE_FLAMETHROWER, Moves::MOVE_THUNDER, Moves::MOVE_ICE_BEAM, Moves::MOVE_AERIAL_ACE, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::SHUPPET => [
             self::FIELD_ATTACK => 138,
@@ -6641,7 +9921,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GHOST,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::BANETTE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_ASTONISH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_OMINOUS_WIND, Moves::MOVE_NIGHT_SHADE, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::SHUPPET | Mods::PURIFIED => [
             self::FIELD_ATTACK => 138,
@@ -6650,7 +9935,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GHOST,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::BANETTE | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_ASTONISH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_OMINOUS_WIND, Moves::MOVE_NIGHT_SHADE, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::SHUPPET | Mods::SHADOW => [
             self::FIELD_ATTACK => 138,
@@ -6661,7 +9951,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::BANETTE | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_ASTONISH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_OMINOUS_WIND, Moves::MOVE_NIGHT_SHADE, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::BANETTE => [
             self::FIELD_ATTACK => 218,
@@ -6670,7 +9965,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GHOST,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HEX_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_THUNDER]
         ],
         Pokemon::BANETTE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 218,
@@ -6679,7 +9978,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GHOST,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HEX_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_THUNDER]
         ],
         Pokemon::BANETTE | Mods::SHADOW => [
             self::FIELD_ATTACK => 218,
@@ -6690,7 +9993,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HEX_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_THUNDER]
         ],
         Pokemon::DUSKULL => [
             self::FIELD_ATTACK => 70,
@@ -6699,7 +10006,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GHOST,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::DUSCLOPS],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HEX_FAST, Moves::MOVE_ASTONISH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_OMINOUS_WIND, Moves::MOVE_NIGHT_SHADE, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::DUSKULL | Mods::PURIFIED => [
             self::FIELD_ATTACK => 70,
@@ -6708,7 +10020,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GHOST,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::DUSCLOPS | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HEX_FAST, Moves::MOVE_ASTONISH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_OMINOUS_WIND, Moves::MOVE_NIGHT_SHADE, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::DUSKULL | Mods::SHADOW => [
             self::FIELD_ATTACK => 70,
@@ -6719,7 +10036,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::DUSCLOPS | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HEX_FAST, Moves::MOVE_ASTONISH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_OMINOUS_WIND, Moves::MOVE_NIGHT_SHADE, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::DUSCLOPS => [
             self::FIELD_ATTACK => 124,
@@ -6728,7 +10050,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GHOST,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::DUSKNOIR],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HEX_FAST, Moves::MOVE_FEINT_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_PUNCH, Moves::MOVE_ICE_PUNCH, Moves::MOVE_FIRE_PUNCH]
         ],
         Pokemon::DUSCLOPS | Mods::PURIFIED => [
             self::FIELD_ATTACK => 124,
@@ -6737,7 +10064,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GHOST,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::DUSKNOIR | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HEX_FAST, Moves::MOVE_FEINT_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_PUNCH, Moves::MOVE_ICE_PUNCH, Moves::MOVE_FIRE_PUNCH]
         ],
         Pokemon::DUSCLOPS | Mods::SHADOW => [
             self::FIELD_ATTACK => 124,
@@ -6748,7 +10080,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::DUSKNOIR | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HEX_FAST, Moves::MOVE_FEINT_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_PUNCH, Moves::MOVE_ICE_PUNCH, Moves::MOVE_FIRE_PUNCH]
         ],
         Pokemon::TROPIUS => [
             self::FIELD_ATTACK => 136,
@@ -6758,7 +10095,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_AIR_SLASH_FAST, Moves::MOVE_RAZOR_LEAF_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STOMP, Moves::MOVE_AERIAL_ACE, Moves::MOVE_LEAF_BLADE]
         ],
         Pokemon::CHIMECHO => [
             self::FIELD_ATTACK => 175,
@@ -6767,7 +10108,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EXTRASENSORY_FAST, Moves::MOVE_ASTONISH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SHADOW_BALL, Moves::MOVE_PSYSHOCK, Moves::MOVE_PSYSHOCK]
         ],
         Pokemon::ABSOL => [
             self::FIELD_ATTACK => 246,
@@ -6776,7 +10121,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PSYCHO_CUT_FAST, Moves::MOVE_SNARL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_THUNDER, Moves::MOVE_MEGAHORN]
         ],
         Pokemon::ABSOL | Mods::PURIFIED => [
             self::FIELD_ATTACK => 246,
@@ -6785,7 +10134,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PSYCHO_CUT_FAST, Moves::MOVE_SNARL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_THUNDER, Moves::MOVE_MEGAHORN]
         ],
         Pokemon::ABSOL | Mods::SHADOW => [
             self::FIELD_ATTACK => 246,
@@ -6796,7 +10149,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PSYCHO_CUT_FAST, Moves::MOVE_SNARL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_THUNDER, Moves::MOVE_MEGAHORN]
         ],
         Pokemon::WYNAUT => [
             self::FIELD_ATTACK => 41,
@@ -6805,7 +10162,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::WOBBUFFET],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SPLASH_FAST, Moves::MOVE_COUNTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_MIRROR_COAT]
         ],
         Pokemon::SNORUNT => [
             self::FIELD_ATTACK => 95,
@@ -6814,7 +10176,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ICE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::FROSLASS, Pokemon::GLALIE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POWDER_SNOW_FAST, Moves::MOVE_HEX_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AVALANCHE, Moves::MOVE_ICY_WIND, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::GLALIE => [
             self::FIELD_ATTACK => 162,
@@ -6823,7 +10190,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ICE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ICE_SHARD_FAST, Moves::MOVE_FROST_BREATH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AVALANCHE, Moves::MOVE_GYRO_BALL, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::SPHEAL => [
             self::FIELD_ATTACK => 95,
@@ -6833,7 +10204,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::SEALEO],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AURORA_BEAM, Moves::MOVE_BODY_SLAM, Moves::MOVE_WATER_PULSE]
         ],
         Pokemon::SEALEO => [
             self::FIELD_ATTACK => 137,
@@ -6843,7 +10219,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::WALREIN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_POWDER_SNOW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AURORA_BEAM, Moves::MOVE_BODY_SLAM, Moves::MOVE_WATER_PULSE]
         ],
         Pokemon::WALREIN => [
             self::FIELD_ATTACK => 182,
@@ -6853,7 +10234,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATERFALL_FAST, Moves::MOVE_FROST_BREATH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BLIZZARD, Moves::MOVE_EARTHQUAKE, Moves::MOVE_WATER_PULSE]
         ],
         Pokemon::CLAMPERL => [
             self::FIELD_ATTACK => 133,
@@ -6862,7 +10247,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::HUNTAIL, Pokemon::GOREBYSS],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BODY_SLAM, Moves::MOVE_ICE_BEAM, Moves::MOVE_WATER_PULSE]
         ],
         Pokemon::HUNTAIL => [
             self::FIELD_ATTACK => 197,
@@ -6871,7 +10261,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_ICE_BEAM, Moves::MOVE_AQUA_TAIL]
         ],
         Pokemon::GOREBYSS => [
             self::FIELD_ATTACK => 211,
@@ -6880,7 +10274,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAINING_KISS, Moves::MOVE_PSYCHIC, Moves::MOVE_WATER_PULSE]
         ],
         Pokemon::RELICANTH => [
             self::FIELD_ATTACK => 162,
@@ -6890,7 +10288,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ROCK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ANCIENT_POWER, Moves::MOVE_AQUA_TAIL, Moves::MOVE_HYDRO_PUMP]
         ],
         Pokemon::LUVDISC => [
             self::FIELD_ATTACK => 81,
@@ -6899,7 +10301,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_SPLASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAINING_KISS, Moves::MOVE_WATER_PULSE, Moves::MOVE_AQUA_JET]
         ],
         Pokemon::BAGON => [
             self::FIELD_ATTACK => 134,
@@ -6908,7 +10314,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::DRAGON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::SHELGON],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_EMBER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAMETHROWER, Moves::MOVE_TWISTER, Moves::MOVE_CRUNCH]
         ],
         Pokemon::BAGON | Mods::PURIFIED => [
             self::FIELD_ATTACK => 134,
@@ -6917,7 +10328,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::DRAGON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::SHELGON | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_EMBER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAMETHROWER, Moves::MOVE_TWISTER, Moves::MOVE_CRUNCH]
         ],
         Pokemon::BAGON | Mods::SHADOW => [
             self::FIELD_ATTACK => 134,
@@ -6928,7 +10344,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_EVOLVES => [Pokemon::SHELGON | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_EMBER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAMETHROWER, Moves::MOVE_TWISTER, Moves::MOVE_CRUNCH]
         ],
         Pokemon::SHELGON => [
             self::FIELD_ATTACK => 172,
@@ -6937,7 +10358,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::DRAGON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::SALAMENCE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_DRAGON_BREATH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAMETHROWER, Moves::MOVE_DRAGON_PULSE, Moves::MOVE_TWISTER]
         ],
         Pokemon::SHELGON | Mods::PURIFIED => [
             self::FIELD_ATTACK => 172,
@@ -6946,7 +10372,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::DRAGON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::SALAMENCE | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_DRAGON_BREATH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAMETHROWER, Moves::MOVE_DRAGON_PULSE, Moves::MOVE_TWISTER]
         ],
         Pokemon::SHELGON | Mods::SHADOW => [
             self::FIELD_ATTACK => 172,
@@ -6957,7 +10388,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_EVOLVES => [Pokemon::SALAMENCE | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_DRAGON_BREATH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAMETHROWER, Moves::MOVE_DRAGON_PULSE, Moves::MOVE_TWISTER]
         ],
         Pokemon::SALAMENCE => [
             self::FIELD_ATTACK => 277,
@@ -6967,7 +10403,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_DRAGON_TAIL_FAST, Moves::MOVE_FIRE_FANG_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_DRACO_METEOR],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_OUTRAGE]
         ],
         Pokemon::SALAMENCE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 277,
@@ -6977,7 +10418,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_DRAGON_TAIL_FAST, Moves::MOVE_FIRE_FANG_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_DRACO_METEOR],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_OUTRAGE]
         ],
         Pokemon::SALAMENCE | Mods::SHADOW => [
             self::FIELD_ATTACK => 277,
@@ -6989,7 +10435,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_DRAGON_TAIL_FAST, Moves::MOVE_FIRE_FANG_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_DRACO_METEOR],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_OUTRAGE]
         ],
         Pokemon::BELDUM => [
             self::FIELD_ATTACK => 96,
@@ -6999,7 +10450,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::METANG],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TAKE_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::BELDUM | Mods::PURIFIED => [
             self::FIELD_ATTACK => 96,
@@ -7009,7 +10465,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::METANG | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TAKE_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::BELDUM | Mods::SHADOW => [
             self::FIELD_ATTACK => 96,
@@ -7021,7 +10482,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_EVOLVES => [Pokemon::METANG | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TAKE_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::METANG => [
             self::FIELD_ATTACK => 138,
@@ -7031,7 +10497,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::METAGROSS],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ZEN_HEADBUTT_FAST, Moves::MOVE_METAL_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_GYRO_BALL, Moves::MOVE_PSYSHOCK]
         ],
         Pokemon::METANG | Mods::PURIFIED => [
             self::FIELD_ATTACK => 138,
@@ -7041,7 +10512,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::METAGROSS | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ZEN_HEADBUTT_FAST, Moves::MOVE_METAL_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_GYRO_BALL, Moves::MOVE_PSYSHOCK]
         ],
         Pokemon::METANG | Mods::SHADOW => [
             self::FIELD_ATTACK => 138,
@@ -7053,7 +10529,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_EVOLVES => [Pokemon::METAGROSS | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ZEN_HEADBUTT_FAST, Moves::MOVE_METAL_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_GYRO_BALL, Moves::MOVE_PSYSHOCK]
         ],
         Pokemon::METAGROSS => [
             self::FIELD_ATTACK => 257,
@@ -7063,7 +10544,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BULLET_PUNCH_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_FLASH_CANNON, Moves::MOVE_EARTHQUAKE],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_METEOR_MASH]
         ],
         Pokemon::METAGROSS | Mods::PURIFIED => [
             self::FIELD_ATTACK => 257,
@@ -7073,7 +10559,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BULLET_PUNCH_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_FLASH_CANNON, Moves::MOVE_EARTHQUAKE],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_METEOR_MASH]
         ],
         Pokemon::METAGROSS | Mods::SHADOW => [
             self::FIELD_ATTACK => 257,
@@ -7085,7 +10576,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BULLET_PUNCH_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_FLASH_CANNON, Moves::MOVE_EARTHQUAKE],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_METEOR_MASH]
         ],
         Pokemon::REGIROCK => [
             self::FIELD_ATTACK => 179,
@@ -7094,7 +10590,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ROCK,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_THROW_FAST, Moves::MOVE_ROCK_SMASH_FAST, Moves::MOVE_LOCK_ON_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STONE_EDGE, Moves::MOVE_ZAP_CANNON, Moves::MOVE_FOCUS_BLAST]
         ],
         Pokemon::REGICE => [
             self::FIELD_ATTACK => 179,
@@ -7103,7 +10603,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ICE,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FROST_BREATH_FAST, Moves::MOVE_ROCK_SMASH_FAST, Moves::MOVE_LOCK_ON_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BLIZZARD, Moves::MOVE_EARTHQUAKE, Moves::MOVE_FOCUS_BLAST]
         ],
         Pokemon::REGISTEEL => [
             self::FIELD_ATTACK => 143,
@@ -7112,7 +10616,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::STEEL,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_METAL_CLAW_FAST, Moves::MOVE_ROCK_SMASH_FAST, Moves::MOVE_LOCK_ON_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLASH_CANNON, Moves::MOVE_HYPER_BEAM, Moves::MOVE_FOCUS_BLAST]
         ],
         Pokemon::LATIAS => [
             self::FIELD_ATTACK => 228,
@@ -7122,7 +10630,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_DRAGON_BREATH_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST, Moves::MOVE_CHARM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_OUTRAGE, Moves::MOVE_THUNDER]
         ],
         Pokemon::LATIOS => [
             self::FIELD_ATTACK => 268,
@@ -7132,7 +10644,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_DRAGON_BREATH_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_DRAGON_CLAW, Moves::MOVE_SOLAR_BEAM]
         ],
         Pokemon::KYOGRE => [
             self::FIELD_ATTACK => 270,
@@ -7141,7 +10657,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATERFALL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_BLIZZARD, Moves::MOVE_THUNDER, Moves::MOVE_SURF]
         ],
         Pokemon::GROUDON => [
             self::FIELD_ATTACK => 270,
@@ -7150,7 +10670,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GROUND,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_DRAGON_TAIL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_FIRE_BLAST, Moves::MOVE_SOLAR_BEAM],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FIRE_PUNCH]
         ],
         Pokemon::RAYQUAZA => [
             self::FIELD_ATTACK => 284,
@@ -7160,7 +10685,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_AIR_SLASH_FAST, Moves::MOVE_DRAGON_TAIL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_OUTRAGE, Moves::MOVE_AERIAL_ACE, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::JIRACHI => [
             self::FIELD_ATTACK => 210,
@@ -7169,16 +10698,24 @@ class PokemonData
             self::FIELD_TYPE1 => Types::STEEL,
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_MYTHIC => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_CHARGE_BEAM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_PSYCHIC, Moves::MOVE_DOOM_DESIRE]
         ],
-        Pokemon::DEOXYS => [
+        Pokemon::DEOXYS | FormsAlias::DEOXYS_NORMAL => [
             self::FIELD_ATTACK => 345,
             self::FIELD_DEFENSE => 115,
             self::FIELD_STAMINA => 137,
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_MYTHIC => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ZEN_HEADBUTT_FAST, Moves::MOVE_CHARGE_BEAM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHO_BOOST, Moves::MOVE_THUNDERBOLT, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::DEOXYS | FormsAlias::DEOXYS_ATTACK => [
             self::FIELD_ATTACK => 414,
@@ -7187,7 +10724,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_MYTHIC => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ZEN_HEADBUTT_FAST, Moves::MOVE_POISON_JAB_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHO_BOOST, Moves::MOVE_ZAP_CANNON, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::DEOXYS | FormsAlias::DEOXYS_DEFENSE => [
             self::FIELD_ATTACK => 144,
@@ -7196,7 +10737,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_MYTHIC => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ZEN_HEADBUTT_FAST, Moves::MOVE_COUNTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHO_BOOST, Moves::MOVE_THUNDERBOLT, Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::DEOXYS | FormsAlias::DEOXYS_SPEED => [
             self::FIELD_ATTACK => 230,
@@ -7205,7 +10750,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_MYTHIC => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ZEN_HEADBUTT_FAST, Moves::MOVE_CHARGE_BEAM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHO_BOOST, Moves::MOVE_THUNDERBOLT, Moves::MOVE_SWIFT]
         ],
         Pokemon::TURTWIG => [
             self::FIELD_ATTACK => 119,
@@ -7214,7 +10763,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::GROTLE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_RAZOR_LEAF_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SEED_BOMB, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::TURTWIG | Mods::PURIFIED => [
             self::FIELD_ATTACK => 119,
@@ -7223,7 +10777,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 20,
+            self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_EVOLVES => [Pokemon::GROTLE | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_RAZOR_LEAF_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SEED_BOMB, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::TURTWIG | Mods::SHADOW => [
             self::FIELD_ATTACK => 119,
@@ -7234,7 +10793,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 30,
+            self::FIELD_THIRD_MOVE_STARDUST => 12000,
+            self::FIELD_EVOLVES => [Pokemon::GROTLE | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_RAZOR_LEAF_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SEED_BOMB, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::GROTLE => [
             self::FIELD_ATTACK => 157,
@@ -7243,7 +10807,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::TORTERRA],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_RAZOR_LEAF_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::GROTLE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 157,
@@ -7252,7 +10821,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 20,
+            self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_EVOLVES => [Pokemon::TORTERRA | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_RAZOR_LEAF_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::GROTLE | Mods::SHADOW => [
             self::FIELD_ATTACK => 157,
@@ -7263,7 +10837,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 30,
+            self::FIELD_THIRD_MOVE_STARDUST => 12000,
+            self::FIELD_EVOLVES => [Pokemon::TORTERRA | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_RAZOR_LEAF_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::TORTERRA => [
             self::FIELD_ATTACK => 202,
@@ -7273,7 +10852,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_RAZOR_LEAF_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STONE_EDGE, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_EARTHQUAKE, Moves::MOVE_SAND_TOMB],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FRENZY_PLANT]
         ],
         Pokemon::TORTERRA | Mods::PURIFIED => [
             self::FIELD_ATTACK => 202,
@@ -7283,7 +10867,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 20,
+            self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_RAZOR_LEAF_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STONE_EDGE, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_EARTHQUAKE, Moves::MOVE_SAND_TOMB],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FRENZY_PLANT]
         ],
         Pokemon::TORTERRA | Mods::SHADOW => [
             self::FIELD_ATTACK => 202,
@@ -7295,7 +10884,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 30,
+            self::FIELD_THIRD_MOVE_STARDUST => 12000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_RAZOR_LEAF_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STONE_EDGE, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_EARTHQUAKE, Moves::MOVE_SAND_TOMB],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FRENZY_PLANT]
         ],
         Pokemon::CHIMCHAR => [
             self::FIELD_ATTACK => 113,
@@ -7304,7 +10898,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::MONFERNO],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_SCRATCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_WHEEL, Moves::MOVE_FLAMETHROWER, Moves::MOVE_FLAME_CHARGE]
         ],
         Pokemon::CHIMCHAR | Mods::PURIFIED => [
             self::FIELD_ATTACK => 113,
@@ -7313,7 +10912,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 20,
+            self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_EVOLVES => [Pokemon::MONFERNO | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_SCRATCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_WHEEL, Moves::MOVE_FLAMETHROWER, Moves::MOVE_FLAME_CHARGE]
         ],
         Pokemon::CHIMCHAR | Mods::SHADOW => [
             self::FIELD_ATTACK => 113,
@@ -7324,7 +10928,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 30,
+            self::FIELD_THIRD_MOVE_STARDUST => 12000,
+            self::FIELD_EVOLVES => [Pokemon::MONFERNO | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_SCRATCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_WHEEL, Moves::MOVE_FLAMETHROWER, Moves::MOVE_FLAME_CHARGE]
         ],
         Pokemon::MONFERNO => [
             self::FIELD_ATTACK => 158,
@@ -7334,7 +10943,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::INFERNAPE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_WHEEL, Moves::MOVE_FLAMETHROWER, Moves::MOVE_LOW_SWEEP]
         ],
         Pokemon::MONFERNO | Mods::PURIFIED => [
             self::FIELD_ATTACK => 158,
@@ -7344,7 +10958,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 20,
+            self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_EVOLVES => [Pokemon::INFERNAPE | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_WHEEL, Moves::MOVE_FLAMETHROWER, Moves::MOVE_LOW_SWEEP]
         ],
         Pokemon::MONFERNO | Mods::SHADOW => [
             self::FIELD_ATTACK => 158,
@@ -7356,7 +10975,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 30,
+            self::FIELD_THIRD_MOVE_STARDUST => 12000,
+            self::FIELD_EVOLVES => [Pokemon::INFERNAPE | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_WHEEL, Moves::MOVE_FLAMETHROWER, Moves::MOVE_LOW_SWEEP]
         ],
         Pokemon::INFERNAPE => [
             self::FIELD_ATTACK => 222,
@@ -7366,7 +10990,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FIRE_SPIN_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SOLAR_BEAM, Moves::MOVE_FLAMETHROWER, Moves::MOVE_CLOSE_COMBAT],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BLAST_BURN]
         ],
         Pokemon::INFERNAPE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 222,
@@ -7376,7 +11005,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 20,
+            self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FIRE_SPIN_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SOLAR_BEAM, Moves::MOVE_FLAMETHROWER, Moves::MOVE_CLOSE_COMBAT],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BLAST_BURN]
         ],
         Pokemon::INFERNAPE | Mods::SHADOW => [
             self::FIELD_ATTACK => 222,
@@ -7388,7 +11022,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 30,
+            self::FIELD_THIRD_MOVE_STARDUST => 12000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FIRE_SPIN_FAST, Moves::MOVE_ROCK_SMASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SOLAR_BEAM, Moves::MOVE_FLAMETHROWER, Moves::MOVE_CLOSE_COMBAT],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BLAST_BURN]
         ],
         Pokemon::PILUP => [
             self::FIELD_ATTACK => 112,
@@ -7397,7 +11036,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::PRINPLUP],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_POUND_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_DRILL_PECK, Moves::MOVE_ICY_WIND]
         ],
         Pokemon::PRINPLUP => [
             self::FIELD_ATTACK => 150,
@@ -7406,7 +11050,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::EMPOLEON],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_METAL_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_ICY_WIND]
         ],
         Pokemon::EMPOLEON => [
             self::FIELD_ATTACK => 210,
@@ -7416,7 +11065,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATERFALL_FAST, Moves::MOVE_METAL_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_BLIZZARD, Moves::MOVE_FLASH_CANNON, Moves::MOVE_DRILL_PECK],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_HYDRO_CANNON]
         ],
         Pokemon::STARLY => [
             self::FIELD_ATTACK => 101,
@@ -7426,7 +11080,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::STARAVIA],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AERIAL_ACE, Moves::MOVE_BRAVE_BIRD]
         ],
         Pokemon::STARAVIA => [
             self::FIELD_ATTACK => 142,
@@ -7436,7 +11095,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::STARAPTOR],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WING_ATTACK_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AERIAL_ACE, Moves::MOVE_BRAVE_BIRD, Moves::MOVE_HEAT_WAVE]
         ],
         Pokemon::STARAPTOR => [
             self::FIELD_ATTACK => 234,
@@ -7446,7 +11110,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WING_ATTACK_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRAVE_BIRD, Moves::MOVE_HEAT_WAVE, Moves::MOVE_CLOSE_COMBAT]
         ],
         Pokemon::BIDOOF => [
             self::FIELD_ATTACK => 80,
@@ -7455,7 +11123,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::BIBAREL],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_TAKE_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYPER_FANG, Moves::MOVE_CRUNCH, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::BIBAREL => [
             self::FIELD_ATTACK => 162,
@@ -7465,7 +11138,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_TAKE_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYPER_FANG, Moves::MOVE_HYPER_BEAM, Moves::MOVE_SURF]
         ],
         Pokemon::KRICKETOT => [
             self::FIELD_ATTACK => 45,
@@ -7474,7 +11151,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::KRICKETUNE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_STRUGGLE_BUG_FAST, Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::KRICKETUNE => [
             self::FIELD_ATTACK => 160,
@@ -7483,7 +11165,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_STRUGGLE_BUG_FAST, Moves::MOVE_FURY_CUTTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUG_BUZZ, Moves::MOVE_X_SCISSOR, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::SHINX => [
             self::FIELD_ATTACK => 117,
@@ -7492,7 +11178,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::LUXIO],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_SPARK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DISCHARGE, Moves::MOVE_THUNDERBOLT, Moves::MOVE_SWIFT]
         ],
         Pokemon::LUXIO => [
             self::FIELD_ATTACK => 159,
@@ -7501,7 +11192,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::LUXRAY],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SPARK_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDERBOLT, Moves::MOVE_WILD_CHARGE, Moves::MOVE_CRUNCH]
         ],
         Pokemon::LUXRAY => [
             self::FIELD_ATTACK => 232,
@@ -7510,7 +11206,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SPARK_FAST, Moves::MOVE_SNARL_FAST, Moves::MOVE_HIDDEN_POWER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYPER_BEAM, Moves::MOVE_WILD_CHARGE, Moves::MOVE_CRUNCH]
         ],
         Pokemon::BUDEW => [
             self::FIELD_ATTACK => 91,
@@ -7520,7 +11220,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::ROSELIA],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HIDDEN_POWER_FAST, Moves::MOVE_RAZOR_LEAF_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::ROSERADE => [
             self::FIELD_ATTACK => 243,
@@ -7530,7 +11235,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_RAZOR_LEAF_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SOLAR_BEAM, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::CRANIDOS => [
             self::FIELD_ATTACK => 218,
@@ -7539,7 +11248,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ROCK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::RAMPARDOS],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ZEN_HEADBUTT_FAST, Moves::MOVE_TAKE_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_TOMB, Moves::MOVE_ANCIENT_POWER, Moves::MOVE_BULLDOZE]
         ],
         Pokemon::RAMPARDOS => [
             self::FIELD_ATTACK => 295,
@@ -7548,7 +11262,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ROCK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ZEN_HEADBUTT_FAST, Moves::MOVE_SMACK_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_SLIDE, Moves::MOVE_OUTRAGE, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::SHIELDON => [
             self::FIELD_ATTACK => 76,
@@ -7558,7 +11276,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::BASTIODON],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_IRON_TAIL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_TOMB, Moves::MOVE_ANCIENT_POWER, Moves::MOVE_HEAVY_SLAM]
         ],
         Pokemon::BASTIODON => [
             self::FIELD_ATTACK => 94,
@@ -7568,16 +11291,25 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SMACK_DOWN_FAST, Moves::MOVE_IRON_TAIL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STONE_EDGE, Moves::MOVE_FLAMETHROWER, Moves::MOVE_FLASH_CANNON]
         ],
-        Pokemon::BURMY => [
+        Pokemon::BURMY | FormsAlias::BURMY_PLANT => [
             self::FIELD_ATTACK => 53,
             self::FIELD_DEFENSE => 83,
             self::FIELD_STAMINA => 120,
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::WORMADAM | FormsAlias::WORMADAM_PLANT, Pokemon::MOTHIM],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::BURMY | FormsAlias::BURMY_SANDY => [
             self::FIELD_ATTACK => 53,
@@ -7586,7 +11318,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::WORMADAM | FormsAlias::WORMADAM_SANDY, Pokemon::MOTHIM],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::BURMY | FormsAlias::BURMY_TRASH => [
             self::FIELD_ATTACK => 53,
@@ -7595,9 +11332,14 @@ class PokemonData
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::WORMADAM | FormsAlias::WORMADAM_TRASH, Pokemon::MOTHIM],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
-        Pokemon::WORMADAM => [
+        Pokemon::WORMADAM | FormsAlias::WORMADAM_PLANT => [
             self::FIELD_ATTACK => 141,
             self::FIELD_DEFENSE => 180,
             self::FIELD_STAMINA => 155,
@@ -7605,7 +11347,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_ENERGY_BALL, Moves::MOVE_BUG_BUZZ]
         ],
         Pokemon::WORMADAM | FormsAlias::WORMADAM_SANDY => [
             self::FIELD_ATTACK => 141,
@@ -7615,7 +11361,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_BULLDOZE, Moves::MOVE_BUG_BUZZ]
         ],
         Pokemon::WORMADAM | FormsAlias::WORMADAM_TRASH => [
             self::FIELD_ATTACK => 127,
@@ -7625,7 +11375,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_IRON_HEAD, Moves::MOVE_BUG_BUZZ]
         ],
         Pokemon::MOTHIM => [
             self::FIELD_ATTACK => 185,
@@ -7635,7 +11389,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_AIR_SLASH_FAST, Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_AERIAL_ACE, Moves::MOVE_BUG_BUZZ]
         ],
         Pokemon::COMBEE => [
             self::FIELD_ATTACK => 59,
@@ -7645,7 +11403,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::VESPIQUEN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUG_BUZZ]
         ],
         Pokemon::VESPIQUEN => [
             self::FIELD_ATTACK => 149,
@@ -7655,7 +11418,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUG_BITE_FAST, Moves::MOVE_POISON_STING_FAST, Moves::MOVE_FURY_CUTTER_FAST, Moves::MOVE_AIR_SLASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUG_BUZZ, Moves::MOVE_POWER_GEM, Moves::MOVE_X_SCISSOR, Moves::MOVE_FELL_STINGER]
         ],
         Pokemon::PACHIRISU => [
             self::FIELD_ATTACK => 94,
@@ -7664,7 +11431,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SPARK_FAST, Moves::MOVE_VOLT_SWITCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDER, Moves::MOVE_THUNDERBOLT, Moves::MOVE_THUNDER_PUNCH]
         ],
         Pokemon::BUZIEL => [
             self::FIELD_ATTACK => 132,
@@ -7673,7 +11444,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::FLOATZEL],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_WATER_PULSE, Moves::MOVE_SWIFT]
         ],
         Pokemon::FLOATZEL => [
             self::FIELD_ATTACK => 221,
@@ -7682,7 +11458,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_WATERFALL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_SWIFT]
         ],
         Pokemon::CHERUBI => [
             self::FIELD_ATTACK => 108,
@@ -7691,16 +11471,25 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::CHERRIM | FormsAlias::CHERRIM_OVERCAST, Pokemon::CHERRIM | FormsAlias::CHERRIM_SUNNY],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_BULLET_SEED_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_SEED_BOMB]
         ],
-        Pokemon::CHERRIM => [
+        Pokemon::CHERRIM | FormsAlias::CHERRIM_SUNNY => [
             self::FIELD_ATTACK => 170,
             self::FIELD_DEFENSE => 153,
             self::FIELD_STAMINA => 172,
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_BULLET_SEED_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_HYPER_BEAM, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_WEATHER_BALL_FIRE]
         ],
         Pokemon::CHERRIM | FormsAlias::CHERRIM_OVERCAST => [
             self::FIELD_ATTACK => 170,
@@ -7709,16 +11498,25 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_BULLET_SEED_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_HYPER_BEAM, Moves::MOVE_SOLAR_BEAM]
         ],
-        Pokemon::SHELLOS => [
+        Pokemon::SHELLOS | FormsAlias::SHELLOS_EAST_SEA => [
             self::FIELD_ATTACK => 103,
             self::FIELD_DEFENSE => 105,
             self::FIELD_STAMINA => 183,
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::GASTRODON | FormsAlias::GASTRODON_EAST_SEA],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_HIDDEN_POWER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_MUD_BOMB, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::SHELLOS | FormsAlias::SHELLOS_WEST_SEA => [
             self::FIELD_ATTACK => 103,
@@ -7727,9 +11525,14 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::GASTRODON | FormsAlias::GASTRODON_WEST_SEA],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_HIDDEN_POWER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_MUD_BOMB, Moves::MOVE_BODY_SLAM]
         ],
-        Pokemon::GASTRODON => [
+        Pokemon::GASTRODON | FormsAlias::GASTRODON_EAST_SEA => [
             self::FIELD_ATTACK => 169,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 244,
@@ -7737,7 +11540,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_HIDDEN_POWER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_EARTH_POWER, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::GASTRODON | FormsAlias::GASTRODON_WEST_SEA => [
             self::FIELD_ATTACK => 169,
@@ -7747,7 +11554,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_HIDDEN_POWER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_EARTH_POWER, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::AMBIPOM => [
             self::FIELD_ATTACK => 205,
@@ -7756,7 +11567,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_ASTONISH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_LOW_SWEEP, Moves::MOVE_HYPER_BEAM, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::DRIFLOON => [
             self::FIELD_ATTACK => 117,
@@ -7766,7 +11581,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::DRIFBLIM],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HEX_FAST, Moves::MOVE_ASTONISH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_OMINOUS_WIND, Moves::MOVE_ICY_WIND, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::DRIFBLIM => [
             self::FIELD_ATTACK => 180,
@@ -7776,7 +11596,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HEX_FAST, Moves::MOVE_ASTONISH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_OMINOUS_WIND, Moves::MOVE_ICY_WIND, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::BUNEARY => [
             self::FIELD_ATTACK => 130,
@@ -7785,7 +11609,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::LOPUNNY],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POUND_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_PUNCH, Moves::MOVE_SWIFT]
         ],
         Pokemon::LOPUNNY => [
             self::FIELD_ATTACK => 156,
@@ -7794,7 +11623,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POUND_FAST, Moves::MOVE_LOW_KICK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_PUNCH, Moves::MOVE_HYPER_BEAM, Moves::MOVE_FOCUS_BLAST]
         ],
         Pokemon::MISMAGIUS => [
             self::FIELD_ATTACK => 211,
@@ -7803,7 +11636,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GHOST,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SUCKER_PUNCH_FAST, Moves::MOVE_HEX_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_DARK_PULSE, Moves::MOVE_DAZZLING_GLEAM]
         ],
         Pokemon::MISMAGIUS | Mods::PURIFIED => [
             self::FIELD_ATTACK => 211,
@@ -7812,7 +11649,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GHOST,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SUCKER_PUNCH_FAST, Moves::MOVE_HEX_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_DARK_PULSE, Moves::MOVE_DAZZLING_GLEAM]
         ],
         Pokemon::MISMAGIUS | Mods::SHADOW => [
             self::FIELD_ATTACK => 211,
@@ -7823,7 +11664,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SUCKER_PUNCH_FAST, Moves::MOVE_HEX_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_DARK_PULSE, Moves::MOVE_DAZZLING_GLEAM]
         ],
         Pokemon::HONCHKROW => [
             self::FIELD_ATTACK => 243,
@@ -7833,7 +11678,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PECK_FAST, Moves::MOVE_SNARL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRAVE_BIRD, Moves::MOVE_PSYCHIC, Moves::MOVE_DARK_PULSE, Moves::MOVE_SKY_ATTACK]
         ],
         Pokemon::HONCHKROW | Mods::PURIFIED => [
             self::FIELD_ATTACK => 243,
@@ -7843,7 +11692,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PECK_FAST, Moves::MOVE_SNARL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRAVE_BIRD, Moves::MOVE_PSYCHIC, Moves::MOVE_DARK_PULSE, Moves::MOVE_SKY_ATTACK]
         ],
         Pokemon::HONCHKROW | Mods::SHADOW => [
             self::FIELD_ATTACK => 243,
@@ -7855,7 +11708,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PECK_FAST, Moves::MOVE_SNARL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRAVE_BIRD, Moves::MOVE_PSYCHIC, Moves::MOVE_DARK_PULSE, Moves::MOVE_SKY_ATTACK]
         ],
         Pokemon::GLAMEOW => [
             self::FIELD_ATTACK => 109,
@@ -7864,7 +11721,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::PURUGLY],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PLAY_ROUGH, Moves::MOVE_THUNDERBOLT, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::PURUGLY => [
             self::FIELD_ATTACK => 172,
@@ -7873,7 +11735,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PLAY_ROUGH, Moves::MOVE_THUNDER, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::CHINGLING => [
             self::FIELD_ATTACK => 114,
@@ -7882,7 +11748,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::CHIMECHO],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ZEN_HEADBUTT_FAST, Moves::MOVE_ASTONISH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WRAP, Moves::MOVE_SHADOW_BALL, Moves::MOVE_PSYSHOCK]
         ],
         Pokemon::STUNKY => [
             self::FIELD_ATTACK => 121,
@@ -7892,7 +11763,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::SKUNTANK],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_FLAMETHROWER, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::STUNKY | Mods::PURIFIED => [
             self::FIELD_ATTACK => 121,
@@ -7902,7 +11778,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::SKUNTANK | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_FLAMETHROWER, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::STUNKY | Mods::SHADOW => [
             self::FIELD_ATTACK => 121,
@@ -7914,7 +11795,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::SKUNTANK | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_FLAMETHROWER, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::SKUNTANK => [
             self::FIELD_ATTACK => 184,
@@ -7924,7 +11810,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_FLAMETHROWER, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::SKUNTANK | Mods::PURIFIED => [
             self::FIELD_ATTACK => 184,
@@ -7934,7 +11824,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_FLAMETHROWER, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::SKUNTANK | Mods::SHADOW => [
             self::FIELD_ATTACK => 184,
@@ -7946,7 +11840,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_FLAMETHROWER, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::BRONZOR => [
             self::FIELD_ATTACK => 43,
@@ -7956,7 +11854,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::BRONZONG],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_GYRO_BALL, Moves::MOVE_PSYSHOCK, Moves::MOVE_HEAVY_SLAM]
         ],
         Pokemon::BRONZONG => [
             self::FIELD_ATTACK => 161,
@@ -7966,7 +11869,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLASH_CANNON, Moves::MOVE_PSYCHIC, Moves::MOVE_HEAVY_SLAM, Moves::MOVE_BULLDOZE, Moves::MOVE_PSYSHOCK]
         ],
         Pokemon::BONSLY => [
             self::FIELD_ATTACK => 124,
@@ -7975,7 +11882,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ROCK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::SUDOWOODO],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_THROW_FAST, Moves::MOVE_COUNTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_TOMB, Moves::MOVE_EARTHQUAKE, Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::MIME_JR => [
             self::FIELD_ATTACK => 125,
@@ -7985,7 +11897,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::MR_MIME],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_POUND_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_PSYCHIC, Moves::MOVE_PSYSHOCK]
         ],
         Pokemon::HAPPINY => [
             self::FIELD_ATTACK => 25,
@@ -7994,7 +11911,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::CHANSEY],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POUND_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC]
         ],
         Pokemon::CHATOT => [
             self::FIELD_ATTACK => 183,
@@ -8004,7 +11926,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PECK_FAST, Moves::MOVE_STEEL_WING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SHADE, Moves::MOVE_SKY_ATTACK, Moves::MOVE_HEAT_WAVE]
         ],
         Pokemon::SPIRITOMB => [
             self::FIELD_ATTACK => 169,
@@ -8014,7 +11940,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_SUCKER_PUNCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_SNEAK, Moves::MOVE_OMINOUS_WIND, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::GIBLE => [
             self::FIELD_ATTACK => 124,
@@ -8024,7 +11954,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::GABITE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TAKE_DOWN_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_TWISTER, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::GIBLE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 124,
@@ -8034,7 +11969,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::GABITE | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TAKE_DOWN_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_TWISTER, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::GIBLE | Mods::SHADOW => [
             self::FIELD_ATTACK => 124,
@@ -8046,7 +11986,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_EVOLVES => [Pokemon::GABITE | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TAKE_DOWN_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_TWISTER, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::GABITE => [
             self::FIELD_ATTACK => 172,
@@ -8056,7 +12001,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::GARCHOMP],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TAKE_DOWN_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_TWISTER, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::GABITE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 172,
@@ -8066,7 +12016,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::GARCHOMP | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TAKE_DOWN_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_TWISTER, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::GABITE | Mods::SHADOW => [
             self::FIELD_ATTACK => 172,
@@ -8078,7 +12033,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_EVOLVES => [Pokemon::GARCHOMP | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TAKE_DOWN_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_TWISTER, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::GARCHOMP => [
             self::FIELD_ATTACK => 261,
@@ -8088,7 +12048,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_DRAGON_TAIL_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_OUTRAGE, Moves::MOVE_EARTHQUAKE, Moves::MOVE_FIRE_BLAST, Moves::MOVE_SAND_TOMB]
         ],
         Pokemon::GARCHOMP | Mods::PURIFIED => [
             self::FIELD_ATTACK => 261,
@@ -8098,7 +12062,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_DRAGON_TAIL_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_OUTRAGE, Moves::MOVE_EARTHQUAKE, Moves::MOVE_FIRE_BLAST, Moves::MOVE_SAND_TOMB]
         ],
         Pokemon::GARCHOMP | Mods::SHADOW => [
             self::FIELD_ATTACK => 261,
@@ -8110,7 +12078,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_DRAGON_TAIL_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_OUTRAGE, Moves::MOVE_EARTHQUAKE, Moves::MOVE_FIRE_BLAST, Moves::MOVE_SAND_TOMB]
         ],
         Pokemon::MUNCHLAX => [
             self::FIELD_ATTACK => 137,
@@ -8119,7 +12091,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::SNORLAX],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_LICK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_GUNK_SHOT, Moves::MOVE_BODY_SLAM, Moves::MOVE_BULLDOZE]
         ],
         Pokemon::RIOLU => [
             self::FIELD_ATTACK => 127,
@@ -8128,7 +12105,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::LUCARIO],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_COUNTER_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRICK_BREAK, Moves::MOVE_LOW_SWEEP, Moves::MOVE_CROSS_CHOP]
         ],
         Pokemon::LUCARIO => [
             self::FIELD_ATTACK => 236,
@@ -8138,7 +12120,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_COUNTER_FAST, Moves::MOVE_BULLET_PUNCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLASH_CANNON, Moves::MOVE_SHADOW_BALL, Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_POWER_UP_PUNCH, Moves::MOVE_AURA_SPHERE]
         ],
         Pokemon::HIPPOPOTAS => [
             self::FIELD_ATTACK => 124,
@@ -8147,7 +12133,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::HIPPOWDON],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_ROCK_TOMB, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::HIPPOPOTAS | Mods::PURIFIED => [
             self::FIELD_ATTACK => 124,
@@ -8156,7 +12147,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::HIPPOWDON | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_ROCK_TOMB, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::HIPPOPOTAS | Mods::SHADOW => [
             self::FIELD_ATTACK => 124,
@@ -8167,7 +12163,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::HIPPOWDON | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_ROCK_TOMB, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::HIPPOWDON => [
             self::FIELD_ATTACK => 201,
@@ -8176,7 +12177,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FIRE_FANG_FAST, Moves::MOVE_BITE_FAST, Moves::MOVE_THUNDER_FANG_FAST, Moves::MOVE_ICE_FANG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_STONE_EDGE, Moves::MOVE_BODY_SLAM, Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::HIPPOWDON | Mods::PURIFIED => [
             self::FIELD_ATTACK => 201,
@@ -8185,7 +12190,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FIRE_FANG_FAST, Moves::MOVE_BITE_FAST, Moves::MOVE_THUNDER_FANG_FAST, Moves::MOVE_ICE_FANG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_STONE_EDGE, Moves::MOVE_BODY_SLAM, Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::HIPPOWDON | Mods::SHADOW => [
             self::FIELD_ATTACK => 201,
@@ -8196,7 +12205,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FIRE_FANG_FAST, Moves::MOVE_BITE_FAST, Moves::MOVE_THUNDER_FANG_FAST, Moves::MOVE_ICE_FANG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_STONE_EDGE, Moves::MOVE_BODY_SLAM, Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::SKORUPI => [
             self::FIELD_ATTACK => 93,
@@ -8206,7 +12219,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::BUG,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::DRAPION],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_STING_FAST, Moves::MOVE_INFESTATION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CROSS_POISON, Moves::MOVE_AQUA_TAIL, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::DRAPION => [
             self::FIELD_ATTACK => 180,
@@ -8216,7 +12234,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_STING_FAST, Moves::MOVE_INFESTATION_FAST, Moves::MOVE_BITE_FAST, Moves::MOVE_ICE_FANG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_AQUA_TAIL, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_FELL_STINGER]
         ],
         Pokemon::CROAGUNK => [
             self::FIELD_ATTACK => 116,
@@ -8226,7 +12248,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::TOXICROAK],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_STING_FAST, Moves::MOVE_POISON_JAB_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRICK_BREAK, Moves::MOVE_LOW_SWEEP, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::TOXICROAK => [
             self::FIELD_ATTACK => 211,
@@ -8236,7 +12263,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_COUNTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DYNAMIC_PUNCH, Moves::MOVE_MUD_BOMB, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::CARNIVINE => [
             self::FIELD_ATTACK => 187,
@@ -8245,7 +12276,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_VINE_WHIP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_POWER_WHIP, Moves::MOVE_ENERGY_BALL, Moves::MOVE_CRUNCH]
         ],
         Pokemon::FINNEON => [
             self::FIELD_ATTACK => 96,
@@ -8254,7 +12289,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::LUMINEON],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POUND_FAST, Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_ICE_BEAM, Moves::MOVE_SILVER_WIND]
         ],
         Pokemon::LUMINEON => [
             self::FIELD_ATTACK => 142,
@@ -8263,7 +12303,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATERFALL_FAST, Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_BLIZZARD, Moves::MOVE_SILVER_WIND]
         ],
         Pokemon::MANTYKE => [
             self::FIELD_ATTACK => 105,
@@ -8273,7 +12317,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::MANTINE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_ICE_BEAM, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::SNOVER => [
             self::FIELD_ATTACK => 115,
@@ -8283,7 +12332,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ICE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::ABOMASNOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POWDER_SNOW_FAST, Moves::MOVE_ICE_SHARD_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_BEAM, Moves::MOVE_ENERGY_BALL, Moves::MOVE_STOMP]
         ],
         Pokemon::SNOVER | Mods::PURIFIED => [
             self::FIELD_ATTACK => 115,
@@ -8293,7 +12347,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ICE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::ABOMASNOW | Mods::PURIFIED],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POWDER_SNOW_FAST, Moves::MOVE_ICE_SHARD_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_BEAM, Moves::MOVE_ENERGY_BALL, Moves::MOVE_STOMP]
         ],
         Pokemon::SNOVER | Mods::SHADOW => [
             self::FIELD_ATTACK => 115,
@@ -8305,7 +12364,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_EVOLVES => [Pokemon::ABOMASNOW | Mods::SHADOW],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POWDER_SNOW_FAST, Moves::MOVE_ICE_SHARD_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_BEAM, Moves::MOVE_ENERGY_BALL, Moves::MOVE_STOMP]
         ],
         Pokemon::ABOMASNOW => [
             self::FIELD_ATTACK => 178,
@@ -8315,7 +12379,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ICE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POWDER_SNOW_FAST, Moves::MOVE_RAZOR_LEAF_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BLIZZARD, Moves::MOVE_ENERGY_BALL, Moves::MOVE_OUTRAGE, Moves::MOVE_WEATHER_BALL_ICE]
         ],
         Pokemon::ABOMASNOW | Mods::PURIFIED => [
             self::FIELD_ATTACK => 178,
@@ -8325,7 +12393,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ICE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POWDER_SNOW_FAST, Moves::MOVE_RAZOR_LEAF_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BLIZZARD, Moves::MOVE_ENERGY_BALL, Moves::MOVE_OUTRAGE, Moves::MOVE_WEATHER_BALL_ICE]
         ],
         Pokemon::ABOMASNOW | Mods::SHADOW => [
             self::FIELD_ATTACK => 178,
@@ -8337,7 +12409,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POWDER_SNOW_FAST, Moves::MOVE_RAZOR_LEAF_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BLIZZARD, Moves::MOVE_ENERGY_BALL, Moves::MOVE_OUTRAGE, Moves::MOVE_WEATHER_BALL_ICE]
         ],
         Pokemon::WEAVILE => [
             self::FIELD_ATTACK => 243,
@@ -8347,7 +12423,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ICE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ICE_SHARD_FAST, Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_SNARL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AVALANCHE, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::WEAVILE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 243,
@@ -8357,7 +12437,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ICE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ICE_SHARD_FAST, Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_SNARL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AVALANCHE, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::WEAVILE | Mods::SHADOW => [
             self::FIELD_ATTACK => 243,
@@ -8369,7 +12453,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ICE_SHARD_FAST, Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_SNARL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AVALANCHE, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::MAGNEZONE => [
             self::FIELD_ATTACK => 238,
@@ -8379,7 +12467,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SPARK_FAST, Moves::MOVE_CHARGE_BEAM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ZAP_CANNON, Moves::MOVE_WILD_CHARGE, Moves::MOVE_FLASH_CANNON, Moves::MOVE_MIRROR_SHOT]
         ],
         Pokemon::MAGNEZONE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 238,
@@ -8389,7 +12481,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SPARK_FAST, Moves::MOVE_CHARGE_BEAM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ZAP_CANNON, Moves::MOVE_WILD_CHARGE, Moves::MOVE_FLASH_CANNON, Moves::MOVE_MIRROR_SHOT]
         ],
         Pokemon::MAGNEZONE | Mods::SHADOW => [
             self::FIELD_ATTACK => 238,
@@ -8401,7 +12497,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SPARK_FAST, Moves::MOVE_CHARGE_BEAM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ZAP_CANNON, Moves::MOVE_WILD_CHARGE, Moves::MOVE_FLASH_CANNON, Moves::MOVE_MIRROR_SHOT]
         ],
         Pokemon::LICKILICKY => [
             self::FIELD_ATTACK => 161,
@@ -8410,7 +12510,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_LICK_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYPER_BEAM, Moves::MOVE_EARTHQUAKE, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_SHADOW_BALL],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::RHYPERIOR => [
             self::FIELD_ATTACK => 241,
@@ -8420,7 +12525,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ROCK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_SMACK_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SURF, Moves::MOVE_EARTHQUAKE, Moves::MOVE_STONE_EDGE, Moves::MOVE_SKULL_BASH, Moves::MOVE_SUPER_POWER],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_WRECKER]
         ],
         Pokemon::RHYPERIOR | Mods::PURIFIED => [
             self::FIELD_ATTACK => 241,
@@ -8430,7 +12540,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ROCK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_SMACK_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SURF, Moves::MOVE_EARTHQUAKE, Moves::MOVE_STONE_EDGE, Moves::MOVE_SKULL_BASH, Moves::MOVE_SUPER_POWER],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_WRECKER]
         ],
         Pokemon::RHYPERIOR | Mods::SHADOW => [
             self::FIELD_ATTACK => 241,
@@ -8442,7 +12557,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_SMACK_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SURF, Moves::MOVE_EARTHQUAKE, Moves::MOVE_STONE_EDGE, Moves::MOVE_SKULL_BASH, Moves::MOVE_SUPER_POWER],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_WRECKER]
         ],
         Pokemon::TANGROWTH => [
             self::FIELD_ATTACK => 207,
@@ -8451,7 +12571,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_VINE_WHIP_FAST, Moves::MOVE_INFESTATION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ANCIENT_POWER, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_POWER_WHIP, Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::ELECTIVIRE => [
             self::FIELD_ATTACK => 249,
@@ -8460,7 +12584,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_THUNDER_SHOCK_FAST, Moves::MOVE_LOW_KICK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_WILD_CHARGE, Moves::MOVE_THUNDER, Moves::MOVE_ICE_PUNCH]
         ],
         Pokemon::ELECTIVIRE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 249,
@@ -8469,7 +12597,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_THUNDER_SHOCK_FAST, Moves::MOVE_LOW_KICK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_WILD_CHARGE, Moves::MOVE_THUNDER, Moves::MOVE_ICE_PUNCH]
         ],
         Pokemon::ELECTIVIRE | Mods::SHADOW => [
             self::FIELD_ATTACK => 249,
@@ -8480,7 +12612,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_THUNDER_SHOCK_FAST, Moves::MOVE_LOW_KICK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_WILD_CHARGE, Moves::MOVE_THUNDER, Moves::MOVE_ICE_PUNCH]
         ],
         Pokemon::MAGMORTAR => [
             self::FIELD_ATTACK => 247,
@@ -8489,7 +12625,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FIRE_SPIN_FAST, Moves::MOVE_KARATE_CHOP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRICK_BREAK, Moves::MOVE_FIRE_PUNCH, Moves::MOVE_FIRE_BLAST, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::MAGMORTAR | Mods::PURIFIED => [
             self::FIELD_ATTACK => 247,
@@ -8498,7 +12638,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FIRE_SPIN_FAST, Moves::MOVE_KARATE_CHOP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRICK_BREAK, Moves::MOVE_FIRE_PUNCH, Moves::MOVE_FIRE_BLAST, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::MAGMORTAR | Mods::SHADOW => [
             self::FIELD_ATTACK => 247,
@@ -8509,7 +12653,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FIRE_SPIN_FAST, Moves::MOVE_KARATE_CHOP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRICK_BREAK, Moves::MOVE_FIRE_PUNCH, Moves::MOVE_FIRE_BLAST, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::TOGEKISS => [
             self::FIELD_ATTACK => 225,
@@ -8519,7 +12667,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_AIR_SLASH_FAST, Moves::MOVE_HIDDEN_POWER_FAST, Moves::MOVE_CHARM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ANCIENT_POWER, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_AERIAL_ACE, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::YANMEGA => [
             self::FIELD_ATTACK => 231,
@@ -8529,7 +12681,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUG_BITE_FAST, Moves::MOVE_WING_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ANCIENT_POWER, Moves::MOVE_AERIAL_ACE, Moves::MOVE_BUG_BUZZ]
         ],
         Pokemon::LEAFEON => [
             self::FIELD_ATTACK => 216,
@@ -8538,7 +12694,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SOLAR_BEAM, Moves::MOVE_LEAF_BLADE, Moves::MOVE_ENERGY_BALL],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_LAST_RESORT]
         ],
         Pokemon::GLACEON => [
             self::FIELD_ATTACK => 238,
@@ -8547,7 +12708,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ICE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ICE_SHARD_FAST, Moves::MOVE_FROST_BREATH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AVALANCHE, Moves::MOVE_ICY_WIND, Moves::MOVE_ICE_BEAM],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_LAST_RESORT]
         ],
         Pokemon::GLISCOR => [
             self::FIELD_ATTACK => 185,
@@ -8557,7 +12723,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FURY_CUTTER_FAST, Moves::MOVE_WING_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_AERIAL_ACE, Moves::MOVE_NIGHT_SLASH, Moves::MOVE_SAND_TOMB]
         ],
         Pokemon::GLISCOR | Mods::PURIFIED => [
             self::FIELD_ATTACK => 185,
@@ -8567,7 +12737,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FURY_CUTTER_FAST, Moves::MOVE_WING_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_AERIAL_ACE, Moves::MOVE_NIGHT_SLASH, Moves::MOVE_SAND_TOMB]
         ],
         Pokemon::GLISCOR | Mods::SHADOW => [
             self::FIELD_ATTACK => 185,
@@ -8579,7 +12753,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FURY_CUTTER_FAST, Moves::MOVE_WING_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_AERIAL_ACE, Moves::MOVE_NIGHT_SLASH, Moves::MOVE_SAND_TOMB]
         ],
         Pokemon::MAMOSWINE => [
             self::FIELD_ATTACK => 247,
@@ -8589,7 +12767,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_POWDER_SNOW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AVALANCHE, Moves::MOVE_BULLDOZE, Moves::MOVE_STONE_EDGE],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::PORYGON_Z => [
             self::FIELD_ATTACK => 264,
@@ -8598,7 +12781,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HIDDEN_POWER_FAST, Moves::MOVE_CHARGE_BEAM_FAST, Moves::MOVE_LOCK_ON_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SOLAR_BEAM, Moves::MOVE_HYPER_BEAM, Moves::MOVE_ZAP_CANNON, Moves::MOVE_BLIZZARD]
         ],
         Pokemon::PORYGON_Z | Mods::PURIFIED => [
             self::FIELD_ATTACK => 264,
@@ -8607,7 +12794,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HIDDEN_POWER_FAST, Moves::MOVE_CHARGE_BEAM_FAST, Moves::MOVE_LOCK_ON_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SOLAR_BEAM, Moves::MOVE_HYPER_BEAM, Moves::MOVE_ZAP_CANNON, Moves::MOVE_BLIZZARD]
         ],
         Pokemon::PORYGON_Z | Mods::SHADOW => [
             self::FIELD_ATTACK => 264,
@@ -8618,7 +12809,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HIDDEN_POWER_FAST, Moves::MOVE_CHARGE_BEAM_FAST, Moves::MOVE_LOCK_ON_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SOLAR_BEAM, Moves::MOVE_HYPER_BEAM, Moves::MOVE_ZAP_CANNON, Moves::MOVE_BLIZZARD]
         ],
         Pokemon::GALLADE => [
             self::FIELD_ATTACK => 237,
@@ -8628,7 +12823,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_LOW_KICK_FAST, Moves::MOVE_CHARM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_PSYCHIC, Moves::MOVE_LEAF_BLADE],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SYNCHRONOISE]
         ],
         Pokemon::GALLADE | Mods::PURIFIED => [
             self::FIELD_ATTACK => 237,
@@ -8638,7 +12838,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_LOW_KICK_FAST, Moves::MOVE_CHARM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_PSYCHIC, Moves::MOVE_LEAF_BLADE],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SYNCHRONOISE]
         ],
         Pokemon::GALLADE | Mods::SHADOW => [
             self::FIELD_ATTACK => 237,
@@ -8650,7 +12855,12 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 5000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 90,
+            self::FIELD_THIRD_MOVE_STARDUST => 90000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_LOW_KICK_FAST, Moves::MOVE_CHARM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_PSYCHIC, Moves::MOVE_LEAF_BLADE],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SYNCHRONOISE]
         ],
         Pokemon::PROBOPASS => [
             self::FIELD_ATTACK => 135,
@@ -8660,7 +12870,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_THROW_FAST, Moves::MOVE_SPARK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_MAGNET_BOMB, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::DUSKNOIR => [
             self::FIELD_ATTACK => 180,
@@ -8669,7 +12883,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GHOST,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HEX_FAST, Moves::MOVE_ASTONISH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_OMINOUS_WIND, Moves::MOVE_PSYCHIC, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::DUSKNOIR | Mods::PURIFIED => [
             self::FIELD_ATTACK => 180,
@@ -8678,7 +12896,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GHOST,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 40,
+            self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HEX_FAST, Moves::MOVE_ASTONISH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_OMINOUS_WIND, Moves::MOVE_PSYCHIC, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::DUSKNOIR | Mods::SHADOW => [
             self::FIELD_ATTACK => 180,
@@ -8689,7 +12911,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 60,
+            self::FIELD_THIRD_MOVE_STARDUST => 60000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HEX_FAST, Moves::MOVE_ASTONISH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_OMINOUS_WIND, Moves::MOVE_PSYCHIC, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::FROSLASS => [
             self::FIELD_ATTACK => 171,
@@ -8699,9 +12925,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GHOST,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POWDER_SNOW_FAST, Moves::MOVE_HEX_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AVALANCHE, Moves::MOVE_CRUNCH, Moves::MOVE_SHADOW_BALL]
         ],
-        Pokemon::ROTOM => [
+        Pokemon::ROTOM | FormsAlias::ROTOM_NORMAL => [
             self::FIELD_ATTACK => 185,
             self::FIELD_DEFENSE => 159,
             self::FIELD_STAMINA => 137,
@@ -8709,7 +12939,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GHOST,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ASTONISH_FAST, Moves::MOVE_THUNDER_SHOCK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_OMINOUS_WIND, Moves::MOVE_THUNDERBOLT, Moves::MOVE_THUNDER]
         ],
         Pokemon::ROTOM | FormsAlias::ROTOM_FAN => [
             self::FIELD_ATTACK => 204,
@@ -8719,7 +12953,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ASTONISH_FAST, Moves::MOVE_AIR_SLASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_OMINOUS_WIND, Moves::MOVE_THUNDERBOLT, Moves::MOVE_THUNDER]
         ],
         Pokemon::ROTOM | FormsAlias::ROTOM_FROST => [
             self::FIELD_ATTACK => 204,
@@ -8729,7 +12967,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ICE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ASTONISH_FAST, Moves::MOVE_THUNDER_SHOCK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BLIZZARD, Moves::MOVE_THUNDERBOLT, Moves::MOVE_THUNDER]
         ],
         Pokemon::ROTOM | FormsAlias::ROTOM_HEAT => [
             self::FIELD_ATTACK => 204,
@@ -8739,7 +12981,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ASTONISH_FAST, Moves::MOVE_THUNDER_SHOCK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_OVERHEAT, Moves::MOVE_THUNDERBOLT, Moves::MOVE_THUNDER]
         ],
         Pokemon::ROTOM | FormsAlias::ROTOM_MOW => [
             self::FIELD_ATTACK => 204,
@@ -8749,7 +12995,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ASTONISH_FAST, Moves::MOVE_THUNDER_SHOCK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_OMINOUS_WIND, Moves::MOVE_THUNDERBOLT, Moves::MOVE_THUNDER]
         ],
         Pokemon::ROTOM | FormsAlias::ROTOM_WASH => [
             self::FIELD_ATTACK => 204,
@@ -8759,7 +13009,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ASTONISH_FAST, Moves::MOVE_THUNDER_SHOCK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_THUNDERBOLT, Moves::MOVE_THUNDER]
         ],
         Pokemon::UXIE => [
             self::FIELD_ATTACK => 156,
@@ -8768,7 +13022,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_EXTRASENSORY_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_SWIFT, Moves::MOVE_THUNDER]
         ],
         Pokemon::MESPRIT => [
             self::FIELD_ATTACK => 212,
@@ -8777,7 +13035,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_EXTRASENSORY_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_SWIFT, Moves::MOVE_BLIZZARD]
         ],
         Pokemon::AZELF => [
             self::FIELD_ATTACK => 270,
@@ -8786,7 +13048,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_EXTRASENSORY_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_SWIFT, Moves::MOVE_FIRE_BLAST]
         ],
         Pokemon::DIALGA => [
             self::FIELD_ATTACK => 275,
@@ -8796,7 +13062,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DRAGON,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_DRAGON_BREATH_FAST, Moves::MOVE_METAL_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRACO_METEOR, Moves::MOVE_IRON_HEAD, Moves::MOVE_THUNDER]
         ],
         Pokemon::PALKIA => [
             self::FIELD_ATTACK => 280,
@@ -8806,7 +13076,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DRAGON,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_DRAGON_BREATH_FAST, Moves::MOVE_DRAGON_TAIL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRACO_METEOR, Moves::MOVE_FIRE_BLAST, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_AQUA_TAIL]
         ],
         Pokemon::HEATRAN => [
             self::FIELD_ATTACK => 251,
@@ -8816,7 +13090,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FIRE_SPIN_FAST, Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_IRON_HEAD, Moves::MOVE_STONE_EDGE, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::REGIGIGAS => [
             self::FIELD_ATTACK => 287,
@@ -8825,9 +13103,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ZEN_HEADBUTT_FAST, Moves::MOVE_HIDDEN_POWER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_GIGA_IMPACT, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_THUNDER]
         ],
-        Pokemon::GIRATINA => [
+        Pokemon::GIRATINA | FormsAlias::GIRATINA_ORIGIN => [
             self::FIELD_ATTACK => 225,
             self::FIELD_DEFENSE => 187,
             self::FIELD_STAMINA => 284,
@@ -8835,7 +13117,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DRAGON,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_DRAGON_TAIL_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAGON_PULSE, Moves::MOVE_OMINOUS_WIND, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::GIRATINA | FormsAlias::GIRATINA_ALTERED => [
             self::FIELD_ATTACK => 187,
@@ -8845,7 +13131,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DRAGON,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_DRAGON_BREATH_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAGON_CLAW, Moves::MOVE_ANCIENT_POWER, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::CRESSELIA => [
             self::FIELD_ATTACK => 152,
@@ -8854,7 +13144,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PSYCHO_CUT_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AURORA_BEAM, Moves::MOVE_MOONBLAST, Moves::MOVE_FUTURESIGHT],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::PHIONE => [
             self::FIELD_ATTACK => 162,
@@ -8862,7 +13157,11 @@ class PokemonData
             self::FIELD_STAMINA => 190,
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_MYTHIC => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATERFALL_FAST, Moves::MOVE_BUBBLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_WATER_PULSE, Moves::MOVE_SURF]
         ],
         Pokemon::MANAPHY => [
             self::FIELD_ATTACK => 210,
@@ -8870,7 +13169,11 @@ class PokemonData
             self::FIELD_STAMINA => 225,
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_MYTHIC => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATERFALL_FAST, Moves::MOVE_BUBBLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_PSYCHIC, Moves::MOVE_SURF]
         ],
         Pokemon::DARKRAI => [
             self::FIELD_ATTACK => 285,
@@ -8879,15 +13182,23 @@ class PokemonData
             self::FIELD_TYPE1 => Types::DARK,
             self::FIELD_MYTHIC => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SNARL_FAST, Moves::MOVE_FEINT_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FOCUS_BLAST, Moves::MOVE_SHADOW_BALL, Moves::MOVE_DARK_PULSE]
         ],
-        Pokemon::SHAYMIN => [
+        Pokemon::SHAYMIN | FormsAlias::SHAYMIN_LAND => [
             self::FIELD_ATTACK => 210,
             self::FIELD_DEFENSE => 210,
             self::FIELD_STAMINA => 225,
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_MYTHIC => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HIDDEN_POWER_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_GRASS_KNOT, Moves::MOVE_SOLAR_BEAM]
         ],
         Pokemon::SHAYMIN | FormsAlias::SHAYMIN_SKY => [
             self::FIELD_ATTACK => 261,
@@ -8896,15 +13207,23 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_MYTHIC => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HIDDEN_POWER_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_GRASS_KNOT, Moves::MOVE_SOLAR_BEAM]
         ],
-        Pokemon::ARCEUS => [
+        Pokemon::ARCEUS | FormsAlias::ARCEUS_NORMAL => [
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_MYTHIC => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_IRON_TAIL_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_BUG => [
             self::FIELD_ATTACK => 238,
@@ -8912,7 +13231,11 @@ class PokemonData
             self::FIELD_STAMINA => 237,
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_MYTHIC => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_IRON_TAIL_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_DARK => [
             self::FIELD_ATTACK => 238,
@@ -8920,7 +13243,11 @@ class PokemonData
             self::FIELD_STAMINA => 237,
             self::FIELD_TYPE1 => Types::DARK,
             self::FIELD_MYTHIC => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_IRON_TAIL_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_DRAGON => [
             self::FIELD_ATTACK => 238,
@@ -8928,7 +13255,11 @@ class PokemonData
             self::FIELD_STAMINA => 237,
             self::FIELD_TYPE1 => Types::DRAGON,
             self::FIELD_MYTHIC => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_IRON_TAIL_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_ELECTRIC => [
             self::FIELD_ATTACK => 238,
@@ -8936,7 +13267,11 @@ class PokemonData
             self::FIELD_STAMINA => 237,
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_MYTHIC => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_IRON_TAIL_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_FAIRY => [
             self::FIELD_ATTACK => 238,
@@ -8944,7 +13279,11 @@ class PokemonData
             self::FIELD_STAMINA => 237,
             self::FIELD_TYPE1 => Types::FAIRY,
             self::FIELD_MYTHIC => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_IRON_TAIL_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_FIGHTING => [
             self::FIELD_ATTACK => 238,
@@ -8952,7 +13291,11 @@ class PokemonData
             self::FIELD_STAMINA => 237,
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_MYTHIC => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_IRON_TAIL_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_FIRE => [
             self::FIELD_ATTACK => 238,
@@ -8960,7 +13303,11 @@ class PokemonData
             self::FIELD_STAMINA => 237,
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_MYTHIC => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_IRON_TAIL_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_FLYING => [
             self::FIELD_ATTACK => 238,
@@ -8968,7 +13315,11 @@ class PokemonData
             self::FIELD_STAMINA => 237,
             self::FIELD_TYPE1 => Types::FLYING,
             self::FIELD_MYTHIC => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_IRON_TAIL_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_GHOST => [
             self::FIELD_ATTACK => 238,
@@ -8976,7 +13327,11 @@ class PokemonData
             self::FIELD_STAMINA => 237,
             self::FIELD_TYPE1 => Types::GHOST,
             self::FIELD_MYTHIC => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_IRON_TAIL_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_GRASS => [
             self::FIELD_ATTACK => 238,
@@ -8984,7 +13339,11 @@ class PokemonData
             self::FIELD_STAMINA => 237,
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_MYTHIC => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_IRON_TAIL_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_GROUND => [
             self::FIELD_ATTACK => 238,
@@ -8992,7 +13351,11 @@ class PokemonData
             self::FIELD_STAMINA => 237,
             self::FIELD_TYPE1 => Types::GROUND,
             self::FIELD_MYTHIC => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_IRON_TAIL_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_ICE => [
             self::FIELD_ATTACK => 238,
@@ -9000,7 +13363,11 @@ class PokemonData
             self::FIELD_STAMINA => 237,
             self::FIELD_TYPE1 => Types::ICE,
             self::FIELD_MYTHIC => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_IRON_TAIL_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_POISON => [
             self::FIELD_ATTACK => 238,
@@ -9008,7 +13375,11 @@ class PokemonData
             self::FIELD_STAMINA => 237,
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_MYTHIC => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_IRON_TAIL_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_PSYCHIC => [
             self::FIELD_ATTACK => 238,
@@ -9016,7 +13387,11 @@ class PokemonData
             self::FIELD_STAMINA => 237,
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_MYTHIC => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_IRON_TAIL_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_ROCK => [
             self::FIELD_ATTACK => 238,
@@ -9024,7 +13399,11 @@ class PokemonData
             self::FIELD_STAMINA => 237,
             self::FIELD_TYPE1 => Types::ROCK,
             self::FIELD_MYTHIC => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_IRON_TAIL_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_STEEL => [
             self::FIELD_ATTACK => 238,
@@ -9032,7 +13411,11 @@ class PokemonData
             self::FIELD_STAMINA => 237,
             self::FIELD_TYPE1 => Types::STEEL,
             self::FIELD_MYTHIC => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_IRON_TAIL_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_WATER => [
             self::FIELD_ATTACK => 238,
@@ -9040,7 +13423,11 @@ class PokemonData
             self::FIELD_STAMINA => 237,
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_MYTHIC => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_IRON_TAIL_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::VICTINI => [
             self::FIELD_ATTACK => 210,
@@ -9049,7 +13436,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TYPE2 => Types::FIRE,
             self::FIELD_MYTHIC => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_OVERHEAT, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_PSYCHIC, Moves::MOVE_V_CREATE]
         ],
         Pokemon::SNIVY => [
             self::FIELD_ATTACK => 88,
@@ -9058,7 +13449,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::SERVINE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_VINE_WHIP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SEED_BOMB, Moves::MOVE_WRAP]
         ],
         Pokemon::SERVINE => [
             self::FIELD_ATTACK => 122,
@@ -9067,7 +13463,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::SERPERIOR],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_IRON_TAIL_FAST, Moves::MOVE_VINE_WHIP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_GRASS_KNOT, Moves::MOVE_LEAF_TORNADO, Moves::MOVE_WRAP]
         ],
         Pokemon::SERPERIOR => [
             self::FIELD_ATTACK => 161,
@@ -9076,7 +13477,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_IRON_TAIL_FAST, Moves::MOVE_VINE_WHIP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_GRASS_KNOT, Moves::MOVE_LEAF_TORNADO, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::TEPIG => [
             self::FIELD_ATTACK => 115,
@@ -9085,7 +13490,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::PIGNITE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_EMBER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_CHARGE, Moves::MOVE_FLAMETHROWER, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::PIGNITE => [
             self::FIELD_ATTACK => 173,
@@ -9095,7 +13505,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::EMBOAR],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_EMBER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_CHARGE, Moves::MOVE_FLAMETHROWER, Moves::MOVE_ROCK_TOMB]
         ],
         Pokemon::EMBOAR => [
             self::FIELD_ATTACK => 235,
@@ -9105,7 +13520,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_LOW_KICK_FAST, Moves::MOVE_EMBER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAT_WAVE, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_FOCUS_BLAST]
         ],
         Pokemon::OSHAWOTT => [
             self::FIELD_ATTACK => 117,
@@ -9114,7 +13533,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::DEWOTT],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_TAIL, Moves::MOVE_WATER_PULSE, Moves::MOVE_NIGHT_SLASH]
         ],
         Pokemon::DEWOTT => [
             self::FIELD_ATTACK => 159,
@@ -9123,7 +13547,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::SAMUROTT],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FURY_CUTTER_FAST, Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_TAIL, Moves::MOVE_WATER_PULSE, Moves::MOVE_X_SCISSOR]
         ],
         Pokemon::SAMUROTT => [
             self::FIELD_ATTACK => 212,
@@ -9132,7 +13561,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FURY_CUTTER_FAST, Moves::MOVE_WATERFALL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_BLIZZARD, Moves::MOVE_MEGAHORN]
         ],
         Pokemon::PATRAT => [
             self::FIELD_ATTACK => 98,
@@ -9141,7 +13574,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::WATCHDOG],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_HYPER_FANG, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::WATCHDOG => [
             self::FIELD_ATTACK => 165,
@@ -9150,7 +13588,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_LOW_KICK_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_HYPER_FANG, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::LILLIPUP => [
             self::FIELD_ATTACK => 107,
@@ -9159,7 +13601,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::HERDIER],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_TAKE_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDERBOLT, Moves::MOVE_ROCK_TOMB, Moves::MOVE_DIG]
         ],
         Pokemon::HERDIER => [
             self::FIELD_ATTACK => 145,
@@ -9168,7 +13615,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::STOUTLAND],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_LICK_FAST, Moves::MOVE_TAKE_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDERBOLT, Moves::MOVE_PLAY_ROUGH, Moves::MOVE_DIG]
         ],
         Pokemon::STOUTLAND => [
             self::FIELD_ATTACK => 206,
@@ -9177,7 +13629,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_LICK_FAST, Moves::MOVE_TAKE_DOWN_FAST, Moves::MOVE_ICE_FANG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WILD_CHARGE, Moves::MOVE_PLAY_ROUGH, Moves::MOVE_CRUNCH]
         ],
         Pokemon::PURROLIN => [
             self::FIELD_ATTACK => 98,
@@ -9186,7 +13642,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::LIEPARD],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_SUCKER_PUNCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SLASH, Moves::MOVE_PLAY_ROUGH, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::LIEPARD => [
             self::FIELD_ATTACK => 187,
@@ -9195,7 +13656,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CHARM_FAST, Moves::MOVE_SNARL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_GUNK_SHOT, Moves::MOVE_PLAY_ROUGH, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::PANSAGE => [
             self::FIELD_ATTACK => 104,
@@ -9204,7 +13669,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::SIMISAGE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_VINE_WHIP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SEED_BOMB, Moves::MOVE_CRUNCH]
         ],
         Pokemon::SIMISAGE => [
             self::FIELD_ATTACK => 206,
@@ -9213,7 +13683,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_VINE_WHIP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SOLAR_BEAM, Moves::MOVE_GRASS_KNOT, Moves::MOVE_CRUNCH]
         ],
         Pokemon::PANSEAR => [
             self::FIELD_ATTACK => 104,
@@ -9222,7 +13696,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::SMISEAR],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_FIRE_SPIN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_BURST, Moves::MOVE_FLAME_CHARGE, Moves::MOVE_CRUNCH]
         ],
         Pokemon::SMISEAR => [
             self::FIELD_ATTACK => 206,
@@ -9231,7 +13710,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_FIRE_SPIN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAMETHROWER, Moves::MOVE_FIRE_BLAST, Moves::MOVE_CRUNCH]
         ],
         Pokemon::PANPOUR => [
             self::FIELD_ATTACK => 104,
@@ -9240,7 +13723,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::SMIPOUR],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SURF, Moves::MOVE_WATER_PULSE, Moves::MOVE_CRUNCH]
         ],
         Pokemon::SMIPOUR => [
             self::FIELD_ATTACK => 206,
@@ -9249,7 +13737,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SURF, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_CRUNCH]
         ],
         Pokemon::MUNNA => [
             self::FIELD_ATTACK => 111,
@@ -9258,7 +13750,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::MUSHARNA],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ZEN_HEADBUTT_FAST, Moves::MOVE_CHARGE_BEAM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_PSYSHOCK]
         ],
         Pokemon::MUSHARNA => [
             self::FIELD_ATTACK => 183,
@@ -9267,7 +13764,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ZEN_HEADBUTT_FAST, Moves::MOVE_CHARGE_BEAM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_PSYSHOCK]
         ],
         Pokemon::PIDOVE => [
             self::FIELD_ATTACK => 98,
@@ -9277,7 +13778,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::TRANQUILL],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_QUICK_ATTACK_FAST, Moves::MOVE_AIR_SLASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAT_WAVE, Moves::MOVE_AERIAL_ACE, Moves::MOVE_AIR_CUTTER]
         ],
         Pokemon::TRANQUILL => [
             self::FIELD_ATTACK => 144,
@@ -9287,7 +13793,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::UNFEZANT],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_AIR_SLASH_FAST, Moves::MOVE_STEEL_WING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAT_WAVE, Moves::MOVE_AERIAL_ACE, Moves::MOVE_SKY_ATTACK]
         ],
         Pokemon::UNFEZANT => [
             self::FIELD_ATTACK => 226,
@@ -9297,7 +13808,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_AIR_SLASH_FAST, Moves::MOVE_STEEL_WING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAT_WAVE, Moves::MOVE_HYPER_BEAM, Moves::MOVE_SKY_ATTACK]
         ],
         Pokemon::BLITZLE => [
             self::FIELD_ATTACK => 118,
@@ -9306,7 +13821,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::ZEBSTRIKA],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_QUICK_ATTACK_FAST, Moves::MOVE_SPARK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_CHARGE, Moves::MOVE_DISCHARGE, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::ZEBSTRIKA => [
             self::FIELD_ATTACK => 211,
@@ -9315,7 +13835,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_LOW_KICK_FAST, Moves::MOVE_SPARK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_CHARGE, Moves::MOVE_DISCHARGE, Moves::MOVE_WILD_CHARGE]
         ],
         Pokemon::ROGGENROLA => [
             self::FIELD_ATTACK => 121,
@@ -9324,7 +13848,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ROCK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::BOLDORE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_SMACK_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BULLDOZE, Moves::MOVE_ROCK_BLAST, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::BOLDORE => [
             self::FIELD_ATTACK => 174,
@@ -9333,7 +13862,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ROCK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::GIGALITH],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_SMACK_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_SLIDE, Moves::MOVE_BULLDOZE, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::GIGALITH => [
             self::FIELD_ATTACK => 226,
@@ -9342,7 +13876,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ROCK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_SMACK_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_SLIDE, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_SUPER_POWER, Moves::MOVE_HEAVY_SLAM]
         ],
         Pokemon::WOOBAT => [
             self::FIELD_ATTACK => 107,
@@ -9352,7 +13890,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::SWOOBAT],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_AIR_SLASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AIR_CUTTER, Moves::MOVE_AERIAL_ACE, Moves::MOVE_PSYSHOCK]
         ],
         Pokemon::SWOOBAT => [
             self::FIELD_ATTACK => 161,
@@ -9362,7 +13905,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_AIR_SLASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_AERIAL_ACE, Moves::MOVE_FUTURESIGHT]
         ],
         Pokemon::DRILBUR => [
             self::FIELD_ATTACK => 154,
@@ -9371,7 +13918,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::EXCADRILL],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_MUD_SLAP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_TOMB, Moves::MOVE_DIG, Moves::MOVE_DRILL_RUN]
         ],
         Pokemon::EXCADRILL => [
             self::FIELD_ATTACK => 255,
@@ -9381,7 +13933,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_METAL_CLAW_FAST, Moves::MOVE_MUD_SLAP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_SLIDE, Moves::MOVE_EARTHQUAKE, Moves::MOVE_DRILL_RUN, Moves::MOVE_IRON_HEAD]
         ],
         Pokemon::AUDINO => [
             self::FIELD_ATTACK => 114,
@@ -9390,7 +13946,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POUND_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DISARMING_VOICE, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::TIMBURR => [
             self::FIELD_ATTACK => 134,
@@ -9399,7 +13959,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::GURDURR],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_LOW_KICK_FAST, Moves::MOVE_POUND_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_LOW_SWEEP, Moves::MOVE_BRICK_BREAK, Moves::MOVE_ROCK_TOMB]
         ],
         Pokemon::GURDURR => [
             self::FIELD_ATTACK => 180,
@@ -9408,7 +13973,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::CONKELDURR],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_LOW_KICK_FAST, Moves::MOVE_POISON_JAB_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_LOW_SWEEP, Moves::MOVE_BRICK_BREAK, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::CONKELDURR => [
             self::FIELD_ATTACK => 243,
@@ -9417,7 +13987,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_COUNTER_FAST, Moves::MOVE_POISON_JAB_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DYNAMIC_PUNCH, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::TYMPOLE => [
             self::FIELD_ATTACK => 98,
@@ -9426,7 +14000,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::PALPITOAD],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_BUBBLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_MUD_BOMB, Moves::MOVE_SLUDGE_WAVE]
         ],
         Pokemon::PALPITOAD => [
             self::FIELD_ATTACK => 128,
@@ -9436,7 +14015,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::SEISMITOAD],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_BUBBLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_EARTH_POWER, Moves::MOVE_SLUDGE_WAVE]
         ],
         Pokemon::SEISMITOAD => [
             self::FIELD_ATTACK => 188,
@@ -9446,7 +14030,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_BUBBLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_MUDDY_WATER, Moves::MOVE_EARTH_POWER, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::THROH => [
             self::FIELD_ATTACK => 172,
@@ -9455,7 +14043,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_LOW_KICK_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FOCUS_BLAST, Moves::MOVE_LOW_SWEEP, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::SAWK => [
             self::FIELD_ATTACK => 231,
@@ -9464,7 +14056,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_LOW_KICK_FAST, Moves::MOVE_POISON_JAB_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FOCUS_BLAST, Moves::MOVE_LOW_SWEEP, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::SEWADDLE => [
             self::FIELD_ATTACK => 96,
@@ -9474,7 +14070,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::SWADLOON],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_STRUGGLE_BUG_FAST, Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SEED_BOMB, Moves::MOVE_SILVER_WIND]
         ],
         Pokemon::SWADLOON => [
             self::FIELD_ATTACK => 115,
@@ -9484,7 +14085,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::LEVANNY],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_STRUGGLE_BUG_FAST, Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_BUG_BUZZ, Moves::MOVE_SILVER_WIND]
         ],
         Pokemon::LEVANNY => [
             self::FIELD_ATTACK => 205,
@@ -9494,7 +14100,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_LEAF_BLADE, Moves::MOVE_X_SCISSOR, Moves::MOVE_SILVER_WIND]
         ],
         Pokemon::VENIPEDE => [
             self::FIELD_ATTACK => 83,
@@ -9504,7 +14114,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::WHIRLIPEDE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUG_BITE_FAST, Moves::MOVE_POISON_STING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SIGNAL_BEAM, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_GYRO_BALL]
         ],
         Pokemon::WHIRLIPEDE => [
             self::FIELD_ATTACK => 100,
@@ -9514,7 +14129,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::SCOLIPEDE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUG_BITE_FAST, Moves::MOVE_POISON_STING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SIGNAL_BEAM, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_GYRO_BALL]
         ],
         Pokemon::SCOLIPEDE => [
             self::FIELD_ATTACK => 203,
@@ -9524,7 +14144,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUG_BITE_FAST, Moves::MOVE_POISON_JAB_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_MEGAHORN, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_GYRO_BALL, Moves::MOVE_X_SCISSOR]
         ],
         Pokemon::COTTONEE => [
             self::FIELD_ATTACK => 71,
@@ -9534,7 +14158,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::WHIMSICOTT],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CHARM_FAST, Moves::MOVE_RAZOR_LEAF_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SEED_BOMB, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::WHIMSICOTT => [
             self::FIELD_ATTACK => 164,
@@ -9544,7 +14173,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CHARM_FAST, Moves::MOVE_RAZOR_LEAF_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_GRASS_KNOT, Moves::MOVE_HURRICANE, Moves::MOVE_MOONBLAST]
         ],
         Pokemon::PETILIL => [
             self::FIELD_ATTACK => 119,
@@ -9553,7 +14186,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::LILLIGANT],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CHARM_FAST, Moves::MOVE_HIDDEN_POWER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SEED_BOMB]
         ],
         Pokemon::LILLIGANT => [
             self::FIELD_ATTACK => 214,
@@ -9562,16 +14200,24 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CHARM_FAST, Moves::MOVE_HIDDEN_POWER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_HYPER_BEAM, Moves::MOVE_SOLAR_BEAM]
         ],
-        Pokemon::BASCULIN => [
+        Pokemon::BASCULIN | FormsAlias::BASCULIN_BLUE_STRIPED => [
             self::FIELD_ATTACK => 189,
             self::FIELD_DEFENSE => 129,
             self::FIELD_STAMINA => 172,
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_AQUA_TAIL, Moves::MOVE_MUDDY_WATER]
         ],
         Pokemon::BASCULIN | FormsAlias::BASCULIN_RED_STRIPED => [
             self::FIELD_ATTACK => 189,
@@ -9580,7 +14226,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_WATER_GUN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_AQUA_TAIL, Moves::MOVE_MUDDY_WATER]
         ],
         Pokemon::SANDILE => [
             self::FIELD_ATTACK => 132,
@@ -9590,7 +14240,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::KROKOROK],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_MUD_SLAP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_CRUNCH, Moves::MOVE_BULLDOZE]
         ],
         Pokemon::KROKOROK => [
             self::FIELD_ATTACK => 155,
@@ -9600,7 +14255,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::KROOKODILE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_MUD_SLAP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_CRUNCH, Moves::MOVE_BULLDOZE]
         ],
         Pokemon::KROOKODILE => [
             self::FIELD_ATTACK => 229,
@@ -9610,7 +14270,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SNARL_FAST, Moves::MOVE_MUD_SLAP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_CRUNCH, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::DARUMAKA => [
             self::FIELD_ATTACK => 153,
@@ -9619,7 +14283,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::DARMANITAN | FormsAlias::DARMANITAN_STANDARD],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_FIRE_FANG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_PUNCH, Moves::MOVE_FLAME_CHARGE]
         ],
         Pokemon::DARUMAKA | Mods::GALARIAN => [
             self::FIELD_ATTACK => 153,
@@ -9628,7 +14297,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ICE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::DARMANITAN | FormsAlias::DARMANITAN_STANDARD | Mods::GALARIAN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_ICE_FANG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_PUNCH, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::DARUMAKA | Mods::PURIFIED => [
             self::FIELD_ATTACK => 153,
@@ -9637,7 +14311,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_FIRE_FANG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_PUNCH, Moves::MOVE_FLAME_CHARGE]
         ],
         Pokemon::DARUMAKA | Mods::SHADOW => [
             self::FIELD_ATTACK => 153,
@@ -9648,25 +14326,37 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_FIRE_FANG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_PUNCH, Moves::MOVE_FLAME_CHARGE]
         ],
-        Pokemon::DARMANITAN => [
+        Pokemon::DARMANITAN | FormsAlias::DARMANITAN_STANDARD => [
             self::FIELD_ATTACK => 263,
             self::FIELD_DEFENSE => 114,
             self::FIELD_STAMINA => 233,
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_FIRE_FANG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_OVERHEAT, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_PSYCHIC, Moves::MOVE_ROCK_SLIDE]
         ],
-        Pokemon::DARMANITAN | Mods::GALARIAN => [
+        Pokemon::DARMANITAN | FormsAlias::DARMANITAN_STANDARD | Mods::GALARIAN => [
             self::FIELD_ATTACK => 263,
             self::FIELD_DEFENSE => 114,
             self::FIELD_STAMINA => 233,
             self::FIELD_TYPE1 => Types::ICE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_ICE_FANG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_OVERHEAT, Moves::MOVE_AVALANCHE, Moves::MOVE_SUPER_POWER, Moves::MOVE_ICE_PUNCH]
         ],
         Pokemon::DARMANITAN | FormsAlias::DARMANITAN_ZEN | Mods::GALARIAN => [
             self::FIELD_ATTACK => 323,
@@ -9676,7 +14366,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_ICE_FANG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_OVERHEAT, Moves::MOVE_AVALANCHE, Moves::MOVE_SUPER_POWER, Moves::MOVE_ICE_PUNCH]
         ],
         Pokemon::DARMANITAN | FormsAlias::DARMANITAN_ZEN => [
             self::FIELD_ATTACK => 243,
@@ -9686,7 +14380,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_FIRE_FANG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_OVERHEAT, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_PSYCHIC, Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::MARACTUS => [
             self::FIELD_ATTACK => 201,
@@ -9695,7 +14393,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BULLET_SEED_FAST, Moves::MOVE_POISON_JAB_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AERIAL_ACE, Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_SOLAR_BEAM]
         ],
         Pokemon::DWEBBLE => [
             self::FIELD_ATTACK => 118,
@@ -9705,7 +14407,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ROCK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::CRUSTLE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CUT_FAST, Moves::MOVE_SMACK_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_BLAST, Moves::MOVE_X_SCISSOR, Moves::MOVE_ROCK_TOMB]
         ],
         Pokemon::CRUSTLE => [
             self::FIELD_ATTACK => 188,
@@ -9715,7 +14422,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ROCK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FURY_CUTTER_FAST, Moves::MOVE_SMACK_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_BLAST, Moves::MOVE_X_SCISSOR, Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::SCRAGGY => [
             self::FIELD_ATTACK => 132,
@@ -9725,7 +14436,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::SCRAFTY],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_SMASH_FAST, Moves::MOVE_FEINT_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ACID_SPRAY, Moves::MOVE_BRICK_BREAK, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::SCRAFTY => [
             self::FIELD_ATTACK => 163,
@@ -9735,7 +14451,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_COUNTER_FAST, Moves::MOVE_SNARL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ACID_SPRAY, Moves::MOVE_POWER_UP_PUNCH, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::SIGILYPH => [
             self::FIELD_ATTACK => 204,
@@ -9745,7 +14465,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_AIR_SLASH_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AIR_CUTTER, Moves::MOVE_PSYBEAM, Moves::MOVE_ANCIENT_POWER, Moves::MOVE_SIGNAL_BEAM]
         ],
         Pokemon::YAMASK => [
             self::FIELD_ATTACK => 95,
@@ -9754,7 +14478,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GHOST,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::COFAGRIGUS],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ASTONISH_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_DARK_PULSE, Moves::MOVE_OMINOUS_WIND]
         ],
         Pokemon::COFAGRIGUS => [
             self::FIELD_ATTACK => 163,
@@ -9763,7 +14492,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::GHOST,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ASTONISH_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_DARK_PULSE, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::TIRTOUGA => [
             self::FIELD_ATTACK => 134,
@@ -9773,7 +14506,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ROCK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::CARRACOSTA],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SURF, Moves::MOVE_ANCIENT_POWER, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::CARRACOSTA => [
             self::FIELD_ATTACK => 192,
@@ -9783,7 +14521,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ROCK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_ROCK_THROW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SURF, Moves::MOVE_ANCIENT_POWER, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::ARCHEN => [
             self::FIELD_ATTACK => 213,
@@ -9793,7 +14535,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::ARCHEOPS],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_QUICK_ATTACK_FAST, Moves::MOVE_WING_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAGON_CLAW, Moves::MOVE_ANCIENT_POWER, Moves::MOVE_CRUNCH]
         ],
         Pokemon::ARCHEOPS => [
             self::FIELD_ATTACK => 292,
@@ -9803,7 +14550,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_STEEL_WING_FAST, Moves::MOVE_WING_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAGON_CLAW, Moves::MOVE_ANCIENT_POWER, Moves::MOVE_CRUNCH]
         ],
         Pokemon::TRUBBISH => [
             self::FIELD_ATTACK => 96,
@@ -9812,7 +14563,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::GARBODOR],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POUND_FAST, Moves::MOVE_TAKE_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_GUNK_SHOT, Moves::MOVE_SEED_BOMB, Moves::MOVE_GUNK_SHOT]
         ],
         Pokemon::GARBODOR => [
             self::FIELD_ATTACK => 181,
@@ -9821,7 +14577,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_INFESTATION_FAST, Moves::MOVE_TAKE_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ACID_SPRAY, Moves::MOVE_SEED_BOMB, Moves::MOVE_GUNK_SHOT, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::ZORUA => [
             self::FIELD_ATTACK => 153,
@@ -9830,7 +14590,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::ZOROARK],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_FEINT_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FOUL_PLAY, Moves::MOVE_AERIAL_ACE, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::ZOROARK => [
             self::FIELD_ATTACK => 250,
@@ -9839,7 +14604,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::DARK,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SHADOW_CLAW_FAST, Moves::MOVE_SNARL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FOUL_PLAY, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::MINCCINO => [
             self::FIELD_ATTACK => 98,
@@ -9848,7 +14617,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::CINCCINO],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POUND_FAST, Moves::MOVE_CHARM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SWIFT, Moves::MOVE_THUNDERBOLT, Moves::MOVE_AQUA_TAIL]
         ],
         Pokemon::CINCCINO => [
             self::FIELD_ATTACK => 198,
@@ -9857,7 +14631,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POUND_FAST, Moves::MOVE_CHARM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYPER_BEAM, Moves::MOVE_THUNDERBOLT, Moves::MOVE_AQUA_TAIL]
         ],
         Pokemon::GOTHITA => [
             self::FIELD_ATTACK => 98,
@@ -9866,7 +14644,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::GOTHORITA],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POUND_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_PSYSHOCK, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::GOTHORITA => [
             self::FIELD_ATTACK => 137,
@@ -9875,7 +14658,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::GOTHITELLE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POUND_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_FUTURESIGHT, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::GOTHITELLE => [
             self::FIELD_ATTACK => 176,
@@ -9884,7 +14672,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CHARM_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_SLIDE, Moves::MOVE_FUTURESIGHT, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::SOLOSIS => [
             self::FIELD_ATTACK => 170,
@@ -9893,7 +14685,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::DUOSION],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HIDDEN_POWER_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYSHOCK, Moves::MOVE_NIGHT_SHADE, Moves::MOVE_THUNDER]
         ],
         Pokemon::DUOSION => [
             self::FIELD_ATTACK => 208,
@@ -9902,7 +14699,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::REUNICLUS],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HIDDEN_POWER_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYSHOCK, Moves::MOVE_NIGHT_SHADE, Moves::MOVE_THUNDER]
         ],
         Pokemon::REUNICLUS => [
             self::FIELD_ATTACK => 214,
@@ -9911,7 +14713,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HIDDEN_POWER_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_SHADOW_BALL, Moves::MOVE_THUNDER]
         ],
         Pokemon::DUCKLETT => [
             self::FIELD_ATTACK => 84,
@@ -9921,7 +14727,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::SWANNA],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_WING_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AERIAL_ACE, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_BRAVE_BIRD]
         ],
         Pokemon::SWANNA => [
             self::FIELD_ATTACK => 182,
@@ -9931,7 +14742,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_AIR_SLASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_BEAM, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_HURRICANE]
         ],
         Pokemon::VANILLITE => [
             self::FIELD_ATTACK => 118,
@@ -9940,7 +14755,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ICE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::VANILLISH],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POWDER_SNOW_FAST, Moves::MOVE_ASTONISH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICY_WIND, Moves::MOVE_ICE_BEAM, Moves::MOVE_SIGNAL_BEAM]
         ],
         Pokemon::VANILLISH => [
             self::FIELD_ATTACK => 151,
@@ -9949,7 +14769,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ICE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::VANILLUXE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FROST_BREATH_FAST, Moves::MOVE_ASTONISH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICY_WIND, Moves::MOVE_ICE_BEAM, Moves::MOVE_SIGNAL_BEAM]
         ],
         Pokemon::VANILLUXE => [
             self::FIELD_ATTACK => 218,
@@ -9958,9 +14783,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ICE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FROST_BREATH_FAST, Moves::MOVE_ASTONISH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BLIZZARD, Moves::MOVE_FLASH_CANNON, Moves::MOVE_SIGNAL_BEAM]
         ],
-        Pokemon::DEERLING => [
+        Pokemon::DEERLING | FormsAlias::DEERLING_SPRING => [
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 100,
             self::FIELD_STAMINA => 155,
@@ -9968,7 +14797,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_SPRING],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_TAKE_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SEED_BOMB, Moves::MOVE_WILD_CHARGE]
         ],
         Pokemon::DEERLING | FormsAlias::DEERLING_AUTUMN => [
             self::FIELD_ATTACK => 115,
@@ -9978,7 +14812,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_AUTUMN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_TAKE_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SEED_BOMB, Moves::MOVE_WILD_CHARGE]
         ],
         Pokemon::DEERLING | FormsAlias::DEERLING_SUMMER => [
             self::FIELD_ATTACK => 115,
@@ -9988,7 +14827,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_SUMMER],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_TAKE_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SEED_BOMB, Moves::MOVE_WILD_CHARGE]
         ],
         Pokemon::DEERLING | FormsAlias::DEERLING_WINTER => [
             self::FIELD_ATTACK => 115,
@@ -9998,9 +14842,14 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_WINTER],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_TAKE_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SEED_BOMB, Moves::MOVE_WILD_CHARGE]
         ],
-        Pokemon::SAWSBUCK => [
+        Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_SPRING => [
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 146,
             self::FIELD_STAMINA => 190,
@@ -10008,7 +14857,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_TAKE_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_MEGAHORN, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_WILD_CHARGE, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_AUTUMN => [
             self::FIELD_ATTACK => 198,
@@ -10018,7 +14871,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_TAKE_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_MEGAHORN, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_WILD_CHARGE, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_SUMMER => [
             self::FIELD_ATTACK => 198,
@@ -10028,7 +14885,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_TAKE_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_MEGAHORN, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_WILD_CHARGE, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_WINTER => [
             self::FIELD_ATTACK => 198,
@@ -10038,7 +14899,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GRASS,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_TAKE_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_MEGAHORN, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_WILD_CHARGE, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::EMOLGA => [
             self::FIELD_ATTACK => 158,
@@ -10048,7 +14913,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_THUNDER_SHOCK_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DISCHARGE, Moves::MOVE_AERIAL_ACE, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::KARRABLAST => [
             self::FIELD_ATTACK => 137,
@@ -10057,7 +14926,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::ESCAVALIER],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PECK_FAST, Moves::MOVE_FURY_CUTTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SIGNAL_BEAM, Moves::MOVE_X_SCISSOR, Moves::MOVE_DRILL_RUN, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::ESCAVALIER => [
             self::FIELD_ATTACK => 223,
@@ -10067,7 +14941,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_COUNTER_FAST, Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_MEGAHORN, Moves::MOVE_ACID_SPRAY, Moves::MOVE_DRILL_RUN, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::FOONGUS => [
             self::FIELD_ATTACK => 97,
@@ -10077,7 +14955,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::AMOONGUSS],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ASTONISH_FAST, Moves::MOVE_FEINT_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_BODY_SLAM, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::AMOONGUSS => [
             self::FIELD_ATTACK => 155,
@@ -10087,9 +14970,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ASTONISH_FAST, Moves::MOVE_FEINT_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FOUL_PLAY, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_GRASS_KNOT]
         ],
-        Pokemon::FRILLISH => [
+        Pokemon::FRILLISH | FormsAlias::FRILLISH_MALE => [
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 134,
             self::FIELD_STAMINA => 146,
@@ -10097,7 +14984,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GHOST,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::JELLICENT | FormsAlias::JELLICENT_MALE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_HEX_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SHADE, Moves::MOVE_ICE_BEAM, Moves::MOVE_OMINOUS_WIND]
         ],
         Pokemon::FRILLISH | FormsAlias::FRILLISH_FEMALE => [
             self::FIELD_ATTACK => 115,
@@ -10107,9 +14999,14 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GHOST,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::JELLICENT | FormsAlias::JELLICENT_FEMALE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_HEX_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SHADE, Moves::MOVE_ICE_BEAM, Moves::MOVE_OMINOUS_WIND]
         ],
-        Pokemon::JELLICENT => [
+        Pokemon::JELLICENT | FormsAlias::JELLICENT_MALE => [
             self::FIELD_ATTACK => 159,
             self::FIELD_DEFENSE => 178,
             self::FIELD_STAMINA => 225,
@@ -10117,7 +15014,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GHOST,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_HEX_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_ICE_BEAM, Moves::MOVE_BUBBLE_BEAM]
         ],
         Pokemon::JELLICENT | FormsAlias::JELLICENT_FEMALE => [
             self::FIELD_ATTACK => 159,
@@ -10127,7 +15028,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GHOST,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUBBLE_FAST, Moves::MOVE_HEX_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_ICE_BEAM, Moves::MOVE_BUBBLE_BEAM]
         ],
         Pokemon::ALOMOMOLA => [
             self::FIELD_ATTACK => 138,
@@ -10136,7 +15041,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATERFALL_FAST, Moves::MOVE_HIDDEN_POWER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_BLIZZARD, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::JOLTIK => [
             self::FIELD_ATTACK => 110,
@@ -10146,7 +15055,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::GALVANTULA],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CHARGE_BEAM_FAST, Moves::MOVE_SUCKER_PUNCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CROSS_POISON, Moves::MOVE_BUG_BUZZ, Moves::MOVE_DISCHARGE]
         ],
         Pokemon::GALVANTULA => [
             self::FIELD_ATTACK => 201,
@@ -10156,7 +15070,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_VOLT_SWITCH_FAST, Moves::MOVE_FURY_CUTTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CROSS_POISON, Moves::MOVE_BUG_BUZZ, Moves::MOVE_DISCHARGE, Moves::MOVE_ENERGY_BALL]
         ],
         Pokemon::FERROSEED => [
             self::FIELD_ATTACK => 82,
@@ -10166,7 +15084,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::FERROTHORN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_METAL_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_GYRO_BALL, Moves::MOVE_FLASH_CANNON, Moves::MOVE_IRON_HEAD]
         ],
         Pokemon::FERROTHORN => [
             self::FIELD_ATTACK => 158,
@@ -10176,7 +15099,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BULLET_SEED_FAST, Moves::MOVE_METAL_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_POWER_WHIP, Moves::MOVE_FLASH_CANNON, Moves::MOVE_ACID_SPRAY, Moves::MOVE_THUNDER, Moves::MOVE_MIRROR_SHOT]
         ],
         Pokemon::KLINK => [
             self::FIELD_ATTACK => 98,
@@ -10185,7 +15112,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::KLANG],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_VOLT_SWITCH_FAST, Moves::MOVE_CHARGE_BEAM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_VICE_GRIP, Moves::MOVE_DISCHARGE, Moves::MOVE_ZAP_CANNON]
         ],
         Pokemon::KLANG => [
             self::FIELD_ATTACK => 150,
@@ -10194,7 +15126,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::KLINKLANG],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_THUNDER_SHOCK_FAST, Moves::MOVE_CHARGE_BEAM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_VICE_GRIP, Moves::MOVE_THUNDERBOLT, Moves::MOVE_ZAP_CANNON]
         ],
         Pokemon::KLINKLANG => [
             self::FIELD_ATTACK => 199,
@@ -10203,7 +15140,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_THUNDER_SHOCK_FAST, Moves::MOVE_CHARGE_BEAM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYPER_BEAM, Moves::MOVE_FLASH_CANNON, Moves::MOVE_ZAP_CANNON, Moves::MOVE_MIRROR_SHOT]
         ],
         Pokemon::TYNAMO => [
             self::FIELD_ATTACK => 105,
@@ -10212,7 +15153,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::ELEKTRIK],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_SPARK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::ELEKTRIK => [
             self::FIELD_ATTACK => 156,
@@ -10221,7 +15167,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::ELEKTROSS],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ACID_FAST, Moves::MOVE_SPARK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_THUNDERBOLT, Moves::MOVE_DISCHARGE]
         ],
         Pokemon::ELEKTROSS => [
             self::FIELD_ATTACK => 217,
@@ -10230,7 +15181,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ACID_FAST, Moves::MOVE_SPARK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_THUNDERBOLT, Moves::MOVE_ACID_SPRAY, Moves::MOVE_DRAGON_CLAW]
         ],
         Pokemon::ELGYEM => [
             self::FIELD_ATTACK => 148,
@@ -10239,7 +15194,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::BEHEEYEM],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_ASTONISH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_DARK_PULSE, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::BEHEEYEM => [
             self::FIELD_ATTACK => 221,
@@ -10248,7 +15208,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_ASTONISH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_SLIDE, Moves::MOVE_DARK_PULSE, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::LITWICK => [
             self::FIELD_ATTACK => 108,
@@ -10258,7 +15222,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::LAMPENT],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ASTONISH_FAST, Moves::MOVE_EMBER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_CHARGE, Moves::MOVE_FLAME_BURST, Moves::MOVE_HEAT_WAVE]
         ],
         Pokemon::LAMPENT => [
             self::FIELD_ATTACK => 169,
@@ -10268,7 +15237,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::CHANDELURE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ASTONISH_FAST, Moves::MOVE_EMBER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_FLAME_BURST, Moves::MOVE_HEAT_WAVE]
         ],
         Pokemon::CHANDELURE => [
             self::FIELD_ATTACK => 271,
@@ -10278,7 +15252,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HEX_FAST, Moves::MOVE_FIRE_SPIN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SHADOW_BALL, Moves::MOVE_OVERHEAT]
         ],
         Pokemon::AXEW => [
             self::FIELD_ATTACK => 154,
@@ -10287,7 +15265,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::DRAGON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::FRAXURE],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_IRON_TAIL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAGON_CLAW, Moves::MOVE_AQUA_TAIL, Moves::MOVE_DRAGON_PULSE]
         ],
         Pokemon::FRAXURE => [
             self::FIELD_ATTACK => 212,
@@ -10296,7 +15279,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::DRAGON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::HAXORUS],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_DRAGON_TAIL_FAST, Moves::MOVE_IRON_TAIL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAGON_CLAW, Moves::MOVE_AQUA_TAIL, Moves::MOVE_NIGHT_SLASH]
         ],
         Pokemon::HAXORUS => [
             self::FIELD_ATTACK => 284,
@@ -10305,7 +15293,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::DRAGON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_DRAGON_TAIL_FAST, Moves::MOVE_COUNTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAGON_CLAW, Moves::MOVE_SURF, Moves::MOVE_NIGHT_SLASH, Moves::MOVE_EARTHQUAKE]
         ],
         Pokemon::CUBCHOO => [
             self::FIELD_ATTACK => 128,
@@ -10314,7 +15306,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ICE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::BEARTIC],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POWDER_SNOW_FAST, Moves::MOVE_CHARM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_PUNCH, Moves::MOVE_ICY_WIND, Moves::MOVE_PLAY_ROUGH]
         ],
         Pokemon::BEARTIC => [
             self::FIELD_ATTACK => 233,
@@ -10323,7 +15320,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ICE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POWDER_SNOW_FAST, Moves::MOVE_CHARM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_PUNCH, Moves::MOVE_SURF, Moves::MOVE_PLAY_ROUGH]
         ],
         Pokemon::CRYOGONAL => [
             self::FIELD_ATTACK => 190,
@@ -10332,7 +15333,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::ICE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ICE_SHARD_FAST, Moves::MOVE_FROST_BREATH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AURORA_BEAM, Moves::MOVE_NIGHT_SLASH, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_WATER_PULSE]
         ],
         Pokemon::SHELMET => [
             self::FIELD_ATTACK => 72,
@@ -10341,7 +15346,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::ACCELGOR],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ACID_FAST, Moves::MOVE_INFESTATION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUG_BUZZ, Moves::MOVE_BODY_SLAM, Moves::MOVE_SIGNAL_BEAM]
         ],
         Pokemon::ACCELGOR => [
             self::FIELD_ATTACK => 220,
@@ -10350,7 +15360,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ACID_FAST, Moves::MOVE_INFESTATION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUG_BUZZ, Moves::MOVE_ACID_SPRAY, Moves::MOVE_SIGNAL_BEAM, Moves::MOVE_FOCUS_BLAST]
         ],
         Pokemon::STUNFISK => [
             self::FIELD_ATTACK => 144,
@@ -10360,7 +15374,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_THUNDER_SHOCK_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_MUD_BOMB, Moves::MOVE_DISCHARGE, Moves::MOVE_MUDDY_WATER]
         ],
         Pokemon::STUNFISK | Mods::GALARIAN => [
             self::FIELD_ATTACK => 144,
@@ -10370,7 +15388,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_METAL_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_FLASH_CANNON, Moves::MOVE_MUDDY_WATER, Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::STUNFISK | Mods::PURIFIED => [
             self::FIELD_ATTACK => 144,
@@ -10380,7 +15402,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ELECTRIC,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_THUNDER_SHOCK_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_MUD_BOMB, Moves::MOVE_DISCHARGE, Moves::MOVE_MUDDY_WATER]
         ],
         Pokemon::STUNFISK | Mods::SHADOW => [
             self::FIELD_ATTACK => 144,
@@ -10392,7 +15418,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_THUNDER_SHOCK_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_MUD_BOMB, Moves::MOVE_DISCHARGE, Moves::MOVE_MUDDY_WATER]
         ],
         Pokemon::MIENFOO => [
             self::FIELD_ATTACK => 160,
@@ -10401,7 +15431,12 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::MIENSHAO],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_LOW_KICK_FAST, Moves::MOVE_POUND_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRICK_BREAK, Moves::MOVE_LOW_SWEEP, Moves::MOVE_FOCUS_BLAST]
         ],
         Pokemon::MIENSHAO => [
             self::FIELD_ATTACK => 258,
@@ -10410,7 +15445,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_LOW_KICK_FAST, Moves::MOVE_POISON_JAB_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRICK_BREAK, Moves::MOVE_GRASS_KNOT, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::DRUDDIGON => [
             self::FIELD_ATTACK => 213,
@@ -10419,7 +15458,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::DRAGON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_DRAGON_TAIL_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAGON_CLAW, Moves::MOVE_NIGHT_SLASH, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::GOLETT => [
             self::FIELD_ATTACK => 127,
@@ -10429,7 +15472,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GHOST,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::GOLURK],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ASTONISH_FAST, Moves::MOVE_MUD_SLAP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_PUNCH, Moves::MOVE_BRICK_BREAK, Moves::MOVE_NIGHT_SHADE]
         ],
         Pokemon::GOLURK => [
             self::FIELD_ATTACK => 222,
@@ -10439,7 +15487,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GHOST,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ASTONISH_FAST, Moves::MOVE_MUD_SLAP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_PUNCH, Moves::MOVE_DYNAMIC_PUNCH, Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::PAWNIARD => [
             self::FIELD_ATTACK => 154,
@@ -10449,7 +15501,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::BISHARP],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_FURY_CUTTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SLASH, Moves::MOVE_IRON_HEAD, Moves::MOVE_X_SCISSOR]
         ],
         Pokemon::BISHARP => [
             self::FIELD_ATTACK => 232,
@@ -10459,7 +15516,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SNARL_FAST, Moves::MOVE_METAL_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_IRON_HEAD, Moves::MOVE_X_SCISSOR, Moves::MOVE_FOCUS_BLAST]
         ],
         Pokemon::BOUFFALANT => [
             self::FIELD_ATTACK => 195,
@@ -10468,7 +15529,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ZEN_HEADBUTT_FAST, Moves::MOVE_MUD_SHOT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_MEGAHORN, Moves::MOVE_STOMP, Moves::MOVE_SKULL_BASH, Moves::MOVE_EARTHQUAKE]
         ],
         Pokemon::RUFFLET => [
             self::FIELD_ATTACK => 150,
@@ -10478,7 +15543,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::BRAVIARY],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_PECK_FAST, Moves::MOVE_WING_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AERIAL_ACE, Moves::MOVE_BRAVE_BIRD, Moves::MOVE_ROCK_TOMB]
         ],
         Pokemon::BRAVIARY => [
             self::FIELD_ATTACK => 232,
@@ -10488,7 +15558,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_STEEL_WING_FAST, Moves::MOVE_AIR_SLASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAT_WAVE, Moves::MOVE_BRAVE_BIRD, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_CLOSE_COMBAT]
         ],
         Pokemon::VULLABY => [
             self::FIELD_ATTACK => 105,
@@ -10498,7 +15572,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::MANDIBUZZ],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_AIR_SLASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_BRAVE_BIRD, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::MANDIBUZZ => [
             self::FIELD_ATTACK => 129,
@@ -10508,7 +15587,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SNARL_FAST, Moves::MOVE_AIR_SLASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_AERIAL_ACE, Moves::MOVE_FOUL_PLAY, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::HEATMOR => [
             self::FIELD_ATTACK => 204,
@@ -10517,7 +15600,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_LICK_FAST, Moves::MOVE_FIRE_SPIN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAMETHROWER, Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_POWER_UP_PUNCH]
         ],
         Pokemon::DURANT => [
             self::FIELD_ATTACK => 217,
@@ -10527,7 +15614,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BUG_BITE_FAST, Moves::MOVE_METAL_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_X_SCISSOR, Moves::MOVE_IRON_HEAD, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::DEINO => [
             self::FIELD_ATTACK => 116,
@@ -10537,7 +15628,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DRAGON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::ZWELIOUS],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_DRAGON_BREATH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAGON_PULSE, Moves::MOVE_CRUNCH, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::ZWELIOUS => [
             self::FIELD_ATTACK => 159,
@@ -10547,7 +15643,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DRAGON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::HYDREIGON],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_DRAGON_BREATH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAGON_PULSE, Moves::MOVE_DARK_PULSE, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::HYDREIGON => [
             self::FIELD_ATTACK => 256,
@@ -10557,7 +15658,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::DRAGON,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_DRAGON_BREATH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAGON_PULSE, Moves::MOVE_DARK_PULSE, Moves::MOVE_FLASH_CANNON]
         ],
         Pokemon::LARVESTA => [
             self::FIELD_ATTACK => 156,
@@ -10567,7 +15672,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_EVOLVES => [Pokemon::VOLCARONA],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_EMBER_FAST, Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_CHARGE, Moves::MOVE_BUG_BUZZ, Moves::MOVE_FLAME_WHEEL]
         ],
         Pokemon::VOLCARONA => [
             self::FIELD_ATTACK => 264,
@@ -10577,7 +15687,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIRE,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FIRE_SPIN_FAST, Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_OVERHEAT, Moves::MOVE_BUG_BUZZ, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_HURRICANE]
         ],
         Pokemon::COBALLION => [
             self::FIELD_ATTACK => 192,
@@ -10587,7 +15701,12 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIGHTING,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_METAL_CLAW_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_IRON_HEAD, Moves::MOVE_STONE_EDGE],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SACRED_SWORD]
         ],
         Pokemon::TERRAKION => [
             self::FIELD_ATTACK => 260,
@@ -10597,7 +15716,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIGHTING,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SMACK_DOWN_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_EARTHQUAKE, Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::VIRIZION => [
             self::FIELD_ATTACK => 192,
@@ -10607,16 +15730,24 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIGHTING,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_QUICK_ATTACK_FAST, Moves::MOVE_ZEN_HEADBUTT_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_LEAF_BLADE, Moves::MOVE_STONE_EDGE]
         ],
-        Pokemon::TORNADUS => [
+        Pokemon::TORNADUS | FormsAlias::TORNADUS_INCARNATE => [
             self::FIELD_ATTACK => 266,
             self::FIELD_DEFENSE => 164,
             self::FIELD_STAMINA => 188,
             self::FIELD_TYPE1 => Types::FLYING,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_AIR_SLASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_GRASS_KNOT, Moves::MOVE_DARK_PULSE, Moves::MOVE_HYPER_BEAM, Moves::MOVE_HURRICANE]
         ],
         Pokemon::TORNADUS | FormsAlias::TORNADUS_THERIAN => [
             self::FIELD_ATTACK => 238,
@@ -10625,9 +15756,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FLYING,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_AIR_SLASH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_GRASS_KNOT, Moves::MOVE_DARK_PULSE, Moves::MOVE_HYPER_BEAM, Moves::MOVE_HURRICANE]
         ],
-        Pokemon::THUNDURUS => [
+        Pokemon::THUNDURUS | FormsAlias::THUNDURUS_INCARNATE => [
             self::FIELD_ATTACK => 266,
             self::FIELD_DEFENSE => 164,
             self::FIELD_STAMINA => 188,
@@ -10635,7 +15770,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ASTONISH_FAST, Moves::MOVE_THUNDER_SHOCK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_THUNDER, Moves::MOVE_BRICK_BREAK, Moves::MOVE_THUNDER_PUNCH]
         ],
         Pokemon::THUNDURUS | FormsAlias::THUNDURUS_THERIAN => [
             self::FIELD_ATTACK => 295,
@@ -10645,7 +15784,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ASTONISH_FAST, Moves::MOVE_THUNDER_SHOCK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_THUNDER, Moves::MOVE_BRICK_BREAK, Moves::MOVE_THUNDER_PUNCH]
         ],
         Pokemon::RESHIRAM => [
             self::FIELD_ATTACK => 275,
@@ -10655,7 +15798,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FIRE,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_DRAGON_BREATH_FAST, Moves::MOVE_FIRE_FANG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_OVERHEAT, Moves::MOVE_DRACO_METEOR, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::ZEKROM => [
             self::FIELD_ATTACK => 275,
@@ -10665,9 +15812,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ELECTRIC,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_DRAGON_BREATH_FAST, Moves::MOVE_CHARGE_BEAM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_OUTRAGE, Moves::MOVE_WILD_CHARGE, Moves::MOVE_FLASH_CANNON, Moves::MOVE_CRUNCH]
         ],
-        Pokemon::LANDORUS => [
+        Pokemon::LANDORUS | FormsAlias::LANDORUS_INCARNATE => [
             self::FIELD_ATTACK => 261,
             self::FIELD_DEFENSE => 182,
             self::FIELD_STAMINA => 205,
@@ -10675,7 +15826,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_ROCK_THROW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTH_POWER, Moves::MOVE_OUTRAGE, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_FOCUS_BLAST]
         ],
         Pokemon::LANDORUS | FormsAlias::LANDORUS_THERIAN => [
             self::FIELD_ATTACK => 289,
@@ -10685,9 +15840,13 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_ROCK_THROW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTH_POWER, Moves::MOVE_OUTRAGE, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_FOCUS_BLAST]
         ],
-        Pokemon::KYUREM => [
+        Pokemon::KYUREM | FormsAlias::KYUREM_NORMAL => [
             self::FIELD_ATTACK => 246,
             self::FIELD_DEFENSE => 170,
             self::FIELD_STAMINA => 245,
@@ -10695,7 +15854,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ICE,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_DRAGON_BREATH_FAST, Moves::MOVE_STEEL_WING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAGON_CLAW, Moves::MOVE_BLIZZARD, Moves::MOVE_DRACO_METEOR]
         ],
         Pokemon::KYUREM | FormsAlias::KYUREM_BLACK => [
             self::FIELD_ATTACK => 310,
@@ -10705,7 +15868,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ICE,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_DRAGON_TAIL_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_IRON_HEAD, Moves::MOVE_BLIZZARD, Moves::MOVE_STONE_EDGE, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::KYUREM | FormsAlias::KYUREM_WHITE => [
             self::FIELD_ATTACK => 310,
@@ -10715,16 +15882,24 @@ class PokemonData
             self::FIELD_TYPE2 => Types::ICE,
             self::FIELD_LEGENDARY => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_DRAGON_BREATH_FAST, Moves::MOVE_STEEL_WING_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAGON_PULSE, Moves::MOVE_BLIZZARD, Moves::MOVE_ANCIENT_POWER, Moves::MOVE_FOCUS_BLAST]
         ],
-        Pokemon::KELDEO => [
+        Pokemon::KELDEO | FormsAlias::KELDEO_ORDINARY => [
             self::FIELD_ATTACK => 260,
             self::FIELD_DEFENSE => 192,
             self::FIELD_STAMINA => 209,
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TYPE2 => Types::FIGHTING,
             self::FIELD_MYTHIC => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_LOW_KICK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_X_SCISSOR]
         ],
         Pokemon::KELDEO | FormsAlias::KELDEO_RESOLUTE => [
             self::FIELD_ATTACK => 260,
@@ -10733,16 +15908,24 @@ class PokemonData
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TYPE2 => Types::FIGHTING,
             self::FIELD_MYTHIC => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_LOW_KICK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_X_SCISSOR]
         ],
-        Pokemon::MELOETTA => [
+        Pokemon::MELOETTA | FormsAlias::MELOETTA_ARIA => [
             self::FIELD_ATTACK => 250,
             self::FIELD_DEFENSE => 225,
             self::FIELD_STAMINA => 225,
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_MYTHIC => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_QUICK_ATTACK_FAST, Moves::MOVE_CONFUSION_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYSHOCK, Moves::MOVE_THUNDERBOLT, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::MELOETTA | FormsAlias::MELOETTA_PIROUETTE => [
             self::FIELD_ATTACK => 269,
@@ -10751,9 +15934,13 @@ class PokemonData
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TYPE2 => Types::FIGHTING,
             self::FIELD_MYTHIC => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_QUICK_ATTACK_FAST, Moves::MOVE_LOW_KICK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_FIRE_PUNCH, Moves::MOVE_ICE_PUNCH, Moves::MOVE_HYPER_BEAM]
         ],
-        Pokemon::GENESECT => [
+        Pokemon::GENESECT | FormsAlias::GENESECT_NORMAL => [
             self::FIELD_ATTACK => 252,
             self::FIELD_DEFENSE => 199,
             self::FIELD_STAMINA => 174,
@@ -10761,7 +15948,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_MYTHIC => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_METAL_CLAW_FAST, Moves::MOVE_FURY_CUTTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_X_SCISSOR, Moves::MOVE_MAGNET_BOMB, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::GENESECT | FormsAlias::GENESECT_BURN => [
             self::FIELD_ATTACK => 252,
@@ -10771,7 +15962,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_MYTHIC => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_METAL_CLAW_FAST, Moves::MOVE_FURY_CUTTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_X_SCISSOR, Moves::MOVE_MAGNET_BOMB, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::GENESECT | FormsAlias::GENESECT_CHILL => [
             self::FIELD_ATTACK => 252,
@@ -10781,7 +15976,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_MYTHIC => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_METAL_CLAW_FAST, Moves::MOVE_FURY_CUTTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_X_SCISSOR, Moves::MOVE_MAGNET_BOMB, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::GENESECT | FormsAlias::GENESECT_DOUSE => [
             self::FIELD_ATTACK => 252,
@@ -10791,7 +15990,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_MYTHIC => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_METAL_CLAW_FAST, Moves::MOVE_FURY_CUTTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_X_SCISSOR, Moves::MOVE_MAGNET_BOMB, Moves::MOVE_GUNK_SHOT]
         ],
         Pokemon::GENESECT | FormsAlias::GENESECT_SHOCK => [
             self::FIELD_ATTACK => 252,
@@ -10801,7 +16004,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_MYTHIC => true,
             self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_METAL_CLAW_FAST, Moves::MOVE_FURY_CUTTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_X_SCISSOR, Moves::MOVE_MAGNET_BOMB, Moves::MOVE_ZAP_CANNON]
         ],
         Pokemon::MELTAN => [
             self::FIELD_ATTACK => 118,
@@ -10811,7 +16018,12 @@ class PokemonData
             self::FIELD_MYTHIC => true,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_EVOLVES => [Pokemon::MELMETAL],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_THUNDER_SHOCK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLASH_CANNON, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::MELMETAL => [
             self::FIELD_ATTACK => 226,
@@ -10821,7 +16033,11 @@ class PokemonData
             self::FIELD_MYTHIC => true,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_THUNDER_SHOCK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLASH_CANNON, Moves::MOVE_THUNDERBOLT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_SUPER_POWER]
         ],
         Pokemon::OBSTAGOON => [
             self::FIELD_ATTACK => 180,
@@ -10831,7 +16047,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_COUNTER_FAST, Moves::MOVE_LICK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CROSS_CHOP, Moves::MOVE_NIGHT_SLASH, Moves::MOVE_HYPER_BEAM, Moves::MOVE_GUNK_SHOT]
         ],
         Pokemon::OBSTAGOON | Mods::PURIFIED => [
             self::FIELD_ATTACK => 180,
@@ -10841,7 +16061,11 @@ class PokemonData
             self::FIELD_TYPE2 => Types::NORMAL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_COUNTER_FAST, Moves::MOVE_LICK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CROSS_CHOP, Moves::MOVE_NIGHT_SLASH, Moves::MOVE_HYPER_BEAM, Moves::MOVE_GUNK_SHOT]
         ],
         Pokemon::OBSTAGOON | Mods::SHADOW => [
             self::FIELD_ATTACK => 180,
@@ -10853,7 +16077,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_COUNTER_FAST, Moves::MOVE_LICK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CROSS_CHOP, Moves::MOVE_NIGHT_SLASH, Moves::MOVE_HYPER_BEAM, Moves::MOVE_GUNK_SHOT]
         ],
         Pokemon::PERRSERKER => [
             self::FIELD_ATTACK => 195,
@@ -10862,7 +16090,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_METAL_CLAW_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_IRON_HEAD, Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_PLAY_ROUGH, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::PERRSERKER | Mods::PURIFIED => [
             self::FIELD_ATTACK => 195,
@@ -10871,7 +16103,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::STEEL,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_METAL_CLAW_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_IRON_HEAD, Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_PLAY_ROUGH, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::PERRSERKER | Mods::SHADOW => [
             self::FIELD_ATTACK => 195,
@@ -10882,7 +16118,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_METAL_CLAW_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_IRON_HEAD, Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_PLAY_ROUGH, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::SIRFETCH_D => [
             self::FIELD_ATTACK => 248,
@@ -10891,7 +16131,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_COUNTER_FAST, Moves::MOVE_FURY_CUTTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_BRAVE_BIRD, Moves::MOVE_LEAF_BLADE, Moves::MOVE_NIGHT_SLASH]
         ],
         Pokemon::SIRFETCH_D | Mods::PURIFIED => [
             self::FIELD_ATTACK => 248,
@@ -10900,7 +16144,11 @@ class PokemonData
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_COUNTER_FAST, Moves::MOVE_FURY_CUTTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_BRAVE_BIRD, Moves::MOVE_LEAF_BLADE, Moves::MOVE_NIGHT_SLASH]
         ],
         Pokemon::SIRFETCH_D | Mods::SHADOW => [
             self::FIELD_ATTACK => 248,
@@ -10911,7 +16159,11 @@ class PokemonData
             self::FIELD_PURIFY_STARDUST => 3000,
             self::FIELD_TRANSFERABLE => true,
             self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_COUNTER_FAST, Moves::MOVE_FURY_CUTTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_BRAVE_BIRD, Moves::MOVE_LEAF_BLADE, Moves::MOVE_NIGHT_SLASH]
         ]    
     ];
 } 

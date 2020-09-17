@@ -102,7 +102,7 @@ class FormsAlias
         $reflection = new \ReflectionClass(__CLASS__);
         $constants = $reflection->getConstants();
         foreach ($constants as $name => $value) {
-            if ($value === $form && strpos($name, $prefix) === 0) {
+            if ($value === $form && strpos($name, $prefix . '_') === 0) {
                 return $name;
             }
         }

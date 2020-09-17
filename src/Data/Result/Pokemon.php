@@ -36,8 +36,16 @@ class Pokemon
     const FIELD_EVOLUTION_POKEMON = 'pokemon';
     const FIELD_EVOLUTION_FORM = 'form';
     const FIELD_EVOLUTION_CANDY = 'candy';
-    const FIELD_EVOLUTION_FREE_TRADED = 'noCostViaTrade';
+    const FIELD_EVOLUTION_FREE_TRADED = 'freeTraded';
     const FIELD_EVOLUTION_ITEM = 'item';
+    const FIELD_EVOLUTION_LURE = 'lure';
+    const FIELD_EVOLUTION_DISTANCE = 'km';
+    const FIELD_EVOLUTION_MALE = 'male';
+    const FIELD_EVOLUTION_FEMALE = 'female';
+    const FIELD_EVOLUTION_DAY = 'day';
+    const FIELD_EVOLUTION_NIGHT = 'night';
+    const FIELD_EVOLUTION_BUDDY = 'buddy';
+    const FIELD_EVOLUTION_PRIORITY = 'priority';
 
     protected $pokemon = [];
 
@@ -57,24 +65,24 @@ class Pokemon
         $forms = [];
         $legendaries = [];
         $mythics = [];
+        $evolutions = [];
+        $moveUsers = [];
+
+        $str2code = [];
+        foreach ($this->pokemon as $code => $pokemon) {
+            if (!empty($pokemon[Pokemon::FIELD_FORM])) {
+                $str2code[$pokemon[Pokemon::FIELD_FORM]] = $code;
+            } else {
+                $str2code[$pokemon[Pokemon::FIELD_NAME]] = $code;
+            }
+        }
 
         foreach ($this->pokemon as $code => $pokemon) {
             $id = Mods::getId($code);
 
             $shortConst = PokemonList::getConst($id);
-            $idConst = $codeConst = 'Pokemon::' . $shortConst;
-            if ($formBits = ($code & Mods::FORM_MASK)) {
-                $formConst = FormsAlias::getConst($shortConst, $formBits);
-                if ($formConst) {
-                    $codeConst .= ' | FormsAlias::' . $formConst;
-                } else {
-                    $codeConst .= ' | Mods::FORM' . Mods::getForm($code);
-                }
-            }
-            !($code & Mods::SHADOW) ?: $codeConst .= ' | Mods::SHADOW';
-            !($code & Mods::ALOLAN) ?: $codeConst .= ' | Mods::ALOLAN';
-            !($code & Mods::PURIFIED) ?: $codeConst .= ' | Mods::PURIFIED';
-            !($code & Mods::GALARIAN) ?: $codeConst .= ' | Mods::GALARIAN';
+            $idConst = 'Pokemon::' . $shortConst;
+            $codeConst = $this->getCodeConst($code);
 
             // collect forms
             if (!isset($forms[$idConst])) {
@@ -83,6 +91,7 @@ class Pokemon
                 $forms[$idConst][] = $codeConst;
             }
 
+            // process simple fields
             $data = [
                 'self::FIELD_ATTACK => ' . $pokemon[Pokemon::FIELD_ATTACK],
                 'self::FIELD_DEFENSE => ' . $pokemon[Pokemon::FIELD_DEFENSE],
@@ -113,21 +122,103 @@ class Pokemon
                 $data[] = 'self::FIELD_DEPLOYABLE => true';
             }
             $data[] = 'self::FIELD_BUDDY_DISTANCE => ' . $pokemon[Pokemon::FIELD_BUDDY_DISTANCE];
-//            const FIELD_FAST_MOVES = 'fastMoves';
-//            const FIELD_FAST_MOVES_ELITE = 'fastMovesElite';
-//            const FIELD_CHARGE_MOVES = 'chargeMoves';
-//            const FIELD_CHARGE_MOVES_ELITE = 'chargeMovesElite';
-//            const FIELD_EVOLUTIONS = 'evolutions';
-//            const FIELD_THIRD_MOVE_DUST = 'thirdDust';
-//            const FIELD_THIRD_MOVE_CANDY = ' thirdCandy';
-//            const FIELD_TRANSFERABLE = 'transferable';
-//            const FIELD_DEPLOYABLE = 'deployable';
-//            const FIELD_PARENT = 'parent';
-//            const FIELD_EVOLUTION_POKEMON = 'pokemon';
-//            const FIELD_EVOLUTION_FORM = 'form';
-//            const FIELD_EVOLUTION_CANDY = 'candy';
-//            const FIELD_EVOLUTION_FREE_TRADED = 'noCostViaTrade';
-//            const FIELD_EVOLUTION_ITEM = 'item';
+            if ($pokemon[Pokemon::FIELD_THIRD_MOVE_CANDY]) {
+                $data[] = 'self::FIELD_THIRD_MOVE_CANDY => ' . $pokemon[Pokemon::FIELD_THIRD_MOVE_CANDY];
+            }
+            if ($pokemon[Pokemon::FIELD_THIRD_MOVE_DUST]) {
+                $data[] = 'self::FIELD_THIRD_MOVE_STARDUST => ' . $pokemon[Pokemon::FIELD_THIRD_MOVE_DUST];
+            }
+
+            // process evolutions
+            if (!empty($pokemon[Pokemon::FIELD_EVOLUTIONS])) {
+                $evolvesTo = [];
+                foreach ($pokemon[Pokemon::FIELD_EVOLUTIONS] as $evolutionData) {
+//                    if ($id === 446) {
+//                        var_dump($evolutionData);
+//                        die();
+//                    }
+                    if (empty($evolutionData[Pokemon::FIELD_EVOLUTION_FORM])) {
+                        $evolutionData[Pokemon::FIELD_EVOLUTION_FORM] = $evolutionData[Pokemon::FIELD_EVOLUTION_POKEMON];
+                    }
+                    if (empty($str2code[$evolutionData[Pokemon::FIELD_EVOLUTION_FORM]])) {
+                        if (empty($str2code[$evolutionData[Pokemon::FIELD_EVOLUTION_FORM] . '_NORMAL'])) {
+                            echo 'WARNING: Missing str2code for ', $evolutionData[Pokemon::FIELD_EVOLUTION_FORM], PHP_EOL;
+                        } else {
+                            $str2code[$evolutionData[Pokemon::FIELD_EVOLUTION_FORM]] = $str2code[$evolutionData[Pokemon::FIELD_EVOLUTION_FORM] . '_NORMAL'];
+                        }
+                    }
+                    $evoConst = $this->getCodeConst($str2code[$evolutionData[Pokemon::FIELD_EVOLUTION_FORM]]);
+                    $evoArr = [
+                        'self::FIELD_PARENT => ' . $codeConst
+                    ];
+                    foreach ($evolutionData as $k => $v) {
+                        static $intConvert = [
+                            Pokemon::FIELD_EVOLUTION_CANDY => 'FIELD_CANDY',
+                            Pokemon::FIELD_EVOLUTION_DISTANCE => 'FIELD_WALKED',
+                            Pokemon::FIELD_EVOLUTION_PRIORITY => 'FIELD_PRIORITY'
+                        ];
+                        if (isset($intConvert[$k])) {
+                            $evoArr[] = "self::{$intConvert[$k]} => $v";
+                            continue;
+                        }
+                        static $stringConvert = [
+                            Pokemon::FIELD_EVOLUTION_ITEM => 'FIELD_ITEM',
+                            Pokemon::FIELD_EVOLUTION_LURE => 'FIELD_LURE'
+                        ];
+                        if (isset($stringConvert[$k])) {
+                            $evoArr[] = "self::{$stringConvert[$k]} => '$v'";
+                            continue;
+                        }
+                        static $trueConvert = [
+                            Pokemon::FIELD_EVOLUTION_FREE_TRADED => 'FIELD_TRADED',
+                            Pokemon::FIELD_EVOLUTION_BUDDY => 'FIELD_BUDDY',
+                            Pokemon::FIELD_EVOLUTION_MALE => 'FIELD_MALE',
+                            Pokemon::FIELD_EVOLUTION_FEMALE => 'FIELD_FEMALE',
+                            Pokemon::FIELD_EVOLUTION_DAY => 'FIELD_DAY',
+                            Pokemon::FIELD_EVOLUTION_NIGHT => 'FIELD_NIGHT'
+                        ];
+                        if (isset($trueConvert[$k])) {
+                            $evoArr[] = "self::{$trueConvert[$k]} => true";
+                            continue;
+                        }
+                        switch ($k) {
+                            case 'pokemon':
+                            case 'form':
+                                break;
+                            default:
+                                echo 'WARNING: unhandled evolution key: ', $k, ' for ', $codeConst, ' => ', $evoConst, PHP_EOL;
+                        }
+                    }
+                    $evolutions[$evoConst] = $evoArr;
+                    $evolvesTo[] = $evoConst;
+                }
+                $data[] = 'self::FIELD_EVOLVES => [' . implode(', ', $evolvesTo) . ']';
+            }
+
+            // process moves
+            static $moveTranslate = [];
+            if (empty($moveTranslate)) {
+                $ref = new \ReflectionClass('\Pogo\Data\PHP\Moves');
+                $moveTranslate = array_flip($ref->getConstants());
+            }
+            foreach (
+                [
+                    Pokemon::FIELD_FAST_MOVES => 'FIELD_FAST_MOVES',
+                    Pokemon::FIELD_FAST_MOVES_ELITE => 'FIELD_FAST_MOVES_ELITE',
+                    Pokemon::FIELD_CHARGE_MOVES => 'FIELD_CHARGE_MOVES',
+                    Pokemon::FIELD_CHARGE_MOVES_ELITE => 'FIELD_CHARGE_MOVES_ELITE'
+                ] as $field => $convField
+            ) {
+                if (empty($pokemon[$field])) {
+                    continue;
+                }
+                $mvArr = [];
+                foreach ($pokemon[$field] as $mvId) {
+                    $mvArr[] = $moveTranslate[$mvId];
+                    $moveUsers['Moves::' . $moveTranslate[$mvId]][] = $codeConst;
+                }
+                $data[] = "self::$convField => [Moves::" . implode(', Moves::', $mvArr) . "]";
+            }
 
             $str = "        $codeConst => [\n            ";
             $str .= implode(",\n            ", $data);
@@ -158,6 +249,13 @@ class PokemonData
     const FIELD_TRANSFERABLE = 'transfer';
     const FIELD_DEPLOYABLE = 'deploy';
     const FIELD_BUDDY_DISTANCE = 'distance'; 
+    const FIELD_THIRD_MOVE_CANDY = 'moveCandy';
+    const FIELD_THIRD_MOVE_STARDUST = 'moveDust';
+    const FIELD_EVOLVES = 'evolves';
+    const FIELD_FAST_MOVES = 'fastMoves';
+    const FIELD_FAST_MOVES_ELITE = 'fastMovesElite';
+    const FIELD_CHARGE_MOVES = 'chargeMoves';
+    const FIELD_CHARGE_MOVES_ELITE = 'chargeMovesElite';
     
     const POKEMON = [
 $output    
@@ -174,7 +272,6 @@ PHP;
                 $output .= "            $v1,\n";
             }
             $output .= "        ],\n";
-
         }
         $output = <<<PHP
 <?php
@@ -227,6 +324,84 @@ $output
 }
 PHP;
         file_put_contents(__DIR__ . '/../PHP/Mythics.php', $output);
+
+        // Evolutions.php
+        $output = [];
+        foreach ($evolutions as $pokemon => &$data) {
+            $data = '            ' . implode(",\n            ", $data) . "\n";
+        }
+        foreach ($evolutions as $k => $v) {
+            $output[] = "        $k => [\n$v        ]";
+        }
+        $output = implode(",\n", $output);
+        $output = <<<PHP
+<?php
+
+namespace Pogo\Data\PHP;
+
+use Pogo\Pokemon, Pogo\General\Mods, Pogo\Handjob\FormsAlias;
+
+class Evolutions
+{
+    const FIELD_PARENT = 'from';
+    const FIELD_CANDY = 'candy';
+    const FIELD_WALKED = 'walk';
+    const FIELD_BUDDY = 'buddy';
+    const FIELD_DAY = 'day';
+    const FIELD_NIGHT = 'night';
+    const FIELD_PRIORITY = 'priority';
+    const FIELD_TRADED = 'traded';
+    const FIELD_ITEM = 'item';
+    const FIELD_LURE = 'lure';
+    const FIELD_MALE = 'male';
+    const FIELD_FEMALE = 'female';
+      
+    const EVOLUTIONS = [
+$output
+    ];
+}
+PHP;
+        file_put_contents(__DIR__ . '/../PHP/Evolutions.php', $output);
+
+        // MoveUsers.php
+        $output = [];
+        foreach ($moveUsers as $move => $users) {
+            $output[] = "        $move => [\n            " . implode(",\n            ", $users) . "\n        ]";
+        }
+        $output = implode(",\n", $output);
+        $output = <<<PHP
+<?php
+
+namespace Pogo\Data\PHP;
+
+use Pogo\Pokemon, Pogo\General\Mods, Pogo\Handjob\FormsAlias;
+
+class MoveUsers
+{
+    const MOVES = [
+$output    
+    ];
+}
+PHP;
+        file_put_contents(__DIR__ . '/../PHP/MoveUsers.php', $output);
+    }
+
+    protected function getCodeConst($code)
+    {
+        $shortConst = PokemonList::getConst(Mods::getId($code));
+        $codeConst = 'Pokemon::' . $shortConst;
+        $formBits = ($code & Mods::FORM_MASK);
+        $formConst = FormsAlias::getConst($shortConst, $formBits);
+        if ($formConst) {
+            $codeConst .= ' | FormsAlias::' . $formConst;
+        } elseif ($formBits) {
+            $codeConst .= ' | Mods::FORM' . Mods::getForm($code);
+        }
+        !($code & Mods::SHADOW) ?: $codeConst .= ' | Mods::SHADOW';
+        !($code & Mods::ALOLAN) ?: $codeConst .= ' | Mods::ALOLAN';
+        !($code & Mods::PURIFIED) ?: $codeConst .= ' | Mods::PURIFIED';
+        !($code & Mods::GALARIAN) ?: $codeConst .= ' | Mods::GALARIAN';
+        return $codeConst;
     }
 
     /**

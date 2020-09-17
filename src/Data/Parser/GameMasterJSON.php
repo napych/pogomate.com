@@ -315,7 +315,6 @@ class GameMasterJSON
                 // 'familyId' => 'FAMILY_BULBASAUR',
                 // 'candyToEvolve' => 25,
                 // 'kmBuddyDistance' => 3.0,
-                Result\Pokemon::FIELD_EVOLUTIONS => [], // fill later
                 Result\Pokemon::FIELD_THIRD_MOVE_CANDY => $pokemon['thirdMove']['candyToUnlock'] ?? null,
                 Result\Pokemon::FIELD_THIRD_MOVE_DUST => $pokemon['thirdMove']['stardustToUnlock'] ?? null,
                 Result\Pokemon::FIELD_TRANSFERABLE => (bool)$pokemon['isTransferable'] ?? false,
@@ -368,25 +367,76 @@ class GameMasterJSON
                     if (!isset($this->move2id[$eliteCinematicMove])) {
                         echo 'WARNING: cinematicMove ID is missing: ', $eliteCinematicMove, PHP_EOL;
                     }
-                    $add[Result\Pokemon::FIELD_FAST_MOVES_ELITE][] = $this->move2id[$eliteCinematicMove];
+                    $add[Result\Pokemon::FIELD_CHARGE_MOVES_ELITE][] = $this->move2id[$eliteCinematicMove];
                 }
             }
 
             // evolutions
             if (!empty($pokemon['evolutionBranch'])) {
+                $add[Result\Pokemon::FIELD_EVOLUTIONS] = [];
                 foreach ($pokemon['evolutionBranch'] as $branch) {
-                    $add[Result\Pokemon::FIELD_EVOLUTIONS][] = [
-                        Result\Pokemon::FIELD_EVOLUTION_POKEMON => $branch['evolution'],
-                        Result\Pokemon::FIELD_EVOLUTION_CANDY => $branch['candyCost'],
-                        Result\Pokemon::FIELD_EVOLUTION_FORM => $branch['form'] ?? null,
-                        Result\Pokemon::FIELD_EVOLUTION_FREE_TRADED => !empty($branch['noCandyCostViaTrade']),
-                        Result\Pokemon::FIELD_EVOLUTION_ITEM => $branch['evolutionItemRequirement'] ?? null
-                    ];
+                    $add[Result\Pokemon::FIELD_EVOLUTIONS][] = $this->parseEvolutionBranch($template, $branch);
                 }
             }
 
             $this->result->pokemon->add($code, $add);
         }
+    }
+
+    protected function parseEvolutionBranch (string $template, array $branch) {
+        $evolution = [];
+        foreach ($branch as $k => $v) {
+            switch ($k) {
+                case 'evolution':
+//                    if (empty($branch['form'])) {
+//                        $evolution[Result\Pokemon::FIELD_EVOLUTION_POKEMON] = $this->getCode($v);
+//                    }
+                    $evolution[Result\Pokemon::FIELD_EVOLUTION_POKEMON] = $v;
+                    break;
+                case 'form':
+                    $evolution[Result\Pokemon::FIELD_EVOLUTION_FORM] = $v;
+                    break;
+                case 'candyCost':
+                    $evolution[Result\Pokemon::FIELD_EVOLUTION_CANDY] = $v;
+                    break;
+                case 'evolutionItemRequirement':
+                    $evolution[Result\Pokemon::FIELD_EVOLUTION_ITEM] = $v;
+                    break;
+                case 'noCandyCostViaTrade':
+                    $evolution[Result\Pokemon::FIELD_EVOLUTION_FREE_TRADED] = true;
+                    break;
+                case 'lureItemRequirement':
+                    $evolution[Result\Pokemon::FIELD_EVOLUTION_LURE] = $v;
+                    break;
+                case 'kmBuddyDistanceRequirement':
+                    $evolution[Result\Pokemon::FIELD_EVOLUTION_DISTANCE] = $v;
+                    break;
+                case 'mustBeBuddy':
+                    $evolution[Result\Pokemon::FIELD_EVOLUTION_BUDDY] = true;
+                    break;
+                case 'onlyNighttime':
+                    $evolution[Result\Pokemon::FIELD_EVOLUTION_NIGHT] = true;
+                    break;
+                case 'onlyDaytime':
+                    $evolution[Result\Pokemon::FIELD_EVOLUTION_DAY] = true;
+                    break;
+                case 'priority':
+                    $evolution[Result\Pokemon::FIELD_EVOLUTION_PRIORITY] = $v;
+                    break;
+                case 'genderRequirement':
+                    if ($v === 'MALE') {
+                        $evolution[Result\Pokemon::FIELD_EVOLUTION_MALE] = true;
+                    } elseif ($v === 'FEMALE') {
+                        $evolution[Result\Pokemon::FIELD_EVOLUTION_FEMALE] = true;
+                    } else {
+                        echo 'WARNING: Unknown genderRequirement: ', $v, PHP_EOL;
+                    }
+                    break;
+                default:
+                    echo 'WARNING: Unknown evolutionBranch property: ', $k, ' for ', $template, PHP_EOL;
+            }
+        }
+        return $evolution;
     }
 
     protected function getCode(int $id, string $uniqueId, string $form)

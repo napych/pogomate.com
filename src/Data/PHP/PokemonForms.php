@@ -668,10 +668,10 @@ class PokemonForms
             Pokemon::DRAGONITE | Mods::SHADOW,
         ],
         Pokemon::MEWTWO => [
-            Pokemon::MEWTWO,
+            Pokemon::MEWTWO | FormsAlias::MEWTWO_NORMAL,
             Pokemon::MEWTWO | FormsAlias::MEWTWO_ARMORED,
-            Pokemon::MEWTWO | Mods::PURIFIED,
-            Pokemon::MEWTWO | Mods::SHADOW,
+            Pokemon::MEWTWO | FormsAlias::MEWTWO_NORMAL | Mods::PURIFIED,
+            Pokemon::MEWTWO | FormsAlias::MEWTWO_NORMAL | Mods::SHADOW,
         ],
         Pokemon::MEW => [
             Pokemon::MEW,
@@ -1370,7 +1370,7 @@ class PokemonForms
             Pokemon::MILOTIC,
         ],
         Pokemon::CASTFORM => [
-            Pokemon::CASTFORM,
+            Pokemon::CASTFORM | FormsAlias::CASTFORM_NORMAL,
             Pokemon::CASTFORM | FormsAlias::CASTFORM_RAINY,
             Pokemon::CASTFORM | FormsAlias::CASTFORM_SNOWY,
             Pokemon::CASTFORM | FormsAlias::CASTFORM_SUNNY,
@@ -1500,7 +1500,7 @@ class PokemonForms
             Pokemon::JIRACHI,
         ],
         Pokemon::DEOXYS => [
-            Pokemon::DEOXYS,
+            Pokemon::DEOXYS | FormsAlias::DEOXYS_NORMAL,
             Pokemon::DEOXYS | FormsAlias::DEOXYS_ATTACK,
             Pokemon::DEOXYS | FormsAlias::DEOXYS_DEFENSE,
             Pokemon::DEOXYS | FormsAlias::DEOXYS_SPEED,
@@ -1593,12 +1593,12 @@ class PokemonForms
             Pokemon::BASTIODON,
         ],
         Pokemon::BURMY => [
-            Pokemon::BURMY,
+            Pokemon::BURMY | FormsAlias::BURMY_PLANT,
             Pokemon::BURMY | FormsAlias::BURMY_SANDY,
             Pokemon::BURMY | FormsAlias::BURMY_TRASH,
         ],
         Pokemon::WORMADAM => [
-            Pokemon::WORMADAM,
+            Pokemon::WORMADAM | FormsAlias::WORMADAM_PLANT,
             Pokemon::WORMADAM | FormsAlias::WORMADAM_SANDY,
             Pokemon::WORMADAM | FormsAlias::WORMADAM_TRASH,
         ],
@@ -1624,15 +1624,15 @@ class PokemonForms
             Pokemon::CHERUBI,
         ],
         Pokemon::CHERRIM => [
-            Pokemon::CHERRIM,
+            Pokemon::CHERRIM | FormsAlias::CHERRIM_SUNNY,
             Pokemon::CHERRIM | FormsAlias::CHERRIM_OVERCAST,
         ],
         Pokemon::SHELLOS => [
-            Pokemon::SHELLOS,
+            Pokemon::SHELLOS | FormsAlias::SHELLOS_EAST_SEA,
             Pokemon::SHELLOS | FormsAlias::SHELLOS_WEST_SEA,
         ],
         Pokemon::GASTRODON => [
-            Pokemon::GASTRODON,
+            Pokemon::GASTRODON | FormsAlias::GASTRODON_EAST_SEA,
             Pokemon::GASTRODON | FormsAlias::GASTRODON_WEST_SEA,
         ],
         Pokemon::AMBIPOM => [
@@ -1841,7 +1841,7 @@ class PokemonForms
             Pokemon::FROSLASS,
         ],
         Pokemon::ROTOM => [
-            Pokemon::ROTOM,
+            Pokemon::ROTOM | FormsAlias::ROTOM_NORMAL,
             Pokemon::ROTOM | FormsAlias::ROTOM_FAN,
             Pokemon::ROTOM | FormsAlias::ROTOM_FROST,
             Pokemon::ROTOM | FormsAlias::ROTOM_HEAT,
@@ -1870,7 +1870,7 @@ class PokemonForms
             Pokemon::REGIGIGAS,
         ],
         Pokemon::GIRATINA => [
-            Pokemon::GIRATINA,
+            Pokemon::GIRATINA | FormsAlias::GIRATINA_ORIGIN,
             Pokemon::GIRATINA | FormsAlias::GIRATINA_ALTERED,
         ],
         Pokemon::CRESSELIA => [
@@ -1886,11 +1886,11 @@ class PokemonForms
             Pokemon::DARKRAI,
         ],
         Pokemon::SHAYMIN => [
-            Pokemon::SHAYMIN,
+            Pokemon::SHAYMIN | FormsAlias::SHAYMIN_LAND,
             Pokemon::SHAYMIN | FormsAlias::SHAYMIN_SKY,
         ],
         Pokemon::ARCEUS => [
-            Pokemon::ARCEUS,
+            Pokemon::ARCEUS | FormsAlias::ARCEUS_NORMAL,
             Pokemon::ARCEUS | FormsAlias::ARCEUS_BUG,
             Pokemon::ARCEUS | FormsAlias::ARCEUS_DARK,
             Pokemon::ARCEUS | FormsAlias::ARCEUS_DRAGON,
@@ -2078,7 +2078,7 @@ class PokemonForms
             Pokemon::LILLIGANT,
         ],
         Pokemon::BASCULIN => [
-            Pokemon::BASCULIN,
+            Pokemon::BASCULIN | FormsAlias::BASCULIN_BLUE_STRIPED,
             Pokemon::BASCULIN | FormsAlias::BASCULIN_RED_STRIPED,
         ],
         Pokemon::SANDILE => [
@@ -2097,8 +2097,8 @@ class PokemonForms
             Pokemon::DARUMAKA | Mods::SHADOW,
         ],
         Pokemon::DARMANITAN => [
-            Pokemon::DARMANITAN,
-            Pokemon::DARMANITAN | Mods::GALARIAN,
+            Pokemon::DARMANITAN | FormsAlias::DARMANITAN_STANDARD,
+            Pokemon::DARMANITAN | FormsAlias::DARMANITAN_STANDARD | Mods::GALARIAN,
             Pokemon::DARMANITAN | FormsAlias::DARMANITAN_ZEN | Mods::GALARIAN,
             Pokemon::DARMANITAN | FormsAlias::DARMANITAN_ZEN,
         ],
@@ -2190,13 +2190,13 @@ class PokemonForms
             Pokemon::VANILLUXE,
         ],
         Pokemon::DEERLING => [
-            Pokemon::DEERLING,
+            Pokemon::DEERLING | FormsAlias::DEERLING_SPRING,
             Pokemon::DEERLING | FormsAlias::DEERLING_AUTUMN,
             Pokemon::DEERLING | FormsAlias::DEERLING_SUMMER,
             Pokemon::DEERLING | FormsAlias::DEERLING_WINTER,
         ],
         Pokemon::SAWSBUCK => [
-            Pokemon::SAWSBUCK,
+            Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_SPRING,
             Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_AUTUMN,
             Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_SUMMER,
             Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_WINTER,
@@ -2217,11 +2217,11 @@ class PokemonForms
             Pokemon::AMOONGUSS,
         ],
         Pokemon::FRILLISH => [
-            Pokemon::FRILLISH,
+            Pokemon::FRILLISH | FormsAlias::FRILLISH_MALE,
             Pokemon::FRILLISH | FormsAlias::FRILLISH_FEMALE,
         ],
         Pokemon::JELLICENT => [
-            Pokemon::JELLICENT,
+            Pokemon::JELLICENT | FormsAlias::JELLICENT_MALE,
             Pokemon::JELLICENT | FormsAlias::JELLICENT_FEMALE,
         ],
         Pokemon::ALOMOMOLA => [
@@ -2369,11 +2369,11 @@ class PokemonForms
             Pokemon::VIRIZION,
         ],
         Pokemon::TORNADUS => [
-            Pokemon::TORNADUS,
+            Pokemon::TORNADUS | FormsAlias::TORNADUS_INCARNATE,
             Pokemon::TORNADUS | FormsAlias::TORNADUS_THERIAN,
         ],
         Pokemon::THUNDURUS => [
-            Pokemon::THUNDURUS,
+            Pokemon::THUNDURUS | FormsAlias::THUNDURUS_INCARNATE,
             Pokemon::THUNDURUS | FormsAlias::THUNDURUS_THERIAN,
         ],
         Pokemon::RESHIRAM => [
@@ -2383,24 +2383,24 @@ class PokemonForms
             Pokemon::ZEKROM,
         ],
         Pokemon::LANDORUS => [
-            Pokemon::LANDORUS,
+            Pokemon::LANDORUS | FormsAlias::LANDORUS_INCARNATE,
             Pokemon::LANDORUS | FormsAlias::LANDORUS_THERIAN,
         ],
         Pokemon::KYUREM => [
-            Pokemon::KYUREM,
+            Pokemon::KYUREM | FormsAlias::KYUREM_NORMAL,
             Pokemon::KYUREM | FormsAlias::KYUREM_BLACK,
             Pokemon::KYUREM | FormsAlias::KYUREM_WHITE,
         ],
         Pokemon::KELDEO => [
-            Pokemon::KELDEO,
+            Pokemon::KELDEO | FormsAlias::KELDEO_ORDINARY,
             Pokemon::KELDEO | FormsAlias::KELDEO_RESOLUTE,
         ],
         Pokemon::MELOETTA => [
-            Pokemon::MELOETTA,
+            Pokemon::MELOETTA | FormsAlias::MELOETTA_ARIA,
             Pokemon::MELOETTA | FormsAlias::MELOETTA_PIROUETTE,
         ],
         Pokemon::GENESECT => [
-            Pokemon::GENESECT,
+            Pokemon::GENESECT | FormsAlias::GENESECT_NORMAL,
             Pokemon::GENESECT | FormsAlias::GENESECT_BURN,
             Pokemon::GENESECT | FormsAlias::GENESECT_CHILL,
             Pokemon::GENESECT | FormsAlias::GENESECT_DOUSE,
