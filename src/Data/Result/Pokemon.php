@@ -94,7 +94,8 @@ class Pokemon
 
             // process simple fields
             $data = [
-                "self::FIELD_NAME => '" . addcslashes(Locale::getPokemon($code), "'") . "'",
+                "self::FIELD_NAME => '" . addcslashes($this->getPokemonName($code), "'") . "'",
+                "self::FIELD_NAME_SHORT => '" . addcslashes($this->getPokemonName($code, true), "'") . "'",
                 'self::FIELD_ATTACK => ' . $pokemon[Pokemon::FIELD_ATTACK],
                 'self::FIELD_DEFENSE => ' . $pokemon[Pokemon::FIELD_DEFENSE],
                 'self::FIELD_STAMINA => ' . $pokemon[Pokemon::FIELD_STAMINA],
@@ -240,6 +241,7 @@ use Pogo\Pokemon, Pogo\General\Mods, Pogo\Handjob\FormsAlias, Pogo\General\Types
 class PokemonData
 {
     const FIELD_NAME = 'name';
+    const FIELD_NAME_SHORT = 'short';
     const FIELD_TYPE1 = 'type1';
     const FIELD_TYPE2 = 'type2';
     const FIELD_ATTACK = 'attack';
@@ -428,5 +430,19 @@ PHP;
             $typeConst[$value] = $name;
         }
         return $typeConst[$type] ?? null;
+    }
+
+    /**
+     * @param int $code
+     * @param bool $short
+     * @return string|null
+     */
+    public function getPokemonName(int $code, bool $short = false): string
+    {
+        $name = Locale::getPokemon($code);
+        if (!$short) {
+            $name = Mods::getFullName($name, $code);
+        }
+        return $name;
     }
 }

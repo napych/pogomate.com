@@ -2,7 +2,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
     <xsl:template match="page-pokemon">
         <h1>
-            <xsl:value-of select="@name"/>
+            <xsl:value-of select="@shortName"/>
         </h1>
         <xsl:choose>
             <xsl:when test="count(pokemon)&gt;0">

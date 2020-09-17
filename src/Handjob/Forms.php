@@ -7,7 +7,6 @@ use Pogo\Pokemon;
 
 class Forms extends FormsAlias
 {
-
     const NAMES = [
         Pokemon::BURMY => [
             self::BURMY_PLANT => 'Plant Cloak',

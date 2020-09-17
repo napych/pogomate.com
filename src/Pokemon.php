@@ -3,6 +3,8 @@
 namespace Pogo;
 
 use Exception;
+use Pogo\Data\PHP\Evolutions;
+use Pogo\Data\PHP\PokemonData;
 use Pogo\Handjob\Evolve;
 use Pogo\Handjob\Forms;
 use Pogo\General\Mods;
@@ -24,7 +26,7 @@ class Pokemon extends Pokemon\PokemonList
     /** @var string */
     protected $linkName = null;
     /** @var int|null */
-    protected $evolveFrom = -1;
+    protected $evolveFrom = null;
     /** @var int */
     protected $form = 0;
     /** @var bool */
@@ -100,7 +102,10 @@ class Pokemon extends Pokemon\PokemonList
 
     public function getFormName()
     {
-        return Forms::FORMS[$this->pokedexId][$this->form] ?? '';
+        if (isset(Forms::NAMES[$this->pokedexId][$this->form])) {
+            return Forms::NAMES[$this->pokedexId][$this->form];
+        }
+        return Forms::FORMS[$this->pokedexId][$this->form >> Mods::FORM_BITS] ?? '';
     }
 
     public function getForm()
@@ -109,19 +114,27 @@ class Pokemon extends Pokemon\PokemonList
     }
 
     /**
-     * @return mixed|null
+     * @return int|null
      * @throws Exception
      */
     public function getEvolveFrom()
     {
-        if ($this->evolveFrom !== -1) {
-            return $this->evolveFrom;
+        if ($this->evolveFrom !== null) {
+            return $this->evolveFrom ?: null;
         }
+
+        // generated list
+        if (!empty(Evolutions::EVOLUTIONS[$this->code][Evolutions::FIELD_PARENT])) {
+            return $this->evolveFrom = Evolutions::EVOLUTIONS[$this->code][Evolutions::FIELD_PARENT] ?: 0;
+        }
+
+        // handjob list
         $code = $this->code;
         if ($this->shadow) {
             $code -= Mods::SHADOW;
         }
         if (!array_key_exists($code, Evolve::EVOLVE_FROM)) {
+            $this->evolveFrom = 0;
             throw new Exception('Evolve from is not set for pokemon ' . $code . ' ' . $this->getName());
         }
         $this->evolveFrom = Evolve::EVOLVE_FROM[$code];
@@ -131,22 +144,28 @@ class Pokemon extends Pokemon\PokemonList
         if ($this->evolveFrom === $this->code) {
             throw new Exception("Pokemon {$this->code} evolve from is set to itself!");
         }
+
         return $this->evolveFrom;
     }
 
     public function getName()
     {
-        if (!$this->name) {
-            $this->name = Names::getName($this);
+        if ($this->name) {
+            return $this->name;
         }
+        $this->name = Names::getName($this);
         return $this->name;
     }
 
     public function getShortName()
     {
-        if (!$this->shortName) {
-            $this->shortName = Names::getShortName($this, false);
+        if ($this->shortName) {
+            return $this->shortName;
         }
+        if (!empty(PokemonData::POKEMON[$this->code][PokemonData::FIELD_NAME])) {
+            $this->shortName = PokemonData::POKEMON[$this->code][PokemonData::FIELD_NAME];
+        }
+       $this->shortName = Names::getShortName($this, false);
         return $this->shortName;
     }
 

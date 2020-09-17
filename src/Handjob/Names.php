@@ -2,6 +2,7 @@
 
 namespace Pogo\Handjob;
 
+use Pogo\Data\PHP\PokemonData;
 use Pogo\Pokemon;
 use ReflectionClass;
 
@@ -35,12 +36,14 @@ class Names
      */
     public static function getName(Pokemon $pokemon)
     {
-        self::init();
+        if (isset(PokemonData::POKEMON[$pokemon->getCode()][PokemonData::FIELD_NAME])) {
+            return PokemonData::POKEMON[$pokemon->getCode()][PokemonData::FIELD_NAME];
+        }
 
+        self::init();
         if (isset(self::$codes[$pokemon->getCode()])) {
             return self::$codes[$pokemon->getCode()];
         }
-
         $name = '';
         if ($pokemon->isShadow()) {
             $name .= 'Shadow ';
@@ -51,9 +54,7 @@ class Names
         if ($pokemon->isGalarian()) {
             $name .= 'Galarian ';
         }
-
         $name .= static::getShortName($pokemon);
-
         if ($form = $pokemon->getFormName()) {
             $name .= " ($form)";
         }
@@ -67,8 +68,11 @@ class Names
      */
     public static function getShortName(Pokemon $pokemon, $link = false)
     {
-        self::init();
+        if (isset(PokemonData::POKEMON[$pokemon->getCode()][PokemonData::FIELD_NAME_SHORT])) {
+            return PokemonData::POKEMON[$pokemon->getCode()][PokemonData::FIELD_NAME_SHORT];
+        }
 
+        self::init();
         $pokedexId = $pokemon->getPokedexId();
         if (!$link && isset(self::CUSTOM[$pokedexId])) {
             return self::CUSTOM[$pokedexId];

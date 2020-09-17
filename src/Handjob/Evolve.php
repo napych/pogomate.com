@@ -5,7 +5,6 @@ namespace Pogo\Handjob;
 use Pogo\General\Mods;
 use Pogo\Pokemon;
 
-/** @deprecated  */
 class Evolve
 {
     const EVOLVE_FROM = [
