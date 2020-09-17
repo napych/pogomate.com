@@ -6,6 +6,7 @@ use Pogo\Pokemon, Pogo\General\Mods, Pogo\Handjob\FormsAlias, Pogo\General\Types
 
 class PokemonData
 {
+    const FIELD_NAME = 'name';
     const FIELD_TYPE1 = 'type1';
     const FIELD_TYPE2 = 'type2';
     const FIELD_ATTACK = 'attack';
@@ -28,6 +29,7 @@ class PokemonData
     
     const POKEMON = [
         Pokemon::BULBASAUR => [
+            self::FIELD_NAME => 'Bulbasaur',
             self::FIELD_ATTACK => 118,
             self::FIELD_DEFENSE => 111,
             self::FIELD_STAMINA => 128,
@@ -43,6 +45,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SEED_BOMB, Moves::MOVE_POWER_WHIP]
         ],
         Pokemon::BULBASAUR | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Bulbasaur',
             self::FIELD_ATTACK => 118,
             self::FIELD_DEFENSE => 111,
             self::FIELD_STAMINA => 128,
@@ -58,6 +61,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SEED_BOMB, Moves::MOVE_POWER_WHIP]
         ],
         Pokemon::BULBASAUR | Mods::SHADOW => [
+            self::FIELD_NAME => 'Bulbasaur',
             self::FIELD_ATTACK => 118,
             self::FIELD_DEFENSE => 111,
             self::FIELD_STAMINA => 128,
@@ -75,6 +79,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SEED_BOMB, Moves::MOVE_POWER_WHIP]
         ],
         Pokemon::IVYSAUR => [
+            self::FIELD_NAME => 'Ivysaur',
             self::FIELD_ATTACK => 151,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 155,
@@ -90,6 +95,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_POWER_WHIP]
         ],
         Pokemon::IVYSAUR | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Ivysaur',
             self::FIELD_ATTACK => 151,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 155,
@@ -105,6 +111,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_POWER_WHIP]
         ],
         Pokemon::IVYSAUR | Mods::SHADOW => [
+            self::FIELD_NAME => 'Ivysaur',
             self::FIELD_ATTACK => 151,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 155,
@@ -122,6 +129,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_POWER_WHIP]
         ],
         Pokemon::VENUSAUR => [
+            self::FIELD_NAME => 'Venusaur',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 189,
             self::FIELD_STAMINA => 190,
@@ -137,6 +145,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FRENZY_PLANT]
         ],
         Pokemon::VENUSAUR | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Venusaur',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 189,
             self::FIELD_STAMINA => 190,
@@ -152,6 +161,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FRENZY_PLANT]
         ],
         Pokemon::VENUSAUR | Mods::SHADOW => [
+            self::FIELD_NAME => 'Venusaur',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 189,
             self::FIELD_STAMINA => 190,
@@ -169,6 +179,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FRENZY_PLANT]
         ],
         Pokemon::CHARMANDER => [
+            self::FIELD_NAME => 'Charmander',
             self::FIELD_ATTACK => 116,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 118,
@@ -183,6 +194,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_CHARGE, Moves::MOVE_FLAME_BURST, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::CHARMANDER | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Charmander',
             self::FIELD_ATTACK => 116,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 118,
@@ -197,6 +209,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_CHARGE, Moves::MOVE_FLAME_BURST, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::CHARMANDER | Mods::SHADOW => [
+            self::FIELD_NAME => 'Charmander',
             self::FIELD_ATTACK => 116,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 118,
@@ -213,6 +226,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_CHARGE, Moves::MOVE_FLAME_BURST, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::CHARMELEON => [
+            self::FIELD_NAME => 'Charmeleon',
             self::FIELD_ATTACK => 158,
             self::FIELD_DEFENSE => 126,
             self::FIELD_STAMINA => 151,
@@ -228,6 +242,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_PUNCH, Moves::MOVE_FLAME_BURST, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::CHARMELEON | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Charmeleon',
             self::FIELD_ATTACK => 158,
             self::FIELD_DEFENSE => 126,
             self::FIELD_STAMINA => 151,
@@ -243,6 +258,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_PUNCH, Moves::MOVE_FLAME_BURST, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::CHARMELEON | Mods::SHADOW => [
+            self::FIELD_NAME => 'Charmeleon',
             self::FIELD_ATTACK => 158,
             self::FIELD_DEFENSE => 126,
             self::FIELD_STAMINA => 151,
@@ -260,6 +276,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_PUNCH, Moves::MOVE_FLAME_BURST, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::CHARIZARD => [
+            self::FIELD_NAME => 'Charizard',
             self::FIELD_ATTACK => 223,
             self::FIELD_DEFENSE => 173,
             self::FIELD_STAMINA => 186,
@@ -276,6 +293,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BLAST_BURN, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::CHARIZARD | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Charizard',
             self::FIELD_ATTACK => 223,
             self::FIELD_DEFENSE => 173,
             self::FIELD_STAMINA => 186,
@@ -292,6 +310,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BLAST_BURN, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::CHARIZARD | Mods::SHADOW => [
+            self::FIELD_NAME => 'Charizard',
             self::FIELD_ATTACK => 223,
             self::FIELD_DEFENSE => 173,
             self::FIELD_STAMINA => 186,
@@ -310,6 +329,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BLAST_BURN, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::SQUIRTLE => [
+            self::FIELD_NAME => 'Squirtle',
             self::FIELD_ATTACK => 94,
             self::FIELD_DEFENSE => 121,
             self::FIELD_STAMINA => 127,
@@ -324,6 +344,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_AQUA_TAIL, Moves::MOVE_WATER_PULSE]
         ],
         Pokemon::SQUIRTLE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Squirtle',
             self::FIELD_ATTACK => 94,
             self::FIELD_DEFENSE => 121,
             self::FIELD_STAMINA => 127,
@@ -338,6 +359,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_AQUA_TAIL, Moves::MOVE_WATER_PULSE]
         ],
         Pokemon::SQUIRTLE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Squirtle',
             self::FIELD_ATTACK => 94,
             self::FIELD_DEFENSE => 121,
             self::FIELD_STAMINA => 127,
@@ -354,6 +376,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_AQUA_TAIL, Moves::MOVE_WATER_PULSE]
         ],
         Pokemon::WARTORTLE => [
+            self::FIELD_NAME => 'Wartortle',
             self::FIELD_ATTACK => 126,
             self::FIELD_DEFENSE => 155,
             self::FIELD_STAMINA => 153,
@@ -368,6 +391,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_ICE_BEAM, Moves::MOVE_HYDRO_PUMP]
         ],
         Pokemon::WARTORTLE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Wartortle',
             self::FIELD_ATTACK => 126,
             self::FIELD_DEFENSE => 155,
             self::FIELD_STAMINA => 153,
@@ -382,6 +406,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_ICE_BEAM, Moves::MOVE_HYDRO_PUMP]
         ],
         Pokemon::WARTORTLE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Wartortle',
             self::FIELD_ATTACK => 126,
             self::FIELD_DEFENSE => 155,
             self::FIELD_STAMINA => 153,
@@ -398,6 +423,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_ICE_BEAM, Moves::MOVE_HYDRO_PUMP]
         ],
         Pokemon::BLASTOISE => [
+            self::FIELD_NAME => 'Blastoise',
             self::FIELD_ATTACK => 171,
             self::FIELD_DEFENSE => 207,
             self::FIELD_STAMINA => 188,
@@ -412,6 +438,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_HYDRO_CANNON]
         ],
         Pokemon::BLASTOISE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Blastoise',
             self::FIELD_ATTACK => 171,
             self::FIELD_DEFENSE => 207,
             self::FIELD_STAMINA => 188,
@@ -426,6 +453,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_HYDRO_CANNON]
         ],
         Pokemon::BLASTOISE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Blastoise',
             self::FIELD_ATTACK => 171,
             self::FIELD_DEFENSE => 207,
             self::FIELD_STAMINA => 188,
@@ -442,6 +470,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_HYDRO_CANNON]
         ],
         Pokemon::CATERPIE => [
+            self::FIELD_NAME => 'Caterpie',
             self::FIELD_ATTACK => 55,
             self::FIELD_DEFENSE => 55,
             self::FIELD_STAMINA => 128,
@@ -456,6 +485,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::METAPOD => [
+            self::FIELD_NAME => 'Metapod',
             self::FIELD_ATTACK => 45,
             self::FIELD_DEFENSE => 80,
             self::FIELD_STAMINA => 137,
@@ -470,6 +500,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::BUTTERFREE => [
+            self::FIELD_NAME => 'Butterfree',
             self::FIELD_ATTACK => 167,
             self::FIELD_DEFENSE => 137,
             self::FIELD_STAMINA => 155,
@@ -485,6 +516,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUG_BUZZ, Moves::MOVE_PSYCHIC, Moves::MOVE_SIGNAL_BEAM]
         ],
         Pokemon::WEEDLE => [
+            self::FIELD_NAME => 'Weedle',
             self::FIELD_ATTACK => 63,
             self::FIELD_DEFENSE => 50,
             self::FIELD_STAMINA => 120,
@@ -500,6 +532,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::WEEDLE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Weedle',
             self::FIELD_ATTACK => 63,
             self::FIELD_DEFENSE => 50,
             self::FIELD_STAMINA => 120,
@@ -515,6 +548,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::WEEDLE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Weedle',
             self::FIELD_ATTACK => 63,
             self::FIELD_DEFENSE => 50,
             self::FIELD_STAMINA => 120,
@@ -532,6 +566,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::KAKUNA => [
+            self::FIELD_NAME => 'Kakuna',
             self::FIELD_ATTACK => 46,
             self::FIELD_DEFENSE => 75,
             self::FIELD_STAMINA => 128,
@@ -547,6 +582,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::KAKUNA | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Kakuna',
             self::FIELD_ATTACK => 46,
             self::FIELD_DEFENSE => 75,
             self::FIELD_STAMINA => 128,
@@ -562,6 +598,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::KAKUNA | Mods::SHADOW => [
+            self::FIELD_NAME => 'Kakuna',
             self::FIELD_ATTACK => 46,
             self::FIELD_DEFENSE => 75,
             self::FIELD_STAMINA => 128,
@@ -579,6 +616,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::BEEDRILL => [
+            self::FIELD_NAME => 'Beedrill',
             self::FIELD_ATTACK => 169,
             self::FIELD_DEFENSE => 130,
             self::FIELD_STAMINA => 163,
@@ -595,6 +633,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRILL_RUN]
         ],
         Pokemon::BEEDRILL | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Beedrill',
             self::FIELD_ATTACK => 169,
             self::FIELD_DEFENSE => 130,
             self::FIELD_STAMINA => 163,
@@ -611,6 +650,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRILL_RUN]
         ],
         Pokemon::BEEDRILL | Mods::SHADOW => [
+            self::FIELD_NAME => 'Beedrill',
             self::FIELD_ATTACK => 169,
             self::FIELD_DEFENSE => 130,
             self::FIELD_STAMINA => 163,
@@ -629,6 +669,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRILL_RUN]
         ],
         Pokemon::PIDGEY => [
+            self::FIELD_NAME => 'Pidgey',
             self::FIELD_ATTACK => 85,
             self::FIELD_DEFENSE => 73,
             self::FIELD_STAMINA => 120,
@@ -644,6 +685,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_TWISTER, Moves::MOVE_AERIAL_ACE, Moves::MOVE_AIR_CUTTER]
         ],
         Pokemon::PIDGEOTTO => [
+            self::FIELD_NAME => 'Pidgeotto',
             self::FIELD_ATTACK => 117,
             self::FIELD_DEFENSE => 105,
             self::FIELD_STAMINA => 160,
@@ -659,6 +701,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_TWISTER, Moves::MOVE_AERIAL_ACE, Moves::MOVE_AIR_CUTTER]
         ],
         Pokemon::PIDGEOT => [
+            self::FIELD_NAME => 'Pidgeot',
             self::FIELD_ATTACK => 166,
             self::FIELD_DEFENSE => 154,
             self::FIELD_STAMINA => 195,
@@ -675,6 +718,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_AIR_CUTTER]
         ],
         Pokemon::RATATTA => [
+            self::FIELD_NAME => 'Rattata',
             self::FIELD_ATTACK => 103,
             self::FIELD_DEFENSE => 70,
             self::FIELD_STAMINA => 102,
@@ -689,6 +733,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_HYPER_FANG, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::RATATTA | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Rattata',
             self::FIELD_ATTACK => 103,
             self::FIELD_DEFENSE => 70,
             self::FIELD_STAMINA => 102,
@@ -704,6 +749,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_HYPER_FANG, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::RATATTA | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Rattata',
             self::FIELD_ATTACK => 103,
             self::FIELD_DEFENSE => 70,
             self::FIELD_STAMINA => 102,
@@ -718,6 +764,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_HYPER_FANG, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::RATATTA | Mods::SHADOW => [
+            self::FIELD_NAME => 'Rattata',
             self::FIELD_ATTACK => 103,
             self::FIELD_DEFENSE => 70,
             self::FIELD_STAMINA => 102,
@@ -734,6 +781,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_HYPER_FANG, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::RATICATE => [
+            self::FIELD_NAME => 'Raticate',
             self::FIELD_ATTACK => 161,
             self::FIELD_DEFENSE => 139,
             self::FIELD_STAMINA => 146,
@@ -747,6 +795,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_HYPER_FANG, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::RATICATE | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Raticate',
             self::FIELD_ATTACK => 135,
             self::FIELD_DEFENSE => 154,
             self::FIELD_STAMINA => 181,
@@ -761,6 +810,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_HYPER_FANG, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::RATICATE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Raticate',
             self::FIELD_ATTACK => 161,
             self::FIELD_DEFENSE => 139,
             self::FIELD_STAMINA => 146,
@@ -774,6 +824,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_HYPER_FANG, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::RATICATE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Raticate',
             self::FIELD_ATTACK => 161,
             self::FIELD_DEFENSE => 139,
             self::FIELD_STAMINA => 146,
@@ -789,6 +840,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_HYPER_FANG, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::SPEAROW => [
+            self::FIELD_NAME => 'Spearow',
             self::FIELD_ATTACK => 112,
             self::FIELD_DEFENSE => 60,
             self::FIELD_STAMINA => 120,
@@ -805,6 +857,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_TWISTER]
         ],
         Pokemon::FEAROW => [
+            self::FIELD_NAME => 'Fearow',
             self::FIELD_ATTACK => 182,
             self::FIELD_DEFENSE => 133,
             self::FIELD_STAMINA => 163,
@@ -820,6 +873,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_TWISTER]
         ],
         Pokemon::EKANS => [
+            self::FIELD_NAME => 'Ekans',
             self::FIELD_ATTACK => 110,
             self::FIELD_DEFENSE => 97,
             self::FIELD_STAMINA => 111,
@@ -835,6 +889,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_GUNK_SHOT]
         ],
         Pokemon::EKANS | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Ekans',
             self::FIELD_ATTACK => 110,
             self::FIELD_DEFENSE => 97,
             self::FIELD_STAMINA => 111,
@@ -850,6 +905,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_GUNK_SHOT]
         ],
         Pokemon::EKANS | Mods::SHADOW => [
+            self::FIELD_NAME => 'Ekans',
             self::FIELD_ATTACK => 110,
             self::FIELD_DEFENSE => 97,
             self::FIELD_STAMINA => 111,
@@ -867,6 +923,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_GUNK_SHOT]
         ],
         Pokemon::ARBOK => [
+            self::FIELD_NAME => 'Arbok',
             self::FIELD_ATTACK => 167,
             self::FIELD_DEFENSE => 153,
             self::FIELD_STAMINA => 155,
@@ -880,6 +937,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_GUNK_SHOT, Moves::MOVE_ACID_SPRAY]
         ],
         Pokemon::ARBOK | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Arbok',
             self::FIELD_ATTACK => 167,
             self::FIELD_DEFENSE => 153,
             self::FIELD_STAMINA => 155,
@@ -893,6 +951,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_GUNK_SHOT, Moves::MOVE_ACID_SPRAY]
         ],
         Pokemon::ARBOK | Mods::SHADOW => [
+            self::FIELD_NAME => 'Arbok',
             self::FIELD_ATTACK => 167,
             self::FIELD_DEFENSE => 153,
             self::FIELD_STAMINA => 155,
@@ -908,6 +967,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_GUNK_SHOT, Moves::MOVE_ACID_SPRAY]
         ],
         Pokemon::PIKACHU => [
+            self::FIELD_NAME => 'Pikachu',
             self::FIELD_ATTACK => 112,
             self::FIELD_DEFENSE => 96,
             self::FIELD_STAMINA => 111,
@@ -924,6 +984,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SURF, Moves::MOVE_THUNDER]
         ],
         Pokemon::RAICHU => [
+            self::FIELD_NAME => 'Raichu',
             self::FIELD_ATTACK => 193,
             self::FIELD_DEFENSE => 151,
             self::FIELD_STAMINA => 155,
@@ -938,6 +999,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_THUNDER]
         ],
         Pokemon::RAICHU | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Raichu',
             self::FIELD_ATTACK => 201,
             self::FIELD_DEFENSE => 154,
             self::FIELD_STAMINA => 155,
@@ -952,6 +1014,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_WILD_CHARGE, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::SANDSHREW => [
+            self::FIELD_NAME => 'Sandshrew',
             self::FIELD_ATTACK => 126,
             self::FIELD_DEFENSE => 120,
             self::FIELD_STAMINA => 137,
@@ -967,6 +1030,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_TOMB]
         ],
         Pokemon::SANDSHREW | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Sandshrew',
             self::FIELD_ATTACK => 125,
             self::FIELD_DEFENSE => 129,
             self::FIELD_STAMINA => 137,
@@ -982,6 +1046,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BLIZZARD, Moves::MOVE_GYRO_BALL, Moves::MOVE_NIGHT_SLASH]
         ],
         Pokemon::SANDSHREW | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Sandshrew',
             self::FIELD_ATTACK => 126,
             self::FIELD_DEFENSE => 120,
             self::FIELD_STAMINA => 137,
@@ -997,6 +1062,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_TOMB]
         ],
         Pokemon::SANDSHREW | Mods::SHADOW => [
+            self::FIELD_NAME => 'Sandshrew',
             self::FIELD_ATTACK => 126,
             self::FIELD_DEFENSE => 120,
             self::FIELD_STAMINA => 137,
@@ -1014,6 +1080,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_TOMB]
         ],
         Pokemon::SANDSLASH => [
+            self::FIELD_NAME => 'Sandslash',
             self::FIELD_ATTACK => 182,
             self::FIELD_DEFENSE => 175,
             self::FIELD_STAMINA => 181,
@@ -1027,6 +1094,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_ROCK_TOMB, Moves::MOVE_BULLDOZE]
         ],
         Pokemon::SANDSLASH | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Sandslash',
             self::FIELD_ATTACK => 177,
             self::FIELD_DEFENSE => 195,
             self::FIELD_STAMINA => 181,
@@ -1041,6 +1109,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BLIZZARD, Moves::MOVE_GYRO_BALL, Moves::MOVE_BULLDOZE, Moves::MOVE_ICE_PUNCH]
         ],
         Pokemon::SANDSLASH | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Sandslash',
             self::FIELD_ATTACK => 182,
             self::FIELD_DEFENSE => 175,
             self::FIELD_STAMINA => 181,
@@ -1054,6 +1123,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_ROCK_TOMB, Moves::MOVE_BULLDOZE]
         ],
         Pokemon::SANDSLASH | Mods::SHADOW => [
+            self::FIELD_NAME => 'Sandslash',
             self::FIELD_ATTACK => 182,
             self::FIELD_DEFENSE => 175,
             self::FIELD_STAMINA => 181,
@@ -1069,6 +1139,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_ROCK_TOMB, Moves::MOVE_BULLDOZE]
         ],
         Pokemon::NIDORAN_F => [
+            self::FIELD_NAME => 'Nidoran♀',
             self::FIELD_ATTACK => 86,
             self::FIELD_DEFENSE => 89,
             self::FIELD_STAMINA => 146,
@@ -1083,6 +1154,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_POISON_FANG, Moves::MOVE_BODY_SLAM, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::NIDORAN_F | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Nidoran♀',
             self::FIELD_ATTACK => 86,
             self::FIELD_DEFENSE => 89,
             self::FIELD_STAMINA => 146,
@@ -1097,6 +1169,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_POISON_FANG, Moves::MOVE_BODY_SLAM, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::NIDORAN_F | Mods::SHADOW => [
+            self::FIELD_NAME => 'Nidoran♀',
             self::FIELD_ATTACK => 86,
             self::FIELD_DEFENSE => 89,
             self::FIELD_STAMINA => 146,
@@ -1113,6 +1186,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_POISON_FANG, Moves::MOVE_BODY_SLAM, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::NIDORINA => [
+            self::FIELD_NAME => 'Nidorina',
             self::FIELD_ATTACK => 117,
             self::FIELD_DEFENSE => 120,
             self::FIELD_STAMINA => 172,
@@ -1127,6 +1201,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_POISON_FANG, Moves::MOVE_DIG, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::NIDORINA | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Nidorina',
             self::FIELD_ATTACK => 117,
             self::FIELD_DEFENSE => 120,
             self::FIELD_STAMINA => 172,
@@ -1141,6 +1216,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_POISON_FANG, Moves::MOVE_DIG, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::NIDORINA | Mods::SHADOW => [
+            self::FIELD_NAME => 'Nidorina',
             self::FIELD_ATTACK => 117,
             self::FIELD_DEFENSE => 120,
             self::FIELD_STAMINA => 172,
@@ -1157,6 +1233,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_POISON_FANG, Moves::MOVE_DIG, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::NIDOQUEEN => [
+            self::FIELD_NAME => 'Nidoqueen',
             self::FIELD_ATTACK => 180,
             self::FIELD_DEFENSE => 173,
             self::FIELD_STAMINA => 207,
@@ -1171,6 +1248,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_STONE_EDGE, Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::NIDOQUEEN | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Nidoqueen',
             self::FIELD_ATTACK => 180,
             self::FIELD_DEFENSE => 173,
             self::FIELD_STAMINA => 207,
@@ -1185,6 +1263,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_STONE_EDGE, Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::NIDOQUEEN | Mods::SHADOW => [
+            self::FIELD_NAME => 'Nidoqueen',
             self::FIELD_ATTACK => 180,
             self::FIELD_DEFENSE => 173,
             self::FIELD_STAMINA => 207,
@@ -1201,6 +1280,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_STONE_EDGE, Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::NIDORAN_M => [
+            self::FIELD_NAME => 'Nidoran♂',
             self::FIELD_ATTACK => 105,
             self::FIELD_DEFENSE => 76,
             self::FIELD_STAMINA => 130,
@@ -1215,6 +1295,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HORN_ATTACK, Moves::MOVE_BODY_SLAM, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::NIDORAN_M | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Nidoran♂',
             self::FIELD_ATTACK => 105,
             self::FIELD_DEFENSE => 76,
             self::FIELD_STAMINA => 130,
@@ -1229,6 +1310,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HORN_ATTACK, Moves::MOVE_BODY_SLAM, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::NIDORAN_M | Mods::SHADOW => [
+            self::FIELD_NAME => 'Nidoran♂',
             self::FIELD_ATTACK => 105,
             self::FIELD_DEFENSE => 76,
             self::FIELD_STAMINA => 130,
@@ -1245,6 +1327,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HORN_ATTACK, Moves::MOVE_BODY_SLAM, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::NIDORINO => [
+            self::FIELD_NAME => 'Nidorino',
             self::FIELD_ATTACK => 137,
             self::FIELD_DEFENSE => 111,
             self::FIELD_STAMINA => 156,
@@ -1259,6 +1342,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HORN_ATTACK, Moves::MOVE_DIG, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::NIDORINO | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Nidorino',
             self::FIELD_ATTACK => 137,
             self::FIELD_DEFENSE => 111,
             self::FIELD_STAMINA => 156,
@@ -1273,6 +1357,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HORN_ATTACK, Moves::MOVE_DIG, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::NIDORINO | Mods::SHADOW => [
+            self::FIELD_NAME => 'Nidorino',
             self::FIELD_ATTACK => 137,
             self::FIELD_DEFENSE => 111,
             self::FIELD_STAMINA => 156,
@@ -1289,6 +1374,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HORN_ATTACK, Moves::MOVE_DIG, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::NIDOKING => [
+            self::FIELD_NAME => 'Nidoking',
             self::FIELD_ATTACK => 204,
             self::FIELD_DEFENSE => 156,
             self::FIELD_STAMINA => 191,
@@ -1304,6 +1390,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_MEGAHORN, Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::NIDOKING | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Nidoking',
             self::FIELD_ATTACK => 204,
             self::FIELD_DEFENSE => 156,
             self::FIELD_STAMINA => 191,
@@ -1319,6 +1406,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_MEGAHORN, Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::NIDOKING | Mods::SHADOW => [
+            self::FIELD_NAME => 'Nidoking',
             self::FIELD_ATTACK => 204,
             self::FIELD_DEFENSE => 156,
             self::FIELD_STAMINA => 191,
@@ -1336,6 +1424,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_MEGAHORN, Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::CLEFAIRY => [
+            self::FIELD_NAME => 'Clefairy',
             self::FIELD_ATTACK => 107,
             self::FIELD_DEFENSE => 108,
             self::FIELD_STAMINA => 172,
@@ -1350,6 +1439,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DISARMING_VOICE, Moves::MOVE_BODY_SLAM, Moves::MOVE_MOONBLAST]
         ],
         Pokemon::CLEFABLE => [
+            self::FIELD_NAME => 'Clefable',
             self::FIELD_ATTACK => 178,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 216,
@@ -1364,6 +1454,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_PSYCHIC, Moves::MOVE_MOONBLAST, Moves::MOVE_METEOR_MASH]
         ],
         Pokemon::VULPIX => [
+            self::FIELD_NAME => 'Vulpix',
             self::FIELD_ATTACK => 96,
             self::FIELD_DEFENSE => 109,
             self::FIELD_STAMINA => 116,
@@ -1378,6 +1469,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BODY_SLAM, Moves::MOVE_FLAMETHROWER, Moves::MOVE_FLAME_CHARGE]
         ],
         Pokemon::VULPIX | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Vulpix',
             self::FIELD_ATTACK => 96,
             self::FIELD_DEFENSE => 109,
             self::FIELD_STAMINA => 116,
@@ -1392,6 +1484,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_ICE_BEAM, Moves::MOVE_BLIZZARD]
         ],
         Pokemon::VULPIX | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Vulpix',
             self::FIELD_ATTACK => 96,
             self::FIELD_DEFENSE => 109,
             self::FIELD_STAMINA => 116,
@@ -1406,6 +1499,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BODY_SLAM, Moves::MOVE_FLAMETHROWER, Moves::MOVE_FLAME_CHARGE]
         ],
         Pokemon::VULPIX | Mods::SHADOW => [
+            self::FIELD_NAME => 'Vulpix',
             self::FIELD_ATTACK => 96,
             self::FIELD_DEFENSE => 109,
             self::FIELD_STAMINA => 116,
@@ -1422,6 +1516,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BODY_SLAM, Moves::MOVE_FLAMETHROWER, Moves::MOVE_FLAME_CHARGE]
         ],
         Pokemon::NINETALES => [
+            self::FIELD_NAME => 'Ninetales',
             self::FIELD_ATTACK => 169,
             self::FIELD_DEFENSE => 190,
             self::FIELD_STAMINA => 177,
@@ -1437,6 +1532,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::NINETALES | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Ninetales',
             self::FIELD_ATTACK => 170,
             self::FIELD_DEFENSE => 193,
             self::FIELD_STAMINA => 177,
@@ -1451,6 +1547,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_ICE_BEAM, Moves::MOVE_BLIZZARD, Moves::MOVE_PSYSHOCK]
         ],
         Pokemon::NINETALES | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Ninetales',
             self::FIELD_ATTACK => 169,
             self::FIELD_DEFENSE => 190,
             self::FIELD_STAMINA => 177,
@@ -1466,6 +1563,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::NINETALES | Mods::SHADOW => [
+            self::FIELD_NAME => 'Ninetales',
             self::FIELD_ATTACK => 169,
             self::FIELD_DEFENSE => 190,
             self::FIELD_STAMINA => 177,
@@ -1483,6 +1581,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::JIGGLYPUFF => [
+            self::FIELD_NAME => 'Jigglypuff',
             self::FIELD_ATTACK => 80,
             self::FIELD_DEFENSE => 41,
             self::FIELD_STAMINA => 251,
@@ -1499,6 +1598,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_PLAY_ROUGH, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::WIGGLYTUFF => [
+            self::FIELD_NAME => 'Wigglytuff',
             self::FIELD_ATTACK => 156,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 295,
@@ -1513,6 +1613,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_HYPER_BEAM, Moves::MOVE_PLAY_ROUGH, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::ZUBAT => [
+            self::FIELD_NAME => 'Zubat',
             self::FIELD_ATTACK => 83,
             self::FIELD_DEFENSE => 73,
             self::FIELD_STAMINA => 120,
@@ -1529,6 +1630,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::ZUBAT | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Zubat',
             self::FIELD_ATTACK => 83,
             self::FIELD_DEFENSE => 73,
             self::FIELD_STAMINA => 120,
@@ -1545,6 +1647,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::ZUBAT | Mods::SHADOW => [
+            self::FIELD_NAME => 'Zubat',
             self::FIELD_ATTACK => 83,
             self::FIELD_DEFENSE => 73,
             self::FIELD_STAMINA => 120,
@@ -1563,6 +1666,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::GOLBAT => [
+            self::FIELD_NAME => 'Golbat',
             self::FIELD_ATTACK => 161,
             self::FIELD_DEFENSE => 150,
             self::FIELD_STAMINA => 181,
@@ -1579,6 +1683,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_OMINOUS_WIND]
         ],
         Pokemon::GOLBAT | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Golbat',
             self::FIELD_ATTACK => 161,
             self::FIELD_DEFENSE => 150,
             self::FIELD_STAMINA => 181,
@@ -1595,6 +1700,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_OMINOUS_WIND]
         ],
         Pokemon::GOLBAT | Mods::SHADOW => [
+            self::FIELD_NAME => 'Golbat',
             self::FIELD_ATTACK => 161,
             self::FIELD_DEFENSE => 150,
             self::FIELD_STAMINA => 181,
@@ -1613,6 +1719,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_OMINOUS_WIND]
         ],
         Pokemon::ODDISH => [
+            self::FIELD_NAME => 'Oddish',
             self::FIELD_ATTACK => 131,
             self::FIELD_DEFENSE => 112,
             self::FIELD_STAMINA => 128,
@@ -1628,6 +1735,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SEED_BOMB, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_MOONBLAST]
         ],
         Pokemon::ODDISH | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Oddish',
             self::FIELD_ATTACK => 131,
             self::FIELD_DEFENSE => 112,
             self::FIELD_STAMINA => 128,
@@ -1643,6 +1751,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SEED_BOMB, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_MOONBLAST]
         ],
         Pokemon::ODDISH | Mods::SHADOW => [
+            self::FIELD_NAME => 'Oddish',
             self::FIELD_ATTACK => 131,
             self::FIELD_DEFENSE => 112,
             self::FIELD_STAMINA => 128,
@@ -1660,6 +1769,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SEED_BOMB, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_MOONBLAST]
         ],
         Pokemon::GLOOM => [
+            self::FIELD_NAME => 'Gloom',
             self::FIELD_ATTACK => 153,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 155,
@@ -1675,6 +1785,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_MOONBLAST]
         ],
         Pokemon::GLOOM | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Gloom',
             self::FIELD_ATTACK => 153,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 155,
@@ -1690,6 +1801,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_MOONBLAST]
         ],
         Pokemon::GLOOM | Mods::SHADOW => [
+            self::FIELD_NAME => 'Gloom',
             self::FIELD_ATTACK => 153,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 155,
@@ -1707,6 +1819,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_MOONBLAST]
         ],
         Pokemon::VILEPLUME => [
+            self::FIELD_NAME => 'Vileplume',
             self::FIELD_ATTACK => 202,
             self::FIELD_DEFENSE => 167,
             self::FIELD_STAMINA => 181,
@@ -1721,6 +1834,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_MOONBLAST, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::VILEPLUME | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Vileplume',
             self::FIELD_ATTACK => 202,
             self::FIELD_DEFENSE => 167,
             self::FIELD_STAMINA => 181,
@@ -1735,6 +1849,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_MOONBLAST, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::VILEPLUME | Mods::SHADOW => [
+            self::FIELD_NAME => 'Vileplume',
             self::FIELD_ATTACK => 202,
             self::FIELD_DEFENSE => 167,
             self::FIELD_STAMINA => 181,
@@ -1751,6 +1866,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_MOONBLAST, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::PARAS => [
+            self::FIELD_NAME => 'Paras',
             self::FIELD_ATTACK => 121,
             self::FIELD_DEFENSE => 99,
             self::FIELD_STAMINA => 111,
@@ -1766,6 +1882,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CROSS_POISON, Moves::MOVE_X_SCISSOR, Moves::MOVE_SEED_BOMB]
         ],
         Pokemon::PARASECT => [
+            self::FIELD_NAME => 'Parasect',
             self::FIELD_ATTACK => 165,
             self::FIELD_DEFENSE => 146,
             self::FIELD_STAMINA => 155,
@@ -1781,6 +1898,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CROSS_POISON, Moves::MOVE_X_SCISSOR, Moves::MOVE_SOLAR_BEAM]
         ],
         Pokemon::VENONAT => [
+            self::FIELD_NAME => 'Venonat',
             self::FIELD_ATTACK => 100,
             self::FIELD_DEFENSE => 100,
             self::FIELD_STAMINA => 155,
@@ -1796,6 +1914,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_POISON_FANG, Moves::MOVE_PSYBEAM, Moves::MOVE_SIGNAL_BEAM]
         ],
         Pokemon::VENONAT | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Venonat',
             self::FIELD_ATTACK => 100,
             self::FIELD_DEFENSE => 100,
             self::FIELD_STAMINA => 155,
@@ -1811,6 +1930,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_POISON_FANG, Moves::MOVE_PSYBEAM, Moves::MOVE_SIGNAL_BEAM]
         ],
         Pokemon::VENONAT | Mods::SHADOW => [
+            self::FIELD_NAME => 'Venonat',
             self::FIELD_ATTACK => 100,
             self::FIELD_DEFENSE => 100,
             self::FIELD_STAMINA => 155,
@@ -1828,6 +1948,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_POISON_FANG, Moves::MOVE_PSYBEAM, Moves::MOVE_SIGNAL_BEAM]
         ],
         Pokemon::VENOMOTH => [
+            self::FIELD_NAME => 'Venomoth',
             self::FIELD_ATTACK => 179,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 172,
@@ -1843,6 +1964,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SILVER_WIND, Moves::MOVE_PSYCHIC, Moves::MOVE_BUG_BUZZ, Moves::MOVE_POISON_FANG]
         ],
         Pokemon::VENOMOTH | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Venomoth',
             self::FIELD_ATTACK => 179,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 172,
@@ -1858,6 +1980,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SILVER_WIND, Moves::MOVE_PSYCHIC, Moves::MOVE_BUG_BUZZ, Moves::MOVE_POISON_FANG]
         ],
         Pokemon::VENOMOTH | Mods::SHADOW => [
+            self::FIELD_NAME => 'Venomoth',
             self::FIELD_ATTACK => 179,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 172,
@@ -1875,6 +1998,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SILVER_WIND, Moves::MOVE_PSYCHIC, Moves::MOVE_BUG_BUZZ, Moves::MOVE_POISON_FANG]
         ],
         Pokemon::DIGLETT => [
+            self::FIELD_NAME => 'Diglett',
             self::FIELD_ATTACK => 109,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 67,
@@ -1889,6 +2013,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_MUD_BOMB, Moves::MOVE_ROCK_TOMB]
         ],
         Pokemon::DIGLETT | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Diglett',
             self::FIELD_ATTACK => 108,
             self::FIELD_DEFENSE => 81,
             self::FIELD_STAMINA => 67,
@@ -1904,6 +2029,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_MUD_BOMB, Moves::MOVE_ROCK_TOMB]
         ],
         Pokemon::DIGLETT | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Diglett',
             self::FIELD_ATTACK => 109,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 67,
@@ -1918,6 +2044,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_MUD_BOMB, Moves::MOVE_ROCK_TOMB]
         ],
         Pokemon::DIGLETT | Mods::SHADOW => [
+            self::FIELD_NAME => 'Diglett',
             self::FIELD_ATTACK => 109,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 67,
@@ -1934,6 +2061,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_MUD_BOMB, Moves::MOVE_ROCK_TOMB]
         ],
         Pokemon::DUGTRIO => [
+            self::FIELD_NAME => 'Dugtrio',
             self::FIELD_ATTACK => 167,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 111,
@@ -1947,6 +2075,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_MUD_BOMB, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::DUGTRIO | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Dugtrio',
             self::FIELD_ATTACK => 201,
             self::FIELD_DEFENSE => 142,
             self::FIELD_STAMINA => 111,
@@ -1961,6 +2090,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_MUD_BOMB, Moves::MOVE_IRON_HEAD]
         ],
         Pokemon::DUGTRIO | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Dugtrio',
             self::FIELD_ATTACK => 167,
             self::FIELD_DEFENSE => 134,
             self::FIELD_STAMINA => 111,
@@ -1974,6 +2104,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_MUD_BOMB, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::DUGTRIO | Mods::SHADOW => [
+            self::FIELD_NAME => 'Dugtrio',
             self::FIELD_ATTACK => 167,
             self::FIELD_DEFENSE => 134,
             self::FIELD_STAMINA => 111,
@@ -1989,6 +2120,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_MUD_BOMB, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::MEOWTH => [
+            self::FIELD_NAME => 'Meowth',
             self::FIELD_ATTACK => 92,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 120,
@@ -2004,6 +2136,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::MEOWTH | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Meowth',
             self::FIELD_ATTACK => 99,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 120,
@@ -2018,6 +2151,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SLASH, Moves::MOVE_DARK_PULSE, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::MEOWTH | Mods::GALARIAN => [
+            self::FIELD_NAME => 'Meowth',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 92,
             self::FIELD_STAMINA => 137,
@@ -2032,6 +2166,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SLASH, Moves::MOVE_GYRO_BALL, Moves::MOVE_DIG]
         ],
         Pokemon::MEOWTH | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Meowth',
             self::FIELD_ATTACK => 92,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 120,
@@ -2047,6 +2182,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::MEOWTH | Mods::SHADOW => [
+            self::FIELD_NAME => 'Meowth',
             self::FIELD_ATTACK => 92,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 120,
@@ -2064,6 +2200,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::PERSIAN => [
+            self::FIELD_NAME => 'Persian',
             self::FIELD_ATTACK => 150,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 163,
@@ -2078,6 +2215,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_NIGHT_SLASH]
         ],
         Pokemon::PERSIAN | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Persian',
             self::FIELD_ATTACK => 158,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 163,
@@ -2091,6 +2229,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FOUL_PLAY, Moves::MOVE_DARK_PULSE, Moves::MOVE_PLAY_ROUGH]
         ],
         Pokemon::PERSIAN | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Persian',
             self::FIELD_ATTACK => 150,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 163,
@@ -2105,6 +2244,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_NIGHT_SLASH]
         ],
         Pokemon::PERSIAN | Mods::SHADOW => [
+            self::FIELD_NAME => 'Persian',
             self::FIELD_ATTACK => 150,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 163,
@@ -2121,6 +2261,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_NIGHT_SLASH]
         ],
         Pokemon::PSYDUCK => [
+            self::FIELD_NAME => 'Psyduck',
             self::FIELD_ATTACK => 122,
             self::FIELD_DEFENSE => 95,
             self::FIELD_STAMINA => 137,
@@ -2135,6 +2276,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_AQUA_TAIL, Moves::MOVE_CROSS_CHOP]
         ],
         Pokemon::PSYDUCK | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Psyduck',
             self::FIELD_ATTACK => 122,
             self::FIELD_DEFENSE => 95,
             self::FIELD_STAMINA => 137,
@@ -2149,6 +2291,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_AQUA_TAIL, Moves::MOVE_CROSS_CHOP]
         ],
         Pokemon::PSYDUCK | Mods::SHADOW => [
+            self::FIELD_NAME => 'Psyduck',
             self::FIELD_ATTACK => 122,
             self::FIELD_DEFENSE => 95,
             self::FIELD_STAMINA => 137,
@@ -2165,6 +2308,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_AQUA_TAIL, Moves::MOVE_CROSS_CHOP]
         ],
         Pokemon::GOLDUCK => [
+            self::FIELD_NAME => 'Golduck',
             self::FIELD_ATTACK => 191,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 190,
@@ -2178,6 +2322,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_ICE_BEAM, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_SYNCHRONOISE, Moves::MOVE_CROSS_CHOP]
         ],
         Pokemon::GOLDUCK | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Golduck',
             self::FIELD_ATTACK => 191,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 190,
@@ -2191,6 +2336,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_ICE_BEAM, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_SYNCHRONOISE, Moves::MOVE_CROSS_CHOP]
         ],
         Pokemon::GOLDUCK | Mods::SHADOW => [
+            self::FIELD_NAME => 'Golduck',
             self::FIELD_ATTACK => 191,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 190,
@@ -2206,6 +2352,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_ICE_BEAM, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_SYNCHRONOISE, Moves::MOVE_CROSS_CHOP]
         ],
         Pokemon::MANKEY => [
+            self::FIELD_NAME => 'Mankey',
             self::FIELD_ATTACK => 148,
             self::FIELD_DEFENSE => 82,
             self::FIELD_STAMINA => 120,
@@ -2220,6 +2367,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CROSS_CHOP, Moves::MOVE_LOW_SWEEP, Moves::MOVE_BRICK_BREAK]
         ],
         Pokemon::PRIMEAPE => [
+            self::FIELD_NAME => 'Primeape',
             self::FIELD_ATTACK => 207,
             self::FIELD_DEFENSE => 138,
             self::FIELD_STAMINA => 163,
@@ -2235,6 +2383,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_CROSS_CHOP]
         ],
         Pokemon::GROWLITHE => [
+            self::FIELD_NAME => 'Growlithe',
             self::FIELD_ATTACK => 136,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 146,
@@ -2249,6 +2398,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_WHEEL, Moves::MOVE_BODY_SLAM, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::GROWLITHE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Growlithe',
             self::FIELD_ATTACK => 136,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 146,
@@ -2263,6 +2413,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_WHEEL, Moves::MOVE_BODY_SLAM, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::GROWLITHE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Growlithe',
             self::FIELD_ATTACK => 136,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 146,
@@ -2279,6 +2430,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_WHEEL, Moves::MOVE_BODY_SLAM, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::ARCANINE => [
+            self::FIELD_NAME => 'Arcanine',
             self::FIELD_ATTACK => 227,
             self::FIELD_DEFENSE => 166,
             self::FIELD_STAMINA => 207,
@@ -2294,6 +2446,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BULLDOZE]
         ],
         Pokemon::ARCANINE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Arcanine',
             self::FIELD_ATTACK => 227,
             self::FIELD_DEFENSE => 166,
             self::FIELD_STAMINA => 207,
@@ -2309,6 +2462,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BULLDOZE]
         ],
         Pokemon::ARCANINE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Arcanine',
             self::FIELD_ATTACK => 227,
             self::FIELD_DEFENSE => 166,
             self::FIELD_STAMINA => 207,
@@ -2326,6 +2480,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BULLDOZE]
         ],
         Pokemon::POLIWAG => [
+            self::FIELD_NAME => 'Poliwag',
             self::FIELD_ATTACK => 101,
             self::FIELD_DEFENSE => 82,
             self::FIELD_STAMINA => 120,
@@ -2340,6 +2495,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_MUD_BOMB, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::POLIWAG | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Poliwag',
             self::FIELD_ATTACK => 101,
             self::FIELD_DEFENSE => 82,
             self::FIELD_STAMINA => 120,
@@ -2354,6 +2510,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_MUD_BOMB, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::POLIWAG | Mods::SHADOW => [
+            self::FIELD_NAME => 'Poliwag',
             self::FIELD_ATTACK => 101,
             self::FIELD_DEFENSE => 82,
             self::FIELD_STAMINA => 120,
@@ -2370,6 +2527,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_MUD_BOMB, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::POLIWHIRL => [
+            self::FIELD_NAME => 'Poliwhirl',
             self::FIELD_ATTACK => 130,
             self::FIELD_DEFENSE => 123,
             self::FIELD_STAMINA => 163,
@@ -2385,6 +2543,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SCALD]
         ],
         Pokemon::POLIWHIRL | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Poliwhirl',
             self::FIELD_ATTACK => 130,
             self::FIELD_DEFENSE => 123,
             self::FIELD_STAMINA => 163,
@@ -2400,6 +2559,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SCALD]
         ],
         Pokemon::POLIWHIRL | Mods::SHADOW => [
+            self::FIELD_NAME => 'Poliwhirl',
             self::FIELD_ATTACK => 130,
             self::FIELD_DEFENSE => 123,
             self::FIELD_STAMINA => 163,
@@ -2417,6 +2577,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SCALD]
         ],
         Pokemon::POLIWRATH => [
+            self::FIELD_NAME => 'Poliwrath',
             self::FIELD_ATTACK => 182,
             self::FIELD_DEFENSE => 184,
             self::FIELD_STAMINA => 207,
@@ -2432,6 +2593,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SUBMISSION]
         ],
         Pokemon::POLIWRATH | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Poliwrath',
             self::FIELD_ATTACK => 182,
             self::FIELD_DEFENSE => 184,
             self::FIELD_STAMINA => 207,
@@ -2447,6 +2609,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SUBMISSION]
         ],
         Pokemon::POLIWRATH | Mods::SHADOW => [
+            self::FIELD_NAME => 'Poliwrath',
             self::FIELD_ATTACK => 182,
             self::FIELD_DEFENSE => 184,
             self::FIELD_STAMINA => 207,
@@ -2464,6 +2627,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SUBMISSION]
         ],
         Pokemon::ABRA => [
+            self::FIELD_NAME => 'Abra',
             self::FIELD_ATTACK => 195,
             self::FIELD_DEFENSE => 82,
             self::FIELD_STAMINA => 93,
@@ -2478,6 +2642,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYSHOCK, Moves::MOVE_SIGNAL_BEAM, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::ABRA | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Abra',
             self::FIELD_ATTACK => 195,
             self::FIELD_DEFENSE => 82,
             self::FIELD_STAMINA => 93,
@@ -2492,6 +2657,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYSHOCK, Moves::MOVE_SIGNAL_BEAM, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::ABRA | Mods::SHADOW => [
+            self::FIELD_NAME => 'Abra',
             self::FIELD_ATTACK => 195,
             self::FIELD_DEFENSE => 82,
             self::FIELD_STAMINA => 93,
@@ -2508,6 +2674,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYSHOCK, Moves::MOVE_SIGNAL_BEAM, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::KADABRA => [
+            self::FIELD_NAME => 'Kadabra',
             self::FIELD_ATTACK => 232,
             self::FIELD_DEFENSE => 117,
             self::FIELD_STAMINA => 120,
@@ -2522,6 +2689,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::KADABRA | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Kadabra',
             self::FIELD_ATTACK => 232,
             self::FIELD_DEFENSE => 117,
             self::FIELD_STAMINA => 120,
@@ -2536,6 +2704,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::KADABRA | Mods::SHADOW => [
+            self::FIELD_NAME => 'Kadabra',
             self::FIELD_ATTACK => 232,
             self::FIELD_DEFENSE => 117,
             self::FIELD_STAMINA => 120,
@@ -2552,6 +2721,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::ALAKAZAM => [
+            self::FIELD_NAME => 'Alakazam',
             self::FIELD_ATTACK => 271,
             self::FIELD_DEFENSE => 167,
             self::FIELD_STAMINA => 146,
@@ -2567,6 +2737,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::ALAKAZAM | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Alakazam',
             self::FIELD_ATTACK => 271,
             self::FIELD_DEFENSE => 167,
             self::FIELD_STAMINA => 146,
@@ -2582,6 +2753,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::ALAKAZAM | Mods::SHADOW => [
+            self::FIELD_NAME => 'Alakazam',
             self::FIELD_ATTACK => 271,
             self::FIELD_DEFENSE => 167,
             self::FIELD_STAMINA => 146,
@@ -2599,6 +2771,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::MACHOP => [
+            self::FIELD_NAME => 'Machop',
             self::FIELD_ATTACK => 137,
             self::FIELD_DEFENSE => 82,
             self::FIELD_STAMINA => 172,
@@ -2614,6 +2787,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_LOW_SWEEP, Moves::MOVE_BRICK_BREAK, Moves::MOVE_CROSS_CHOP]
         ],
         Pokemon::MACHOP | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Machop',
             self::FIELD_ATTACK => 137,
             self::FIELD_DEFENSE => 82,
             self::FIELD_STAMINA => 172,
@@ -2629,6 +2803,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_LOW_SWEEP, Moves::MOVE_BRICK_BREAK, Moves::MOVE_CROSS_CHOP]
         ],
         Pokemon::MACHOP | Mods::SHADOW => [
+            self::FIELD_NAME => 'Machop',
             self::FIELD_ATTACK => 137,
             self::FIELD_DEFENSE => 82,
             self::FIELD_STAMINA => 172,
@@ -2646,6 +2821,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_LOW_SWEEP, Moves::MOVE_BRICK_BREAK, Moves::MOVE_CROSS_CHOP]
         ],
         Pokemon::MACHOKE => [
+            self::FIELD_NAME => 'Machoke',
             self::FIELD_ATTACK => 177,
             self::FIELD_DEFENSE => 125,
             self::FIELD_STAMINA => 190,
@@ -2661,6 +2837,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_CROSS_CHOP]
         ],
         Pokemon::MACHOKE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Machoke',
             self::FIELD_ATTACK => 177,
             self::FIELD_DEFENSE => 125,
             self::FIELD_STAMINA => 190,
@@ -2676,6 +2853,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_CROSS_CHOP]
         ],
         Pokemon::MACHOKE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Machoke',
             self::FIELD_ATTACK => 177,
             self::FIELD_DEFENSE => 125,
             self::FIELD_STAMINA => 190,
@@ -2693,6 +2871,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_CROSS_CHOP]
         ],
         Pokemon::MACHAMP => [
+            self::FIELD_NAME => 'Machamp',
             self::FIELD_ATTACK => 234,
             self::FIELD_DEFENSE => 159,
             self::FIELD_STAMINA => 207,
@@ -2708,6 +2887,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_STONE_EDGE, Moves::MOVE_SUBMISSION]
         ],
         Pokemon::MACHAMP | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Machamp',
             self::FIELD_ATTACK => 234,
             self::FIELD_DEFENSE => 159,
             self::FIELD_STAMINA => 207,
@@ -2723,6 +2903,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_STONE_EDGE, Moves::MOVE_SUBMISSION]
         ],
         Pokemon::MACHAMP | Mods::SHADOW => [
+            self::FIELD_NAME => 'Machamp',
             self::FIELD_ATTACK => 234,
             self::FIELD_DEFENSE => 159,
             self::FIELD_STAMINA => 207,
@@ -2740,6 +2921,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_STONE_EDGE, Moves::MOVE_SUBMISSION]
         ],
         Pokemon::BELLSPROUT => [
+            self::FIELD_NAME => 'Bellsprout',
             self::FIELD_ATTACK => 139,
             self::FIELD_DEFENSE => 61,
             self::FIELD_STAMINA => 137,
@@ -2755,6 +2937,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_POWER_WHIP, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_WRAP]
         ],
         Pokemon::BELLSPROUT | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Bellsprout',
             self::FIELD_ATTACK => 139,
             self::FIELD_DEFENSE => 61,
             self::FIELD_STAMINA => 137,
@@ -2770,6 +2953,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_POWER_WHIP, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_WRAP]
         ],
         Pokemon::BELLSPROUT | Mods::SHADOW => [
+            self::FIELD_NAME => 'Bellsprout',
             self::FIELD_ATTACK => 139,
             self::FIELD_DEFENSE => 61,
             self::FIELD_STAMINA => 137,
@@ -2787,6 +2971,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_POWER_WHIP, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_WRAP]
         ],
         Pokemon::WEEPINBELL => [
+            self::FIELD_NAME => 'Weepinbell',
             self::FIELD_ATTACK => 172,
             self::FIELD_DEFENSE => 92,
             self::FIELD_STAMINA => 163,
@@ -2803,6 +2988,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_POWER_WHIP, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SEED_BOMB]
         ],
         Pokemon::WEEPINBELL | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Weepinbell',
             self::FIELD_ATTACK => 172,
             self::FIELD_DEFENSE => 92,
             self::FIELD_STAMINA => 163,
@@ -2819,6 +3005,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_POWER_WHIP, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SEED_BOMB]
         ],
         Pokemon::WEEPINBELL | Mods::SHADOW => [
+            self::FIELD_NAME => 'Weepinbell',
             self::FIELD_ATTACK => 172,
             self::FIELD_DEFENSE => 92,
             self::FIELD_STAMINA => 163,
@@ -2837,6 +3024,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_POWER_WHIP, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SEED_BOMB]
         ],
         Pokemon::VICTREEBEL => [
+            self::FIELD_NAME => 'Victreebel',
             self::FIELD_ATTACK => 207,
             self::FIELD_DEFENSE => 135,
             self::FIELD_STAMINA => 190,
@@ -2851,6 +3039,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_LEAF_BLADE, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_LEAF_TORNADO, Moves::MOVE_ACID_SPRAY]
         ],
         Pokemon::VICTREEBEL | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Victreebel',
             self::FIELD_ATTACK => 207,
             self::FIELD_DEFENSE => 135,
             self::FIELD_STAMINA => 190,
@@ -2865,6 +3054,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_LEAF_BLADE, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_LEAF_TORNADO, Moves::MOVE_ACID_SPRAY]
         ],
         Pokemon::VICTREEBEL | Mods::SHADOW => [
+            self::FIELD_NAME => 'Victreebel',
             self::FIELD_ATTACK => 207,
             self::FIELD_DEFENSE => 135,
             self::FIELD_STAMINA => 190,
@@ -2881,6 +3071,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_LEAF_BLADE, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_LEAF_TORNADO, Moves::MOVE_ACID_SPRAY]
         ],
         Pokemon::TENTACOOL => [
+            self::FIELD_NAME => 'Tentacool',
             self::FIELD_ATTACK => 97,
             self::FIELD_DEFENSE => 149,
             self::FIELD_STAMINA => 120,
@@ -2896,6 +3087,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_WATER_PULSE, Moves::MOVE_WRAP]
         ],
         Pokemon::TENTACRUEL => [
+            self::FIELD_NAME => 'Tentacruel',
             self::FIELD_ATTACK => 166,
             self::FIELD_DEFENSE => 209,
             self::FIELD_STAMINA => 190,
@@ -2910,6 +3102,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_BLIZZARD, Moves::MOVE_ACID_SPRAY]
         ],
         Pokemon::GEODUDE => [
+            self::FIELD_NAME => 'Geodude',
             self::FIELD_ATTACK => 132,
             self::FIELD_DEFENSE => 132,
             self::FIELD_STAMINA => 120,
@@ -2925,6 +3118,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_SLIDE, Moves::MOVE_ROCK_TOMB, Moves::MOVE_DIG]
         ],
         Pokemon::GEODUDE | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Geodude',
             self::FIELD_ATTACK => 132,
             self::FIELD_DEFENSE => 132,
             self::FIELD_STAMINA => 120,
@@ -2940,6 +3134,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_SLIDE, Moves::MOVE_ROCK_TOMB, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::GEODUDE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Geodude',
             self::FIELD_ATTACK => 132,
             self::FIELD_DEFENSE => 132,
             self::FIELD_STAMINA => 120,
@@ -2955,6 +3150,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_SLIDE, Moves::MOVE_ROCK_TOMB, Moves::MOVE_DIG]
         ],
         Pokemon::GEODUDE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Geodude',
             self::FIELD_ATTACK => 132,
             self::FIELD_DEFENSE => 132,
             self::FIELD_STAMINA => 120,
@@ -2972,6 +3168,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_SLIDE, Moves::MOVE_ROCK_TOMB, Moves::MOVE_DIG]
         ],
         Pokemon::GRAVELER => [
+            self::FIELD_NAME => 'Graveler',
             self::FIELD_ATTACK => 164,
             self::FIELD_DEFENSE => 164,
             self::FIELD_STAMINA => 146,
@@ -2988,6 +3185,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::GRAVELER | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Graveler',
             self::FIELD_ATTACK => 164,
             self::FIELD_DEFENSE => 164,
             self::FIELD_STAMINA => 146,
@@ -3003,6 +3201,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDERBOLT, Moves::MOVE_STONE_EDGE, Moves::MOVE_ROCK_BLAST]
         ],
         Pokemon::GRAVELER | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Graveler',
             self::FIELD_ATTACK => 164,
             self::FIELD_DEFENSE => 164,
             self::FIELD_STAMINA => 146,
@@ -3019,6 +3218,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::GRAVELER | Mods::SHADOW => [
+            self::FIELD_NAME => 'Graveler',
             self::FIELD_ATTACK => 164,
             self::FIELD_DEFENSE => 164,
             self::FIELD_STAMINA => 146,
@@ -3037,6 +3237,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::GOLEM => [
+            self::FIELD_NAME => 'Golem',
             self::FIELD_ATTACK => 211,
             self::FIELD_DEFENSE => 198,
             self::FIELD_STAMINA => 190,
@@ -3051,6 +3252,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STONE_EDGE, Moves::MOVE_ROCK_BLAST, Moves::MOVE_EARTHQUAKE, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::GOLEM | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Golem',
             self::FIELD_ATTACK => 211,
             self::FIELD_DEFENSE => 198,
             self::FIELD_STAMINA => 190,
@@ -3065,6 +3267,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STONE_EDGE, Moves::MOVE_ROCK_BLAST, Moves::MOVE_WILD_CHARGE]
         ],
         Pokemon::GOLEM | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Golem',
             self::FIELD_ATTACK => 211,
             self::FIELD_DEFENSE => 198,
             self::FIELD_STAMINA => 190,
@@ -3079,6 +3282,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STONE_EDGE, Moves::MOVE_ROCK_BLAST, Moves::MOVE_EARTHQUAKE, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::GOLEM | Mods::SHADOW => [
+            self::FIELD_NAME => 'Golem',
             self::FIELD_ATTACK => 211,
             self::FIELD_DEFENSE => 198,
             self::FIELD_STAMINA => 190,
@@ -3095,6 +3299,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STONE_EDGE, Moves::MOVE_ROCK_BLAST, Moves::MOVE_EARTHQUAKE, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::PONYTA => [
+            self::FIELD_NAME => 'Ponyta',
             self::FIELD_ATTACK => 170,
             self::FIELD_DEFENSE => 127,
             self::FIELD_STAMINA => 137,
@@ -3110,6 +3315,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FIRE_BLAST]
         ],
         Pokemon::RAPIDASH => [
+            self::FIELD_NAME => 'Rapidash',
             self::FIELD_ATTACK => 207,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 163,
@@ -3124,6 +3330,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_DRILL_RUN, Moves::MOVE_HEAT_WAVE]
         ],
         Pokemon::SLOWPOKE => [
+            self::FIELD_NAME => 'Slowpoke',
             self::FIELD_ATTACK => 109,
             self::FIELD_DEFENSE => 98,
             self::FIELD_STAMINA => 207,
@@ -3139,6 +3346,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_PSYSHOCK, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::SLOWBRO => [
+            self::FIELD_NAME => 'Slowbro',
             self::FIELD_ATTACK => 177,
             self::FIELD_DEFENSE => 180,
             self::FIELD_STAMINA => 216,
@@ -3153,6 +3361,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_PSYCHIC, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::MAGNEMITE => [
+            self::FIELD_NAME => 'Magnemite',
             self::FIELD_ATTACK => 165,
             self::FIELD_DEFENSE => 121,
             self::FIELD_STAMINA => 93,
@@ -3168,6 +3377,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DISCHARGE, Moves::MOVE_MAGNET_BOMB, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::MAGNEMITE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Magnemite',
             self::FIELD_ATTACK => 165,
             self::FIELD_DEFENSE => 121,
             self::FIELD_STAMINA => 93,
@@ -3183,6 +3393,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DISCHARGE, Moves::MOVE_MAGNET_BOMB, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::MAGNEMITE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Magnemite',
             self::FIELD_ATTACK => 165,
             self::FIELD_DEFENSE => 121,
             self::FIELD_STAMINA => 93,
@@ -3200,6 +3411,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DISCHARGE, Moves::MOVE_MAGNET_BOMB, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::MAGNETON => [
+            self::FIELD_NAME => 'Magneton',
             self::FIELD_ATTACK => 223,
             self::FIELD_DEFENSE => 169,
             self::FIELD_STAMINA => 137,
@@ -3215,6 +3427,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ZAP_CANNON, Moves::MOVE_MAGNET_BOMB, Moves::MOVE_FLASH_CANNON, Moves::MOVE_DISCHARGE]
         ],
         Pokemon::MAGNETON | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Magneton',
             self::FIELD_ATTACK => 223,
             self::FIELD_DEFENSE => 169,
             self::FIELD_STAMINA => 137,
@@ -3230,6 +3443,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ZAP_CANNON, Moves::MOVE_MAGNET_BOMB, Moves::MOVE_FLASH_CANNON, Moves::MOVE_DISCHARGE]
         ],
         Pokemon::MAGNETON | Mods::SHADOW => [
+            self::FIELD_NAME => 'Magneton',
             self::FIELD_ATTACK => 223,
             self::FIELD_DEFENSE => 169,
             self::FIELD_STAMINA => 137,
@@ -3247,6 +3461,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ZAP_CANNON, Moves::MOVE_MAGNET_BOMB, Moves::MOVE_FLASH_CANNON, Moves::MOVE_DISCHARGE]
         ],
         Pokemon::FARFETCH_D => [
+            self::FIELD_NAME => 'Farfetch\'d',
             self::FIELD_ATTACK => 124,
             self::FIELD_DEFENSE => 115,
             self::FIELD_STAMINA => 141,
@@ -3262,6 +3477,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AERIAL_ACE, Moves::MOVE_AIR_CUTTER, Moves::MOVE_LEAF_BLADE]
         ],
         Pokemon::FARFETCH_D | Mods::GALARIAN => [
+            self::FIELD_NAME => 'Farfetch\'d',
             self::FIELD_ATTACK => 174,
             self::FIELD_DEFENSE => 114,
             self::FIELD_STAMINA => 141,
@@ -3275,6 +3491,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRICK_BREAK, Moves::MOVE_BRAVE_BIRD, Moves::MOVE_LEAF_BLADE]
         ],
         Pokemon::FARFETCH_D | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Farfetch\'d',
             self::FIELD_ATTACK => 124,
             self::FIELD_DEFENSE => 115,
             self::FIELD_STAMINA => 141,
@@ -3290,6 +3507,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AERIAL_ACE, Moves::MOVE_AIR_CUTTER, Moves::MOVE_LEAF_BLADE]
         ],
         Pokemon::FARFETCH_D | Mods::SHADOW => [
+            self::FIELD_NAME => 'Farfetch\'d',
             self::FIELD_ATTACK => 124,
             self::FIELD_DEFENSE => 115,
             self::FIELD_STAMINA => 141,
@@ -3307,6 +3525,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AERIAL_ACE, Moves::MOVE_AIR_CUTTER, Moves::MOVE_LEAF_BLADE]
         ],
         Pokemon::DODUO => [
+            self::FIELD_NAME => 'Doduo',
             self::FIELD_ATTACK => 158,
             self::FIELD_DEFENSE => 83,
             self::FIELD_STAMINA => 111,
@@ -3323,6 +3542,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SWIFT]
         ],
         Pokemon::DODRIO => [
+            self::FIELD_NAME => 'Dodrio',
             self::FIELD_ATTACK => 218,
             self::FIELD_DEFENSE => 140,
             self::FIELD_STAMINA => 155,
@@ -3338,6 +3558,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_AIR_CUTTER]
         ],
         Pokemon::SEEL => [
+            self::FIELD_NAME => 'Seel',
             self::FIELD_ATTACK => 85,
             self::FIELD_DEFENSE => 121,
             self::FIELD_STAMINA => 163,
@@ -3354,6 +3575,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_AQUA_JET]
         ],
         Pokemon::DEWGONG => [
+            self::FIELD_NAME => 'Dewgong',
             self::FIELD_ATTACK => 139,
             self::FIELD_DEFENSE => 177,
             self::FIELD_STAMINA => 207,
@@ -3370,6 +3592,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_AQUA_JET, Moves::MOVE_ICY_WIND]
         ],
         Pokemon::GRIMER => [
+            self::FIELD_NAME => 'Grimer',
             self::FIELD_ATTACK => 135,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 190,
@@ -3384,6 +3607,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE, Moves::MOVE_MUD_BOMB, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::GRIMER | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Grimer',
             self::FIELD_ATTACK => 135,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 190,
@@ -3399,6 +3623,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_GUNK_SHOT, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::GRIMER | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Grimer',
             self::FIELD_ATTACK => 135,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 190,
@@ -3413,6 +3638,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE, Moves::MOVE_MUD_BOMB, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::GRIMER | Mods::SHADOW => [
+            self::FIELD_NAME => 'Grimer',
             self::FIELD_ATTACK => 135,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 190,
@@ -3429,6 +3655,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE, Moves::MOVE_MUD_BOMB, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::MUK => [
+            self::FIELD_NAME => 'Muk',
             self::FIELD_ATTACK => 190,
             self::FIELD_DEFENSE => 172,
             self::FIELD_STAMINA => 233,
@@ -3443,6 +3670,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_GUNK_SHOT, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_ACID_SPRAY]
         ],
         Pokemon::MUK | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Muk',
             self::FIELD_ATTACK => 190,
             self::FIELD_DEFENSE => 172,
             self::FIELD_STAMINA => 233,
@@ -3457,6 +3685,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_GUNK_SHOT, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_ACID_SPRAY]
         ],
         Pokemon::MUK | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Muk',
             self::FIELD_ATTACK => 190,
             self::FIELD_DEFENSE => 172,
             self::FIELD_STAMINA => 233,
@@ -3471,6 +3700,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_GUNK_SHOT, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_ACID_SPRAY]
         ],
         Pokemon::MUK | Mods::SHADOW => [
+            self::FIELD_NAME => 'Muk',
             self::FIELD_ATTACK => 190,
             self::FIELD_DEFENSE => 172,
             self::FIELD_STAMINA => 233,
@@ -3487,6 +3717,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_GUNK_SHOT, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_ACID_SPRAY]
         ],
         Pokemon::SHELLDER => [
+            self::FIELD_NAME => 'Shellder',
             self::FIELD_ATTACK => 116,
             self::FIELD_DEFENSE => 134,
             self::FIELD_STAMINA => 102,
@@ -3501,6 +3732,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_WATER_PULSE, Moves::MOVE_ICY_WIND]
         ],
         Pokemon::SHELLDER | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Shellder',
             self::FIELD_ATTACK => 116,
             self::FIELD_DEFENSE => 134,
             self::FIELD_STAMINA => 102,
@@ -3515,6 +3747,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_WATER_PULSE, Moves::MOVE_ICY_WIND]
         ],
         Pokemon::SHELLDER | Mods::SHADOW => [
+            self::FIELD_NAME => 'Shellder',
             self::FIELD_ATTACK => 116,
             self::FIELD_DEFENSE => 134,
             self::FIELD_STAMINA => 102,
@@ -3531,6 +3764,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_WATER_PULSE, Moves::MOVE_ICY_WIND]
         ],
         Pokemon::CLOYSTER => [
+            self::FIELD_NAME => 'Cloyster',
             self::FIELD_ATTACK => 186,
             self::FIELD_DEFENSE => 256,
             self::FIELD_STAMINA => 137,
@@ -3546,6 +3780,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BLIZZARD]
         ],
         Pokemon::CLOYSTER | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Cloyster',
             self::FIELD_ATTACK => 186,
             self::FIELD_DEFENSE => 256,
             self::FIELD_STAMINA => 137,
@@ -3561,6 +3796,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BLIZZARD]
         ],
         Pokemon::CLOYSTER | Mods::SHADOW => [
+            self::FIELD_NAME => 'Cloyster',
             self::FIELD_ATTACK => 186,
             self::FIELD_DEFENSE => 256,
             self::FIELD_STAMINA => 137,
@@ -3578,6 +3814,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BLIZZARD]
         ],
         Pokemon::GASTLY => [
+            self::FIELD_NAME => 'Gastly',
             self::FIELD_ATTACK => 186,
             self::FIELD_DEFENSE => 67,
             self::FIELD_STAMINA => 102,
@@ -3595,6 +3832,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_OMINOUS_WIND]
         ],
         Pokemon::HAUNTER => [
+            self::FIELD_NAME => 'Haunter',
             self::FIELD_ATTACK => 223,
             self::FIELD_DEFENSE => 107,
             self::FIELD_STAMINA => 128,
@@ -3611,6 +3849,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_PUNCH, Moves::MOVE_DARK_PULSE, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::GENGAR => [
+            self::FIELD_NAME => 'Gengar',
             self::FIELD_ATTACK => 261,
             self::FIELD_DEFENSE => 149,
             self::FIELD_STAMINA => 155,
@@ -3627,6 +3866,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_DARK_PULSE, Moves::MOVE_PSYCHIC, Moves::MOVE_SHADOW_PUNCH]
         ],
         Pokemon::ONIX => [
+            self::FIELD_NAME => 'Onix',
             self::FIELD_ATTACK => 85,
             self::FIELD_DEFENSE => 232,
             self::FIELD_STAMINA => 111,
@@ -3643,6 +3883,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_IRON_HEAD, Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::ONIX | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Onix',
             self::FIELD_ATTACK => 85,
             self::FIELD_DEFENSE => 232,
             self::FIELD_STAMINA => 111,
@@ -3659,6 +3900,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_IRON_HEAD, Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::ONIX | Mods::SHADOW => [
+            self::FIELD_NAME => 'Onix',
             self::FIELD_ATTACK => 85,
             self::FIELD_DEFENSE => 232,
             self::FIELD_STAMINA => 111,
@@ -3677,6 +3919,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_IRON_HEAD, Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::DROWZEE => [
+            self::FIELD_NAME => 'Drowzee',
             self::FIELD_ATTACK => 89,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 155,
@@ -3691,6 +3934,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_PSYSHOCK, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::DROWZEE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Drowzee',
             self::FIELD_ATTACK => 89,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 155,
@@ -3705,6 +3949,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_PSYSHOCK, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::DROWZEE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Drowzee',
             self::FIELD_ATTACK => 89,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 155,
@@ -3721,6 +3966,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_PSYSHOCK, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::HYPNO => [
+            self::FIELD_NAME => 'Hypno',
             self::FIELD_ATTACK => 144,
             self::FIELD_DEFENSE => 193,
             self::FIELD_STAMINA => 198,
@@ -3735,6 +3981,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_PSYSHOCK]
         ],
         Pokemon::HYPNO | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Hypno',
             self::FIELD_ATTACK => 144,
             self::FIELD_DEFENSE => 193,
             self::FIELD_STAMINA => 198,
@@ -3749,6 +3996,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_PSYSHOCK]
         ],
         Pokemon::HYPNO | Mods::SHADOW => [
+            self::FIELD_NAME => 'Hypno',
             self::FIELD_ATTACK => 144,
             self::FIELD_DEFENSE => 193,
             self::FIELD_STAMINA => 198,
@@ -3765,6 +4013,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_PSYSHOCK]
         ],
         Pokemon::KRABBY => [
+            self::FIELD_NAME => 'Krabby',
             self::FIELD_ATTACK => 181,
             self::FIELD_DEFENSE => 124,
             self::FIELD_STAMINA => 102,
@@ -3779,6 +4028,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_VICE_GRIP, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_WATER_PULSE]
         ],
         Pokemon::KRABBY | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Krabby',
             self::FIELD_ATTACK => 181,
             self::FIELD_DEFENSE => 124,
             self::FIELD_STAMINA => 102,
@@ -3793,6 +4043,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_VICE_GRIP, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_WATER_PULSE]
         ],
         Pokemon::KRABBY | Mods::SHADOW => [
+            self::FIELD_NAME => 'Krabby',
             self::FIELD_ATTACK => 181,
             self::FIELD_DEFENSE => 124,
             self::FIELD_STAMINA => 102,
@@ -3809,6 +4060,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_VICE_GRIP, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_WATER_PULSE]
         ],
         Pokemon::KINGLER => [
+            self::FIELD_NAME => 'Kingler',
             self::FIELD_ATTACK => 240,
             self::FIELD_DEFENSE => 181,
             self::FIELD_STAMINA => 146,
@@ -3823,6 +4075,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_VICE_GRIP, Moves::MOVE_X_SCISSOR, Moves::MOVE_WATER_PULSE, Moves::MOVE_CRABHAMMER]
         ],
         Pokemon::KINGLER | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Kingler',
             self::FIELD_ATTACK => 240,
             self::FIELD_DEFENSE => 181,
             self::FIELD_STAMINA => 146,
@@ -3837,6 +4090,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_VICE_GRIP, Moves::MOVE_X_SCISSOR, Moves::MOVE_WATER_PULSE, Moves::MOVE_CRABHAMMER]
         ],
         Pokemon::KINGLER | Mods::SHADOW => [
+            self::FIELD_NAME => 'Kingler',
             self::FIELD_ATTACK => 240,
             self::FIELD_DEFENSE => 181,
             self::FIELD_STAMINA => 146,
@@ -3853,6 +4107,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_VICE_GRIP, Moves::MOVE_X_SCISSOR, Moves::MOVE_WATER_PULSE, Moves::MOVE_CRABHAMMER]
         ],
         Pokemon::VOLTORB => [
+            self::FIELD_NAME => 'Voltorb',
             self::FIELD_ATTACK => 109,
             self::FIELD_DEFENSE => 111,
             self::FIELD_STAMINA => 120,
@@ -3868,6 +4123,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SIGNAL_BEAM]
         ],
         Pokemon::ELECTRODE => [
+            self::FIELD_NAME => 'Electrode',
             self::FIELD_ATTACK => 173,
             self::FIELD_DEFENSE => 173,
             self::FIELD_STAMINA => 155,
@@ -3882,6 +4138,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DISCHARGE, Moves::MOVE_THUNDERBOLT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::EXEGGCUTE => [
+            self::FIELD_NAME => 'Exeggcute',
             self::FIELD_ATTACK => 107,
             self::FIELD_DEFENSE => 125,
             self::FIELD_STAMINA => 155,
@@ -3897,6 +4154,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SEED_BOMB, Moves::MOVE_PSYCHIC, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::EXEGGCUTE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Exeggcute',
             self::FIELD_ATTACK => 107,
             self::FIELD_DEFENSE => 125,
             self::FIELD_STAMINA => 155,
@@ -3912,6 +4170,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SEED_BOMB, Moves::MOVE_PSYCHIC, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::EXEGGCUTE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Exeggcute',
             self::FIELD_ATTACK => 107,
             self::FIELD_DEFENSE => 125,
             self::FIELD_STAMINA => 155,
@@ -3929,6 +4188,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SEED_BOMB, Moves::MOVE_PSYCHIC, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::EXEGGUTOR => [
+            self::FIELD_NAME => 'Exeggutor',
             self::FIELD_ATTACK => 233,
             self::FIELD_DEFENSE => 149,
             self::FIELD_STAMINA => 216,
@@ -3944,6 +4204,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SEED_BOMB, Moves::MOVE_PSYCHIC, Moves::MOVE_SOLAR_BEAM]
         ],
         Pokemon::EXEGGUTOR | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Exeggutor',
             self::FIELD_ATTACK => 230,
             self::FIELD_DEFENSE => 153,
             self::FIELD_STAMINA => 216,
@@ -3958,6 +4219,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SEED_BOMB, Moves::MOVE_DRAGON_PULSE, Moves::MOVE_SOLAR_BEAM]
         ],
         Pokemon::EXEGGUTOR | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Exeggutor',
             self::FIELD_ATTACK => 233,
             self::FIELD_DEFENSE => 149,
             self::FIELD_STAMINA => 216,
@@ -3973,6 +4235,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SEED_BOMB, Moves::MOVE_PSYCHIC, Moves::MOVE_SOLAR_BEAM]
         ],
         Pokemon::EXEGGUTOR | Mods::SHADOW => [
+            self::FIELD_NAME => 'Exeggutor',
             self::FIELD_ATTACK => 233,
             self::FIELD_DEFENSE => 149,
             self::FIELD_STAMINA => 216,
@@ -3990,6 +4253,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SEED_BOMB, Moves::MOVE_PSYCHIC, Moves::MOVE_SOLAR_BEAM]
         ],
         Pokemon::CUBONE => [
+            self::FIELD_NAME => 'Cubone',
             self::FIELD_ATTACK => 90,
             self::FIELD_DEFENSE => 144,
             self::FIELD_STAMINA => 137,
@@ -4004,6 +4268,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BONE_CLUB, Moves::MOVE_DIG, Moves::MOVE_BULLDOZE]
         ],
         Pokemon::CUBONE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Cubone',
             self::FIELD_ATTACK => 90,
             self::FIELD_DEFENSE => 144,
             self::FIELD_STAMINA => 137,
@@ -4018,6 +4283,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BONE_CLUB, Moves::MOVE_DIG, Moves::MOVE_BULLDOZE]
         ],
         Pokemon::CUBONE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Cubone',
             self::FIELD_ATTACK => 90,
             self::FIELD_DEFENSE => 144,
             self::FIELD_STAMINA => 137,
@@ -4034,6 +4300,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BONE_CLUB, Moves::MOVE_DIG, Moves::MOVE_BULLDOZE]
         ],
         Pokemon::MAROWAK => [
+            self::FIELD_NAME => 'Marowak',
             self::FIELD_ATTACK => 144,
             self::FIELD_DEFENSE => 186,
             self::FIELD_STAMINA => 155,
@@ -4047,6 +4314,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BONE_CLUB, Moves::MOVE_DIG, Moves::MOVE_EARTHQUAKE]
         ],
         Pokemon::MAROWAK | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Marowak',
             self::FIELD_ATTACK => 144,
             self::FIELD_DEFENSE => 186,
             self::FIELD_STAMINA => 155,
@@ -4061,6 +4329,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BONE_CLUB, Moves::MOVE_SHADOW_BALL, Moves::MOVE_FIRE_BLAST, Moves::MOVE_FLAME_WHEEL]
         ],
         Pokemon::MAROWAK | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Marowak',
             self::FIELD_ATTACK => 144,
             self::FIELD_DEFENSE => 186,
             self::FIELD_STAMINA => 155,
@@ -4074,6 +4343,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BONE_CLUB, Moves::MOVE_DIG, Moves::MOVE_EARTHQUAKE]
         ],
         Pokemon::MAROWAK | Mods::SHADOW => [
+            self::FIELD_NAME => 'Marowak',
             self::FIELD_ATTACK => 144,
             self::FIELD_DEFENSE => 186,
             self::FIELD_STAMINA => 155,
@@ -4089,6 +4359,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BONE_CLUB, Moves::MOVE_DIG, Moves::MOVE_EARTHQUAKE]
         ],
         Pokemon::HITMONLEE => [
+            self::FIELD_NAME => 'Hitmonlee',
             self::FIELD_ATTACK => 224,
             self::FIELD_DEFENSE => 181,
             self::FIELD_STAMINA => 137,
@@ -4103,6 +4374,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_STOMP, Moves::MOVE_BRICK_BREAK]
         ],
         Pokemon::HITMONLEE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Hitmonlee',
             self::FIELD_ATTACK => 224,
             self::FIELD_DEFENSE => 181,
             self::FIELD_STAMINA => 137,
@@ -4117,6 +4389,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_STOMP, Moves::MOVE_BRICK_BREAK]
         ],
         Pokemon::HITMONLEE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Hitmonlee',
             self::FIELD_ATTACK => 224,
             self::FIELD_DEFENSE => 181,
             self::FIELD_STAMINA => 137,
@@ -4133,6 +4406,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_STOMP, Moves::MOVE_BRICK_BREAK]
         ],
         Pokemon::HITMONCHAN => [
+            self::FIELD_NAME => 'Hitmonchan',
             self::FIELD_ATTACK => 193,
             self::FIELD_DEFENSE => 197,
             self::FIELD_STAMINA => 137,
@@ -4148,6 +4422,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BRICK_BREAK]
         ],
         Pokemon::HITMONCHAN | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Hitmonchan',
             self::FIELD_ATTACK => 193,
             self::FIELD_DEFENSE => 197,
             self::FIELD_STAMINA => 137,
@@ -4163,6 +4438,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BRICK_BREAK]
         ],
         Pokemon::HITMONCHAN | Mods::SHADOW => [
+            self::FIELD_NAME => 'Hitmonchan',
             self::FIELD_ATTACK => 193,
             self::FIELD_DEFENSE => 197,
             self::FIELD_STAMINA => 137,
@@ -4180,6 +4456,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BRICK_BREAK]
         ],
         Pokemon::LICKITUNG => [
+            self::FIELD_NAME => 'Lickitung',
             self::FIELD_ATTACK => 108,
             self::FIELD_DEFENSE => 137,
             self::FIELD_STAMINA => 207,
@@ -4195,6 +4472,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::KOFFING => [
+            self::FIELD_NAME => 'Koffing',
             self::FIELD_ATTACK => 119,
             self::FIELD_DEFENSE => 141,
             self::FIELD_STAMINA => 120,
@@ -4209,6 +4487,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::KOFFING | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Koffing',
             self::FIELD_ATTACK => 119,
             self::FIELD_DEFENSE => 141,
             self::FIELD_STAMINA => 120,
@@ -4223,6 +4502,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::KOFFING | Mods::SHADOW => [
+            self::FIELD_NAME => 'Koffing',
             self::FIELD_ATTACK => 119,
             self::FIELD_DEFENSE => 141,
             self::FIELD_STAMINA => 120,
@@ -4239,6 +4519,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::WEEZING => [
+            self::FIELD_NAME => 'Weezing',
             self::FIELD_ATTACK => 174,
             self::FIELD_DEFENSE => 197,
             self::FIELD_STAMINA => 163,
@@ -4252,6 +4533,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SHADOW_BALL, Moves::MOVE_DARK_PULSE, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::WEEZING | Mods::GALARIAN => [
+            self::FIELD_NAME => 'Weezing',
             self::FIELD_ATTACK => 174,
             self::FIELD_DEFENSE => 197,
             self::FIELD_STAMINA => 163,
@@ -4266,6 +4548,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE, Moves::MOVE_HYPER_BEAM, Moves::MOVE_PLAY_ROUGH, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OVERHEAT]
         ],
         Pokemon::WEEZING | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Weezing',
             self::FIELD_ATTACK => 174,
             self::FIELD_DEFENSE => 197,
             self::FIELD_STAMINA => 163,
@@ -4279,6 +4562,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SHADOW_BALL, Moves::MOVE_DARK_PULSE, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::WEEZING | Mods::SHADOW => [
+            self::FIELD_NAME => 'Weezing',
             self::FIELD_ATTACK => 174,
             self::FIELD_DEFENSE => 197,
             self::FIELD_STAMINA => 163,
@@ -4294,6 +4578,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SHADOW_BALL, Moves::MOVE_DARK_PULSE, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::RHYHORN => [
+            self::FIELD_NAME => 'Rhyhorn',
             self::FIELD_ATTACK => 140,
             self::FIELD_DEFENSE => 127,
             self::FIELD_STAMINA => 190,
@@ -4309,6 +4594,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BULLDOZE, Moves::MOVE_HORN_ATTACK, Moves::MOVE_STOMP]
         ],
         Pokemon::RHYHORN | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Rhyhorn',
             self::FIELD_ATTACK => 140,
             self::FIELD_DEFENSE => 127,
             self::FIELD_STAMINA => 190,
@@ -4324,6 +4610,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BULLDOZE, Moves::MOVE_HORN_ATTACK, Moves::MOVE_STOMP]
         ],
         Pokemon::RHYHORN | Mods::SHADOW => [
+            self::FIELD_NAME => 'Rhyhorn',
             self::FIELD_ATTACK => 140,
             self::FIELD_DEFENSE => 127,
             self::FIELD_STAMINA => 190,
@@ -4341,6 +4628,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BULLDOZE, Moves::MOVE_HORN_ATTACK, Moves::MOVE_STOMP]
         ],
         Pokemon::RHYDON => [
+            self::FIELD_NAME => 'Rhydon',
             self::FIELD_ATTACK => 222,
             self::FIELD_DEFENSE => 171,
             self::FIELD_STAMINA => 233,
@@ -4357,6 +4645,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_MEGAHORN]
         ],
         Pokemon::RHYDON | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Rhydon',
             self::FIELD_ATTACK => 222,
             self::FIELD_DEFENSE => 171,
             self::FIELD_STAMINA => 233,
@@ -4373,6 +4662,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_MEGAHORN]
         ],
         Pokemon::RHYDON | Mods::SHADOW => [
+            self::FIELD_NAME => 'Rhydon',
             self::FIELD_ATTACK => 222,
             self::FIELD_DEFENSE => 171,
             self::FIELD_STAMINA => 233,
@@ -4391,6 +4681,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_MEGAHORN]
         ],
         Pokemon::CHANSEY => [
+            self::FIELD_NAME => 'Chansey',
             self::FIELD_ATTACK => 60,
             self::FIELD_DEFENSE => 128,
             self::FIELD_STAMINA => 487,
@@ -4405,6 +4696,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_HYPER_BEAM, Moves::MOVE_DAZZLING_GLEAM]
         ],
         Pokemon::TANGELA => [
+            self::FIELD_NAME => 'Tangela',
             self::FIELD_ATTACK => 183,
             self::FIELD_DEFENSE => 169,
             self::FIELD_STAMINA => 163,
@@ -4420,6 +4712,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_POWER_WHIP]
         ],
         Pokemon::KANGASKHAN => [
+            self::FIELD_NAME => 'Kangaskhan',
             self::FIELD_ATTACK => 181,
             self::FIELD_DEFENSE => 165,
             self::FIELD_STAMINA => 233,
@@ -4434,6 +4727,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BRICK_BREAK, Moves::MOVE_STOMP]
         ],
         Pokemon::KANGASKHAN | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Kangaskhan',
             self::FIELD_ATTACK => 181,
             self::FIELD_DEFENSE => 165,
             self::FIELD_STAMINA => 233,
@@ -4448,6 +4742,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BRICK_BREAK, Moves::MOVE_STOMP]
         ],
         Pokemon::KANGASKHAN | Mods::SHADOW => [
+            self::FIELD_NAME => 'Kangaskhan',
             self::FIELD_ATTACK => 181,
             self::FIELD_DEFENSE => 165,
             self::FIELD_STAMINA => 233,
@@ -4464,6 +4759,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BRICK_BREAK, Moves::MOVE_STOMP]
         ],
         Pokemon::HORSEA => [
+            self::FIELD_NAME => 'Horsea',
             self::FIELD_ATTACK => 129,
             self::FIELD_DEFENSE => 103,
             self::FIELD_STAMINA => 102,
@@ -4478,6 +4774,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_DRAGON_PULSE, Moves::MOVE_FLASH_CANNON]
         ],
         Pokemon::SEADRA => [
+            self::FIELD_NAME => 'Seadra',
             self::FIELD_ATTACK => 187,
             self::FIELD_DEFENSE => 156,
             self::FIELD_STAMINA => 146,
@@ -4493,6 +4790,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BLIZZARD]
         ],
         Pokemon::GOLDEEN => [
+            self::FIELD_NAME => 'Goldeen',
             self::FIELD_ATTACK => 123,
             self::FIELD_DEFENSE => 110,
             self::FIELD_STAMINA => 128,
@@ -4507,6 +4805,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_HORN_ATTACK, Moves::MOVE_AQUA_TAIL]
         ],
         Pokemon::SEAKING => [
+            self::FIELD_NAME => 'Seaking',
             self::FIELD_ATTACK => 175,
             self::FIELD_DEFENSE => 147,
             self::FIELD_STAMINA => 190,
@@ -4522,6 +4821,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ICY_WIND, Moves::MOVE_DRILL_RUN]
         ],
         Pokemon::STARYU => [
+            self::FIELD_NAME => 'Staryu',
             self::FIELD_ATTACK => 137,
             self::FIELD_DEFENSE => 112,
             self::FIELD_STAMINA => 102,
@@ -4536,6 +4836,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SWIFT, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_POWER_GEM]
         ],
         Pokemon::STARMIE => [
+            self::FIELD_NAME => 'Starmie',
             self::FIELD_ATTACK => 210,
             self::FIELD_DEFENSE => 184,
             self::FIELD_STAMINA => 155,
@@ -4551,6 +4852,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_POWER_GEM, Moves::MOVE_PSYCHIC, Moves::MOVE_THUNDER, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::MR_MIME => [
+            self::FIELD_NAME => 'Mr. Mime',
             self::FIELD_ATTACK => 192,
             self::FIELD_DEFENSE => 205,
             self::FIELD_STAMINA => 120,
@@ -4565,6 +4867,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_PSYCHIC, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::SCYTHER => [
+            self::FIELD_NAME => 'Scyther',
             self::FIELD_ATTACK => 218,
             self::FIELD_DEFENSE => 170,
             self::FIELD_STAMINA => 172,
@@ -4582,6 +4885,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BUG_BUZZ]
         ],
         Pokemon::SCYTHER | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Scyther',
             self::FIELD_ATTACK => 218,
             self::FIELD_DEFENSE => 170,
             self::FIELD_STAMINA => 172,
@@ -4599,6 +4903,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BUG_BUZZ]
         ],
         Pokemon::SCYTHER | Mods::SHADOW => [
+            self::FIELD_NAME => 'Scyther',
             self::FIELD_ATTACK => 218,
             self::FIELD_DEFENSE => 170,
             self::FIELD_STAMINA => 172,
@@ -4618,6 +4923,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BUG_BUZZ]
         ],
         Pokemon::JYNX => [
+            self::FIELD_NAME => 'Jynx',
             self::FIELD_ATTACK => 223,
             self::FIELD_DEFENSE => 151,
             self::FIELD_STAMINA => 163,
@@ -4634,6 +4940,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ICE_PUNCH]
         ],
         Pokemon::ELECTABUZZ => [
+            self::FIELD_NAME => 'Electabuzz',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 158,
             self::FIELD_STAMINA => 163,
@@ -4648,6 +4955,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_THUNDERBOLT, Moves::MOVE_THUNDER]
         ],
         Pokemon::ELECTABUZZ | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Electabuzz',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 158,
             self::FIELD_STAMINA => 163,
@@ -4662,6 +4970,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_THUNDERBOLT, Moves::MOVE_THUNDER]
         ],
         Pokemon::ELECTABUZZ | Mods::SHADOW => [
+            self::FIELD_NAME => 'Electabuzz',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 158,
             self::FIELD_STAMINA => 163,
@@ -4678,6 +4987,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_THUNDERBOLT, Moves::MOVE_THUNDER]
         ],
         Pokemon::MAGMAR => [
+            self::FIELD_NAME => 'Magmar',
             self::FIELD_ATTACK => 206,
             self::FIELD_DEFENSE => 154,
             self::FIELD_STAMINA => 163,
@@ -4692,6 +5002,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_FIRE_PUNCH, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::MAGMAR | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Magmar',
             self::FIELD_ATTACK => 206,
             self::FIELD_DEFENSE => 154,
             self::FIELD_STAMINA => 163,
@@ -4706,6 +5017,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_FIRE_PUNCH, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::MAGMAR | Mods::SHADOW => [
+            self::FIELD_NAME => 'Magmar',
             self::FIELD_ATTACK => 206,
             self::FIELD_DEFENSE => 154,
             self::FIELD_STAMINA => 163,
@@ -4722,6 +5034,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_FIRE_PUNCH, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::PINSIR => [
+            self::FIELD_NAME => 'Pinsir',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 182,
             self::FIELD_STAMINA => 163,
@@ -4736,6 +5049,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SUBMISSION]
         ],
         Pokemon::PINSIR | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Pinsir',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 182,
             self::FIELD_STAMINA => 163,
@@ -4750,6 +5064,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SUBMISSION]
         ],
         Pokemon::PINSIR | Mods::SHADOW => [
+            self::FIELD_NAME => 'Pinsir',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 182,
             self::FIELD_STAMINA => 163,
@@ -4766,6 +5081,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SUBMISSION]
         ],
         Pokemon::TAUROS => [
+            self::FIELD_NAME => 'Tauros',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 183,
             self::FIELD_STAMINA => 181,
@@ -4779,6 +5095,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HORN_ATTACK, Moves::MOVE_IRON_HEAD, Moves::MOVE_EARTHQUAKE]
         ],
         Pokemon::MAGIKARP => [
+            self::FIELD_NAME => 'Magikarp',
             self::FIELD_ATTACK => 29,
             self::FIELD_DEFENSE => 85,
             self::FIELD_STAMINA => 85,
@@ -4793,6 +5110,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::MAGIKARP | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Magikarp',
             self::FIELD_ATTACK => 29,
             self::FIELD_DEFENSE => 85,
             self::FIELD_STAMINA => 85,
@@ -4807,6 +5125,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::MAGIKARP | Mods::SHADOW => [
+            self::FIELD_NAME => 'Magikarp',
             self::FIELD_ATTACK => 29,
             self::FIELD_DEFENSE => 85,
             self::FIELD_STAMINA => 85,
@@ -4823,6 +5142,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::GYARADOS => [
+            self::FIELD_NAME => 'Gyarados',
             self::FIELD_ATTACK => 237,
             self::FIELD_DEFENSE => 186,
             self::FIELD_STAMINA => 216,
@@ -4839,6 +5159,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRAGON_PULSE]
         ],
         Pokemon::GYARADOS | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Gyarados',
             self::FIELD_ATTACK => 237,
             self::FIELD_DEFENSE => 186,
             self::FIELD_STAMINA => 216,
@@ -4855,6 +5176,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRAGON_PULSE]
         ],
         Pokemon::GYARADOS | Mods::SHADOW => [
+            self::FIELD_NAME => 'Gyarados',
             self::FIELD_ATTACK => 237,
             self::FIELD_DEFENSE => 186,
             self::FIELD_STAMINA => 216,
@@ -4873,6 +5195,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRAGON_PULSE]
         ],
         Pokemon::LAPRAS => [
+            self::FIELD_NAME => 'Lapras',
             self::FIELD_ATTACK => 165,
             self::FIELD_DEFENSE => 174,
             self::FIELD_STAMINA => 277,
@@ -4889,6 +5212,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRAGON_PULSE, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::LAPRAS | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Lapras',
             self::FIELD_ATTACK => 165,
             self::FIELD_DEFENSE => 174,
             self::FIELD_STAMINA => 277,
@@ -4905,6 +5229,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRAGON_PULSE, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::LAPRAS | Mods::SHADOW => [
+            self::FIELD_NAME => 'Lapras',
             self::FIELD_ATTACK => 165,
             self::FIELD_DEFENSE => 174,
             self::FIELD_STAMINA => 277,
@@ -4923,6 +5248,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRAGON_PULSE, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::DITTO => [
+            self::FIELD_NAME => 'Ditto',
             self::FIELD_ATTACK => 91,
             self::FIELD_DEFENSE => 91,
             self::FIELD_STAMINA => 134,
@@ -4936,6 +5262,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::EEVEE => [
+            self::FIELD_NAME => 'Eevee',
             self::FIELD_ATTACK => 104,
             self::FIELD_DEFENSE => 114,
             self::FIELD_STAMINA => 146,
@@ -4951,6 +5278,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_LAST_RESORT, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::VAPOREON => [
+            self::FIELD_NAME => 'Vaporeon',
             self::FIELD_ATTACK => 205,
             self::FIELD_DEFENSE => 161,
             self::FIELD_STAMINA => 277,
@@ -4965,6 +5293,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_LAST_RESORT]
         ],
         Pokemon::JOLTEON => [
+            self::FIELD_NAME => 'Jolteon',
             self::FIELD_ATTACK => 232,
             self::FIELD_DEFENSE => 182,
             self::FIELD_STAMINA => 163,
@@ -4979,6 +5308,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_LAST_RESORT]
         ],
         Pokemon::FLAREON => [
+            self::FIELD_NAME => 'Flareon',
             self::FIELD_ATTACK => 246,
             self::FIELD_DEFENSE => 179,
             self::FIELD_STAMINA => 163,
@@ -4993,6 +5323,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_LAST_RESORT, Moves::MOVE_HEAT_WAVE]
         ],
         Pokemon::PORYGON => [
+            self::FIELD_NAME => 'Porygon',
             self::FIELD_ATTACK => 153,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 163,
@@ -5009,6 +5340,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SIGNAL_BEAM, Moves::MOVE_PSYBEAM, Moves::MOVE_DISCHARGE]
         ],
         Pokemon::PORYGON | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Porygon',
             self::FIELD_ATTACK => 153,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 163,
@@ -5025,6 +5357,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SIGNAL_BEAM, Moves::MOVE_PSYBEAM, Moves::MOVE_DISCHARGE]
         ],
         Pokemon::PORYGON | Mods::SHADOW => [
+            self::FIELD_NAME => 'Porygon',
             self::FIELD_ATTACK => 153,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 163,
@@ -5043,6 +5376,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SIGNAL_BEAM, Moves::MOVE_PSYBEAM, Moves::MOVE_DISCHARGE]
         ],
         Pokemon::OMANYTE => [
+            self::FIELD_NAME => 'Omanyte',
             self::FIELD_ATTACK => 155,
             self::FIELD_DEFENSE => 153,
             self::FIELD_STAMINA => 111,
@@ -5059,6 +5393,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_TOMB, Moves::MOVE_BRINE]
         ],
         Pokemon::OMANYTE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Omanyte',
             self::FIELD_ATTACK => 155,
             self::FIELD_DEFENSE => 153,
             self::FIELD_STAMINA => 111,
@@ -5075,6 +5410,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_TOMB, Moves::MOVE_BRINE]
         ],
         Pokemon::OMANYTE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Omanyte',
             self::FIELD_ATTACK => 155,
             self::FIELD_DEFENSE => 153,
             self::FIELD_STAMINA => 111,
@@ -5093,6 +5429,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_TOMB, Moves::MOVE_BRINE]
         ],
         Pokemon::OMASTAR => [
+            self::FIELD_NAME => 'Omastar',
             self::FIELD_ATTACK => 207,
             self::FIELD_DEFENSE => 201,
             self::FIELD_STAMINA => 172,
@@ -5109,6 +5446,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::OMASTAR | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Omastar',
             self::FIELD_ATTACK => 207,
             self::FIELD_DEFENSE => 201,
             self::FIELD_STAMINA => 172,
@@ -5125,6 +5463,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::OMASTAR | Mods::SHADOW => [
+            self::FIELD_NAME => 'Omastar',
             self::FIELD_ATTACK => 207,
             self::FIELD_DEFENSE => 201,
             self::FIELD_STAMINA => 172,
@@ -5143,6 +5482,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::KABUTO => [
+            self::FIELD_NAME => 'Kabuto',
             self::FIELD_ATTACK => 148,
             self::FIELD_DEFENSE => 140,
             self::FIELD_STAMINA => 102,
@@ -5158,6 +5498,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ANCIENT_POWER, Moves::MOVE_AQUA_JET, Moves::MOVE_ROCK_TOMB]
         ],
         Pokemon::KABUTOPS => [
+            self::FIELD_NAME => 'Kabutops',
             self::FIELD_ATTACK => 220,
             self::FIELD_DEFENSE => 186,
             self::FIELD_STAMINA => 155,
@@ -5173,6 +5514,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ANCIENT_POWER, Moves::MOVE_WATER_PULSE, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::AERODACTYL => [
+            self::FIELD_NAME => 'Aerodactyl',
             self::FIELD_ATTACK => 221,
             self::FIELD_DEFENSE => 159,
             self::FIELD_STAMINA => 190,
@@ -5187,6 +5529,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ANCIENT_POWER, Moves::MOVE_IRON_HEAD, Moves::MOVE_HYPER_BEAM, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::SNORLAX => [
+            self::FIELD_NAME => 'Snorlax',
             self::FIELD_ATTACK => 190,
             self::FIELD_DEFENSE => 169,
             self::FIELD_STAMINA => 330,
@@ -5201,6 +5544,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAVY_SLAM, Moves::MOVE_HYPER_BEAM, Moves::MOVE_EARTHQUAKE, Moves::MOVE_OUTRAGE, Moves::MOVE_SKULL_BASH, Moves::MOVE_BODY_SLAM, Moves::MOVE_SUPER_POWER]
         ],
         Pokemon::SNORLAX | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Snorlax',
             self::FIELD_ATTACK => 190,
             self::FIELD_DEFENSE => 169,
             self::FIELD_STAMINA => 330,
@@ -5215,6 +5559,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAVY_SLAM, Moves::MOVE_HYPER_BEAM, Moves::MOVE_EARTHQUAKE, Moves::MOVE_OUTRAGE, Moves::MOVE_SKULL_BASH, Moves::MOVE_BODY_SLAM, Moves::MOVE_SUPER_POWER]
         ],
         Pokemon::SNORLAX | Mods::SHADOW => [
+            self::FIELD_NAME => 'Snorlax',
             self::FIELD_ATTACK => 190,
             self::FIELD_DEFENSE => 169,
             self::FIELD_STAMINA => 330,
@@ -5231,6 +5576,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAVY_SLAM, Moves::MOVE_HYPER_BEAM, Moves::MOVE_EARTHQUAKE, Moves::MOVE_OUTRAGE, Moves::MOVE_SKULL_BASH, Moves::MOVE_BODY_SLAM, Moves::MOVE_SUPER_POWER]
         ],
         Pokemon::ARTICUNO => [
+            self::FIELD_NAME => 'Articuno',
             self::FIELD_ATTACK => 192,
             self::FIELD_DEFENSE => 236,
             self::FIELD_STAMINA => 207,
@@ -5246,6 +5592,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_HURRICANE]
         ],
         Pokemon::ARTICUNO | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Articuno',
             self::FIELD_ATTACK => 192,
             self::FIELD_DEFENSE => 236,
             self::FIELD_STAMINA => 207,
@@ -5261,6 +5608,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_HURRICANE]
         ],
         Pokemon::ARTICUNO | Mods::SHADOW => [
+            self::FIELD_NAME => 'Articuno',
             self::FIELD_ATTACK => 192,
             self::FIELD_DEFENSE => 236,
             self::FIELD_STAMINA => 207,
@@ -5278,6 +5626,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_HURRICANE]
         ],
         Pokemon::ZAPDOS => [
+            self::FIELD_NAME => 'Zapdos',
             self::FIELD_ATTACK => 253,
             self::FIELD_DEFENSE => 185,
             self::FIELD_STAMINA => 207,
@@ -5293,6 +5642,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ZAP_CANNON, Moves::MOVE_THUNDERBOLT, Moves::MOVE_THUNDER, Moves::MOVE_ANCIENT_POWER, Moves::MOVE_DRILL_PECK]
         ],
         Pokemon::ZAPDOS | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Zapdos',
             self::FIELD_ATTACK => 253,
             self::FIELD_DEFENSE => 185,
             self::FIELD_STAMINA => 207,
@@ -5308,6 +5658,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ZAP_CANNON, Moves::MOVE_THUNDERBOLT, Moves::MOVE_THUNDER, Moves::MOVE_ANCIENT_POWER, Moves::MOVE_DRILL_PECK]
         ],
         Pokemon::ZAPDOS | Mods::SHADOW => [
+            self::FIELD_NAME => 'Zapdos',
             self::FIELD_ATTACK => 253,
             self::FIELD_DEFENSE => 185,
             self::FIELD_STAMINA => 207,
@@ -5325,6 +5676,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ZAP_CANNON, Moves::MOVE_THUNDERBOLT, Moves::MOVE_THUNDER, Moves::MOVE_ANCIENT_POWER, Moves::MOVE_DRILL_PECK]
         ],
         Pokemon::MOLTRES => [
+            self::FIELD_NAME => 'Moltres',
             self::FIELD_ATTACK => 251,
             self::FIELD_DEFENSE => 181,
             self::FIELD_STAMINA => 207,
@@ -5340,6 +5692,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SKY_ATTACK]
         ],
         Pokemon::MOLTRES | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Moltres',
             self::FIELD_ATTACK => 251,
             self::FIELD_DEFENSE => 181,
             self::FIELD_STAMINA => 207,
@@ -5355,6 +5708,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SKY_ATTACK]
         ],
         Pokemon::MOLTRES | Mods::SHADOW => [
+            self::FIELD_NAME => 'Moltres',
             self::FIELD_ATTACK => 251,
             self::FIELD_DEFENSE => 181,
             self::FIELD_STAMINA => 207,
@@ -5372,6 +5726,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SKY_ATTACK]
         ],
         Pokemon::DRATINI => [
+            self::FIELD_NAME => 'Dratini',
             self::FIELD_ATTACK => 119,
             self::FIELD_DEFENSE => 91,
             self::FIELD_STAMINA => 121,
@@ -5386,6 +5741,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_WRAP, Moves::MOVE_TWISTER, Moves::MOVE_AQUA_TAIL]
         ],
         Pokemon::DRATINI | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Dratini',
             self::FIELD_ATTACK => 119,
             self::FIELD_DEFENSE => 91,
             self::FIELD_STAMINA => 121,
@@ -5400,6 +5756,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_WRAP, Moves::MOVE_TWISTER, Moves::MOVE_AQUA_TAIL]
         ],
         Pokemon::DRATINI | Mods::SHADOW => [
+            self::FIELD_NAME => 'Dratini',
             self::FIELD_ATTACK => 119,
             self::FIELD_DEFENSE => 91,
             self::FIELD_STAMINA => 121,
@@ -5416,6 +5773,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_WRAP, Moves::MOVE_TWISTER, Moves::MOVE_AQUA_TAIL]
         ],
         Pokemon::DRAGONAIR => [
+            self::FIELD_NAME => 'Dragonair',
             self::FIELD_ATTACK => 163,
             self::FIELD_DEFENSE => 135,
             self::FIELD_STAMINA => 156,
@@ -5430,6 +5788,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_WRAP, Moves::MOVE_AQUA_TAIL, Moves::MOVE_DRAGON_PULSE]
         ],
         Pokemon::DRAGONAIR | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Dragonair',
             self::FIELD_ATTACK => 163,
             self::FIELD_DEFENSE => 135,
             self::FIELD_STAMINA => 156,
@@ -5444,6 +5803,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_WRAP, Moves::MOVE_AQUA_TAIL, Moves::MOVE_DRAGON_PULSE]
         ],
         Pokemon::DRAGONAIR | Mods::SHADOW => [
+            self::FIELD_NAME => 'Dragonair',
             self::FIELD_ATTACK => 163,
             self::FIELD_DEFENSE => 135,
             self::FIELD_STAMINA => 156,
@@ -5460,6 +5820,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_WRAP, Moves::MOVE_AQUA_TAIL, Moves::MOVE_DRAGON_PULSE]
         ],
         Pokemon::DRAGONITE => [
+            self::FIELD_NAME => 'Dragonite',
             self::FIELD_ATTACK => 263,
             self::FIELD_DEFENSE => 198,
             self::FIELD_STAMINA => 209,
@@ -5475,6 +5836,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRACO_METEOR, Moves::MOVE_DRAGON_PULSE]
         ],
         Pokemon::DRAGONITE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Dragonite',
             self::FIELD_ATTACK => 263,
             self::FIELD_DEFENSE => 198,
             self::FIELD_STAMINA => 209,
@@ -5490,6 +5852,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRACO_METEOR, Moves::MOVE_DRAGON_PULSE]
         ],
         Pokemon::DRAGONITE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Dragonite',
             self::FIELD_ATTACK => 263,
             self::FIELD_DEFENSE => 198,
             self::FIELD_STAMINA => 209,
@@ -5507,6 +5870,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRACO_METEOR, Moves::MOVE_DRAGON_PULSE]
         ],
         Pokemon::MEWTWO | FormsAlias::MEWTWO_NORMAL => [
+            self::FIELD_NAME => 'Mewtwo',
             self::FIELD_ATTACK => 300,
             self::FIELD_DEFENSE => 182,
             self::FIELD_STAMINA => 214,
@@ -5521,6 +5885,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_PSYSTRIKE, Moves::MOVE_SHADOW_BALL, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::MEWTWO | FormsAlias::MEWTWO_ARMORED => [
+            self::FIELD_NAME => 'Mewtwo',
             self::FIELD_ATTACK => 182,
             self::FIELD_DEFENSE => 278,
             self::FIELD_STAMINA => 214,
@@ -5535,6 +5900,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_PSYSTRIKE]
         ],
         Pokemon::MEWTWO | FormsAlias::MEWTWO_NORMAL | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Mewtwo',
             self::FIELD_ATTACK => 300,
             self::FIELD_DEFENSE => 182,
             self::FIELD_STAMINA => 214,
@@ -5549,6 +5915,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_PSYSTRIKE, Moves::MOVE_SHADOW_BALL, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::MEWTWO | FormsAlias::MEWTWO_NORMAL | Mods::SHADOW => [
+            self::FIELD_NAME => 'Mewtwo',
             self::FIELD_ATTACK => 300,
             self::FIELD_DEFENSE => 182,
             self::FIELD_STAMINA => 214,
@@ -5565,6 +5932,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_PSYSTRIKE, Moves::MOVE_SHADOW_BALL, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::MEW => [
+            self::FIELD_NAME => 'Mew',
             self::FIELD_ATTACK => 210,
             self::FIELD_DEFENSE => 210,
             self::FIELD_STAMINA => 225,
@@ -5577,6 +5945,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_ANCIENT_POWER, Moves::MOVE_DRAGON_CLAW, Moves::MOVE_PSYSHOCK, Moves::MOVE_ICE_BEAM, Moves::MOVE_BLIZZARD, Moves::MOVE_HYPER_BEAM, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_THUNDERBOLT, Moves::MOVE_THUNDER, Moves::MOVE_FLAME_CHARGE, Moves::MOVE_LOW_SWEEP, Moves::MOVE_OVERHEAT, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_ENERGY_BALL, Moves::MOVE_STONE_EDGE, Moves::MOVE_GYRO_BALL, Moves::MOVE_BULLDOZE, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_GRASS_KNOT, Moves::MOVE_FLASH_CANNON, Moves::MOVE_WILD_CHARGE, Moves::MOVE_DARK_PULSE, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_SURF]
         ],
         Pokemon::CHIKORITA => [
+            self::FIELD_NAME => 'Chikorita',
             self::FIELD_ATTACK => 92,
             self::FIELD_DEFENSE => 122,
             self::FIELD_STAMINA => 128,
@@ -5591,6 +5960,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_GRASS_KNOT, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::BAYLEEF => [
+            self::FIELD_NAME => 'Bayleef',
             self::FIELD_ATTACK => 122,
             self::FIELD_DEFENSE => 155,
             self::FIELD_STAMINA => 155,
@@ -5605,6 +5975,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_GRASS_KNOT, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::MEGANIUM => [
+            self::FIELD_NAME => 'Meganium',
             self::FIELD_ATTACK => 168,
             self::FIELD_DEFENSE => 202,
             self::FIELD_STAMINA => 190,
@@ -5619,6 +5990,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FRENZY_PLANT]
         ],
         Pokemon::CYNDAQUIL => [
+            self::FIELD_NAME => 'Cyndaquil',
             self::FIELD_ATTACK => 116,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 118,
@@ -5633,6 +6005,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_CHARGE, Moves::MOVE_SWIFT, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::QUILAVA => [
+            self::FIELD_NAME => 'Quilava',
             self::FIELD_ATTACK => 158,
             self::FIELD_DEFENSE => 126,
             self::FIELD_STAMINA => 151,
@@ -5647,6 +6020,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_CHARGE, Moves::MOVE_DIG, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::TYPHLOSION => [
+            self::FIELD_NAME => 'Typhlosion',
             self::FIELD_ATTACK => 223,
             self::FIELD_DEFENSE => 173,
             self::FIELD_STAMINA => 186,
@@ -5661,6 +6035,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BLAST_BURN]
         ],
         Pokemon::TOTODILE => [
+            self::FIELD_NAME => 'Totodile',
             self::FIELD_ATTACK => 117,
             self::FIELD_DEFENSE => 109,
             self::FIELD_STAMINA => 137,
@@ -5675,6 +6050,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_AQUA_JET, Moves::MOVE_WATER_PULSE]
         ],
         Pokemon::CROCONAW => [
+            self::FIELD_NAME => 'Croconaw',
             self::FIELD_ATTACK => 150,
             self::FIELD_DEFENSE => 142,
             self::FIELD_STAMINA => 163,
@@ -5689,6 +6065,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_ICE_PUNCH, Moves::MOVE_WATER_PULSE]
         ],
         Pokemon::FERALIGATR => [
+            self::FIELD_NAME => 'Feraligatr',
             self::FIELD_ATTACK => 205,
             self::FIELD_DEFENSE => 188,
             self::FIELD_STAMINA => 198,
@@ -5704,6 +6081,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_HYDRO_CANNON]
         ],
         Pokemon::SENTRET => [
+            self::FIELD_NAME => 'Sentret',
             self::FIELD_ATTACK => 79,
             self::FIELD_DEFENSE => 73,
             self::FIELD_STAMINA => 111,
@@ -5718,6 +6096,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_BRICK_BREAK, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::FURRET => [
+            self::FIELD_NAME => 'Furret',
             self::FIELD_ATTACK => 148,
             self::FIELD_DEFENSE => 125,
             self::FIELD_STAMINA => 198,
@@ -5731,6 +6110,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_BRICK_BREAK, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::HOOTHOOT => [
+            self::FIELD_NAME => 'Hoothoot',
             self::FIELD_ATTACK => 67,
             self::FIELD_DEFENSE => 88,
             self::FIELD_STAMINA => 155,
@@ -5746,6 +6126,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AERIAL_ACE, Moves::MOVE_SKY_ATTACK, Moves::MOVE_NIGHT_SHADE]
         ],
         Pokemon::NOCTOWL => [
+            self::FIELD_NAME => 'Noctowl',
             self::FIELD_ATTACK => 145,
             self::FIELD_DEFENSE => 156,
             self::FIELD_STAMINA => 225,
@@ -5760,6 +6141,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_SKY_ATTACK, Moves::MOVE_NIGHT_SHADE]
         ],
         Pokemon::LEDYBA => [
+            self::FIELD_NAME => 'Ledyba',
             self::FIELD_ATTACK => 72,
             self::FIELD_DEFENSE => 118,
             self::FIELD_STAMINA => 120,
@@ -5775,6 +6157,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SILVER_WIND, Moves::MOVE_SWIFT, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::LEDIAN => [
+            self::FIELD_NAME => 'Ledian',
             self::FIELD_ATTACK => 107,
             self::FIELD_DEFENSE => 179,
             self::FIELD_STAMINA => 146,
@@ -5789,6 +6172,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUG_BUZZ, Moves::MOVE_SILVER_WIND, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::SPINARAK => [
+            self::FIELD_NAME => 'Spinarak',
             self::FIELD_ATTACK => 105,
             self::FIELD_DEFENSE => 73,
             self::FIELD_STAMINA => 120,
@@ -5804,6 +6188,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SLASH, Moves::MOVE_SIGNAL_BEAM, Moves::MOVE_CROSS_POISON]
         ],
         Pokemon::ARIADOS => [
+            self::FIELD_NAME => 'Ariados',
             self::FIELD_ATTACK => 161,
             self::FIELD_DEFENSE => 124,
             self::FIELD_STAMINA => 172,
@@ -5818,6 +6203,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_SNEAK, Moves::MOVE_MEGAHORN, Moves::MOVE_CROSS_POISON]
         ],
         Pokemon::CROBAT => [
+            self::FIELD_NAME => 'Crobat',
             self::FIELD_ATTACK => 194,
             self::FIELD_DEFENSE => 178,
             self::FIELD_STAMINA => 198,
@@ -5832,6 +6218,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_AIR_CUTTER, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::CROBAT | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Crobat',
             self::FIELD_ATTACK => 194,
             self::FIELD_DEFENSE => 178,
             self::FIELD_STAMINA => 198,
@@ -5846,6 +6233,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_AIR_CUTTER, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::CROBAT | Mods::SHADOW => [
+            self::FIELD_NAME => 'Crobat',
             self::FIELD_ATTACK => 194,
             self::FIELD_DEFENSE => 178,
             self::FIELD_STAMINA => 198,
@@ -5862,6 +6250,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_AIR_CUTTER, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::CHINCHOU => [
+            self::FIELD_NAME => 'Chinchou',
             self::FIELD_ATTACK => 106,
             self::FIELD_DEFENSE => 97,
             self::FIELD_STAMINA => 181,
@@ -5877,6 +6266,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_THUNDERBOLT, Moves::MOVE_BUBBLE_BEAM]
         ],
         Pokemon::LANTURN => [
+            self::FIELD_NAME => 'Lanturn',
             self::FIELD_ATTACK => 146,
             self::FIELD_DEFENSE => 137,
             self::FIELD_STAMINA => 268,
@@ -5891,6 +6281,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_THUNDERBOLT, Moves::MOVE_THUNDER]
         ],
         Pokemon::PICHU => [
+            self::FIELD_NAME => 'Pichu',
             self::FIELD_ATTACK => 77,
             self::FIELD_DEFENSE => 53,
             self::FIELD_STAMINA => 85,
@@ -5905,6 +6296,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDERBOLT, Moves::MOVE_DISARMING_VOICE, Moves::MOVE_THUNDER_PUNCH]
         ],
         Pokemon::CLEFFA => [
+            self::FIELD_NAME => 'Cleffa',
             self::FIELD_ATTACK => 75,
             self::FIELD_DEFENSE => 79,
             self::FIELD_STAMINA => 137,
@@ -5920,6 +6312,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_PSYCHIC, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::IGGLYBUFF => [
+            self::FIELD_NAME => 'Igglybuff',
             self::FIELD_ATTACK => 69,
             self::FIELD_DEFENSE => 32,
             self::FIELD_STAMINA => 207,
@@ -5936,6 +6329,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::TOGEPI => [
+            self::FIELD_NAME => 'Togepi',
             self::FIELD_ATTACK => 67,
             self::FIELD_DEFENSE => 116,
             self::FIELD_STAMINA => 111,
@@ -5951,6 +6345,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ANCIENT_POWER, Moves::MOVE_PSYSHOCK, Moves::MOVE_DAZZLING_GLEAM]
         ],
         Pokemon::TOGETIC => [
+            self::FIELD_NAME => 'Togetic',
             self::FIELD_ATTACK => 139,
             self::FIELD_DEFENSE => 181,
             self::FIELD_STAMINA => 146,
@@ -5967,6 +6362,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ANCIENT_POWER, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::NATU => [
+            self::FIELD_NAME => 'Natu',
             self::FIELD_ATTACK => 134,
             self::FIELD_DEFENSE => 89,
             self::FIELD_STAMINA => 120,
@@ -5982,6 +6378,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SHADE, Moves::MOVE_PSYSHOCK, Moves::MOVE_DRILL_PECK]
         ],
         Pokemon::XATU => [
+            self::FIELD_NAME => 'Xatu',
             self::FIELD_ATTACK => 192,
             self::FIELD_DEFENSE => 146,
             self::FIELD_STAMINA => 163,
@@ -5996,6 +6393,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_OMINOUS_WIND, Moves::MOVE_FUTURESIGHT, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::MAREEP => [
+            self::FIELD_NAME => 'Mareep',
             self::FIELD_ATTACK => 114,
             self::FIELD_DEFENSE => 79,
             self::FIELD_STAMINA => 146,
@@ -6010,6 +6408,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BODY_SLAM, Moves::MOVE_THUNDERBOLT, Moves::MOVE_DISCHARGE]
         ],
         Pokemon::MAREEP | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Mareep',
             self::FIELD_ATTACK => 114,
             self::FIELD_DEFENSE => 79,
             self::FIELD_STAMINA => 146,
@@ -6024,6 +6423,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BODY_SLAM, Moves::MOVE_THUNDERBOLT, Moves::MOVE_DISCHARGE]
         ],
         Pokemon::MAREEP | Mods::SHADOW => [
+            self::FIELD_NAME => 'Mareep',
             self::FIELD_ATTACK => 114,
             self::FIELD_DEFENSE => 79,
             self::FIELD_STAMINA => 146,
@@ -6040,6 +6440,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BODY_SLAM, Moves::MOVE_THUNDERBOLT, Moves::MOVE_DISCHARGE]
         ],
         Pokemon::FLAAFFY => [
+            self::FIELD_NAME => 'Flaaffy',
             self::FIELD_ATTACK => 145,
             self::FIELD_DEFENSE => 109,
             self::FIELD_STAMINA => 172,
@@ -6054,6 +6455,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_POWER_GEM, Moves::MOVE_THUNDERBOLT, Moves::MOVE_DISCHARGE]
         ],
         Pokemon::FLAAFFY | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Flaaffy',
             self::FIELD_ATTACK => 145,
             self::FIELD_DEFENSE => 109,
             self::FIELD_STAMINA => 172,
@@ -6068,6 +6470,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_POWER_GEM, Moves::MOVE_THUNDERBOLT, Moves::MOVE_DISCHARGE]
         ],
         Pokemon::FLAAFFY | Mods::SHADOW => [
+            self::FIELD_NAME => 'Flaaffy',
             self::FIELD_ATTACK => 145,
             self::FIELD_DEFENSE => 109,
             self::FIELD_STAMINA => 172,
@@ -6084,6 +6487,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_POWER_GEM, Moves::MOVE_THUNDERBOLT, Moves::MOVE_DISCHARGE]
         ],
         Pokemon::AMPHAROS => [
+            self::FIELD_NAME => 'Ampharos',
             self::FIELD_ATTACK => 211,
             self::FIELD_DEFENSE => 169,
             self::FIELD_STAMINA => 207,
@@ -6098,6 +6502,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRAGON_PULSE]
         ],
         Pokemon::AMPHAROS | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Ampharos',
             self::FIELD_ATTACK => 211,
             self::FIELD_DEFENSE => 169,
             self::FIELD_STAMINA => 207,
@@ -6112,6 +6517,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRAGON_PULSE]
         ],
         Pokemon::AMPHAROS | Mods::SHADOW => [
+            self::FIELD_NAME => 'Ampharos',
             self::FIELD_ATTACK => 211,
             self::FIELD_DEFENSE => 169,
             self::FIELD_STAMINA => 207,
@@ -6128,6 +6534,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRAGON_PULSE]
         ],
         Pokemon::BELLOSSOM => [
+            self::FIELD_NAME => 'Bellossom',
             self::FIELD_ATTACK => 169,
             self::FIELD_DEFENSE => 186,
             self::FIELD_STAMINA => 181,
@@ -6141,6 +6548,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_LEAF_BLADE, Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_DAZZLING_GLEAM]
         ],
         Pokemon::BELLOSSOM | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Bellossom',
             self::FIELD_ATTACK => 169,
             self::FIELD_DEFENSE => 186,
             self::FIELD_STAMINA => 181,
@@ -6154,6 +6562,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_LEAF_BLADE, Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_DAZZLING_GLEAM]
         ],
         Pokemon::BELLOSSOM | Mods::SHADOW => [
+            self::FIELD_NAME => 'Bellossom',
             self::FIELD_ATTACK => 169,
             self::FIELD_DEFENSE => 186,
             self::FIELD_STAMINA => 181,
@@ -6169,6 +6578,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_LEAF_BLADE, Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_DAZZLING_GLEAM]
         ],
         Pokemon::MARILL => [
+            self::FIELD_NAME => 'Marill',
             self::FIELD_ATTACK => 37,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 172,
@@ -6184,6 +6594,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_AQUA_TAIL, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::AZUMARILL => [
+            self::FIELD_NAME => 'Azumarill',
             self::FIELD_ATTACK => 112,
             self::FIELD_DEFENSE => 152,
             self::FIELD_STAMINA => 225,
@@ -6198,6 +6609,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PLAY_ROUGH, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::SUDOWOODO => [
+            self::FIELD_NAME => 'Sudowoodo',
             self::FIELD_ATTACK => 167,
             self::FIELD_DEFENSE => 176,
             self::FIELD_STAMINA => 172,
@@ -6211,6 +6623,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STONE_EDGE, Moves::MOVE_EARTHQUAKE, Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::POLITOED => [
+            self::FIELD_NAME => 'Politoed',
             self::FIELD_ATTACK => 174,
             self::FIELD_DEFENSE => 179,
             self::FIELD_STAMINA => 207,
@@ -6225,6 +6638,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_EARTHQUAKE]
         ],
         Pokemon::POLITOED | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Politoed',
             self::FIELD_ATTACK => 174,
             self::FIELD_DEFENSE => 179,
             self::FIELD_STAMINA => 207,
@@ -6239,6 +6653,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_EARTHQUAKE]
         ],
         Pokemon::POLITOED | Mods::SHADOW => [
+            self::FIELD_NAME => 'Politoed',
             self::FIELD_ATTACK => 174,
             self::FIELD_DEFENSE => 179,
             self::FIELD_STAMINA => 207,
@@ -6255,6 +6670,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_EARTHQUAKE]
         ],
         Pokemon::HOPPIP => [
+            self::FIELD_NAME => 'Hoppip',
             self::FIELD_ATTACK => 67,
             self::FIELD_DEFENSE => 94,
             self::FIELD_STAMINA => 111,
@@ -6270,6 +6686,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_GRASS_KNOT, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_SEED_BOMB]
         ],
         Pokemon::SKIPLOOM => [
+            self::FIELD_NAME => 'Skiploom',
             self::FIELD_ATTACK => 91,
             self::FIELD_DEFENSE => 120,
             self::FIELD_STAMINA => 146,
@@ -6285,6 +6702,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_GRASS_KNOT, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_ENERGY_BALL]
         ],
         Pokemon::JUMPLUFF => [
+            self::FIELD_NAME => 'Jumpluff',
             self::FIELD_ATTACK => 118,
             self::FIELD_DEFENSE => 183,
             self::FIELD_STAMINA => 181,
@@ -6299,6 +6717,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::AIPOM => [
+            self::FIELD_NAME => 'Aipom',
             self::FIELD_ATTACK => 136,
             self::FIELD_DEFENSE => 112,
             self::FIELD_STAMINA => 146,
@@ -6313,6 +6732,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_LOW_SWEEP, Moves::MOVE_SWIFT, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::SUNKERN => [
+            self::FIELD_NAME => 'Sunkern',
             self::FIELD_ATTACK => 55,
             self::FIELD_DEFENSE => 55,
             self::FIELD_STAMINA => 102,
@@ -6327,6 +6747,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_GRASS_KNOT, Moves::MOVE_SEED_BOMB]
         ],
         Pokemon::SUNFLORA => [
+            self::FIELD_NAME => 'Sunflora',
             self::FIELD_ATTACK => 185,
             self::FIELD_DEFENSE => 135,
             self::FIELD_STAMINA => 181,
@@ -6340,6 +6761,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SOLAR_BEAM, Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::YANMA => [
+            self::FIELD_NAME => 'Yanma',
             self::FIELD_ATTACK => 154,
             self::FIELD_DEFENSE => 94,
             self::FIELD_STAMINA => 163,
@@ -6355,6 +6777,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ANCIENT_POWER, Moves::MOVE_AERIAL_ACE, Moves::MOVE_SILVER_WIND]
         ],
         Pokemon::WOOPER => [
+            self::FIELD_NAME => 'Wooper',
             self::FIELD_ATTACK => 75,
             self::FIELD_DEFENSE => 66,
             self::FIELD_STAMINA => 146,
@@ -6370,6 +6793,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_MUD_BOMB, Moves::MOVE_DIG, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::QUAGSIRE => [
+            self::FIELD_NAME => 'Quagsire',
             self::FIELD_ATTACK => 152,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 216,
@@ -6384,6 +6808,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_EARTHQUAKE, Moves::MOVE_STONE_EDGE, Moves::MOVE_ACID_SPRAY]
         ],
         Pokemon::ESPEON => [
+            self::FIELD_NAME => 'Espeon',
             self::FIELD_ATTACK => 261,
             self::FIELD_DEFENSE => 175,
             self::FIELD_STAMINA => 163,
@@ -6398,6 +6823,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_LAST_RESORT]
         ],
         Pokemon::UMBREON => [
+            self::FIELD_NAME => 'Umbreon',
             self::FIELD_ATTACK => 126,
             self::FIELD_DEFENSE => 240,
             self::FIELD_STAMINA => 216,
@@ -6412,6 +6838,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_LAST_RESORT]
         ],
         Pokemon::MURKROW => [
+            self::FIELD_NAME => 'Murkrow',
             self::FIELD_ATTACK => 175,
             self::FIELD_DEFENSE => 87,
             self::FIELD_STAMINA => 155,
@@ -6427,6 +6854,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRILL_PECK, Moves::MOVE_FOUL_PLAY, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::MURKROW | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Murkrow',
             self::FIELD_ATTACK => 175,
             self::FIELD_DEFENSE => 87,
             self::FIELD_STAMINA => 155,
@@ -6442,6 +6870,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRILL_PECK, Moves::MOVE_FOUL_PLAY, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::MURKROW | Mods::SHADOW => [
+            self::FIELD_NAME => 'Murkrow',
             self::FIELD_ATTACK => 175,
             self::FIELD_DEFENSE => 87,
             self::FIELD_STAMINA => 155,
@@ -6459,6 +6888,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRILL_PECK, Moves::MOVE_FOUL_PLAY, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::SLOWKING => [
+            self::FIELD_NAME => 'Slowking',
             self::FIELD_ATTACK => 177,
             self::FIELD_DEFENSE => 180,
             self::FIELD_STAMINA => 216,
@@ -6473,6 +6903,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BLIZZARD, Moves::MOVE_PSYCHIC, Moves::MOVE_FIRE_BLAST]
         ],
         Pokemon::MISDREAVUS => [
+            self::FIELD_NAME => 'Misdreavus',
             self::FIELD_ATTACK => 167,
             self::FIELD_DEFENSE => 154,
             self::FIELD_STAMINA => 155,
@@ -6487,6 +6918,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_SNEAK, Moves::MOVE_DARK_PULSE, Moves::MOVE_OMINOUS_WIND]
         ],
         Pokemon::MISDREAVUS | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Misdreavus',
             self::FIELD_ATTACK => 167,
             self::FIELD_DEFENSE => 154,
             self::FIELD_STAMINA => 155,
@@ -6501,6 +6933,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_SNEAK, Moves::MOVE_DARK_PULSE, Moves::MOVE_OMINOUS_WIND]
         ],
         Pokemon::MISDREAVUS | Mods::SHADOW => [
+            self::FIELD_NAME => 'Misdreavus',
             self::FIELD_ATTACK => 167,
             self::FIELD_DEFENSE => 154,
             self::FIELD_STAMINA => 155,
@@ -6517,6 +6950,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_SNEAK, Moves::MOVE_DARK_PULSE, Moves::MOVE_OMINOUS_WIND]
         ],
         Pokemon::UNOWN => [
+            self::FIELD_NAME => 'Unown',
             self::FIELD_ATTACK => 136,
             self::FIELD_DEFENSE => 91,
             self::FIELD_STAMINA => 134,
@@ -6530,6 +6964,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::WOBBUFFET => [
+            self::FIELD_NAME => 'Wobbuffet',
             self::FIELD_ATTACK => 60,
             self::FIELD_DEFENSE => 106,
             self::FIELD_STAMINA => 382,
@@ -6543,6 +6978,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_MIRROR_COAT]
         ],
         Pokemon::WOBBUFFET | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Wobbuffet',
             self::FIELD_ATTACK => 60,
             self::FIELD_DEFENSE => 106,
             self::FIELD_STAMINA => 382,
@@ -6556,6 +6992,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_MIRROR_COAT]
         ],
         Pokemon::WOBBUFFET | Mods::SHADOW => [
+            self::FIELD_NAME => 'Wobbuffet',
             self::FIELD_ATTACK => 60,
             self::FIELD_DEFENSE => 106,
             self::FIELD_STAMINA => 382,
@@ -6571,6 +7008,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_MIRROR_COAT]
         ],
         Pokemon::GIRAFARIG => [
+            self::FIELD_NAME => 'Girafarig',
             self::FIELD_ATTACK => 182,
             self::FIELD_DEFENSE => 133,
             self::FIELD_STAMINA => 172,
@@ -6585,6 +7023,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_THUNDERBOLT, Moves::MOVE_MIRROR_COAT]
         ],
         Pokemon::PINECO => [
+            self::FIELD_NAME => 'Pineco',
             self::FIELD_ATTACK => 108,
             self::FIELD_DEFENSE => 122,
             self::FIELD_STAMINA => 137,
@@ -6599,6 +7038,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_GYRO_BALL, Moves::MOVE_ROCK_TOMB, Moves::MOVE_SAND_TOMB]
         ],
         Pokemon::PINECO | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Pineco',
             self::FIELD_ATTACK => 108,
             self::FIELD_DEFENSE => 122,
             self::FIELD_STAMINA => 137,
@@ -6613,6 +7053,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_GYRO_BALL, Moves::MOVE_ROCK_TOMB, Moves::MOVE_SAND_TOMB]
         ],
         Pokemon::PINECO | Mods::SHADOW => [
+            self::FIELD_NAME => 'Pineco',
             self::FIELD_ATTACK => 108,
             self::FIELD_DEFENSE => 122,
             self::FIELD_STAMINA => 137,
@@ -6629,6 +7070,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_GYRO_BALL, Moves::MOVE_ROCK_TOMB, Moves::MOVE_SAND_TOMB]
         ],
         Pokemon::FORRETRESS => [
+            self::FIELD_NAME => 'Forretress',
             self::FIELD_ATTACK => 161,
             self::FIELD_DEFENSE => 205,
             self::FIELD_STAMINA => 181,
@@ -6643,6 +7085,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAVY_SLAM, Moves::MOVE_EARTHQUAKE, Moves::MOVE_ROCK_TOMB, Moves::MOVE_SAND_TOMB, Moves::MOVE_MIRROR_SHOT]
         ],
         Pokemon::FORRETRESS | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Forretress',
             self::FIELD_ATTACK => 161,
             self::FIELD_DEFENSE => 205,
             self::FIELD_STAMINA => 181,
@@ -6657,6 +7100,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAVY_SLAM, Moves::MOVE_EARTHQUAKE, Moves::MOVE_ROCK_TOMB, Moves::MOVE_SAND_TOMB, Moves::MOVE_MIRROR_SHOT]
         ],
         Pokemon::FORRETRESS | Mods::SHADOW => [
+            self::FIELD_NAME => 'Forretress',
             self::FIELD_ATTACK => 161,
             self::FIELD_DEFENSE => 205,
             self::FIELD_STAMINA => 181,
@@ -6673,6 +7117,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAVY_SLAM, Moves::MOVE_EARTHQUAKE, Moves::MOVE_ROCK_TOMB, Moves::MOVE_SAND_TOMB, Moves::MOVE_MIRROR_SHOT]
         ],
         Pokemon::DUNSPARCE => [
+            self::FIELD_NAME => 'Dunsparce',
             self::FIELD_ATTACK => 131,
             self::FIELD_DEFENSE => 128,
             self::FIELD_STAMINA => 225,
@@ -6686,6 +7131,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_DRILL_RUN]
         ],
         Pokemon::GLIGAR => [
+            self::FIELD_NAME => 'Gligar',
             self::FIELD_ATTACK => 143,
             self::FIELD_DEFENSE => 184,
             self::FIELD_STAMINA => 163,
@@ -6701,6 +7147,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_AERIAL_ACE, Moves::MOVE_NIGHT_SLASH]
         ],
         Pokemon::GLIGAR | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Gligar',
             self::FIELD_ATTACK => 143,
             self::FIELD_DEFENSE => 184,
             self::FIELD_STAMINA => 163,
@@ -6716,6 +7163,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_AERIAL_ACE, Moves::MOVE_NIGHT_SLASH]
         ],
         Pokemon::GLIGAR | Mods::SHADOW => [
+            self::FIELD_NAME => 'Gligar',
             self::FIELD_ATTACK => 143,
             self::FIELD_DEFENSE => 184,
             self::FIELD_STAMINA => 163,
@@ -6733,6 +7181,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_AERIAL_ACE, Moves::MOVE_NIGHT_SLASH]
         ],
         Pokemon::STEELIX => [
+            self::FIELD_NAME => 'Steelix',
             self::FIELD_ATTACK => 148,
             self::FIELD_DEFENSE => 272,
             self::FIELD_STAMINA => 181,
@@ -6747,6 +7196,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_HEAVY_SLAM, Moves::MOVE_CRUNCH]
         ],
         Pokemon::STEELIX | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Steelix',
             self::FIELD_ATTACK => 148,
             self::FIELD_DEFENSE => 272,
             self::FIELD_STAMINA => 181,
@@ -6761,6 +7211,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_HEAVY_SLAM, Moves::MOVE_CRUNCH]
         ],
         Pokemon::STEELIX | Mods::SHADOW => [
+            self::FIELD_NAME => 'Steelix',
             self::FIELD_ATTACK => 148,
             self::FIELD_DEFENSE => 272,
             self::FIELD_STAMINA => 181,
@@ -6777,6 +7228,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_HEAVY_SLAM, Moves::MOVE_CRUNCH]
         ],
         Pokemon::SNUBBULL => [
+            self::FIELD_NAME => 'Snubbull',
             self::FIELD_ATTACK => 137,
             self::FIELD_DEFENSE => 85,
             self::FIELD_STAMINA => 155,
@@ -6791,6 +7243,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_BRICK_BREAK]
         ],
         Pokemon::GRANBULL => [
+            self::FIELD_NAME => 'Granbull',
             self::FIELD_ATTACK => 212,
             self::FIELD_DEFENSE => 131,
             self::FIELD_STAMINA => 207,
@@ -6804,6 +7257,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_PLAY_ROUGH, Moves::MOVE_CLOSE_COMBAT]
         ],
         Pokemon::QWILFISH => [
+            self::FIELD_NAME => 'Qwilfish',
             self::FIELD_ATTACK => 184,
             self::FIELD_DEFENSE => 138,
             self::FIELD_STAMINA => 163,
@@ -6818,6 +7272,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_TAIL, Moves::MOVE_ICE_BEAM, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_ACID_SPRAY, Moves::MOVE_FELL_STINGER]
         ],
         Pokemon::SCIZOR => [
+            self::FIELD_NAME => 'Scizor',
             self::FIELD_ATTACK => 236,
             self::FIELD_DEFENSE => 181,
             self::FIELD_STAMINA => 172,
@@ -6832,6 +7287,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_X_SCISSOR, Moves::MOVE_IRON_HEAD, Moves::MOVE_NIGHT_SLASH]
         ],
         Pokemon::SCIZOR | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Scizor',
             self::FIELD_ATTACK => 236,
             self::FIELD_DEFENSE => 181,
             self::FIELD_STAMINA => 172,
@@ -6846,6 +7302,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_X_SCISSOR, Moves::MOVE_IRON_HEAD, Moves::MOVE_NIGHT_SLASH]
         ],
         Pokemon::SCIZOR | Mods::SHADOW => [
+            self::FIELD_NAME => 'Scizor',
             self::FIELD_ATTACK => 236,
             self::FIELD_DEFENSE => 181,
             self::FIELD_STAMINA => 172,
@@ -6862,6 +7319,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_X_SCISSOR, Moves::MOVE_IRON_HEAD, Moves::MOVE_NIGHT_SLASH]
         ],
         Pokemon::SHUCKLE => [
+            self::FIELD_NAME => 'Shuckle',
             self::FIELD_ATTACK => 17,
             self::FIELD_DEFENSE => 396,
             self::FIELD_STAMINA => 85,
@@ -6876,6 +7334,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_BLAST, Moves::MOVE_STONE_EDGE, Moves::MOVE_GYRO_BALL]
         ],
         Pokemon::SHUCKLE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Shuckle',
             self::FIELD_ATTACK => 17,
             self::FIELD_DEFENSE => 396,
             self::FIELD_STAMINA => 85,
@@ -6890,6 +7349,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_BLAST, Moves::MOVE_STONE_EDGE, Moves::MOVE_GYRO_BALL]
         ],
         Pokemon::SHUCKLE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Shuckle',
             self::FIELD_ATTACK => 17,
             self::FIELD_DEFENSE => 396,
             self::FIELD_STAMINA => 85,
@@ -6906,6 +7366,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_BLAST, Moves::MOVE_STONE_EDGE, Moves::MOVE_GYRO_BALL]
         ],
         Pokemon::HERACROSS => [
+            self::FIELD_NAME => 'Heracross',
             self::FIELD_ATTACK => 234,
             self::FIELD_DEFENSE => 179,
             self::FIELD_STAMINA => 190,
@@ -6920,6 +7381,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_MEGAHORN, Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_EARTHQUAKE]
         ],
         Pokemon::SNEASEL => [
+            self::FIELD_NAME => 'Sneasel',
             self::FIELD_ATTACK => 189,
             self::FIELD_DEFENSE => 146,
             self::FIELD_STAMINA => 146,
@@ -6935,6 +7397,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AVALANCHE, Moves::MOVE_ICE_PUNCH, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::SNEASEL | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Sneasel',
             self::FIELD_ATTACK => 189,
             self::FIELD_DEFENSE => 146,
             self::FIELD_STAMINA => 146,
@@ -6950,6 +7413,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AVALANCHE, Moves::MOVE_ICE_PUNCH, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::SNEASEL | Mods::SHADOW => [
+            self::FIELD_NAME => 'Sneasel',
             self::FIELD_ATTACK => 189,
             self::FIELD_DEFENSE => 146,
             self::FIELD_STAMINA => 146,
@@ -6967,6 +7431,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AVALANCHE, Moves::MOVE_ICE_PUNCH, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::TEDDIURSA => [
+            self::FIELD_NAME => 'Teddiursa',
             self::FIELD_ATTACK => 142,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 155,
@@ -6981,6 +7446,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CROSS_CHOP, Moves::MOVE_CRUNCH, Moves::MOVE_PLAY_ROUGH]
         ],
         Pokemon::URSARING => [
+            self::FIELD_NAME => 'Ursaring',
             self::FIELD_ATTACK => 236,
             self::FIELD_DEFENSE => 144,
             self::FIELD_STAMINA => 207,
@@ -6994,6 +7460,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_PLAY_ROUGH]
         ],
         Pokemon::SLUGMA => [
+            self::FIELD_NAME => 'Slugma',
             self::FIELD_ATTACK => 118,
             self::FIELD_DEFENSE => 71,
             self::FIELD_STAMINA => 120,
@@ -7008,6 +7475,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_BURST, Moves::MOVE_FLAME_CHARGE, Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::MAGCARGO => [
+            self::FIELD_NAME => 'Magcargo',
             self::FIELD_ATTACK => 139,
             self::FIELD_DEFENSE => 191,
             self::FIELD_STAMINA => 137,
@@ -7022,6 +7490,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAT_WAVE, Moves::MOVE_OVERHEAT, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::SWINUB => [
+            self::FIELD_NAME => 'Swinub',
             self::FIELD_ATTACK => 90,
             self::FIELD_DEFENSE => 69,
             self::FIELD_STAMINA => 137,
@@ -7037,6 +7506,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICY_WIND, Moves::MOVE_BODY_SLAM, Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::PILOSWINE => [
+            self::FIELD_NAME => 'Piloswine',
             self::FIELD_ATTACK => 181,
             self::FIELD_DEFENSE => 138,
             self::FIELD_STAMINA => 225,
@@ -7052,6 +7522,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AVALANCHE, Moves::MOVE_BULLDOZE, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::CORSOLA => [
+            self::FIELD_NAME => 'Corsola',
             self::FIELD_ATTACK => 118,
             self::FIELD_DEFENSE => 156,
             self::FIELD_STAMINA => 146,
@@ -7066,6 +7537,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_BLAST, Moves::MOVE_POWER_GEM, Moves::MOVE_BUBBLE_BEAM]
         ],
         Pokemon::REMORAID => [
+            self::FIELD_NAME => 'Remoraid',
             self::FIELD_ATTACK => 127,
             self::FIELD_DEFENSE => 69,
             self::FIELD_STAMINA => 111,
@@ -7080,6 +7552,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AURORA_BEAM, Moves::MOVE_WATER_PULSE, Moves::MOVE_ROCK_BLAST]
         ],
         Pokemon::OCTILLERY => [
+            self::FIELD_NAME => 'Octillery',
             self::FIELD_ATTACK => 197,
             self::FIELD_DEFENSE => 141,
             self::FIELD_STAMINA => 181,
@@ -7093,6 +7566,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_GUNK_SHOT, Moves::MOVE_WATER_PULSE, Moves::MOVE_AURORA_BEAM, Moves::MOVE_ACID_SPRAY, Moves::MOVE_OCTAZOOKA]
         ],
         Pokemon::DELIBIRD => [
+            self::FIELD_NAME => 'Delibird',
             self::FIELD_ATTACK => 128,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 128,
@@ -7107,6 +7581,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_PUNCH, Moves::MOVE_ICY_WIND, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::DELIBIRD | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Delibird',
             self::FIELD_ATTACK => 128,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 128,
@@ -7121,6 +7596,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_PUNCH, Moves::MOVE_ICY_WIND, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::DELIBIRD | Mods::SHADOW => [
+            self::FIELD_NAME => 'Delibird',
             self::FIELD_ATTACK => 128,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 128,
@@ -7137,6 +7613,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_PUNCH, Moves::MOVE_ICY_WIND, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::MANTINE => [
+            self::FIELD_NAME => 'Mantine',
             self::FIELD_ATTACK => 148,
             self::FIELD_DEFENSE => 226,
             self::FIELD_STAMINA => 163,
@@ -7151,6 +7628,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_ICE_BEAM, Moves::MOVE_AERIAL_ACE, Moves::MOVE_BUBBLE_BEAM]
         ],
         Pokemon::SKARMORY => [
+            self::FIELD_NAME => 'Skarmory',
             self::FIELD_ATTACK => 148,
             self::FIELD_DEFENSE => 226,
             self::FIELD_STAMINA => 163,
@@ -7165,6 +7643,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRAVE_BIRD, Moves::MOVE_SKY_ATTACK, Moves::MOVE_FLASH_CANNON]
         ],
         Pokemon::HOUNDOUR => [
+            self::FIELD_NAME => 'Houndour',
             self::FIELD_ATTACK => 152,
             self::FIELD_DEFENSE => 83,
             self::FIELD_STAMINA => 128,
@@ -7180,6 +7659,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_FLAMETHROWER, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::HOUNDOUR | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Houndour',
             self::FIELD_ATTACK => 152,
             self::FIELD_DEFENSE => 83,
             self::FIELD_STAMINA => 128,
@@ -7195,6 +7675,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_FLAMETHROWER, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::HOUNDOUR | Mods::SHADOW => [
+            self::FIELD_NAME => 'Houndour',
             self::FIELD_ATTACK => 152,
             self::FIELD_DEFENSE => 83,
             self::FIELD_STAMINA => 128,
@@ -7212,6 +7693,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_FLAMETHROWER, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::HOUNDOOM => [
+            self::FIELD_NAME => 'Houndoom',
             self::FIELD_ATTACK => 224,
             self::FIELD_DEFENSE => 144,
             self::FIELD_STAMINA => 181,
@@ -7226,6 +7708,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_FIRE_BLAST, Moves::MOVE_FOUL_PLAY, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::HOUNDOOM | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Houndoom',
             self::FIELD_ATTACK => 224,
             self::FIELD_DEFENSE => 144,
             self::FIELD_STAMINA => 181,
@@ -7240,6 +7723,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_FIRE_BLAST, Moves::MOVE_FOUL_PLAY, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::HOUNDOOM | Mods::SHADOW => [
+            self::FIELD_NAME => 'Houndoom',
             self::FIELD_ATTACK => 224,
             self::FIELD_DEFENSE => 144,
             self::FIELD_STAMINA => 181,
@@ -7256,6 +7740,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_FIRE_BLAST, Moves::MOVE_FOUL_PLAY, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::KINGDRA => [
+            self::FIELD_NAME => 'Kingdra',
             self::FIELD_ATTACK => 194,
             self::FIELD_DEFENSE => 194,
             self::FIELD_STAMINA => 181,
@@ -7271,6 +7756,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_BLIZZARD, Moves::MOVE_OUTRAGE, Moves::MOVE_OCTAZOOKA]
         ],
         Pokemon::PHANPY => [
+            self::FIELD_NAME => 'Phanpy',
             self::FIELD_ATTACK => 107,
             self::FIELD_DEFENSE => 98,
             self::FIELD_STAMINA => 207,
@@ -7285,6 +7771,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BULLDOZE, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::DONPHAN => [
+            self::FIELD_NAME => 'Donphan',
             self::FIELD_ATTACK => 214,
             self::FIELD_DEFENSE => 185,
             self::FIELD_STAMINA => 207,
@@ -7298,6 +7785,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_HEAVY_SLAM, Moves::MOVE_PLAY_ROUGH]
         ],
         Pokemon::PORYGON2 => [
+            self::FIELD_NAME => 'Porygon2',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 180,
             self::FIELD_STAMINA => 198,
@@ -7312,6 +7800,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SOLAR_BEAM, Moves::MOVE_HYPER_BEAM, Moves::MOVE_ZAP_CANNON]
         ],
         Pokemon::PORYGON2 | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Porygon2',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 180,
             self::FIELD_STAMINA => 198,
@@ -7326,6 +7815,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SOLAR_BEAM, Moves::MOVE_HYPER_BEAM, Moves::MOVE_ZAP_CANNON]
         ],
         Pokemon::PORYGON2 | Mods::SHADOW => [
+            self::FIELD_NAME => 'Porygon2',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 180,
             self::FIELD_STAMINA => 198,
@@ -7342,6 +7832,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SOLAR_BEAM, Moves::MOVE_HYPER_BEAM, Moves::MOVE_ZAP_CANNON]
         ],
         Pokemon::STANTLER => [
+            self::FIELD_NAME => 'Stantler',
             self::FIELD_ATTACK => 192,
             self::FIELD_DEFENSE => 131,
             self::FIELD_STAMINA => 177,
@@ -7355,6 +7846,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STOMP, Moves::MOVE_WILD_CHARGE, Moves::MOVE_MEGAHORN]
         ],
         Pokemon::STANTLER | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Stantler',
             self::FIELD_ATTACK => 192,
             self::FIELD_DEFENSE => 131,
             self::FIELD_STAMINA => 177,
@@ -7368,6 +7860,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STOMP, Moves::MOVE_WILD_CHARGE, Moves::MOVE_MEGAHORN]
         ],
         Pokemon::STANTLER | Mods::SHADOW => [
+            self::FIELD_NAME => 'Stantler',
             self::FIELD_ATTACK => 192,
             self::FIELD_DEFENSE => 131,
             self::FIELD_STAMINA => 177,
@@ -7383,6 +7876,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STOMP, Moves::MOVE_WILD_CHARGE, Moves::MOVE_MEGAHORN]
         ],
         Pokemon::SMEARGLE => [
+            self::FIELD_NAME => 'Smeargle',
             self::FIELD_ATTACK => 40,
             self::FIELD_DEFENSE => 83,
             self::FIELD_STAMINA => 146,
@@ -7395,6 +7889,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE, Moves::MOVE_WRAP, Moves::MOVE_HYPER_BEAM, Moves::MOVE_DARK_PULSE, Moves::MOVE_SLUDGE, Moves::MOVE_VICE_GRIP, Moves::MOVE_FLAME_WHEEL, Moves::MOVE_MEGAHORN, Moves::MOVE_FLAMETHROWER, Moves::MOVE_DIG, Moves::MOVE_CROSS_CHOP, Moves::MOVE_PSYBEAM, Moves::MOVE_EARTHQUAKE, Moves::MOVE_STONE_EDGE, Moves::MOVE_ICE_PUNCH, Moves::MOVE_DISCHARGE, Moves::MOVE_FLASH_CANNON, Moves::MOVE_DRILL_PECK, Moves::MOVE_ICE_BEAM, Moves::MOVE_BLIZZARD, Moves::MOVE_HEAT_WAVE, Moves::MOVE_AERIAL_ACE, Moves::MOVE_DRILL_RUN, Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_BUG_BUZZ, Moves::MOVE_POISON_FANG, Moves::MOVE_NIGHT_SLASH, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_SUBMISSION, Moves::MOVE_LOW_SWEEP, Moves::MOVE_AQUA_JET, Moves::MOVE_AQUA_TAIL, Moves::MOVE_SEED_BOMB, Moves::MOVE_PSYSHOCK, Moves::MOVE_ANCIENT_POWER, Moves::MOVE_ROCK_TOMB, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_POWER_GEM, Moves::MOVE_SHADOW_SNEAK, Moves::MOVE_SHADOW_PUNCH, Moves::MOVE_OMINOUS_WIND, Moves::MOVE_SHADOW_BALL, Moves::MOVE_MAGNET_BOMB, Moves::MOVE_IRON_HEAD, Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_THUNDER, Moves::MOVE_THUNDERBOLT, Moves::MOVE_TWISTER, Moves::MOVE_DRAGON_PULSE, Moves::MOVE_DRAGON_CLAW, Moves::MOVE_DISARMING_VOICE, Moves::MOVE_DRAINING_KISS, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_MOONBLAST, Moves::MOVE_PLAY_ROUGH, Moves::MOVE_CROSS_POISON, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_GUNK_SHOT, Moves::MOVE_BONE_CLUB, Moves::MOVE_BULLDOZE, Moves::MOVE_MUD_BOMB, Moves::MOVE_SIGNAL_BEAM, Moves::MOVE_X_SCISSOR, Moves::MOVE_FLAME_CHARGE, Moves::MOVE_FLAME_BURST, Moves::MOVE_FIRE_BLAST, Moves::MOVE_WATER_PULSE, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_PSYCHIC, Moves::MOVE_ICY_WIND, Moves::MOVE_FIRE_PUNCH, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_LEAF_BLADE, Moves::MOVE_POWER_WHIP, Moves::MOVE_AIR_CUTTER, Moves::MOVE_HURRICANE, Moves::MOVE_BRICK_BREAK, Moves::MOVE_SWIFT, Moves::MOVE_HORN_ATTACK, Moves::MOVE_STOMP, Moves::MOVE_HYPER_FANG, Moves::MOVE_BODY_SLAM, Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_DYNAMIC_PUNCH, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_AURORA_BEAM, Moves::MOVE_WILD_CHARGE, Moves::MOVE_ZAP_CANNON, Moves::MOVE_AVALANCHE, Moves::MOVE_BRAVE_BIRD, Moves::MOVE_SKY_ATTACK, Moves::MOVE_SAND_TOMB, Moves::MOVE_ROCK_BLAST, Moves::MOVE_SILVER_WIND, Moves::MOVE_NIGHT_SHADE, Moves::MOVE_GYRO_BALL, Moves::MOVE_HEAVY_SLAM, Moves::MOVE_OVERHEAT, Moves::MOVE_GRASS_KNOT, Moves::MOVE_ENERGY_BALL, Moves::MOVE_FUTURESIGHT, Moves::MOVE_MIRROR_COAT, Moves::MOVE_OUTRAGE, Moves::MOVE_CRUNCH, Moves::MOVE_FOUL_PLAY, Moves::MOVE_SURF, Moves::MOVE_DRACO_METEOR, Moves::MOVE_PSYCHO_BOOST, Moves::MOVE_FRENZY_PLANT, Moves::MOVE_BLAST_BURN, Moves::MOVE_HYDRO_CANNON, Moves::MOVE_LAST_RESORT, Moves::MOVE_METEOR_MASH]
         ],
         Pokemon::TYROGUE => [
+            self::FIELD_NAME => 'Tyrogue',
             self::FIELD_ATTACK => 64,
             self::FIELD_DEFENSE => 64,
             self::FIELD_STAMINA => 111,
@@ -7409,6 +7904,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRICK_BREAK, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_LOW_SWEEP]
         ],
         Pokemon::HITMONTOP => [
+            self::FIELD_NAME => 'Hitmontop',
             self::FIELD_ATTACK => 173,
             self::FIELD_DEFENSE => 207,
             self::FIELD_STAMINA => 137,
@@ -7422,6 +7918,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_GYRO_BALL, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::SMOOCHUM => [
+            self::FIELD_NAME => 'Smoochum',
             self::FIELD_ATTACK => 153,
             self::FIELD_DEFENSE => 91,
             self::FIELD_STAMINA => 128,
@@ -7438,6 +7935,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_BEAM, Moves::MOVE_ICE_PUNCH, Moves::MOVE_PSYSHOCK]
         ],
         Pokemon::ELEKID => [
+            self::FIELD_NAME => 'Elekid',
             self::FIELD_ATTACK => 135,
             self::FIELD_DEFENSE => 101,
             self::FIELD_STAMINA => 128,
@@ -7453,6 +7951,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::MAGBY => [
+            self::FIELD_NAME => 'Magby',
             self::FIELD_ATTACK => 151,
             self::FIELD_DEFENSE => 99,
             self::FIELD_STAMINA => 128,
@@ -7468,6 +7967,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::MILTANK => [
+            self::FIELD_NAME => 'Miltank',
             self::FIELD_ATTACK => 157,
             self::FIELD_DEFENSE => 193,
             self::FIELD_STAMINA => 216,
@@ -7481,6 +7981,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STOMP, Moves::MOVE_BODY_SLAM, Moves::MOVE_GYRO_BALL, Moves::MOVE_THUNDERBOLT, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::BLISSEY => [
+            self::FIELD_NAME => 'Blissey',
             self::FIELD_ATTACK => 129,
             self::FIELD_DEFENSE => 169,
             self::FIELD_STAMINA => 496,
@@ -7494,6 +7995,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_HYPER_BEAM, Moves::MOVE_DAZZLING_GLEAM]
         ],
         Pokemon::RAIKOU => [
+            self::FIELD_NAME => 'Raikou',
             self::FIELD_ATTACK => 241,
             self::FIELD_DEFENSE => 195,
             self::FIELD_STAMINA => 207,
@@ -7507,6 +8009,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDER, Moves::MOVE_THUNDERBOLT, Moves::MOVE_WILD_CHARGE, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::RAIKOU | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Raikou',
             self::FIELD_ATTACK => 241,
             self::FIELD_DEFENSE => 195,
             self::FIELD_STAMINA => 207,
@@ -7520,6 +8023,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDER, Moves::MOVE_THUNDERBOLT, Moves::MOVE_WILD_CHARGE, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::RAIKOU | Mods::SHADOW => [
+            self::FIELD_NAME => 'Raikou',
             self::FIELD_ATTACK => 241,
             self::FIELD_DEFENSE => 195,
             self::FIELD_STAMINA => 207,
@@ -7535,6 +8039,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDER, Moves::MOVE_THUNDERBOLT, Moves::MOVE_WILD_CHARGE, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::ENTEI => [
+            self::FIELD_NAME => 'Entei',
             self::FIELD_ATTACK => 235,
             self::FIELD_DEFENSE => 171,
             self::FIELD_STAMINA => 251,
@@ -7548,6 +8053,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAMETHROWER, Moves::MOVE_FIRE_BLAST, Moves::MOVE_OVERHEAT, Moves::MOVE_IRON_HEAD]
         ],
         Pokemon::ENTEI | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Entei',
             self::FIELD_ATTACK => 235,
             self::FIELD_DEFENSE => 171,
             self::FIELD_STAMINA => 251,
@@ -7561,6 +8067,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAMETHROWER, Moves::MOVE_FIRE_BLAST, Moves::MOVE_OVERHEAT, Moves::MOVE_IRON_HEAD]
         ],
         Pokemon::ENTEI | Mods::SHADOW => [
+            self::FIELD_NAME => 'Entei',
             self::FIELD_ATTACK => 235,
             self::FIELD_DEFENSE => 171,
             self::FIELD_STAMINA => 251,
@@ -7576,6 +8083,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAMETHROWER, Moves::MOVE_FIRE_BLAST, Moves::MOVE_OVERHEAT, Moves::MOVE_IRON_HEAD]
         ],
         Pokemon::SUICUNE => [
+            self::FIELD_NAME => 'Suicune',
             self::FIELD_ATTACK => 180,
             self::FIELD_DEFENSE => 235,
             self::FIELD_STAMINA => 225,
@@ -7590,6 +8098,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_WATER_PULSE, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::SUICUNE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Suicune',
             self::FIELD_ATTACK => 180,
             self::FIELD_DEFENSE => 235,
             self::FIELD_STAMINA => 225,
@@ -7604,6 +8113,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_WATER_PULSE, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::SUICUNE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Suicune',
             self::FIELD_ATTACK => 180,
             self::FIELD_DEFENSE => 235,
             self::FIELD_STAMINA => 225,
@@ -7620,6 +8130,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_WATER_PULSE, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::LARVITAR => [
+            self::FIELD_NAME => 'Larvitar',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 137,
@@ -7635,6 +8146,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STOMP, Moves::MOVE_CRUNCH, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::LARVITAR | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Larvitar',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 137,
@@ -7650,6 +8162,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STOMP, Moves::MOVE_CRUNCH, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::LARVITAR | Mods::SHADOW => [
+            self::FIELD_NAME => 'Larvitar',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 137,
@@ -7667,6 +8180,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STOMP, Moves::MOVE_CRUNCH, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::PUPITAR => [
+            self::FIELD_NAME => 'Pupitar',
             self::FIELD_ATTACK => 155,
             self::FIELD_DEFENSE => 133,
             self::FIELD_STAMINA => 172,
@@ -7682,6 +8196,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_CRUNCH, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::PUPITAR | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Pupitar',
             self::FIELD_ATTACK => 155,
             self::FIELD_DEFENSE => 133,
             self::FIELD_STAMINA => 172,
@@ -7697,6 +8212,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_CRUNCH, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::PUPITAR | Mods::SHADOW => [
+            self::FIELD_NAME => 'Pupitar',
             self::FIELD_ATTACK => 155,
             self::FIELD_DEFENSE => 133,
             self::FIELD_STAMINA => 172,
@@ -7714,6 +8230,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_CRUNCH, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::TYRANITAR => [
+            self::FIELD_NAME => 'Tyranitar',
             self::FIELD_ATTACK => 251,
             self::FIELD_DEFENSE => 207,
             self::FIELD_STAMINA => 225,
@@ -7729,6 +8246,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_CRUNCH, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::TYRANITAR | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Tyranitar',
             self::FIELD_ATTACK => 251,
             self::FIELD_DEFENSE => 207,
             self::FIELD_STAMINA => 225,
@@ -7744,6 +8262,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_CRUNCH, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::TYRANITAR | Mods::SHADOW => [
+            self::FIELD_NAME => 'Tyranitar',
             self::FIELD_ATTACK => 251,
             self::FIELD_DEFENSE => 207,
             self::FIELD_STAMINA => 225,
@@ -7761,6 +8280,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_CRUNCH, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::LUGIA => [
+            self::FIELD_NAME => 'Lugia',
             self::FIELD_ATTACK => 193,
             self::FIELD_DEFENSE => 310,
             self::FIELD_STAMINA => 235,
@@ -7775,6 +8295,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SKY_ATTACK, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_FUTURESIGHT]
         ],
         Pokemon::HO_OH => [
+            self::FIELD_NAME => 'Ho-Oh',
             self::FIELD_ATTACK => 239,
             self::FIELD_DEFENSE => 244,
             self::FIELD_STAMINA => 214,
@@ -7790,6 +8311,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_EARTHQUAKE]
         ],
         Pokemon::CELEBI => [
+            self::FIELD_NAME => 'Celebi',
             self::FIELD_ATTACK => 210,
             self::FIELD_DEFENSE => 210,
             self::FIELD_STAMINA => 225,
@@ -7803,6 +8325,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYPER_BEAM, Moves::MOVE_PSYCHIC, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_SEED_BOMB]
         ],
         Pokemon::TREECKO => [
+            self::FIELD_NAME => 'Treecko',
             self::FIELD_ATTACK => 124,
             self::FIELD_DEFENSE => 94,
             self::FIELD_STAMINA => 120,
@@ -7817,6 +8340,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_AERIAL_ACE, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::GROVYLE => [
+            self::FIELD_NAME => 'Grovyle',
             self::FIELD_ATTACK => 172,
             self::FIELD_DEFENSE => 120,
             self::FIELD_STAMINA => 137,
@@ -7831,6 +8355,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_LEAF_BLADE, Moves::MOVE_AERIAL_ACE, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::SCEPTILE => [
+            self::FIELD_NAME => 'Sceptile',
             self::FIELD_ATTACK => 223,
             self::FIELD_DEFENSE => 169,
             self::FIELD_STAMINA => 172,
@@ -7845,6 +8370,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FRENZY_PLANT]
         ],
         Pokemon::TORCHIC => [
+            self::FIELD_NAME => 'Torchic',
             self::FIELD_ATTACK => 130,
             self::FIELD_DEFENSE => 87,
             self::FIELD_STAMINA => 128,
@@ -7859,6 +8385,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_CHARGE, Moves::MOVE_FLAMETHROWER, Moves::MOVE_ROCK_TOMB]
         ],
         Pokemon::COMBUSKEN => [
+            self::FIELD_NAME => 'Combusken',
             self::FIELD_ATTACK => 163,
             self::FIELD_DEFENSE => 115,
             self::FIELD_STAMINA => 155,
@@ -7874,6 +8401,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_CHARGE, Moves::MOVE_FLAMETHROWER, Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::BLAZIKEN => [
+            self::FIELD_NAME => 'Blaziken',
             self::FIELD_ATTACK => 240,
             self::FIELD_DEFENSE => 141,
             self::FIELD_STAMINA => 190,
@@ -7889,6 +8417,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BLAST_BURN, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::MUDKIP => [
+            self::FIELD_NAME => 'Mudkip',
             self::FIELD_ATTACK => 126,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 137,
@@ -7903,6 +8432,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_SLUDGE, Moves::MOVE_STOMP]
         ],
         Pokemon::MUDKIP | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Mudkip',
             self::FIELD_ATTACK => 126,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 137,
@@ -7917,6 +8447,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_SLUDGE, Moves::MOVE_STOMP]
         ],
         Pokemon::MUDKIP | Mods::SHADOW => [
+            self::FIELD_NAME => 'Mudkip',
             self::FIELD_ATTACK => 126,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 137,
@@ -7933,6 +8464,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_SLUDGE, Moves::MOVE_STOMP]
         ],
         Pokemon::MARSHTOMP => [
+            self::FIELD_NAME => 'Marshtomp',
             self::FIELD_ATTACK => 156,
             self::FIELD_DEFENSE => 133,
             self::FIELD_STAMINA => 172,
@@ -7948,6 +8480,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_MUD_BOMB, Moves::MOVE_SLUDGE, Moves::MOVE_SURF]
         ],
         Pokemon::MARSHTOMP | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Marshtomp',
             self::FIELD_ATTACK => 156,
             self::FIELD_DEFENSE => 133,
             self::FIELD_STAMINA => 172,
@@ -7963,6 +8496,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_MUD_BOMB, Moves::MOVE_SLUDGE, Moves::MOVE_SURF]
         ],
         Pokemon::MARSHTOMP | Mods::SHADOW => [
+            self::FIELD_NAME => 'Marshtomp',
             self::FIELD_ATTACK => 156,
             self::FIELD_DEFENSE => 133,
             self::FIELD_STAMINA => 172,
@@ -7980,6 +8514,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_MUD_BOMB, Moves::MOVE_SLUDGE, Moves::MOVE_SURF]
         ],
         Pokemon::SWAMPERT => [
+            self::FIELD_NAME => 'Swampert',
             self::FIELD_ATTACK => 208,
             self::FIELD_DEFENSE => 175,
             self::FIELD_STAMINA => 225,
@@ -7995,6 +8530,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_HYDRO_CANNON]
         ],
         Pokemon::SWAMPERT | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Swampert',
             self::FIELD_ATTACK => 208,
             self::FIELD_DEFENSE => 175,
             self::FIELD_STAMINA => 225,
@@ -8010,6 +8546,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_HYDRO_CANNON]
         ],
         Pokemon::SWAMPERT | Mods::SHADOW => [
+            self::FIELD_NAME => 'Swampert',
             self::FIELD_ATTACK => 208,
             self::FIELD_DEFENSE => 175,
             self::FIELD_STAMINA => 225,
@@ -8027,6 +8564,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_HYDRO_CANNON]
         ],
         Pokemon::POOCHYENA => [
+            self::FIELD_NAME => 'Poochyena',
             self::FIELD_ATTACK => 96,
             self::FIELD_DEFENSE => 61,
             self::FIELD_STAMINA => 111,
@@ -8041,6 +8579,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_DIG, Moves::MOVE_POISON_FANG]
         ],
         Pokemon::MIGTYENA => [
+            self::FIELD_NAME => 'Mightyena',
             self::FIELD_ATTACK => 171,
             self::FIELD_DEFENSE => 132,
             self::FIELD_STAMINA => 172,
@@ -8054,6 +8593,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_PLAY_ROUGH, Moves::MOVE_POISON_FANG]
         ],
         Pokemon::ZIGZAGOON => [
+            self::FIELD_NAME => 'Zigzagoon',
             self::FIELD_ATTACK => 58,
             self::FIELD_DEFENSE => 80,
             self::FIELD_STAMINA => 116,
@@ -8068,6 +8608,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_GRASS_KNOT, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::ZIGZAGOON | Mods::GALARIAN => [
+            self::FIELD_NAME => 'Zigzagoon',
             self::FIELD_ATTACK => 58,
             self::FIELD_DEFENSE => 80,
             self::FIELD_STAMINA => 116,
@@ -8083,6 +8624,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_BODY_SLAM, Moves::MOVE_SWIFT]
         ],
         Pokemon::ZIGZAGOON | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Zigzagoon',
             self::FIELD_ATTACK => 58,
             self::FIELD_DEFENSE => 80,
             self::FIELD_STAMINA => 116,
@@ -8097,6 +8639,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_GRASS_KNOT, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::ZIGZAGOON | Mods::SHADOW => [
+            self::FIELD_NAME => 'Zigzagoon',
             self::FIELD_ATTACK => 58,
             self::FIELD_DEFENSE => 80,
             self::FIELD_STAMINA => 116,
@@ -8113,6 +8656,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_GRASS_KNOT, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::LINOONE => [
+            self::FIELD_NAME => 'Linoone',
             self::FIELD_ATTACK => 142,
             self::FIELD_DEFENSE => 128,
             self::FIELD_STAMINA => 186,
@@ -8126,6 +8670,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_GRASS_KNOT, Moves::MOVE_THUNDER]
         ],
         Pokemon::LINOONE | Mods::GALARIAN => [
+            self::FIELD_NAME => 'Linoone',
             self::FIELD_ATTACK => 142,
             self::FIELD_DEFENSE => 128,
             self::FIELD_STAMINA => 186,
@@ -8141,6 +8686,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_BODY_SLAM, Moves::MOVE_GUNK_SHOT]
         ],
         Pokemon::LINOONE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Linoone',
             self::FIELD_ATTACK => 142,
             self::FIELD_DEFENSE => 128,
             self::FIELD_STAMINA => 186,
@@ -8154,6 +8700,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_GRASS_KNOT, Moves::MOVE_THUNDER]
         ],
         Pokemon::LINOONE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Linoone',
             self::FIELD_ATTACK => 142,
             self::FIELD_DEFENSE => 128,
             self::FIELD_STAMINA => 186,
@@ -8169,6 +8716,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_GRASS_KNOT, Moves::MOVE_THUNDER]
         ],
         Pokemon::WURMPLE => [
+            self::FIELD_NAME => 'Wurmple',
             self::FIELD_ATTACK => 75,
             self::FIELD_DEFENSE => 59,
             self::FIELD_STAMINA => 128,
@@ -8183,6 +8731,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::SILCOON => [
+            self::FIELD_NAME => 'Silcoon',
             self::FIELD_ATTACK => 60,
             self::FIELD_DEFENSE => 77,
             self::FIELD_STAMINA => 137,
@@ -8197,6 +8746,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::BEAUTIFLY => [
+            self::FIELD_NAME => 'Beautifly',
             self::FIELD_ATTACK => 189,
             self::FIELD_DEFENSE => 98,
             self::FIELD_STAMINA => 155,
@@ -8211,6 +8761,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SILVER_WIND, Moves::MOVE_AIR_CUTTER, Moves::MOVE_BUG_BUZZ]
         ],
         Pokemon::CASCOON => [
+            self::FIELD_NAME => 'Cascoon',
             self::FIELD_ATTACK => 60,
             self::FIELD_DEFENSE => 77,
             self::FIELD_STAMINA => 137,
@@ -8225,6 +8776,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::DUSTOX => [
+            self::FIELD_NAME => 'Dustox',
             self::FIELD_ATTACK => 98,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 155,
@@ -8239,6 +8791,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SILVER_WIND, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_BUG_BUZZ]
         ],
         Pokemon::LOTAD => [
+            self::FIELD_NAME => 'Lotad',
             self::FIELD_ATTACK => 71,
             self::FIELD_DEFENSE => 77,
             self::FIELD_STAMINA => 120,
@@ -8254,6 +8807,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_ENERGY_BALL]
         ],
         Pokemon::LOMBRE => [
+            self::FIELD_NAME => 'Lombre',
             self::FIELD_ATTACK => 112,
             self::FIELD_DEFENSE => 119,
             self::FIELD_STAMINA => 155,
@@ -8269,6 +8823,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_ICE_BEAM, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::LUDICOLO => [
+            self::FIELD_NAME => 'Ludicolo',
             self::FIELD_ATTACK => 173,
             self::FIELD_DEFENSE => 176,
             self::FIELD_STAMINA => 190,
@@ -8283,6 +8838,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_BLIZZARD, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_ICE_BEAM, Moves::MOVE_ENERGY_BALL]
         ],
         Pokemon::SEEDOT => [
+            self::FIELD_NAME => 'Seedot',
             self::FIELD_ATTACK => 71,
             self::FIELD_DEFENSE => 77,
             self::FIELD_STAMINA => 120,
@@ -8297,6 +8853,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_GRASS_KNOT, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::SEEDOT | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Seedot',
             self::FIELD_ATTACK => 71,
             self::FIELD_DEFENSE => 77,
             self::FIELD_STAMINA => 120,
@@ -8311,6 +8868,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_GRASS_KNOT, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::SEEDOT | Mods::SHADOW => [
+            self::FIELD_NAME => 'Seedot',
             self::FIELD_ATTACK => 71,
             self::FIELD_DEFENSE => 77,
             self::FIELD_STAMINA => 120,
@@ -8327,6 +8885,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_GRASS_KNOT, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::NUZLEAF => [
+            self::FIELD_NAME => 'Nuzleaf',
             self::FIELD_ATTACK => 134,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 172,
@@ -8342,6 +8901,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_LEAF_BLADE, Moves::MOVE_GRASS_KNOT, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::NUZLEAF | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Nuzleaf',
             self::FIELD_ATTACK => 134,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 172,
@@ -8357,6 +8917,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_LEAF_BLADE, Moves::MOVE_GRASS_KNOT, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::NUZLEAF | Mods::SHADOW => [
+            self::FIELD_NAME => 'Nuzleaf',
             self::FIELD_ATTACK => 134,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 172,
@@ -8374,6 +8935,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_LEAF_BLADE, Moves::MOVE_GRASS_KNOT, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::SHIFTRY => [
+            self::FIELD_NAME => 'Shiftry',
             self::FIELD_ATTACK => 200,
             self::FIELD_DEFENSE => 121,
             self::FIELD_STAMINA => 207,
@@ -8389,6 +8951,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_LEAF_BLADE, Moves::MOVE_HURRICANE, Moves::MOVE_FOUL_PLAY, Moves::MOVE_LEAF_TORNADO]
         ],
         Pokemon::SHIFTRY | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Shiftry',
             self::FIELD_ATTACK => 200,
             self::FIELD_DEFENSE => 121,
             self::FIELD_STAMINA => 207,
@@ -8404,6 +8967,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_LEAF_BLADE, Moves::MOVE_HURRICANE, Moves::MOVE_FOUL_PLAY, Moves::MOVE_LEAF_TORNADO]
         ],
         Pokemon::SHIFTRY | Mods::SHADOW => [
+            self::FIELD_NAME => 'Shiftry',
             self::FIELD_ATTACK => 200,
             self::FIELD_DEFENSE => 121,
             self::FIELD_STAMINA => 207,
@@ -8421,6 +8985,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_LEAF_BLADE, Moves::MOVE_HURRICANE, Moves::MOVE_FOUL_PLAY, Moves::MOVE_LEAF_TORNADO]
         ],
         Pokemon::TAILLOW => [
+            self::FIELD_NAME => 'Taillow',
             self::FIELD_ATTACK => 106,
             self::FIELD_DEFENSE => 61,
             self::FIELD_STAMINA => 120,
@@ -8436,6 +9001,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::SWELLOW => [
+            self::FIELD_NAME => 'Swellow',
             self::FIELD_ATTACK => 185,
             self::FIELD_DEFENSE => 124,
             self::FIELD_STAMINA => 155,
@@ -8450,6 +9016,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AERIAL_ACE, Moves::MOVE_BRAVE_BIRD, Moves::MOVE_SKY_ATTACK]
         ],
         Pokemon::WINGULL => [
+            self::FIELD_NAME => 'Wingull',
             self::FIELD_ATTACK => 106,
             self::FIELD_DEFENSE => 61,
             self::FIELD_STAMINA => 120,
@@ -8465,6 +9032,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_AIR_CUTTER, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::PELIPPER => [
+            self::FIELD_NAME => 'Pelipper',
             self::FIELD_ATTACK => 175,
             self::FIELD_DEFENSE => 174,
             self::FIELD_STAMINA => 155,
@@ -8479,6 +9047,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_HURRICANE, Moves::MOVE_BLIZZARD, Moves::MOVE_WEATHER_BALL_WATER]
         ],
         Pokemon::RALTS => [
+            self::FIELD_NAME => 'Ralts',
             self::FIELD_ATTACK => 79,
             self::FIELD_DEFENSE => 59,
             self::FIELD_STAMINA => 99,
@@ -8494,6 +9063,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYSHOCK, Moves::MOVE_DISARMING_VOICE, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::RALTS | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Ralts',
             self::FIELD_ATTACK => 79,
             self::FIELD_DEFENSE => 59,
             self::FIELD_STAMINA => 99,
@@ -8509,6 +9079,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYSHOCK, Moves::MOVE_DISARMING_VOICE, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::RALTS | Mods::SHADOW => [
+            self::FIELD_NAME => 'Ralts',
             self::FIELD_ATTACK => 79,
             self::FIELD_DEFENSE => 59,
             self::FIELD_STAMINA => 99,
@@ -8526,6 +9097,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYSHOCK, Moves::MOVE_DISARMING_VOICE, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::KIRLIA => [
+            self::FIELD_NAME => 'Kirlia',
             self::FIELD_ATTACK => 117,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 116,
@@ -8541,6 +9113,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_DISARMING_VOICE, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::KIRLIA | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Kirlia',
             self::FIELD_ATTACK => 117,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 116,
@@ -8556,6 +9129,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_DISARMING_VOICE, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::KIRLIA | Mods::SHADOW => [
+            self::FIELD_NAME => 'Kirlia',
             self::FIELD_ATTACK => 117,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 116,
@@ -8573,6 +9147,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_DISARMING_VOICE, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::GARDEVOIR => [
+            self::FIELD_NAME => 'Gardevoir',
             self::FIELD_ATTACK => 237,
             self::FIELD_DEFENSE => 195,
             self::FIELD_STAMINA => 169,
@@ -8588,6 +9163,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SYNCHRONOISE]
         ],
         Pokemon::GARDEVOIR | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Gardevoir',
             self::FIELD_ATTACK => 237,
             self::FIELD_DEFENSE => 195,
             self::FIELD_STAMINA => 169,
@@ -8603,6 +9179,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SYNCHRONOISE]
         ],
         Pokemon::GARDEVOIR | Mods::SHADOW => [
+            self::FIELD_NAME => 'Gardevoir',
             self::FIELD_ATTACK => 237,
             self::FIELD_DEFENSE => 195,
             self::FIELD_STAMINA => 169,
@@ -8620,6 +9197,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SYNCHRONOISE]
         ],
         Pokemon::SURSKIT => [
+            self::FIELD_NAME => 'Surskit',
             self::FIELD_ATTACK => 93,
             self::FIELD_DEFENSE => 87,
             self::FIELD_STAMINA => 120,
@@ -8635,6 +9213,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_SIGNAL_BEAM]
         ],
         Pokemon::MASQUERAIN => [
+            self::FIELD_NAME => 'Masquerain',
             self::FIELD_ATTACK => 192,
             self::FIELD_DEFENSE => 150,
             self::FIELD_STAMINA => 172,
@@ -8649,6 +9228,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AIR_CUTTER, Moves::MOVE_OMINOUS_WIND, Moves::MOVE_SILVER_WIND, Moves::MOVE_BUBBLE_BEAM]
         ],
         Pokemon::SHROOMISH => [
+            self::FIELD_NAME => 'Shroomish',
             self::FIELD_ATTACK => 74,
             self::FIELD_DEFENSE => 110,
             self::FIELD_STAMINA => 155,
@@ -8663,6 +9243,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SEED_BOMB, Moves::MOVE_GRASS_KNOT, Moves::MOVE_ENERGY_BALL]
         ],
         Pokemon::BRELOOM => [
+            self::FIELD_NAME => 'Breloom',
             self::FIELD_ATTACK => 241,
             self::FIELD_DEFENSE => 144,
             self::FIELD_STAMINA => 155,
@@ -8678,6 +9259,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::SLAKOTH => [
+            self::FIELD_NAME => 'Slakoth',
             self::FIELD_ATTACK => 104,
             self::FIELD_DEFENSE => 92,
             self::FIELD_STAMINA => 155,
@@ -8692,6 +9274,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BODY_SLAM, Moves::MOVE_NIGHT_SLASH, Moves::MOVE_BRICK_BREAK]
         ],
         Pokemon::VIGOROTH => [
+            self::FIELD_NAME => 'Vigoroth',
             self::FIELD_ATTACK => 159,
             self::FIELD_DEFENSE => 145,
             self::FIELD_STAMINA => 190,
@@ -8706,6 +9289,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BODY_SLAM, Moves::MOVE_BULLDOZE, Moves::MOVE_BRICK_BREAK]
         ],
         Pokemon::SLAKING => [
+            self::FIELD_NAME => 'Slaking',
             self::FIELD_ATTACK => 290,
             self::FIELD_DEFENSE => 166,
             self::FIELD_STAMINA => 284,
@@ -8720,6 +9304,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::NINCADA => [
+            self::FIELD_NAME => 'Nincada',
             self::FIELD_ATTACK => 80,
             self::FIELD_DEFENSE => 126,
             self::FIELD_STAMINA => 104,
@@ -8735,6 +9320,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SLASH, Moves::MOVE_BUG_BUZZ, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::NINJASK => [
+            self::FIELD_NAME => 'Ninjask',
             self::FIELD_ATTACK => 199,
             self::FIELD_DEFENSE => 112,
             self::FIELD_STAMINA => 156,
@@ -8749,6 +9335,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_BUG_BUZZ, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::SHEDINJA => [
+            self::FIELD_NAME => 'Shedinja',
             self::FIELD_ATTACK => 153,
             self::FIELD_DEFENSE => 73,
             self::FIELD_STAMINA => 1,
@@ -8764,6 +9351,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_SNEAK, Moves::MOVE_AERIAL_ACE, Moves::MOVE_DIG]
         ],
         Pokemon::WHISMUR => [
+            self::FIELD_NAME => 'Whismur',
             self::FIELD_ATTACK => 92,
             self::FIELD_DEFENSE => 42,
             self::FIELD_STAMINA => 162,
@@ -8778,6 +9366,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STOMP, Moves::MOVE_DISARMING_VOICE, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::LOUDRED => [
+            self::FIELD_NAME => 'Loudred',
             self::FIELD_ATTACK => 134,
             self::FIELD_DEFENSE => 81,
             self::FIELD_STAMINA => 197,
@@ -8792,6 +9381,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STOMP, Moves::MOVE_DISARMING_VOICE, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::EXPLOUD => [
+            self::FIELD_NAME => 'Exploud',
             self::FIELD_ATTACK => 179,
             self::FIELD_DEFENSE => 137,
             self::FIELD_STAMINA => 232,
@@ -8805,6 +9395,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_DISARMING_VOICE, Moves::MOVE_FIRE_BLAST]
         ],
         Pokemon::MAKUHITA => [
+            self::FIELD_NAME => 'Makuhita',
             self::FIELD_ATTACK => 99,
             self::FIELD_DEFENSE => 54,
             self::FIELD_STAMINA => 176,
@@ -8819,6 +9410,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAVY_SLAM, Moves::MOVE_LOW_SWEEP, Moves::MOVE_CROSS_CHOP]
         ],
         Pokemon::HARIYAMA => [
+            self::FIELD_NAME => 'Hariyama',
             self::FIELD_ATTACK => 209,
             self::FIELD_DEFENSE => 114,
             self::FIELD_STAMINA => 302,
@@ -8832,6 +9424,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAVY_SLAM, Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_DYNAMIC_PUNCH, Moves::MOVE_SUPER_POWER]
         ],
         Pokemon::AZURILL => [
+            self::FIELD_NAME => 'Azurill',
             self::FIELD_ATTACK => 36,
             self::FIELD_DEFENSE => 71,
             self::FIELD_STAMINA => 137,
@@ -8847,6 +9440,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_ICE_BEAM, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::NOSEPASS => [
+            self::FIELD_NAME => 'Nosepass',
             self::FIELD_ATTACK => 82,
             self::FIELD_DEFENSE => 215,
             self::FIELD_STAMINA => 102,
@@ -8861,6 +9455,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_BLAST, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::SKITTY => [
+            self::FIELD_NAME => 'Skitty',
             self::FIELD_ATTACK => 84,
             self::FIELD_DEFENSE => 79,
             self::FIELD_STAMINA => 137,
@@ -8875,6 +9470,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_DISARMING_VOICE, Moves::MOVE_WILD_CHARGE]
         ],
         Pokemon::DELCATTY => [
+            self::FIELD_NAME => 'Delcatty',
             self::FIELD_ATTACK => 132,
             self::FIELD_DEFENSE => 127,
             self::FIELD_STAMINA => 172,
@@ -8888,6 +9484,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PLAY_ROUGH, Moves::MOVE_DISARMING_VOICE, Moves::MOVE_WILD_CHARGE]
         ],
         Pokemon::SABLEYE => [
+            self::FIELD_NAME => 'Sableye',
             self::FIELD_ATTACK => 141,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 137,
@@ -8902,6 +9499,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_POWER_GEM, Moves::MOVE_FOUL_PLAY, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::SABLEYE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Sableye',
             self::FIELD_ATTACK => 141,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 137,
@@ -8916,6 +9514,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_POWER_GEM, Moves::MOVE_FOUL_PLAY, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::SABLEYE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Sableye',
             self::FIELD_ATTACK => 141,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 137,
@@ -8932,6 +9531,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_POWER_GEM, Moves::MOVE_FOUL_PLAY, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::MAWILE => [
+            self::FIELD_NAME => 'Mawile',
             self::FIELD_ATTACK => 155,
             self::FIELD_DEFENSE => 141,
             self::FIELD_STAMINA => 137,
@@ -8946,6 +9546,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PLAY_ROUGH, Moves::MOVE_VICE_GRIP, Moves::MOVE_IRON_HEAD, Moves::MOVE_POWER_UP_PUNCH]
         ],
         Pokemon::MAWILE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Mawile',
             self::FIELD_ATTACK => 155,
             self::FIELD_DEFENSE => 141,
             self::FIELD_STAMINA => 137,
@@ -8960,6 +9561,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PLAY_ROUGH, Moves::MOVE_VICE_GRIP, Moves::MOVE_IRON_HEAD, Moves::MOVE_POWER_UP_PUNCH]
         ],
         Pokemon::MAWILE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Mawile',
             self::FIELD_ATTACK => 155,
             self::FIELD_DEFENSE => 141,
             self::FIELD_STAMINA => 137,
@@ -8976,6 +9578,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PLAY_ROUGH, Moves::MOVE_VICE_GRIP, Moves::MOVE_IRON_HEAD, Moves::MOVE_POWER_UP_PUNCH]
         ],
         Pokemon::ARON => [
+            self::FIELD_NAME => 'Aron',
             self::FIELD_ATTACK => 121,
             self::FIELD_DEFENSE => 141,
             self::FIELD_STAMINA => 137,
@@ -8991,6 +9594,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_IRON_HEAD, Moves::MOVE_ROCK_TOMB, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::LAIRON => [
+            self::FIELD_NAME => 'Lairon',
             self::FIELD_ATTACK => 158,
             self::FIELD_DEFENSE => 198,
             self::FIELD_STAMINA => 155,
@@ -9006,6 +9610,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BODY_SLAM, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_HEAVY_SLAM]
         ],
         Pokemon::AGGRON => [
+            self::FIELD_NAME => 'Aggron',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 257,
             self::FIELD_STAMINA => 172,
@@ -9020,6 +9625,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDER, Moves::MOVE_STONE_EDGE, Moves::MOVE_HEAVY_SLAM]
         ],
         Pokemon::MEDITITE => [
+            self::FIELD_NAME => 'Meditite',
             self::FIELD_ATTACK => 78,
             self::FIELD_DEFENSE => 107,
             self::FIELD_STAMINA => 102,
@@ -9035,6 +9641,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_PUNCH, Moves::MOVE_PSYSHOCK, Moves::MOVE_LOW_SWEEP]
         ],
         Pokemon::MEDICHAM => [
+            self::FIELD_NAME => 'Medicham',
             self::FIELD_ATTACK => 121,
             self::FIELD_DEFENSE => 152,
             self::FIELD_STAMINA => 155,
@@ -9049,6 +9656,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_PUNCH, Moves::MOVE_PSYCHIC, Moves::MOVE_DYNAMIC_PUNCH, Moves::MOVE_POWER_UP_PUNCH]
         ],
         Pokemon::ELECTRIKE => [
+            self::FIELD_NAME => 'Electrike',
             self::FIELD_ATTACK => 123,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 120,
@@ -9063,6 +9671,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDERBOLT, Moves::MOVE_DISCHARGE, Moves::MOVE_SWIFT]
         ],
         Pokemon::MANELECTRIC => [
+            self::FIELD_NAME => 'Manectric',
             self::FIELD_ATTACK => 215,
             self::FIELD_DEFENSE => 127,
             self::FIELD_STAMINA => 172,
@@ -9076,6 +9685,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDER, Moves::MOVE_WILD_CHARGE, Moves::MOVE_FLAME_BURST]
         ],
         Pokemon::PLUSLE => [
+            self::FIELD_NAME => 'Plusle',
             self::FIELD_ATTACK => 167,
             self::FIELD_DEFENSE => 129,
             self::FIELD_STAMINA => 155,
@@ -9089,6 +9699,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDERBOLT, Moves::MOVE_DISCHARGE, Moves::MOVE_SWIFT, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::MINUN => [
+            self::FIELD_NAME => 'Minun',
             self::FIELD_ATTACK => 147,
             self::FIELD_DEFENSE => 150,
             self::FIELD_STAMINA => 155,
@@ -9102,6 +9713,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDERBOLT, Moves::MOVE_DISCHARGE, Moves::MOVE_SWIFT, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::VOLBEAT => [
+            self::FIELD_NAME => 'Volbeat',
             self::FIELD_ATTACK => 143,
             self::FIELD_DEFENSE => 166,
             self::FIELD_STAMINA => 163,
@@ -9115,6 +9727,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SIGNAL_BEAM, Moves::MOVE_BUG_BUZZ, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::ILLUMISE => [
+            self::FIELD_NAME => 'Illumise',
             self::FIELD_ATTACK => 143,
             self::FIELD_DEFENSE => 166,
             self::FIELD_STAMINA => 163,
@@ -9128,6 +9741,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SILVER_WIND, Moves::MOVE_BUG_BUZZ, Moves::MOVE_DAZZLING_GLEAM]
         ],
         Pokemon::ROSELIA => [
+            self::FIELD_NAME => 'Roselia',
             self::FIELD_ATTACK => 186,
             self::FIELD_DEFENSE => 131,
             self::FIELD_STAMINA => 137,
@@ -9143,6 +9757,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_DAZZLING_GLEAM]
         ],
         Pokemon::GULPIN => [
+            self::FIELD_NAME => 'Gulpin',
             self::FIELD_ATTACK => 80,
             self::FIELD_DEFENSE => 99,
             self::FIELD_STAMINA => 172,
@@ -9157,6 +9772,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE, Moves::MOVE_GUNK_SHOT, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::SWALOT => [
+            self::FIELD_NAME => 'Swalot',
             self::FIELD_ATTACK => 140,
             self::FIELD_DEFENSE => 159,
             self::FIELD_STAMINA => 225,
@@ -9170,6 +9786,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_GUNK_SHOT, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_ICE_BEAM, Moves::MOVE_ACID_SPRAY]
         ],
         Pokemon::CARAVANHA => [
+            self::FIELD_NAME => 'Carvanha',
             self::FIELD_ATTACK => 171,
             self::FIELD_DEFENSE => 39,
             self::FIELD_STAMINA => 128,
@@ -9185,6 +9802,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_CRUNCH, Moves::MOVE_POISON_FANG]
         ],
         Pokemon::CARAVANHA | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Carvanha',
             self::FIELD_ATTACK => 171,
             self::FIELD_DEFENSE => 39,
             self::FIELD_STAMINA => 128,
@@ -9200,6 +9818,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_CRUNCH, Moves::MOVE_POISON_FANG]
         ],
         Pokemon::CARAVANHA | Mods::SHADOW => [
+            self::FIELD_NAME => 'Carvanha',
             self::FIELD_ATTACK => 171,
             self::FIELD_DEFENSE => 39,
             self::FIELD_STAMINA => 128,
@@ -9217,6 +9836,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_CRUNCH, Moves::MOVE_POISON_FANG]
         ],
         Pokemon::SHARPEDO => [
+            self::FIELD_NAME => 'Sharpedo',
             self::FIELD_ATTACK => 243,
             self::FIELD_DEFENSE => 83,
             self::FIELD_STAMINA => 172,
@@ -9231,6 +9851,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_CRUNCH, Moves::MOVE_POISON_FANG]
         ],
         Pokemon::SHARPEDO | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Sharpedo',
             self::FIELD_ATTACK => 243,
             self::FIELD_DEFENSE => 83,
             self::FIELD_STAMINA => 172,
@@ -9245,6 +9866,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_CRUNCH, Moves::MOVE_POISON_FANG]
         ],
         Pokemon::SHARPEDO | Mods::SHADOW => [
+            self::FIELD_NAME => 'Sharpedo',
             self::FIELD_ATTACK => 243,
             self::FIELD_DEFENSE => 83,
             self::FIELD_STAMINA => 172,
@@ -9261,6 +9883,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_CRUNCH, Moves::MOVE_POISON_FANG]
         ],
         Pokemon::WAILMER => [
+            self::FIELD_NAME => 'Wailmer',
             self::FIELD_ATTACK => 136,
             self::FIELD_DEFENSE => 68,
             self::FIELD_STAMINA => 277,
@@ -9275,6 +9898,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAVY_SLAM, Moves::MOVE_WATER_PULSE, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::WAILORD => [
+            self::FIELD_NAME => 'Wailord',
             self::FIELD_ATTACK => 175,
             self::FIELD_DEFENSE => 87,
             self::FIELD_STAMINA => 347,
@@ -9288,6 +9912,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SURF, Moves::MOVE_BLIZZARD, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::NUMEL => [
+            self::FIELD_NAME => 'Numel',
             self::FIELD_ATTACK => 119,
             self::FIELD_DEFENSE => 79,
             self::FIELD_STAMINA => 155,
@@ -9303,6 +9928,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BULLDOZE, Moves::MOVE_HEAT_WAVE, Moves::MOVE_STOMP]
         ],
         Pokemon::CAMERUPT => [
+            self::FIELD_NAME => 'Camerupt',
             self::FIELD_ATTACK => 194,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 172,
@@ -9317,6 +9943,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_OVERHEAT, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::TORKOAL => [
+            self::FIELD_NAME => 'Torkoal',
             self::FIELD_ATTACK => 151,
             self::FIELD_DEFENSE => 203,
             self::FIELD_STAMINA => 172,
@@ -9330,6 +9957,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_OVERHEAT, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_EARTHQUAKE]
         ],
         Pokemon::SPOINK => [
+            self::FIELD_NAME => 'Spoink',
             self::FIELD_ATTACK => 125,
             self::FIELD_DEFENSE => 122,
             self::FIELD_STAMINA => 155,
@@ -9344,6 +9972,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_SHADOW_BALL, Moves::MOVE_MIRROR_COAT]
         ],
         Pokemon::GRUMPIG => [
+            self::FIELD_NAME => 'Grumpig',
             self::FIELD_ATTACK => 171,
             self::FIELD_DEFENSE => 188,
             self::FIELD_STAMINA => 190,
@@ -9357,6 +9986,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_SHADOW_BALL, Moves::MOVE_MIRROR_COAT]
         ],
         Pokemon::SPINDA => [
+            self::FIELD_NAME => 'Spinda',
             self::FIELD_ATTACK => 116,
             self::FIELD_DEFENSE => 116,
             self::FIELD_STAMINA => 155,
@@ -9370,6 +10000,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_ROCK_TOMB, Moves::MOVE_ICY_WIND]
         ],
         Pokemon::TRAPINCH => [
+            self::FIELD_NAME => 'Trapinch',
             self::FIELD_ATTACK => 162,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 128,
@@ -9384,6 +10015,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SAND_TOMB, Moves::MOVE_DIG, Moves::MOVE_CRUNCH]
         ],
         Pokemon::TRAPINCH | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Trapinch',
             self::FIELD_ATTACK => 162,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 128,
@@ -9398,6 +10030,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SAND_TOMB, Moves::MOVE_DIG, Moves::MOVE_CRUNCH]
         ],
         Pokemon::TRAPINCH | Mods::SHADOW => [
+            self::FIELD_NAME => 'Trapinch',
             self::FIELD_ATTACK => 162,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 128,
@@ -9414,6 +10047,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SAND_TOMB, Moves::MOVE_DIG, Moves::MOVE_CRUNCH]
         ],
         Pokemon::VIBRAVA => [
+            self::FIELD_NAME => 'Vibrava',
             self::FIELD_ATTACK => 134,
             self::FIELD_DEFENSE => 99,
             self::FIELD_STAMINA => 137,
@@ -9429,6 +10063,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SAND_TOMB, Moves::MOVE_BULLDOZE, Moves::MOVE_BUG_BUZZ]
         ],
         Pokemon::VIBRAVA | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Vibrava',
             self::FIELD_ATTACK => 134,
             self::FIELD_DEFENSE => 99,
             self::FIELD_STAMINA => 137,
@@ -9444,6 +10079,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SAND_TOMB, Moves::MOVE_BULLDOZE, Moves::MOVE_BUG_BUZZ]
         ],
         Pokemon::VIBRAVA | Mods::SHADOW => [
+            self::FIELD_NAME => 'Vibrava',
             self::FIELD_ATTACK => 134,
             self::FIELD_DEFENSE => 99,
             self::FIELD_STAMINA => 137,
@@ -9461,6 +10097,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SAND_TOMB, Moves::MOVE_BULLDOZE, Moves::MOVE_BUG_BUZZ]
         ],
         Pokemon::FLYGON => [
+            self::FIELD_NAME => 'Flygon',
             self::FIELD_ATTACK => 205,
             self::FIELD_DEFENSE => 168,
             self::FIELD_STAMINA => 190,
@@ -9476,6 +10113,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::FLYGON | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Flygon',
             self::FIELD_ATTACK => 205,
             self::FIELD_DEFENSE => 168,
             self::FIELD_STAMINA => 190,
@@ -9491,6 +10129,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::FLYGON | Mods::SHADOW => [
+            self::FIELD_NAME => 'Flygon',
             self::FIELD_ATTACK => 205,
             self::FIELD_DEFENSE => 168,
             self::FIELD_STAMINA => 190,
@@ -9508,6 +10147,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::CACNEA => [
+            self::FIELD_NAME => 'Cacnea',
             self::FIELD_ATTACK => 156,
             self::FIELD_DEFENSE => 74,
             self::FIELD_STAMINA => 137,
@@ -9522,6 +10162,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_GRASS_KNOT, Moves::MOVE_BRICK_BREAK, Moves::MOVE_SEED_BOMB]
         ],
         Pokemon::CACNEA | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Cacnea',
             self::FIELD_ATTACK => 156,
             self::FIELD_DEFENSE => 74,
             self::FIELD_STAMINA => 137,
@@ -9536,6 +10177,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_GRASS_KNOT, Moves::MOVE_BRICK_BREAK, Moves::MOVE_SEED_BOMB]
         ],
         Pokemon::CACNEA | Mods::SHADOW => [
+            self::FIELD_NAME => 'Cacnea',
             self::FIELD_ATTACK => 156,
             self::FIELD_DEFENSE => 74,
             self::FIELD_STAMINA => 137,
@@ -9552,6 +10194,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_GRASS_KNOT, Moves::MOVE_BRICK_BREAK, Moves::MOVE_SEED_BOMB]
         ],
         Pokemon::CACTURNE => [
+            self::FIELD_NAME => 'Cacturne',
             self::FIELD_ATTACK => 221,
             self::FIELD_DEFENSE => 115,
             self::FIELD_STAMINA => 172,
@@ -9566,6 +10209,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_DYNAMIC_PUNCH, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::CACTURNE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Cacturne',
             self::FIELD_ATTACK => 221,
             self::FIELD_DEFENSE => 115,
             self::FIELD_STAMINA => 172,
@@ -9580,6 +10224,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_DYNAMIC_PUNCH, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::CACTURNE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Cacturne',
             self::FIELD_ATTACK => 221,
             self::FIELD_DEFENSE => 115,
             self::FIELD_STAMINA => 172,
@@ -9596,6 +10241,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_DYNAMIC_PUNCH, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::SWABLU => [
+            self::FIELD_NAME => 'Swablu',
             self::FIELD_ATTACK => 76,
             self::FIELD_DEFENSE => 132,
             self::FIELD_STAMINA => 128,
@@ -9611,6 +10257,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DISARMING_VOICE, Moves::MOVE_AERIAL_ACE, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::ALTARIA => [
+            self::FIELD_NAME => 'Altaria',
             self::FIELD_ATTACK => 141,
             self::FIELD_DEFENSE => 201,
             self::FIELD_STAMINA => 181,
@@ -9625,6 +10272,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SKY_ATTACK, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_DRAGON_PULSE]
         ],
         Pokemon::ZANGOOSE => [
+            self::FIELD_NAME => 'Zangoose',
             self::FIELD_ATTACK => 222,
             self::FIELD_DEFENSE => 124,
             self::FIELD_STAMINA => 177,
@@ -9638,6 +10286,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_NIGHT_SLASH, Moves::MOVE_DIG]
         ],
         Pokemon::SEVIPER => [
+            self::FIELD_NAME => 'Seviper',
             self::FIELD_ATTACK => 196,
             self::FIELD_DEFENSE => 118,
             self::FIELD_STAMINA => 177,
@@ -9651,6 +10300,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_POISON_FANG, Moves::MOVE_CRUNCH, Moves::MOVE_WRAP]
         ],
         Pokemon::LUNATONE => [
+            self::FIELD_NAME => 'Lunatone',
             self::FIELD_ATTACK => 178,
             self::FIELD_DEFENSE => 153,
             self::FIELD_STAMINA => 207,
@@ -9665,6 +10315,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_MOONBLAST]
         ],
         Pokemon::SOLROCK => [
+            self::FIELD_NAME => 'Solrock',
             self::FIELD_ATTACK => 178,
             self::FIELD_DEFENSE => 153,
             self::FIELD_STAMINA => 207,
@@ -9679,6 +10330,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_SOLAR_BEAM]
         ],
         Pokemon::BARBOACH => [
+            self::FIELD_NAME => 'Barboach',
             self::FIELD_ATTACK => 93,
             self::FIELD_DEFENSE => 82,
             self::FIELD_STAMINA => 137,
@@ -9694,6 +10346,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_TAIL, Moves::MOVE_ICE_BEAM, Moves::MOVE_MUD_BOMB]
         ],
         Pokemon::WHISCASH => [
+            self::FIELD_NAME => 'Whiscash',
             self::FIELD_ATTACK => 151,
             self::FIELD_DEFENSE => 141,
             self::FIELD_STAMINA => 242,
@@ -9708,6 +10361,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_BLIZZARD, Moves::MOVE_MUD_BOMB]
         ],
         Pokemon::CORPHISH => [
+            self::FIELD_NAME => 'Corphish',
             self::FIELD_ATTACK => 141,
             self::FIELD_DEFENSE => 99,
             self::FIELD_STAMINA => 125,
@@ -9722,6 +10376,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_VICE_GRIP, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_AQUA_JET]
         ],
         Pokemon::CRAWDAUNT => [
+            self::FIELD_NAME => 'Crawdaunt',
             self::FIELD_ATTACK => 224,
             self::FIELD_DEFENSE => 142,
             self::FIELD_STAMINA => 160,
@@ -9736,6 +10391,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_VICE_GRIP, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_NIGHT_SLASH, Moves::MOVE_CRABHAMMER]
         ],
         Pokemon::BALTOY => [
+            self::FIELD_NAME => 'Baltoy',
             self::FIELD_ATTACK => 77,
             self::FIELD_DEFENSE => 124,
             self::FIELD_STAMINA => 120,
@@ -9751,6 +10407,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_GYRO_BALL, Moves::MOVE_PSYBEAM, Moves::MOVE_DIG]
         ],
         Pokemon::CLAYDOL => [
+            self::FIELD_NAME => 'Claydol',
             self::FIELD_ATTACK => 140,
             self::FIELD_DEFENSE => 229,
             self::FIELD_STAMINA => 155,
@@ -9765,6 +10422,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_GYRO_BALL, Moves::MOVE_PSYCHIC, Moves::MOVE_EARTHQUAKE, Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::LILEEP => [
+            self::FIELD_NAME => 'Lileep',
             self::FIELD_ATTACK => 105,
             self::FIELD_DEFENSE => 150,
             self::FIELD_STAMINA => 165,
@@ -9780,6 +10438,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_GRASS_KNOT, Moves::MOVE_MIRROR_COAT, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::CRADILY => [
+            self::FIELD_NAME => 'Cradily',
             self::FIELD_ATTACK => 152,
             self::FIELD_DEFENSE => 194,
             self::FIELD_STAMINA => 200,
@@ -9794,6 +10453,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_GRASS_KNOT, Moves::MOVE_BULLDOZE, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::ANORITH => [
+            self::FIELD_NAME => 'Anorith',
             self::FIELD_ATTACK => 176,
             self::FIELD_DEFENSE => 100,
             self::FIELD_STAMINA => 128,
@@ -9809,6 +10469,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CROSS_POISON, Moves::MOVE_AQUA_JET, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::ARMALDO => [
+            self::FIELD_NAME => 'Armaldo',
             self::FIELD_ATTACK => 222,
             self::FIELD_DEFENSE => 174,
             self::FIELD_STAMINA => 181,
@@ -9823,6 +10484,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CROSS_POISON, Moves::MOVE_WATER_PULSE, Moves::MOVE_ROCK_BLAST]
         ],
         Pokemon::FEEBAS => [
+            self::FIELD_NAME => 'Feebas',
             self::FIELD_ATTACK => 29,
             self::FIELD_DEFENSE => 85,
             self::FIELD_STAMINA => 85,
@@ -9837,6 +10499,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_MIRROR_COAT]
         ],
         Pokemon::MILOTIC => [
+            self::FIELD_NAME => 'Milotic',
             self::FIELD_ATTACK => 192,
             self::FIELD_DEFENSE => 219,
             self::FIELD_STAMINA => 216,
@@ -9850,6 +10513,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SURF, Moves::MOVE_BLIZZARD, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::CASTFORM | FormsAlias::CASTFORM_NORMAL => [
+            self::FIELD_NAME => 'Castform',
             self::FIELD_ATTACK => 139,
             self::FIELD_DEFENSE => 139,
             self::FIELD_STAMINA => 172,
@@ -9863,6 +10527,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HURRICANE, Moves::MOVE_ENERGY_BALL, Moves::MOVE_WEATHER_BALL_ROCK]
         ],
         Pokemon::CASTFORM | FormsAlias::CASTFORM_RAINY => [
+            self::FIELD_NAME => 'Castform',
             self::FIELD_ATTACK => 139,
             self::FIELD_DEFENSE => 139,
             self::FIELD_STAMINA => 172,
@@ -9876,6 +10541,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_THUNDER, Moves::MOVE_WEATHER_BALL_WATER]
         ],
         Pokemon::CASTFORM | FormsAlias::CASTFORM_SNOWY => [
+            self::FIELD_NAME => 'Castform',
             self::FIELD_ATTACK => 139,
             self::FIELD_DEFENSE => 139,
             self::FIELD_STAMINA => 172,
@@ -9889,6 +10555,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BLIZZARD, Moves::MOVE_ICE_BEAM, Moves::MOVE_WEATHER_BALL_ICE]
         ],
         Pokemon::CASTFORM | FormsAlias::CASTFORM_SUNNY => [
+            self::FIELD_NAME => 'Castform',
             self::FIELD_ATTACK => 139,
             self::FIELD_DEFENSE => 139,
             self::FIELD_STAMINA => 172,
@@ -9902,6 +10569,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_WEATHER_BALL_FIRE]
         ],
         Pokemon::KECLEON => [
+            self::FIELD_NAME => 'Kecleon',
             self::FIELD_ATTACK => 161,
             self::FIELD_DEFENSE => 189,
             self::FIELD_STAMINA => 155,
@@ -9915,6 +10583,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FOUL_PLAY, Moves::MOVE_FLAMETHROWER, Moves::MOVE_THUNDER, Moves::MOVE_ICE_BEAM, Moves::MOVE_AERIAL_ACE, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::SHUPPET => [
+            self::FIELD_NAME => 'Shuppet',
             self::FIELD_ATTACK => 138,
             self::FIELD_DEFENSE => 65,
             self::FIELD_STAMINA => 127,
@@ -9929,6 +10598,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_OMINOUS_WIND, Moves::MOVE_NIGHT_SHADE, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::SHUPPET | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Shuppet',
             self::FIELD_ATTACK => 138,
             self::FIELD_DEFENSE => 65,
             self::FIELD_STAMINA => 127,
@@ -9943,6 +10613,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_OMINOUS_WIND, Moves::MOVE_NIGHT_SHADE, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::SHUPPET | Mods::SHADOW => [
+            self::FIELD_NAME => 'Shuppet',
             self::FIELD_ATTACK => 138,
             self::FIELD_DEFENSE => 65,
             self::FIELD_STAMINA => 127,
@@ -9959,6 +10630,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_OMINOUS_WIND, Moves::MOVE_NIGHT_SHADE, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::BANETTE => [
+            self::FIELD_NAME => 'Banette',
             self::FIELD_ATTACK => 218,
             self::FIELD_DEFENSE => 126,
             self::FIELD_STAMINA => 162,
@@ -9972,6 +10644,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_THUNDER]
         ],
         Pokemon::BANETTE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Banette',
             self::FIELD_ATTACK => 218,
             self::FIELD_DEFENSE => 126,
             self::FIELD_STAMINA => 162,
@@ -9985,6 +10658,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_THUNDER]
         ],
         Pokemon::BANETTE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Banette',
             self::FIELD_ATTACK => 218,
             self::FIELD_DEFENSE => 126,
             self::FIELD_STAMINA => 162,
@@ -10000,6 +10674,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_THUNDER]
         ],
         Pokemon::DUSKULL => [
+            self::FIELD_NAME => 'Duskull',
             self::FIELD_ATTACK => 70,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 85,
@@ -10014,6 +10689,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_OMINOUS_WIND, Moves::MOVE_NIGHT_SHADE, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::DUSKULL | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Duskull',
             self::FIELD_ATTACK => 70,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 85,
@@ -10028,6 +10704,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_OMINOUS_WIND, Moves::MOVE_NIGHT_SHADE, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::DUSKULL | Mods::SHADOW => [
+            self::FIELD_NAME => 'Duskull',
             self::FIELD_ATTACK => 70,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 85,
@@ -10044,6 +10721,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_OMINOUS_WIND, Moves::MOVE_NIGHT_SHADE, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::DUSCLOPS => [
+            self::FIELD_NAME => 'Dusclops',
             self::FIELD_ATTACK => 124,
             self::FIELD_DEFENSE => 234,
             self::FIELD_STAMINA => 120,
@@ -10058,6 +10736,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_PUNCH, Moves::MOVE_ICE_PUNCH, Moves::MOVE_FIRE_PUNCH]
         ],
         Pokemon::DUSCLOPS | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Dusclops',
             self::FIELD_ATTACK => 124,
             self::FIELD_DEFENSE => 234,
             self::FIELD_STAMINA => 120,
@@ -10072,6 +10751,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_PUNCH, Moves::MOVE_ICE_PUNCH, Moves::MOVE_FIRE_PUNCH]
         ],
         Pokemon::DUSCLOPS | Mods::SHADOW => [
+            self::FIELD_NAME => 'Dusclops',
             self::FIELD_ATTACK => 124,
             self::FIELD_DEFENSE => 234,
             self::FIELD_STAMINA => 120,
@@ -10088,6 +10768,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_PUNCH, Moves::MOVE_ICE_PUNCH, Moves::MOVE_FIRE_PUNCH]
         ],
         Pokemon::TROPIUS => [
+            self::FIELD_NAME => 'Tropius',
             self::FIELD_ATTACK => 136,
             self::FIELD_DEFENSE => 163,
             self::FIELD_STAMINA => 223,
@@ -10102,6 +10783,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STOMP, Moves::MOVE_AERIAL_ACE, Moves::MOVE_LEAF_BLADE]
         ],
         Pokemon::CHIMECHO => [
+            self::FIELD_NAME => 'Chimecho',
             self::FIELD_ATTACK => 175,
             self::FIELD_DEFENSE => 170,
             self::FIELD_STAMINA => 181,
@@ -10115,6 +10797,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SHADOW_BALL, Moves::MOVE_PSYSHOCK, Moves::MOVE_PSYSHOCK]
         ],
         Pokemon::ABSOL => [
+            self::FIELD_NAME => 'Absol',
             self::FIELD_ATTACK => 246,
             self::FIELD_DEFENSE => 120,
             self::FIELD_STAMINA => 163,
@@ -10128,6 +10811,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_THUNDER, Moves::MOVE_MEGAHORN]
         ],
         Pokemon::ABSOL | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Absol',
             self::FIELD_ATTACK => 246,
             self::FIELD_DEFENSE => 120,
             self::FIELD_STAMINA => 163,
@@ -10141,6 +10825,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_THUNDER, Moves::MOVE_MEGAHORN]
         ],
         Pokemon::ABSOL | Mods::SHADOW => [
+            self::FIELD_NAME => 'Absol',
             self::FIELD_ATTACK => 246,
             self::FIELD_DEFENSE => 120,
             self::FIELD_STAMINA => 163,
@@ -10156,6 +10841,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_THUNDER, Moves::MOVE_MEGAHORN]
         ],
         Pokemon::WYNAUT => [
+            self::FIELD_NAME => 'Wynaut',
             self::FIELD_ATTACK => 41,
             self::FIELD_DEFENSE => 86,
             self::FIELD_STAMINA => 216,
@@ -10170,6 +10856,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_MIRROR_COAT]
         ],
         Pokemon::SNORUNT => [
+            self::FIELD_NAME => 'Snorunt',
             self::FIELD_ATTACK => 95,
             self::FIELD_DEFENSE => 95,
             self::FIELD_STAMINA => 137,
@@ -10184,6 +10871,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AVALANCHE, Moves::MOVE_ICY_WIND, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::GLALIE => [
+            self::FIELD_NAME => 'Glalie',
             self::FIELD_ATTACK => 162,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 190,
@@ -10197,6 +10885,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AVALANCHE, Moves::MOVE_GYRO_BALL, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::SPHEAL => [
+            self::FIELD_NAME => 'Spheal',
             self::FIELD_ATTACK => 95,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 172,
@@ -10212,6 +10901,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AURORA_BEAM, Moves::MOVE_BODY_SLAM, Moves::MOVE_WATER_PULSE]
         ],
         Pokemon::SEALEO => [
+            self::FIELD_NAME => 'Sealeo',
             self::FIELD_ATTACK => 137,
             self::FIELD_DEFENSE => 132,
             self::FIELD_STAMINA => 207,
@@ -10227,6 +10917,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AURORA_BEAM, Moves::MOVE_BODY_SLAM, Moves::MOVE_WATER_PULSE]
         ],
         Pokemon::WALREIN => [
+            self::FIELD_NAME => 'Walrein',
             self::FIELD_ATTACK => 182,
             self::FIELD_DEFENSE => 176,
             self::FIELD_STAMINA => 242,
@@ -10241,6 +10932,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BLIZZARD, Moves::MOVE_EARTHQUAKE, Moves::MOVE_WATER_PULSE]
         ],
         Pokemon::CLAMPERL => [
+            self::FIELD_NAME => 'Clamperl',
             self::FIELD_ATTACK => 133,
             self::FIELD_DEFENSE => 135,
             self::FIELD_STAMINA => 111,
@@ -10255,6 +10947,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BODY_SLAM, Moves::MOVE_ICE_BEAM, Moves::MOVE_WATER_PULSE]
         ],
         Pokemon::HUNTAIL => [
+            self::FIELD_NAME => 'Huntail',
             self::FIELD_ATTACK => 197,
             self::FIELD_DEFENSE => 179,
             self::FIELD_STAMINA => 146,
@@ -10268,6 +10961,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_ICE_BEAM, Moves::MOVE_AQUA_TAIL]
         ],
         Pokemon::GOREBYSS => [
+            self::FIELD_NAME => 'Gorebyss',
             self::FIELD_ATTACK => 211,
             self::FIELD_DEFENSE => 179,
             self::FIELD_STAMINA => 146,
@@ -10281,6 +10975,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAINING_KISS, Moves::MOVE_PSYCHIC, Moves::MOVE_WATER_PULSE]
         ],
         Pokemon::RELICANTH => [
+            self::FIELD_NAME => 'Relicanth',
             self::FIELD_ATTACK => 162,
             self::FIELD_DEFENSE => 203,
             self::FIELD_STAMINA => 225,
@@ -10295,6 +10990,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ANCIENT_POWER, Moves::MOVE_AQUA_TAIL, Moves::MOVE_HYDRO_PUMP]
         ],
         Pokemon::LUVDISC => [
+            self::FIELD_NAME => 'Luvdisc',
             self::FIELD_ATTACK => 81,
             self::FIELD_DEFENSE => 128,
             self::FIELD_STAMINA => 125,
@@ -10308,6 +11004,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAINING_KISS, Moves::MOVE_WATER_PULSE, Moves::MOVE_AQUA_JET]
         ],
         Pokemon::BAGON => [
+            self::FIELD_NAME => 'Bagon',
             self::FIELD_ATTACK => 134,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 128,
@@ -10322,6 +11019,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAMETHROWER, Moves::MOVE_TWISTER, Moves::MOVE_CRUNCH]
         ],
         Pokemon::BAGON | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Bagon',
             self::FIELD_ATTACK => 134,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 128,
@@ -10336,6 +11034,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAMETHROWER, Moves::MOVE_TWISTER, Moves::MOVE_CRUNCH]
         ],
         Pokemon::BAGON | Mods::SHADOW => [
+            self::FIELD_NAME => 'Bagon',
             self::FIELD_ATTACK => 134,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 128,
@@ -10352,6 +11051,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAMETHROWER, Moves::MOVE_TWISTER, Moves::MOVE_CRUNCH]
         ],
         Pokemon::SHELGON => [
+            self::FIELD_NAME => 'Shelgon',
             self::FIELD_ATTACK => 172,
             self::FIELD_DEFENSE => 155,
             self::FIELD_STAMINA => 163,
@@ -10366,6 +11066,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAMETHROWER, Moves::MOVE_DRAGON_PULSE, Moves::MOVE_TWISTER]
         ],
         Pokemon::SHELGON | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Shelgon',
             self::FIELD_ATTACK => 172,
             self::FIELD_DEFENSE => 155,
             self::FIELD_STAMINA => 163,
@@ -10380,6 +11081,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAMETHROWER, Moves::MOVE_DRAGON_PULSE, Moves::MOVE_TWISTER]
         ],
         Pokemon::SHELGON | Mods::SHADOW => [
+            self::FIELD_NAME => 'Shelgon',
             self::FIELD_ATTACK => 172,
             self::FIELD_DEFENSE => 155,
             self::FIELD_STAMINA => 163,
@@ -10396,6 +11098,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAMETHROWER, Moves::MOVE_DRAGON_PULSE, Moves::MOVE_TWISTER]
         ],
         Pokemon::SALAMENCE => [
+            self::FIELD_NAME => 'Salamence',
             self::FIELD_ATTACK => 277,
             self::FIELD_DEFENSE => 168,
             self::FIELD_STAMINA => 216,
@@ -10411,6 +11114,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_OUTRAGE]
         ],
         Pokemon::SALAMENCE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Salamence',
             self::FIELD_ATTACK => 277,
             self::FIELD_DEFENSE => 168,
             self::FIELD_STAMINA => 216,
@@ -10426,6 +11130,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_OUTRAGE]
         ],
         Pokemon::SALAMENCE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Salamence',
             self::FIELD_ATTACK => 277,
             self::FIELD_DEFENSE => 168,
             self::FIELD_STAMINA => 216,
@@ -10443,6 +11148,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_OUTRAGE]
         ],
         Pokemon::BELDUM => [
+            self::FIELD_NAME => 'Beldum',
             self::FIELD_ATTACK => 96,
             self::FIELD_DEFENSE => 132,
             self::FIELD_STAMINA => 120,
@@ -10458,6 +11164,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::BELDUM | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Beldum',
             self::FIELD_ATTACK => 96,
             self::FIELD_DEFENSE => 132,
             self::FIELD_STAMINA => 120,
@@ -10473,6 +11180,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::BELDUM | Mods::SHADOW => [
+            self::FIELD_NAME => 'Beldum',
             self::FIELD_ATTACK => 96,
             self::FIELD_DEFENSE => 132,
             self::FIELD_STAMINA => 120,
@@ -10490,6 +11198,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::METANG => [
+            self::FIELD_NAME => 'Metang',
             self::FIELD_ATTACK => 138,
             self::FIELD_DEFENSE => 176,
             self::FIELD_STAMINA => 155,
@@ -10505,6 +11214,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_GYRO_BALL, Moves::MOVE_PSYSHOCK]
         ],
         Pokemon::METANG | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Metang',
             self::FIELD_ATTACK => 138,
             self::FIELD_DEFENSE => 176,
             self::FIELD_STAMINA => 155,
@@ -10520,6 +11230,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_GYRO_BALL, Moves::MOVE_PSYSHOCK]
         ],
         Pokemon::METANG | Mods::SHADOW => [
+            self::FIELD_NAME => 'Metang',
             self::FIELD_ATTACK => 138,
             self::FIELD_DEFENSE => 176,
             self::FIELD_STAMINA => 155,
@@ -10537,6 +11248,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_GYRO_BALL, Moves::MOVE_PSYSHOCK]
         ],
         Pokemon::METAGROSS => [
+            self::FIELD_NAME => 'Metagross',
             self::FIELD_ATTACK => 257,
             self::FIELD_DEFENSE => 228,
             self::FIELD_STAMINA => 190,
@@ -10552,6 +11264,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_METEOR_MASH]
         ],
         Pokemon::METAGROSS | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Metagross',
             self::FIELD_ATTACK => 257,
             self::FIELD_DEFENSE => 228,
             self::FIELD_STAMINA => 190,
@@ -10567,6 +11280,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_METEOR_MASH]
         ],
         Pokemon::METAGROSS | Mods::SHADOW => [
+            self::FIELD_NAME => 'Metagross',
             self::FIELD_ATTACK => 257,
             self::FIELD_DEFENSE => 228,
             self::FIELD_STAMINA => 190,
@@ -10584,6 +11298,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_METEOR_MASH]
         ],
         Pokemon::REGIROCK => [
+            self::FIELD_NAME => 'Regirock',
             self::FIELD_ATTACK => 179,
             self::FIELD_DEFENSE => 309,
             self::FIELD_STAMINA => 190,
@@ -10597,6 +11312,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STONE_EDGE, Moves::MOVE_ZAP_CANNON, Moves::MOVE_FOCUS_BLAST]
         ],
         Pokemon::REGICE => [
+            self::FIELD_NAME => 'Regice',
             self::FIELD_ATTACK => 179,
             self::FIELD_DEFENSE => 309,
             self::FIELD_STAMINA => 190,
@@ -10610,6 +11326,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BLIZZARD, Moves::MOVE_EARTHQUAKE, Moves::MOVE_FOCUS_BLAST]
         ],
         Pokemon::REGISTEEL => [
+            self::FIELD_NAME => 'Registeel',
             self::FIELD_ATTACK => 143,
             self::FIELD_DEFENSE => 285,
             self::FIELD_STAMINA => 190,
@@ -10623,6 +11340,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLASH_CANNON, Moves::MOVE_HYPER_BEAM, Moves::MOVE_FOCUS_BLAST]
         ],
         Pokemon::LATIAS => [
+            self::FIELD_NAME => 'Latias',
             self::FIELD_ATTACK => 228,
             self::FIELD_DEFENSE => 246,
             self::FIELD_STAMINA => 190,
@@ -10637,6 +11355,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_OUTRAGE, Moves::MOVE_THUNDER]
         ],
         Pokemon::LATIOS => [
+            self::FIELD_NAME => 'Latios',
             self::FIELD_ATTACK => 268,
             self::FIELD_DEFENSE => 212,
             self::FIELD_STAMINA => 190,
@@ -10651,6 +11370,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_DRAGON_CLAW, Moves::MOVE_SOLAR_BEAM]
         ],
         Pokemon::KYOGRE => [
+            self::FIELD_NAME => 'Kyogre',
             self::FIELD_ATTACK => 270,
             self::FIELD_DEFENSE => 228,
             self::FIELD_STAMINA => 205,
@@ -10664,6 +11384,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_BLIZZARD, Moves::MOVE_THUNDER, Moves::MOVE_SURF]
         ],
         Pokemon::GROUDON => [
+            self::FIELD_NAME => 'Groudon',
             self::FIELD_ATTACK => 270,
             self::FIELD_DEFENSE => 228,
             self::FIELD_STAMINA => 205,
@@ -10678,6 +11399,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FIRE_PUNCH]
         ],
         Pokemon::RAYQUAZA => [
+            self::FIELD_NAME => 'Rayquaza',
             self::FIELD_ATTACK => 284,
             self::FIELD_DEFENSE => 170,
             self::FIELD_STAMINA => 213,
@@ -10692,6 +11414,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_OUTRAGE, Moves::MOVE_AERIAL_ACE, Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::JIRACHI => [
+            self::FIELD_NAME => 'Jirachi',
             self::FIELD_ATTACK => 210,
             self::FIELD_DEFENSE => 210,
             self::FIELD_STAMINA => 225,
@@ -10705,6 +11428,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_PSYCHIC, Moves::MOVE_DOOM_DESIRE]
         ],
         Pokemon::DEOXYS | FormsAlias::DEOXYS_NORMAL => [
+            self::FIELD_NAME => 'Deoxys',
             self::FIELD_ATTACK => 345,
             self::FIELD_DEFENSE => 115,
             self::FIELD_STAMINA => 137,
@@ -10718,6 +11442,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHO_BOOST, Moves::MOVE_THUNDERBOLT, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::DEOXYS | FormsAlias::DEOXYS_ATTACK => [
+            self::FIELD_NAME => 'Deoxys',
             self::FIELD_ATTACK => 414,
             self::FIELD_DEFENSE => 46,
             self::FIELD_STAMINA => 137,
@@ -10731,6 +11456,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHO_BOOST, Moves::MOVE_ZAP_CANNON, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::DEOXYS | FormsAlias::DEOXYS_DEFENSE => [
+            self::FIELD_NAME => 'Deoxys',
             self::FIELD_ATTACK => 144,
             self::FIELD_DEFENSE => 330,
             self::FIELD_STAMINA => 137,
@@ -10744,6 +11470,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHO_BOOST, Moves::MOVE_THUNDERBOLT, Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::DEOXYS | FormsAlias::DEOXYS_SPEED => [
+            self::FIELD_NAME => 'Deoxys',
             self::FIELD_ATTACK => 230,
             self::FIELD_DEFENSE => 218,
             self::FIELD_STAMINA => 137,
@@ -10757,6 +11484,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHO_BOOST, Moves::MOVE_THUNDERBOLT, Moves::MOVE_SWIFT]
         ],
         Pokemon::TURTWIG => [
+            self::FIELD_NAME => 'Turtwig',
             self::FIELD_ATTACK => 119,
             self::FIELD_DEFENSE => 110,
             self::FIELD_STAMINA => 146,
@@ -10771,6 +11499,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SEED_BOMB, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::TURTWIG | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Turtwig',
             self::FIELD_ATTACK => 119,
             self::FIELD_DEFENSE => 110,
             self::FIELD_STAMINA => 146,
@@ -10785,6 +11514,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SEED_BOMB, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::TURTWIG | Mods::SHADOW => [
+            self::FIELD_NAME => 'Turtwig',
             self::FIELD_ATTACK => 119,
             self::FIELD_DEFENSE => 110,
             self::FIELD_STAMINA => 146,
@@ -10801,6 +11531,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SEED_BOMB, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::GROTLE => [
+            self::FIELD_NAME => 'Grotle',
             self::FIELD_ATTACK => 157,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 181,
@@ -10815,6 +11546,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::GROTLE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Grotle',
             self::FIELD_ATTACK => 157,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 181,
@@ -10829,6 +11561,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::GROTLE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Grotle',
             self::FIELD_ATTACK => 157,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 181,
@@ -10845,6 +11578,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::TORTERRA => [
+            self::FIELD_NAME => 'Torterra',
             self::FIELD_ATTACK => 202,
             self::FIELD_DEFENSE => 188,
             self::FIELD_STAMINA => 216,
@@ -10860,6 +11594,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FRENZY_PLANT]
         ],
         Pokemon::TORTERRA | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Torterra',
             self::FIELD_ATTACK => 202,
             self::FIELD_DEFENSE => 188,
             self::FIELD_STAMINA => 216,
@@ -10875,6 +11610,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FRENZY_PLANT]
         ],
         Pokemon::TORTERRA | Mods::SHADOW => [
+            self::FIELD_NAME => 'Torterra',
             self::FIELD_ATTACK => 202,
             self::FIELD_DEFENSE => 188,
             self::FIELD_STAMINA => 216,
@@ -10892,6 +11628,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FRENZY_PLANT]
         ],
         Pokemon::CHIMCHAR => [
+            self::FIELD_NAME => 'Chimchar',
             self::FIELD_ATTACK => 113,
             self::FIELD_DEFENSE => 86,
             self::FIELD_STAMINA => 127,
@@ -10906,6 +11643,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_WHEEL, Moves::MOVE_FLAMETHROWER, Moves::MOVE_FLAME_CHARGE]
         ],
         Pokemon::CHIMCHAR | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Chimchar',
             self::FIELD_ATTACK => 113,
             self::FIELD_DEFENSE => 86,
             self::FIELD_STAMINA => 127,
@@ -10920,6 +11658,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_WHEEL, Moves::MOVE_FLAMETHROWER, Moves::MOVE_FLAME_CHARGE]
         ],
         Pokemon::CHIMCHAR | Mods::SHADOW => [
+            self::FIELD_NAME => 'Chimchar',
             self::FIELD_ATTACK => 113,
             self::FIELD_DEFENSE => 86,
             self::FIELD_STAMINA => 127,
@@ -10936,6 +11675,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_WHEEL, Moves::MOVE_FLAMETHROWER, Moves::MOVE_FLAME_CHARGE]
         ],
         Pokemon::MONFERNO => [
+            self::FIELD_NAME => 'Monferno',
             self::FIELD_ATTACK => 158,
             self::FIELD_DEFENSE => 105,
             self::FIELD_STAMINA => 162,
@@ -10951,6 +11691,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_WHEEL, Moves::MOVE_FLAMETHROWER, Moves::MOVE_LOW_SWEEP]
         ],
         Pokemon::MONFERNO | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Monferno',
             self::FIELD_ATTACK => 158,
             self::FIELD_DEFENSE => 105,
             self::FIELD_STAMINA => 162,
@@ -10966,6 +11707,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_WHEEL, Moves::MOVE_FLAMETHROWER, Moves::MOVE_LOW_SWEEP]
         ],
         Pokemon::MONFERNO | Mods::SHADOW => [
+            self::FIELD_NAME => 'Monferno',
             self::FIELD_ATTACK => 158,
             self::FIELD_DEFENSE => 105,
             self::FIELD_STAMINA => 162,
@@ -10983,6 +11725,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_WHEEL, Moves::MOVE_FLAMETHROWER, Moves::MOVE_LOW_SWEEP]
         ],
         Pokemon::INFERNAPE => [
+            self::FIELD_NAME => 'Infernape',
             self::FIELD_ATTACK => 222,
             self::FIELD_DEFENSE => 151,
             self::FIELD_STAMINA => 183,
@@ -10998,6 +11741,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BLAST_BURN]
         ],
         Pokemon::INFERNAPE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Infernape',
             self::FIELD_ATTACK => 222,
             self::FIELD_DEFENSE => 151,
             self::FIELD_STAMINA => 183,
@@ -11013,6 +11757,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BLAST_BURN]
         ],
         Pokemon::INFERNAPE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Infernape',
             self::FIELD_ATTACK => 222,
             self::FIELD_DEFENSE => 151,
             self::FIELD_STAMINA => 183,
@@ -11030,6 +11775,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BLAST_BURN]
         ],
         Pokemon::PILUP => [
+            self::FIELD_NAME => 'Piplup',
             self::FIELD_ATTACK => 112,
             self::FIELD_DEFENSE => 102,
             self::FIELD_STAMINA => 142,
@@ -11044,6 +11790,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_DRILL_PECK, Moves::MOVE_ICY_WIND]
         ],
         Pokemon::PRINPLUP => [
+            self::FIELD_NAME => 'Prinplup',
             self::FIELD_ATTACK => 150,
             self::FIELD_DEFENSE => 139,
             self::FIELD_STAMINA => 162,
@@ -11058,6 +11805,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_ICY_WIND]
         ],
         Pokemon::EMPOLEON => [
+            self::FIELD_NAME => 'Empoleon',
             self::FIELD_ATTACK => 210,
             self::FIELD_DEFENSE => 186,
             self::FIELD_STAMINA => 197,
@@ -11073,6 +11821,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_HYDRO_CANNON]
         ],
         Pokemon::STARLY => [
+            self::FIELD_NAME => 'Starly',
             self::FIELD_ATTACK => 101,
             self::FIELD_DEFENSE => 58,
             self::FIELD_STAMINA => 120,
@@ -11088,6 +11837,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AERIAL_ACE, Moves::MOVE_BRAVE_BIRD]
         ],
         Pokemon::STARAVIA => [
+            self::FIELD_NAME => 'Staravia',
             self::FIELD_ATTACK => 142,
             self::FIELD_DEFENSE => 94,
             self::FIELD_STAMINA => 146,
@@ -11103,6 +11853,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AERIAL_ACE, Moves::MOVE_BRAVE_BIRD, Moves::MOVE_HEAT_WAVE]
         ],
         Pokemon::STARAPTOR => [
+            self::FIELD_NAME => 'Staraptor',
             self::FIELD_ATTACK => 234,
             self::FIELD_DEFENSE => 140,
             self::FIELD_STAMINA => 198,
@@ -11117,6 +11868,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRAVE_BIRD, Moves::MOVE_HEAT_WAVE, Moves::MOVE_CLOSE_COMBAT]
         ],
         Pokemon::BIDOOF => [
+            self::FIELD_NAME => 'Bidoof',
             self::FIELD_ATTACK => 80,
             self::FIELD_DEFENSE => 73,
             self::FIELD_STAMINA => 153,
@@ -11131,6 +11883,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYPER_FANG, Moves::MOVE_CRUNCH, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::BIBAREL => [
+            self::FIELD_NAME => 'Bibarel',
             self::FIELD_ATTACK => 162,
             self::FIELD_DEFENSE => 119,
             self::FIELD_STAMINA => 188,
@@ -11145,6 +11898,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYPER_FANG, Moves::MOVE_HYPER_BEAM, Moves::MOVE_SURF]
         ],
         Pokemon::KRICKETOT => [
+            self::FIELD_NAME => 'Kricketot',
             self::FIELD_ATTACK => 45,
             self::FIELD_DEFENSE => 74,
             self::FIELD_STAMINA => 114,
@@ -11159,6 +11913,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::KRICKETUNE => [
+            self::FIELD_NAME => 'Kricketune',
             self::FIELD_ATTACK => 160,
             self::FIELD_DEFENSE => 100,
             self::FIELD_STAMINA => 184,
@@ -11172,6 +11927,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUG_BUZZ, Moves::MOVE_X_SCISSOR, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::SHINX => [
+            self::FIELD_NAME => 'Shinx',
             self::FIELD_ATTACK => 117,
             self::FIELD_DEFENSE => 64,
             self::FIELD_STAMINA => 128,
@@ -11186,6 +11942,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DISCHARGE, Moves::MOVE_THUNDERBOLT, Moves::MOVE_SWIFT]
         ],
         Pokemon::LUXIO => [
+            self::FIELD_NAME => 'Luxio',
             self::FIELD_ATTACK => 159,
             self::FIELD_DEFENSE => 95,
             self::FIELD_STAMINA => 155,
@@ -11200,6 +11957,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDERBOLT, Moves::MOVE_WILD_CHARGE, Moves::MOVE_CRUNCH]
         ],
         Pokemon::LUXRAY => [
+            self::FIELD_NAME => 'Luxray',
             self::FIELD_ATTACK => 232,
             self::FIELD_DEFENSE => 156,
             self::FIELD_STAMINA => 190,
@@ -11213,6 +11971,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYPER_BEAM, Moves::MOVE_WILD_CHARGE, Moves::MOVE_CRUNCH]
         ],
         Pokemon::BUDEW => [
+            self::FIELD_NAME => 'Budew',
             self::FIELD_ATTACK => 91,
             self::FIELD_DEFENSE => 109,
             self::FIELD_STAMINA => 120,
@@ -11228,6 +11987,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::ROSERADE => [
+            self::FIELD_NAME => 'Roserade',
             self::FIELD_ATTACK => 243,
             self::FIELD_DEFENSE => 185,
             self::FIELD_STAMINA => 155,
@@ -11242,6 +12002,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SOLAR_BEAM, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::CRANIDOS => [
+            self::FIELD_NAME => 'Cranidos',
             self::FIELD_ATTACK => 218,
             self::FIELD_DEFENSE => 71,
             self::FIELD_STAMINA => 167,
@@ -11256,6 +12017,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_TOMB, Moves::MOVE_ANCIENT_POWER, Moves::MOVE_BULLDOZE]
         ],
         Pokemon::RAMPARDOS => [
+            self::FIELD_NAME => 'Rampardos',
             self::FIELD_ATTACK => 295,
             self::FIELD_DEFENSE => 109,
             self::FIELD_STAMINA => 219,
@@ -11269,6 +12031,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_SLIDE, Moves::MOVE_OUTRAGE, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::SHIELDON => [
+            self::FIELD_NAME => 'Shieldon',
             self::FIELD_ATTACK => 76,
             self::FIELD_DEFENSE => 195,
             self::FIELD_STAMINA => 102,
@@ -11284,6 +12047,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_TOMB, Moves::MOVE_ANCIENT_POWER, Moves::MOVE_HEAVY_SLAM]
         ],
         Pokemon::BASTIODON => [
+            self::FIELD_NAME => 'Bastiodon',
             self::FIELD_ATTACK => 94,
             self::FIELD_DEFENSE => 286,
             self::FIELD_STAMINA => 155,
@@ -11298,6 +12062,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STONE_EDGE, Moves::MOVE_FLAMETHROWER, Moves::MOVE_FLASH_CANNON]
         ],
         Pokemon::BURMY | FormsAlias::BURMY_PLANT => [
+            self::FIELD_NAME => 'Burmy',
             self::FIELD_ATTACK => 53,
             self::FIELD_DEFENSE => 83,
             self::FIELD_STAMINA => 120,
@@ -11312,6 +12077,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::BURMY | FormsAlias::BURMY_SANDY => [
+            self::FIELD_NAME => 'Burmy',
             self::FIELD_ATTACK => 53,
             self::FIELD_DEFENSE => 83,
             self::FIELD_STAMINA => 120,
@@ -11326,6 +12092,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::BURMY | FormsAlias::BURMY_TRASH => [
+            self::FIELD_NAME => 'Burmy',
             self::FIELD_ATTACK => 53,
             self::FIELD_DEFENSE => 83,
             self::FIELD_STAMINA => 120,
@@ -11340,6 +12107,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::WORMADAM | FormsAlias::WORMADAM_PLANT => [
+            self::FIELD_NAME => 'Wormadam',
             self::FIELD_ATTACK => 141,
             self::FIELD_DEFENSE => 180,
             self::FIELD_STAMINA => 155,
@@ -11354,6 +12122,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_ENERGY_BALL, Moves::MOVE_BUG_BUZZ]
         ],
         Pokemon::WORMADAM | FormsAlias::WORMADAM_SANDY => [
+            self::FIELD_NAME => 'Wormadam',
             self::FIELD_ATTACK => 141,
             self::FIELD_DEFENSE => 180,
             self::FIELD_STAMINA => 155,
@@ -11368,6 +12137,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_BULLDOZE, Moves::MOVE_BUG_BUZZ]
         ],
         Pokemon::WORMADAM | FormsAlias::WORMADAM_TRASH => [
+            self::FIELD_NAME => 'Wormadam',
             self::FIELD_ATTACK => 127,
             self::FIELD_DEFENSE => 175,
             self::FIELD_STAMINA => 155,
@@ -11382,6 +12152,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_IRON_HEAD, Moves::MOVE_BUG_BUZZ]
         ],
         Pokemon::MOTHIM => [
+            self::FIELD_NAME => 'Mothim',
             self::FIELD_ATTACK => 185,
             self::FIELD_DEFENSE => 98,
             self::FIELD_STAMINA => 172,
@@ -11396,6 +12167,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_AERIAL_ACE, Moves::MOVE_BUG_BUZZ]
         ],
         Pokemon::COMBEE => [
+            self::FIELD_NAME => 'Combee',
             self::FIELD_ATTACK => 59,
             self::FIELD_DEFENSE => 83,
             self::FIELD_STAMINA => 102,
@@ -11411,6 +12183,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUG_BUZZ]
         ],
         Pokemon::VESPIQUEN => [
+            self::FIELD_NAME => 'Vespiquen',
             self::FIELD_ATTACK => 149,
             self::FIELD_DEFENSE => 190,
             self::FIELD_STAMINA => 172,
@@ -11425,6 +12198,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUG_BUZZ, Moves::MOVE_POWER_GEM, Moves::MOVE_X_SCISSOR, Moves::MOVE_FELL_STINGER]
         ],
         Pokemon::PACHIRISU => [
+            self::FIELD_NAME => 'Pachirisu',
             self::FIELD_ATTACK => 94,
             self::FIELD_DEFENSE => 172,
             self::FIELD_STAMINA => 155,
@@ -11438,6 +12212,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDER, Moves::MOVE_THUNDERBOLT, Moves::MOVE_THUNDER_PUNCH]
         ],
         Pokemon::BUZIEL => [
+            self::FIELD_NAME => 'Buizel',
             self::FIELD_ATTACK => 132,
             self::FIELD_DEFENSE => 67,
             self::FIELD_STAMINA => 146,
@@ -11452,6 +12227,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_WATER_PULSE, Moves::MOVE_SWIFT]
         ],
         Pokemon::FLOATZEL => [
+            self::FIELD_NAME => 'Floatzel',
             self::FIELD_ATTACK => 221,
             self::FIELD_DEFENSE => 114,
             self::FIELD_STAMINA => 198,
@@ -11465,6 +12241,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_SWIFT]
         ],
         Pokemon::CHERUBI => [
+            self::FIELD_NAME => 'Cherubi',
             self::FIELD_ATTACK => 108,
             self::FIELD_DEFENSE => 92,
             self::FIELD_STAMINA => 128,
@@ -11479,6 +12256,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_SEED_BOMB]
         ],
         Pokemon::CHERRIM | FormsAlias::CHERRIM_SUNNY => [
+            self::FIELD_NAME => 'Cherrim',
             self::FIELD_ATTACK => 170,
             self::FIELD_DEFENSE => 153,
             self::FIELD_STAMINA => 172,
@@ -11492,6 +12270,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_HYPER_BEAM, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_WEATHER_BALL_FIRE]
         ],
         Pokemon::CHERRIM | FormsAlias::CHERRIM_OVERCAST => [
+            self::FIELD_NAME => 'Cherrim',
             self::FIELD_ATTACK => 170,
             self::FIELD_DEFENSE => 153,
             self::FIELD_STAMINA => 172,
@@ -11505,6 +12284,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_HYPER_BEAM, Moves::MOVE_SOLAR_BEAM]
         ],
         Pokemon::SHELLOS | FormsAlias::SHELLOS_EAST_SEA => [
+            self::FIELD_NAME => 'Shellos',
             self::FIELD_ATTACK => 103,
             self::FIELD_DEFENSE => 105,
             self::FIELD_STAMINA => 183,
@@ -11519,6 +12299,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_MUD_BOMB, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::SHELLOS | FormsAlias::SHELLOS_WEST_SEA => [
+            self::FIELD_NAME => 'Shellos',
             self::FIELD_ATTACK => 103,
             self::FIELD_DEFENSE => 105,
             self::FIELD_STAMINA => 183,
@@ -11533,6 +12314,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_MUD_BOMB, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::GASTRODON | FormsAlias::GASTRODON_EAST_SEA => [
+            self::FIELD_NAME => 'Gastrodon',
             self::FIELD_ATTACK => 169,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 244,
@@ -11547,6 +12329,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_EARTH_POWER, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::GASTRODON | FormsAlias::GASTRODON_WEST_SEA => [
+            self::FIELD_NAME => 'Gastrodon',
             self::FIELD_ATTACK => 169,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 244,
@@ -11561,6 +12344,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_EARTH_POWER, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::AMBIPOM => [
+            self::FIELD_NAME => 'Ambipom',
             self::FIELD_ATTACK => 205,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 181,
@@ -11574,6 +12358,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_LOW_SWEEP, Moves::MOVE_HYPER_BEAM, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::DRIFLOON => [
+            self::FIELD_NAME => 'Drifloon',
             self::FIELD_ATTACK => 117,
             self::FIELD_DEFENSE => 80,
             self::FIELD_STAMINA => 207,
@@ -11589,6 +12374,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_OMINOUS_WIND, Moves::MOVE_ICY_WIND, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::DRIFBLIM => [
+            self::FIELD_NAME => 'Drifblim',
             self::FIELD_ATTACK => 180,
             self::FIELD_DEFENSE => 102,
             self::FIELD_STAMINA => 312,
@@ -11603,6 +12389,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_OMINOUS_WIND, Moves::MOVE_ICY_WIND, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::BUNEARY => [
+            self::FIELD_NAME => 'Buneary',
             self::FIELD_ATTACK => 130,
             self::FIELD_DEFENSE => 105,
             self::FIELD_STAMINA => 146,
@@ -11617,6 +12404,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_PUNCH, Moves::MOVE_SWIFT]
         ],
         Pokemon::LOPUNNY => [
+            self::FIELD_NAME => 'Lopunny',
             self::FIELD_ATTACK => 156,
             self::FIELD_DEFENSE => 194,
             self::FIELD_STAMINA => 163,
@@ -11630,6 +12418,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_PUNCH, Moves::MOVE_HYPER_BEAM, Moves::MOVE_FOCUS_BLAST]
         ],
         Pokemon::MISMAGIUS => [
+            self::FIELD_NAME => 'Mismagius',
             self::FIELD_ATTACK => 211,
             self::FIELD_DEFENSE => 187,
             self::FIELD_STAMINA => 155,
@@ -11643,6 +12432,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_DARK_PULSE, Moves::MOVE_DAZZLING_GLEAM]
         ],
         Pokemon::MISMAGIUS | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Mismagius',
             self::FIELD_ATTACK => 211,
             self::FIELD_DEFENSE => 187,
             self::FIELD_STAMINA => 155,
@@ -11656,6 +12446,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_DARK_PULSE, Moves::MOVE_DAZZLING_GLEAM]
         ],
         Pokemon::MISMAGIUS | Mods::SHADOW => [
+            self::FIELD_NAME => 'Mismagius',
             self::FIELD_ATTACK => 211,
             self::FIELD_DEFENSE => 187,
             self::FIELD_STAMINA => 155,
@@ -11671,6 +12462,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_DARK_PULSE, Moves::MOVE_DAZZLING_GLEAM]
         ],
         Pokemon::HONCHKROW => [
+            self::FIELD_NAME => 'Honchkrow',
             self::FIELD_ATTACK => 243,
             self::FIELD_DEFENSE => 103,
             self::FIELD_STAMINA => 225,
@@ -11685,6 +12477,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRAVE_BIRD, Moves::MOVE_PSYCHIC, Moves::MOVE_DARK_PULSE, Moves::MOVE_SKY_ATTACK]
         ],
         Pokemon::HONCHKROW | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Honchkrow',
             self::FIELD_ATTACK => 243,
             self::FIELD_DEFENSE => 103,
             self::FIELD_STAMINA => 225,
@@ -11699,6 +12492,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRAVE_BIRD, Moves::MOVE_PSYCHIC, Moves::MOVE_DARK_PULSE, Moves::MOVE_SKY_ATTACK]
         ],
         Pokemon::HONCHKROW | Mods::SHADOW => [
+            self::FIELD_NAME => 'Honchkrow',
             self::FIELD_ATTACK => 243,
             self::FIELD_DEFENSE => 103,
             self::FIELD_STAMINA => 225,
@@ -11715,6 +12509,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRAVE_BIRD, Moves::MOVE_PSYCHIC, Moves::MOVE_DARK_PULSE, Moves::MOVE_SKY_ATTACK]
         ],
         Pokemon::GLAMEOW => [
+            self::FIELD_NAME => 'Glameow',
             self::FIELD_ATTACK => 109,
             self::FIELD_DEFENSE => 82,
             self::FIELD_STAMINA => 135,
@@ -11729,6 +12524,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PLAY_ROUGH, Moves::MOVE_THUNDERBOLT, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::PURUGLY => [
+            self::FIELD_NAME => 'Purugly',
             self::FIELD_ATTACK => 172,
             self::FIELD_DEFENSE => 133,
             self::FIELD_STAMINA => 174,
@@ -11742,6 +12538,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PLAY_ROUGH, Moves::MOVE_THUNDER, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::CHINGLING => [
+            self::FIELD_NAME => 'Chingling',
             self::FIELD_ATTACK => 114,
             self::FIELD_DEFENSE => 94,
             self::FIELD_STAMINA => 128,
@@ -11756,6 +12553,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_WRAP, Moves::MOVE_SHADOW_BALL, Moves::MOVE_PSYSHOCK]
         ],
         Pokemon::STUNKY => [
+            self::FIELD_NAME => 'Stunky',
             self::FIELD_ATTACK => 121,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 160,
@@ -11771,6 +12569,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_FLAMETHROWER, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::STUNKY | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Stunky',
             self::FIELD_ATTACK => 121,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 160,
@@ -11786,6 +12585,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_FLAMETHROWER, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::STUNKY | Mods::SHADOW => [
+            self::FIELD_NAME => 'Stunky',
             self::FIELD_ATTACK => 121,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 160,
@@ -11803,6 +12603,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_FLAMETHROWER, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::SKUNTANK => [
+            self::FIELD_NAME => 'Skuntank',
             self::FIELD_ATTACK => 184,
             self::FIELD_DEFENSE => 132,
             self::FIELD_STAMINA => 230,
@@ -11817,6 +12618,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_FLAMETHROWER, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::SKUNTANK | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Skuntank',
             self::FIELD_ATTACK => 184,
             self::FIELD_DEFENSE => 132,
             self::FIELD_STAMINA => 230,
@@ -11831,6 +12633,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_FLAMETHROWER, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::SKUNTANK | Mods::SHADOW => [
+            self::FIELD_NAME => 'Skuntank',
             self::FIELD_ATTACK => 184,
             self::FIELD_DEFENSE => 132,
             self::FIELD_STAMINA => 230,
@@ -11847,6 +12650,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_FLAMETHROWER, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::BRONZOR => [
+            self::FIELD_NAME => 'Bronzor',
             self::FIELD_ATTACK => 43,
             self::FIELD_DEFENSE => 154,
             self::FIELD_STAMINA => 149,
@@ -11862,6 +12666,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_GYRO_BALL, Moves::MOVE_PSYSHOCK, Moves::MOVE_HEAVY_SLAM]
         ],
         Pokemon::BRONZONG => [
+            self::FIELD_NAME => 'Bronzong',
             self::FIELD_ATTACK => 161,
             self::FIELD_DEFENSE => 213,
             self::FIELD_STAMINA => 167,
@@ -11876,6 +12681,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLASH_CANNON, Moves::MOVE_PSYCHIC, Moves::MOVE_HEAVY_SLAM, Moves::MOVE_BULLDOZE, Moves::MOVE_PSYSHOCK]
         ],
         Pokemon::BONSLY => [
+            self::FIELD_NAME => 'Bonsly',
             self::FIELD_ATTACK => 124,
             self::FIELD_DEFENSE => 133,
             self::FIELD_STAMINA => 137,
@@ -11890,6 +12696,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_TOMB, Moves::MOVE_EARTHQUAKE, Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::MIME_JR => [
+            self::FIELD_NAME => 'Mime Jr.',
             self::FIELD_ATTACK => 125,
             self::FIELD_DEFENSE => 142,
             self::FIELD_STAMINA => 85,
@@ -11905,6 +12712,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_PSYCHIC, Moves::MOVE_PSYSHOCK]
         ],
         Pokemon::HAPPINY => [
+            self::FIELD_NAME => 'Happiny',
             self::FIELD_ATTACK => 25,
             self::FIELD_DEFENSE => 77,
             self::FIELD_STAMINA => 225,
@@ -11919,6 +12727,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC]
         ],
         Pokemon::CHATOT => [
+            self::FIELD_NAME => 'Chatot',
             self::FIELD_ATTACK => 183,
             self::FIELD_DEFENSE => 91,
             self::FIELD_STAMINA => 183,
@@ -11933,6 +12742,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SHADE, Moves::MOVE_SKY_ATTACK, Moves::MOVE_HEAT_WAVE]
         ],
         Pokemon::SPIRITOMB => [
+            self::FIELD_NAME => 'Spiritomb',
             self::FIELD_ATTACK => 169,
             self::FIELD_DEFENSE => 199,
             self::FIELD_STAMINA => 137,
@@ -11947,6 +12757,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_SNEAK, Moves::MOVE_OMINOUS_WIND, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::GIBLE => [
+            self::FIELD_NAME => 'Gible',
             self::FIELD_ATTACK => 124,
             self::FIELD_DEFENSE => 84,
             self::FIELD_STAMINA => 151,
@@ -11962,6 +12773,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_TWISTER, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::GIBLE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Gible',
             self::FIELD_ATTACK => 124,
             self::FIELD_DEFENSE => 84,
             self::FIELD_STAMINA => 151,
@@ -11977,6 +12789,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_TWISTER, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::GIBLE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Gible',
             self::FIELD_ATTACK => 124,
             self::FIELD_DEFENSE => 84,
             self::FIELD_STAMINA => 151,
@@ -11994,6 +12807,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_TWISTER, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::GABITE => [
+            self::FIELD_NAME => 'Gabite',
             self::FIELD_ATTACK => 172,
             self::FIELD_DEFENSE => 125,
             self::FIELD_STAMINA => 169,
@@ -12009,6 +12823,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_TWISTER, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::GABITE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Gabite',
             self::FIELD_ATTACK => 172,
             self::FIELD_DEFENSE => 125,
             self::FIELD_STAMINA => 169,
@@ -12024,6 +12839,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_TWISTER, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::GABITE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Gabite',
             self::FIELD_ATTACK => 172,
             self::FIELD_DEFENSE => 125,
             self::FIELD_STAMINA => 169,
@@ -12041,6 +12857,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_TWISTER, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::GARCHOMP => [
+            self::FIELD_NAME => 'Garchomp',
             self::FIELD_ATTACK => 261,
             self::FIELD_DEFENSE => 193,
             self::FIELD_STAMINA => 239,
@@ -12055,6 +12872,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_OUTRAGE, Moves::MOVE_EARTHQUAKE, Moves::MOVE_FIRE_BLAST, Moves::MOVE_SAND_TOMB]
         ],
         Pokemon::GARCHOMP | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Garchomp',
             self::FIELD_ATTACK => 261,
             self::FIELD_DEFENSE => 193,
             self::FIELD_STAMINA => 239,
@@ -12069,6 +12887,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_OUTRAGE, Moves::MOVE_EARTHQUAKE, Moves::MOVE_FIRE_BLAST, Moves::MOVE_SAND_TOMB]
         ],
         Pokemon::GARCHOMP | Mods::SHADOW => [
+            self::FIELD_NAME => 'Garchomp',
             self::FIELD_ATTACK => 261,
             self::FIELD_DEFENSE => 193,
             self::FIELD_STAMINA => 239,
@@ -12085,6 +12904,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_OUTRAGE, Moves::MOVE_EARTHQUAKE, Moves::MOVE_FIRE_BLAST, Moves::MOVE_SAND_TOMB]
         ],
         Pokemon::MUNCHLAX => [
+            self::FIELD_NAME => 'Munchlax',
             self::FIELD_ATTACK => 137,
             self::FIELD_DEFENSE => 117,
             self::FIELD_STAMINA => 286,
@@ -12099,6 +12919,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_GUNK_SHOT, Moves::MOVE_BODY_SLAM, Moves::MOVE_BULLDOZE]
         ],
         Pokemon::RIOLU => [
+            self::FIELD_NAME => 'Riolu',
             self::FIELD_ATTACK => 127,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 120,
@@ -12113,6 +12934,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRICK_BREAK, Moves::MOVE_LOW_SWEEP, Moves::MOVE_CROSS_CHOP]
         ],
         Pokemon::LUCARIO => [
+            self::FIELD_NAME => 'Lucario',
             self::FIELD_ATTACK => 236,
             self::FIELD_DEFENSE => 144,
             self::FIELD_STAMINA => 172,
@@ -12127,6 +12949,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLASH_CANNON, Moves::MOVE_SHADOW_BALL, Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_POWER_UP_PUNCH, Moves::MOVE_AURA_SPHERE]
         ],
         Pokemon::HIPPOPOTAS => [
+            self::FIELD_NAME => 'Hippopotas',
             self::FIELD_ATTACK => 124,
             self::FIELD_DEFENSE => 118,
             self::FIELD_STAMINA => 169,
@@ -12141,6 +12964,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_ROCK_TOMB, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::HIPPOPOTAS | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Hippopotas',
             self::FIELD_ATTACK => 124,
             self::FIELD_DEFENSE => 118,
             self::FIELD_STAMINA => 169,
@@ -12155,6 +12979,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_ROCK_TOMB, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::HIPPOPOTAS | Mods::SHADOW => [
+            self::FIELD_NAME => 'Hippopotas',
             self::FIELD_ATTACK => 124,
             self::FIELD_DEFENSE => 118,
             self::FIELD_STAMINA => 169,
@@ -12171,6 +12996,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_ROCK_TOMB, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::HIPPOWDON => [
+            self::FIELD_NAME => 'Hippowdon',
             self::FIELD_ATTACK => 201,
             self::FIELD_DEFENSE => 191,
             self::FIELD_STAMINA => 239,
@@ -12184,6 +13010,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_STONE_EDGE, Moves::MOVE_BODY_SLAM, Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::HIPPOWDON | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Hippowdon',
             self::FIELD_ATTACK => 201,
             self::FIELD_DEFENSE => 191,
             self::FIELD_STAMINA => 239,
@@ -12197,6 +13024,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_STONE_EDGE, Moves::MOVE_BODY_SLAM, Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::HIPPOWDON | Mods::SHADOW => [
+            self::FIELD_NAME => 'Hippowdon',
             self::FIELD_ATTACK => 201,
             self::FIELD_DEFENSE => 191,
             self::FIELD_STAMINA => 239,
@@ -12212,6 +13040,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_STONE_EDGE, Moves::MOVE_BODY_SLAM, Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::SKORUPI => [
+            self::FIELD_NAME => 'Skorupi',
             self::FIELD_ATTACK => 93,
             self::FIELD_DEFENSE => 151,
             self::FIELD_STAMINA => 120,
@@ -12227,6 +13056,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CROSS_POISON, Moves::MOVE_AQUA_TAIL, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::DRAPION => [
+            self::FIELD_NAME => 'Drapion',
             self::FIELD_ATTACK => 180,
             self::FIELD_DEFENSE => 202,
             self::FIELD_STAMINA => 172,
@@ -12241,6 +13071,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_AQUA_TAIL, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_FELL_STINGER]
         ],
         Pokemon::CROAGUNK => [
+            self::FIELD_NAME => 'Croagunk',
             self::FIELD_ATTACK => 116,
             self::FIELD_DEFENSE => 76,
             self::FIELD_STAMINA => 134,
@@ -12256,6 +13087,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRICK_BREAK, Moves::MOVE_LOW_SWEEP, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::TOXICROAK => [
+            self::FIELD_NAME => 'Toxicroak',
             self::FIELD_ATTACK => 211,
             self::FIELD_DEFENSE => 133,
             self::FIELD_STAMINA => 195,
@@ -12270,6 +13102,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DYNAMIC_PUNCH, Moves::MOVE_MUD_BOMB, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::CARNIVINE => [
+            self::FIELD_NAME => 'Carnivine',
             self::FIELD_ATTACK => 187,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 179,
@@ -12283,6 +13116,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_POWER_WHIP, Moves::MOVE_ENERGY_BALL, Moves::MOVE_CRUNCH]
         ],
         Pokemon::FINNEON => [
+            self::FIELD_NAME => 'Finneon',
             self::FIELD_ATTACK => 96,
             self::FIELD_DEFENSE => 116,
             self::FIELD_STAMINA => 135,
@@ -12297,6 +13131,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_ICE_BEAM, Moves::MOVE_SILVER_WIND]
         ],
         Pokemon::LUMINEON => [
+            self::FIELD_NAME => 'Lumineon',
             self::FIELD_ATTACK => 142,
             self::FIELD_DEFENSE => 170,
             self::FIELD_STAMINA => 170,
@@ -12310,6 +13145,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_BLIZZARD, Moves::MOVE_SILVER_WIND]
         ],
         Pokemon::MANTYKE => [
+            self::FIELD_NAME => 'Mantyke',
             self::FIELD_ATTACK => 105,
             self::FIELD_DEFENSE => 179,
             self::FIELD_STAMINA => 128,
@@ -12325,6 +13161,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_ICE_BEAM, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::SNOVER => [
+            self::FIELD_NAME => 'Snover',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 105,
             self::FIELD_STAMINA => 155,
@@ -12340,6 +13177,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_BEAM, Moves::MOVE_ENERGY_BALL, Moves::MOVE_STOMP]
         ],
         Pokemon::SNOVER | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Snover',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 105,
             self::FIELD_STAMINA => 155,
@@ -12355,6 +13193,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_BEAM, Moves::MOVE_ENERGY_BALL, Moves::MOVE_STOMP]
         ],
         Pokemon::SNOVER | Mods::SHADOW => [
+            self::FIELD_NAME => 'Snover',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 105,
             self::FIELD_STAMINA => 155,
@@ -12372,6 +13211,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_BEAM, Moves::MOVE_ENERGY_BALL, Moves::MOVE_STOMP]
         ],
         Pokemon::ABOMASNOW => [
+            self::FIELD_NAME => 'Abomasnow',
             self::FIELD_ATTACK => 178,
             self::FIELD_DEFENSE => 158,
             self::FIELD_STAMINA => 207,
@@ -12386,6 +13226,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BLIZZARD, Moves::MOVE_ENERGY_BALL, Moves::MOVE_OUTRAGE, Moves::MOVE_WEATHER_BALL_ICE]
         ],
         Pokemon::ABOMASNOW | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Abomasnow',
             self::FIELD_ATTACK => 178,
             self::FIELD_DEFENSE => 158,
             self::FIELD_STAMINA => 207,
@@ -12400,6 +13241,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BLIZZARD, Moves::MOVE_ENERGY_BALL, Moves::MOVE_OUTRAGE, Moves::MOVE_WEATHER_BALL_ICE]
         ],
         Pokemon::ABOMASNOW | Mods::SHADOW => [
+            self::FIELD_NAME => 'Abomasnow',
             self::FIELD_ATTACK => 178,
             self::FIELD_DEFENSE => 158,
             self::FIELD_STAMINA => 207,
@@ -12416,6 +13258,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BLIZZARD, Moves::MOVE_ENERGY_BALL, Moves::MOVE_OUTRAGE, Moves::MOVE_WEATHER_BALL_ICE]
         ],
         Pokemon::WEAVILE => [
+            self::FIELD_NAME => 'Weavile',
             self::FIELD_ATTACK => 243,
             self::FIELD_DEFENSE => 171,
             self::FIELD_STAMINA => 172,
@@ -12430,6 +13273,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AVALANCHE, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::WEAVILE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Weavile',
             self::FIELD_ATTACK => 243,
             self::FIELD_DEFENSE => 171,
             self::FIELD_STAMINA => 172,
@@ -12444,6 +13288,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AVALANCHE, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::WEAVILE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Weavile',
             self::FIELD_ATTACK => 243,
             self::FIELD_DEFENSE => 171,
             self::FIELD_STAMINA => 172,
@@ -12460,6 +13305,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AVALANCHE, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::MAGNEZONE => [
+            self::FIELD_NAME => 'Magnezone',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 205,
             self::FIELD_STAMINA => 172,
@@ -12474,6 +13320,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ZAP_CANNON, Moves::MOVE_WILD_CHARGE, Moves::MOVE_FLASH_CANNON, Moves::MOVE_MIRROR_SHOT]
         ],
         Pokemon::MAGNEZONE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Magnezone',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 205,
             self::FIELD_STAMINA => 172,
@@ -12488,6 +13335,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ZAP_CANNON, Moves::MOVE_WILD_CHARGE, Moves::MOVE_FLASH_CANNON, Moves::MOVE_MIRROR_SHOT]
         ],
         Pokemon::MAGNEZONE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Magnezone',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 205,
             self::FIELD_STAMINA => 172,
@@ -12504,6 +13352,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ZAP_CANNON, Moves::MOVE_WILD_CHARGE, Moves::MOVE_FLASH_CANNON, Moves::MOVE_MIRROR_SHOT]
         ],
         Pokemon::LICKILICKY => [
+            self::FIELD_NAME => 'Lickilicky',
             self::FIELD_ATTACK => 161,
             self::FIELD_DEFENSE => 181,
             self::FIELD_STAMINA => 242,
@@ -12518,6 +13367,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::RHYPERIOR => [
+            self::FIELD_NAME => 'Rhyperior',
             self::FIELD_ATTACK => 241,
             self::FIELD_DEFENSE => 190,
             self::FIELD_STAMINA => 251,
@@ -12533,6 +13383,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_WRECKER]
         ],
         Pokemon::RHYPERIOR | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Rhyperior',
             self::FIELD_ATTACK => 241,
             self::FIELD_DEFENSE => 190,
             self::FIELD_STAMINA => 251,
@@ -12548,6 +13399,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_WRECKER]
         ],
         Pokemon::RHYPERIOR | Mods::SHADOW => [
+            self::FIELD_NAME => 'Rhyperior',
             self::FIELD_ATTACK => 241,
             self::FIELD_DEFENSE => 190,
             self::FIELD_STAMINA => 251,
@@ -12565,6 +13417,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_WRECKER]
         ],
         Pokemon::TANGROWTH => [
+            self::FIELD_NAME => 'Tangrowth',
             self::FIELD_ATTACK => 207,
             self::FIELD_DEFENSE => 184,
             self::FIELD_STAMINA => 225,
@@ -12578,6 +13431,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ANCIENT_POWER, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_POWER_WHIP, Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::ELECTIVIRE => [
+            self::FIELD_NAME => 'Electivire',
             self::FIELD_ATTACK => 249,
             self::FIELD_DEFENSE => 163,
             self::FIELD_STAMINA => 181,
@@ -12591,6 +13445,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_WILD_CHARGE, Moves::MOVE_THUNDER, Moves::MOVE_ICE_PUNCH]
         ],
         Pokemon::ELECTIVIRE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Electivire',
             self::FIELD_ATTACK => 249,
             self::FIELD_DEFENSE => 163,
             self::FIELD_STAMINA => 181,
@@ -12604,6 +13459,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_WILD_CHARGE, Moves::MOVE_THUNDER, Moves::MOVE_ICE_PUNCH]
         ],
         Pokemon::ELECTIVIRE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Electivire',
             self::FIELD_ATTACK => 249,
             self::FIELD_DEFENSE => 163,
             self::FIELD_STAMINA => 181,
@@ -12619,6 +13475,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_WILD_CHARGE, Moves::MOVE_THUNDER, Moves::MOVE_ICE_PUNCH]
         ],
         Pokemon::MAGMORTAR => [
+            self::FIELD_NAME => 'Magmortar',
             self::FIELD_ATTACK => 247,
             self::FIELD_DEFENSE => 172,
             self::FIELD_STAMINA => 181,
@@ -12632,6 +13489,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRICK_BREAK, Moves::MOVE_FIRE_PUNCH, Moves::MOVE_FIRE_BLAST, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::MAGMORTAR | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Magmortar',
             self::FIELD_ATTACK => 247,
             self::FIELD_DEFENSE => 172,
             self::FIELD_STAMINA => 181,
@@ -12645,6 +13503,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRICK_BREAK, Moves::MOVE_FIRE_PUNCH, Moves::MOVE_FIRE_BLAST, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::MAGMORTAR | Mods::SHADOW => [
+            self::FIELD_NAME => 'Magmortar',
             self::FIELD_ATTACK => 247,
             self::FIELD_DEFENSE => 172,
             self::FIELD_STAMINA => 181,
@@ -12660,6 +13519,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRICK_BREAK, Moves::MOVE_FIRE_PUNCH, Moves::MOVE_FIRE_BLAST, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::TOGEKISS => [
+            self::FIELD_NAME => 'Togekiss',
             self::FIELD_ATTACK => 225,
             self::FIELD_DEFENSE => 217,
             self::FIELD_STAMINA => 198,
@@ -12674,6 +13534,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ANCIENT_POWER, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_AERIAL_ACE, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::YANMEGA => [
+            self::FIELD_NAME => 'Yanmega',
             self::FIELD_ATTACK => 231,
             self::FIELD_DEFENSE => 156,
             self::FIELD_STAMINA => 200,
@@ -12688,6 +13549,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ANCIENT_POWER, Moves::MOVE_AERIAL_ACE, Moves::MOVE_BUG_BUZZ]
         ],
         Pokemon::LEAFEON => [
+            self::FIELD_NAME => 'Leafeon',
             self::FIELD_ATTACK => 216,
             self::FIELD_DEFENSE => 219,
             self::FIELD_STAMINA => 163,
@@ -12702,6 +13564,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_LAST_RESORT]
         ],
         Pokemon::GLACEON => [
+            self::FIELD_NAME => 'Glaceon',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 205,
             self::FIELD_STAMINA => 163,
@@ -12716,6 +13579,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_LAST_RESORT]
         ],
         Pokemon::GLISCOR => [
+            self::FIELD_NAME => 'Gliscor',
             self::FIELD_ATTACK => 185,
             self::FIELD_DEFENSE => 222,
             self::FIELD_STAMINA => 181,
@@ -12730,6 +13594,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_AERIAL_ACE, Moves::MOVE_NIGHT_SLASH, Moves::MOVE_SAND_TOMB]
         ],
         Pokemon::GLISCOR | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Gliscor',
             self::FIELD_ATTACK => 185,
             self::FIELD_DEFENSE => 222,
             self::FIELD_STAMINA => 181,
@@ -12744,6 +13609,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_AERIAL_ACE, Moves::MOVE_NIGHT_SLASH, Moves::MOVE_SAND_TOMB]
         ],
         Pokemon::GLISCOR | Mods::SHADOW => [
+            self::FIELD_NAME => 'Gliscor',
             self::FIELD_ATTACK => 185,
             self::FIELD_DEFENSE => 222,
             self::FIELD_STAMINA => 181,
@@ -12760,6 +13626,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_AERIAL_ACE, Moves::MOVE_NIGHT_SLASH, Moves::MOVE_SAND_TOMB]
         ],
         Pokemon::MAMOSWINE => [
+            self::FIELD_NAME => 'Mamoswine',
             self::FIELD_ATTACK => 247,
             self::FIELD_DEFENSE => 146,
             self::FIELD_STAMINA => 242,
@@ -12775,6 +13642,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ANCIENT_POWER]
         ],
         Pokemon::PORYGON_Z => [
+            self::FIELD_NAME => 'Porygon-Z',
             self::FIELD_ATTACK => 264,
             self::FIELD_DEFENSE => 150,
             self::FIELD_STAMINA => 198,
@@ -12788,6 +13656,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SOLAR_BEAM, Moves::MOVE_HYPER_BEAM, Moves::MOVE_ZAP_CANNON, Moves::MOVE_BLIZZARD]
         ],
         Pokemon::PORYGON_Z | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Porygon-Z',
             self::FIELD_ATTACK => 264,
             self::FIELD_DEFENSE => 150,
             self::FIELD_STAMINA => 198,
@@ -12801,6 +13670,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SOLAR_BEAM, Moves::MOVE_HYPER_BEAM, Moves::MOVE_ZAP_CANNON, Moves::MOVE_BLIZZARD]
         ],
         Pokemon::PORYGON_Z | Mods::SHADOW => [
+            self::FIELD_NAME => 'Porygon-Z',
             self::FIELD_ATTACK => 264,
             self::FIELD_DEFENSE => 150,
             self::FIELD_STAMINA => 198,
@@ -12816,6 +13686,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SOLAR_BEAM, Moves::MOVE_HYPER_BEAM, Moves::MOVE_ZAP_CANNON, Moves::MOVE_BLIZZARD]
         ],
         Pokemon::GALLADE => [
+            self::FIELD_NAME => 'Gallade',
             self::FIELD_ATTACK => 237,
             self::FIELD_DEFENSE => 195,
             self::FIELD_STAMINA => 169,
@@ -12831,6 +13702,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SYNCHRONOISE]
         ],
         Pokemon::GALLADE | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Gallade',
             self::FIELD_ATTACK => 237,
             self::FIELD_DEFENSE => 195,
             self::FIELD_STAMINA => 169,
@@ -12846,6 +13718,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SYNCHRONOISE]
         ],
         Pokemon::GALLADE | Mods::SHADOW => [
+            self::FIELD_NAME => 'Gallade',
             self::FIELD_ATTACK => 237,
             self::FIELD_DEFENSE => 195,
             self::FIELD_STAMINA => 169,
@@ -12863,6 +13736,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SYNCHRONOISE]
         ],
         Pokemon::PROBOPASS => [
+            self::FIELD_NAME => 'Probopass',
             self::FIELD_ATTACK => 135,
             self::FIELD_DEFENSE => 275,
             self::FIELD_STAMINA => 155,
@@ -12877,6 +13751,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_MAGNET_BOMB, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::DUSKNOIR => [
+            self::FIELD_NAME => 'Dusknoir',
             self::FIELD_ATTACK => 180,
             self::FIELD_DEFENSE => 254,
             self::FIELD_STAMINA => 128,
@@ -12890,6 +13765,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_OMINOUS_WIND, Moves::MOVE_PSYCHIC, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::DUSKNOIR | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Dusknoir',
             self::FIELD_ATTACK => 180,
             self::FIELD_DEFENSE => 254,
             self::FIELD_STAMINA => 128,
@@ -12903,6 +13779,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_OMINOUS_WIND, Moves::MOVE_PSYCHIC, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::DUSKNOIR | Mods::SHADOW => [
+            self::FIELD_NAME => 'Dusknoir',
             self::FIELD_ATTACK => 180,
             self::FIELD_DEFENSE => 254,
             self::FIELD_STAMINA => 128,
@@ -12918,6 +13795,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_OMINOUS_WIND, Moves::MOVE_PSYCHIC, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::FROSLASS => [
+            self::FIELD_NAME => 'Froslass',
             self::FIELD_ATTACK => 171,
             self::FIELD_DEFENSE => 150,
             self::FIELD_STAMINA => 172,
@@ -12932,6 +13810,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AVALANCHE, Moves::MOVE_CRUNCH, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::ROTOM | FormsAlias::ROTOM_NORMAL => [
+            self::FIELD_NAME => 'Rotom',
             self::FIELD_ATTACK => 185,
             self::FIELD_DEFENSE => 159,
             self::FIELD_STAMINA => 137,
@@ -12946,6 +13825,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_OMINOUS_WIND, Moves::MOVE_THUNDERBOLT, Moves::MOVE_THUNDER]
         ],
         Pokemon::ROTOM | FormsAlias::ROTOM_FAN => [
+            self::FIELD_NAME => 'Rotom',
             self::FIELD_ATTACK => 204,
             self::FIELD_DEFENSE => 219,
             self::FIELD_STAMINA => 137,
@@ -12960,6 +13840,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_OMINOUS_WIND, Moves::MOVE_THUNDERBOLT, Moves::MOVE_THUNDER]
         ],
         Pokemon::ROTOM | FormsAlias::ROTOM_FROST => [
+            self::FIELD_NAME => 'Rotom',
             self::FIELD_ATTACK => 204,
             self::FIELD_DEFENSE => 219,
             self::FIELD_STAMINA => 137,
@@ -12974,6 +13855,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BLIZZARD, Moves::MOVE_THUNDERBOLT, Moves::MOVE_THUNDER]
         ],
         Pokemon::ROTOM | FormsAlias::ROTOM_HEAT => [
+            self::FIELD_NAME => 'Rotom',
             self::FIELD_ATTACK => 204,
             self::FIELD_DEFENSE => 219,
             self::FIELD_STAMINA => 137,
@@ -12988,6 +13870,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_OVERHEAT, Moves::MOVE_THUNDERBOLT, Moves::MOVE_THUNDER]
         ],
         Pokemon::ROTOM | FormsAlias::ROTOM_MOW => [
+            self::FIELD_NAME => 'Rotom',
             self::FIELD_ATTACK => 204,
             self::FIELD_DEFENSE => 219,
             self::FIELD_STAMINA => 137,
@@ -13002,6 +13885,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_OMINOUS_WIND, Moves::MOVE_THUNDERBOLT, Moves::MOVE_THUNDER]
         ],
         Pokemon::ROTOM | FormsAlias::ROTOM_WASH => [
+            self::FIELD_NAME => 'Rotom',
             self::FIELD_ATTACK => 204,
             self::FIELD_DEFENSE => 219,
             self::FIELD_STAMINA => 137,
@@ -13016,6 +13900,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_THUNDERBOLT, Moves::MOVE_THUNDER]
         ],
         Pokemon::UXIE => [
+            self::FIELD_NAME => 'Uxie',
             self::FIELD_ATTACK => 156,
             self::FIELD_DEFENSE => 270,
             self::FIELD_STAMINA => 181,
@@ -13029,6 +13914,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_SWIFT, Moves::MOVE_THUNDER]
         ],
         Pokemon::MESPRIT => [
+            self::FIELD_NAME => 'Mesprit',
             self::FIELD_ATTACK => 212,
             self::FIELD_DEFENSE => 212,
             self::FIELD_STAMINA => 190,
@@ -13042,6 +13928,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_SWIFT, Moves::MOVE_BLIZZARD]
         ],
         Pokemon::AZELF => [
+            self::FIELD_NAME => 'Azelf',
             self::FIELD_ATTACK => 270,
             self::FIELD_DEFENSE => 151,
             self::FIELD_STAMINA => 181,
@@ -13055,6 +13942,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_SWIFT, Moves::MOVE_FIRE_BLAST]
         ],
         Pokemon::DIALGA => [
+            self::FIELD_NAME => 'Dialga',
             self::FIELD_ATTACK => 275,
             self::FIELD_DEFENSE => 211,
             self::FIELD_STAMINA => 205,
@@ -13069,6 +13957,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRACO_METEOR, Moves::MOVE_IRON_HEAD, Moves::MOVE_THUNDER]
         ],
         Pokemon::PALKIA => [
+            self::FIELD_NAME => 'Palkia',
             self::FIELD_ATTACK => 280,
             self::FIELD_DEFENSE => 215,
             self::FIELD_STAMINA => 189,
@@ -13083,6 +13972,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRACO_METEOR, Moves::MOVE_FIRE_BLAST, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_AQUA_TAIL]
         ],
         Pokemon::HEATRAN => [
+            self::FIELD_NAME => 'Heatran',
             self::FIELD_ATTACK => 251,
             self::FIELD_DEFENSE => 213,
             self::FIELD_STAMINA => 209,
@@ -13097,6 +13987,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_IRON_HEAD, Moves::MOVE_STONE_EDGE, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::REGIGIGAS => [
+            self::FIELD_NAME => 'Regigigas',
             self::FIELD_ATTACK => 287,
             self::FIELD_DEFENSE => 210,
             self::FIELD_STAMINA => 221,
@@ -13110,6 +14001,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_GIGA_IMPACT, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_THUNDER]
         ],
         Pokemon::GIRATINA | FormsAlias::GIRATINA_ORIGIN => [
+            self::FIELD_NAME => 'Giratina',
             self::FIELD_ATTACK => 225,
             self::FIELD_DEFENSE => 187,
             self::FIELD_STAMINA => 284,
@@ -13124,6 +14016,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAGON_PULSE, Moves::MOVE_OMINOUS_WIND, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::GIRATINA | FormsAlias::GIRATINA_ALTERED => [
+            self::FIELD_NAME => 'Giratina',
             self::FIELD_ATTACK => 187,
             self::FIELD_DEFENSE => 225,
             self::FIELD_STAMINA => 284,
@@ -13138,6 +14031,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAGON_CLAW, Moves::MOVE_ANCIENT_POWER, Moves::MOVE_SHADOW_SNEAK]
         ],
         Pokemon::CRESSELIA => [
+            self::FIELD_NAME => 'Cresselia',
             self::FIELD_ATTACK => 152,
             self::FIELD_DEFENSE => 258,
             self::FIELD_STAMINA => 260,
@@ -13152,6 +14046,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::PHIONE => [
+            self::FIELD_NAME => 'Phione',
             self::FIELD_ATTACK => 162,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 190,
@@ -13164,6 +14059,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_WATER_PULSE, Moves::MOVE_SURF]
         ],
         Pokemon::MANAPHY => [
+            self::FIELD_NAME => 'Manaphy',
             self::FIELD_ATTACK => 210,
             self::FIELD_DEFENSE => 210,
             self::FIELD_STAMINA => 225,
@@ -13176,6 +14072,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_PSYCHIC, Moves::MOVE_SURF]
         ],
         Pokemon::DARKRAI => [
+            self::FIELD_NAME => 'Darkrai',
             self::FIELD_ATTACK => 285,
             self::FIELD_DEFENSE => 198,
             self::FIELD_STAMINA => 172,
@@ -13189,6 +14086,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FOCUS_BLAST, Moves::MOVE_SHADOW_BALL, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::SHAYMIN | FormsAlias::SHAYMIN_LAND => [
+            self::FIELD_NAME => 'Shaymin',
             self::FIELD_ATTACK => 210,
             self::FIELD_DEFENSE => 210,
             self::FIELD_STAMINA => 225,
@@ -13201,6 +14099,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_GRASS_KNOT, Moves::MOVE_SOLAR_BEAM]
         ],
         Pokemon::SHAYMIN | FormsAlias::SHAYMIN_SKY => [
+            self::FIELD_NAME => 'Shaymin',
             self::FIELD_ATTACK => 261,
             self::FIELD_DEFENSE => 166,
             self::FIELD_STAMINA => 225,
@@ -13214,6 +14113,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_GRASS_KNOT, Moves::MOVE_SOLAR_BEAM]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_NORMAL => [
+            self::FIELD_NAME => 'Arceus',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -13226,6 +14126,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_BUG => [
+            self::FIELD_NAME => 'Arceus',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -13238,6 +14139,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_DARK => [
+            self::FIELD_NAME => 'Arceus',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -13250,6 +14152,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_DRAGON => [
+            self::FIELD_NAME => 'Arceus',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -13262,6 +14165,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_ELECTRIC => [
+            self::FIELD_NAME => 'Arceus',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -13274,6 +14178,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_FAIRY => [
+            self::FIELD_NAME => 'Arceus',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -13286,6 +14191,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_FIGHTING => [
+            self::FIELD_NAME => 'Arceus',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -13298,6 +14204,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_FIRE => [
+            self::FIELD_NAME => 'Arceus',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -13310,6 +14217,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_FLYING => [
+            self::FIELD_NAME => 'Arceus',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -13322,6 +14230,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_GHOST => [
+            self::FIELD_NAME => 'Arceus',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -13334,6 +14243,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_GRASS => [
+            self::FIELD_NAME => 'Arceus',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -13346,6 +14256,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_GROUND => [
+            self::FIELD_NAME => 'Arceus',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -13358,6 +14269,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_ICE => [
+            self::FIELD_NAME => 'Arceus',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -13370,6 +14282,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_POISON => [
+            self::FIELD_NAME => 'Arceus',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -13382,6 +14295,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_PSYCHIC => [
+            self::FIELD_NAME => 'Arceus',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -13394,6 +14308,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_ROCK => [
+            self::FIELD_NAME => 'Arceus',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -13406,6 +14321,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_STEEL => [
+            self::FIELD_NAME => 'Arceus',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -13418,6 +14334,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::ARCEUS | FormsAlias::ARCEUS_WATER => [
+            self::FIELD_NAME => 'Arceus',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -13430,6 +14347,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::VICTINI => [
+            self::FIELD_NAME => 'Victini',
             self::FIELD_ATTACK => 210,
             self::FIELD_DEFENSE => 210,
             self::FIELD_STAMINA => 225,
@@ -13443,6 +14361,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_OVERHEAT, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_PSYCHIC, Moves::MOVE_V_CREATE]
         ],
         Pokemon::SNIVY => [
+            self::FIELD_NAME => 'Snivy',
             self::FIELD_ATTACK => 88,
             self::FIELD_DEFENSE => 107,
             self::FIELD_STAMINA => 128,
@@ -13457,6 +14376,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SEED_BOMB, Moves::MOVE_WRAP]
         ],
         Pokemon::SERVINE => [
+            self::FIELD_NAME => 'Servine',
             self::FIELD_ATTACK => 122,
             self::FIELD_DEFENSE => 152,
             self::FIELD_STAMINA => 155,
@@ -13471,6 +14391,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_GRASS_KNOT, Moves::MOVE_LEAF_TORNADO, Moves::MOVE_WRAP]
         ],
         Pokemon::SERPERIOR => [
+            self::FIELD_NAME => 'Serperior',
             self::FIELD_ATTACK => 161,
             self::FIELD_DEFENSE => 204,
             self::FIELD_STAMINA => 181,
@@ -13484,6 +14405,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_GRASS_KNOT, Moves::MOVE_LEAF_TORNADO, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::TEPIG => [
+            self::FIELD_NAME => 'Tepig',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 85,
             self::FIELD_STAMINA => 163,
@@ -13498,6 +14420,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_CHARGE, Moves::MOVE_FLAMETHROWER, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::PIGNITE => [
+            self::FIELD_NAME => 'Pignite',
             self::FIELD_ATTACK => 173,
             self::FIELD_DEFENSE => 106,
             self::FIELD_STAMINA => 207,
@@ -13513,6 +14436,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_CHARGE, Moves::MOVE_FLAMETHROWER, Moves::MOVE_ROCK_TOMB]
         ],
         Pokemon::EMBOAR => [
+            self::FIELD_NAME => 'Emboar',
             self::FIELD_ATTACK => 235,
             self::FIELD_DEFENSE => 127,
             self::FIELD_STAMINA => 242,
@@ -13527,6 +14451,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAT_WAVE, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_FOCUS_BLAST]
         ],
         Pokemon::OSHAWOTT => [
+            self::FIELD_NAME => 'Oshawott',
             self::FIELD_ATTACK => 117,
             self::FIELD_DEFENSE => 85,
             self::FIELD_STAMINA => 146,
@@ -13541,6 +14466,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_TAIL, Moves::MOVE_WATER_PULSE, Moves::MOVE_NIGHT_SLASH]
         ],
         Pokemon::DEWOTT => [
+            self::FIELD_NAME => 'Dewott',
             self::FIELD_ATTACK => 159,
             self::FIELD_DEFENSE => 116,
             self::FIELD_STAMINA => 181,
@@ -13555,6 +14481,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_TAIL, Moves::MOVE_WATER_PULSE, Moves::MOVE_X_SCISSOR]
         ],
         Pokemon::SAMUROTT => [
+            self::FIELD_NAME => 'Samurott',
             self::FIELD_ATTACK => 212,
             self::FIELD_DEFENSE => 157,
             self::FIELD_STAMINA => 216,
@@ -13568,6 +14495,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_BLIZZARD, Moves::MOVE_MEGAHORN]
         ],
         Pokemon::PATRAT => [
+            self::FIELD_NAME => 'Patrat',
             self::FIELD_ATTACK => 98,
             self::FIELD_DEFENSE => 73,
             self::FIELD_STAMINA => 128,
@@ -13582,6 +14510,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_HYPER_FANG, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::WATCHDOG => [
+            self::FIELD_NAME => 'Watchog',
             self::FIELD_ATTACK => 165,
             self::FIELD_DEFENSE => 139,
             self::FIELD_STAMINA => 155,
@@ -13595,6 +14524,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_HYPER_FANG, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::LILLIPUP => [
+            self::FIELD_NAME => 'Lillipup',
             self::FIELD_ATTACK => 107,
             self::FIELD_DEFENSE => 86,
             self::FIELD_STAMINA => 128,
@@ -13609,6 +14539,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDERBOLT, Moves::MOVE_ROCK_TOMB, Moves::MOVE_DIG]
         ],
         Pokemon::HERDIER => [
+            self::FIELD_NAME => 'Herdier',
             self::FIELD_ATTACK => 145,
             self::FIELD_DEFENSE => 126,
             self::FIELD_STAMINA => 163,
@@ -13623,6 +14554,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDERBOLT, Moves::MOVE_PLAY_ROUGH, Moves::MOVE_DIG]
         ],
         Pokemon::STOUTLAND => [
+            self::FIELD_NAME => 'Stoutland',
             self::FIELD_ATTACK => 206,
             self::FIELD_DEFENSE => 182,
             self::FIELD_STAMINA => 198,
@@ -13636,6 +14568,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_WILD_CHARGE, Moves::MOVE_PLAY_ROUGH, Moves::MOVE_CRUNCH]
         ],
         Pokemon::PURROLIN => [
+            self::FIELD_NAME => 'Purrloin',
             self::FIELD_ATTACK => 98,
             self::FIELD_DEFENSE => 73,
             self::FIELD_STAMINA => 121,
@@ -13650,6 +14583,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SLASH, Moves::MOVE_PLAY_ROUGH, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::LIEPARD => [
+            self::FIELD_NAME => 'Liepard',
             self::FIELD_ATTACK => 187,
             self::FIELD_DEFENSE => 106,
             self::FIELD_STAMINA => 162,
@@ -13663,6 +14597,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_GUNK_SHOT, Moves::MOVE_PLAY_ROUGH, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::PANSAGE => [
+            self::FIELD_NAME => 'Pansage',
             self::FIELD_ATTACK => 104,
             self::FIELD_DEFENSE => 94,
             self::FIELD_STAMINA => 137,
@@ -13677,6 +14612,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SEED_BOMB, Moves::MOVE_CRUNCH]
         ],
         Pokemon::SIMISAGE => [
+            self::FIELD_NAME => 'Simisage',
             self::FIELD_ATTACK => 206,
             self::FIELD_DEFENSE => 133,
             self::FIELD_STAMINA => 181,
@@ -13690,6 +14626,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SOLAR_BEAM, Moves::MOVE_GRASS_KNOT, Moves::MOVE_CRUNCH]
         ],
         Pokemon::PANSEAR => [
+            self::FIELD_NAME => 'Pansear',
             self::FIELD_ATTACK => 104,
             self::FIELD_DEFENSE => 94,
             self::FIELD_STAMINA => 137,
@@ -13704,6 +14641,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_BURST, Moves::MOVE_FLAME_CHARGE, Moves::MOVE_CRUNCH]
         ],
         Pokemon::SMISEAR => [
+            self::FIELD_NAME => 'Simisear',
             self::FIELD_ATTACK => 206,
             self::FIELD_DEFENSE => 133,
             self::FIELD_STAMINA => 181,
@@ -13717,6 +14655,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAMETHROWER, Moves::MOVE_FIRE_BLAST, Moves::MOVE_CRUNCH]
         ],
         Pokemon::PANPOUR => [
+            self::FIELD_NAME => 'Panpour',
             self::FIELD_ATTACK => 104,
             self::FIELD_DEFENSE => 94,
             self::FIELD_STAMINA => 137,
@@ -13731,6 +14670,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SURF, Moves::MOVE_WATER_PULSE, Moves::MOVE_CRUNCH]
         ],
         Pokemon::SMIPOUR => [
+            self::FIELD_NAME => 'Simipour',
             self::FIELD_ATTACK => 206,
             self::FIELD_DEFENSE => 133,
             self::FIELD_STAMINA => 181,
@@ -13744,6 +14684,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SURF, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_CRUNCH]
         ],
         Pokemon::MUNNA => [
+            self::FIELD_NAME => 'Munna',
             self::FIELD_ATTACK => 111,
             self::FIELD_DEFENSE => 92,
             self::FIELD_STAMINA => 183,
@@ -13758,6 +14699,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_PSYSHOCK]
         ],
         Pokemon::MUSHARNA => [
+            self::FIELD_NAME => 'Musharna',
             self::FIELD_ATTACK => 183,
             self::FIELD_DEFENSE => 166,
             self::FIELD_STAMINA => 253,
@@ -13771,6 +14713,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_PSYSHOCK]
         ],
         Pokemon::PIDOVE => [
+            self::FIELD_NAME => 'Pidove',
             self::FIELD_ATTACK => 98,
             self::FIELD_DEFENSE => 80,
             self::FIELD_STAMINA => 137,
@@ -13786,6 +14729,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAT_WAVE, Moves::MOVE_AERIAL_ACE, Moves::MOVE_AIR_CUTTER]
         ],
         Pokemon::TRANQUILL => [
+            self::FIELD_NAME => 'Tranquill',
             self::FIELD_ATTACK => 144,
             self::FIELD_DEFENSE => 107,
             self::FIELD_STAMINA => 158,
@@ -13801,6 +14745,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAT_WAVE, Moves::MOVE_AERIAL_ACE, Moves::MOVE_SKY_ATTACK]
         ],
         Pokemon::UNFEZANT => [
+            self::FIELD_NAME => 'Unfezant',
             self::FIELD_ATTACK => 226,
             self::FIELD_DEFENSE => 146,
             self::FIELD_STAMINA => 190,
@@ -13815,6 +14760,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAT_WAVE, Moves::MOVE_HYPER_BEAM, Moves::MOVE_SKY_ATTACK]
         ],
         Pokemon::BLITZLE => [
+            self::FIELD_NAME => 'Blitzle',
             self::FIELD_ATTACK => 118,
             self::FIELD_DEFENSE => 64,
             self::FIELD_STAMINA => 128,
@@ -13829,6 +14775,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_CHARGE, Moves::MOVE_DISCHARGE, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::ZEBSTRIKA => [
+            self::FIELD_NAME => 'Zebstrika',
             self::FIELD_ATTACK => 211,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 181,
@@ -13842,6 +14789,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_CHARGE, Moves::MOVE_DISCHARGE, Moves::MOVE_WILD_CHARGE]
         ],
         Pokemon::ROGGENROLA => [
+            self::FIELD_NAME => 'Roggenrola',
             self::FIELD_ATTACK => 121,
             self::FIELD_DEFENSE => 110,
             self::FIELD_STAMINA => 146,
@@ -13856,6 +14804,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BULLDOZE, Moves::MOVE_ROCK_BLAST, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::BOLDORE => [
+            self::FIELD_NAME => 'Boldore',
             self::FIELD_ATTACK => 174,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 172,
@@ -13870,6 +14819,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_SLIDE, Moves::MOVE_BULLDOZE, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::GIGALITH => [
+            self::FIELD_NAME => 'Gigalith',
             self::FIELD_ATTACK => 226,
             self::FIELD_DEFENSE => 201,
             self::FIELD_STAMINA => 198,
@@ -13883,6 +14833,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_SLIDE, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_SUPER_POWER, Moves::MOVE_HEAVY_SLAM]
         ],
         Pokemon::WOOBAT => [
+            self::FIELD_NAME => 'Woobat',
             self::FIELD_ATTACK => 107,
             self::FIELD_DEFENSE => 85,
             self::FIELD_STAMINA => 163,
@@ -13898,6 +14849,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AIR_CUTTER, Moves::MOVE_AERIAL_ACE, Moves::MOVE_PSYSHOCK]
         ],
         Pokemon::SWOOBAT => [
+            self::FIELD_NAME => 'Swoobat',
             self::FIELD_ATTACK => 161,
             self::FIELD_DEFENSE => 119,
             self::FIELD_STAMINA => 167,
@@ -13912,6 +14864,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_AERIAL_ACE, Moves::MOVE_FUTURESIGHT]
         ],
         Pokemon::DRILBUR => [
+            self::FIELD_NAME => 'Drilbur',
             self::FIELD_ATTACK => 154,
             self::FIELD_DEFENSE => 85,
             self::FIELD_STAMINA => 155,
@@ -13926,6 +14879,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_TOMB, Moves::MOVE_DIG, Moves::MOVE_DRILL_RUN]
         ],
         Pokemon::EXCADRILL => [
+            self::FIELD_NAME => 'Excadrill',
             self::FIELD_ATTACK => 255,
             self::FIELD_DEFENSE => 129,
             self::FIELD_STAMINA => 242,
@@ -13940,6 +14894,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_SLIDE, Moves::MOVE_EARTHQUAKE, Moves::MOVE_DRILL_RUN, Moves::MOVE_IRON_HEAD]
         ],
         Pokemon::AUDINO => [
+            self::FIELD_NAME => 'Audino',
             self::FIELD_ATTACK => 114,
             self::FIELD_DEFENSE => 163,
             self::FIELD_STAMINA => 230,
@@ -13953,6 +14908,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DISARMING_VOICE, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::TIMBURR => [
+            self::FIELD_NAME => 'Timburr',
             self::FIELD_ATTACK => 134,
             self::FIELD_DEFENSE => 87,
             self::FIELD_STAMINA => 181,
@@ -13967,6 +14923,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_LOW_SWEEP, Moves::MOVE_BRICK_BREAK, Moves::MOVE_ROCK_TOMB]
         ],
         Pokemon::GURDURR => [
+            self::FIELD_NAME => 'Gurdurr',
             self::FIELD_ATTACK => 180,
             self::FIELD_DEFENSE => 134,
             self::FIELD_STAMINA => 198,
@@ -13981,6 +14938,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_LOW_SWEEP, Moves::MOVE_BRICK_BREAK, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::CONKELDURR => [
+            self::FIELD_NAME => 'Conkeldurr',
             self::FIELD_ATTACK => 243,
             self::FIELD_DEFENSE => 158,
             self::FIELD_STAMINA => 233,
@@ -13994,6 +14952,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DYNAMIC_PUNCH, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::TYMPOLE => [
+            self::FIELD_NAME => 'Tympole',
             self::FIELD_ATTACK => 98,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 137,
@@ -14008,6 +14967,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_MUD_BOMB, Moves::MOVE_SLUDGE_WAVE]
         ],
         Pokemon::PALPITOAD => [
+            self::FIELD_NAME => 'Palpitoad',
             self::FIELD_ATTACK => 128,
             self::FIELD_DEFENSE => 109,
             self::FIELD_STAMINA => 181,
@@ -14023,6 +14983,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_EARTH_POWER, Moves::MOVE_SLUDGE_WAVE]
         ],
         Pokemon::SEISMITOAD => [
+            self::FIELD_NAME => 'Seismitoad',
             self::FIELD_ATTACK => 188,
             self::FIELD_DEFENSE => 150,
             self::FIELD_STAMINA => 233,
@@ -14037,6 +14998,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_MUDDY_WATER, Moves::MOVE_EARTH_POWER, Moves::MOVE_SLUDGE_BOMB]
         ],
         Pokemon::THROH => [
+            self::FIELD_NAME => 'Throh',
             self::FIELD_ATTACK => 172,
             self::FIELD_DEFENSE => 160,
             self::FIELD_STAMINA => 260,
@@ -14050,6 +15012,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FOCUS_BLAST, Moves::MOVE_LOW_SWEEP, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::SAWK => [
+            self::FIELD_NAME => 'Sawk',
             self::FIELD_ATTACK => 231,
             self::FIELD_DEFENSE => 153,
             self::FIELD_STAMINA => 181,
@@ -14063,6 +15026,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FOCUS_BLAST, Moves::MOVE_LOW_SWEEP, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::SEWADDLE => [
+            self::FIELD_NAME => 'Sewaddle',
             self::FIELD_ATTACK => 96,
             self::FIELD_DEFENSE => 124,
             self::FIELD_STAMINA => 128,
@@ -14078,6 +15042,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SEED_BOMB, Moves::MOVE_SILVER_WIND]
         ],
         Pokemon::SWADLOON => [
+            self::FIELD_NAME => 'Swadloon',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 146,
@@ -14093,6 +15058,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_BUG_BUZZ, Moves::MOVE_SILVER_WIND]
         ],
         Pokemon::LEVANNY => [
+            self::FIELD_NAME => 'Leavanny',
             self::FIELD_ATTACK => 205,
             self::FIELD_DEFENSE => 165,
             self::FIELD_STAMINA => 181,
@@ -14107,6 +15073,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_LEAF_BLADE, Moves::MOVE_X_SCISSOR, Moves::MOVE_SILVER_WIND]
         ],
         Pokemon::VENIPEDE => [
+            self::FIELD_NAME => 'Venipede',
             self::FIELD_ATTACK => 83,
             self::FIELD_DEFENSE => 99,
             self::FIELD_STAMINA => 102,
@@ -14122,6 +15089,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SIGNAL_BEAM, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_GYRO_BALL]
         ],
         Pokemon::WHIRLIPEDE => [
+            self::FIELD_NAME => 'Whirlipede',
             self::FIELD_ATTACK => 100,
             self::FIELD_DEFENSE => 173,
             self::FIELD_STAMINA => 120,
@@ -14137,6 +15105,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SIGNAL_BEAM, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_GYRO_BALL]
         ],
         Pokemon::SCOLIPEDE => [
+            self::FIELD_NAME => 'Scolipede',
             self::FIELD_ATTACK => 203,
             self::FIELD_DEFENSE => 175,
             self::FIELD_STAMINA => 155,
@@ -14151,6 +15120,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_MEGAHORN, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_GYRO_BALL, Moves::MOVE_X_SCISSOR]
         ],
         Pokemon::COTTONEE => [
+            self::FIELD_NAME => 'Cottonee',
             self::FIELD_ATTACK => 71,
             self::FIELD_DEFENSE => 111,
             self::FIELD_STAMINA => 120,
@@ -14166,6 +15136,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SEED_BOMB, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::WHIMSICOTT => [
+            self::FIELD_NAME => 'Whimsicott',
             self::FIELD_ATTACK => 164,
             self::FIELD_DEFENSE => 176,
             self::FIELD_STAMINA => 155,
@@ -14180,6 +15151,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_GRASS_KNOT, Moves::MOVE_HURRICANE, Moves::MOVE_MOONBLAST]
         ],
         Pokemon::PETILIL => [
+            self::FIELD_NAME => 'Petilil',
             self::FIELD_ATTACK => 119,
             self::FIELD_DEFENSE => 91,
             self::FIELD_STAMINA => 128,
@@ -14194,6 +15166,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SEED_BOMB]
         ],
         Pokemon::LILLIGANT => [
+            self::FIELD_NAME => 'Lilligant',
             self::FIELD_ATTACK => 214,
             self::FIELD_DEFENSE => 155,
             self::FIELD_STAMINA => 172,
@@ -14207,6 +15180,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_HYPER_BEAM, Moves::MOVE_SOLAR_BEAM]
         ],
         Pokemon::BASCULIN | FormsAlias::BASCULIN_BLUE_STRIPED => [
+            self::FIELD_NAME => 'Basculin',
             self::FIELD_ATTACK => 189,
             self::FIELD_DEFENSE => 129,
             self::FIELD_STAMINA => 172,
@@ -14220,6 +15194,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_AQUA_TAIL, Moves::MOVE_MUDDY_WATER]
         ],
         Pokemon::BASCULIN | FormsAlias::BASCULIN_RED_STRIPED => [
+            self::FIELD_NAME => 'Basculin',
             self::FIELD_ATTACK => 189,
             self::FIELD_DEFENSE => 129,
             self::FIELD_STAMINA => 172,
@@ -14233,6 +15208,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_AQUA_TAIL, Moves::MOVE_MUDDY_WATER]
         ],
         Pokemon::SANDILE => [
+            self::FIELD_NAME => 'Sandile',
             self::FIELD_ATTACK => 132,
             self::FIELD_DEFENSE => 69,
             self::FIELD_STAMINA => 137,
@@ -14248,6 +15224,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_CRUNCH, Moves::MOVE_BULLDOZE]
         ],
         Pokemon::KROKOROK => [
+            self::FIELD_NAME => 'Krokorok',
             self::FIELD_ATTACK => 155,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 155,
@@ -14263,6 +15240,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_CRUNCH, Moves::MOVE_BULLDOZE]
         ],
         Pokemon::KROOKODILE => [
+            self::FIELD_NAME => 'Krookodile',
             self::FIELD_ATTACK => 229,
             self::FIELD_DEFENSE => 158,
             self::FIELD_STAMINA => 216,
@@ -14277,6 +15255,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_CRUNCH, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::DARUMAKA => [
+            self::FIELD_NAME => 'Darumaka',
             self::FIELD_ATTACK => 153,
             self::FIELD_DEFENSE => 86,
             self::FIELD_STAMINA => 172,
@@ -14291,6 +15270,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_PUNCH, Moves::MOVE_FLAME_CHARGE]
         ],
         Pokemon::DARUMAKA | Mods::GALARIAN => [
+            self::FIELD_NAME => 'Darumaka',
             self::FIELD_ATTACK => 153,
             self::FIELD_DEFENSE => 86,
             self::FIELD_STAMINA => 172,
@@ -14305,6 +15285,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_PUNCH, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::DARUMAKA | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Darumaka',
             self::FIELD_ATTACK => 153,
             self::FIELD_DEFENSE => 86,
             self::FIELD_STAMINA => 172,
@@ -14318,6 +15299,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_PUNCH, Moves::MOVE_FLAME_CHARGE]
         ],
         Pokemon::DARUMAKA | Mods::SHADOW => [
+            self::FIELD_NAME => 'Darumaka',
             self::FIELD_ATTACK => 153,
             self::FIELD_DEFENSE => 86,
             self::FIELD_STAMINA => 172,
@@ -14333,6 +15315,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_PUNCH, Moves::MOVE_FLAME_CHARGE]
         ],
         Pokemon::DARMANITAN | FormsAlias::DARMANITAN_STANDARD => [
+            self::FIELD_NAME => 'Darmanitan',
             self::FIELD_ATTACK => 263,
             self::FIELD_DEFENSE => 114,
             self::FIELD_STAMINA => 233,
@@ -14346,6 +15329,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_OVERHEAT, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_PSYCHIC, Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::DARMANITAN | FormsAlias::DARMANITAN_STANDARD | Mods::GALARIAN => [
+            self::FIELD_NAME => 'Darmanitan',
             self::FIELD_ATTACK => 263,
             self::FIELD_DEFENSE => 114,
             self::FIELD_STAMINA => 233,
@@ -14359,6 +15343,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_OVERHEAT, Moves::MOVE_AVALANCHE, Moves::MOVE_SUPER_POWER, Moves::MOVE_ICE_PUNCH]
         ],
         Pokemon::DARMANITAN | FormsAlias::DARMANITAN_ZEN | Mods::GALARIAN => [
+            self::FIELD_NAME => 'Darmanitan',
             self::FIELD_ATTACK => 323,
             self::FIELD_DEFENSE => 123,
             self::FIELD_STAMINA => 233,
@@ -14373,6 +15358,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_OVERHEAT, Moves::MOVE_AVALANCHE, Moves::MOVE_SUPER_POWER, Moves::MOVE_ICE_PUNCH]
         ],
         Pokemon::DARMANITAN | FormsAlias::DARMANITAN_ZEN => [
+            self::FIELD_NAME => 'Darmanitan',
             self::FIELD_ATTACK => 243,
             self::FIELD_DEFENSE => 202,
             self::FIELD_STAMINA => 233,
@@ -14387,6 +15373,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_OVERHEAT, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_PSYCHIC, Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::MARACTUS => [
+            self::FIELD_NAME => 'Maractus',
             self::FIELD_ATTACK => 201,
             self::FIELD_DEFENSE => 130,
             self::FIELD_STAMINA => 181,
@@ -14400,6 +15387,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AERIAL_ACE, Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_SOLAR_BEAM]
         ],
         Pokemon::DWEBBLE => [
+            self::FIELD_NAME => 'Dwebble',
             self::FIELD_ATTACK => 118,
             self::FIELD_DEFENSE => 128,
             self::FIELD_STAMINA => 137,
@@ -14415,6 +15403,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_BLAST, Moves::MOVE_X_SCISSOR, Moves::MOVE_ROCK_TOMB]
         ],
         Pokemon::CRUSTLE => [
+            self::FIELD_NAME => 'Crustle',
             self::FIELD_ATTACK => 188,
             self::FIELD_DEFENSE => 200,
             self::FIELD_STAMINA => 172,
@@ -14429,6 +15418,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_BLAST, Moves::MOVE_X_SCISSOR, Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::SCRAGGY => [
+            self::FIELD_NAME => 'Scraggy',
             self::FIELD_ATTACK => 132,
             self::FIELD_DEFENSE => 132,
             self::FIELD_STAMINA => 137,
@@ -14444,6 +15434,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ACID_SPRAY, Moves::MOVE_BRICK_BREAK, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::SCRAFTY => [
+            self::FIELD_NAME => 'Scrafty',
             self::FIELD_ATTACK => 163,
             self::FIELD_DEFENSE => 222,
             self::FIELD_STAMINA => 163,
@@ -14458,6 +15449,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ACID_SPRAY, Moves::MOVE_POWER_UP_PUNCH, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::SIGILYPH => [
+            self::FIELD_NAME => 'Sigilyph',
             self::FIELD_ATTACK => 204,
             self::FIELD_DEFENSE => 167,
             self::FIELD_STAMINA => 176,
@@ -14472,6 +15464,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AIR_CUTTER, Moves::MOVE_PSYBEAM, Moves::MOVE_ANCIENT_POWER, Moves::MOVE_SIGNAL_BEAM]
         ],
         Pokemon::YAMASK => [
+            self::FIELD_NAME => 'Yamask',
             self::FIELD_ATTACK => 95,
             self::FIELD_DEFENSE => 141,
             self::FIELD_STAMINA => 116,
@@ -14486,6 +15479,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_DARK_PULSE, Moves::MOVE_OMINOUS_WIND]
         ],
         Pokemon::COFAGRIGUS => [
+            self::FIELD_NAME => 'Cofagrigus',
             self::FIELD_ATTACK => 163,
             self::FIELD_DEFENSE => 237,
             self::FIELD_STAMINA => 151,
@@ -14499,6 +15493,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_DARK_PULSE, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::TIRTOUGA => [
+            self::FIELD_NAME => 'Tirtouga',
             self::FIELD_ATTACK => 134,
             self::FIELD_DEFENSE => 146,
             self::FIELD_STAMINA => 144,
@@ -14514,6 +15509,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SURF, Moves::MOVE_ANCIENT_POWER, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::CARRACOSTA => [
+            self::FIELD_NAME => 'Carracosta',
             self::FIELD_ATTACK => 192,
             self::FIELD_DEFENSE => 197,
             self::FIELD_STAMINA => 179,
@@ -14528,6 +15524,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SURF, Moves::MOVE_ANCIENT_POWER, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::ARCHEN => [
+            self::FIELD_NAME => 'Archen',
             self::FIELD_ATTACK => 213,
             self::FIELD_DEFENSE => 89,
             self::FIELD_STAMINA => 146,
@@ -14543,6 +15540,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAGON_CLAW, Moves::MOVE_ANCIENT_POWER, Moves::MOVE_CRUNCH]
         ],
         Pokemon::ARCHEOPS => [
+            self::FIELD_NAME => 'Archeops',
             self::FIELD_ATTACK => 292,
             self::FIELD_DEFENSE => 139,
             self::FIELD_STAMINA => 181,
@@ -14557,6 +15555,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAGON_CLAW, Moves::MOVE_ANCIENT_POWER, Moves::MOVE_CRUNCH]
         ],
         Pokemon::TRUBBISH => [
+            self::FIELD_NAME => 'Trubbish',
             self::FIELD_ATTACK => 96,
             self::FIELD_DEFENSE => 122,
             self::FIELD_STAMINA => 137,
@@ -14571,6 +15570,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_GUNK_SHOT, Moves::MOVE_SEED_BOMB, Moves::MOVE_GUNK_SHOT]
         ],
         Pokemon::GARBODOR => [
+            self::FIELD_NAME => 'Garbodor',
             self::FIELD_ATTACK => 181,
             self::FIELD_DEFENSE => 164,
             self::FIELD_STAMINA => 190,
@@ -14584,6 +15584,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ACID_SPRAY, Moves::MOVE_SEED_BOMB, Moves::MOVE_GUNK_SHOT, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::ZORUA => [
+            self::FIELD_NAME => 'Zorua',
             self::FIELD_ATTACK => 153,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 120,
@@ -14598,6 +15599,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FOUL_PLAY, Moves::MOVE_AERIAL_ACE, Moves::MOVE_DARK_PULSE]
         ],
         Pokemon::ZOROARK => [
+            self::FIELD_NAME => 'Zoroark',
             self::FIELD_ATTACK => 250,
             self::FIELD_DEFENSE => 127,
             self::FIELD_STAMINA => 155,
@@ -14611,6 +15613,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FOUL_PLAY, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::MINCCINO => [
+            self::FIELD_NAME => 'Minccino',
             self::FIELD_ATTACK => 98,
             self::FIELD_DEFENSE => 80,
             self::FIELD_STAMINA => 146,
@@ -14625,6 +15628,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SWIFT, Moves::MOVE_THUNDERBOLT, Moves::MOVE_AQUA_TAIL]
         ],
         Pokemon::CINCCINO => [
+            self::FIELD_NAME => 'Cinccino',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 130,
             self::FIELD_STAMINA => 181,
@@ -14638,6 +15642,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYPER_BEAM, Moves::MOVE_THUNDERBOLT, Moves::MOVE_AQUA_TAIL]
         ],
         Pokemon::GOTHITA => [
+            self::FIELD_NAME => 'Gothita',
             self::FIELD_ATTACK => 98,
             self::FIELD_DEFENSE => 112,
             self::FIELD_STAMINA => 128,
@@ -14652,6 +15657,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_PSYSHOCK, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::GOTHORITA => [
+            self::FIELD_NAME => 'Gothorita',
             self::FIELD_ATTACK => 137,
             self::FIELD_DEFENSE => 153,
             self::FIELD_STAMINA => 155,
@@ -14666,6 +15672,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_FUTURESIGHT, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::GOTHITELLE => [
+            self::FIELD_NAME => 'Gothitelle',
             self::FIELD_ATTACK => 176,
             self::FIELD_DEFENSE => 205,
             self::FIELD_STAMINA => 172,
@@ -14679,6 +15686,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_SLIDE, Moves::MOVE_FUTURESIGHT, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::SOLOSIS => [
+            self::FIELD_NAME => 'Solosis',
             self::FIELD_ATTACK => 170,
             self::FIELD_DEFENSE => 83,
             self::FIELD_STAMINA => 128,
@@ -14693,6 +15701,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYSHOCK, Moves::MOVE_NIGHT_SHADE, Moves::MOVE_THUNDER]
         ],
         Pokemon::DUOSION => [
+            self::FIELD_NAME => 'Duosion',
             self::FIELD_ATTACK => 208,
             self::FIELD_DEFENSE => 103,
             self::FIELD_STAMINA => 163,
@@ -14707,6 +15716,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYSHOCK, Moves::MOVE_NIGHT_SHADE, Moves::MOVE_THUNDER]
         ],
         Pokemon::REUNICLUS => [
+            self::FIELD_NAME => 'Reuniclus',
             self::FIELD_ATTACK => 214,
             self::FIELD_DEFENSE => 148,
             self::FIELD_STAMINA => 242,
@@ -14720,6 +15730,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FUTURESIGHT, Moves::MOVE_SHADOW_BALL, Moves::MOVE_THUNDER]
         ],
         Pokemon::DUCKLETT => [
+            self::FIELD_NAME => 'Ducklett',
             self::FIELD_ATTACK => 84,
             self::FIELD_DEFENSE => 96,
             self::FIELD_STAMINA => 158,
@@ -14735,6 +15746,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AERIAL_ACE, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_BRAVE_BIRD]
         ],
         Pokemon::SWANNA => [
+            self::FIELD_NAME => 'Swanna',
             self::FIELD_ATTACK => 182,
             self::FIELD_DEFENSE => 132,
             self::FIELD_STAMINA => 181,
@@ -14749,6 +15761,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_BEAM, Moves::MOVE_BUBBLE_BEAM, Moves::MOVE_HURRICANE]
         ],
         Pokemon::VANILLITE => [
+            self::FIELD_NAME => 'Vanillite',
             self::FIELD_ATTACK => 118,
             self::FIELD_DEFENSE => 106,
             self::FIELD_STAMINA => 113,
@@ -14763,6 +15776,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICY_WIND, Moves::MOVE_ICE_BEAM, Moves::MOVE_SIGNAL_BEAM]
         ],
         Pokemon::VANILLISH => [
+            self::FIELD_NAME => 'Vanillish',
             self::FIELD_ATTACK => 151,
             self::FIELD_DEFENSE => 138,
             self::FIELD_STAMINA => 139,
@@ -14777,6 +15791,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICY_WIND, Moves::MOVE_ICE_BEAM, Moves::MOVE_SIGNAL_BEAM]
         ],
         Pokemon::VANILLUXE => [
+            self::FIELD_NAME => 'Vanilluxe',
             self::FIELD_ATTACK => 218,
             self::FIELD_DEFENSE => 184,
             self::FIELD_STAMINA => 174,
@@ -14790,6 +15805,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BLIZZARD, Moves::MOVE_FLASH_CANNON, Moves::MOVE_SIGNAL_BEAM]
         ],
         Pokemon::DEERLING | FormsAlias::DEERLING_SPRING => [
+            self::FIELD_NAME => 'Deerling',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 100,
             self::FIELD_STAMINA => 155,
@@ -14805,6 +15821,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SEED_BOMB, Moves::MOVE_WILD_CHARGE]
         ],
         Pokemon::DEERLING | FormsAlias::DEERLING_AUTUMN => [
+            self::FIELD_NAME => 'Deerling',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 100,
             self::FIELD_STAMINA => 155,
@@ -14820,6 +15837,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SEED_BOMB, Moves::MOVE_WILD_CHARGE]
         ],
         Pokemon::DEERLING | FormsAlias::DEERLING_SUMMER => [
+            self::FIELD_NAME => 'Deerling',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 100,
             self::FIELD_STAMINA => 155,
@@ -14835,6 +15853,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SEED_BOMB, Moves::MOVE_WILD_CHARGE]
         ],
         Pokemon::DEERLING | FormsAlias::DEERLING_WINTER => [
+            self::FIELD_NAME => 'Deerling',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 100,
             self::FIELD_STAMINA => 155,
@@ -14850,6 +15869,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SEED_BOMB, Moves::MOVE_WILD_CHARGE]
         ],
         Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_SPRING => [
+            self::FIELD_NAME => 'Sawsbuck',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 146,
             self::FIELD_STAMINA => 190,
@@ -14864,6 +15884,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_MEGAHORN, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_WILD_CHARGE, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_AUTUMN => [
+            self::FIELD_NAME => 'Sawsbuck',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 146,
             self::FIELD_STAMINA => 190,
@@ -14878,6 +15899,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_MEGAHORN, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_WILD_CHARGE, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_SUMMER => [
+            self::FIELD_NAME => 'Sawsbuck',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 146,
             self::FIELD_STAMINA => 190,
@@ -14892,6 +15914,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_MEGAHORN, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_WILD_CHARGE, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_WINTER => [
+            self::FIELD_NAME => 'Sawsbuck',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 146,
             self::FIELD_STAMINA => 190,
@@ -14906,6 +15929,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_MEGAHORN, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_WILD_CHARGE, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::EMOLGA => [
+            self::FIELD_NAME => 'Emolga',
             self::FIELD_ATTACK => 158,
             self::FIELD_DEFENSE => 127,
             self::FIELD_STAMINA => 146,
@@ -14920,6 +15944,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DISCHARGE, Moves::MOVE_AERIAL_ACE, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::KARRABLAST => [
+            self::FIELD_NAME => 'Karrablast',
             self::FIELD_ATTACK => 137,
             self::FIELD_DEFENSE => 87,
             self::FIELD_STAMINA => 137,
@@ -14934,6 +15959,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SIGNAL_BEAM, Moves::MOVE_X_SCISSOR, Moves::MOVE_DRILL_RUN, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::ESCAVALIER => [
+            self::FIELD_NAME => 'Escavalier',
             self::FIELD_ATTACK => 223,
             self::FIELD_DEFENSE => 187,
             self::FIELD_STAMINA => 172,
@@ -14948,6 +15974,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_MEGAHORN, Moves::MOVE_ACID_SPRAY, Moves::MOVE_DRILL_RUN, Moves::MOVE_AERIAL_ACE]
         ],
         Pokemon::FOONGUS => [
+            self::FIELD_NAME => 'Foongus',
             self::FIELD_ATTACK => 97,
             self::FIELD_DEFENSE => 91,
             self::FIELD_STAMINA => 170,
@@ -14963,6 +15990,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_BODY_SLAM, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::AMOONGUSS => [
+            self::FIELD_NAME => 'Amoonguss',
             self::FIELD_ATTACK => 155,
             self::FIELD_DEFENSE => 139,
             self::FIELD_STAMINA => 249,
@@ -14977,6 +16005,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FOUL_PLAY, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_GRASS_KNOT]
         ],
         Pokemon::FRILLISH | FormsAlias::FRILLISH_MALE => [
+            self::FIELD_NAME => 'Frillish',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 134,
             self::FIELD_STAMINA => 146,
@@ -14992,6 +16021,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SHADE, Moves::MOVE_ICE_BEAM, Moves::MOVE_OMINOUS_WIND]
         ],
         Pokemon::FRILLISH | FormsAlias::FRILLISH_FEMALE => [
+            self::FIELD_NAME => 'Frillish',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 134,
             self::FIELD_STAMINA => 146,
@@ -15007,6 +16037,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SHADE, Moves::MOVE_ICE_BEAM, Moves::MOVE_OMINOUS_WIND]
         ],
         Pokemon::JELLICENT | FormsAlias::JELLICENT_MALE => [
+            self::FIELD_NAME => 'Jellicent',
             self::FIELD_ATTACK => 159,
             self::FIELD_DEFENSE => 178,
             self::FIELD_STAMINA => 225,
@@ -15021,6 +16052,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_ICE_BEAM, Moves::MOVE_BUBBLE_BEAM]
         ],
         Pokemon::JELLICENT | FormsAlias::JELLICENT_FEMALE => [
+            self::FIELD_NAME => 'Jellicent',
             self::FIELD_ATTACK => 159,
             self::FIELD_DEFENSE => 178,
             self::FIELD_STAMINA => 225,
@@ -15035,6 +16067,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_ICE_BEAM, Moves::MOVE_BUBBLE_BEAM]
         ],
         Pokemon::ALOMOMOLA => [
+            self::FIELD_NAME => 'Alomomola',
             self::FIELD_ATTACK => 138,
             self::FIELD_DEFENSE => 131,
             self::FIELD_STAMINA => 338,
@@ -15048,6 +16081,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYDRO_PUMP, Moves::MOVE_BLIZZARD, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::JOLTIK => [
+            self::FIELD_NAME => 'Joltik',
             self::FIELD_ATTACK => 110,
             self::FIELD_DEFENSE => 98,
             self::FIELD_STAMINA => 137,
@@ -15063,6 +16097,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CROSS_POISON, Moves::MOVE_BUG_BUZZ, Moves::MOVE_DISCHARGE]
         ],
         Pokemon::GALVANTULA => [
+            self::FIELD_NAME => 'Galvantula',
             self::FIELD_ATTACK => 201,
             self::FIELD_DEFENSE => 128,
             self::FIELD_STAMINA => 172,
@@ -15077,6 +16112,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CROSS_POISON, Moves::MOVE_BUG_BUZZ, Moves::MOVE_DISCHARGE, Moves::MOVE_ENERGY_BALL]
         ],
         Pokemon::FERROSEED => [
+            self::FIELD_NAME => 'Ferroseed',
             self::FIELD_ATTACK => 82,
             self::FIELD_DEFENSE => 155,
             self::FIELD_STAMINA => 127,
@@ -15092,6 +16128,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_GYRO_BALL, Moves::MOVE_FLASH_CANNON, Moves::MOVE_IRON_HEAD]
         ],
         Pokemon::FERROTHORN => [
+            self::FIELD_NAME => 'Ferrothorn',
             self::FIELD_ATTACK => 158,
             self::FIELD_DEFENSE => 223,
             self::FIELD_STAMINA => 179,
@@ -15106,6 +16143,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_POWER_WHIP, Moves::MOVE_FLASH_CANNON, Moves::MOVE_ACID_SPRAY, Moves::MOVE_THUNDER, Moves::MOVE_MIRROR_SHOT]
         ],
         Pokemon::KLINK => [
+            self::FIELD_NAME => 'Klink',
             self::FIELD_ATTACK => 98,
             self::FIELD_DEFENSE => 121,
             self::FIELD_STAMINA => 120,
@@ -15120,6 +16158,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_VICE_GRIP, Moves::MOVE_DISCHARGE, Moves::MOVE_ZAP_CANNON]
         ],
         Pokemon::KLANG => [
+            self::FIELD_NAME => 'Klang',
             self::FIELD_ATTACK => 150,
             self::FIELD_DEFENSE => 174,
             self::FIELD_STAMINA => 155,
@@ -15134,6 +16173,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_VICE_GRIP, Moves::MOVE_THUNDERBOLT, Moves::MOVE_ZAP_CANNON]
         ],
         Pokemon::KLINKLANG => [
+            self::FIELD_NAME => 'Klinklang',
             self::FIELD_ATTACK => 199,
             self::FIELD_DEFENSE => 214,
             self::FIELD_STAMINA => 155,
@@ -15147,6 +16187,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HYPER_BEAM, Moves::MOVE_FLASH_CANNON, Moves::MOVE_ZAP_CANNON, Moves::MOVE_MIRROR_SHOT]
         ],
         Pokemon::TYNAMO => [
+            self::FIELD_NAME => 'Tynamo',
             self::FIELD_ATTACK => 105,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 111,
@@ -15161,6 +16202,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
         Pokemon::ELEKTRIK => [
+            self::FIELD_NAME => 'Eelektrik',
             self::FIELD_ATTACK => 156,
             self::FIELD_DEFENSE => 130,
             self::FIELD_STAMINA => 163,
@@ -15175,6 +16217,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_THUNDERBOLT, Moves::MOVE_DISCHARGE]
         ],
         Pokemon::ELEKTROSS => [
+            self::FIELD_NAME => 'Eelektross',
             self::FIELD_ATTACK => 217,
             self::FIELD_DEFENSE => 152,
             self::FIELD_STAMINA => 198,
@@ -15188,6 +16231,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_THUNDERBOLT, Moves::MOVE_ACID_SPRAY, Moves::MOVE_DRAGON_CLAW]
         ],
         Pokemon::ELGYEM => [
+            self::FIELD_NAME => 'Elgyem',
             self::FIELD_ATTACK => 148,
             self::FIELD_DEFENSE => 100,
             self::FIELD_STAMINA => 146,
@@ -15202,6 +16246,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_DARK_PULSE, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::BEHEEYEM => [
+            self::FIELD_NAME => 'Beheeyem',
             self::FIELD_ATTACK => 221,
             self::FIELD_DEFENSE => 163,
             self::FIELD_STAMINA => 181,
@@ -15215,6 +16260,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_SLIDE, Moves::MOVE_DARK_PULSE, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::LITWICK => [
+            self::FIELD_NAME => 'Litwick',
             self::FIELD_ATTACK => 108,
             self::FIELD_DEFENSE => 98,
             self::FIELD_STAMINA => 137,
@@ -15230,6 +16276,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_CHARGE, Moves::MOVE_FLAME_BURST, Moves::MOVE_HEAT_WAVE]
         ],
         Pokemon::LAMPENT => [
+            self::FIELD_NAME => 'Lampent',
             self::FIELD_ATTACK => 169,
             self::FIELD_DEFENSE => 115,
             self::FIELD_STAMINA => 155,
@@ -15245,6 +16292,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_FLAME_BURST, Moves::MOVE_HEAT_WAVE]
         ],
         Pokemon::CHANDELURE => [
+            self::FIELD_NAME => 'Chandelure',
             self::FIELD_ATTACK => 271,
             self::FIELD_DEFENSE => 182,
             self::FIELD_STAMINA => 155,
@@ -15259,6 +16307,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ENERGY_BALL, Moves::MOVE_SHADOW_BALL, Moves::MOVE_OVERHEAT]
         ],
         Pokemon::AXEW => [
+            self::FIELD_NAME => 'Axew',
             self::FIELD_ATTACK => 154,
             self::FIELD_DEFENSE => 101,
             self::FIELD_STAMINA => 130,
@@ -15273,6 +16322,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAGON_CLAW, Moves::MOVE_AQUA_TAIL, Moves::MOVE_DRAGON_PULSE]
         ],
         Pokemon::FRAXURE => [
+            self::FIELD_NAME => 'Fraxure',
             self::FIELD_ATTACK => 212,
             self::FIELD_DEFENSE => 123,
             self::FIELD_STAMINA => 165,
@@ -15287,6 +16337,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAGON_CLAW, Moves::MOVE_AQUA_TAIL, Moves::MOVE_NIGHT_SLASH]
         ],
         Pokemon::HAXORUS => [
+            self::FIELD_NAME => 'Haxorus',
             self::FIELD_ATTACK => 284,
             self::FIELD_DEFENSE => 172,
             self::FIELD_STAMINA => 183,
@@ -15300,6 +16351,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAGON_CLAW, Moves::MOVE_SURF, Moves::MOVE_NIGHT_SLASH, Moves::MOVE_EARTHQUAKE]
         ],
         Pokemon::CUBCHOO => [
+            self::FIELD_NAME => 'Cubchoo',
             self::FIELD_ATTACK => 128,
             self::FIELD_DEFENSE => 74,
             self::FIELD_STAMINA => 146,
@@ -15314,6 +16366,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_PUNCH, Moves::MOVE_ICY_WIND, Moves::MOVE_PLAY_ROUGH]
         ],
         Pokemon::BEARTIC => [
+            self::FIELD_NAME => 'Beartic',
             self::FIELD_ATTACK => 233,
             self::FIELD_DEFENSE => 152,
             self::FIELD_STAMINA => 216,
@@ -15327,6 +16380,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_PUNCH, Moves::MOVE_SURF, Moves::MOVE_PLAY_ROUGH]
         ],
         Pokemon::CRYOGONAL => [
+            self::FIELD_NAME => 'Cryogonal',
             self::FIELD_ATTACK => 190,
             self::FIELD_DEFENSE => 218,
             self::FIELD_STAMINA => 190,
@@ -15340,6 +16394,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AURORA_BEAM, Moves::MOVE_NIGHT_SLASH, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_WATER_PULSE]
         ],
         Pokemon::SHELMET => [
+            self::FIELD_NAME => 'Shelmet',
             self::FIELD_ATTACK => 72,
             self::FIELD_DEFENSE => 140,
             self::FIELD_STAMINA => 137,
@@ -15354,6 +16409,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUG_BUZZ, Moves::MOVE_BODY_SLAM, Moves::MOVE_SIGNAL_BEAM]
         ],
         Pokemon::ACCELGOR => [
+            self::FIELD_NAME => 'Accelgor',
             self::FIELD_ATTACK => 220,
             self::FIELD_DEFENSE => 120,
             self::FIELD_STAMINA => 190,
@@ -15367,6 +16423,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BUG_BUZZ, Moves::MOVE_ACID_SPRAY, Moves::MOVE_SIGNAL_BEAM, Moves::MOVE_FOCUS_BLAST]
         ],
         Pokemon::STUNFISK => [
+            self::FIELD_NAME => 'Stunfisk',
             self::FIELD_ATTACK => 144,
             self::FIELD_DEFENSE => 171,
             self::FIELD_STAMINA => 240,
@@ -15381,6 +16438,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_MUD_BOMB, Moves::MOVE_DISCHARGE, Moves::MOVE_MUDDY_WATER]
         ],
         Pokemon::STUNFISK | Mods::GALARIAN => [
+            self::FIELD_NAME => 'Stunfisk',
             self::FIELD_ATTACK => 144,
             self::FIELD_DEFENSE => 171,
             self::FIELD_STAMINA => 240,
@@ -15395,6 +16453,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_FLASH_CANNON, Moves::MOVE_MUDDY_WATER, Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::STUNFISK | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Stunfisk',
             self::FIELD_ATTACK => 144,
             self::FIELD_DEFENSE => 171,
             self::FIELD_STAMINA => 240,
@@ -15409,6 +16468,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_MUD_BOMB, Moves::MOVE_DISCHARGE, Moves::MOVE_MUDDY_WATER]
         ],
         Pokemon::STUNFISK | Mods::SHADOW => [
+            self::FIELD_NAME => 'Stunfisk',
             self::FIELD_ATTACK => 144,
             self::FIELD_DEFENSE => 171,
             self::FIELD_STAMINA => 240,
@@ -15425,6 +16485,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_MUD_BOMB, Moves::MOVE_DISCHARGE, Moves::MOVE_MUDDY_WATER]
         ],
         Pokemon::MIENFOO => [
+            self::FIELD_NAME => 'Mienfoo',
             self::FIELD_ATTACK => 160,
             self::FIELD_DEFENSE => 98,
             self::FIELD_STAMINA => 128,
@@ -15439,6 +16500,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRICK_BREAK, Moves::MOVE_LOW_SWEEP, Moves::MOVE_FOCUS_BLAST]
         ],
         Pokemon::MIENSHAO => [
+            self::FIELD_NAME => 'Mienshao',
             self::FIELD_ATTACK => 258,
             self::FIELD_DEFENSE => 127,
             self::FIELD_STAMINA => 163,
@@ -15452,6 +16514,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRICK_BREAK, Moves::MOVE_GRASS_KNOT, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::DRUDDIGON => [
+            self::FIELD_NAME => 'Druddigon',
             self::FIELD_ATTACK => 213,
             self::FIELD_DEFENSE => 170,
             self::FIELD_STAMINA => 184,
@@ -15465,6 +16528,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAGON_CLAW, Moves::MOVE_NIGHT_SLASH, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::GOLETT => [
+            self::FIELD_NAME => 'Golett',
             self::FIELD_ATTACK => 127,
             self::FIELD_DEFENSE => 92,
             self::FIELD_STAMINA => 153,
@@ -15480,6 +16544,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_PUNCH, Moves::MOVE_BRICK_BREAK, Moves::MOVE_NIGHT_SHADE]
         ],
         Pokemon::GOLURK => [
+            self::FIELD_NAME => 'Golurk',
             self::FIELD_ATTACK => 222,
             self::FIELD_DEFENSE => 154,
             self::FIELD_STAMINA => 205,
@@ -15494,6 +16559,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_PUNCH, Moves::MOVE_DYNAMIC_PUNCH, Moves::MOVE_EARTH_POWER]
         ],
         Pokemon::PAWNIARD => [
+            self::FIELD_NAME => 'Pawniard',
             self::FIELD_ATTACK => 154,
             self::FIELD_DEFENSE => 114,
             self::FIELD_STAMINA => 128,
@@ -15509,6 +16575,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SLASH, Moves::MOVE_IRON_HEAD, Moves::MOVE_X_SCISSOR]
         ],
         Pokemon::BISHARP => [
+            self::FIELD_NAME => 'Bisharp',
             self::FIELD_ATTACK => 232,
             self::FIELD_DEFENSE => 176,
             self::FIELD_STAMINA => 163,
@@ -15523,6 +16590,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_IRON_HEAD, Moves::MOVE_X_SCISSOR, Moves::MOVE_FOCUS_BLAST]
         ],
         Pokemon::BOUFFALANT => [
+            self::FIELD_NAME => 'Bouffalant',
             self::FIELD_ATTACK => 195,
             self::FIELD_DEFENSE => 182,
             self::FIELD_STAMINA => 216,
@@ -15536,6 +16604,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_MEGAHORN, Moves::MOVE_STOMP, Moves::MOVE_SKULL_BASH, Moves::MOVE_EARTHQUAKE]
         ],
         Pokemon::RUFFLET => [
+            self::FIELD_NAME => 'Rufflet',
             self::FIELD_ATTACK => 150,
             self::FIELD_DEFENSE => 97,
             self::FIELD_STAMINA => 172,
@@ -15551,6 +16620,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AERIAL_ACE, Moves::MOVE_BRAVE_BIRD, Moves::MOVE_ROCK_TOMB]
         ],
         Pokemon::BRAVIARY => [
+            self::FIELD_NAME => 'Braviary',
             self::FIELD_ATTACK => 232,
             self::FIELD_DEFENSE => 152,
             self::FIELD_STAMINA => 225,
@@ -15565,6 +16635,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HEAT_WAVE, Moves::MOVE_BRAVE_BIRD, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_CLOSE_COMBAT]
         ],
         Pokemon::VULLABY => [
+            self::FIELD_NAME => 'Vullaby',
             self::FIELD_ATTACK => 105,
             self::FIELD_DEFENSE => 139,
             self::FIELD_STAMINA => 172,
@@ -15580,6 +16651,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_BRAVE_BIRD, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::MANDIBUZZ => [
+            self::FIELD_NAME => 'Mandibuzz',
             self::FIELD_ATTACK => 129,
             self::FIELD_DEFENSE => 205,
             self::FIELD_STAMINA => 242,
@@ -15594,6 +16666,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_AERIAL_ACE, Moves::MOVE_FOUL_PLAY, Moves::MOVE_SHADOW_BALL]
         ],
         Pokemon::HEATMOR => [
+            self::FIELD_NAME => 'Heatmor',
             self::FIELD_ATTACK => 204,
             self::FIELD_DEFENSE => 129,
             self::FIELD_STAMINA => 198,
@@ -15607,6 +16680,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAMETHROWER, Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_POWER_UP_PUNCH]
         ],
         Pokemon::DURANT => [
+            self::FIELD_NAME => 'Durant',
             self::FIELD_ATTACK => 217,
             self::FIELD_DEFENSE => 188,
             self::FIELD_STAMINA => 151,
@@ -15621,6 +16695,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_X_SCISSOR, Moves::MOVE_IRON_HEAD, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::DEINO => [
+            self::FIELD_NAME => 'Deino',
             self::FIELD_ATTACK => 116,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 141,
@@ -15636,6 +16711,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAGON_PULSE, Moves::MOVE_CRUNCH, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::ZWELIOUS => [
+            self::FIELD_NAME => 'Zweilous',
             self::FIELD_ATTACK => 159,
             self::FIELD_DEFENSE => 135,
             self::FIELD_STAMINA => 176,
@@ -15651,6 +16727,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAGON_PULSE, Moves::MOVE_DARK_PULSE, Moves::MOVE_BODY_SLAM]
         ],
         Pokemon::HYDREIGON => [
+            self::FIELD_NAME => 'Hydreigon',
             self::FIELD_ATTACK => 256,
             self::FIELD_DEFENSE => 188,
             self::FIELD_STAMINA => 211,
@@ -15665,6 +16742,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAGON_PULSE, Moves::MOVE_DARK_PULSE, Moves::MOVE_FLASH_CANNON]
         ],
         Pokemon::LARVESTA => [
+            self::FIELD_NAME => 'Larvesta',
             self::FIELD_ATTACK => 156,
             self::FIELD_DEFENSE => 107,
             self::FIELD_STAMINA => 146,
@@ -15680,6 +16758,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_CHARGE, Moves::MOVE_BUG_BUZZ, Moves::MOVE_FLAME_WHEEL]
         ],
         Pokemon::VOLCARONA => [
+            self::FIELD_NAME => 'Volcarona',
             self::FIELD_ATTACK => 264,
             self::FIELD_DEFENSE => 189,
             self::FIELD_STAMINA => 198,
@@ -15694,6 +16773,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_OVERHEAT, Moves::MOVE_BUG_BUZZ, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_HURRICANE]
         ],
         Pokemon::COBALLION => [
+            self::FIELD_NAME => 'Cobalion',
             self::FIELD_ATTACK => 192,
             self::FIELD_DEFENSE => 229,
             self::FIELD_STAMINA => 209,
@@ -15709,6 +16789,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SACRED_SWORD]
         ],
         Pokemon::TERRAKION => [
+            self::FIELD_NAME => 'Terrakion',
             self::FIELD_ATTACK => 260,
             self::FIELD_DEFENSE => 192,
             self::FIELD_STAMINA => 209,
@@ -15723,6 +16804,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_EARTHQUAKE, Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::VIRIZION => [
+            self::FIELD_NAME => 'Virizion',
             self::FIELD_ATTACK => 192,
             self::FIELD_DEFENSE => 229,
             self::FIELD_STAMINA => 209,
@@ -15737,6 +16819,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_LEAF_BLADE, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::TORNADUS | FormsAlias::TORNADUS_INCARNATE => [
+            self::FIELD_NAME => 'Tornadus',
             self::FIELD_ATTACK => 266,
             self::FIELD_DEFENSE => 164,
             self::FIELD_STAMINA => 188,
@@ -15750,6 +16833,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_GRASS_KNOT, Moves::MOVE_DARK_PULSE, Moves::MOVE_HYPER_BEAM, Moves::MOVE_HURRICANE]
         ],
         Pokemon::TORNADUS | FormsAlias::TORNADUS_THERIAN => [
+            self::FIELD_NAME => 'Tornadus',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 189,
             self::FIELD_STAMINA => 188,
@@ -15763,6 +16847,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_GRASS_KNOT, Moves::MOVE_DARK_PULSE, Moves::MOVE_HYPER_BEAM, Moves::MOVE_HURRICANE]
         ],
         Pokemon::THUNDURUS | FormsAlias::THUNDURUS_INCARNATE => [
+            self::FIELD_NAME => 'Thundurus',
             self::FIELD_ATTACK => 266,
             self::FIELD_DEFENSE => 164,
             self::FIELD_STAMINA => 188,
@@ -15777,6 +16862,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_THUNDER, Moves::MOVE_BRICK_BREAK, Moves::MOVE_THUNDER_PUNCH]
         ],
         Pokemon::THUNDURUS | FormsAlias::THUNDURUS_THERIAN => [
+            self::FIELD_NAME => 'Thundurus',
             self::FIELD_ATTACK => 295,
             self::FIELD_DEFENSE => 161,
             self::FIELD_STAMINA => 188,
@@ -15791,6 +16877,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_THUNDER, Moves::MOVE_BRICK_BREAK, Moves::MOVE_THUNDER_PUNCH]
         ],
         Pokemon::RESHIRAM => [
+            self::FIELD_NAME => 'Reshiram',
             self::FIELD_ATTACK => 275,
             self::FIELD_DEFENSE => 211,
             self::FIELD_STAMINA => 205,
@@ -15805,6 +16892,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_OVERHEAT, Moves::MOVE_DRACO_METEOR, Moves::MOVE_STONE_EDGE]
         ],
         Pokemon::ZEKROM => [
+            self::FIELD_NAME => 'Zekrom',
             self::FIELD_ATTACK => 275,
             self::FIELD_DEFENSE => 211,
             self::FIELD_STAMINA => 205,
@@ -15819,6 +16907,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_OUTRAGE, Moves::MOVE_WILD_CHARGE, Moves::MOVE_FLASH_CANNON, Moves::MOVE_CRUNCH]
         ],
         Pokemon::LANDORUS | FormsAlias::LANDORUS_INCARNATE => [
+            self::FIELD_NAME => 'Landorus',
             self::FIELD_ATTACK => 261,
             self::FIELD_DEFENSE => 182,
             self::FIELD_STAMINA => 205,
@@ -15833,6 +16922,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTH_POWER, Moves::MOVE_OUTRAGE, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_FOCUS_BLAST]
         ],
         Pokemon::LANDORUS | FormsAlias::LANDORUS_THERIAN => [
+            self::FIELD_NAME => 'Landorus',
             self::FIELD_ATTACK => 289,
             self::FIELD_DEFENSE => 179,
             self::FIELD_STAMINA => 205,
@@ -15847,6 +16937,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTH_POWER, Moves::MOVE_OUTRAGE, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_FOCUS_BLAST]
         ],
         Pokemon::KYUREM | FormsAlias::KYUREM_NORMAL => [
+            self::FIELD_NAME => 'Kyurem',
             self::FIELD_ATTACK => 246,
             self::FIELD_DEFENSE => 170,
             self::FIELD_STAMINA => 245,
@@ -15861,6 +16952,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAGON_CLAW, Moves::MOVE_BLIZZARD, Moves::MOVE_DRACO_METEOR]
         ],
         Pokemon::KYUREM | FormsAlias::KYUREM_BLACK => [
+            self::FIELD_NAME => 'Kyurem',
             self::FIELD_ATTACK => 310,
             self::FIELD_DEFENSE => 183,
             self::FIELD_STAMINA => 245,
@@ -15875,6 +16967,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_IRON_HEAD, Moves::MOVE_BLIZZARD, Moves::MOVE_STONE_EDGE, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::KYUREM | FormsAlias::KYUREM_WHITE => [
+            self::FIELD_NAME => 'Kyurem',
             self::FIELD_ATTACK => 310,
             self::FIELD_DEFENSE => 183,
             self::FIELD_STAMINA => 245,
@@ -15889,6 +16982,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAGON_PULSE, Moves::MOVE_BLIZZARD, Moves::MOVE_ANCIENT_POWER, Moves::MOVE_FOCUS_BLAST]
         ],
         Pokemon::KELDEO | FormsAlias::KELDEO_ORDINARY => [
+            self::FIELD_NAME => 'Keldeo',
             self::FIELD_ATTACK => 260,
             self::FIELD_DEFENSE => 192,
             self::FIELD_STAMINA => 209,
@@ -15902,6 +16996,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_X_SCISSOR]
         ],
         Pokemon::KELDEO | FormsAlias::KELDEO_RESOLUTE => [
+            self::FIELD_NAME => 'Keldeo',
             self::FIELD_ATTACK => 260,
             self::FIELD_DEFENSE => 192,
             self::FIELD_STAMINA => 209,
@@ -15915,6 +17010,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_X_SCISSOR]
         ],
         Pokemon::MELOETTA | FormsAlias::MELOETTA_ARIA => [
+            self::FIELD_NAME => 'Meloetta',
             self::FIELD_ATTACK => 250,
             self::FIELD_DEFENSE => 225,
             self::FIELD_STAMINA => 225,
@@ -15928,6 +17024,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYSHOCK, Moves::MOVE_THUNDERBOLT, Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::MELOETTA | FormsAlias::MELOETTA_PIROUETTE => [
+            self::FIELD_NAME => 'Meloetta',
             self::FIELD_ATTACK => 269,
             self::FIELD_DEFENSE => 188,
             self::FIELD_STAMINA => 225,
@@ -15941,6 +17038,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_FIRE_PUNCH, Moves::MOVE_ICE_PUNCH, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::GENESECT | FormsAlias::GENESECT_NORMAL => [
+            self::FIELD_NAME => 'Genesect',
             self::FIELD_ATTACK => 252,
             self::FIELD_DEFENSE => 199,
             self::FIELD_STAMINA => 174,
@@ -15955,6 +17053,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_X_SCISSOR, Moves::MOVE_MAGNET_BOMB, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::GENESECT | FormsAlias::GENESECT_BURN => [
+            self::FIELD_NAME => 'Genesect',
             self::FIELD_ATTACK => 252,
             self::FIELD_DEFENSE => 199,
             self::FIELD_STAMINA => 174,
@@ -15969,6 +17068,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_X_SCISSOR, Moves::MOVE_MAGNET_BOMB, Moves::MOVE_FLAMETHROWER]
         ],
         Pokemon::GENESECT | FormsAlias::GENESECT_CHILL => [
+            self::FIELD_NAME => 'Genesect',
             self::FIELD_ATTACK => 252,
             self::FIELD_DEFENSE => 199,
             self::FIELD_STAMINA => 174,
@@ -15983,6 +17083,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_X_SCISSOR, Moves::MOVE_MAGNET_BOMB, Moves::MOVE_ICE_BEAM]
         ],
         Pokemon::GENESECT | FormsAlias::GENESECT_DOUSE => [
+            self::FIELD_NAME => 'Genesect',
             self::FIELD_ATTACK => 252,
             self::FIELD_DEFENSE => 199,
             self::FIELD_STAMINA => 174,
@@ -15997,6 +17098,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_X_SCISSOR, Moves::MOVE_MAGNET_BOMB, Moves::MOVE_GUNK_SHOT]
         ],
         Pokemon::GENESECT | FormsAlias::GENESECT_SHOCK => [
+            self::FIELD_NAME => 'Genesect',
             self::FIELD_ATTACK => 252,
             self::FIELD_DEFENSE => 199,
             self::FIELD_STAMINA => 174,
@@ -16011,6 +17113,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_X_SCISSOR, Moves::MOVE_MAGNET_BOMB, Moves::MOVE_ZAP_CANNON]
         ],
         Pokemon::MELTAN => [
+            self::FIELD_NAME => 'Meltan',
             self::FIELD_ATTACK => 118,
             self::FIELD_DEFENSE => 99,
             self::FIELD_STAMINA => 130,
@@ -16026,6 +17129,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLASH_CANNON, Moves::MOVE_THUNDERBOLT]
         ],
         Pokemon::MELMETAL => [
+            self::FIELD_NAME => 'Melmetal',
             self::FIELD_ATTACK => 226,
             self::FIELD_DEFENSE => 190,
             self::FIELD_STAMINA => 264,
@@ -16040,6 +17144,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLASH_CANNON, Moves::MOVE_THUNDERBOLT, Moves::MOVE_HYPER_BEAM, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_SUPER_POWER]
         ],
         Pokemon::OBSTAGOON => [
+            self::FIELD_NAME => 'Obstagoon',
             self::FIELD_ATTACK => 180,
             self::FIELD_DEFENSE => 194,
             self::FIELD_STAMINA => 212,
@@ -16054,6 +17159,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CROSS_CHOP, Moves::MOVE_NIGHT_SLASH, Moves::MOVE_HYPER_BEAM, Moves::MOVE_GUNK_SHOT]
         ],
         Pokemon::OBSTAGOON | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Obstagoon',
             self::FIELD_ATTACK => 180,
             self::FIELD_DEFENSE => 194,
             self::FIELD_STAMINA => 212,
@@ -16068,6 +17174,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CROSS_CHOP, Moves::MOVE_NIGHT_SLASH, Moves::MOVE_HYPER_BEAM, Moves::MOVE_GUNK_SHOT]
         ],
         Pokemon::OBSTAGOON | Mods::SHADOW => [
+            self::FIELD_NAME => 'Obstagoon',
             self::FIELD_ATTACK => 180,
             self::FIELD_DEFENSE => 194,
             self::FIELD_STAMINA => 212,
@@ -16084,6 +17191,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CROSS_CHOP, Moves::MOVE_NIGHT_SLASH, Moves::MOVE_HYPER_BEAM, Moves::MOVE_GUNK_SHOT]
         ],
         Pokemon::PERRSERKER => [
+            self::FIELD_NAME => 'Perrserker',
             self::FIELD_ATTACK => 195,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 172,
@@ -16097,6 +17205,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_IRON_HEAD, Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_PLAY_ROUGH, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::PERRSERKER | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Perrserker',
             self::FIELD_ATTACK => 195,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 172,
@@ -16110,6 +17219,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_IRON_HEAD, Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_PLAY_ROUGH, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::PERRSERKER | Mods::SHADOW => [
+            self::FIELD_NAME => 'Perrserker',
             self::FIELD_ATTACK => 195,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 172,
@@ -16125,6 +17235,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_IRON_HEAD, Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_PLAY_ROUGH, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::SIRFETCH_D => [
+            self::FIELD_NAME => 'Sirfetch’d',
             self::FIELD_ATTACK => 248,
             self::FIELD_DEFENSE => 176,
             self::FIELD_STAMINA => 158,
@@ -16138,6 +17249,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_BRAVE_BIRD, Moves::MOVE_LEAF_BLADE, Moves::MOVE_NIGHT_SLASH]
         ],
         Pokemon::SIRFETCH_D | Mods::PURIFIED => [
+            self::FIELD_NAME => 'Sirfetch’d',
             self::FIELD_ATTACK => 248,
             self::FIELD_DEFENSE => 176,
             self::FIELD_STAMINA => 158,
@@ -16151,6 +17263,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_BRAVE_BIRD, Moves::MOVE_LEAF_BLADE, Moves::MOVE_NIGHT_SLASH]
         ],
         Pokemon::SIRFETCH_D | Mods::SHADOW => [
+            self::FIELD_NAME => 'Sirfetch’d',
             self::FIELD_ATTACK => 248,
             self::FIELD_DEFENSE => 176,
             self::FIELD_STAMINA => 158,

@@ -2,6 +2,8 @@
 
 namespace Pogo\Data\Result;
 
+use Pogo\Data\Parser\Locale;
+
 class Moves
 {
     protected $moves = [];
@@ -43,7 +45,9 @@ class Moves
         $moves = [];
         foreach ($this->moves as $id => $move) {
             $defines[] = "    const {$move[self::FIELD_CONST]} = $id;";
-            $moveStr = [];
+            $moveStr = [
+                "self::FIELD_NAME => '" . addcslashes(Locale::getMove($id), "'") . "'"
+            ];
             foreach ($move as $k => $v) {
                 if ($v === null) {
                     $v = 'null';
@@ -87,6 +91,7 @@ use Pogo\General\Types;
 
 class MovesData extends Moves
 {
+    const FIELD_NAME = 'name';
     const FIELD_CLASS = 'class';
     const FIELD_TYPE = 'type';
     const FIELD_POWER = 'power';

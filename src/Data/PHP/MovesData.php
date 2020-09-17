@@ -6,6 +6,7 @@ use Pogo\General\Types;
 
 class MovesData extends Moves
 {
+    const FIELD_NAME = 'name';
     const FIELD_CLASS = 'class';
     const FIELD_TYPE = 'type';
     const FIELD_POWER = 'power';
@@ -23,6 +24,7 @@ class MovesData extends Moves
 
     const MOVES = [
         self::MOVE_WRAP => [
+            self::FIELD_NAME => 'Wrap',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 60,
@@ -36,6 +38,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -45
         ],
         self::MOVE_HYPER_BEAM => [
+            self::FIELD_NAME => 'Hyper Beam',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 150,
@@ -49,6 +52,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -80
         ],
         self::MOVE_DARK_PULSE => [
+            self::FIELD_NAME => 'Dark Pulse',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::DARK,
             self::FIELD_POWER => 80,
@@ -62,6 +66,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -50
         ],
         self::MOVE_SLUDGE => [
+            self::FIELD_NAME => 'Sludge',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::POISON,
             self::FIELD_POWER => 50,
@@ -75,6 +80,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -40
         ],
         self::MOVE_VICE_GRIP => [
+            self::FIELD_NAME => 'Vise Grip',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 35,
@@ -88,6 +94,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -40
         ],
         self::MOVE_FLAME_WHEEL => [
+            self::FIELD_NAME => 'Flame Wheel',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FIRE,
             self::FIELD_POWER => 60,
@@ -101,6 +108,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -55
         ],
         self::MOVE_MEGAHORN => [
+            self::FIELD_NAME => 'Megahorn',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::BUG,
             self::FIELD_POWER => 110,
@@ -114,6 +122,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -55
         ],
         self::MOVE_FLAMETHROWER => [
+            self::FIELD_NAME => 'Flamethrower',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FIRE,
             self::FIELD_POWER => 70,
@@ -127,6 +136,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -55
         ],
         self::MOVE_DIG => [
+            self::FIELD_NAME => 'Dig',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::GROUND,
             self::FIELD_POWER => 100,
@@ -140,6 +150,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -80
         ],
         self::MOVE_CROSS_CHOP => [
+            self::FIELD_NAME => 'Cross Chop',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FIGHTING,
             self::FIELD_POWER => 50,
@@ -153,6 +164,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -35
         ],
         self::MOVE_PSYBEAM => [
+            self::FIELD_NAME => 'Psybeam',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::PSYCHIC,
             self::FIELD_POWER => 70,
@@ -166,6 +178,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -60
         ],
         self::MOVE_EARTHQUAKE => [
+            self::FIELD_NAME => 'Earthquake',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::GROUND,
             self::FIELD_POWER => 140,
@@ -179,6 +192,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -65
         ],
         self::MOVE_STONE_EDGE => [
+            self::FIELD_NAME => 'Stone Edge',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::ROCK,
             self::FIELD_POWER => 100,
@@ -192,6 +206,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -55
         ],
         self::MOVE_ICE_PUNCH => [
+            self::FIELD_NAME => 'Ice Punch',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::ICE,
             self::FIELD_POWER => 50,
@@ -205,6 +220,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -40
         ],
         self::MOVE_HEART_STAMP => [
+            self::FIELD_NAME => 'Heart Stamp',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::PSYCHIC,
             self::FIELD_POWER => 40,
@@ -218,6 +234,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -40
         ],
         self::MOVE_DISCHARGE => [
+            self::FIELD_NAME => 'Discharge',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::ELECTRIC,
             self::FIELD_POWER => 65,
@@ -231,6 +248,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -45
         ],
         self::MOVE_FLASH_CANNON => [
+            self::FIELD_NAME => 'Flash Cannon',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::STEEL,
             self::FIELD_POWER => 100,
@@ -244,6 +262,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -70
         ],
         self::MOVE_DRILL_PECK => [
+            self::FIELD_NAME => 'Drill Peck',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FLYING,
             self::FIELD_POWER => 65,
@@ -257,6 +276,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -40
         ],
         self::MOVE_ICE_BEAM => [
+            self::FIELD_NAME => 'Ice Beam',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::ICE,
             self::FIELD_POWER => 90,
@@ -270,6 +290,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -55
         ],
         self::MOVE_BLIZZARD => [
+            self::FIELD_NAME => 'Blizzard',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::ICE,
             self::FIELD_POWER => 130,
@@ -283,6 +304,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -75
         ],
         self::MOVE_HEAT_WAVE => [
+            self::FIELD_NAME => 'Heat Wave',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FIRE,
             self::FIELD_POWER => 95,
@@ -296,6 +318,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -75
         ],
         self::MOVE_AERIAL_ACE => [
+            self::FIELD_NAME => 'Aerial Ace',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FLYING,
             self::FIELD_POWER => 55,
@@ -309,6 +332,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -45
         ],
         self::MOVE_DRILL_RUN => [
+            self::FIELD_NAME => 'Drill Run',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::GROUND,
             self::FIELD_POWER => 80,
@@ -322,6 +346,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -45
         ],
         self::MOVE_PETAL_BLIZZARD => [
+            self::FIELD_NAME => 'Petal Blizzard',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::GRASS,
             self::FIELD_POWER => 110,
@@ -335,6 +360,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -65
         ],
         self::MOVE_MEGA_DRAIN => [
+            self::FIELD_NAME => 'Mega Drain',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::GRASS,
             self::FIELD_POWER => 25,
@@ -348,6 +374,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -55
         ],
         self::MOVE_BUG_BUZZ => [
+            self::FIELD_NAME => 'Bug Buzz',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::BUG,
             self::FIELD_POWER => 90,
@@ -361,6 +388,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -60
         ],
         self::MOVE_POISON_FANG => [
+            self::FIELD_NAME => 'Poison Fang',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::POISON,
             self::FIELD_POWER => 35,
@@ -374,6 +402,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -35
         ],
         self::MOVE_NIGHT_SLASH => [
+            self::FIELD_NAME => 'Night Slash',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::DARK,
             self::FIELD_POWER => 50,
@@ -387,6 +416,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -35
         ],
         self::MOVE_BUBBLE_BEAM => [
+            self::FIELD_NAME => 'Bubble Beam',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::WATER,
             self::FIELD_POWER => 45,
@@ -400,6 +430,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -40
         ],
         self::MOVE_SUBMISSION => [
+            self::FIELD_NAME => 'Submission',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FIGHTING,
             self::FIELD_POWER => 60,
@@ -413,6 +444,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -50
         ],
         self::MOVE_LOW_SWEEP => [
+            self::FIELD_NAME => 'Low Sweep',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FIGHTING,
             self::FIELD_POWER => 40,
@@ -426,6 +458,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -40
         ],
         self::MOVE_AQUA_JET => [
+            self::FIELD_NAME => 'Aqua Jet',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::WATER,
             self::FIELD_POWER => 45,
@@ -439,6 +472,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -45
         ],
         self::MOVE_AQUA_TAIL => [
+            self::FIELD_NAME => 'Aqua Tail',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::WATER,
             self::FIELD_POWER => 50,
@@ -452,6 +486,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -35
         ],
         self::MOVE_SEED_BOMB => [
+            self::FIELD_NAME => 'Seed Bomb',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::GRASS,
             self::FIELD_POWER => 55,
@@ -465,6 +500,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -40
         ],
         self::MOVE_PSYSHOCK => [
+            self::FIELD_NAME => 'Psyshock',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::PSYCHIC,
             self::FIELD_POWER => 65,
@@ -478,6 +514,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -45
         ],
         self::MOVE_ANCIENT_POWER => [
+            self::FIELD_NAME => 'Ancient Power',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::ROCK,
             self::FIELD_POWER => 70,
@@ -491,6 +528,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -45
         ],
         self::MOVE_ROCK_TOMB => [
+            self::FIELD_NAME => 'Rock Tomb',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::ROCK,
             self::FIELD_POWER => 70,
@@ -504,6 +542,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -60
         ],
         self::MOVE_ROCK_SLIDE => [
+            self::FIELD_NAME => 'Rock Slide',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::ROCK,
             self::FIELD_POWER => 80,
@@ -517,6 +556,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -45
         ],
         self::MOVE_POWER_GEM => [
+            self::FIELD_NAME => 'Power Gem',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::ROCK,
             self::FIELD_POWER => 80,
@@ -530,6 +570,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -60
         ],
         self::MOVE_SHADOW_SNEAK => [
+            self::FIELD_NAME => 'Shadow Sneak',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::GHOST,
             self::FIELD_POWER => 50,
@@ -543,6 +584,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -45
         ],
         self::MOVE_SHADOW_PUNCH => [
+            self::FIELD_NAME => 'Shadow Punch',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::GHOST,
             self::FIELD_POWER => 40,
@@ -556,6 +598,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -35
         ],
         self::MOVE_OMINOUS_WIND => [
+            self::FIELD_NAME => 'Ominous Wind',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::GHOST,
             self::FIELD_POWER => 50,
@@ -569,6 +612,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -45
         ],
         self::MOVE_SHADOW_BALL => [
+            self::FIELD_NAME => 'Shadow Ball',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::GHOST,
             self::FIELD_POWER => 100,
@@ -582,6 +626,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -55
         ],
         self::MOVE_MAGNET_BOMB => [
+            self::FIELD_NAME => 'Magnet Bomb',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::STEEL,
             self::FIELD_POWER => 70,
@@ -595,6 +640,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -45
         ],
         self::MOVE_IRON_HEAD => [
+            self::FIELD_NAME => 'Iron Head',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::STEEL,
             self::FIELD_POWER => 60,
@@ -608,6 +654,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -50
         ],
         self::MOVE_PARABOLIC_CHARGE => [
+            self::FIELD_NAME => 'Parabolic Charge',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::ELECTRIC,
             self::FIELD_POWER => 25,
@@ -621,6 +668,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -55
         ],
         self::MOVE_THUNDER_PUNCH => [
+            self::FIELD_NAME => 'Thunder Punch',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::ELECTRIC,
             self::FIELD_POWER => 45,
@@ -634,6 +682,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -40
         ],
         self::MOVE_THUNDER => [
+            self::FIELD_NAME => 'Thunder',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::ELECTRIC,
             self::FIELD_POWER => 100,
@@ -647,6 +696,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -60
         ],
         self::MOVE_THUNDERBOLT => [
+            self::FIELD_NAME => 'Thunderbolt',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::ELECTRIC,
             self::FIELD_POWER => 80,
@@ -660,6 +710,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -55
         ],
         self::MOVE_TWISTER => [
+            self::FIELD_NAME => 'Twister',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::DRAGON,
             self::FIELD_POWER => 45,
@@ -673,6 +724,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -45
         ],
         self::MOVE_DRAGON_PULSE => [
+            self::FIELD_NAME => 'Dragon Pulse',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::DRAGON,
             self::FIELD_POWER => 90,
@@ -686,6 +738,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -60
         ],
         self::MOVE_DRAGON_CLAW => [
+            self::FIELD_NAME => 'Dragon Claw',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::DRAGON,
             self::FIELD_POWER => 50,
@@ -699,6 +752,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -35
         ],
         self::MOVE_DISARMING_VOICE => [
+            self::FIELD_NAME => 'Disarming Voice',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FAIRY,
             self::FIELD_POWER => 70,
@@ -712,6 +766,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -45
         ],
         self::MOVE_DRAINING_KISS => [
+            self::FIELD_NAME => 'Draining Kiss',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FAIRY,
             self::FIELD_POWER => 60,
@@ -725,6 +780,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -55
         ],
         self::MOVE_DAZZLING_GLEAM => [
+            self::FIELD_NAME => 'Dazzling Gleam',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FAIRY,
             self::FIELD_POWER => 100,
@@ -738,6 +794,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -70
         ],
         self::MOVE_MOONBLAST => [
+            self::FIELD_NAME => 'Moonblast',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FAIRY,
             self::FIELD_POWER => 130,
@@ -751,6 +808,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -60
         ],
         self::MOVE_PLAY_ROUGH => [
+            self::FIELD_NAME => 'Play Rough',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FAIRY,
             self::FIELD_POWER => 90,
@@ -764,6 +822,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -60
         ],
         self::MOVE_CROSS_POISON => [
+            self::FIELD_NAME => 'Cross Poison',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::POISON,
             self::FIELD_POWER => 40,
@@ -777,6 +836,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -35
         ],
         self::MOVE_SLUDGE_BOMB => [
+            self::FIELD_NAME => 'Sludge Bomb',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::POISON,
             self::FIELD_POWER => 80,
@@ -790,6 +850,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -50
         ],
         self::MOVE_SLUDGE_WAVE => [
+            self::FIELD_NAME => 'Sludge Wave',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::POISON,
             self::FIELD_POWER => 110,
@@ -803,6 +864,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -65
         ],
         self::MOVE_GUNK_SHOT => [
+            self::FIELD_NAME => 'Gunk Shot',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::POISON,
             self::FIELD_POWER => 130,
@@ -816,6 +878,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -75
         ],
         self::MOVE_BONE_CLUB => [
+            self::FIELD_NAME => 'Bone Club',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::GROUND,
             self::FIELD_POWER => 40,
@@ -829,6 +892,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -35
         ],
         self::MOVE_BULLDOZE => [
+            self::FIELD_NAME => 'Bulldoze',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::GROUND,
             self::FIELD_POWER => 80,
@@ -842,6 +906,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -60
         ],
         self::MOVE_MUD_BOMB => [
+            self::FIELD_NAME => 'Mud Bomb',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::GROUND,
             self::FIELD_POWER => 55,
@@ -855,6 +920,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -40
         ],
         self::MOVE_SIGNAL_BEAM => [
+            self::FIELD_NAME => 'Signal Beam',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::BUG,
             self::FIELD_POWER => 75,
@@ -868,6 +934,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -55
         ],
         self::MOVE_X_SCISSOR => [
+            self::FIELD_NAME => 'X-Scissor',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::BUG,
             self::FIELD_POWER => 45,
@@ -881,6 +948,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -35
         ],
         self::MOVE_FLAME_CHARGE => [
+            self::FIELD_NAME => 'Flame Charge',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FIRE,
             self::FIELD_POWER => 70,
@@ -894,6 +962,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -50
         ],
         self::MOVE_FLAME_BURST => [
+            self::FIELD_NAME => 'Flame Burst',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FIRE,
             self::FIELD_POWER => 70,
@@ -907,6 +976,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -55
         ],
         self::MOVE_FIRE_BLAST => [
+            self::FIELD_NAME => 'Fire Blast',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FIRE,
             self::FIELD_POWER => 140,
@@ -920,6 +990,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -80
         ],
         self::MOVE_BRINE => [
+            self::FIELD_NAME => 'Brine',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::WATER,
             self::FIELD_POWER => 60,
@@ -933,6 +1004,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -50
         ],
         self::MOVE_WATER_PULSE => [
+            self::FIELD_NAME => 'Water Pulse',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::WATER,
             self::FIELD_POWER => 70,
@@ -946,6 +1018,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -60
         ],
         self::MOVE_SCALD => [
+            self::FIELD_NAME => 'Scald',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::WATER,
             self::FIELD_POWER => 80,
@@ -959,6 +1032,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -60
         ],
         self::MOVE_HYDRO_PUMP => [
+            self::FIELD_NAME => 'Hydro Pump',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::WATER,
             self::FIELD_POWER => 130,
@@ -972,6 +1046,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -75
         ],
         self::MOVE_PSYCHIC => [
+            self::FIELD_NAME => 'Psychic',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::PSYCHIC,
             self::FIELD_POWER => 90,
@@ -985,6 +1060,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -55
         ],
         self::MOVE_PSYSTRIKE => [
+            self::FIELD_NAME => 'Psystrike',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::PSYCHIC,
             self::FIELD_POWER => 90,
@@ -998,6 +1074,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -45
         ],
         self::MOVE_ICY_WIND => [
+            self::FIELD_NAME => 'Icy Wind',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::ICE,
             self::FIELD_POWER => 60,
@@ -1011,6 +1088,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -45
         ],
         self::MOVE_GIGA_DRAIN => [
+            self::FIELD_NAME => 'Giga Drain',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::GRASS,
             self::FIELD_POWER => 50,
@@ -1024,6 +1102,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -80
         ],
         self::MOVE_FIRE_PUNCH => [
+            self::FIELD_NAME => 'Fire Punch',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FIRE,
             self::FIELD_POWER => 55,
@@ -1037,6 +1116,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -40
         ],
         self::MOVE_SOLAR_BEAM => [
+            self::FIELD_NAME => 'Solar Beam',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::GRASS,
             self::FIELD_POWER => 180,
@@ -1050,6 +1130,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -80
         ],
         self::MOVE_LEAF_BLADE => [
+            self::FIELD_NAME => 'Leaf Blade',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::GRASS,
             self::FIELD_POWER => 70,
@@ -1063,6 +1144,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -35
         ],
         self::MOVE_POWER_WHIP => [
+            self::FIELD_NAME => 'Power Whip',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::GRASS,
             self::FIELD_POWER => 90,
@@ -1076,6 +1158,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -50
         ],
         self::MOVE_AIR_CUTTER => [
+            self::FIELD_NAME => 'Air Cutter',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FLYING,
             self::FIELD_POWER => 60,
@@ -1089,6 +1172,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -55
         ],
         self::MOVE_HURRICANE => [
+            self::FIELD_NAME => 'Hurricane',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FLYING,
             self::FIELD_POWER => 110,
@@ -1102,6 +1186,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -65
         ],
         self::MOVE_BRICK_BREAK => [
+            self::FIELD_NAME => 'Brick Break',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FIGHTING,
             self::FIELD_POWER => 40,
@@ -1115,6 +1200,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -35
         ],
         self::MOVE_SWIFT => [
+            self::FIELD_NAME => 'Swift',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 60,
@@ -1128,6 +1214,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -55
         ],
         self::MOVE_HORN_ATTACK => [
+            self::FIELD_NAME => 'Horn Attack',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 40,
@@ -1141,6 +1228,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -35
         ],
         self::MOVE_STOMP => [
+            self::FIELD_NAME => 'Stomp',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 55,
@@ -1154,6 +1242,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -40
         ],
         self::MOVE_HYPER_FANG => [
+            self::FIELD_NAME => 'Hyper Fang',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 80,
@@ -1167,6 +1256,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -50
         ],
         self::MOVE_BODY_SLAM => [
+            self::FIELD_NAME => 'Body Slam',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 50,
@@ -1180,6 +1270,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -35
         ],
         self::MOVE_REST => [
+            self::FIELD_NAME => 'Rest',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 50,
@@ -1193,6 +1284,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -35
         ],
         self::MOVE_STRUGGLE => [
+            self::FIELD_NAME => 'Struggle',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 35,
@@ -1206,6 +1298,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -100
         ],
         self::MOVE_SCALD_BLASTOISE => [
+            self::FIELD_NAME => 'Scald',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::WATER,
             self::FIELD_POWER => 50,
@@ -1219,6 +1312,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -80
         ],
         self::MOVE_HYDRO_PUMP_BLASTOISE => [
+            self::FIELD_NAME => 'Hydro Pump',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::WATER,
             self::FIELD_POWER => 90,
@@ -1232,6 +1326,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -80
         ],
         self::MOVE_WRAP_GREEN => [
+            self::FIELD_NAME => 'Wrap',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 25,
@@ -1245,6 +1340,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -45
         ],
         self::MOVE_WRAP_PINK => [
+            self::FIELD_NAME => 'Wrap',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 25,
@@ -1258,6 +1354,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -45
         ],
         self::MOVE_FURY_CUTTER_FAST => [
+            self::FIELD_NAME => 'Fury Cutter',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::BUG,
             self::FIELD_POWER => 3,
@@ -1271,6 +1368,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 4
         ],
         self::MOVE_BUG_BITE_FAST => [
+            self::FIELD_NAME => 'Bug Bite',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::BUG,
             self::FIELD_POWER => 5,
@@ -1284,6 +1382,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 3
         ],
         self::MOVE_BITE_FAST => [
+            self::FIELD_NAME => 'Bite',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::DARK,
             self::FIELD_POWER => 6,
@@ -1297,6 +1396,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 2
         ],
         self::MOVE_SUCKER_PUNCH_FAST => [
+            self::FIELD_NAME => 'Sucker Punch',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::DARK,
             self::FIELD_POWER => 7,
@@ -1310,6 +1410,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 7
         ],
         self::MOVE_DRAGON_BREATH_FAST => [
+            self::FIELD_NAME => 'Dragon Breath',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::DRAGON,
             self::FIELD_POWER => 6,
@@ -1323,6 +1424,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 3
         ],
         self::MOVE_THUNDER_SHOCK_FAST => [
+            self::FIELD_NAME => 'Thunder Shock',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::ELECTRIC,
             self::FIELD_POWER => 5,
@@ -1336,6 +1438,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 9
         ],
         self::MOVE_SPARK_FAST => [
+            self::FIELD_NAME => 'Spark',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::ELECTRIC,
             self::FIELD_POWER => 6,
@@ -1349,6 +1452,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 8
         ],
         self::MOVE_LOW_KICK_FAST => [
+            self::FIELD_NAME => 'Low Kick',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::FIGHTING,
             self::FIELD_POWER => 6,
@@ -1362,6 +1466,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 5
         ],
         self::MOVE_KARATE_CHOP_FAST => [
+            self::FIELD_NAME => 'Karate Chop',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::FIGHTING,
             self::FIELD_POWER => 8,
@@ -1375,6 +1480,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 7
         ],
         self::MOVE_EMBER_FAST => [
+            self::FIELD_NAME => 'Ember',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::FIRE,
             self::FIELD_POWER => 10,
@@ -1388,6 +1494,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 6
         ],
         self::MOVE_WING_ATTACK_FAST => [
+            self::FIELD_NAME => 'Wing Attack',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::FLYING,
             self::FIELD_POWER => 8,
@@ -1401,6 +1508,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 7
         ],
         self::MOVE_PECK_FAST => [
+            self::FIELD_NAME => 'Peck',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::FLYING,
             self::FIELD_POWER => 10,
@@ -1414,6 +1522,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 5
         ],
         self::MOVE_LICK_FAST => [
+            self::FIELD_NAME => 'Lick',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::GHOST,
             self::FIELD_POWER => 5,
@@ -1427,6 +1536,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 3
         ],
         self::MOVE_SHADOW_CLAW_FAST => [
+            self::FIELD_NAME => 'Shadow Claw',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::GHOST,
             self::FIELD_POWER => 9,
@@ -1440,6 +1550,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 8
         ],
         self::MOVE_VINE_WHIP_FAST => [
+            self::FIELD_NAME => 'Vine Whip',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::GRASS,
             self::FIELD_POWER => 7,
@@ -1453,6 +1564,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 8
         ],
         self::MOVE_RAZOR_LEAF_FAST => [
+            self::FIELD_NAME => 'Razor Leaf',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::GRASS,
             self::FIELD_POWER => 13,
@@ -1466,6 +1578,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 4
         ],
         self::MOVE_MUD_SHOT_FAST => [
+            self::FIELD_NAME => 'Mud Shot',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::GROUND,
             self::FIELD_POWER => 5,
@@ -1479,6 +1592,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 9
         ],
         self::MOVE_ICE_SHARD_FAST => [
+            self::FIELD_NAME => 'Ice Shard',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::ICE,
             self::FIELD_POWER => 12,
@@ -1492,6 +1606,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 10
         ],
         self::MOVE_FROST_BREATH_FAST => [
+            self::FIELD_NAME => 'Frost Breath',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::ICE,
             self::FIELD_POWER => 10,
@@ -1505,6 +1620,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 5
         ],
         self::MOVE_QUICK_ATTACK_FAST => [
+            self::FIELD_NAME => 'Quick Attack',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 8,
@@ -1518,6 +1634,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 7
         ],
         self::MOVE_SCRATCH_FAST => [
+            self::FIELD_NAME => 'Scratch',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 6,
@@ -1531,6 +1648,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 2
         ],
         self::MOVE_TACKLE_FAST => [
+            self::FIELD_NAME => 'Tackle',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 5,
@@ -1544,6 +1662,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 2
         ],
         self::MOVE_POUND_FAST => [
+            self::FIELD_NAME => 'Pound',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 7,
@@ -1557,6 +1676,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 4
         ],
         self::MOVE_CUT_FAST => [
+            self::FIELD_NAME => 'Cut',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 5,
@@ -1570,6 +1690,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 2
         ],
         self::MOVE_POISON_JAB_FAST => [
+            self::FIELD_NAME => 'Poison Jab',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::POISON,
             self::FIELD_POWER => 10,
@@ -1583,6 +1704,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 7
         ],
         self::MOVE_ACID_FAST => [
+            self::FIELD_NAME => 'Acid',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::POISON,
             self::FIELD_POWER => 9,
@@ -1596,6 +1718,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 5
         ],
         self::MOVE_PSYCHO_CUT_FAST => [
+            self::FIELD_NAME => 'Psycho Cut',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::PSYCHIC,
             self::FIELD_POWER => 5,
@@ -1609,6 +1732,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 9
         ],
         self::MOVE_ROCK_THROW_FAST => [
+            self::FIELD_NAME => 'Rock Throw',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::ROCK,
             self::FIELD_POWER => 12,
@@ -1622,6 +1746,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 5
         ],
         self::MOVE_METAL_CLAW_FAST => [
+            self::FIELD_NAME => 'Metal Claw',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::STEEL,
             self::FIELD_POWER => 8,
@@ -1635,6 +1760,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 6
         ],
         self::MOVE_BULLET_PUNCH_FAST => [
+            self::FIELD_NAME => 'Bullet Punch',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::STEEL,
             self::FIELD_POWER => 9,
@@ -1648,6 +1774,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 7
         ],
         self::MOVE_WATER_GUN_FAST => [
+            self::FIELD_NAME => 'Water Gun',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::WATER,
             self::FIELD_POWER => 5,
@@ -1661,6 +1788,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 3
         ],
         self::MOVE_SPLASH_FAST => [
+            self::FIELD_NAME => 'Splash',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::WATER,
             self::FIELD_POWER => null,
@@ -1674,6 +1802,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 12
         ],
         self::MOVE_WATER_GUN_FAST_BLASTOISE => [
+            self::FIELD_NAME => 'Water Gun',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::WATER,
             self::FIELD_POWER => 10,
@@ -1687,6 +1816,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 4
         ],
         self::MOVE_MUD_SLAP_FAST => [
+            self::FIELD_NAME => 'Mud-Slap',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::GROUND,
             self::FIELD_POWER => 18,
@@ -1700,6 +1830,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 8
         ],
         self::MOVE_ZEN_HEADBUTT_FAST => [
+            self::FIELD_NAME => 'Zen Headbutt',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::PSYCHIC,
             self::FIELD_POWER => 12,
@@ -1713,6 +1844,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 6
         ],
         self::MOVE_CONFUSION_FAST => [
+            self::FIELD_NAME => 'Confusion',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::PSYCHIC,
             self::FIELD_POWER => 20,
@@ -1726,6 +1858,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 12
         ],
         self::MOVE_POISON_STING_FAST => [
+            self::FIELD_NAME => 'Poison Sting',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::POISON,
             self::FIELD_POWER => 5,
@@ -1739,6 +1872,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 6
         ],
         self::MOVE_BUBBLE_FAST => [
+            self::FIELD_NAME => 'Bubble',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::WATER,
             self::FIELD_POWER => 12,
@@ -1752,6 +1886,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 11
         ],
         self::MOVE_FEINT_ATTACK_FAST => [
+            self::FIELD_NAME => 'Feint Attack',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::DARK,
             self::FIELD_POWER => 10,
@@ -1765,6 +1900,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 6
         ],
         self::MOVE_STEEL_WING_FAST => [
+            self::FIELD_NAME => 'Steel Wing',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::STEEL,
             self::FIELD_POWER => 11,
@@ -1778,6 +1914,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 5
         ],
         self::MOVE_FIRE_FANG_FAST => [
+            self::FIELD_NAME => 'Fire Fang',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::FIRE,
             self::FIELD_POWER => 12,
@@ -1791,6 +1928,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 5
         ],
         self::MOVE_ROCK_SMASH_FAST => [
+            self::FIELD_NAME => 'Rock Smash',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::FIGHTING,
             self::FIELD_POWER => 15,
@@ -1804,6 +1942,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 7
         ],
         self::MOVE_TRANSFORM_FAST => [
+            self::FIELD_NAME => 'Transform',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => null,
@@ -1817,6 +1956,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => null
         ],
         self::MOVE_COUNTER_FAST => [
+            self::FIELD_NAME => 'Counter',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::FIGHTING,
             self::FIELD_POWER => 12,
@@ -1830,6 +1970,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 7
         ],
         self::MOVE_POWDER_SNOW_FAST => [
+            self::FIELD_NAME => 'Powder Snow',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::ICE,
             self::FIELD_POWER => 6,
@@ -1843,6 +1984,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 8
         ],
         self::MOVE_CLOSE_COMBAT => [
+            self::FIELD_NAME => 'Close Combat',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FIGHTING,
             self::FIELD_POWER => 100,
@@ -1856,6 +1998,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -45
         ],
         self::MOVE_DYNAMIC_PUNCH => [
+            self::FIELD_NAME => 'Dynamic Punch',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FIGHTING,
             self::FIELD_POWER => 90,
@@ -1869,6 +2012,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -50
         ],
         self::MOVE_FOCUS_BLAST => [
+            self::FIELD_NAME => 'Focus Blast',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FIGHTING,
             self::FIELD_POWER => 140,
@@ -1882,6 +2026,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -75
         ],
         self::MOVE_AURORA_BEAM => [
+            self::FIELD_NAME => 'Aurora Beam',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::ICE,
             self::FIELD_POWER => 80,
@@ -1895,6 +2040,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -60
         ],
         self::MOVE_CHARGE_BEAM_FAST => [
+            self::FIELD_NAME => 'Charge Beam',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::ELECTRIC,
             self::FIELD_POWER => 8,
@@ -1908,6 +2054,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 11
         ],
         self::MOVE_VOLT_SWITCH_FAST => [
+            self::FIELD_NAME => 'Volt Switch',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::ELECTRIC,
             self::FIELD_POWER => 14,
@@ -1921,6 +2068,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 16
         ],
         self::MOVE_WILD_CHARGE => [
+            self::FIELD_NAME => 'Wild Charge',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::ELECTRIC,
             self::FIELD_POWER => 90,
@@ -1934,6 +2082,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -45
         ],
         self::MOVE_ZAP_CANNON => [
+            self::FIELD_NAME => 'Zap Cannon',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::ELECTRIC,
             self::FIELD_POWER => 140,
@@ -1947,6 +2096,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -80
         ],
         self::MOVE_DRAGON_TAIL_FAST => [
+            self::FIELD_NAME => 'Dragon Tail',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::DRAGON,
             self::FIELD_POWER => 15,
@@ -1960,6 +2110,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 10
         ],
         self::MOVE_AVALANCHE => [
+            self::FIELD_NAME => 'Avalanche',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::ICE,
             self::FIELD_POWER => 90,
@@ -1973,6 +2124,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -45
         ],
         self::MOVE_AIR_SLASH_FAST => [
+            self::FIELD_NAME => 'Air Slash',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::FLYING,
             self::FIELD_POWER => 14,
@@ -1986,6 +2138,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 9
         ],
         self::MOVE_BRAVE_BIRD => [
+            self::FIELD_NAME => 'Brave Bird',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FLYING,
             self::FIELD_POWER => 130,
@@ -1999,6 +2152,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -55
         ],
         self::MOVE_SKY_ATTACK => [
+            self::FIELD_NAME => 'Sky Attack',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FLYING,
             self::FIELD_POWER => 80,
@@ -2012,6 +2166,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -45
         ],
         self::MOVE_SAND_TOMB => [
+            self::FIELD_NAME => 'Sand Tomb',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::GROUND,
             self::FIELD_POWER => 60,
@@ -2025,6 +2180,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -40
         ],
         self::MOVE_ROCK_BLAST => [
+            self::FIELD_NAME => 'Rock Blast',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::ROCK,
             self::FIELD_POWER => 50,
@@ -2038,6 +2194,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -40
         ],
         self::MOVE_INFESTATION_FAST => [
+            self::FIELD_NAME => 'Infestation',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::BUG,
             self::FIELD_POWER => 10,
@@ -2051,6 +2208,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 12
         ],
         self::MOVE_STRUGGLE_BUG_FAST => [
+            self::FIELD_NAME => 'Struggle Bug',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::BUG,
             self::FIELD_POWER => 15,
@@ -2064,6 +2222,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 8
         ],
         self::MOVE_SILVER_WIND => [
+            self::FIELD_NAME => 'Silver Wind',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::BUG,
             self::FIELD_POWER => 70,
@@ -2077,6 +2236,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -45
         ],
         self::MOVE_ASTONISH_FAST => [
+            self::FIELD_NAME => 'Astonish',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::GHOST,
             self::FIELD_POWER => 8,
@@ -2090,6 +2250,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 9
         ],
         self::MOVE_HEX_FAST => [
+            self::FIELD_NAME => 'Hex',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::GHOST,
             self::FIELD_POWER => 10,
@@ -2103,6 +2264,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 12
         ],
         self::MOVE_NIGHT_SHADE => [
+            self::FIELD_NAME => 'Night Shade',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::GHOST,
             self::FIELD_POWER => 60,
@@ -2116,6 +2278,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -55
         ],
         self::MOVE_IRON_TAIL_FAST => [
+            self::FIELD_NAME => 'Iron Tail',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::STEEL,
             self::FIELD_POWER => 15,
@@ -2129,6 +2292,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 6
         ],
         self::MOVE_GYRO_BALL => [
+            self::FIELD_NAME => 'Gyro Ball',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::STEEL,
             self::FIELD_POWER => 80,
@@ -2142,6 +2306,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -60
         ],
         self::MOVE_HEAVY_SLAM => [
+            self::FIELD_NAME => 'Heavy Slam',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::STEEL,
             self::FIELD_POWER => 70,
@@ -2155,6 +2320,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -50
         ],
         self::MOVE_FIRE_SPIN_FAST => [
+            self::FIELD_NAME => 'Fire Spin',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::FIRE,
             self::FIELD_POWER => 14,
@@ -2168,6 +2334,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 10
         ],
         self::MOVE_OVERHEAT => [
+            self::FIELD_NAME => 'Overheat',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FIRE,
             self::FIELD_POWER => 160,
@@ -2181,6 +2348,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -55
         ],
         self::MOVE_BULLET_SEED_FAST => [
+            self::FIELD_NAME => 'Bullet Seed',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::GRASS,
             self::FIELD_POWER => 8,
@@ -2194,6 +2362,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 13
         ],
         self::MOVE_GRASS_KNOT => [
+            self::FIELD_NAME => 'Grass Knot',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::GRASS,
             self::FIELD_POWER => 90,
@@ -2207,6 +2376,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -50
         ],
         self::MOVE_ENERGY_BALL => [
+            self::FIELD_NAME => 'Energy Ball',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::GRASS,
             self::FIELD_POWER => 90,
@@ -2220,6 +2390,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -55
         ],
         self::MOVE_EXTRASENSORY_FAST => [
+            self::FIELD_NAME => 'Extrasensory',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::PSYCHIC,
             self::FIELD_POWER => 12,
@@ -2233,6 +2404,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 10
         ],
         self::MOVE_FUTURESIGHT => [
+            self::FIELD_NAME => 'Future Sight',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::PSYCHIC,
             self::FIELD_POWER => 120,
@@ -2246,6 +2418,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -65
         ],
         self::MOVE_MIRROR_COAT => [
+            self::FIELD_NAME => 'Mirror Coat',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::PSYCHIC,
             self::FIELD_POWER => 60,
@@ -2259,6 +2432,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -55
         ],
         self::MOVE_OUTRAGE => [
+            self::FIELD_NAME => 'Outrage',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::DRAGON,
             self::FIELD_POWER => 110,
@@ -2272,6 +2446,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -60
         ],
         self::MOVE_SNARL_FAST => [
+            self::FIELD_NAME => 'Snarl',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::DARK,
             self::FIELD_POWER => 12,
@@ -2285,6 +2460,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 13
         ],
         self::MOVE_CRUNCH => [
+            self::FIELD_NAME => 'Crunch',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::DARK,
             self::FIELD_POWER => 70,
@@ -2298,6 +2474,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -45
         ],
         self::MOVE_FOUL_PLAY => [
+            self::FIELD_NAME => 'Foul Play',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::DARK,
             self::FIELD_POWER => 70,
@@ -2311,6 +2488,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -45
         ],
         self::MOVE_HIDDEN_POWER_FAST => [
+            self::FIELD_NAME => 'Hidden Power',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 15,
@@ -2324,6 +2502,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 8
         ],
         self::MOVE_TAKE_DOWN_FAST => [
+            self::FIELD_NAME => 'Take Down',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 8,
@@ -2337,6 +2516,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 8
         ],
         self::MOVE_WATERFALL_FAST => [
+            self::FIELD_NAME => 'Waterfall',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::WATER,
             self::FIELD_POWER => 16,
@@ -2350,6 +2530,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 8
         ],
         self::MOVE_SURF => [
+            self::FIELD_NAME => 'Surf',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::WATER,
             self::FIELD_POWER => 65,
@@ -2363,6 +2544,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -40
         ],
         self::MOVE_DRACO_METEOR => [
+            self::FIELD_NAME => 'Draco Meteor',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::DRAGON,
             self::FIELD_POWER => 150,
@@ -2376,6 +2558,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -65
         ],
         self::MOVE_DOOM_DESIRE => [
+            self::FIELD_NAME => 'Doom Desire',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::STEEL,
             self::FIELD_POWER => 70,
@@ -2389,6 +2572,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -40
         ],
         self::MOVE_YAWN_FAST => [
+            self::FIELD_NAME => 'Yawn',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => null,
@@ -2402,6 +2586,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 12
         ],
         self::MOVE_PSYCHO_BOOST => [
+            self::FIELD_NAME => 'Psycho Boost',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::PSYCHIC,
             self::FIELD_POWER => 70,
@@ -2415,6 +2600,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -35
         ],
         self::MOVE_ORIGIN_PULSE => [
+            self::FIELD_NAME => 'Origin Pulse',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::WATER,
             self::FIELD_POWER => 130,
@@ -2428,6 +2614,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -60
         ],
         self::MOVE_PRECIPICE_BLADES => [
+            self::FIELD_NAME => 'Precipice Blades',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::GROUND,
             self::FIELD_POWER => 130,
@@ -2441,6 +2628,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -60
         ],
         self::MOVE_PRESENT_FAST => [
+            self::FIELD_NAME => 'Present',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 5,
@@ -2454,6 +2642,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 12
         ],
         self::MOVE_WEATHER_BALL_FIRE => [
+            self::FIELD_NAME => 'Weather Ball',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FIRE,
             self::FIELD_POWER => 60,
@@ -2467,6 +2656,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -35
         ],
         self::MOVE_WEATHER_BALL_ICE => [
+            self::FIELD_NAME => 'Weather Ball',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::ICE,
             self::FIELD_POWER => 60,
@@ -2480,6 +2670,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -35
         ],
         self::MOVE_WEATHER_BALL_ROCK => [
+            self::FIELD_NAME => 'Weather Ball',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 60,
@@ -2493,6 +2684,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -35
         ],
         self::MOVE_WEATHER_BALL_WATER => [
+            self::FIELD_NAME => 'Weather Ball',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::WATER,
             self::FIELD_POWER => 60,
@@ -2506,6 +2698,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -35
         ],
         self::MOVE_FRENZY_PLANT => [
+            self::FIELD_NAME => 'Frenzy Plant',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::GRASS,
             self::FIELD_POWER => 100,
@@ -2519,6 +2712,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -45
         ],
         self::MOVE_SMACK_DOWN_FAST => [
+            self::FIELD_NAME => 'Smack Down',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::ROCK,
             self::FIELD_POWER => 16,
@@ -2532,6 +2726,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 8
         ],
         self::MOVE_BLAST_BURN => [
+            self::FIELD_NAME => 'Blast Burn',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FIRE,
             self::FIELD_POWER => 110,
@@ -2545,6 +2740,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -50
         ],
         self::MOVE_HYDRO_CANNON => [
+            self::FIELD_NAME => 'Hydro Cannon',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::WATER,
             self::FIELD_POWER => 90,
@@ -2558,6 +2754,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -40
         ],
         self::MOVE_LAST_RESORT => [
+            self::FIELD_NAME => 'Last Resort',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 90,
@@ -2571,6 +2768,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -55
         ],
         self::MOVE_METEOR_MASH => [
+            self::FIELD_NAME => 'Meteor Mash',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::STEEL,
             self::FIELD_POWER => 100,
@@ -2584,6 +2782,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -50
         ],
         self::MOVE_SKULL_BASH => [
+            self::FIELD_NAME => 'Skull Bash',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 130,
@@ -2597,6 +2796,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -75
         ],
         self::MOVE_ACID_SPRAY => [
+            self::FIELD_NAME => 'Acid Spray',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::POISON,
             self::FIELD_POWER => 20,
@@ -2610,6 +2810,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -50
         ],
         self::MOVE_EARTH_POWER => [
+            self::FIELD_NAME => 'Earth Power',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::GROUND,
             self::FIELD_POWER => 100,
@@ -2623,6 +2824,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -55
         ],
         self::MOVE_CRABHAMMER => [
+            self::FIELD_NAME => 'Crabhammer',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::WATER,
             self::FIELD_POWER => 85,
@@ -2636,6 +2838,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -50
         ],
         self::MOVE_LUNGE => [
+            self::FIELD_NAME => 'Lunge',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::BUG,
             self::FIELD_POWER => null,
@@ -2649,6 +2852,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => null
         ],
         self::MOVE_CRUSH_CLAW => [
+            self::FIELD_NAME => 'Crush Claw',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => null,
@@ -2662,6 +2866,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => null
         ],
         self::MOVE_OCTAZOOKA => [
+            self::FIELD_NAME => 'Octazooka',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::WATER,
             self::FIELD_POWER => 50,
@@ -2675,6 +2880,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -50
         ],
         self::MOVE_MIRROR_SHOT => [
+            self::FIELD_NAME => 'Mirror Shot',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::STEEL,
             self::FIELD_POWER => 50,
@@ -2688,6 +2894,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -35
         ],
         self::MOVE_SUPER_POWER => [
+            self::FIELD_NAME => 'Superpower',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FIGHTING,
             self::FIELD_POWER => 85,
@@ -2701,6 +2908,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -40
         ],
         self::MOVE_FELL_STINGER => [
+            self::FIELD_NAME => 'Fell Stinger',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::BUG,
             self::FIELD_POWER => 50,
@@ -2714,6 +2922,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -35
         ],
         self::MOVE_LEAF_TORNADO => [
+            self::FIELD_NAME => 'Leaf Tornado',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::GRASS,
             self::FIELD_POWER => 45,
@@ -2727,6 +2936,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -40
         ],
         self::MOVE_LEECH_LIFE => [
+            self::FIELD_NAME => 'Leech Life',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::BUG,
             self::FIELD_POWER => null,
@@ -2740,6 +2950,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => null
         ],
         self::MOVE_DRAIN_PUNCH => [
+            self::FIELD_NAME => 'Drain Punch',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FIGHTING,
             self::FIELD_POWER => null,
@@ -2753,6 +2964,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => null
         ],
         self::MOVE_SHADOW_BONE => [
+            self::FIELD_NAME => 'Shadow Bone',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::GHOST,
             self::FIELD_POWER => null,
@@ -2766,6 +2978,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => null
         ],
         self::MOVE_MUDDY_WATER => [
+            self::FIELD_NAME => 'Muddy Water',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::WATER,
             self::FIELD_POWER => 50,
@@ -2779,6 +2992,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -35
         ],
         self::MOVE_BLAZE_KICK => [
+            self::FIELD_NAME => 'Blaze Kick',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FIRE,
             self::FIELD_POWER => 45,
@@ -2792,6 +3006,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -40
         ],
         self::MOVE_RAZOR_SHELL => [
+            self::FIELD_NAME => 'Razor Shell',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::WATER,
             self::FIELD_POWER => null,
@@ -2805,6 +3020,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => null
         ],
         self::MOVE_POWER_UP_PUNCH => [
+            self::FIELD_NAME => 'Power-Up Punch',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FIGHTING,
             self::FIELD_POWER => 50,
@@ -2818,6 +3034,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -35
         ],
         self::MOVE_CHARM_FAST => [
+            self::FIELD_NAME => 'Charm',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::FAIRY,
             self::FIELD_POWER => 20,
@@ -2831,6 +3048,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 6
         ],
         self::MOVE_GIGA_IMPACT => [
+            self::FIELD_NAME => 'Giga Impact',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 200,
@@ -2844,6 +3062,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -80
         ],
         self::MOVE_FRUSTRATION => [
+            self::FIELD_NAME => 'Frustration',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 10,
@@ -2857,6 +3076,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -70
         ],
         self::MOVE_RETURN => [
+            self::FIELD_NAME => 'Return',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 35,
@@ -2870,6 +3090,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -70
         ],
         self::MOVE_SYNCHRONOISE => [
+            self::FIELD_NAME => 'Synchronoise',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::PSYCHIC,
             self::FIELD_POWER => 80,
@@ -2883,6 +3104,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -50
         ],
         self::MOVE_LOCK_ON_FAST => [
+            self::FIELD_NAME => 'Lock-On',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 1,
@@ -2896,6 +3118,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 5
         ],
         self::MOVE_THUNDER_FANG_FAST => [
+            self::FIELD_NAME => 'Thunder Fang',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::ELECTRIC,
             self::FIELD_POWER => 12,
@@ -2909,6 +3132,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 5
         ],
         self::MOVE_ICE_FANG_FAST => [
+            self::FIELD_NAME => 'Ice Fang',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::ICE,
             self::FIELD_POWER => 12,
@@ -2922,6 +3146,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 5
         ],
         self::MOVE_HORN_DRILL => [
+            self::FIELD_NAME => 'Horn Drill',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => null,
@@ -2935,6 +3160,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => null
         ],
         self::MOVE_FISSURE => [
+            self::FIELD_NAME => 'Fissure',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::GROUND,
             self::FIELD_POWER => null,
@@ -2948,6 +3174,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => null
         ],
         self::MOVE_SACRED_SWORD => [
+            self::FIELD_NAME => 'Sacred Sword',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FIGHTING,
             self::FIELD_POWER => 55,
@@ -2961,6 +3188,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -35
         ],
         self::MOVE_FLYING_PRESS => [
+            self::FIELD_NAME => 'Flying Press',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FIGHTING,
             self::FIELD_POWER => 110,
@@ -2974,6 +3202,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -40
         ],
         self::MOVE_AURA_SPHERE => [
+            self::FIELD_NAME => 'Aura Sphere',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FIGHTING,
             self::FIELD_POWER => 90,
@@ -2987,6 +3216,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -55
         ],
         self::MOVE_ROCK_WRECKER => [
+            self::FIELD_NAME => 'Rock Wrecker',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::ROCK,
             self::FIELD_POWER => 110,
@@ -3000,6 +3230,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -50
         ],
         self::MOVE_FLY => [
+            self::FIELD_NAME => 'Fly',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FLYING,
             self::FIELD_POWER => 80,
@@ -3013,6 +3244,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -45
         ],
         self::MOVE_V_CREATE => [
+            self::FIELD_NAME => 'V-create',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FIRE,
             self::FIELD_POWER => 95,

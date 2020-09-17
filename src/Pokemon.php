@@ -64,7 +64,6 @@ class Pokemon extends Pokemon\PokemonList
         if (!$pokedexId) {
             return null;
         }
-        $result = [];
         $list = static::getList();
         foreach ($list as $pokemon) {
             if ($pokemon->getPokedexId() === $pokedexId) {

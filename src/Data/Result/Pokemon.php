@@ -2,6 +2,7 @@
 
 namespace Pogo\Data\Result;
 
+use Pogo\Data\Parser\Locale;
 use Pogo\General\Mods;
 use Pogo\Handjob\FormsAlias;
 use Pogo\Pokemon\PokemonList;
@@ -93,6 +94,7 @@ class Pokemon
 
             // process simple fields
             $data = [
+                "self::FIELD_NAME => '" . addcslashes(Locale::getPokemon($code), "'") . "'",
                 'self::FIELD_ATTACK => ' . $pokemon[Pokemon::FIELD_ATTACK],
                 'self::FIELD_DEFENSE => ' . $pokemon[Pokemon::FIELD_DEFENSE],
                 'self::FIELD_STAMINA => ' . $pokemon[Pokemon::FIELD_STAMINA],
@@ -237,6 +239,7 @@ use Pogo\Pokemon, Pogo\General\Mods, Pogo\Handjob\FormsAlias, Pogo\General\Types
 
 class PokemonData
 {
+    const FIELD_NAME = 'name';
     const FIELD_TYPE1 = 'type1';
     const FIELD_TYPE2 = 'type2';
     const FIELD_ATTACK = 'attack';
