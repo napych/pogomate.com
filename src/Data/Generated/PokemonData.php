@@ -1,8 +1,8 @@
 <?php
 
-namespace Pogo\Data\PHP;
+namespace Pogo\Data\Generated;
 
-use Pogo\Pokemon, Pogo\General\Mods, Pogo\Handjob\FormsAlias, Pogo\General\Types;
+use Pogo\Pokemon, Pogo\General\Mods, Pogo\Data\Manual\FormsAlias, Pogo\General\Types;
 
 class PokemonData
 {
@@ -19,7 +19,7 @@ class PokemonData
     const FIELD_MYTHIC = 'mythic';
     const FIELD_TRANSFERABLE = 'transfer';
     const FIELD_DEPLOYABLE = 'deploy';
-    const FIELD_BUDDY_DISTANCE = 'distance'; 
+    const FIELD_BUDDY_DISTANCE = 'distance';
     const FIELD_THIRD_MOVE_CANDY = 'moveCandy';
     const FIELD_THIRD_MOVE_STARDUST = 'moveDust';
     const FIELD_EVOLVES = 'evolves';
@@ -27,7 +27,7 @@ class PokemonData
     const FIELD_FAST_MOVES_ELITE = 'fastMovesElite';
     const FIELD_CHARGE_MOVES = 'chargeMoves';
     const FIELD_CHARGE_MOVES_ELITE = 'chargeMovesElite';
-    
+
     const POKEMON = [
         Pokemon::BULBASAUR => [
             self::FIELD_NAME => 'Bulbasaur',
@@ -18390,6 +18390,6 @@ class PokemonData
             self::FIELD_THIRD_MOVE_STARDUST => 50000,
             self::FIELD_FAST_MOVES => [Moves::MOVE_COUNTER_FAST, Moves::MOVE_FURY_CUTTER_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CLOSE_COMBAT, Moves::MOVE_BRAVE_BIRD, Moves::MOVE_LEAF_BLADE, Moves::MOVE_NIGHT_SLASH]
-        ]    
+        ]
     ];
-} 
+}

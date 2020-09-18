@@ -2,6 +2,7 @@
 
 namespace Pogo\Lists\Gamepress;
 
+use Pogo\Data\Manual\FormsAlias;
 use Pogo\General\Mods;
 use Pogo\Pokemon;
 
@@ -18,9 +19,9 @@ class ML
             Pokemon::SNORLAX,
             Pokemon::KYOGRE,
             Pokemon::PALKIA,
-            Pokemon::GIRATINA | Mods::FORM2,
+            Pokemon::GIRATINA | FormsAlias::GIRATINA_ALTERED,
             Pokemon::GARCHOMP,
-            Pokemon::GIRATINA | Mods::FORM1,
+            Pokemon::GIRATINA | FormsAlias::GIRATINA_ORIGIN,
             Pokemon::ZEKROM
         ],
         'Tier 2' => [
@@ -37,7 +38,7 @@ class ML
         'Tier 2.5' => [
             Pokemon::MACHAMP,
             Pokemon::REGICE,
-            Pokemon::LANDORUS | Mods::FORM2,
+            Pokemon::LANDORUS | FormsAlias::LANDORUS_INCARNATE,
             Pokemon::RESHIRAM,
             Pokemon::CONKELDURR,
             Pokemon::DARKRAI,

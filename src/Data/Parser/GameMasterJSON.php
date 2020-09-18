@@ -2,12 +2,12 @@
 
 namespace Pogo\Data\Parser;
 
-use Pogo\Data\Result;
+use Pogo\Data\Result\All;
 use Pogo\General\Mods;
 use Pogo\General\Types;
-use Pogo\Handjob\Forms;
+use Pogo\Data\Manual\Forms;
 use Pogo\Pokemon;
-use Pogo\Pokemon\PokemonList;
+use Pogo\Data\Manual\PokemonList;
 
 class GameMasterJSON
 {
@@ -79,14 +79,14 @@ class GameMasterJSON
         'adventureSyncV2Gmt',
     ];
 
-    /** @var Result */
+    /** @var All */
     protected $result = null;
     /** @var int */
     protected $batch = null;
 
     public function __construct()
     {
-        $this->result = new Result();
+        $this->result = new All();
     }
 
     public function getResult()

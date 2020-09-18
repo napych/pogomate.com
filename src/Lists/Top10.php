@@ -2,6 +2,7 @@
 
 namespace Pogo\Lists;
 
+use Pogo\Data\Manual\FormsAlias;
 use Pogo\General\Mods;
 use Pogo\Pokemon;
 
@@ -133,7 +134,7 @@ class Top10
             Pokemon::EXCADRILL,
             Pokemon::GARCHOMP,
             Pokemon::RHYPERIOR,
-            Pokemon::LANDORUS | Mods::FORM1,
+            Pokemon::LANDORUS | FormsAlias::LANDORUS_INCARNATE,
             Pokemon::RHYDON,
             Pokemon::GOLURK,
             Pokemon::DONPHAN,

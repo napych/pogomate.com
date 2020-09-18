@@ -31,7 +31,7 @@ class Types
         $output = <<<PHP_CODE
 <?php
 
-namespace Pogo\Data\PHP;
+namespace Pogo\Data\Generated;
 
 use Pogo\General\Types;
 
@@ -55,6 +55,6 @@ PHP_CODE;
     ];
 }
 PHP_CODE;
-        file_put_contents(__DIR__ . '/../PHP/TypeEffectiveness.php', $output);
+        file_put_contents(__DIR__ . '/../Generated/TypeEffectiveness.php', $output);
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Pogo\Data\PHP;
+namespace Pogo\Data\Generated;
 
 use Pogo\Pokemon;
 

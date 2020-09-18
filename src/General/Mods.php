@@ -2,7 +2,7 @@
 
 namespace Pogo\General;
 
-use Pogo\Handjob\Forms;
+use Pogo\Data\Manual\Forms;
 
 class Mods
 {

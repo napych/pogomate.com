@@ -1,6 +1,6 @@
 <?php
 
-namespace Pogo\Handjob;
+namespace Pogo\Data\Manual;
 
 use Pogo\General\Mods;
 

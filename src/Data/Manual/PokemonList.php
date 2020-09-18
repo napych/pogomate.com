@@ -1,6 +1,7 @@
 <?php
 
-namespace Pogo\Pokemon;
+namespace Pogo\Data\Manual;
+
 class PokemonList
 {
     const BULBASAUR = 1;

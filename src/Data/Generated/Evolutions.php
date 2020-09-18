@@ -1,8 +1,8 @@
 <?php
 
-namespace Pogo\Data\PHP;
+namespace Pogo\Data\Generated;
 
-use Pogo\Pokemon, Pogo\General\Mods, Pogo\Handjob\FormsAlias;
+use Pogo\Pokemon, Pogo\General\Mods, Pogo\Data\Manual\FormsAlias;
 
 class Evolutions
 {
@@ -18,7 +18,7 @@ class Evolutions
     const FIELD_LURE = 'lure';
     const FIELD_MALE = 'male';
     const FIELD_FEMALE = 'female';
-      
+
     const EVOLUTIONS = [
         Pokemon::IVYSAUR => [
             self::FIELD_PARENT => Pokemon::BULBASAUR,

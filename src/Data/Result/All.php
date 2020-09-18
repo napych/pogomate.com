@@ -1,12 +1,12 @@
 <?php
 
-namespace Pogo\Data;
+namespace Pogo\Data\Result;
 
 use Pogo\Data\Result\Moves;
 use Pogo\Data\Result\Pokemon;
 use Pogo\Data\Result\Types;
 
-class Result
+class All
 {
     /** @var Moves */
     public $moves = null;

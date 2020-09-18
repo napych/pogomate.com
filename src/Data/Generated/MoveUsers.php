@@ -1,8 +1,8 @@
 <?php
 
-namespace Pogo\Data\PHP;
+namespace Pogo\Data\Generated;
 
-use Pogo\Pokemon, Pogo\General\Mods, Pogo\Handjob\FormsAlias;
+use Pogo\Pokemon, Pogo\General\Mods, Pogo\Data\Manual\FormsAlias;
 
 class MoveUsers
 {
@@ -6865,6 +6865,6 @@ class MoveUsers
         ],
         Moves::MOVE_SACRED_SWORD => [
             Pokemon::COBALLION
-        ]    
+        ]
     ];
 }

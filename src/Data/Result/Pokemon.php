@@ -4,8 +4,8 @@ namespace Pogo\Data\Result;
 
 use Pogo\Data\Parser\Locale;
 use Pogo\General\Mods;
-use Pogo\Handjob\FormsAlias;
-use Pogo\Pokemon\PokemonList;
+use Pogo\Data\Manual\FormsAlias;
+use Pogo\Data\Manual\PokemonList;
 
 class Pokemon
 {
@@ -201,7 +201,7 @@ class Pokemon
             // process moves
             static $moveTranslate = [];
             if (empty($moveTranslate)) {
-                $ref = new \ReflectionClass('\Pogo\Data\PHP\Moves');
+                $ref = new \ReflectionClass('\Pogo\Data\Generated\Moves');
                 $moveTranslate = array_flip($ref->getConstants());
             }
             foreach (
@@ -234,9 +234,9 @@ class Pokemon
         $output = <<<PHP
 <?php
 
-namespace Pogo\Data\PHP;
+namespace Pogo\Data\Generated;
 
-use Pogo\Pokemon, Pogo\General\Mods, Pogo\Handjob\FormsAlias, Pogo\General\Types;
+use Pogo\Pokemon, Pogo\General\Mods, Pogo\Data\Manual\FormsAlias, Pogo\General\Types;
 
 class PokemonData
 {
@@ -267,7 +267,7 @@ $output
     ];
 } 
 PHP;
-        file_put_contents(__DIR__ . '/../PHP/PokemonData.php', $output);
+        file_put_contents(__DIR__ . '/../Generated/PokemonData.php', $output);
 
         // PokemonForms.php
         $output = '';
@@ -281,9 +281,9 @@ PHP;
         $output = <<<PHP
 <?php
 
-namespace Pogo\Data\PHP;
+namespace Pogo\Data\Generated;
 
-use Pogo\Pokemon, Pogo\General\Mods, Pogo\Handjob\FormsAlias;
+use Pogo\Pokemon, Pogo\General\Mods, Pogo\Data\Manual\FormsAlias;
 
 class PokemonForms
 {
@@ -292,14 +292,14 @@ $output
     ];
 }
 PHP;
-        file_put_contents(__DIR__ . '/../PHP/PokemonForms.php', $output);
+        file_put_contents(__DIR__ . '/../Generated/PokemonForms.php', $output);
 
         // Legendaries.php
         $output = '        Pokemon::' . implode(",\n        Pokemon::", array_keys($legendaries));
         $output = <<<PHP
 <?php
 
-namespace Pogo\Data\PHP;
+namespace Pogo\Data\Generated;
 
 use Pogo\Pokemon;
 
@@ -310,14 +310,14 @@ $output
     ];
 }
 PHP;
-        file_put_contents(__DIR__ . '/../PHP/Legendaries.php', $output);
+        file_put_contents(__DIR__ . '/../Generated/Legendaries.php', $output);
 
         // Mythics.php
         $output = '        Pokemon::' . implode(",\n        Pokemon::", array_keys($mythics));
         $output = <<<PHP
 <?php
 
-namespace Pogo\Data\PHP;
+namespace Pogo\Data\Generated;
 
 use Pogo\Pokemon;
 
@@ -328,7 +328,7 @@ $output
     ];
 }
 PHP;
-        file_put_contents(__DIR__ . '/../PHP/Mythics.php', $output);
+        file_put_contents(__DIR__ . '/../Generated/Mythics.php', $output);
 
         // Evolutions.php
         $output = [];
@@ -342,9 +342,9 @@ PHP;
         $output = <<<PHP
 <?php
 
-namespace Pogo\Data\PHP;
+namespace Pogo\Data\Generated;
 
-use Pogo\Pokemon, Pogo\General\Mods, Pogo\Handjob\FormsAlias;
+use Pogo\Pokemon, Pogo\General\Mods, Pogo\Data\Manual\FormsAlias;
 
 class Evolutions
 {
@@ -366,7 +366,7 @@ $output
     ];
 }
 PHP;
-        file_put_contents(__DIR__ . '/../PHP/Evolutions.php', $output);
+        file_put_contents(__DIR__ . '/../Generated/Evolutions.php', $output);
 
         // MoveUsers.php
         $output = [];
@@ -377,9 +377,9 @@ PHP;
         $output = <<<PHP
 <?php
 
-namespace Pogo\Data\PHP;
+namespace Pogo\Data\Generated;
 
-use Pogo\Pokemon, Pogo\General\Mods, Pogo\Handjob\FormsAlias;
+use Pogo\Pokemon, Pogo\General\Mods, Pogo\Data\Manual\FormsAlias;
 
 class MoveUsers
 {
@@ -388,7 +388,7 @@ $output
     ];
 }
 PHP;
-        file_put_contents(__DIR__ . '/../PHP/MoveUsers.php', $output);
+        file_put_contents(__DIR__ . '/../Generated/MoveUsers.php', $output);
     }
 
     protected function getCodeConst($code)

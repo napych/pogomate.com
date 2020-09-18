@@ -2,6 +2,7 @@
 
 namespace Pogo\Lists\Gamepress;
 
+use Pogo\Data\Manual\FormsAlias;
 use Pogo\General\Mods;
 use Pogo\Pokemon;
 
@@ -12,7 +13,7 @@ class UL
     const TIERS = [
         'Tier 1' => [
             Pokemon::REGISTEEL,
-            Pokemon::GIRATINA | Mods::FORM2
+            Pokemon::GIRATINA | FormsAlias::GIRATINA_ALTERED
         ],
         'Tier 1.5' => [
             Pokemon::SWAMPERT,
@@ -25,7 +26,7 @@ class UL
             Pokemon::CHARIZARD,
             Pokemon::ESCAVALIER,
             Pokemon::SCRAFTY,
-            Pokemon::GIRATINA | Mods::FORM1,
+            Pokemon::GIRATINA | FormsAlias::GIRATINA_ORIGIN,
             Pokemon::UXIE,
             Pokemon::TOGEKISS,
             Pokemon::ZANGOOSE,
@@ -48,7 +49,7 @@ class UL
             Pokemon::FLYGON,
             Pokemon::MACHAMP | Mods::SHADOW,
             Pokemon::OBSTAGOON,
-            Pokemon::MEWTWO | Mods::FORM2,
+            Pokemon::MEWTWO | FormsAlias::MEWTWO_ARMORED,
             Pokemon::SEISMITOAD,
             Pokemon::CONKELDURR,
             Pokemon::MELMETAL,

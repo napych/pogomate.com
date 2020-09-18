@@ -2,7 +2,7 @@
 
 namespace Pogo\Mate;
 
-use Pogo\Handjob\Settings;
+use Pogo\Data\Manual\Settings;
 use Pogo\Lists;
 use Pogo\Pokemon;
 

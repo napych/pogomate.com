@@ -3,7 +3,7 @@
 namespace Pogo\Mate;
 
 use Pogo\General\Types;
-use Pogo\Data\PHP\TypeEffectiveness;
+use Pogo\Data\Generated\TypeEffectiveness;
 
 class Counters
 {

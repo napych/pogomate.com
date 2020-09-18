@@ -2,6 +2,7 @@
 
 namespace Pogo\Lists\Gamepress {
 
+    use Pogo\Data\Manual\FormsAlias;
     use Pogo\General\Mods;
     use Pogo\Pokemon;
 
@@ -25,7 +26,7 @@ namespace Pogo\Lists\Gamepress {
                 Pokemon::UMBREON,
                 Pokemon::REGISTEEL,
                 Pokemon::MEGANIUM,
-                Pokemon::DEOXYS | Mods::FORM3,
+                Pokemon::DEOXYS | FormsAlias::DEOXYS_DEFENSE,
                 Pokemon::HYPNO,
             ],
             'Tier 2' => [
@@ -64,7 +65,7 @@ namespace Pogo\Lists\Gamepress {
                 Pokemon::NINETALES | Mods::ALOLAN,
                 Pokemon::MAWILE,
                 Pokemon::MUK | Mods::ALOLAN,
-                Pokemon::WORMADAM | Mods::FORM2,
+                Pokemon::WORMADAM | FormsAlias::WORMADAM_TRASH,
                 Pokemon::SCRAFTY,
                 Pokemon::GALVANTULA,
                 Pokemon::FERROTHORN,

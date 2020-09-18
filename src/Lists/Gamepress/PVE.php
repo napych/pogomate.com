@@ -2,6 +2,7 @@
 
 namespace Pogo\Lists\Gamepress;
 
+use Pogo\Data\Manual\FormsAlias;
 use Pogo\General\Mods;
 use Pogo\Pokemon;
 
@@ -37,7 +38,7 @@ class PVE
             Pokemon::KYOGRE,
             Pokemon::RAYQUAZA,
             Pokemon::DARKRAI,
-            Pokemon::GIRATINA | Mods::FORM1,
+            Pokemon::GIRATINA | FormsAlias::GIRATINA_ORIGIN,
             Pokemon::CONKELDURR,
             Pokemon::CHANDELURE,
             Pokemon::ZAPDOS | Mods::SHADOW,
@@ -93,7 +94,7 @@ class PVE
             Pokemon::MAGNEZONE,
             Pokemon::TANGROWTH,
             Pokemon::HEATRAN,
-            Pokemon::LANDORUS | Mods::FORM2,
+            Pokemon::LANDORUS | FormsAlias::LANDORUS_INCARNATE,
             Pokemon::GALLADE | Mods::SHADOW,
         ],
         'Tier 7' => [

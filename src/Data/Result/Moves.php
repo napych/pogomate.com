@@ -74,18 +74,18 @@ class Moves
         $output = <<<PHP
 <?php
 
-namespace Pogo\Data\PHP;
+namespace Pogo\Data\Generated;
 
 class Moves
 {
 $defines
 }
 PHP;
-        file_put_contents(__DIR__ . '/../PHP/Moves.php', $output);
+        file_put_contents(__DIR__ . '/../Generated/Moves.php', $output);
         $output = <<<PHP
 <?php
 
-namespace Pogo\Data\PHP;
+namespace Pogo\Data\Generated;
 
 use Pogo\General\Types;
 
@@ -112,7 +112,7 @@ $moves
     ];
 }
 PHP;
-        file_put_contents(__DIR__ . '/../PHP/MovesData.php', $output);
+        file_put_contents(__DIR__ . '/../Generated/MovesData.php', $output);
     }
 
     /**

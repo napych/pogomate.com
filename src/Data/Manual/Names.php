@@ -1,8 +1,8 @@
 <?php
 
-namespace Pogo\Handjob;
+namespace Pogo\Data\Manual;
 
-use Pogo\Data\PHP\PokemonData;
+use Pogo\Data\Generated\PokemonData;
 use Pogo\Pokemon;
 use ReflectionClass;
 
@@ -88,7 +88,7 @@ class Names
         if (!empty(static::$names)) {
             return;
         }
-        $fooClass = new ReflectionClass('\\Pogo\\Pokemon\\PokemonList');
+        $fooClass = new ReflectionClass('\\Pogo\\Data\\Manual\\PokemonList');
         $constants = $fooClass->getConstants();
         foreach ($constants as $name => $value) {
             static::$names[$value] = ucfirst(strtolower($name));
@@ -108,7 +108,7 @@ class Names
     {
         static $link2id = null;
         if ($link2id === null) {
-            $fooClass = new ReflectionClass('\\Pogo\\Pokemon\\PokemonList');
+            $fooClass = new ReflectionClass('\\Pogo\\Data\\Manual\\PokemonList');
             $constants = $fooClass->getConstants();
             foreach ($constants as $name => $value) {
                 $link2id[strtolower($name)] = $value;
