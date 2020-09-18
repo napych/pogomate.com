@@ -3,7 +3,6 @@
 namespace Pogo\Pokemon;
 
 use Pogo\Data\Manual\Forms;
-use Pogo\Pokemon\Mods;
 
 class Form
 {

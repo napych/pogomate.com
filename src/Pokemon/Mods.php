@@ -2,8 +2,6 @@
 
 namespace Pogo\Pokemon;
 
-use Pogo\Data\Manual\Forms;
-
 class Mods
 {
     const BASE_SHIFT = 12;
@@ -89,27 +87,5 @@ class Mods
     public static function getFormFlags($form)
     {
         return $form << self::BASE_SHIFT;
-    }
-
-    public static function getFullName(string $name, int $code)
-    {
-        $fullName = '';
-        if (Mods::isShadow($code)) {
-            $fullName .= 'Shadow ';
-        }
-        if (Mods::isPurified($code)) {
-            $fullName .= 'Purified ';
-        }
-        if (Mods::isAlolan($code)) {
-            $fullName .= 'Alolan ';
-        }
-        if (Mods::isGalarian($code)) {
-            $fullName .= 'Galarian ';
-        }
-        $fullName .= $name;
-        if (isset(Forms::NAMES[self::getId($code)][self::getForm($code)])) {
-            $fullName .= ' (' . Forms::NAMES[self::getId($code)][self::getForm($code)] . ')';
-        }
-        return $fullName;
     }
 }

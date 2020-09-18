@@ -9,9 +9,9 @@ use Pogo\Data\Generated\PokemonForms;
 use Pogo\Data\Manual\Evolve;
 use Pogo\Data\Manual\Forms;
 use Pogo\Data\Generated\Links;
-use Pogo\Data\Manual\PokemonList;
 use Pogo\Pokemon\Mods;
-use Pogo\Data\Manual\Names;
+
+use const false;
 
 class Pokemon extends Data\Manual\PokemonList
 {
@@ -20,41 +20,20 @@ class Pokemon extends Data\Manual\PokemonList
 
     /** @var int */
     protected $code;
-    /** @var int */
-    protected $pokedexId;
-    /** @var string */
-    protected $name = null;
-    /** @var string */
-    protected $shortName = null;
-    /** @var string */
-    protected $linkName = null;
     /** @var int|null */
     protected $evolveFrom = null;
-    /** @var int */
-    protected $form = 0;
-    /** @var bool */
-    protected $alolan = false;
-    /** @var bool */
-    protected $shadow = false;
-    /** @var bool */
-    protected $galarian = false;
 
     /**
      * @param int $code
      * @return Pokemon
      */
-    public static function get($code): Pokemon
+    public static function get(int $code): Pokemon
     {
         if (isset(static::$list[$code])) {
             return static::$list[$code];
         }
         $obj = new static;
         $obj->code = $code;
-        $obj->pokedexId = Mods::getId($code);
-        $obj->alolan = Mods::isAlolan($code);
-        $obj->galarian = Mods::isGalarian($code);
-        $obj->shadow = Mods::isShadow($code);
-        $obj->form = Mods::getForm($code);
         static::$list[$code] = $obj;
         return $obj;
     }
@@ -71,40 +50,37 @@ class Pokemon extends Data\Manual\PokemonList
         return static::get(Links::LINK2POKEMON[$name]);
     }
 
-    public function getCode()
+    public function getCode(): int
     {
         return $this->code;
     }
 
-    public function getPokedexId()
+    public function getPokedexId(): int
     {
-        return $this->pokedexId;
+        return Mods::getId($this->code);
     }
 
-    public function isAlolan()
+    public function isAlolan(): bool
     {
-        return $this->alolan;
+        return Mods::isAlolan($this->code);
     }
 
-    public function isGalarian()
+    public function isGalarian(): bool
     {
-        return $this->galarian;
+        return Mods::isGalarian($this->code);
     }
 
-    public function isShadow()
+    public function isShadow(): bool
     {
-        return $this->shadow;
+        return Mods::isShadow($this->code);
     }
 
-    public function getFormName()
+    public function isPurified(): bool
     {
-        if (isset(Forms::NAMES[$this->pokedexId][$this->form])) {
-            return Forms::NAMES[$this->pokedexId][$this->form];
-        }
-        return Forms::FORMS[$this->pokedexId][$this->form >> Mods::FORM_BITS] ?? '';
+        return Mods::isPurified($this->code);
     }
 
-    public function getForm()
+    public function getForm(): int
     {
         return Mods::getForm($this->code);
     }
@@ -126,7 +102,7 @@ class Pokemon extends Data\Manual\PokemonList
 
         // handjob list
         $code = $this->code;
-        if ($this->shadow) {
+        if ($this->isShadow()) {
             $code -= Mods::SHADOW;
         }
         if (!array_key_exists($code, Evolve::EVOLVE_FROM)) {
@@ -134,7 +110,7 @@ class Pokemon extends Data\Manual\PokemonList
             throw new Exception('Evolve from is not set for pokemon ' . $code . ' ' . $this->getName());
         }
         $this->evolveFrom = Evolve::EVOLVE_FROM[$code];
-        if ($this->evolveFrom && $this->shadow) {
+        if ($this->evolveFrom && $this->isShadow()) {
             $this->evolveFrom += Mods::SHADOW;
         }
         if ($this->evolveFrom === $this->code) {
@@ -144,37 +120,35 @@ class Pokemon extends Data\Manual\PokemonList
         return $this->evolveFrom;
     }
 
-    public function getName()
+    public function getName(): string
     {
-        if ($this->name) {
-            return $this->name;
-        }
-        $this->name = Names::getName($this);
-        return $this->name;
+        return PokemonData::POKEMON[$this->getCode()][PokemonData::FIELD_NAME];
     }
 
     public function getShortName()
     {
-        if ($this->shortName) {
-            return $this->shortName;
-        }
-        if (!empty(PokemonData::POKEMON[$this->code][PokemonData::FIELD_NAME])) {
-            $this->shortName = PokemonData::POKEMON[$this->code][PokemonData::FIELD_NAME];
-        }
-       $this->shortName = Names::getShortName($this, false);
-        return $this->shortName;
+        return PokemonData::POKEMON[$this->code][PokemonData::FIELD_NAME_SHORT];
     }
 
     public function getLinkName(): string
     {
-        return Links::POKEMON2LINK[$this->pokedexId];
+        return Links::POKEMON2LINK[$this->getPokedexId()];
     }
 
-    public static function getList(bool $withForms = false)
+    /**
+     * Get pokemon list
+     * @param bool $withForms Include all forms
+     * @param bool $withoutPurified Skip purified forms
+     * @return static[]
+     */
+    public static function getList(bool $withForms = false, bool $withoutPurified = true): array
     {
         $result = [];
         $codeList = $withForms ? array_keys(PokemonData::POKEMON) : array_keys(PokemonForms::FORMS);
         foreach ($codeList as $code) {
+            if ($withForms && $withoutPurified && Mods::isPurified($code)) {
+                continue;
+            }
             $result[$code] = static::get($code);
         }
         return $result;
