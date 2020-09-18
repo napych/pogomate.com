@@ -99,6 +99,9 @@ class Mods
         if ($short) {
             return $name;
         }
+        if ($formAlias = FormsAlias::getConst($name, $code)) {
+            $name = $formAlias;
+        }
         if (static::isAlolan($code)) {
             $name .= '_ALOLA';
         }
@@ -110,9 +113,6 @@ class Mods
         }
         if (static::isGalarian($code)) {
             $name .= '_GALARIAN';
-        }
-        if ($formAlias = FormsAlias::getConst($name, $code)) {
-            $name = $formAlias;
         }
         return $name;
     }

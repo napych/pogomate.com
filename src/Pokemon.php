@@ -50,6 +50,26 @@ class Pokemon extends Data\Manual\PokemonList
         return static::get(Links::LINK2POKEMON[$name]);
     }
 
+    /**
+     * @param string $link
+     * @param bool $ignorePurified
+     * @return Pokemon[]
+     */
+    public static function getFormsByLink(string $link, bool $ignorePurified = true): ?array
+    {
+        if (empty(PokemonForms::FORMS[Links::LINK2POKEMON[$link]])) {
+            return null;
+        }
+        $result = [];
+        foreach (PokemonForms::FORMS[Links::LINK2POKEMON[$link]] as $formCode) {
+            if ($ignorePurified && Mods::isPurified($formCode)) {
+                continue;
+            }
+            $result[$formCode] = static::get($formCode);
+        }
+        return $result;
+    }
+
     public function getCode(): int
     {
         return $this->code;
@@ -205,29 +225,48 @@ class Pokemon extends Data\Manual\PokemonList
             $node = $node->appendChild($node->ownerDocument->createElement($addNode));
         }
 
-        $first = $this->getCode();
-        while ($from = Evolve::getEvolveFrom($first)) {
-            $first = $from;
+        $first = $this;
+        while ($prev = $first->getParent()) {
+            $first = $prev;
         }
 
-        static::recurseEvolve($node, $first, $this->getCode());
+        static::recurseEvolve($node, $first, $this);
 
         return $node;
     }
 
+    public function getParent()
+    {
+        if (!isset(Evolutions::EVOLUTIONS[$this->code])) {
+            return null;
+        }
+        return static::get(Evolutions::EVOLUTIONS[$this->code][Evolutions::FIELD_PARENT]);
+    }
+
+    public function getChildren()
+    {
+        if (empty(PokemonData::POKEMON[$this->code][PokemonData::FIELD_EVOLVES])) {
+            return [];
+        }
+        $children = [];
+        foreach (PokemonData::POKEMON[$this->code][PokemonData::FIELD_EVOLVES] as $evolutionCode) {
+            $children[$evolutionCode] = static::get($evolutionCode);
+        }
+        return $children;
+    }
+
     /**
      * @param \DOMElement|\DOMNode $node
-     * @param int $code
-     * @param int $current
+     * @param Pokemon $pokemon
+     * @param Pokemon $current
      */
-    private static function recurseEvolve($node, $code, $current)
+    private static function recurseEvolve($node, Pokemon $pokemon, Pokemon $current)
     {
-        $subNode = Pokemon::get($code)->getXML($node, 'evolve');
-        if ($code === $current) {
+        $subNode = $pokemon->getXML($node, 'evolve');
+        if ($pokemon->getCode() === $current->getCode()) {
             $subNode->setAttribute('current', '1');
         }
-        $toList = Evolve::getEvolveTo($code, true);
-        foreach ($toList as $to) {
+        foreach ($pokemon->getChildren() as $to) {
             static::recurseEvolve($subNode, $to, $current);
         }
     }

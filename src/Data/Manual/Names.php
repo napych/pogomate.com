@@ -7,6 +7,7 @@ use Pogo\Pokemon;
 class Names
 {
     const CUSTOM = [
+        Pokemon::FLABEBE => 'Flabébé',
         Pokemon::TYPE_NULL => 'Type: Null',
         Pokemon::JANGMO_O => 'Jangmo-o',
         Pokemon::HAKAMO_O => 'Hakamo-o',

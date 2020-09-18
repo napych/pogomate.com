@@ -721,7 +721,8 @@ class Evolve
         Pokemon::SPEWPA => Pokemon::SCATTERBUG,
         Pokemon::VIVILLON => Pokemon::SPEWPA,
         Pokemon::LITLEO => null,
-        Pokemon::PYROAR => Pokemon::LITLEO,
+        Pokemon::PYROAR | FormsAlias::PYROAR_MALE => Pokemon::LITLEO,
+        Pokemon::PYROAR | FormsAlias::PYROAR_FEMALE => Pokemon::LITLEO,
         Pokemon::FLABEBE => null,
         Pokemon::FLOETTE => Pokemon::FLABEBE,
         Pokemon::FLORGES => Pokemon::FLOETTE,
@@ -729,9 +730,13 @@ class Evolve
         Pokemon::GOGOAT => Pokemon::SKIDDO,
         Pokemon::PANCHAM => null,
         Pokemon::PANGORO => Pokemon::PANCHAM,
-        Pokemon::FURFROU => null,
+        Pokemon::FURFROU | FormsAlias::FURFROU_NATURAL => null,
+        Pokemon::FURFROU | FormsAlias::FURFROU_HEART => null,
+        Pokemon::FURFROU | FormsAlias::FURFROU_STAR => null,
+        Pokemon::FURFROU | FormsAlias::FURFROU_DIAMOND => null,
         Pokemon::ESPURR => null,
-        Pokemon::MEOWSTIC => Pokemon::ESPURR,
+        Pokemon::MEOWSTIC | FormsAlias::MEOWSTIC_MALE => Pokemon::ESPURR,
+        Pokemon::MEOWSTIC | FormsAlias::MEOWSTIC_FEMALE => Pokemon::ESPURR,
         Pokemon::HONEDGE => null,
         Pokemon::DOUBLADE => Pokemon::HONEDGE,
         Pokemon::AEGISLASH => Pokemon::DOUBLADE,
@@ -771,11 +776,12 @@ class Evolve
         Pokemon::NOIVERN => Pokemon::NOIBAT,
         Pokemon::XERNEAS => null,
         Pokemon::YVELTAL => null,
-        Pokemon::ZYGARGE | Mods::FORM1 => null,
-        Pokemon::ZYGARGE | Mods::FORM2 => null,
-        Pokemon::ZYGARGE | Mods::FORM3 => null,
+        Pokemon::ZYGARGE | FormsAlias::ZYGARGE_HALF => null,
+        Pokemon::ZYGARGE | FormsAlias::ZYGARGE_TENTH => null,
+        Pokemon::ZYGARGE | FormsAlias::ZYGARGE_FULL => null,
         Pokemon::DIANCIE => null,
-        Pokemon::HOOPA => null,
+        Pokemon::HOOPA | FormsAlias::HOOPA_UNBOUND => null,
+        Pokemon::HOOPA | FormsAlias::HOOPA_CONFINED => null,
         Pokemon::VOLCANION => null,
         Pokemon::ROWLET => null,
         Pokemon::DARTRIX => Pokemon::ROWLET,
@@ -796,14 +802,18 @@ class Evolve
         Pokemon::VIKAVOLT => Pokemon::CHARJABUG,
         Pokemon::CRABAWLER => null,
         Pokemon::CRABOMINABLE => Pokemon::CRABAWLER,
-        Pokemon::ORICORIO => null,
+        Pokemon::ORICORIO | FormsAlias::ORICORIO_BAILE => null,
+        Pokemon::ORICORIO | FormsAlias::ORICORIO_POMPOM => null,
+        Pokemon::ORICORIO | FormsAlias::ORICORIO_PAU => null,
+        Pokemon::ORICORIO | FormsAlias::ORICORIO_SENSU => null,
         Pokemon::CUTIEFLY => null,
         Pokemon::RIBOMBEE => Pokemon::CUTIEFLY,
         Pokemon::ROCKRUFF => null,
         Pokemon::LYCANROC | Mods::FORM1 => Pokemon::ROCKRUFF,
         Pokemon::LYCANROC | Mods::FORM2 => Pokemon::ROCKRUFF,
         Pokemon::LYCANROC | Mods::FORM3 => Pokemon::ROCKRUFF,
-        Pokemon::WISHIWASHI => null,
+        Pokemon::WISHIWASHI | FormsAlias::WISHIWASHI_SOLO => null,
+        Pokemon::WISHIWASHI | FormsAlias::WISHIWASHI_SCHOOL => null,
         Pokemon::MAREANIE => null,
         Pokemon::TOXAPEX => Pokemon::MAREANIE,
         Pokemon::MUDBRAY => null,
@@ -858,7 +868,10 @@ class Evolve
         Pokemon::CELESTEELA => null,
         Pokemon::KARTANA => null,
         Pokemon::GUZZLORD => null,
-        Pokemon::NECROZMA => null,
+        Pokemon::NECROZMA | FormsAlias::NECROZMA_NORMAL => null,
+        Pokemon::NECROZMA | FormsAlias::NECROZMA_DUSK => null,
+        Pokemon::NECROZMA | FormsAlias::NECROZMA_DAWN => null,
+        Pokemon::NECROZMA | FormsAlias::NECROZMA_ULTRA => null,
         Pokemon::MAGEARNA => null,
         Pokemon::MARSHADOW => null,
         Pokemon::POIPOLE => null,
@@ -936,7 +949,8 @@ class Evolve
         Pokemon::EISCUE => null,
         Pokemon::INDEEDEE | Mods::FORM1 => null,
         Pokemon::INDEEDEE | Mods::FORM2 => null,
-        Pokemon::MORPEKO => null,
+        Pokemon::MORPEKO | FormsAlias::MORPEKO_BELLY => null,
+        Pokemon::MORPEKO | FormsAlias::MORPEKO_HANGRY => null,
         Pokemon::CUFANT => null,
         Pokemon::COPPERAJAH => Pokemon::CUFANT,
         Pokemon::DRACOZOLT => null,
@@ -955,8 +969,10 @@ class Evolve
         Pokemon::KUBFU => null,
         Pokemon::URSHIFU | Mods::FORM1 => Pokemon::KUBFU,
         Pokemon::URSHIFU | Mods::FORM2 => Pokemon::KUBFU,
+        Pokemon::ZARUDE => null
     ];
 
+    /*
     public static function getEvolveFrom(int $pokedexId)
     {
         return self::EVOLVE_FROM[$pokedexId] ?? null;
@@ -979,4 +995,5 @@ class Evolve
         sort($result);
         return $result;
     }
+    */
 }

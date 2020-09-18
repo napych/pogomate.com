@@ -46,7 +46,481 @@ class PokemonTypes
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TYPE2 => Types::FIGHTING
         ],
-
+        PokemonList::FENNEKIN => [
+            self::FIELD_TYPE1 => Types::FIRE
+        ],
+        PokemonList::BRAIXEN => [
+            self::FIELD_TYPE1 => Types::FIRE
+        ],
+        PokemonList::DELPHOX => [
+            self::FIELD_TYPE1 => Types::FIRE,
+            self::FIELD_TYPE2 => Types::PSYCHIC
+        ],
+        PokemonList::FROAKIE => [
+            self::FIELD_TYPE1 => Types::WATER
+        ],
+        PokemonList::FROGADIER => [
+            self::FIELD_TYPE1 => Types::WATER
+        ],
+        PokemonList::GRENINJA | FormsAlias::GRENINJA_NORMAL => [
+            self::FIELD_TYPE1 => Types::WATER,
+            self::FIELD_TYPE2 => Types::DARK
+        ],
+        PokemonList::GRENINJA | FormsAlias::GRENINJA_ASH => [
+            self::FIELD_TYPE1 => Types::WATER,
+            self::FIELD_TYPE2 => Types::DARK
+        ],
+        PokemonList::BUNNELBY => [
+            self::FIELD_TYPE1 => Types::NORMAL
+        ],
+        PokemonList::DIGGERSBY => [
+            self::FIELD_TYPE1 => Types::NORMAL,
+            self::FIELD_TYPE2 => Types::GROUND
+        ],
+        PokemonList::FLETCHLING => [
+            self::FIELD_TYPE1 => Types::FIRE,
+            self::FIELD_TYPE2 => Types::FLYING
+        ],
+        PokemonList::FLETCHINDER => [
+            self::FIELD_TYPE1 => Types::FIRE,
+            self::FIELD_TYPE2 => Types::FLYING
+        ],
+        PokemonList::TALONFLAME => [
+            self::FIELD_TYPE1 => Types::FIRE,
+            self::FIELD_TYPE2 => Types::FLYING
+        ],
+        PokemonList::SCATTERBUG => [
+            self::FIELD_TYPE1 => Types::BUG
+        ],
+        PokemonList::SPEWPA => [
+            self::FIELD_TYPE1 => Types::BUG
+        ],
+        PokemonList::VIVILLON | FormsAlias::VIVILLON_MEADOW => [
+            self::FIELD_TYPE1 => Types::BUG,
+            self::FIELD_TYPE2 => Types::FLYING
+        ],
+        PokemonList::VIVILLON | FormsAlias::VIVILLON_CONTINENTAL => [
+            self::FIELD_TYPE1 => Types::BUG,
+            self::FIELD_TYPE2 => Types::FLYING
+        ],
+        PokemonList::VIVILLON | FormsAlias::VIVILLON_GARDEN => [
+            self::FIELD_TYPE1 => Types::BUG,
+            self::FIELD_TYPE2 => Types::FLYING
+        ],
+        PokemonList::VIVILLON | FormsAlias::VIVILLON_ELEGANT => [
+            self::FIELD_TYPE1 => Types::BUG,
+            self::FIELD_TYPE2 => Types::FLYING
+        ],
+        PokemonList::VIVILLON | FormsAlias::VIVILLON_MARINE => [
+            self::FIELD_TYPE1 => Types::BUG,
+            self::FIELD_TYPE2 => Types::FLYING
+        ],
+        PokemonList::VIVILLON | FormsAlias::VIVILLON_PLAINS => [
+            self::FIELD_TYPE1 => Types::BUG,
+            self::FIELD_TYPE2 => Types::FLYING
+        ],
+        PokemonList::VIVILLON | FormsAlias::VIVILLON_RIVER => [
+            self::FIELD_TYPE1 => Types::BUG,
+            self::FIELD_TYPE2 => Types::FLYING
+        ],
+        PokemonList::LITLEO => [
+            self::FIELD_TYPE1 => Types::FIRE,
+            self::FIELD_TYPE2 => Types::NORMAL
+        ],
+        PokemonList::PYROAR | FormsAlias::PYROAR_MALE => [
+            self::FIELD_TYPE1 => Types::FIRE,
+            self::FIELD_TYPE2 => Types::NORMAL
+        ],
+        PokemonList::PYROAR | FormsAlias::PYROAR_FEMALE => [
+            self::FIELD_TYPE1 => Types::FIRE,
+            self::FIELD_TYPE2 => Types::NORMAL
+        ],
+        PokemonList::FLABEBE => [
+            self::FIELD_TYPE1 => Types::FAIRY
+        ],
+        PokemonList::FLOETTE => [
+            self::FIELD_TYPE1 => Types::FAIRY
+        ],
+        PokemonList::FLORGES => [
+            self::FIELD_TYPE1 => Types::FAIRY
+        ],
+        PokemonList::SKIDDO => [
+            self::FIELD_TYPE1 => Types::GRASS
+        ],
+        PokemonList::GOGOAT => [
+            self::FIELD_TYPE1 => Types::GRASS
+        ],
+        PokemonList::PANCHAM => [
+            self::FIELD_TYPE1 => Types::FIGHTING
+        ],
+        PokemonList::PANGORO => [
+            self::FIELD_TYPE1 => Types::FIGHTING,
+            self::FIELD_TYPE2 => Types::DARK
+        ],
+        PokemonList::FURFROU | FormsAlias::FURFROU_NATURAL => [
+            self::FIELD_TYPE1 => Types::NORMAL
+        ],
+        PokemonList::FURFROU | FormsAlias::FURFROU_HEART => [
+            self::FIELD_TYPE1 => Types::NORMAL
+        ],
+        PokemonList::FURFROU | FormsAlias::FURFROU_STAR => [
+            self::FIELD_TYPE1 => Types::NORMAL
+        ],
+        PokemonList::FURFROU | FormsAlias::FURFROU_DIAMOND => [
+            self::FIELD_TYPE1 => Types::NORMAL
+        ],
+        PokemonList::ESPURR => [
+            self::FIELD_TYPE1 => Types::PSYCHIC
+        ],
+        PokemonList::MEOWSTIC | FormsAlias::MEOWSTIC_MALE => [
+            self::FIELD_TYPE1 => Types::PSYCHIC
+        ],
+        PokemonList::MEOWSTIC | FormsAlias::MEOWSTIC_FEMALE => [
+            self::FIELD_TYPE1 => Types::PSYCHIC
+        ],
+        PokemonList::HONEDGE => [
+            self::FIELD_TYPE1 => Types::STEEL,
+            self::FIELD_TYPE2 => Types::GHOST
+        ],
+        PokemonList::DOUBLADE => [
+            self::FIELD_TYPE1 => Types::STEEL,
+            self::FIELD_TYPE2 => Types::GHOST
+        ],
+        PokemonList::AEGISLASH | FormsAlias::AEGISLASH_SHIELD => [
+            self::FIELD_TYPE1 => Types::STEEL,
+            self::FIELD_TYPE2 => Types::GHOST
+        ],
+        PokemonList::AEGISLASH | FormsAlias::AEGISLASH_BLADE => [
+            self::FIELD_TYPE1 => Types::STEEL,
+            self::FIELD_TYPE2 => Types::GHOST
+        ],
+        PokemonList::SPIRITZEE => [
+            self::FIELD_TYPE1 => Types::FAIRY
+        ],
+        PokemonList::AROMATISSE => [
+            self::FIELD_TYPE1 => Types::DARK
+        ],
+        PokemonList::SWIRLIX => [
+            self::FIELD_TYPE1 => Types::FAIRY
+        ],
+        PokemonList::SLURPUFF => [
+            self::FIELD_TYPE1 => Types::FAIRY
+        ],
+        PokemonList::INKAY => [
+            self::FIELD_TYPE1 => Types::DARK,
+            self::FIELD_TYPE2 => Types::PSYCHIC
+        ],
+        PokemonList::MALAMAR => [
+            self::FIELD_TYPE1 => Types::DARK,
+            self::FIELD_TYPE2 => Types::PSYCHIC
+        ],
+        PokemonList::BINACLE => [
+            self::FIELD_TYPE1 => Types::ROCK,
+            self::FIELD_TYPE2 => Types::WATER
+        ],
+        PokemonList::BARBARACLE => [
+            self::FIELD_TYPE1 => Types::ROCK,
+            self::FIELD_TYPE2 => Types::WATER
+        ],
+        PokemonList::SKRELP => [
+            self::FIELD_TYPE1 => Types::POISON,
+            self::FIELD_TYPE2 => Types::DRAGON
+        ],
+        PokemonList::DRAGALGE => [
+            self::FIELD_TYPE1 => Types::POISON,
+            self::FIELD_TYPE2 => Types::DRAGON
+        ],
+        PokemonList::CLAUNCHER => [
+            self::FIELD_TYPE1 => Types::WATER
+        ],
+        PokemonList::CLAWITZER => [
+            self::FIELD_TYPE1 => Types::WATER
+        ],
+        PokemonList::HELIOPTILE => [
+            self::FIELD_TYPE1 => Types::ELECTRIC,
+            self::FIELD_TYPE2 => Types::NORMAL
+        ],
+        PokemonList::HELIOLISK => [
+            self::FIELD_TYPE1 => Types::ELECTRIC,
+            self::FIELD_TYPE2 => Types::NORMAL
+        ],
+        PokemonList::TYRUNT => [
+            self::FIELD_TYPE1 => Types::ROCK,
+            self::FIELD_TYPE2 => Types::DRAGON
+        ],
+        PokemonList::TYRANTRUM => [
+            self::FIELD_TYPE1 => Types::ROCK,
+            self::FIELD_TYPE2 => Types::DRAGON
+        ],
+        PokemonList::AMAURA => [
+            self::FIELD_TYPE1 => Types::ROCK,
+            self::FIELD_TYPE2 => Types::ICE
+        ],
+        PokemonList::AURORUS => [
+            self::FIELD_TYPE1 => Types::ROCK,
+            self::FIELD_TYPE2 => Types::ICE
+        ],
+        PokemonList::SYLVEON => [
+            self::FIELD_TYPE1 => Types::FAIRY
+        ],
+        PokemonList::HAWLUCHA => [
+            self::FIELD_TYPE1 => Types::FIGHTING,
+            self::FIELD_TYPE2 => Types::FLYING
+        ],
+        PokemonList::DEDENNE => [
+            self::FIELD_TYPE1 => Types::ELECTRIC,
+            self::FIELD_TYPE2 => Types::FAIRY
+        ],
+        PokemonList::CARBINK => [
+            self::FIELD_TYPE1 => Types::ROCK,
+            self::FIELD_TYPE2 => Types::FAIRY
+        ],
+        PokemonList::GOOMY => [
+            self::FIELD_TYPE1 => Types::DRAGON
+        ],
+        PokemonList::SLIGGOO => [
+            self::FIELD_TYPE1 => Types::DRAGON
+        ],
+        PokemonList::GOODRA => [
+            self::FIELD_TYPE1 => Types::DRAGON
+        ],
+        PokemonList::KLEFKI => [
+            self::FIELD_TYPE1 => Types::STEEL,
+            self::FIELD_TYPE2 => Types::FAIRY
+        ],
+        PokemonList::PHANTUMP => [
+            self::FIELD_TYPE1 => Types::GHOST,
+            self::FIELD_TYPE2 => Types::GRASS
+        ],
+        PokemonList::TREVEANT => [
+            self::FIELD_TYPE1 => Types::GHOST,
+            self::FIELD_TYPE2 => Types::GRASS
+        ],
+        PokemonList::PUMPKABOO => [
+            self::FIELD_TYPE1 => Types::GHOST,
+            self::FIELD_TYPE2 => Types::GRASS
+        ],
+        PokemonList::GOURGEIST => [
+            self::FIELD_TYPE1 => Types::GHOST,
+            self::FIELD_TYPE2 => Types::GRASS
+        ],
+        PokemonList::BERGMITE => [
+            self::FIELD_TYPE1 => Types::ICE
+        ],
+        PokemonList::AVALUGG => [
+            self::FIELD_TYPE1 => Types::ICE
+        ],
+        PokemonList::NOIBAT => [
+            self::FIELD_TYPE1 => Types::FLYING,
+            self::FIELD_TYPE2 => Types::DRAGON
+        ],
+        PokemonList::NOIVERN => [
+            self::FIELD_TYPE1 => Types::FLYING,
+            self::FIELD_TYPE2 => Types::DRAGON
+        ],
+        PokemonList::XERNEAS => [
+            self::FIELD_TYPE1 => Types::FAIRY
+        ],
+        PokemonList::YVELTAL => [
+            self::FIELD_TYPE1 => Types::DARK,
+            self::FIELD_TYPE2 => Types::FLYING
+        ],
+        PokemonList::ZYGARGE | FormsAlias::ZYGARGE_HALF => [
+            self::FIELD_TYPE1 => Types::DRAGON,
+            self::FIELD_TYPE2 => Types::GROUND
+        ],
+        PokemonList::ZYGARGE | FormsAlias::ZYGARGE_TENTH => [
+            self::FIELD_TYPE1 => Types::DRAGON,
+            self::FIELD_TYPE2 => Types::GROUND
+        ],
+        PokemonList::ZYGARGE | FormsAlias::ZYGARGE_FULL => [
+            self::FIELD_TYPE1 => Types::DRAGON,
+            self::FIELD_TYPE2 => Types::GROUND
+        ],
+        PokemonList::DIANCIE => [
+            self::FIELD_TYPE1 => Types::ROCK,
+            self::FIELD_TYPE2 => Types::FAIRY
+        ],
+        PokemonList::HOOPA | FormsAlias::HOOPA_CONFINED => [
+            self::FIELD_TYPE1 => Types::PSYCHIC,
+            self::FIELD_TYPE2 => Types::GHOST
+        ],
+        PokemonList::HOOPA | FormsAlias::HOOPA_UNBOUND => [
+            self::FIELD_TYPE1 => Types::PSYCHIC,
+            self::FIELD_TYPE2 => Types::DARK
+        ],
+        PokemonList::VOLCANION => [
+            self::FIELD_TYPE1 => Types::FIRE,
+            self::FIELD_TYPE2 => Types::WATER
+        ],
+        PokemonList::ROWLET => [
+            self::FIELD_TYPE1 => Types::GRASS,
+            self::FIELD_TYPE2 => Types::FLYING
+        ],
+        PokemonList::DARTRIX => [
+            self::FIELD_TYPE1 => Types::GRASS,
+            self::FIELD_TYPE2 => Types::FLYING
+        ],
+        PokemonList::DECIDUEYE => [
+            self::FIELD_TYPE1 => Types::GRASS,
+            self::FIELD_TYPE2 => Types::GHOST
+        ],
+        PokemonList::LITTEN => [
+            self::FIELD_TYPE1 => Types::FIRE
+        ],
+        PokemonList::TORRACAT => [
+            self::FIELD_TYPE1 => Types::FIRE
+        ],
+        PokemonList::INCINEROAR => [
+            self::FIELD_TYPE1 => Types::FIRE,
+            self::FIELD_TYPE2 => Types::DARK
+        ],
+        PokemonList::POPPLIO => [
+            self::FIELD_TYPE1 => Types::WATER
+        ],
+        PokemonList::BRIONNE => [
+            self::FIELD_TYPE1 => Types::WATER
+        ],
+        PokemonList::PRIMARINA => [
+            self::FIELD_TYPE1 => Types::WATER,
+            self::FIELD_TYPE2 => Types::FAIRY
+        ],
+        PokemonList::PIKIPEK => [
+            self::FIELD_TYPE1 => Types::NORMAL,
+            self::FIELD_TYPE2 => Types::FLYING
+        ],
+        PokemonList::TRUMBEAK => [
+            self::FIELD_TYPE1 => Types::NORMAL,
+            self::FIELD_TYPE2 => Types::FLYING
+        ],
+        PokemonList::TOUCANNON => [
+            self::FIELD_TYPE1 => Types::NORMAL,
+            self::FIELD_TYPE2 => Types::FLYING
+        ],
+        PokemonList::YUNGOOS => [
+            self::FIELD_TYPE1 => Types::NORMAL
+        ],
+        PokemonList::GUMSHOOS => [
+            self::FIELD_TYPE1 => Types::NORMAL
+        ],
+        PokemonList::GRUBBIN => [
+            self::FIELD_TYPE1 => Types::BUG
+        ],
+        PokemonList::CHARJABUG => [
+            self::FIELD_TYPE1 => Types::BUG,
+            self::FIELD_TYPE2 => Types::ELECTRIC
+        ],
+        PokemonList::VIKAVOLT => [
+            self::FIELD_TYPE1 => Types::BUG,
+            self::FIELD_TYPE2 => Types::ELECTRIC
+        ],
+        PokemonList::CRABAWLER => [
+            self::FIELD_TYPE1 => Types::FIGHTING
+        ],
+        PokemonList::CRABOMINABLE => [
+            self::FIELD_TYPE1 => Types::FIGHTING,
+            self::FIELD_TYPE2 => Types::ICE
+        ],
+        PokemonList::ORICORIO | FormsAlias::ORICORIO_BAILE => [
+            self::FIELD_TYPE1 => Types::FIRE,
+            self::FIELD_TYPE2 => Types::FLYING
+        ],
+        PokemonList::ORICORIO | FormsAlias::ORICORIO_POMPOM => [
+            self::FIELD_TYPE1 => Types::ELECTRIC,
+            self::FIELD_TYPE2 => Types::FLYING
+        ],
+        PokemonList::ORICORIO | FormsAlias::ORICORIO_PAU => [
+            self::FIELD_TYPE1 => Types::PSYCHIC,
+            self::FIELD_TYPE2 => Types::FLYING
+        ],
+        PokemonList::ORICORIO | FormsAlias::ORICORIO_SENSU => [
+            self::FIELD_TYPE1 => Types::GHOST,
+            self::FIELD_TYPE2 => Types::FLYING
+        ],
+        PokemonList::CUTIEFLY => [
+            self::FIELD_TYPE1 => Types::BUG,
+            self::FIELD_TYPE2 => Types::FAIRY
+        ],
+        PokemonList::RIBOMBEE => [
+            self::FIELD_TYPE1 => Types::BUG,
+            self::FIELD_TYPE2 => Types::FAIRY
+        ],
+        PokemonList::ROCKRUFF => [
+            self::FIELD_TYPE1 => Types::ROCK
+        ],
+        PokemonList::LYCANROC | FormsAlias::LYCANROC_MIDDAY => [
+            self::FIELD_TYPE1 => Types::ROCK
+        ],
+        PokemonList::LYCANROC | FormsAlias::LYCANROC_MIDNIGHT => [
+            self::FIELD_TYPE1 => Types::ROCK
+        ],
+        PokemonList::LYCANROC | FormsAlias::LYCANROC_DUSK => [
+            self::FIELD_TYPE1 => Types::ROCK
+        ],
+        PokemonList::WISHIWASHI | FormsAlias::WISHIWASHI_SOLO => [
+            self::FIELD_TYPE1 => Types::WATER
+        ],
+        PokemonList::WISHIWASHI | FormsAlias::WISHIWASHI_SCHOOL => [
+            self::FIELD_TYPE1 => Types::WATER
+        ],
+        PokemonList::MAREANIE => [
+            self::FIELD_TYPE1 => Types::POISON,
+            self::FIELD_TYPE2 => Types::WATER
+        ],
+        PokemonList::TOXAPEX => [
+            self::FIELD_TYPE1 => Types::POISON,
+            self::FIELD_TYPE2 => Types::WATER
+        ],
+        PokemonList::MUDBRAY => [
+            self::FIELD_TYPE1 => Types::GROUND
+        ],
+        PokemonList::MUDSDALE => [
+            self::FIELD_TYPE1 => Types::GROUND
+        ],
+        PokemonList::DEWPIDER => [
+            self::FIELD_TYPE1 => Types::WATER,
+            self::FIELD_TYPE2 => Types::BUG
+        ],
+        PokemonList::ARAQUANID => [
+            self::FIELD_TYPE1 => Types::WATER,
+            self::FIELD_TYPE2 => Types::BUG
+        ],
+        PokemonList::FOMANTIS => [
+            self::FIELD_TYPE1 => Types::GRASS
+        ],
+        PokemonList::LURANTIS => [
+            self::FIELD_TYPE1 => Types::GRASS
+        ],
+        PokemonList::MORELULL => [
+            self::FIELD_TYPE1 => Types::GRASS,
+            self::FIELD_TYPE2 => Types::FAIRY
+        ],
+        PokemonList::SHIINOTIC => [
+            self::FIELD_TYPE1 => Types::GRASS,
+            self::FIELD_TYPE2 => Types::FAIRY
+        ],
+        PokemonList::SALANDIT => [
+            self::FIELD_TYPE1 => Types::POISON,
+            self::FIELD_TYPE2 => Types::FIRE
+        ],
+        PokemonList::SALAZZLE => [
+            self::FIELD_TYPE1 => Types::POISON,
+            self::FIELD_TYPE2 => Types::FIRE
+        ],
+        PokemonList::STUFFUL => [
+            self::FIELD_TYPE1 => Types::NORMAL,
+            self::FIELD_TYPE2 => Types::FIGHTING
+        ],
+        PokemonList::BEWEAR => [
+            self::FIELD_TYPE1 => Types::NORMAL,
+            self::FIELD_TYPE2 => Types::FIGHTING
+        ],
+        PokemonList::BOUNSWEET => [
+            self::FIELD_TYPE1 => Types::GRASS
+        ],
+        PokemonList::STEENEE => [
+            self::FIELD_TYPE1 => Types::GRASS
+        ],
         PokemonList::TSAREENA => [
             self::FIELD_TYPE1 => Types::GRASS
         ],

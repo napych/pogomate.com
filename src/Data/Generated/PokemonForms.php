@@ -2438,7 +2438,8 @@ class PokemonForms
             Pokemon::FROGADIER,
         ],
         Pokemon::GRENINJA => [
-            Pokemon::GRENINJA,
+            Pokemon::GRENINJA | FormsAlias::GRENINJA_NORMAL,
+            Pokemon::GRENINJA | FormsAlias::GRENINJA_ASH,
         ],
         Pokemon::BUNNELBY => [
             Pokemon::BUNNELBY,
@@ -2462,13 +2463,20 @@ class PokemonForms
             Pokemon::SPEWPA,
         ],
         Pokemon::VIVILLON => [
-            Pokemon::VIVILLON,
+            Pokemon::VIVILLON | FormsAlias::VIVILLON_MEADOW,
+            Pokemon::VIVILLON | FormsAlias::VIVILLON_CONTINENTAL,
+            Pokemon::VIVILLON | FormsAlias::VIVILLON_GARDEN,
+            Pokemon::VIVILLON | FormsAlias::VIVILLON_ELEGANT,
+            Pokemon::VIVILLON | FormsAlias::VIVILLON_MARINE,
+            Pokemon::VIVILLON | FormsAlias::VIVILLON_PLAINS,
+            Pokemon::VIVILLON | FormsAlias::VIVILLON_RIVER,
         ],
         Pokemon::LITLEO => [
             Pokemon::LITLEO,
         ],
         Pokemon::PYROAR => [
-            Pokemon::PYROAR,
+            Pokemon::PYROAR | FormsAlias::PYROAR_MALE,
+            Pokemon::PYROAR | FormsAlias::PYROAR_FEMALE,
         ],
         Pokemon::FLABEBE => [
             Pokemon::FLABEBE,
@@ -2492,13 +2500,17 @@ class PokemonForms
             Pokemon::PANGORO,
         ],
         Pokemon::FURFROU => [
-            Pokemon::FURFROU,
+            Pokemon::FURFROU | FormsAlias::FURFROU_NATURAL,
+            Pokemon::FURFROU | FormsAlias::FURFROU_HEART,
+            Pokemon::FURFROU | FormsAlias::FURFROU_STAR,
+            Pokemon::FURFROU | FormsAlias::FURFROU_DIAMOND,
         ],
         Pokemon::ESPURR => [
             Pokemon::ESPURR,
         ],
         Pokemon::MEOWSTIC => [
-            Pokemon::MEOWSTIC,
+            Pokemon::MEOWSTIC | FormsAlias::MEOWSTIC_MALE,
+            Pokemon::MEOWSTIC | FormsAlias::MEOWSTIC_FEMALE,
         ],
         Pokemon::HONEDGE => [
             Pokemon::HONEDGE,
@@ -2691,7 +2703,10 @@ class PokemonForms
             Pokemon::CRABOMINABLE,
         ],
         Pokemon::ORICORIO => [
-            Pokemon::ORICORIO,
+            Pokemon::ORICORIO | FormsAlias::ORICORIO_BAILE,
+            Pokemon::ORICORIO | FormsAlias::ORICORIO_POMPOM,
+            Pokemon::ORICORIO | FormsAlias::ORICORIO_PAU,
+            Pokemon::ORICORIO | FormsAlias::ORICORIO_SENSU,
         ],
         Pokemon::CUTIEFLY => [
             Pokemon::CUTIEFLY,
@@ -2708,7 +2723,8 @@ class PokemonForms
             Pokemon::LYCANROC | FormsAlias::LYCANROC_DUSK,
         ],
         Pokemon::WISHIWASHI => [
-            Pokemon::WISHIWASHI,
+            Pokemon::WISHIWASHI | FormsAlias::WISHIWASHI_SOLO,
+            Pokemon::WISHIWASHI | FormsAlias::WISHIWASHI_SCHOOL,
         ],
         Pokemon::MAREANIE => [
             Pokemon::MAREANIE,

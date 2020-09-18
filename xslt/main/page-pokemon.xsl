@@ -2,37 +2,43 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
     <xsl:template match="page-pokemon">
         <h1>
-            <xsl:value-of select="@shortName"/>
+            <xsl:value-of select="@name"/>
         </h1>
-        <xsl:choose>
-            <xsl:when test="count(pokemon)&gt;0">
-                <xsl:apply-templates select="pokemon" mode="reasons"/>
-            </xsl:when>
-            <xsl:otherwise>
-                <p>No known usages were found for this pokémon.</p>
-            </xsl:otherwise>
-        </xsl:choose>
-        <hr/>
-        <p>
-            <xsl:text>Pokedex ID: #</xsl:text>
-            <xsl:value-of select="@pokedexId"/>
-        </p>
-        <xsl:if test="count(evolve/evolve)>0">
-            <p class="evolutions">
-                <xsl:text>Evolutions: </xsl:text>
-                <xsl:apply-templates select="evolve"/>
-            </p>
-            <hr/>
-        </xsl:if>
+<!--
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Usage</a>
+                <xsl:apply-templates select="pokemon" mode="tabs-menu"/>
+            </li>
+        </ul>
+-->
+<!--        <h2 class="h3">Usage</h2>-->
+        <xsl:apply-templates select="pokemon" mode="reasons"/>
+        <xsl:apply-templates select="pokemon" mode="pokemon-info"/>
         <h2 class="h3">Pokémon search</h2>
         <xsl:call-template name="snippet-search"/>
     </xsl:template>
 
+<!--
+    <xsl:template match="pokemon" mode="tabs-menu">
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                <xsl:value-of select="@name"/>
+            </a>
+        </li>
+    </xsl:template>
+-->
+
     <xsl:template match="pokemon" mode="reasons">
-        <xsl:if test="count(../pokemon)&gt;1 or @code!=@pokedexId">
-            <h2>
+        <xsl:if test="count(../pokemon)&gt;1">
+<!--            <h3 class="h5">-->
+            <h2 class="h3">
                 <xsl:value-of select="@name"/>
             </h2>
+<!--            </h3>-->
+        </xsl:if>
+        <xsl:if test="count(reason)&lt;1">
+            <p>No known usages were found for this pokémon.</p>
         </xsl:if>
         <xsl:if test="reason[not(evolve)]">
             <div class="evolution-reasons">
@@ -83,12 +89,12 @@
             <xsl:choose>
                 <xsl:when test="@current=1">
                     <span>
-                        <xsl:value-of select="@shortName"/>
+                        <xsl:value-of select="@name"/>
                     </span>
                 </xsl:when>
                 <xsl:otherwise>
                     <a href="/pokemon/{@link}">
-                        <xsl:value-of select="@shortName"/>
+                        <xsl:value-of select="@name"/>
                     </a>
                 </xsl:otherwise>
             </xsl:choose>
@@ -99,5 +105,21 @@
                 <xsl:apply-templates select="evolve"/>
             </span>
         </span>
+    </xsl:template>
+
+    <xsl:template match="pokemon" mode="pokemon-info">
+        <hr/>
+        <h2 class="h3">
+            <xsl:value-of select="@name"/>
+            <xsl:text> info</xsl:text>
+        </h2>
+        <xsl:if test="count(evolve/evolve)>0">
+            <p class="evolutions">
+                <xsl:text>Evolutions: </xsl:text>
+                <xsl:apply-templates select="evolve"/>
+            </p>
+        </xsl:if>
+        <xsl:text>Pokedex ID: #</xsl:text>
+        <xsl:value-of select="@pokedexId"/>
     </xsl:template>
 </xsl:stylesheet>

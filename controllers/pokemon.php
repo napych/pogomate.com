@@ -32,38 +32,40 @@ class Pokemon extends \Difra\Controller
     private function pokemon(string $name)
     {
         // pokemon page
-        $pokemon = \Pogo\Pokemon::getByLink($name);
-        if (empty($pokemon)) {
+        $pokemonList = \Pogo\Pokemon::getFormsByLink($name);
+        if (empty($pokemonList)) {
             throw new HttpError(404);
         }
-        if ($name !== $pokemon->getLinkName()) {
-            View::redirect($this->getUri() . '/' . $pokemon->getLinkName()); // fix link
-        }
 
-        $this->setTitle($pokemon->getShortName() . ' pokémon');
-        $this->setDescription($pokemon->getShortName() . ' pokémon information');
-        $this->setKeywords('pokémon go, ' . $pokemon->getShortName() . ' pokémon, tier list, pokémon usefulness, pvp, pve, pokémon species');
+        $commonName = reset($pokemonList)->getShortName();
+        $this->setTitle($commonName . ' pokémon');
+        $this->setDescription($commonName . ' pokémon information');
+        $this->setKeywords('pokémon go, ' . $commonName . ' pokémon, tier list, pokémon usefulness, pvp, pve, pokémon species');
 
         $node = $this->root->appendChild($this->xml->createElement('page-pokemon'));
-        $pokemon->getXML($node, false);
+        $node->setAttribute('name', $commonName);
 
-        $pokemon->getFamilyXML($node, false);
-
-        // load reasons
         $all = new \Pogo\Mate\Strings();
         $all->addLists(\Pogo\Lists::getAll());
-        $reasons = $all->getReasons($pokemon->getPokedexId());
-        foreach ($reasons as $entry) {
-            $pokeNode = $entry['pokemon']->getXML($node, true);
-            foreach ($entry['reasons'] as $reason) {
-                $reasonNode = $pokeNode->appendChild($this->xml->createElement('reason'));
-                foreach ($reason as $k => $v) {
-                    switch ($k) {
-                        case 'evolve':
-                            \Pogo\Pokemon::get($v)->getXML($reasonNode, 'evolve');
-                            break;
-                        default:
-                            $reasonNode->setAttribute($k, $v);
+
+        foreach ($pokemonList as $pokemon) {
+            $pokemonNode = $pokemon->getXML($node, true);
+
+            $pokemon->getFamilyXML($pokemonNode, false);
+
+            // load reasons
+            $reasons = $all->getReasons($pokemon);
+            if (!empty($reasons)) {
+                foreach ($reasons as $reason) {
+                    $reasonNode = $pokemonNode->appendChild($this->xml->createElement('reason'));
+                    foreach ($reason as $k => $v) {
+                        switch ($k) {
+                            case 'evolve':
+                                \Pogo\Pokemon::get($v)->getXML($reasonNode, 'evolve');
+                                break;
+                            default:
+                                $reasonNode->setAttribute($k, $v);
+                        }
                     }
                 }
             }

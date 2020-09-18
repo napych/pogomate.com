@@ -1305,7 +1305,7 @@ class PokemonData
             self::FIELD_BUDDY_DISTANCE => 3,
             self::FIELD_THIRD_MOVE_CANDY => 50,
             self::FIELD_THIRD_MOVE_STARDUST => 50000,
-            self::FIELD_EVOLVES => [Pokemon::RAPIDASH | Mods::GALARIAN],
+            self::FIELD_EVOLVES => [Pokemon::RAPIDASH],
             self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_EMBER_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_CHARGE, Moves::MOVE_FLAME_WHEEL, Moves::MOVE_STOMP],
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FIRE_BLAST]
@@ -1339,7 +1339,7 @@ class PokemonData
             self::FIELD_BUDDY_DISTANCE => 3,
             self::FIELD_THIRD_MOVE_CANDY => 50,
             self::FIELD_THIRD_MOVE_STARDUST => 50000,
-            self::FIELD_EVOLVES => [Pokemon::SLOWBRO | Mods::GALARIAN, Pokemon::SLOWKING],
+            self::FIELD_EVOLVES => [Pokemon::SLOWBRO, Pokemon::SLOWKING],
             self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_CONFUSION_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_PSYSHOCK, Moves::MOVE_PSYCHIC]
         ],
@@ -7367,7 +7367,7 @@ class PokemonData
             self::FIELD_BUDDY_DISTANCE => 5,
             self::FIELD_THIRD_MOVE_CANDY => 25,
             self::FIELD_THIRD_MOVE_STARDUST => 10000,
-            self::FIELD_EVOLVES => [Pokemon::MR_MIME | Mods::GALARIAN],
+            self::FIELD_EVOLVES => [Pokemon::MR_MIME],
             self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_POUND_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_PSYCHIC, Moves::MOVE_PSYSHOCK]
         ],
@@ -11419,635 +11419,926 @@ class PokemonData
             self::FIELD_NAME => 'Fennekin',
             self::FIELD_NAME_SHORT => 'Fennekin',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_EVOLVES => [Pokemon::BRAIXEN]
         ],
         Pokemon::BRAIXEN => [
             self::FIELD_NAME => 'Braixen',
             self::FIELD_NAME_SHORT => 'Braixen',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_EVOLVES => [Pokemon::DELPHOX]
         ],
         Pokemon::DELPHOX => [
             self::FIELD_NAME => 'Delphox',
             self::FIELD_NAME_SHORT => 'Delphox',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FIRE,
+            self::FIELD_TYPE2 => Types::PSYCHIC
         ],
         Pokemon::FROAKIE => [
             self::FIELD_NAME => 'Froakie',
             self::FIELD_NAME_SHORT => 'Froakie',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_EVOLVES => [Pokemon::FROGADIER]
         ],
         Pokemon::FROGADIER => [
             self::FIELD_NAME => 'Frogadier',
             self::FIELD_NAME_SHORT => 'Frogadier',
             self::FIELD_UNRELEASED => true,
-            self::FIELD_EVOLVES => [Pokemon::GRENINJA]
+            self::FIELD_TYPE1 => Types::WATER,
+            self::FIELD_EVOLVES => [Pokemon::GRENINJA | FormsAlias::GRENINJA_NORMAL]
         ],
-        Pokemon::GRENINJA => [
+        Pokemon::GRENINJA | FormsAlias::GRENINJA_NORMAL => [
             self::FIELD_NAME => 'Greninja',
             self::FIELD_NAME_SHORT => 'Greninja',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::WATER,
+            self::FIELD_TYPE2 => Types::DARK
+        ],
+        Pokemon::GRENINJA | FormsAlias::GRENINJA_ASH => [
+            self::FIELD_NAME => 'Ash-Greninja',
+            self::FIELD_NAME_SHORT => 'Greninja',
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::WATER,
+            self::FIELD_TYPE2 => Types::DARK
         ],
         Pokemon::BUNNELBY => [
             self::FIELD_NAME => 'Bunnelby',
             self::FIELD_NAME_SHORT => 'Bunnelby',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_EVOLVES => [Pokemon::DIGGERSBY]
         ],
         Pokemon::DIGGERSBY => [
             self::FIELD_NAME => 'Diggersby',
             self::FIELD_NAME_SHORT => 'Diggersby',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::NORMAL,
+            self::FIELD_TYPE2 => Types::GROUND
         ],
         Pokemon::FLETCHLING => [
             self::FIELD_NAME => 'Fletchling',
             self::FIELD_NAME_SHORT => 'Fletchling',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FIRE,
+            self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_EVOLVES => [Pokemon::FLETCHINDER]
         ],
         Pokemon::FLETCHINDER => [
             self::FIELD_NAME => 'Fletchinder',
             self::FIELD_NAME_SHORT => 'Fletchinder',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FIRE,
+            self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_EVOLVES => [Pokemon::TALONFLAME]
         ],
         Pokemon::TALONFLAME => [
             self::FIELD_NAME => 'Talonflame',
             self::FIELD_NAME_SHORT => 'Talonflame',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FIRE,
+            self::FIELD_TYPE2 => Types::FLYING
         ],
         Pokemon::SCATTERBUG => [
             self::FIELD_NAME => 'Scatterbug',
             self::FIELD_NAME_SHORT => 'Scatterbug',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_EVOLVES => [Pokemon::SPEWPA]
         ],
         Pokemon::SPEWPA => [
             self::FIELD_NAME => 'Spewpa',
             self::FIELD_NAME_SHORT => 'Spewpa',
             self::FIELD_UNRELEASED => true,
-            self::FIELD_EVOLVES => [Pokemon::VIVILLON]
+            self::FIELD_TYPE1 => Types::BUG,
+            self::FIELD_EVOLVES => [Pokemon::VIVILLON | FormsAlias::VIVILLON_MEADOW]
         ],
-        Pokemon::VIVILLON => [
-            self::FIELD_NAME => 'Vivillon',
+        Pokemon::VIVILLON | FormsAlias::VIVILLON_MEADOW => [
+            self::FIELD_NAME => 'Vivillon (Meadow Pattern)',
             self::FIELD_NAME_SHORT => 'Vivillon',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::BUG,
+            self::FIELD_TYPE2 => Types::FLYING
+        ],
+        Pokemon::VIVILLON | FormsAlias::VIVILLON_CONTINENTAL => [
+            self::FIELD_NAME => 'Vivillon (Continental Pattern)',
+            self::FIELD_NAME_SHORT => 'Vivillon',
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::BUG,
+            self::FIELD_TYPE2 => Types::FLYING
+        ],
+        Pokemon::VIVILLON | FormsAlias::VIVILLON_GARDEN => [
+            self::FIELD_NAME => 'Vivillon (Garden Pattern)',
+            self::FIELD_NAME_SHORT => 'Vivillon',
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::BUG,
+            self::FIELD_TYPE2 => Types::FLYING
+        ],
+        Pokemon::VIVILLON | FormsAlias::VIVILLON_ELEGANT => [
+            self::FIELD_NAME => 'Vivillon (Elegant Pattern)',
+            self::FIELD_NAME_SHORT => 'Vivillon',
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::BUG,
+            self::FIELD_TYPE2 => Types::FLYING
+        ],
+        Pokemon::VIVILLON | FormsAlias::VIVILLON_MARINE => [
+            self::FIELD_NAME => 'Vivillon (Marine Pattern)',
+            self::FIELD_NAME_SHORT => 'Vivillon',
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::BUG,
+            self::FIELD_TYPE2 => Types::FLYING
+        ],
+        Pokemon::VIVILLON | FormsAlias::VIVILLON_PLAINS => [
+            self::FIELD_NAME => 'Vivillon (High Plains Pattern)',
+            self::FIELD_NAME_SHORT => 'Vivillon',
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::BUG,
+            self::FIELD_TYPE2 => Types::FLYING
+        ],
+        Pokemon::VIVILLON | FormsAlias::VIVILLON_RIVER => [
+            self::FIELD_NAME => 'Vivillon (River Pattern)',
+            self::FIELD_NAME_SHORT => 'Vivillon',
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::BUG,
+            self::FIELD_TYPE2 => Types::FLYING
         ],
         Pokemon::LITLEO => [
             self::FIELD_NAME => 'Litleo',
             self::FIELD_NAME_SHORT => 'Litleo',
             self::FIELD_UNRELEASED => true,
-            self::FIELD_EVOLVES => [Pokemon::PYROAR]
+            self::FIELD_TYPE1 => Types::FIRE,
+            self::FIELD_TYPE2 => Types::NORMAL,
+            self::FIELD_EVOLVES => [Pokemon::PYROAR | FormsAlias::PYROAR_MALE, Pokemon::PYROAR | FormsAlias::PYROAR_FEMALE]
         ],
-        Pokemon::PYROAR => [
-            self::FIELD_NAME => 'Pyroar',
+        Pokemon::PYROAR | FormsAlias::PYROAR_MALE => [
+            self::FIELD_NAME => 'Pyroar (Male)',
             self::FIELD_NAME_SHORT => 'Pyroar',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FIRE,
+            self::FIELD_TYPE2 => Types::NORMAL
+        ],
+        Pokemon::PYROAR | FormsAlias::PYROAR_FEMALE => [
+            self::FIELD_NAME => 'Pyroar (Female)',
+            self::FIELD_NAME_SHORT => 'Pyroar',
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FIRE,
+            self::FIELD_TYPE2 => Types::NORMAL
         ],
         Pokemon::FLABEBE => [
-            self::FIELD_NAME => 'Flabebe',
-            self::FIELD_NAME_SHORT => 'Flabebe',
+            self::FIELD_NAME => 'Flabébé',
+            self::FIELD_NAME_SHORT => 'Flabébé',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FAIRY,
             self::FIELD_EVOLVES => [Pokemon::FLOETTE]
         ],
         Pokemon::FLOETTE => [
             self::FIELD_NAME => 'Floette',
             self::FIELD_NAME_SHORT => 'Floette',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FAIRY,
             self::FIELD_EVOLVES => [Pokemon::FLORGES]
         ],
         Pokemon::FLORGES => [
             self::FIELD_NAME => 'Florges',
             self::FIELD_NAME_SHORT => 'Florges',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FAIRY
         ],
         Pokemon::SKIDDO => [
             self::FIELD_NAME => 'Skiddo',
             self::FIELD_NAME_SHORT => 'Skiddo',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_EVOLVES => [Pokemon::GOGOAT]
         ],
         Pokemon::GOGOAT => [
             self::FIELD_NAME => 'Gogoat',
             self::FIELD_NAME_SHORT => 'Gogoat',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GRASS
         ],
         Pokemon::PANCHAM => [
             self::FIELD_NAME => 'Pancham',
             self::FIELD_NAME_SHORT => 'Pancham',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_EVOLVES => [Pokemon::PANGORO]
         ],
         Pokemon::PANGORO => [
             self::FIELD_NAME => 'Pangoro',
             self::FIELD_NAME_SHORT => 'Pangoro',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FIGHTING,
+            self::FIELD_TYPE2 => Types::DARK
         ],
-        Pokemon::FURFROU => [
-            self::FIELD_NAME => 'Furfrou',
+        Pokemon::FURFROU | FormsAlias::FURFROU_NATURAL => [
+            self::FIELD_NAME => 'Furfrou (Natural Form)',
             self::FIELD_NAME_SHORT => 'Furfrou',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::NORMAL
+        ],
+        Pokemon::FURFROU | FormsAlias::FURFROU_HEART => [
+            self::FIELD_NAME => 'Furfrou (Heart Trim)',
+            self::FIELD_NAME_SHORT => 'Furfrou',
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::NORMAL
+        ],
+        Pokemon::FURFROU | FormsAlias::FURFROU_STAR => [
+            self::FIELD_NAME => 'Furfrou (Star Trim)',
+            self::FIELD_NAME_SHORT => 'Furfrou',
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::NORMAL
+        ],
+        Pokemon::FURFROU | FormsAlias::FURFROU_DIAMOND => [
+            self::FIELD_NAME => 'Furfrou (Diamond Trim)',
+            self::FIELD_NAME_SHORT => 'Furfrou',
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::NORMAL
         ],
         Pokemon::ESPURR => [
             self::FIELD_NAME => 'Espurr',
             self::FIELD_NAME_SHORT => 'Espurr',
             self::FIELD_UNRELEASED => true,
-            self::FIELD_EVOLVES => [Pokemon::MEOWSTIC]
+            self::FIELD_TYPE1 => Types::PSYCHIC,
+            self::FIELD_EVOLVES => [Pokemon::MEOWSTIC | FormsAlias::MEOWSTIC_MALE, Pokemon::MEOWSTIC | FormsAlias::MEOWSTIC_FEMALE]
         ],
-        Pokemon::MEOWSTIC => [
-            self::FIELD_NAME => 'Meowstic',
+        Pokemon::MEOWSTIC | FormsAlias::MEOWSTIC_MALE => [
+            self::FIELD_NAME => 'Meowstic (Male)',
             self::FIELD_NAME_SHORT => 'Meowstic',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::PSYCHIC
+        ],
+        Pokemon::MEOWSTIC | FormsAlias::MEOWSTIC_FEMALE => [
+            self::FIELD_NAME => 'Meowstic (Female)',
+            self::FIELD_NAME_SHORT => 'Meowstic',
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::PSYCHIC
         ],
         Pokemon::HONEDGE => [
             self::FIELD_NAME => 'Honedge',
             self::FIELD_NAME_SHORT => 'Honedge',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::STEEL,
+            self::FIELD_TYPE2 => Types::GHOST,
             self::FIELD_EVOLVES => [Pokemon::DOUBLADE]
         ],
         Pokemon::DOUBLADE => [
             self::FIELD_NAME => 'Doublade',
             self::FIELD_NAME_SHORT => 'Doublade',
             self::FIELD_UNRELEASED => true,
-            self::FIELD_EVOLVES => [Pokemon::AEGISLASH | FormsAlias::AEGISLASH_BLADE]
+            self::FIELD_TYPE1 => Types::STEEL,
+            self::FIELD_TYPE2 => Types::GHOST,
+            self::FIELD_EVOLVES => [Pokemon::AEGISLASH | FormsAlias::AEGISLASH_SHIELD]
         ],
         Pokemon::AEGISLASH | FormsAlias::AEGISLASH_SHIELD => [
             self::FIELD_NAME => 'Aegislash (Shield Forme)',
             self::FIELD_NAME_SHORT => 'Aegislash',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::STEEL,
+            self::FIELD_TYPE2 => Types::GHOST
         ],
         Pokemon::AEGISLASH | FormsAlias::AEGISLASH_BLADE => [
             self::FIELD_NAME => 'Aegislash (Blade Forme)',
             self::FIELD_NAME_SHORT => 'Aegislash',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::STEEL,
+            self::FIELD_TYPE2 => Types::GHOST
         ],
         Pokemon::SPIRITZEE => [
             self::FIELD_NAME => 'Spiritzee',
             self::FIELD_NAME_SHORT => 'Spiritzee',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FAIRY,
             self::FIELD_EVOLVES => [Pokemon::AROMATISSE]
         ],
         Pokemon::AROMATISSE => [
             self::FIELD_NAME => 'Aromatisse',
             self::FIELD_NAME_SHORT => 'Aromatisse',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::DARK
         ],
         Pokemon::SWIRLIX => [
             self::FIELD_NAME => 'Swirlix',
             self::FIELD_NAME_SHORT => 'Swirlix',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FAIRY,
             self::FIELD_EVOLVES => [Pokemon::SLURPUFF]
         ],
         Pokemon::SLURPUFF => [
             self::FIELD_NAME => 'Slurpuff',
             self::FIELD_NAME_SHORT => 'Slurpuff',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FAIRY
         ],
         Pokemon::INKAY => [
             self::FIELD_NAME => 'Inkay',
             self::FIELD_NAME_SHORT => 'Inkay',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::DARK,
+            self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_EVOLVES => [Pokemon::MALAMAR]
         ],
         Pokemon::MALAMAR => [
             self::FIELD_NAME => 'Malamar',
             self::FIELD_NAME_SHORT => 'Malamar',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::DARK,
+            self::FIELD_TYPE2 => Types::PSYCHIC
         ],
         Pokemon::BINACLE => [
             self::FIELD_NAME => 'Binacle',
             self::FIELD_NAME_SHORT => 'Binacle',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ROCK,
+            self::FIELD_TYPE2 => Types::WATER,
             self::FIELD_EVOLVES => [Pokemon::BARBARACLE]
         ],
         Pokemon::BARBARACLE => [
             self::FIELD_NAME => 'Barbaracle',
             self::FIELD_NAME_SHORT => 'Barbaracle',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ROCK,
+            self::FIELD_TYPE2 => Types::WATER
         ],
         Pokemon::SKRELP => [
             self::FIELD_NAME => 'Skrelp',
             self::FIELD_NAME_SHORT => 'Skrelp',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::POISON,
+            self::FIELD_TYPE2 => Types::DRAGON,
             self::FIELD_EVOLVES => [Pokemon::DRAGALGE]
         ],
         Pokemon::DRAGALGE => [
             self::FIELD_NAME => 'Dragalge',
             self::FIELD_NAME_SHORT => 'Dragalge',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::POISON,
+            self::FIELD_TYPE2 => Types::DRAGON
         ],
         Pokemon::CLAUNCHER => [
             self::FIELD_NAME => 'Clauncher',
             self::FIELD_NAME_SHORT => 'Clauncher',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_EVOLVES => [Pokemon::CLAWITZER]
         ],
         Pokemon::CLAWITZER => [
             self::FIELD_NAME => 'Clawitzer',
             self::FIELD_NAME_SHORT => 'Clawitzer',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::WATER
         ],
         Pokemon::HELIOPTILE => [
             self::FIELD_NAME => 'Helioptile',
             self::FIELD_NAME_SHORT => 'Helioptile',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ELECTRIC,
+            self::FIELD_TYPE2 => Types::NORMAL,
             self::FIELD_EVOLVES => [Pokemon::HELIOLISK]
         ],
         Pokemon::HELIOLISK => [
             self::FIELD_NAME => 'Heliolisk',
             self::FIELD_NAME_SHORT => 'Heliolisk',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ELECTRIC,
+            self::FIELD_TYPE2 => Types::NORMAL
         ],
         Pokemon::TYRUNT => [
             self::FIELD_NAME => 'Tyrunt',
             self::FIELD_NAME_SHORT => 'Tyrunt',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ROCK,
+            self::FIELD_TYPE2 => Types::DRAGON,
             self::FIELD_EVOLVES => [Pokemon::TYRANTRUM]
         ],
         Pokemon::TYRANTRUM => [
             self::FIELD_NAME => 'Tyrantrum',
             self::FIELD_NAME_SHORT => 'Tyrantrum',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ROCK,
+            self::FIELD_TYPE2 => Types::DRAGON
         ],
         Pokemon::AMAURA => [
             self::FIELD_NAME => 'Amaura',
             self::FIELD_NAME_SHORT => 'Amaura',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ROCK,
+            self::FIELD_TYPE2 => Types::ICE,
             self::FIELD_EVOLVES => [Pokemon::AURORUS]
         ],
         Pokemon::AURORUS => [
             self::FIELD_NAME => 'Aurorus',
             self::FIELD_NAME_SHORT => 'Aurorus',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ROCK,
+            self::FIELD_TYPE2 => Types::ICE
         ],
         Pokemon::SYLVEON => [
             self::FIELD_NAME => 'Sylveon',
             self::FIELD_NAME_SHORT => 'Sylveon',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FAIRY
         ],
         Pokemon::HAWLUCHA => [
             self::FIELD_NAME => 'Hawlucha',
             self::FIELD_NAME_SHORT => 'Hawlucha',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FIGHTING,
+            self::FIELD_TYPE2 => Types::FLYING
         ],
         Pokemon::DEDENNE => [
             self::FIELD_NAME => 'Dedenne',
             self::FIELD_NAME_SHORT => 'Dedenne',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ELECTRIC,
+            self::FIELD_TYPE2 => Types::FAIRY
         ],
         Pokemon::CARBINK => [
             self::FIELD_NAME => 'Carbink',
             self::FIELD_NAME_SHORT => 'Carbink',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ROCK,
+            self::FIELD_TYPE2 => Types::FAIRY
         ],
         Pokemon::GOOMY => [
             self::FIELD_NAME => 'Goomy',
             self::FIELD_NAME_SHORT => 'Goomy',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::DRAGON,
             self::FIELD_EVOLVES => [Pokemon::SLIGGOO]
         ],
         Pokemon::SLIGGOO => [
             self::FIELD_NAME => 'Sliggoo',
             self::FIELD_NAME_SHORT => 'Sliggoo',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::DRAGON,
             self::FIELD_EVOLVES => [Pokemon::GOODRA]
         ],
         Pokemon::GOODRA => [
             self::FIELD_NAME => 'Goodra',
             self::FIELD_NAME_SHORT => 'Goodra',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::DRAGON
         ],
         Pokemon::KLEFKI => [
             self::FIELD_NAME => 'Klefki',
             self::FIELD_NAME_SHORT => 'Klefki',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::STEEL,
+            self::FIELD_TYPE2 => Types::FAIRY
         ],
         Pokemon::PHANTUMP => [
             self::FIELD_NAME => 'Phantump',
             self::FIELD_NAME_SHORT => 'Phantump',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GHOST,
+            self::FIELD_TYPE2 => Types::GRASS,
             self::FIELD_EVOLVES => [Pokemon::TREVEANT]
         ],
         Pokemon::TREVEANT => [
             self::FIELD_NAME => 'Treveant',
             self::FIELD_NAME_SHORT => 'Treveant',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GHOST,
+            self::FIELD_TYPE2 => Types::GRASS
         ],
         Pokemon::PUMPKABOO => [
             self::FIELD_NAME => 'Pumpkaboo',
             self::FIELD_NAME_SHORT => 'Pumpkaboo',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GHOST,
+            self::FIELD_TYPE2 => Types::GRASS,
             self::FIELD_EVOLVES => [Pokemon::GOURGEIST]
         ],
         Pokemon::GOURGEIST => [
             self::FIELD_NAME => 'Gourgeist',
             self::FIELD_NAME_SHORT => 'Gourgeist',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GHOST,
+            self::FIELD_TYPE2 => Types::GRASS
         ],
         Pokemon::BERGMITE => [
             self::FIELD_NAME => 'Bergmite',
             self::FIELD_NAME_SHORT => 'Bergmite',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ICE,
             self::FIELD_EVOLVES => [Pokemon::AVALUGG]
         ],
         Pokemon::AVALUGG => [
             self::FIELD_NAME => 'Avalugg',
             self::FIELD_NAME_SHORT => 'Avalugg',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ICE
         ],
         Pokemon::NOIBAT => [
             self::FIELD_NAME => 'Noibat',
             self::FIELD_NAME_SHORT => 'Noibat',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FLYING,
+            self::FIELD_TYPE2 => Types::DRAGON,
             self::FIELD_EVOLVES => [Pokemon::NOIVERN]
         ],
         Pokemon::NOIVERN => [
             self::FIELD_NAME => 'Noivern',
             self::FIELD_NAME_SHORT => 'Noivern',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FLYING,
+            self::FIELD_TYPE2 => Types::DRAGON
         ],
         Pokemon::XERNEAS => [
             self::FIELD_NAME => 'Xerneas',
             self::FIELD_NAME_SHORT => 'Xerneas',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FAIRY
         ],
         Pokemon::YVELTAL => [
             self::FIELD_NAME => 'Yveltal',
             self::FIELD_NAME_SHORT => 'Yveltal',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::DARK,
+            self::FIELD_TYPE2 => Types::FLYING
         ],
         Pokemon::ZYGARGE | FormsAlias::ZYGARGE_HALF => [
             self::FIELD_NAME => 'Zygarge (50% Forme)',
             self::FIELD_NAME_SHORT => 'Zygarge',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::DRAGON,
+            self::FIELD_TYPE2 => Types::GROUND
         ],
         Pokemon::ZYGARGE | FormsAlias::ZYGARGE_TENTH => [
             self::FIELD_NAME => 'Zygarge (10% Forme)',
             self::FIELD_NAME_SHORT => 'Zygarge',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::DRAGON,
+            self::FIELD_TYPE2 => Types::GROUND
         ],
         Pokemon::ZYGARGE | FormsAlias::ZYGARGE_FULL => [
             self::FIELD_NAME => 'Zygarge (Complete Forme)',
             self::FIELD_NAME_SHORT => 'Zygarge',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::DRAGON,
+            self::FIELD_TYPE2 => Types::GROUND
         ],
         Pokemon::DIANCIE => [
             self::FIELD_NAME => 'Diancie',
             self::FIELD_NAME_SHORT => 'Diancie',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ROCK,
+            self::FIELD_TYPE2 => Types::FAIRY
         ],
         Pokemon::HOOPA | FormsAlias::HOOPA_CONFINED => [
             self::FIELD_NAME => 'Hoopa Confined',
             self::FIELD_NAME_SHORT => 'Hoopa',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::PSYCHIC,
+            self::FIELD_TYPE2 => Types::GHOST
         ],
         Pokemon::HOOPA | FormsAlias::HOOPA_UNBOUND => [
             self::FIELD_NAME => 'Hoopa Unbound',
             self::FIELD_NAME_SHORT => 'Hoopa',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::PSYCHIC,
+            self::FIELD_TYPE2 => Types::DARK
         ],
         Pokemon::VOLCANION => [
             self::FIELD_NAME => 'Volcanion',
             self::FIELD_NAME_SHORT => 'Volcanion',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FIRE,
+            self::FIELD_TYPE2 => Types::WATER
         ],
         Pokemon::ROWLET => [
             self::FIELD_NAME => 'Rowlet',
             self::FIELD_NAME_SHORT => 'Rowlet',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GRASS,
+            self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_EVOLVES => [Pokemon::DARTRIX]
         ],
         Pokemon::DARTRIX => [
             self::FIELD_NAME => 'Dartrix',
             self::FIELD_NAME_SHORT => 'Dartrix',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GRASS,
+            self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_EVOLVES => [Pokemon::DECIDUEYE]
         ],
         Pokemon::DECIDUEYE => [
             self::FIELD_NAME => 'Decidueye',
             self::FIELD_NAME_SHORT => 'Decidueye',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GRASS,
+            self::FIELD_TYPE2 => Types::GHOST
         ],
         Pokemon::LITTEN => [
             self::FIELD_NAME => 'Litten',
             self::FIELD_NAME_SHORT => 'Litten',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_EVOLVES => [Pokemon::TORRACAT]
         ],
         Pokemon::TORRACAT => [
             self::FIELD_NAME => 'Torracat',
             self::FIELD_NAME_SHORT => 'Torracat',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_EVOLVES => [Pokemon::INCINEROAR]
         ],
         Pokemon::INCINEROAR => [
             self::FIELD_NAME => 'Incineroar',
             self::FIELD_NAME_SHORT => 'Incineroar',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FIRE,
+            self::FIELD_TYPE2 => Types::DARK
         ],
         Pokemon::POPPLIO => [
             self::FIELD_NAME => 'Popplio',
             self::FIELD_NAME_SHORT => 'Popplio',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_EVOLVES => [Pokemon::BRIONNE]
         ],
         Pokemon::BRIONNE => [
             self::FIELD_NAME => 'Brionne',
             self::FIELD_NAME_SHORT => 'Brionne',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_EVOLVES => [Pokemon::PRIMARINA]
         ],
         Pokemon::PRIMARINA => [
             self::FIELD_NAME => 'Primarina',
             self::FIELD_NAME_SHORT => 'Primarina',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::WATER,
+            self::FIELD_TYPE2 => Types::FAIRY
         ],
         Pokemon::PIKIPEK => [
             self::FIELD_NAME => 'Pikipek',
             self::FIELD_NAME_SHORT => 'Pikipek',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::NORMAL,
+            self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_EVOLVES => [Pokemon::TRUMBEAK]
         ],
         Pokemon::TRUMBEAK => [
             self::FIELD_NAME => 'Trumbeak',
             self::FIELD_NAME_SHORT => 'Trumbeak',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::NORMAL,
+            self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_EVOLVES => [Pokemon::TOUCANNON]
         ],
         Pokemon::TOUCANNON => [
             self::FIELD_NAME => 'Toucannon',
             self::FIELD_NAME_SHORT => 'Toucannon',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::NORMAL,
+            self::FIELD_TYPE2 => Types::FLYING
         ],
         Pokemon::YUNGOOS => [
             self::FIELD_NAME => 'Yungoos',
             self::FIELD_NAME_SHORT => 'Yungoos',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_EVOLVES => [Pokemon::GUMSHOOS]
         ],
         Pokemon::GUMSHOOS => [
             self::FIELD_NAME => 'Gumshoos',
             self::FIELD_NAME_SHORT => 'Gumshoos',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::NORMAL
         ],
         Pokemon::GRUBBIN => [
             self::FIELD_NAME => 'Grubbin',
             self::FIELD_NAME_SHORT => 'Grubbin',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_EVOLVES => [Pokemon::CHARJABUG]
         ],
         Pokemon::CHARJABUG => [
             self::FIELD_NAME => 'Charjabug',
             self::FIELD_NAME_SHORT => 'Charjabug',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::BUG,
+            self::FIELD_TYPE2 => Types::ELECTRIC,
             self::FIELD_EVOLVES => [Pokemon::VIKAVOLT]
         ],
         Pokemon::VIKAVOLT => [
             self::FIELD_NAME => 'Vikavolt',
             self::FIELD_NAME_SHORT => 'Vikavolt',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::BUG,
+            self::FIELD_TYPE2 => Types::ELECTRIC
         ],
         Pokemon::CRABAWLER => [
             self::FIELD_NAME => 'Crabawler',
             self::FIELD_NAME_SHORT => 'Crabawler',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_EVOLVES => [Pokemon::CRABOMINABLE]
         ],
         Pokemon::CRABOMINABLE => [
             self::FIELD_NAME => 'Crabominable',
             self::FIELD_NAME_SHORT => 'Crabominable',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FIGHTING,
+            self::FIELD_TYPE2 => Types::ICE
         ],
-        Pokemon::ORICORIO => [
-            self::FIELD_NAME => 'Oricorio',
+        Pokemon::ORICORIO | FormsAlias::ORICORIO_BAILE => [
+            self::FIELD_NAME => 'Oricorio (Baile Style)',
             self::FIELD_NAME_SHORT => 'Oricorio',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FIRE,
+            self::FIELD_TYPE2 => Types::FLYING
+        ],
+        Pokemon::ORICORIO | FormsAlias::ORICORIO_POMPOM => [
+            self::FIELD_NAME => 'Oricorio (Pom-Pom Style)',
+            self::FIELD_NAME_SHORT => 'Oricorio',
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ELECTRIC,
+            self::FIELD_TYPE2 => Types::FLYING
+        ],
+        Pokemon::ORICORIO | FormsAlias::ORICORIO_PAU => [
+            self::FIELD_NAME => 'Oricorio (Pa\'u Style)',
+            self::FIELD_NAME_SHORT => 'Oricorio',
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::PSYCHIC,
+            self::FIELD_TYPE2 => Types::FLYING
+        ],
+        Pokemon::ORICORIO | FormsAlias::ORICORIO_SENSU => [
+            self::FIELD_NAME => 'Oricorio (Sensu Style)',
+            self::FIELD_NAME_SHORT => 'Oricorio',
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GHOST,
+            self::FIELD_TYPE2 => Types::FLYING
         ],
         Pokemon::CUTIEFLY => [
             self::FIELD_NAME => 'Cutiefly',
             self::FIELD_NAME_SHORT => 'Cutiefly',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::BUG,
+            self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_EVOLVES => [Pokemon::RIBOMBEE]
         ],
         Pokemon::RIBOMBEE => [
             self::FIELD_NAME => 'Ribombee',
             self::FIELD_NAME_SHORT => 'Ribombee',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::BUG,
+            self::FIELD_TYPE2 => Types::FAIRY
         ],
         Pokemon::ROCKRUFF => [
             self::FIELD_NAME => 'Rockruff',
             self::FIELD_NAME_SHORT => 'Rockruff',
             self::FIELD_UNRELEASED => true,
-            self::FIELD_EVOLVES => [Pokemon::LYCANROC | FormsAlias::LYCANROC_DUSK, Pokemon::LYCANROC | FormsAlias::LYCANROC_DUSK, Pokemon::LYCANROC | FormsAlias::LYCANROC_DUSK]
+            self::FIELD_TYPE1 => Types::ROCK,
+            self::FIELD_EVOLVES => [Pokemon::LYCANROC | FormsAlias::LYCANROC_MIDDAY, Pokemon::LYCANROC | FormsAlias::LYCANROC_MIDNIGHT, Pokemon::LYCANROC | FormsAlias::LYCANROC_DUSK]
         ],
         Pokemon::LYCANROC | FormsAlias::LYCANROC_MIDDAY => [
             self::FIELD_NAME => 'Lycanroc (Midday Form)',
             self::FIELD_NAME_SHORT => 'Lycanroc',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ROCK
         ],
         Pokemon::LYCANROC | FormsAlias::LYCANROC_MIDNIGHT => [
             self::FIELD_NAME => 'Lycanroc (Midnight Form)',
             self::FIELD_NAME_SHORT => 'Lycanroc',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ROCK
         ],
         Pokemon::LYCANROC | FormsAlias::LYCANROC_DUSK => [
             self::FIELD_NAME => 'Lycanroc (Dusk Form)',
             self::FIELD_NAME_SHORT => 'Lycanroc',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ROCK
         ],
-        Pokemon::WISHIWASHI => [
-            self::FIELD_NAME => 'Wishiwashi',
+        Pokemon::WISHIWASHI | FormsAlias::WISHIWASHI_SOLO => [
+            self::FIELD_NAME => 'Wishiwashi (Solo Form)',
             self::FIELD_NAME_SHORT => 'Wishiwashi',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::WATER
+        ],
+        Pokemon::WISHIWASHI | FormsAlias::WISHIWASHI_SCHOOL => [
+            self::FIELD_NAME => 'Wishiwashi (School Form)',
+            self::FIELD_NAME_SHORT => 'Wishiwashi',
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::WATER
         ],
         Pokemon::MAREANIE => [
             self::FIELD_NAME => 'Mareanie',
             self::FIELD_NAME_SHORT => 'Mareanie',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::POISON,
+            self::FIELD_TYPE2 => Types::WATER,
             self::FIELD_EVOLVES => [Pokemon::TOXAPEX]
         ],
         Pokemon::TOXAPEX => [
             self::FIELD_NAME => 'Toxapex',
             self::FIELD_NAME_SHORT => 'Toxapex',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::POISON,
+            self::FIELD_TYPE2 => Types::WATER
         ],
         Pokemon::MUDBRAY => [
             self::FIELD_NAME => 'Mudbray',
             self::FIELD_NAME_SHORT => 'Mudbray',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GROUND,
             self::FIELD_EVOLVES => [Pokemon::MUDSDALE]
         ],
         Pokemon::MUDSDALE => [
             self::FIELD_NAME => 'Mudsdale',
             self::FIELD_NAME_SHORT => 'Mudsdale',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GROUND
         ],
         Pokemon::DEWPIDER => [
             self::FIELD_NAME => 'Dewpider',
             self::FIELD_NAME_SHORT => 'Dewpider',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::WATER,
+            self::FIELD_TYPE2 => Types::BUG,
             self::FIELD_EVOLVES => [Pokemon::ARAQUANID]
         ],
         Pokemon::ARAQUANID => [
             self::FIELD_NAME => 'Araquanid',
             self::FIELD_NAME_SHORT => 'Araquanid',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::WATER,
+            self::FIELD_TYPE2 => Types::BUG
         ],
         Pokemon::FOMANTIS => [
             self::FIELD_NAME => 'Fomantis',
             self::FIELD_NAME_SHORT => 'Fomantis',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_EVOLVES => [Pokemon::LURANTIS]
         ],
         Pokemon::LURANTIS => [
             self::FIELD_NAME => 'Lurantis',
             self::FIELD_NAME_SHORT => 'Lurantis',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GRASS
         ],
         Pokemon::MORELULL => [
             self::FIELD_NAME => 'Morelull',
             self::FIELD_NAME_SHORT => 'Morelull',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GRASS,
+            self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_EVOLVES => [Pokemon::SHIINOTIC]
         ],
         Pokemon::SHIINOTIC => [
             self::FIELD_NAME => 'Shiinotic',
             self::FIELD_NAME_SHORT => 'Shiinotic',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GRASS,
+            self::FIELD_TYPE2 => Types::FAIRY
         ],
         Pokemon::SALANDIT => [
             self::FIELD_NAME => 'Salandit',
             self::FIELD_NAME_SHORT => 'Salandit',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::POISON,
+            self::FIELD_TYPE2 => Types::FIRE,
             self::FIELD_EVOLVES => [Pokemon::SALAZZLE]
         ],
         Pokemon::SALAZZLE => [
             self::FIELD_NAME => 'Salazzle',
             self::FIELD_NAME_SHORT => 'Salazzle',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::POISON,
+            self::FIELD_TYPE2 => Types::FIRE
         ],
         Pokemon::STUFFUL => [
             self::FIELD_NAME => 'Stufful',
             self::FIELD_NAME_SHORT => 'Stufful',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::NORMAL,
+            self::FIELD_TYPE2 => Types::FIGHTING,
             self::FIELD_EVOLVES => [Pokemon::BEWEAR]
         ],
         Pokemon::BEWEAR => [
             self::FIELD_NAME => 'Bewear',
             self::FIELD_NAME_SHORT => 'Bewear',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::NORMAL,
+            self::FIELD_TYPE2 => Types::FIGHTING
         ],
         Pokemon::BOUNSWEET => [
             self::FIELD_NAME => 'Bounsweet',
             self::FIELD_NAME_SHORT => 'Bounsweet',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_EVOLVES => [Pokemon::STEENEE]
         ],
         Pokemon::STEENEE => [
             self::FIELD_NAME => 'Steenee',
             self::FIELD_NAME_SHORT => 'Steenee',
             self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_EVOLVES => [Pokemon::TSAREENA]
         ],
         Pokemon::TSAREENA => [
@@ -12685,7 +12976,7 @@ class PokemonData
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TYPE2 => Types::POISON,
-            self::FIELD_EVOLVES => [Pokemon::TOXTRICITY | FormsAlias::TOXTRICITY_AMPED]
+            self::FIELD_EVOLVES => [Pokemon::TOXTRICITY | FormsAlias::TOXTRICITY_LOW]
         ],
         Pokemon::TOXTRICITY | FormsAlias::TOXTRICITY_LOW => [
             self::FIELD_NAME => 'Toxtricity (Low Key Form)',
@@ -13041,7 +13332,7 @@ class PokemonData
             self::FIELD_NAME_SHORT => 'Kubfu',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FIGHTING,
-            self::FIELD_EVOLVES => [Pokemon::URSHIFU | FormsAlias::URSHIFU_RAPID, Pokemon::URSHIFU | FormsAlias::URSHIFU_RAPID]
+            self::FIELD_EVOLVES => [Pokemon::URSHIFU | FormsAlias::URSHIFU_SINGLE, Pokemon::URSHIFU | FormsAlias::URSHIFU_RAPID]
         ],
         Pokemon::URSHIFU | FormsAlias::URSHIFU_SINGLE => [
             self::FIELD_NAME => 'Urshifu (Single Strike Style)',

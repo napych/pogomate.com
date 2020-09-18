@@ -81,8 +81,6 @@ class Pokemon
             }
             $this->pokemon[$from][self::FIELD_EVOLUTIONS][] = $evo;
         }
-//        var_dump($this->pokemon[651]);
-//        die();
     }
 
     protected function initPokemon($code)
@@ -105,7 +103,7 @@ class Pokemon
                 continue;
             }
             $const = Mods::getConst($spCode, true);
-            $formConst = Mods::getConst($spCode, true);
+            $formConst = Mods::getConst($spCode, false);
             $this->pokemon[$spCode] = [
                 self::FIELD_CONST => $formConst,
                 self::FIELD_NAME => $const,
@@ -132,6 +130,12 @@ class Pokemon
 
     public function writePHP()
     {
+        foreach ($this->pokemon as $code => $data) {
+            if (!empty($data[self::FIELD_UNRELEASED]) && !array_key_exists($code,\Pogo\Data\Manual\Evolve::EVOLVE_FROM)) {
+                echo 'WARNING: missing manual evolve entry for unreleased pokemon ', $data[self::FIELD_FORM], PHP_EOL;
+            }
+        }
+
         $forms = [];
         $legendaries = [];
         $mythics = [];
@@ -142,11 +146,11 @@ class Pokemon
 //        var_dump($this->pokemon);
 //        die();
         foreach ($this->pokemon as $code => $pokemon) {
-            if (!empty($pokemon[Pokemon::FIELD_FORM])) {
-                $str2code[$pokemon[Pokemon::FIELD_FORM]] = $code;
-            } else {
-                $str2code[$pokemon[Pokemon::FIELD_NAME]] = $code;
-            }
+//            if (!empty($pokemon[Pokemon::FIELD_CONST])) {
+                $str2code[$pokemon[Pokemon::FIELD_CONST]] = $code;
+//            } else {
+//                $str2code[$pokemon[Pokemon::FIELD_NAME]] = $code;
+//            }
         }
 //        var_dump($str2code);
 //        die();

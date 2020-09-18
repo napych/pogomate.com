@@ -90,6 +90,23 @@ class FormsAlias
     const GENESECT_CHILL = Mods::FORM3;
     const GENESECT_DOUSE = Mods::FORM4;
     const GENESECT_SHOCK = Mods::FORM5;
+    const GRENINJA_NORMAL = Mods::FORM1;
+    const GRENINJA_ASH = Mods::FORM2;
+    const VIVILLON_MEADOW = Mods::FORM1;
+    const VIVILLON_CONTINENTAL = Mods::FORM2;
+    const VIVILLON_GARDEN = Mods::FORM3;
+    const VIVILLON_ELEGANT = Mods::FORM4;
+    const VIVILLON_MARINE = Mods::FORM5;
+    const VIVILLON_PLAINS = Mods::FORM6;
+    const VIVILLON_RIVER = Mods::FORM7;
+    const PYROAR_MALE = Mods::FORM1;
+    const PYROAR_FEMALE = Mods::FORM2;
+    const FURFROU_NATURAL = Mods::FORM1;
+    const FURFROU_HEART = Mods::FORM2;
+    const FURFROU_STAR = Mods::FORM3;
+    const FURFROU_DIAMOND = Mods::FORM4;
+    const MEOWSTIC_MALE = Mods::FORM1;
+    const MEOWSTIC_FEMALE = Mods::FORM2;
     const AEGISLASH_SHIELD = Mods::FORM1;
     const AEGISLASH_BLADE = Mods::FORM2;
     const ZYGARGE_HALF = Mods::FORM1;
@@ -97,9 +114,15 @@ class FormsAlias
     const ZYGARGE_FULL = Mods::FORM3;
     const HOOPA_CONFINED = Mods::FORM1;
     const HOOPA_UNBOUND = Mods::FORM2;
+    const ORICORIO_BAILE = Mods::FORM1;
+    const ORICORIO_POMPOM = Mods::FORM2;
+    const ORICORIO_PAU = Mods::FORM3;
+    const ORICORIO_SENSU = Mods::FORM4;
     const LYCANROC_MIDDAY = Mods::FORM1;
     const LYCANROC_MIDNIGHT = Mods::FORM2;
     const LYCANROC_DUSK = Mods::FORM3;
+    const WISHIWASHI_SOLO = Mods::FORM1;
+    const WISHIWASHI_SCHOOL = Mods::FORM2;
     const MINIOR_METEOR = Mods::FORM1;
     const MINIOR_RED = Mods::FORM2;
     const NECROZMA_NORMAL = Mods::FORM1;
@@ -131,7 +154,7 @@ class FormsAlias
         $reflection = new \ReflectionClass(__CLASS__);
         $constants = $reflection->getConstants();
         foreach ($constants as $name => $value) {
-            if ($value === $form && strpos($name, $prefix . '_') === 0) {
+            if ($value === Mods::getForm($form) && strpos($name, $prefix . '_') === 0) {
                 return $name;
             }
         }

@@ -56,7 +56,8 @@ class Strings
         }
     }
 
-    public function getReasons(int $pokedexId = null)
+    /*
+    public function getReasonsOld(int $pokedexId = null)
     {
         // sort pokemon list
         if (!$pokedexId) {
@@ -96,6 +97,12 @@ class Strings
 //            $result[$name] = $subResult;
         }
         return $result;
+    }
+    */
+
+    public function getReasons(Pokemon $pokemon)
+    {
+        return $this->reasons[$pokemon->getCode()] ?? null;
     }
 
     /**

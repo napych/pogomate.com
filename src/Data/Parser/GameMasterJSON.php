@@ -312,8 +312,6 @@ class GameMasterJSON
                 // 'heightStdDev' => 0.0875,
                 // 'weightStdDev' => 0.8625,
                 // 'familyId' => 'FAMILY_BULBASAUR',
-                // 'candyToEvolve' => 25,
-                // 'kmBuddyDistance' => 3.0,
                 Result\Pokemon::FIELD_THIRD_MOVE_CANDY => $pokemon['thirdMove']['candyToUnlock'] ?? null,
                 Result\Pokemon::FIELD_THIRD_MOVE_DUST => $pokemon['thirdMove']['stardustToUnlock'] ?? null,
                 Result\Pokemon::FIELD_TRANSFERABLE => (bool)$pokemon['isTransferable'] ?? false,

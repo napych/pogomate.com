@@ -138,6 +138,33 @@ class Forms extends FormsAlias
             self::GENESECT_DOUSE => 'Douse Drive',
             self::GENESECT_SHOCK => 'Shock Drive'
         ],
+        Pokemon::GRENINJA => [
+            self::GRENINJA_NORMAL => null,
+            self::GRENINJA_ASH => 'Ash-Greninja'
+        ],
+        Pokemon::VIVILLON => [
+            self::VIVILLON_MEADOW => 'Meadow Pattern',
+            self::VIVILLON_CONTINENTAL => 'Continental Pattern',
+            self::VIVILLON_GARDEN => 'Garden Pattern',
+            self::VIVILLON_ELEGANT => 'Elegant Pattern',
+            self::VIVILLON_MARINE => 'Marine Pattern',
+            self::VIVILLON_PLAINS => 'High Plains Pattern',
+            self::VIVILLON_RIVER => 'River Pattern'
+        ],
+        Pokemon::PYROAR => [
+            self::PYROAR_MALE => 'Male',
+            self::PYROAR_FEMALE => 'Female'
+        ],
+        Pokemon::FURFROU => [
+            self::FURFROU_NATURAL => 'Natural Form',
+            self::FURFROU_HEART => 'Heart Trim',
+            self::FURFROU_STAR => 'Star Trim',
+            self::FURFROU_DIAMOND => 'Diamond Trim'
+        ],
+        Pokemon::MEOWSTIC => [
+            self::MEOWSTIC_MALE => 'Male',
+            self::MEOWSTIC_FEMALE => 'Female'
+        ],
         Pokemon::AEGISLASH => [
             self::AEGISLASH_SHIELD => 'Shield Forme',
             self::AEGISLASH_BLADE => 'Blade Forme'
@@ -151,10 +178,20 @@ class Forms extends FormsAlias
             self::HOOPA_CONFINED => 'Hoopa Confined',
             self::HOOPA_UNBOUND => 'Hoopa Unbound'
         ],
+        Pokemon::ORICORIO => [
+            self::ORICORIO_BAILE => 'Baile Style',
+            self::ORICORIO_POMPOM => 'Pom-Pom Style',
+            self::ORICORIO_PAU => 'Pa\'u Style',
+            self::ORICORIO_SENSU => 'Sensu Style'
+        ],
         Pokemon::LYCANROC => [
             self::LYCANROC_MIDDAY => 'Midday Form',
             self::LYCANROC_MIDNIGHT => 'Midnight Form',
             self::LYCANROC_DUSK => 'Dusk Form'
+        ],
+        Pokemon::WISHIWASHI => [
+            self::WISHIWASHI_SOLO => 'Solo Form',
+            self::WISHIWASHI_SCHOOL => 'School Form'
         ],
         Pokemon::MINIOR => [
             self::MINIOR_METEOR => 'Meteor Form',
@@ -201,7 +238,5 @@ class Forms extends FormsAlias
         Pokemon::MEWTWO | Mods::MEGA => ['Mega X', 'Mega Y'],
         Pokemon::KYOGRE => [null, 'Primal Reversion'],
         Pokemon::GROUDON => [null, 'Primal Reversion'],
-//        Pokemon::FURFROU => ['Natural Form', 'Heart Trim', 'Star Trim', 'Diamond Trim'],
-        Pokemon::WISHIWASHI => ['Solo Form', 'School Form'],
     ];
 }

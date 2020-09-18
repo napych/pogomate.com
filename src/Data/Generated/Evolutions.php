@@ -217,11 +217,13 @@ class Evolutions
             self::FIELD_CANDY => 100,
             self::FIELD_TRADED => true
         ],
-        Pokemon::RAPIDASH | Mods::GALARIAN => [
-            self::FIELD_PARENT => Pokemon::PONYTA | Mods::GALARIAN
+        Pokemon::RAPIDASH => [
+            self::FIELD_PARENT => Pokemon::PONYTA,
+            self::FIELD_CANDY => 50
         ],
-        Pokemon::SLOWBRO | Mods::GALARIAN => [
-            self::FIELD_PARENT => Pokemon::SLOWPOKE | Mods::GALARIAN
+        Pokemon::SLOWBRO => [
+            self::FIELD_PARENT => Pokemon::SLOWPOKE,
+            self::FIELD_CANDY => 50
         ],
         Pokemon::SLOWKING => [
             self::FIELD_PARENT => Pokemon::SLOWPOKE,
@@ -1019,7 +1021,7 @@ class Evolutions
             self::FIELD_CANDY => 50,
             self::FIELD_WALKED => 15
         ],
-        Pokemon::MR_MIME | Mods::GALARIAN => [
+        Pokemon::MR_MIME => [
             self::FIELD_PARENT => Pokemon::MIME_JR,
             self::FIELD_CANDY => 50,
             self::FIELD_WALKED => 15
@@ -1410,7 +1412,7 @@ class Evolutions
         Pokemon::FROGADIER => [
             self::FIELD_PARENT => Pokemon::FROAKIE
         ],
-        Pokemon::GRENINJA => [
+        Pokemon::GRENINJA | FormsAlias::GRENINJA_NORMAL => [
             self::FIELD_PARENT => Pokemon::FROGADIER
         ],
         Pokemon::DIGGERSBY => [
@@ -1425,10 +1427,13 @@ class Evolutions
         Pokemon::SPEWPA => [
             self::FIELD_PARENT => Pokemon::SCATTERBUG
         ],
-        Pokemon::VIVILLON => [
+        Pokemon::VIVILLON | FormsAlias::VIVILLON_MEADOW => [
             self::FIELD_PARENT => Pokemon::SPEWPA
         ],
-        Pokemon::PYROAR => [
+        Pokemon::PYROAR | FormsAlias::PYROAR_MALE => [
+            self::FIELD_PARENT => Pokemon::LITLEO
+        ],
+        Pokemon::PYROAR | FormsAlias::PYROAR_FEMALE => [
             self::FIELD_PARENT => Pokemon::LITLEO
         ],
         Pokemon::FLOETTE => [
@@ -1443,13 +1448,16 @@ class Evolutions
         Pokemon::PANGORO => [
             self::FIELD_PARENT => Pokemon::PANCHAM
         ],
-        Pokemon::MEOWSTIC => [
+        Pokemon::MEOWSTIC | FormsAlias::MEOWSTIC_MALE => [
+            self::FIELD_PARENT => Pokemon::ESPURR
+        ],
+        Pokemon::MEOWSTIC | FormsAlias::MEOWSTIC_FEMALE => [
             self::FIELD_PARENT => Pokemon::ESPURR
         ],
         Pokemon::DOUBLADE => [
             self::FIELD_PARENT => Pokemon::HONEDGE
         ],
-        Pokemon::AEGISLASH | FormsAlias::AEGISLASH_BLADE => [
+        Pokemon::AEGISLASH | FormsAlias::AEGISLASH_SHIELD => [
             self::FIELD_PARENT => Pokemon::DOUBLADE
         ],
         Pokemon::AROMATISSE => [
@@ -1535,6 +1543,12 @@ class Evolutions
         ],
         Pokemon::RIBOMBEE => [
             self::FIELD_PARENT => Pokemon::CUTIEFLY
+        ],
+        Pokemon::LYCANROC | FormsAlias::LYCANROC_MIDDAY => [
+            self::FIELD_PARENT => Pokemon::ROCKRUFF
+        ],
+        Pokemon::LYCANROC | FormsAlias::LYCANROC_MIDNIGHT => [
+            self::FIELD_PARENT => Pokemon::ROCKRUFF
         ],
         Pokemon::LYCANROC | FormsAlias::LYCANROC_DUSK => [
             self::FIELD_PARENT => Pokemon::ROCKRUFF
@@ -1663,7 +1677,7 @@ class Evolutions
         Pokemon::BARRASKEWDA => [
             self::FIELD_PARENT => Pokemon::ARROKUDA
         ],
-        Pokemon::TOXTRICITY | FormsAlias::TOXTRICITY_AMPED => [
+        Pokemon::TOXTRICITY | FormsAlias::TOXTRICITY_LOW => [
             self::FIELD_PARENT => Pokemon::TOXEL
         ],
         Pokemon::CENTISKORCH => [
@@ -1702,6 +1716,9 @@ class Evolutions
         Pokemon::DRAGAPULT => [
             self::FIELD_PARENT => Pokemon::DRAKLOAK
         ],
+        Pokemon::URSHIFU | FormsAlias::URSHIFU_SINGLE => [
+            self::FIELD_PARENT => Pokemon::KUBFU
+        ],
         Pokemon::URSHIFU | FormsAlias::URSHIFU_RAPID => [
             self::FIELD_PARENT => Pokemon::KUBFU
         ],
@@ -1737,6 +1754,12 @@ class Evolutions
             self::FIELD_PARENT => Pokemon::GRAVELER | Mods::ALOLAN,
             self::FIELD_CANDY => 100,
             self::FIELD_TRADED => true
+        ],
+        Pokemon::RAPIDASH | Mods::GALARIAN => [
+            self::FIELD_PARENT => Pokemon::PONYTA | Mods::GALARIAN
+        ],
+        Pokemon::SLOWBRO | Mods::GALARIAN => [
+            self::FIELD_PARENT => Pokemon::SLOWPOKE | Mods::GALARIAN
         ],
         Pokemon::MUK | Mods::ALOLAN => [
             self::FIELD_PARENT => Pokemon::GRIMER | Mods::ALOLAN,
