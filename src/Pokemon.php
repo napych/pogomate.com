@@ -5,9 +5,12 @@ namespace Pogo;
 use Exception;
 use Pogo\Data\Generated\Evolutions;
 use Pogo\Data\Generated\PokemonData;
+use Pogo\Data\Generated\PokemonForms;
 use Pogo\Data\Manual\Evolve;
 use Pogo\Data\Manual\Forms;
-use Pogo\General\Mods;
+use Pogo\Data\Generated\Links;
+use Pogo\Data\Manual\PokemonList;
+use Pogo\Pokemon\Mods;
 use Pogo\Data\Manual\Names;
 
 class Pokemon extends Data\Manual\PokemonList
@@ -62,17 +65,10 @@ class Pokemon extends Data\Manual\PokemonList
      */
     public static function getByLink($name): ?Pokemon
     {
-        $pokedexId = Names::link2id(strtolower($name));
-        if (!$pokedexId) {
+        if (!isset(Links::LINK2POKEMON[$name])) {
             return null;
         }
-        $list = static::getList();
-        foreach ($list as $pokemon) {
-            if ($pokemon->getPokedexId() === $pokedexId) {
-                return $pokemon;
-            }
-        }
-        return null;
+        return static::get(Links::LINK2POKEMON[$name]);
     }
 
     public function getCode()
@@ -169,26 +165,19 @@ class Pokemon extends Data\Manual\PokemonList
         return $this->shortName;
     }
 
-    public function getLinkName()
+    public function getLinkName(): string
     {
-        if (!$this->linkName) {
-            $this->linkName = strtolower(Names::getShortName($this, true));
-        }
-        return $this->linkName;
+        return Links::POKEMON2LINK[$this->pokedexId];
     }
 
-    public static function getList()
+    public static function getList(bool $withForms = false)
     {
-        $fooClass = new \ReflectionClass('\\Pogo\\Data\\Manual\\PokemonList');
-        $constants = $fooClass->getConstants();
-        $source = [];
-        foreach ($constants as $code) {
-            $source[$code] = 1;
+        $result = [];
+        $codeList = $withForms ? array_keys(PokemonData::POKEMON) : array_keys(PokemonForms::FORMS);
+        foreach ($codeList as $code) {
+            $result[$code] = static::get($code);
         }
-        foreach ($source as $code => $evolveFrom) {
-            static::get($code);
-        }
-        return self::$list;
+        return $result;
     }
 
     /**

@@ -2,7 +2,7 @@
 
 namespace Pogo\Lists\Gamepress;
 
-use Pogo\General\Types;
+use Pogo\Pokemon\Types;
 use Pogo\Pokemon;
 
 class Top

@@ -2,7 +2,7 @@
 
 namespace Pogo\Lists\Evolutions;
 
-use Pogo\General\Mods;
+use Pogo\Pokemon\Mods;
 use Pogo\Pokemon;
 
 class Gigantamax

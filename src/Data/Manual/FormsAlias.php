@@ -2,7 +2,7 @@
 
 namespace Pogo\Data\Manual;
 
-use Pogo\General\Mods;
+use Pogo\Pokemon\Mods;
 
 class FormsAlias
 {
@@ -90,6 +90,10 @@ class FormsAlias
     const GENESECT_CHILL = Mods::FORM3;
     const GENESECT_DOUSE = Mods::FORM4;
     const GENESECT_SHOCK = Mods::FORM5;
+    const ZAMAZENTA_HERO = Mods::FORM1;
+    const ZAMAZENTA_CROWNED = Mods::FORM2;
+    const URSHIFU_SINGLE = Mods::FORM1;
+    const URSHIFU_RAPID = Mods::FORM2;
 
     /**
      * Get constant name from code (for code generation)

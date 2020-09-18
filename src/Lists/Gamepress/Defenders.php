@@ -2,7 +2,7 @@
 
 namespace Pogo\Lists\Gamepress;
 
-use Pogo\General\Mods;
+use Pogo\Pokemon\Mods;
 use Pogo\Pokemon;
 
 class Defenders

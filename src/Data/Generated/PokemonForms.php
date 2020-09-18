@@ -2,7 +2,7 @@
 
 namespace Pogo\Data\Generated;
 
-use Pogo\Pokemon, Pogo\General\Mods, Pogo\Data\Manual\FormsAlias;
+use Pogo\Pokemon, Pogo\Pokemon\Mods, Pogo\Data\Manual\FormsAlias;
 
 class PokemonForms
 {
@@ -1594,8 +1594,8 @@ class PokemonForms
         ],
         Pokemon::BURMY => [
             Pokemon::BURMY | FormsAlias::BURMY_PLANT,
-            Pokemon::BURMY | FormsAlias::BURMY_SANDY,
             Pokemon::BURMY | FormsAlias::BURMY_TRASH,
+            Pokemon::BURMY | FormsAlias::BURMY_SANDY,
         ],
         Pokemon::WORMADAM => [
             Pokemon::WORMADAM | FormsAlias::WORMADAM_PLANT,
@@ -2098,9 +2098,9 @@ class PokemonForms
         ],
         Pokemon::DARMANITAN => [
             Pokemon::DARMANITAN | FormsAlias::DARMANITAN_STANDARD,
+            Pokemon::DARMANITAN | FormsAlias::DARMANITAN_ZEN,
             Pokemon::DARMANITAN | FormsAlias::DARMANITAN_STANDARD | Mods::GALARIAN,
             Pokemon::DARMANITAN | FormsAlias::DARMANITAN_ZEN | Mods::GALARIAN,
-            Pokemon::DARMANITAN | FormsAlias::DARMANITAN_ZEN,
         ],
         Pokemon::MARACTUS => [
             Pokemon::MARACTUS,
@@ -2191,14 +2191,14 @@ class PokemonForms
         ],
         Pokemon::DEERLING => [
             Pokemon::DEERLING | FormsAlias::DEERLING_SPRING,
-            Pokemon::DEERLING | FormsAlias::DEERLING_AUTUMN,
             Pokemon::DEERLING | FormsAlias::DEERLING_SUMMER,
+            Pokemon::DEERLING | FormsAlias::DEERLING_AUTUMN,
             Pokemon::DEERLING | FormsAlias::DEERLING_WINTER,
         ],
         Pokemon::SAWSBUCK => [
             Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_SPRING,
-            Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_AUTUMN,
             Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_SUMMER,
+            Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_AUTUMN,
             Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_WINTER,
         ],
         Pokemon::EMOLGA => [
@@ -2406,11 +2406,641 @@ class PokemonForms
             Pokemon::GENESECT | FormsAlias::GENESECT_DOUSE,
             Pokemon::GENESECT | FormsAlias::GENESECT_SHOCK,
         ],
+        Pokemon::CHESPIN => [
+            Pokemon::CHESPIN,
+        ],
+        Pokemon::QUILLADIN => [
+            Pokemon::QUILLADIN,
+        ],
+        Pokemon::CHESNAUGHT => [
+            Pokemon::CHESNAUGHT,
+        ],
+        Pokemon::FENNEKIN => [
+            Pokemon::FENNEKIN,
+        ],
+        Pokemon::BRAIXEN => [
+            Pokemon::BRAIXEN,
+        ],
+        Pokemon::DELPHOX => [
+            Pokemon::DELPHOX,
+        ],
+        Pokemon::FROAKIE => [
+            Pokemon::FROAKIE,
+        ],
+        Pokemon::FROGADIER => [
+            Pokemon::FROGADIER,
+        ],
+        Pokemon::GRENINJA => [
+            Pokemon::GRENINJA,
+        ],
+        Pokemon::BUNNELBY => [
+            Pokemon::BUNNELBY,
+        ],
+        Pokemon::DIGGERSBY => [
+            Pokemon::DIGGERSBY,
+        ],
+        Pokemon::FLETCHLING => [
+            Pokemon::FLETCHLING,
+        ],
+        Pokemon::FLETCHINDER => [
+            Pokemon::FLETCHINDER,
+        ],
+        Pokemon::TALONFLAME => [
+            Pokemon::TALONFLAME,
+        ],
+        Pokemon::SCATTERBUG => [
+            Pokemon::SCATTERBUG,
+        ],
+        Pokemon::SPEWPA => [
+            Pokemon::SPEWPA,
+        ],
+        Pokemon::VIVILLON => [
+            Pokemon::VIVILLON,
+        ],
+        Pokemon::LITLEO => [
+            Pokemon::LITLEO,
+        ],
+        Pokemon::PYROAR => [
+            Pokemon::PYROAR,
+        ],
+        Pokemon::FLABEBE => [
+            Pokemon::FLABEBE,
+        ],
+        Pokemon::FLOETTE => [
+            Pokemon::FLOETTE,
+        ],
+        Pokemon::FLORGES => [
+            Pokemon::FLORGES,
+        ],
+        Pokemon::SKIDDO => [
+            Pokemon::SKIDDO,
+        ],
+        Pokemon::GOGOAT => [
+            Pokemon::GOGOAT,
+        ],
+        Pokemon::PANCHAM => [
+            Pokemon::PANCHAM,
+        ],
+        Pokemon::PANGORO => [
+            Pokemon::PANGORO,
+        ],
+        Pokemon::FURFROU => [
+            Pokemon::FURFROU,
+        ],
+        Pokemon::ESPURR => [
+            Pokemon::ESPURR,
+        ],
+        Pokemon::MEOWSTIC => [
+            Pokemon::MEOWSTIC,
+        ],
+        Pokemon::HONEDGE => [
+            Pokemon::HONEDGE,
+        ],
+        Pokemon::DOUBLADE => [
+            Pokemon::DOUBLADE,
+        ],
+        Pokemon::AEGISLASH => [
+            Pokemon::AEGISLASH,
+        ],
+        Pokemon::SPIRITZEE => [
+            Pokemon::SPIRITZEE,
+        ],
+        Pokemon::AROMATISSE => [
+            Pokemon::AROMATISSE,
+        ],
+        Pokemon::SWIRLIX => [
+            Pokemon::SWIRLIX,
+        ],
+        Pokemon::SLURPUFF => [
+            Pokemon::SLURPUFF,
+        ],
+        Pokemon::INKAY => [
+            Pokemon::INKAY,
+        ],
+        Pokemon::MALAMAR => [
+            Pokemon::MALAMAR,
+        ],
+        Pokemon::BINACLE => [
+            Pokemon::BINACLE,
+        ],
+        Pokemon::BARBARACLE => [
+            Pokemon::BARBARACLE,
+        ],
+        Pokemon::SKRELP => [
+            Pokemon::SKRELP,
+        ],
+        Pokemon::DRAGALGE => [
+            Pokemon::DRAGALGE,
+        ],
+        Pokemon::CLAUNCHER => [
+            Pokemon::CLAUNCHER,
+        ],
+        Pokemon::CLAWITZER => [
+            Pokemon::CLAWITZER,
+        ],
+        Pokemon::HELIOPTILE => [
+            Pokemon::HELIOPTILE,
+        ],
+        Pokemon::HELIOLISK => [
+            Pokemon::HELIOLISK,
+        ],
+        Pokemon::TYRUNT => [
+            Pokemon::TYRUNT,
+        ],
+        Pokemon::TYRANTRUM => [
+            Pokemon::TYRANTRUM,
+        ],
+        Pokemon::AMAURA => [
+            Pokemon::AMAURA,
+        ],
+        Pokemon::AURORUS => [
+            Pokemon::AURORUS,
+        ],
+        Pokemon::SYLVEON => [
+            Pokemon::SYLVEON,
+        ],
+        Pokemon::HAWLUCHA => [
+            Pokemon::HAWLUCHA,
+        ],
+        Pokemon::DEDENNE => [
+            Pokemon::DEDENNE,
+        ],
+        Pokemon::CARBINK => [
+            Pokemon::CARBINK,
+        ],
+        Pokemon::GOOMY => [
+            Pokemon::GOOMY,
+        ],
+        Pokemon::SLIGGOO => [
+            Pokemon::SLIGGOO,
+        ],
+        Pokemon::GOODRA => [
+            Pokemon::GOODRA,
+        ],
+        Pokemon::KLEFKI => [
+            Pokemon::KLEFKI,
+        ],
+        Pokemon::PHANTUMP => [
+            Pokemon::PHANTUMP,
+        ],
+        Pokemon::TREVEANT => [
+            Pokemon::TREVEANT,
+        ],
+        Pokemon::PUMPKABOO => [
+            Pokemon::PUMPKABOO,
+        ],
+        Pokemon::GOURGEIST => [
+            Pokemon::GOURGEIST,
+        ],
+        Pokemon::BERGMITE => [
+            Pokemon::BERGMITE,
+        ],
+        Pokemon::AVALUGG => [
+            Pokemon::AVALUGG,
+        ],
+        Pokemon::NOIBAT => [
+            Pokemon::NOIBAT,
+        ],
+        Pokemon::NOIVERN => [
+            Pokemon::NOIVERN,
+        ],
+        Pokemon::XERNEAS => [
+            Pokemon::XERNEAS,
+        ],
+        Pokemon::YVELTAL => [
+            Pokemon::YVELTAL,
+        ],
+        Pokemon::ZYGARGE => [
+            Pokemon::ZYGARGE,
+        ],
+        Pokemon::DIANCIE => [
+            Pokemon::DIANCIE,
+        ],
+        Pokemon::HOOPA => [
+            Pokemon::HOOPA,
+        ],
+        Pokemon::VOLCANION => [
+            Pokemon::VOLCANION,
+        ],
+        Pokemon::ROWLET => [
+            Pokemon::ROWLET,
+        ],
+        Pokemon::DARTRIX => [
+            Pokemon::DARTRIX,
+        ],
+        Pokemon::DECIDUEYE => [
+            Pokemon::DECIDUEYE,
+        ],
+        Pokemon::LITTEN => [
+            Pokemon::LITTEN,
+        ],
+        Pokemon::TORRACAT => [
+            Pokemon::TORRACAT,
+        ],
+        Pokemon::INCINEROAR => [
+            Pokemon::INCINEROAR,
+        ],
+        Pokemon::POPPLIO => [
+            Pokemon::POPPLIO,
+        ],
+        Pokemon::BRIONNE => [
+            Pokemon::BRIONNE,
+        ],
+        Pokemon::PRIMARINA => [
+            Pokemon::PRIMARINA,
+        ],
+        Pokemon::PIKIPEK => [
+            Pokemon::PIKIPEK,
+        ],
+        Pokemon::TRUMBEAK => [
+            Pokemon::TRUMBEAK,
+        ],
+        Pokemon::TOUCANNON => [
+            Pokemon::TOUCANNON,
+        ],
+        Pokemon::YUNGOOS => [
+            Pokemon::YUNGOOS,
+        ],
+        Pokemon::GUMSHOOS => [
+            Pokemon::GUMSHOOS,
+        ],
+        Pokemon::GRUBBIN => [
+            Pokemon::GRUBBIN,
+        ],
+        Pokemon::CHARJABUG => [
+            Pokemon::CHARJABUG,
+        ],
+        Pokemon::VIKAVOLT => [
+            Pokemon::VIKAVOLT,
+        ],
+        Pokemon::CRABAWLER => [
+            Pokemon::CRABAWLER,
+        ],
+        Pokemon::CRABOMINABLE => [
+            Pokemon::CRABOMINABLE,
+        ],
+        Pokemon::ORICORIO => [
+            Pokemon::ORICORIO,
+        ],
+        Pokemon::CUTIEFLY => [
+            Pokemon::CUTIEFLY,
+        ],
+        Pokemon::RIBOMBEE => [
+            Pokemon::RIBOMBEE,
+        ],
+        Pokemon::ROCKRUFF => [
+            Pokemon::ROCKRUFF,
+        ],
+        Pokemon::LYCANROC => [
+            Pokemon::LYCANROC,
+        ],
+        Pokemon::WISHIWASHI => [
+            Pokemon::WISHIWASHI,
+        ],
+        Pokemon::MAREANIE => [
+            Pokemon::MAREANIE,
+        ],
+        Pokemon::TOXAPEX => [
+            Pokemon::TOXAPEX,
+        ],
+        Pokemon::MUDBRAY => [
+            Pokemon::MUDBRAY,
+        ],
+        Pokemon::MUDSDALE => [
+            Pokemon::MUDSDALE,
+        ],
+        Pokemon::DEWPIDER => [
+            Pokemon::DEWPIDER,
+        ],
+        Pokemon::ARAQUANID => [
+            Pokemon::ARAQUANID,
+        ],
+        Pokemon::FOMANTIS => [
+            Pokemon::FOMANTIS,
+        ],
+        Pokemon::LURANTIS => [
+            Pokemon::LURANTIS,
+        ],
+        Pokemon::MORELULL => [
+            Pokemon::MORELULL,
+        ],
+        Pokemon::SHIINOTIC => [
+            Pokemon::SHIINOTIC,
+        ],
+        Pokemon::SALANDIT => [
+            Pokemon::SALANDIT,
+        ],
+        Pokemon::SALAZZLE => [
+            Pokemon::SALAZZLE,
+        ],
+        Pokemon::STUFFUL => [
+            Pokemon::STUFFUL,
+        ],
+        Pokemon::BEWEAR => [
+            Pokemon::BEWEAR,
+        ],
+        Pokemon::BOUNSWEET => [
+            Pokemon::BOUNSWEET,
+        ],
+        Pokemon::STEENEE => [
+            Pokemon::STEENEE,
+        ],
+        Pokemon::TSAREENA => [
+            Pokemon::TSAREENA,
+        ],
+        Pokemon::COMFEY => [
+            Pokemon::COMFEY,
+        ],
+        Pokemon::ORANGURU => [
+            Pokemon::ORANGURU,
+        ],
+        Pokemon::PASSIMIAN => [
+            Pokemon::PASSIMIAN,
+        ],
+        Pokemon::WIMPOD => [
+            Pokemon::WIMPOD,
+        ],
+        Pokemon::GOLISOPOD => [
+            Pokemon::GOLISOPOD,
+        ],
+        Pokemon::SANDYGAST => [
+            Pokemon::SANDYGAST,
+        ],
+        Pokemon::PALOSSAND => [
+            Pokemon::PALOSSAND,
+        ],
+        Pokemon::PYUKUMUKU => [
+            Pokemon::PYUKUMUKU,
+        ],
+        Pokemon::TYPE_NULL => [
+            Pokemon::TYPE_NULL,
+        ],
+        Pokemon::SILVALLY => [
+            Pokemon::SILVALLY,
+        ],
+        Pokemon::MINIOR => [
+            Pokemon::MINIOR,
+        ],
+        Pokemon::KOMALA => [
+            Pokemon::KOMALA,
+        ],
+        Pokemon::TURTONATOR => [
+            Pokemon::TURTONATOR,
+        ],
+        Pokemon::TOGEDEMARU => [
+            Pokemon::TOGEDEMARU,
+        ],
+        Pokemon::MIMIKYU => [
+            Pokemon::MIMIKYU,
+        ],
+        Pokemon::BRUXISH => [
+            Pokemon::BRUXISH,
+        ],
+        Pokemon::DRAMPA => [
+            Pokemon::DRAMPA,
+        ],
+        Pokemon::DHELMISE => [
+            Pokemon::DHELMISE,
+        ],
+        Pokemon::JANGMO_O => [
+            Pokemon::JANGMO_O,
+        ],
+        Pokemon::HAKAMO_O => [
+            Pokemon::HAKAMO_O,
+        ],
+        Pokemon::KOMMO_O => [
+            Pokemon::KOMMO_O,
+        ],
+        Pokemon::TAPU_KOKO => [
+            Pokemon::TAPU_KOKO,
+        ],
+        Pokemon::TAPU_LELE => [
+            Pokemon::TAPU_LELE,
+        ],
+        Pokemon::TAPU_BULU => [
+            Pokemon::TAPU_BULU,
+        ],
+        Pokemon::TAPU_FINI => [
+            Pokemon::TAPU_FINI,
+        ],
+        Pokemon::COSMOG => [
+            Pokemon::COSMOG,
+        ],
+        Pokemon::COSMOEM => [
+            Pokemon::COSMOEM,
+        ],
+        Pokemon::SOLGALEO => [
+            Pokemon::SOLGALEO,
+        ],
+        Pokemon::LUNALA => [
+            Pokemon::LUNALA,
+        ],
+        Pokemon::NIHILEGO => [
+            Pokemon::NIHILEGO,
+        ],
+        Pokemon::BUZZWOLE => [
+            Pokemon::BUZZWOLE,
+        ],
+        Pokemon::PHEROMOSA => [
+            Pokemon::PHEROMOSA,
+        ],
+        Pokemon::XURKITREE => [
+            Pokemon::XURKITREE,
+        ],
+        Pokemon::CELESTEELA => [
+            Pokemon::CELESTEELA,
+        ],
+        Pokemon::KARTANA => [
+            Pokemon::KARTANA,
+        ],
+        Pokemon::GUZZLORD => [
+            Pokemon::GUZZLORD,
+        ],
+        Pokemon::NECROZMA => [
+            Pokemon::NECROZMA,
+        ],
+        Pokemon::MAGEARNA => [
+            Pokemon::MAGEARNA,
+        ],
+        Pokemon::MARSHADOW => [
+            Pokemon::MARSHADOW,
+        ],
+        Pokemon::POIPOLE => [
+            Pokemon::POIPOLE,
+        ],
+        Pokemon::NAGANADEL => [
+            Pokemon::NAGANADEL,
+        ],
+        Pokemon::STAKATAKA => [
+            Pokemon::STAKATAKA,
+        ],
+        Pokemon::BLACEPHALON => [
+            Pokemon::BLACEPHALON,
+        ],
+        Pokemon::ZERAORA => [
+            Pokemon::ZERAORA,
+        ],
         Pokemon::MELTAN => [
             Pokemon::MELTAN,
         ],
         Pokemon::MELMETAL => [
             Pokemon::MELMETAL,
+        ],
+        Pokemon::GROOKEY => [
+            Pokemon::GROOKEY,
+        ],
+        Pokemon::THWACKEY => [
+            Pokemon::THWACKEY,
+        ],
+        Pokemon::RILLABOOM => [
+            Pokemon::RILLABOOM,
+        ],
+        Pokemon::SCORBUNNY => [
+            Pokemon::SCORBUNNY,
+        ],
+        Pokemon::RABOOT => [
+            Pokemon::RABOOT,
+        ],
+        Pokemon::CINDERACE => [
+            Pokemon::CINDERACE,
+        ],
+        Pokemon::SOBBLE => [
+            Pokemon::SOBBLE,
+        ],
+        Pokemon::DRIZZILE => [
+            Pokemon::DRIZZILE,
+        ],
+        Pokemon::INTELEON => [
+            Pokemon::INTELEON,
+        ],
+        Pokemon::SKWOVET => [
+            Pokemon::SKWOVET,
+        ],
+        Pokemon::GREEDENT => [
+            Pokemon::GREEDENT,
+        ],
+        Pokemon::ROOKIDEE => [
+            Pokemon::ROOKIDEE,
+        ],
+        Pokemon::CORVISQUIRE => [
+            Pokemon::CORVISQUIRE,
+        ],
+        Pokemon::CORVIKNIGHT => [
+            Pokemon::CORVIKNIGHT,
+        ],
+        Pokemon::BLIPBUG => [
+            Pokemon::BLIPBUG,
+        ],
+        Pokemon::DOTTLER => [
+            Pokemon::DOTTLER,
+        ],
+        Pokemon::ORBEETLE => [
+            Pokemon::ORBEETLE,
+        ],
+        Pokemon::NICKIT => [
+            Pokemon::NICKIT,
+        ],
+        Pokemon::THIEVUL => [
+            Pokemon::THIEVUL,
+        ],
+        Pokemon::GOSSIFLEUR => [
+            Pokemon::GOSSIFLEUR,
+        ],
+        Pokemon::ELDEGOSS => [
+            Pokemon::ELDEGOSS,
+        ],
+        Pokemon::WOOLOO => [
+            Pokemon::WOOLOO,
+        ],
+        Pokemon::DUBWOOL => [
+            Pokemon::DUBWOOL,
+        ],
+        Pokemon::CHEWTLE => [
+            Pokemon::CHEWTLE,
+        ],
+        Pokemon::DREDNAW => [
+            Pokemon::DREDNAW,
+        ],
+        Pokemon::YAMPER => [
+            Pokemon::YAMPER,
+        ],
+        Pokemon::BOLTUND => [
+            Pokemon::BOLTUND,
+        ],
+        Pokemon::ROLYCOLY => [
+            Pokemon::ROLYCOLY,
+        ],
+        Pokemon::CARKOL => [
+            Pokemon::CARKOL,
+        ],
+        Pokemon::COALOSSAL => [
+            Pokemon::COALOSSAL,
+        ],
+        Pokemon::APPLIN => [
+            Pokemon::APPLIN,
+        ],
+        Pokemon::FLAPPLE => [
+            Pokemon::FLAPPLE,
+        ],
+        Pokemon::APPLETUN => [
+            Pokemon::APPLETUN,
+        ],
+        Pokemon::SILICOBRA => [
+            Pokemon::SILICOBRA,
+        ],
+        Pokemon::SANDACONDA => [
+            Pokemon::SANDACONDA,
+        ],
+        Pokemon::CRAMORANT => [
+            Pokemon::CRAMORANT,
+        ],
+        Pokemon::ARROKUDA => [
+            Pokemon::ARROKUDA,
+        ],
+        Pokemon::BARRASKEWDA => [
+            Pokemon::BARRASKEWDA,
+        ],
+        Pokemon::TOXEL => [
+            Pokemon::TOXEL,
+        ],
+        Pokemon::TOXTRICITY => [
+            Pokemon::TOXTRICITY,
+        ],
+        Pokemon::SIZZLIPEDE => [
+            Pokemon::SIZZLIPEDE,
+        ],
+        Pokemon::CENTISKORCH => [
+            Pokemon::CENTISKORCH,
+        ],
+        Pokemon::CLOBBOPUS => [
+            Pokemon::CLOBBOPUS,
+        ],
+        Pokemon::GRAPPLOCT => [
+            Pokemon::GRAPPLOCT,
+        ],
+        Pokemon::SINISTEA => [
+            Pokemon::SINISTEA,
+        ],
+        Pokemon::POLTEAGEIST => [
+            Pokemon::POLTEAGEIST,
+        ],
+        Pokemon::HATENNA => [
+            Pokemon::HATENNA,
+        ],
+        Pokemon::HATTREM => [
+            Pokemon::HATTREM,
+        ],
+        Pokemon::HATTERENE => [
+            Pokemon::HATTERENE,
+        ],
+        Pokemon::IMPIDIMP => [
+            Pokemon::IMPIDIMP,
+        ],
+        Pokemon::MORGREM => [
+            Pokemon::MORGREM,
+        ],
+        Pokemon::GRIMMSNARL => [
+            Pokemon::GRIMMSNARL,
         ],
         Pokemon::OBSTAGOON => [
             Pokemon::OBSTAGOON,
@@ -2422,10 +3052,99 @@ class PokemonForms
             Pokemon::PERRSERKER | Mods::PURIFIED,
             Pokemon::PERRSERKER | Mods::SHADOW,
         ],
+        Pokemon::CURSOLA => [
+            Pokemon::CURSOLA,
+        ],
         Pokemon::SIRFETCH_D => [
             Pokemon::SIRFETCH_D,
             Pokemon::SIRFETCH_D | Mods::PURIFIED,
             Pokemon::SIRFETCH_D | Mods::SHADOW,
+        ],
+        Pokemon::MR_RIME => [
+            Pokemon::MR_RIME,
+        ],
+        Pokemon::RINERIGUS => [
+            Pokemon::RINERIGUS,
+        ],
+        Pokemon::MILCERY => [
+            Pokemon::MILCERY,
+        ],
+        Pokemon::ALCREMIE => [
+            Pokemon::ALCREMIE,
+        ],
+        Pokemon::FALINKS => [
+            Pokemon::FALINKS,
+        ],
+        Pokemon::PINCURCHIN => [
+            Pokemon::PINCURCHIN,
+        ],
+        Pokemon::SNOM => [
+            Pokemon::SNOM,
+        ],
+        Pokemon::FROSMOTH => [
+            Pokemon::FROSMOTH,
+        ],
+        Pokemon::STONJOURNER => [
+            Pokemon::STONJOURNER,
+        ],
+        Pokemon::EISCUE => [
+            Pokemon::EISCUE,
+        ],
+        Pokemon::INDEEDEE => [
+            Pokemon::INDEEDEE,
+        ],
+        Pokemon::MORPEKO => [
+            Pokemon::MORPEKO,
+        ],
+        Pokemon::CUFANT => [
+            Pokemon::CUFANT,
+        ],
+        Pokemon::COPPERAJAH => [
+            Pokemon::COPPERAJAH,
+        ],
+        Pokemon::DRACOZOLT => [
+            Pokemon::DRACOZOLT,
+        ],
+        Pokemon::ARCTOZOLT => [
+            Pokemon::ARCTOZOLT,
+        ],
+        Pokemon::DRACOVISH => [
+            Pokemon::DRACOVISH,
+        ],
+        Pokemon::ARCTOVISH => [
+            Pokemon::ARCTOVISH,
+        ],
+        Pokemon::DURALUDON => [
+            Pokemon::DURALUDON,
+        ],
+        Pokemon::DREEPY => [
+            Pokemon::DREEPY,
+        ],
+        Pokemon::DRAKLOAK => [
+            Pokemon::DRAKLOAK,
+        ],
+        Pokemon::DRAGAPULT => [
+            Pokemon::DRAGAPULT,
+        ],
+        Pokemon::ZACIAN => [
+            Pokemon::ZACIAN,
+        ],
+        Pokemon::ZAMAZENTA => [
+            Pokemon::ZAMAZENTA | FormsAlias::ZAMAZENTA_HERO,
+            Pokemon::ZAMAZENTA | FormsAlias::ZAMAZENTA_CROWNED,
+        ],
+        Pokemon::ETERNATUS => [
+            Pokemon::ETERNATUS,
+        ],
+        Pokemon::KUBFU => [
+            Pokemon::KUBFU,
+        ],
+        Pokemon::URSHIFU => [
+            Pokemon::URSHIFU | FormsAlias::URSHIFU_SINGLE,
+            Pokemon::URSHIFU | FormsAlias::URSHIFU_RAPID,
+        ],
+        Pokemon::ZARUDE => [
+            Pokemon::ZARUDE,
         ],
 
     ];

@@ -2,7 +2,7 @@
 
 namespace Pogo\Data\Parser;
 
-use Pogo\General\Mods;
+use Pogo\Pokemon\Mods;
 
 class Locale
 {

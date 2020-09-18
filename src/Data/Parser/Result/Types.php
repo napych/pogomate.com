@@ -1,6 +1,6 @@
 <?php
 
-namespace Pogo\Data\Result;
+namespace Pogo\Data\Parser\Result;
 
 class Types
 {
@@ -8,9 +8,9 @@ class Types
 
     public function __construct()
     {
-        foreach (\Pogo\General\Types::TYPE_ENUM as $type1) {
+        foreach (\Pogo\Pokemon\Types::TYPE_ENUM as $type1) {
             $this->effectiveness[$type1] = [];
-            foreach (\Pogo\General\Types::TYPE_ENUM as $type2) {
+            foreach (\Pogo\Pokemon\Types::TYPE_ENUM as $type2) {
                 $this->effectiveness[$type1][$type2] = 1.0;
             }
         }
@@ -33,7 +33,7 @@ class Types
 
 namespace Pogo\Data\Generated;
 
-use Pogo\General\Types;
+use Pogo\Pokemon\Types;
 
 class TypeEffectiveness
 {
@@ -42,10 +42,10 @@ class TypeEffectiveness
 PHP_CODE;
 
         foreach ($this->effectiveness as $type1 => $effectData) {
-            $type1Name = \Pogo\General\Types::getConst($type1);
+            $type1Name = \Pogo\Pokemon\Types::getConst($type1);
             $output .= "        Types::$type1Name => [\n";
             foreach ($effectData as $type2 => $effectiveness) {
-                $type2Name = \Pogo\General\Types::getConst($type2);
+                $type2Name = \Pogo\Pokemon\Types::getConst($type2);
                 $output .= "            Types::$type2Name => $effectiveness,\n";
             }
             $output .= "        ],\n";
@@ -55,6 +55,6 @@ PHP_CODE;
     ];
 }
 PHP_CODE;
-        file_put_contents(__DIR__ . '/../Generated/TypeEffectiveness.php', $output);
+        file_put_contents(All::PHP_PATH . 'TypeEffectiveness.php', $output);
     }
 }

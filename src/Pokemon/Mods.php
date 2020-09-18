@@ -1,6 +1,6 @@
 <?php
 
-namespace Pogo\General;
+namespace Pogo\Pokemon;
 
 use Pogo\Data\Manual\Forms;
 

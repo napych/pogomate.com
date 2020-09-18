@@ -2,12 +2,11 @@
 
 namespace Pogo\Data\Parser;
 
-use Pogo\Data\Result\All;
-use Pogo\General\Mods;
-use Pogo\General\Types;
+use Pogo\Data\Parser\Result\All;
+use Pogo\Pokemon\Mods;
+use Pogo\Pokemon\Types;
 use Pogo\Data\Manual\Forms;
 use Pogo\Pokemon;
-use Pogo\Data\Manual\PokemonList;
 
 class GameMasterJSON
 {

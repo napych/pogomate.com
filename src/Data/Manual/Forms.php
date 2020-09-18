@@ -2,7 +2,7 @@
 
 namespace Pogo\Data\Manual;
 
-use Pogo\General\Mods;
+use Pogo\Pokemon\Mods;
 use Pogo\Pokemon;
 
 class Forms extends FormsAlias
@@ -137,6 +137,14 @@ class Forms extends FormsAlias
             self::GENESECT_CHILL => 'Chill Drive',
             self::GENESECT_DOUSE => 'Douse Drive',
             self::GENESECT_SHOCK => 'Shock Drive'
+        ],
+        Pokemon::ZAMAZENTA => [
+            self::ZAMAZENTA_HERO => 'Hero of Many Battles',
+            self::ZAMAZENTA_CROWNED => 'Crowned Shield'
+        ],
+        Pokemon::URSHIFU => [
+            self::URSHIFU_SINGLE => 'Single Strike Style',
+            self::URSHIFU_RAPID => 'Rapid Strike Style'
         ]
     ];
 
@@ -158,7 +166,5 @@ class Forms extends FormsAlias
         Pokemon::INDEEDEE => ['Female', 'Male'],
 //        Pokemon::MORPEKO => ['Full Belly Mode', 'Hangry Mode'],
         Pokemon::ZACIAN => ['Hero of Many Battles', 'Crowned Sword'],
-        Pokemon::ZAMAZENTA => ['Hero of Many Battles', 'Crowned Shield'],
-        Pokemon::URSHIFU => ['Single Strike Style', 'Rapid Strike Style'],
     ];
 }

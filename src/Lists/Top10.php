@@ -3,7 +3,7 @@
 namespace Pogo\Lists;
 
 use Pogo\Data\Manual\FormsAlias;
-use Pogo\General\Mods;
+use Pogo\Pokemon\Mods;
 use Pogo\Pokemon;
 
 class Top10

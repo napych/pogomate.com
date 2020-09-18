@@ -1,6 +1,6 @@
 <?php
 
-namespace Pogo\Data\Result;
+namespace Pogo\Data\Parser\Result;
 
 use Pogo\Data\Parser\Locale;
 
@@ -57,7 +57,7 @@ class Moves
                         $moveStr[] = 'self::FIELD_CLASS => self::' . self::CLASS_TRANSLATE[$move[self::FIELD_CLASS]];
                         break;
                     case self::FIELD_TYPE:
-                        $moveStr[] = 'self::FIELD_TYPE => Types::' . \Pogo\General\Types::getConst($move[self::FIELD_TYPE]);
+                        $moveStr[] = 'self::FIELD_TYPE => Types::' . \Pogo\Pokemon\Types::getConst($move[self::FIELD_TYPE]);
                         break;
                     case self::FIELD_CONST:
                         break;
@@ -81,13 +81,13 @@ class Moves
 $defines
 }
 PHP;
-        file_put_contents(__DIR__ . '/../Generated/Moves.php', $output);
+        file_put_contents(All::PHP_PATH . 'Moves.php', $output);
         $output = <<<PHP
 <?php
 
 namespace Pogo\Data\Generated;
 
-use Pogo\General\Types;
+use Pogo\Pokemon\Types;
 
 class MovesData extends Moves
 {
@@ -112,7 +112,7 @@ $moves
     ];
 }
 PHP;
-        file_put_contents(__DIR__ . '/../Generated/MovesData.php', $output);
+        file_put_contents(All::PHP_PATH . 'MovesData.php', $output);
     }
 
     /**

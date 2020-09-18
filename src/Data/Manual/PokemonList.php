@@ -896,6 +896,7 @@ class PokemonList
     const ETERNATUS = 890;
     const KUBFU = 891;
     const URSHIFU = 892;
+    const ZARUDE = 893;
 
     /**
      * Get constant name from value (for code generation)

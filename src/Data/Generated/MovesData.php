@@ -2,7 +2,7 @@
 
 namespace Pogo\Data\Generated;
 
-use Pogo\General\Types;
+use Pogo\Pokemon\Types;
 
 class MovesData extends Moves
 {

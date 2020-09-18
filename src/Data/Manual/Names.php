@@ -3,6 +3,7 @@
 namespace Pogo\Data\Manual;
 
 use Pogo\Data\Generated\PokemonData;
+use Pogo\Pokemon\Mods;
 use Pogo\Pokemon;
 use ReflectionClass;
 
@@ -36,29 +37,7 @@ class Names
      */
     public static function getName(Pokemon $pokemon)
     {
-        if (isset(PokemonData::POKEMON[$pokemon->getCode()][PokemonData::FIELD_NAME])) {
-            return PokemonData::POKEMON[$pokemon->getCode()][PokemonData::FIELD_NAME];
-        }
-
-        self::init();
-        if (isset(self::$codes[$pokemon->getCode()])) {
-            return self::$codes[$pokemon->getCode()];
-        }
-        $name = '';
-        if ($pokemon->isShadow()) {
-            $name .= 'Shadow ';
-        }
-        if ($pokemon->isAlolan()) {
-            $name .= 'Alolan ';
-        }
-        if ($pokemon->isGalarian()) {
-            $name .= 'Galarian ';
-        }
-        $name .= static::getShortName($pokemon);
-        if ($form = $pokemon->getFormName()) {
-            $name .= " ($form)";
-        }
-        return self::$codes[$pokemon->getCode()] = $name;
+        return PokemonData::POKEMON[$pokemon->getCode()][PokemonData::FIELD_NAME];
     }
 
     /**
@@ -68,19 +47,7 @@ class Names
      */
     public static function getShortName(Pokemon $pokemon, $link = false)
     {
-        if (isset(PokemonData::POKEMON[$pokemon->getCode()][PokemonData::FIELD_NAME_SHORT])) {
-            return PokemonData::POKEMON[$pokemon->getCode()][PokemonData::FIELD_NAME_SHORT];
-        }
-
-        self::init();
-        $pokedexId = $pokemon->getPokedexId();
-        if (!$link && isset(self::CUSTOM[$pokedexId])) {
-            return self::CUSTOM[$pokedexId];
-        } elseif (static::$names[$pokedexId]) {
-            return static::$names[$pokedexId];
-        } else {
-            return "Unknown/$pokedexId";
-        }
+        return PokemonData::POKEMON[$pokemon->getCode()][PokemonData::FIELD_NAME_SHORT];
     }
 
     protected static function init()

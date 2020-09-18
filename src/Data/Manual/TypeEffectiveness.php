@@ -2,7 +2,7 @@
 
 namespace Pogo\Data\Manual;
 
-use Pogo\General\Types;
+use Pogo\Pokemon\Types;
 
 /** @deprecated */
 class TypeEffectiveness

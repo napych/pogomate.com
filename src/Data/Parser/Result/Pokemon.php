@@ -1,9 +1,12 @@
 <?php
 
-namespace Pogo\Data\Result;
+namespace Pogo\Data\Parser\Result;
 
+use Pogo\Data\Manual\Forms;
+use Pogo\Data\Manual\Names;
+use Pogo\Data\Manual\PokemonTypes;
 use Pogo\Data\Parser\Locale;
-use Pogo\General\Mods;
+use Pogo\Pokemon\Mods;
 use Pogo\Data\Manual\FormsAlias;
 use Pogo\Data\Manual\PokemonList;
 
@@ -47,12 +50,38 @@ class Pokemon
     const FIELD_EVOLUTION_NIGHT = 'night';
     const FIELD_EVOLUTION_BUDDY = 'buddy';
     const FIELD_EVOLUTION_PRIORITY = 'priority';
+    const FIELD_UNRELEASED = 'true';
 
     protected $pokemon = [];
+
+    public function __construct()
+    {
+        $reflection = new \ReflectionClass(PokemonList::class);
+        $pokemonList = $reflection->getConstants();
+        foreach ($pokemonList as $const => $value) {
+            if (isset(Forms::NAMES[$value])) {
+                $forms = Forms::NAMES[$value];
+            } else {
+                $forms = [$value => [0 => null]];
+            }
+            foreach ($forms as $form => $label) {
+                $this->pokemon[$value | $form] = [
+                    self::FIELD_CONST => $const,
+                    self::FIELD_NAME => $const,
+                    self::FIELD_UNRELEASED => true
+                ];
+                if ($formAlias = FormsAlias::getConst($const, $form)) {
+                    $this->pokemon[$value | $form][self::FIELD_FORM] = $formAlias;
+                }
+            }
+        }
+    }
 
     public function add(int $code, array $data)
     {
         $this->pokemon[$code] = $data;
+//        var_dump($data);
+//        die();
     }
 
     public function getList()
@@ -62,7 +91,6 @@ class Pokemon
 
     public function writePHP()
     {
-        $output = [];
         $forms = [];
         $legendaries = [];
         $mythics = [];
@@ -78,6 +106,7 @@ class Pokemon
             }
         }
 
+        $output = [];
         foreach ($this->pokemon as $code => $pokemon) {
             $id = Mods::getId($code);
 
@@ -92,54 +121,62 @@ class Pokemon
                 $forms[$idConst][] = $codeConst;
             }
 
-            // process simple fields
             $data = [
                 "self::FIELD_NAME => '" . addcslashes($this->getPokemonName($code), "'") . "'",
                 "self::FIELD_NAME_SHORT => '" . addcslashes($this->getPokemonName($code, true), "'") . "'",
-                'self::FIELD_ATTACK => ' . $pokemon[Pokemon::FIELD_ATTACK],
-                'self::FIELD_DEFENSE => ' . $pokemon[Pokemon::FIELD_DEFENSE],
-                'self::FIELD_STAMINA => ' . $pokemon[Pokemon::FIELD_STAMINA],
-                'self::FIELD_TYPE1 => Types::' . \Pogo\General\Types::getConst($pokemon[Pokemon::FIELD_TYPE1]),
             ];
-            if ($pokemon[Pokemon::FIELD_TYPE2]) {
-                $data[] = 'self::FIELD_TYPE2 => Types::' . \Pogo\General\Types::getConst($pokemon[Pokemon::FIELD_TYPE2]);
-            }
-            if ($pokemon[Pokemon::FIELD_PURIFY_CANDY]) {
-                $data[] = 'self::FIELD_PURIFY_CANDY => ' . $pokemon[Pokemon::FIELD_PURIFY_CANDY];
-            }
-            if ($pokemon[Pokemon::FIELD_PURIFY_DUST]) {
-                $data[] = 'self::FIELD_PURIFY_STARDUST => ' . $pokemon[Pokemon::FIELD_PURIFY_DUST];
-            }
-            if ($pokemon[Pokemon::FIELD_LEGENDARY]) {
-                $data[] = 'self::FIELD_LEGENDARY => true';
-                $legendaries[$shortConst] = 1;
-            }
-            if ($pokemon[Pokemon::FIELD_MYTHIC]) {
-                $data[] = 'self::FIELD_MYTHIC => true';
-                $mythics[$shortConst] = 1;
-            }
-            if ($pokemon[Pokemon::FIELD_TRANSFERABLE]) {
-                $data[] = 'self::FIELD_TRANSFERABLE => true';
-            }
-            if ($pokemon[Pokemon::FIELD_DEPLOYABLE]) {
-                $data[] = 'self::FIELD_DEPLOYABLE => true';
-            }
-            $data[] = 'self::FIELD_BUDDY_DISTANCE => ' . $pokemon[Pokemon::FIELD_BUDDY_DISTANCE];
-            if ($pokemon[Pokemon::FIELD_THIRD_MOVE_CANDY]) {
-                $data[] = 'self::FIELD_THIRD_MOVE_CANDY => ' . $pokemon[Pokemon::FIELD_THIRD_MOVE_CANDY];
-            }
-            if ($pokemon[Pokemon::FIELD_THIRD_MOVE_DUST]) {
-                $data[] = 'self::FIELD_THIRD_MOVE_STARDUST => ' . $pokemon[Pokemon::FIELD_THIRD_MOVE_DUST];
+
+            if (empty($pokemon[self::FIELD_UNRELEASED])) {
+                $data[] = 'self::FIELD_ATTACK => ' . $pokemon[Pokemon::FIELD_ATTACK];
+                $data[] = 'self::FIELD_DEFENSE => ' . $pokemon[Pokemon::FIELD_DEFENSE];
+                $data[] = 'self::FIELD_STAMINA => ' . $pokemon[Pokemon::FIELD_STAMINA];
+                $data[] = 'self::FIELD_TYPE1 => Types::' . \Pogo\Data\Manual\Types::getConst($pokemon[Pokemon::FIELD_TYPE1]);
+                if (!empty($pokemon[Pokemon::FIELD_TYPE2])) {
+                    $data[] = 'self::FIELD_TYPE2 => Types::' . \Pogo\Data\Manual\Types::getConst($pokemon[Pokemon::FIELD_TYPE2]);
+                }
+                if ($pokemon[Pokemon::FIELD_PURIFY_CANDY]) {
+                    $data[] = 'self::FIELD_PURIFY_CANDY => ' . $pokemon[Pokemon::FIELD_PURIFY_CANDY];
+                }
+                if ($pokemon[Pokemon::FIELD_PURIFY_DUST]) {
+                    $data[] = 'self::FIELD_PURIFY_STARDUST => ' . $pokemon[Pokemon::FIELD_PURIFY_DUST];
+                }
+                if ($pokemon[Pokemon::FIELD_LEGENDARY]) {
+                    $data[] = 'self::FIELD_LEGENDARY => true';
+                    $legendaries[$shortConst] = 1;
+                }
+                if ($pokemon[Pokemon::FIELD_MYTHIC]) {
+                    $data[] = 'self::FIELD_MYTHIC => true';
+                    $mythics[$shortConst] = 1;
+                }
+                if ($pokemon[Pokemon::FIELD_TRANSFERABLE]) {
+                    $data[] = 'self::FIELD_TRANSFERABLE => true';
+                }
+                if ($pokemon[Pokemon::FIELD_DEPLOYABLE]) {
+                    $data[] = 'self::FIELD_DEPLOYABLE => true';
+                }
+                $data[] = 'self::FIELD_BUDDY_DISTANCE => ' . $pokemon[Pokemon::FIELD_BUDDY_DISTANCE];
+                if ($pokemon[Pokemon::FIELD_THIRD_MOVE_CANDY]) {
+                    $data[] = 'self::FIELD_THIRD_MOVE_CANDY => ' . $pokemon[Pokemon::FIELD_THIRD_MOVE_CANDY];
+                }
+                if ($pokemon[Pokemon::FIELD_THIRD_MOVE_DUST]) {
+                    $data[] = 'self::FIELD_THIRD_MOVE_STARDUST => ' . $pokemon[Pokemon::FIELD_THIRD_MOVE_DUST];
+                }
+            } else {
+                $data[] = 'self::FIELD_UNRELEASED => true';
+                if (!isset(PokemonTypes::POKEMON[$code])) {
+                    echo 'WARNING: missing PokemonType for unreleased pokemon ', $this->getPokemonName($code), PHP_EOL;
+                } else {
+                    $data[] = 'self::FIELD_TYPE1 => Types::' . \Pogo\Data\Manual\Types::getConst(PokemonTypes::POKEMON[$code][PokemonTypes::FIELD_TYPE1]);
+                    if (!empty(PokemonTypes::POKEMON[$code][PokemonTypes::FIELD_TYPE2])) {
+                        $data[] = 'self::FIELD_TYPE2 => Types::' . \Pogo\Data\Manual\Types::getConst(PokemonTypes::POKEMON[$code][PokemonTypes::FIELD_TYPE2]);
+                    }
+                }
             }
 
             // process evolutions
             if (!empty($pokemon[Pokemon::FIELD_EVOLUTIONS])) {
                 $evolvesTo = [];
                 foreach ($pokemon[Pokemon::FIELD_EVOLUTIONS] as $evolutionData) {
-//                    if ($id === 446) {
-//                        var_dump($evolutionData);
-//                        die();
-//                    }
                     if (empty($evolutionData[Pokemon::FIELD_EVOLUTION_FORM])) {
                         $evolutionData[Pokemon::FIELD_EVOLUTION_FORM] = $evolutionData[Pokemon::FIELD_EVOLUTION_POKEMON];
                     }
@@ -236,7 +273,7 @@ class Pokemon
 
 namespace Pogo\Data\Generated;
 
-use Pogo\Pokemon, Pogo\General\Mods, Pogo\Data\Manual\FormsAlias, Pogo\General\Types;
+use Pogo\Pokemon, Pogo\Pokemon\Mods, Pogo\Data\Manual\FormsAlias, Pogo\Pokemon\Types;
 
 class PokemonData
 {
@@ -261,13 +298,14 @@ class PokemonData
     const FIELD_FAST_MOVES_ELITE = 'fastMovesElite';
     const FIELD_CHARGE_MOVES = 'chargeMoves';
     const FIELD_CHARGE_MOVES_ELITE = 'chargeMovesElite';
+    const FIELD_UNRELEASED = 'unreleased';
     
     const POKEMON = [
 $output    
     ];
 } 
 PHP;
-        file_put_contents(__DIR__ . '/../Generated/PokemonData.php', $output);
+        file_put_contents(All::PHP_PATH . 'PokemonData.php', $output);
 
         // PokemonForms.php
         $output = '';
@@ -283,7 +321,7 @@ PHP;
 
 namespace Pogo\Data\Generated;
 
-use Pogo\Pokemon, Pogo\General\Mods, Pogo\Data\Manual\FormsAlias;
+use Pogo\Pokemon, Pogo\Pokemon\Mods, Pogo\Data\Manual\FormsAlias;
 
 class PokemonForms
 {
@@ -292,7 +330,7 @@ $output
     ];
 }
 PHP;
-        file_put_contents(__DIR__ . '/../Generated/PokemonForms.php', $output);
+        file_put_contents(All::PHP_PATH . 'PokemonForms.php', $output);
 
         // Legendaries.php
         $output = '        Pokemon::' . implode(",\n        Pokemon::", array_keys($legendaries));
@@ -310,7 +348,7 @@ $output
     ];
 }
 PHP;
-        file_put_contents(__DIR__ . '/../Generated/Legendaries.php', $output);
+        file_put_contents(All::PHP_PATH . 'Legendaries.php', $output);
 
         // Mythics.php
         $output = '        Pokemon::' . implode(",\n        Pokemon::", array_keys($mythics));
@@ -328,7 +366,7 @@ $output
     ];
 }
 PHP;
-        file_put_contents(__DIR__ . '/../Generated/Mythics.php', $output);
+        file_put_contents(All::PHP_PATH . 'Mythics.php', $output);
 
         // Evolutions.php
         $output = [];
@@ -344,7 +382,7 @@ PHP;
 
 namespace Pogo\Data\Generated;
 
-use Pogo\Pokemon, Pogo\General\Mods, Pogo\Data\Manual\FormsAlias;
+use Pogo\Pokemon, Pogo\Pokemon\Mods, Pogo\Data\Manual\FormsAlias;
 
 class Evolutions
 {
@@ -366,7 +404,7 @@ $output
     ];
 }
 PHP;
-        file_put_contents(__DIR__ . '/../Generated/Evolutions.php', $output);
+        file_put_contents(All::PHP_PATH . 'Evolutions.php', $output);
 
         // MoveUsers.php
         $output = [];
@@ -379,7 +417,7 @@ PHP;
 
 namespace Pogo\Data\Generated;
 
-use Pogo\Pokemon, Pogo\General\Mods, Pogo\Data\Manual\FormsAlias;
+use Pogo\Pokemon, Pogo\Pokemon\Mods, Pogo\Data\Manual\FormsAlias;
 
 class MoveUsers
 {
@@ -388,7 +426,7 @@ $output
     ];
 }
 PHP;
-        file_put_contents(__DIR__ . '/../Generated/MoveUsers.php', $output);
+        file_put_contents(All::PHP_PATH . 'MoveUsers.php', $output);
     }
 
     protected function getCodeConst($code)
@@ -439,10 +477,58 @@ PHP;
      */
     public function getPokemonName(int $code, bool $short = false): string
     {
-        $name = Locale::getPokemon($code);
-        if (!$short) {
-            $name = Mods::getFullName($name, $code);
+        if ($short) {
+            $id = Mods::getId($code);
+
+            // get from locale
+            if ($shortName = Locale::getPokemon($id)) {
+                return $shortName;
+            }
+
+            // get from custom names
+            if (!empty(Names::CUSTOM[$id])) {
+                return Names::CUSTOM[$id];
+            }
+
+            // get from PokemonList
+            static $autoNames = null;
+            if ($autoNames === null) {
+                $autoNames = [];
+                $reflection = new \ReflectionClass(\Pogo\Data\Manual\PokemonList::class);
+                $constants = $reflection->getConstants();
+                foreach ($constants as $name => $value) {
+                    $autoNames[$value] = ucfirst(strtolower($name));
+                }
+            }
+            if (!empty($autoNames[$id])) {
+                return $autoNames[$id];
+            }
+
+            // not found
+            return "Unknown/$id";
         }
+        $name = '';
+        if (!$short) {
+            if (Mods::isShadow($code)) {
+                $name .= 'Shadow ';
+            }
+            if (Mods::isAlolan($code)) {
+                $name .= 'Alolan ';
+            }
+            if (Mods::isGalarian($code)) {
+                $name .= 'Galarian ';
+            }
+            if (Mods::isPurified($code)) {
+                $name .= 'Purified ';
+            }
+        }
+
+        $name .= $this->getPokemonName($code, true);
+
+        if ($form = \Pogo\Pokemon\Form::getFormName($code)) {
+            $name .= " ($form)";
+        }
+
         return $name;
     }
 }

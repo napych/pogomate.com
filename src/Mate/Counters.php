@@ -2,7 +2,7 @@
 
 namespace Pogo\Mate;
 
-use Pogo\General\Types;
+use Pogo\Pokemon\Types;
 use Pogo\Data\Generated\TypeEffectiveness;
 
 class Counters

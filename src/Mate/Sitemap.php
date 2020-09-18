@@ -2,7 +2,7 @@
 
 namespace Pogo\Mate;
 
-use Pogo\General\Types;
+use Pogo\Pokemon\Types;
 use Pogo\Pokemon;
 
 class Sitemap
