@@ -50,7 +50,7 @@ class Pokemon
     const FIELD_EVOLUTION_NIGHT = 'night';
     const FIELD_EVOLUTION_BUDDY = 'buddy';
     const FIELD_EVOLUTION_PRIORITY = 'priority';
-    const FIELD_UNRELEASED = 'true';
+    const FIELD_UNRELEASED = 'unreleased';
 
     protected $pokemon = [];
 
@@ -59,29 +59,70 @@ class Pokemon
         $reflection = new \ReflectionClass(PokemonList::class);
         $pokemonList = $reflection->getConstants();
         foreach ($pokemonList as $const => $value) {
-            if (isset(Forms::NAMES[$value])) {
-                $forms = Forms::NAMES[$value];
-            } else {
-                $forms = [$value => [0 => null]];
+            $this->initPokemon($value);
+        }
+        foreach (\Pogo\Data\Manual\Evolve::EVOLVE_FROM as $to => $from) {
+            $this->initPokemon($to);
+            $this->initPokemon($from);
+        }
+        foreach (PokemonTypes::POKEMON as $form => $types) {
+            $this->initPokemon($form);
+        }
+        foreach (\Pogo\Data\Manual\Evolve::EVOLVE_FROM as $to => $from) {
+            if (!$from) {
+                continue;
             }
-            foreach ($forms as $form => $label) {
-                $this->pokemon[$value | $form] = [
-                    self::FIELD_CONST => $const,
-                    self::FIELD_NAME => $const,
-                    self::FIELD_UNRELEASED => true
-                ];
-                if ($formAlias = FormsAlias::getConst($const, $form)) {
-                    $this->pokemon[$value | $form][self::FIELD_FORM] = $formAlias;
-                }
+            if (!isset($this->pokemon[$from][self::FIELD_EVOLUTIONS])) {
+                $this->pokemon[$from][self::FIELD_EVOLUTIONS] = [];
             }
+            $evo = [self::FIELD_EVOLUTION_POKEMON => $this->pokemon[$to][self::FIELD_NAME]];
+            if (isset($this->pokemon[$to][self::FIELD_FORM])) {
+                $evo[self::FIELD_EVOLUTION_FORM] = $this->pokemon[$to][self::FIELD_FORM];
+            }
+            $this->pokemon[$from][self::FIELD_EVOLUTIONS][] = $evo;
+        }
+//        var_dump($this->pokemon[651]);
+//        die();
+    }
+
+    protected function initPokemon($code)
+    {
+        if (!$code) {
+            return;
+        }
+        $id = Mods::getId($code);
+        if ($id != $code) {
+            $this->initPokemon($id);
+        }
+        $species[$code] = 1;
+        if (isset(Forms::NAMES[$code])) {
+            foreach (Forms::NAMES[$code] as $spCode => $label) {
+                $species[$code | $spCode] = 1;
+            }
+        }
+        foreach ($species as $spCode => $label) {
+            if (isset($this->pokemon[$spCode])) {
+                continue;
+            }
+            $const = Mods::getConst($spCode, true);
+            $formConst = Mods::getConst($spCode, true);
+            $this->pokemon[$spCode] = [
+                self::FIELD_CONST => $formConst,
+                self::FIELD_NAME => $const,
+                self::FIELD_FORM => $formConst,
+                self::FIELD_UNRELEASED => true
+            ];
+//            $form = Mods::getForm($const);
+//            if ($formAlias = FormsAlias::getConst($const, $spCode)) {
+//                $this->pokemon[$spCode][self::FIELD_CONST] = $formAlias;
+//                $this->pokemon[$spCode][self::FIELD_FORM] = $formAlias;
+//            }
         }
     }
 
     public function add(int $code, array $data)
     {
         $this->pokemon[$code] = $data;
-//        var_dump($data);
-//        die();
     }
 
     public function getList()
@@ -98,6 +139,8 @@ class Pokemon
         $moveUsers = [];
 
         $str2code = [];
+//        var_dump($this->pokemon);
+//        die();
         foreach ($this->pokemon as $code => $pokemon) {
             if (!empty($pokemon[Pokemon::FIELD_FORM])) {
                 $str2code[$pokemon[Pokemon::FIELD_FORM]] = $code;
@@ -105,6 +148,8 @@ class Pokemon
                 $str2code[$pokemon[Pokemon::FIELD_NAME]] = $code;
             }
         }
+//        var_dump($str2code);
+//        die();
 
         $output = [];
         foreach ($this->pokemon as $code => $pokemon) {
@@ -130,7 +175,9 @@ class Pokemon
                 $data[] = 'self::FIELD_ATTACK => ' . $pokemon[Pokemon::FIELD_ATTACK];
                 $data[] = 'self::FIELD_DEFENSE => ' . $pokemon[Pokemon::FIELD_DEFENSE];
                 $data[] = 'self::FIELD_STAMINA => ' . $pokemon[Pokemon::FIELD_STAMINA];
-                $data[] = 'self::FIELD_TYPE1 => Types::' . \Pogo\Data\Manual\Types::getConst($pokemon[Pokemon::FIELD_TYPE1]);
+                if (!empty($pokemon[Pokemon::FIELD_TYPE1])) {
+                    $data[] = 'self::FIELD_TYPE1 => Types::' . \Pogo\Data\Manual\Types::getConst($pokemon[Pokemon::FIELD_TYPE1]);
+                }
                 if (!empty($pokemon[Pokemon::FIELD_TYPE2])) {
                     $data[] = 'self::FIELD_TYPE2 => Types::' . \Pogo\Data\Manual\Types::getConst($pokemon[Pokemon::FIELD_TYPE2]);
                 }
@@ -438,7 +485,8 @@ PHP;
         if ($formConst) {
             $codeConst .= ' | FormsAlias::' . $formConst;
         } elseif ($formBits) {
-            $codeConst .= ' | Mods::FORM' . Mods::getForm($code);
+            echo 'WARNING: missing form ', Mods::getFormNum($code), ' description for ', $shortConst, PHP_EOL;
+            $codeConst .= ' | Mods::FORM' . Mods::getFormNum($code);
         }
         !($code & Mods::SHADOW) ?: $codeConst .= ' | Mods::SHADOW';
         !($code & Mods::ALOLAN) ?: $codeConst .= ' | Mods::ALOLAN';
@@ -523,10 +571,15 @@ PHP;
             }
         }
 
-        $name .= $this->getPokemonName($code, true);
-
+        $pokemonName = $this->getPokemonName($code, true);
         if ($form = \Pogo\Pokemon\Form::getFormName($code)) {
-            $name .= " ($form)";
+            if (strpos($form, $pokemonName) !== false) {
+                $name .= $form;
+            } else {
+                $name .=  "$pokemonName ($form)";
+            }
+        } else {
+            $name .= $pokemonName;
         }
 
         return $name;

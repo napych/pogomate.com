@@ -217,13 +217,11 @@ class Evolutions
             self::FIELD_CANDY => 100,
             self::FIELD_TRADED => true
         ],
-        Pokemon::RAPIDASH => [
-            self::FIELD_PARENT => Pokemon::PONYTA,
-            self::FIELD_CANDY => 50
+        Pokemon::RAPIDASH | Mods::GALARIAN => [
+            self::FIELD_PARENT => Pokemon::PONYTA | Mods::GALARIAN
         ],
-        Pokemon::SLOWBRO => [
-            self::FIELD_PARENT => Pokemon::SLOWPOKE,
-            self::FIELD_CANDY => 50
+        Pokemon::SLOWBRO | Mods::GALARIAN => [
+            self::FIELD_PARENT => Pokemon::SLOWPOKE | Mods::GALARIAN
         ],
         Pokemon::SLOWKING => [
             self::FIELD_PARENT => Pokemon::SLOWPOKE,
@@ -1021,7 +1019,7 @@ class Evolutions
             self::FIELD_CANDY => 50,
             self::FIELD_WALKED => 15
         ],
-        Pokemon::MR_MIME => [
+        Pokemon::MR_MIME | Mods::GALARIAN => [
             self::FIELD_PARENT => Pokemon::MIME_JR,
             self::FIELD_CANDY => 50,
             self::FIELD_WALKED => 15
@@ -1397,9 +1395,364 @@ class Evolutions
             self::FIELD_PARENT => Pokemon::LARVESTA,
             self::FIELD_CANDY => 400
         ],
+        Pokemon::QUILLADIN => [
+            self::FIELD_PARENT => Pokemon::CHESPIN
+        ],
+        Pokemon::CHESNAUGHT => [
+            self::FIELD_PARENT => Pokemon::QUILLADIN
+        ],
+        Pokemon::BRAIXEN => [
+            self::FIELD_PARENT => Pokemon::FENNEKIN
+        ],
+        Pokemon::DELPHOX => [
+            self::FIELD_PARENT => Pokemon::BRAIXEN
+        ],
+        Pokemon::FROGADIER => [
+            self::FIELD_PARENT => Pokemon::FROAKIE
+        ],
+        Pokemon::GRENINJA => [
+            self::FIELD_PARENT => Pokemon::FROGADIER
+        ],
+        Pokemon::DIGGERSBY => [
+            self::FIELD_PARENT => Pokemon::BUNNELBY
+        ],
+        Pokemon::FLETCHINDER => [
+            self::FIELD_PARENT => Pokemon::FLETCHLING
+        ],
+        Pokemon::TALONFLAME => [
+            self::FIELD_PARENT => Pokemon::FLETCHINDER
+        ],
+        Pokemon::SPEWPA => [
+            self::FIELD_PARENT => Pokemon::SCATTERBUG
+        ],
+        Pokemon::VIVILLON => [
+            self::FIELD_PARENT => Pokemon::SPEWPA
+        ],
+        Pokemon::PYROAR => [
+            self::FIELD_PARENT => Pokemon::LITLEO
+        ],
+        Pokemon::FLOETTE => [
+            self::FIELD_PARENT => Pokemon::FLABEBE
+        ],
+        Pokemon::FLORGES => [
+            self::FIELD_PARENT => Pokemon::FLOETTE
+        ],
+        Pokemon::GOGOAT => [
+            self::FIELD_PARENT => Pokemon::SKIDDO
+        ],
+        Pokemon::PANGORO => [
+            self::FIELD_PARENT => Pokemon::PANCHAM
+        ],
+        Pokemon::MEOWSTIC => [
+            self::FIELD_PARENT => Pokemon::ESPURR
+        ],
+        Pokemon::DOUBLADE => [
+            self::FIELD_PARENT => Pokemon::HONEDGE
+        ],
+        Pokemon::AEGISLASH | FormsAlias::AEGISLASH_BLADE => [
+            self::FIELD_PARENT => Pokemon::DOUBLADE
+        ],
+        Pokemon::AROMATISSE => [
+            self::FIELD_PARENT => Pokemon::SPIRITZEE
+        ],
+        Pokemon::SLURPUFF => [
+            self::FIELD_PARENT => Pokemon::SWIRLIX
+        ],
+        Pokemon::MALAMAR => [
+            self::FIELD_PARENT => Pokemon::INKAY
+        ],
+        Pokemon::BARBARACLE => [
+            self::FIELD_PARENT => Pokemon::BINACLE
+        ],
+        Pokemon::DRAGALGE => [
+            self::FIELD_PARENT => Pokemon::SKRELP
+        ],
+        Pokemon::CLAWITZER => [
+            self::FIELD_PARENT => Pokemon::CLAUNCHER
+        ],
+        Pokemon::HELIOLISK => [
+            self::FIELD_PARENT => Pokemon::HELIOPTILE
+        ],
+        Pokemon::TYRANTRUM => [
+            self::FIELD_PARENT => Pokemon::TYRUNT
+        ],
+        Pokemon::AURORUS => [
+            self::FIELD_PARENT => Pokemon::AMAURA
+        ],
+        Pokemon::SLIGGOO => [
+            self::FIELD_PARENT => Pokemon::GOOMY
+        ],
+        Pokemon::GOODRA => [
+            self::FIELD_PARENT => Pokemon::SLIGGOO
+        ],
+        Pokemon::TREVEANT => [
+            self::FIELD_PARENT => Pokemon::PHANTUMP
+        ],
+        Pokemon::GOURGEIST => [
+            self::FIELD_PARENT => Pokemon::PUMPKABOO
+        ],
+        Pokemon::AVALUGG => [
+            self::FIELD_PARENT => Pokemon::BERGMITE
+        ],
+        Pokemon::NOIVERN => [
+            self::FIELD_PARENT => Pokemon::NOIBAT
+        ],
+        Pokemon::DARTRIX => [
+            self::FIELD_PARENT => Pokemon::ROWLET
+        ],
+        Pokemon::DECIDUEYE => [
+            self::FIELD_PARENT => Pokemon::DARTRIX
+        ],
+        Pokemon::TORRACAT => [
+            self::FIELD_PARENT => Pokemon::LITTEN
+        ],
+        Pokemon::INCINEROAR => [
+            self::FIELD_PARENT => Pokemon::TORRACAT
+        ],
+        Pokemon::BRIONNE => [
+            self::FIELD_PARENT => Pokemon::POPPLIO
+        ],
+        Pokemon::PRIMARINA => [
+            self::FIELD_PARENT => Pokemon::BRIONNE
+        ],
+        Pokemon::TRUMBEAK => [
+            self::FIELD_PARENT => Pokemon::PIKIPEK
+        ],
+        Pokemon::TOUCANNON => [
+            self::FIELD_PARENT => Pokemon::TRUMBEAK
+        ],
+        Pokemon::GUMSHOOS => [
+            self::FIELD_PARENT => Pokemon::YUNGOOS
+        ],
+        Pokemon::CHARJABUG => [
+            self::FIELD_PARENT => Pokemon::GRUBBIN
+        ],
+        Pokemon::VIKAVOLT => [
+            self::FIELD_PARENT => Pokemon::CHARJABUG
+        ],
+        Pokemon::CRABOMINABLE => [
+            self::FIELD_PARENT => Pokemon::CRABAWLER
+        ],
+        Pokemon::RIBOMBEE => [
+            self::FIELD_PARENT => Pokemon::CUTIEFLY
+        ],
+        Pokemon::LYCANROC | FormsAlias::LYCANROC_DUSK => [
+            self::FIELD_PARENT => Pokemon::ROCKRUFF
+        ],
+        Pokemon::TOXAPEX => [
+            self::FIELD_PARENT => Pokemon::MAREANIE
+        ],
+        Pokemon::MUDSDALE => [
+            self::FIELD_PARENT => Pokemon::MUDBRAY
+        ],
+        Pokemon::ARAQUANID => [
+            self::FIELD_PARENT => Pokemon::DEWPIDER
+        ],
+        Pokemon::LURANTIS => [
+            self::FIELD_PARENT => Pokemon::FOMANTIS
+        ],
+        Pokemon::SHIINOTIC => [
+            self::FIELD_PARENT => Pokemon::MORELULL
+        ],
+        Pokemon::SALAZZLE => [
+            self::FIELD_PARENT => Pokemon::SALANDIT
+        ],
+        Pokemon::BEWEAR => [
+            self::FIELD_PARENT => Pokemon::STUFFUL
+        ],
+        Pokemon::STEENEE => [
+            self::FIELD_PARENT => Pokemon::BOUNSWEET
+        ],
+        Pokemon::TSAREENA => [
+            self::FIELD_PARENT => Pokemon::STEENEE
+        ],
+        Pokemon::GOLISOPOD => [
+            self::FIELD_PARENT => Pokemon::WIMPOD
+        ],
+        Pokemon::PALOSSAND => [
+            self::FIELD_PARENT => Pokemon::SANDYGAST
+        ],
+        Pokemon::SILVALLY => [
+            self::FIELD_PARENT => Pokemon::TYPE_NULL
+        ],
+        Pokemon::HAKAMO_O => [
+            self::FIELD_PARENT => Pokemon::JANGMO_O
+        ],
+        Pokemon::KOMMO_O => [
+            self::FIELD_PARENT => Pokemon::HAKAMO_O
+        ],
+        Pokemon::COSMOEM => [
+            self::FIELD_PARENT => Pokemon::COSMOG
+        ],
+        Pokemon::SOLGALEO => [
+            self::FIELD_PARENT => Pokemon::COSMOEM
+        ],
+        Pokemon::LUNALA => [
+            self::FIELD_PARENT => Pokemon::COSMOEM
+        ],
+        Pokemon::NAGANADEL => [
+            self::FIELD_PARENT => Pokemon::POIPOLE
+        ],
         Pokemon::MELMETAL => [
             self::FIELD_PARENT => Pokemon::MELTAN,
             self::FIELD_CANDY => 400
+        ],
+        Pokemon::THWACKEY => [
+            self::FIELD_PARENT => Pokemon::GROOKEY
+        ],
+        Pokemon::RILLABOOM => [
+            self::FIELD_PARENT => Pokemon::THWACKEY
+        ],
+        Pokemon::RABOOT => [
+            self::FIELD_PARENT => Pokemon::SCORBUNNY
+        ],
+        Pokemon::CINDERACE => [
+            self::FIELD_PARENT => Pokemon::RABOOT
+        ],
+        Pokemon::DRIZZILE => [
+            self::FIELD_PARENT => Pokemon::SOBBLE
+        ],
+        Pokemon::INTELEON => [
+            self::FIELD_PARENT => Pokemon::DRIZZILE
+        ],
+        Pokemon::GREEDENT => [
+            self::FIELD_PARENT => Pokemon::SKWOVET
+        ],
+        Pokemon::CORVISQUIRE => [
+            self::FIELD_PARENT => Pokemon::ROOKIDEE
+        ],
+        Pokemon::CORVIKNIGHT => [
+            self::FIELD_PARENT => Pokemon::CORVISQUIRE
+        ],
+        Pokemon::DOTTLER => [
+            self::FIELD_PARENT => Pokemon::BLIPBUG
+        ],
+        Pokemon::ORBEETLE => [
+            self::FIELD_PARENT => Pokemon::DOTTLER
+        ],
+        Pokemon::THIEVUL => [
+            self::FIELD_PARENT => Pokemon::NICKIT
+        ],
+        Pokemon::ELDEGOSS => [
+            self::FIELD_PARENT => Pokemon::GOSSIFLEUR
+        ],
+        Pokemon::DUBWOOL => [
+            self::FIELD_PARENT => Pokemon::WOOLOO
+        ],
+        Pokemon::DREDNAW => [
+            self::FIELD_PARENT => Pokemon::CHEWTLE
+        ],
+        Pokemon::BOLTUND => [
+            self::FIELD_PARENT => Pokemon::YAMPER
+        ],
+        Pokemon::CARKOL => [
+            self::FIELD_PARENT => Pokemon::ROLYCOLY
+        ],
+        Pokemon::COALOSSAL => [
+            self::FIELD_PARENT => Pokemon::CARKOL
+        ],
+        Pokemon::FLAPPLE => [
+            self::FIELD_PARENT => Pokemon::APPLIN
+        ],
+        Pokemon::APPLETUN => [
+            self::FIELD_PARENT => Pokemon::APPLIN
+        ],
+        Pokemon::SANDACONDA => [
+            self::FIELD_PARENT => Pokemon::SILICOBRA
+        ],
+        Pokemon::BARRASKEWDA => [
+            self::FIELD_PARENT => Pokemon::ARROKUDA
+        ],
+        Pokemon::TOXTRICITY | FormsAlias::TOXTRICITY_AMPED => [
+            self::FIELD_PARENT => Pokemon::TOXEL
+        ],
+        Pokemon::CENTISKORCH => [
+            self::FIELD_PARENT => Pokemon::SIZZLIPEDE
+        ],
+        Pokemon::GRAPPLOCT => [
+            self::FIELD_PARENT => Pokemon::CLOBBOPUS
+        ],
+        Pokemon::POLTEAGEIST => [
+            self::FIELD_PARENT => Pokemon::SINISTEA
+        ],
+        Pokemon::HATTREM => [
+            self::FIELD_PARENT => Pokemon::HATENNA
+        ],
+        Pokemon::HATTERENE => [
+            self::FIELD_PARENT => Pokemon::HATTREM
+        ],
+        Pokemon::MORGREM => [
+            self::FIELD_PARENT => Pokemon::IMPIDIMP
+        ],
+        Pokemon::GRIMMSNARL => [
+            self::FIELD_PARENT => Pokemon::MORGREM
+        ],
+        Pokemon::ALCREMIE | FormsAlias::ALCREMIE_VANILLA => [
+            self::FIELD_PARENT => Pokemon::MILCERY
+        ],
+        Pokemon::FROSMOTH => [
+            self::FIELD_PARENT => Pokemon::SNOM
+        ],
+        Pokemon::COPPERAJAH => [
+            self::FIELD_PARENT => Pokemon::CUFANT
+        ],
+        Pokemon::DRAKLOAK => [
+            self::FIELD_PARENT => Pokemon::DREEPY
+        ],
+        Pokemon::DRAGAPULT => [
+            self::FIELD_PARENT => Pokemon::DRAKLOAK
+        ],
+        Pokemon::URSHIFU | FormsAlias::URSHIFU_RAPID => [
+            self::FIELD_PARENT => Pokemon::KUBFU
+        ],
+        Pokemon::RATICATE | Mods::ALOLAN => [
+            self::FIELD_PARENT => Pokemon::RATATTA | Mods::ALOLAN,
+            self::FIELD_CANDY => 25
+        ],
+        Pokemon::SANDSLASH | Mods::ALOLAN => [
+            self::FIELD_PARENT => Pokemon::SANDSHREW | Mods::ALOLAN,
+            self::FIELD_CANDY => 50
+        ],
+        Pokemon::NINETALES | Mods::ALOLAN => [
+            self::FIELD_PARENT => Pokemon::VULPIX | Mods::ALOLAN,
+            self::FIELD_CANDY => 50
+        ],
+        Pokemon::DUGTRIO | Mods::ALOLAN => [
+            self::FIELD_PARENT => Pokemon::DIGLETT | Mods::ALOLAN,
+            self::FIELD_CANDY => 50
+        ],
+        Pokemon::PERSIAN | Mods::ALOLAN => [
+            self::FIELD_PARENT => Pokemon::MEOWTH | Mods::ALOLAN,
+            self::FIELD_CANDY => 50
+        ],
+        Pokemon::PERRSERKER => [
+            self::FIELD_PARENT => Pokemon::MEOWTH | Mods::GALARIAN,
+            self::FIELD_CANDY => 50
+        ],
+        Pokemon::GRAVELER | Mods::ALOLAN => [
+            self::FIELD_PARENT => Pokemon::GEODUDE | Mods::ALOLAN,
+            self::FIELD_CANDY => 25
+        ],
+        Pokemon::GOLEM | Mods::ALOLAN => [
+            self::FIELD_PARENT => Pokemon::GRAVELER | Mods::ALOLAN,
+            self::FIELD_CANDY => 100,
+            self::FIELD_TRADED => true
+        ],
+        Pokemon::MUK | Mods::ALOLAN => [
+            self::FIELD_PARENT => Pokemon::GRIMER | Mods::ALOLAN,
+            self::FIELD_CANDY => 50
+        ],
+        Pokemon::LINOONE | Mods::GALARIAN => [
+            self::FIELD_PARENT => Pokemon::ZIGZAGOON | Mods::GALARIAN,
+            self::FIELD_CANDY => 25
+        ],
+        Pokemon::OBSTAGOON => [
+            self::FIELD_PARENT => Pokemon::LINOONE | Mods::GALARIAN,
+            self::FIELD_CANDY => 100
+        ],
+        Pokemon::DARMANITAN | FormsAlias::DARMANITAN_STANDARD | Mods::GALARIAN => [
+            self::FIELD_PARENT => Pokemon::DARUMAKA | Mods::GALARIAN,
+            self::FIELD_CANDY => 50
         ],
         Pokemon::IVYSAUR | Mods::PURIFIED => [
             self::FIELD_PARENT => Pokemon::BULBASAUR | Mods::PURIFIED,
@@ -1465,10 +1818,6 @@ class Evolutions
             self::FIELD_PARENT => Pokemon::KAKUNA | Mods::SHADOW,
             self::FIELD_CANDY => 50
         ],
-        Pokemon::RATICATE | Mods::ALOLAN => [
-            self::FIELD_PARENT => Pokemon::RATATTA | Mods::ALOLAN,
-            self::FIELD_CANDY => 25
-        ],
         Pokemon::RATICATE | Mods::PURIFIED => [
             self::FIELD_PARENT => Pokemon::RATATTA | Mods::PURIFIED,
             self::FIELD_CANDY => 22
@@ -1483,10 +1832,6 @@ class Evolutions
         ],
         Pokemon::ARBOK | Mods::SHADOW => [
             self::FIELD_PARENT => Pokemon::EKANS | Mods::SHADOW,
-            self::FIELD_CANDY => 50
-        ],
-        Pokemon::SANDSLASH | Mods::ALOLAN => [
-            self::FIELD_PARENT => Pokemon::SANDSHREW | Mods::ALOLAN,
             self::FIELD_CANDY => 50
         ],
         Pokemon::SANDSLASH | Mods::PURIFIED => [
@@ -1528,10 +1873,6 @@ class Evolutions
         Pokemon::NIDOKING | Mods::SHADOW => [
             self::FIELD_PARENT => Pokemon::NIDORINO | Mods::SHADOW,
             self::FIELD_CANDY => 100
-        ],
-        Pokemon::NINETALES | Mods::ALOLAN => [
-            self::FIELD_PARENT => Pokemon::VULPIX | Mods::ALOLAN,
-            self::FIELD_CANDY => 50
         ],
         Pokemon::NINETALES | Mods::PURIFIED => [
             self::FIELD_PARENT => Pokemon::VULPIX | Mods::PURIFIED,
@@ -1591,24 +1932,12 @@ class Evolutions
             self::FIELD_PARENT => Pokemon::VENONAT | Mods::SHADOW,
             self::FIELD_CANDY => 50
         ],
-        Pokemon::DUGTRIO | Mods::ALOLAN => [
-            self::FIELD_PARENT => Pokemon::DIGLETT | Mods::ALOLAN,
-            self::FIELD_CANDY => 50
-        ],
         Pokemon::DUGTRIO | Mods::PURIFIED => [
             self::FIELD_PARENT => Pokemon::DIGLETT | Mods::PURIFIED,
             self::FIELD_CANDY => 45
         ],
         Pokemon::DUGTRIO | Mods::SHADOW => [
             self::FIELD_PARENT => Pokemon::DIGLETT | Mods::SHADOW,
-            self::FIELD_CANDY => 50
-        ],
-        Pokemon::PERSIAN | Mods::ALOLAN => [
-            self::FIELD_PARENT => Pokemon::MEOWTH | Mods::ALOLAN,
-            self::FIELD_CANDY => 50
-        ],
-        Pokemon::PERRSERKER => [
-            self::FIELD_PARENT => Pokemon::MEOWTH | Mods::GALARIAN,
             self::FIELD_CANDY => 50
         ],
         Pokemon::PERSIAN | Mods::PURIFIED => [
@@ -1712,10 +2041,6 @@ class Evolutions
             self::FIELD_PARENT => Pokemon::WEEPINBELL | Mods::SHADOW,
             self::FIELD_CANDY => 100
         ],
-        Pokemon::GRAVELER | Mods::ALOLAN => [
-            self::FIELD_PARENT => Pokemon::GEODUDE | Mods::ALOLAN,
-            self::FIELD_CANDY => 25
-        ],
         Pokemon::GRAVELER | Mods::PURIFIED => [
             self::FIELD_PARENT => Pokemon::GEODUDE | Mods::PURIFIED,
             self::FIELD_CANDY => 22
@@ -1723,11 +2048,6 @@ class Evolutions
         Pokemon::GRAVELER | Mods::SHADOW => [
             self::FIELD_PARENT => Pokemon::GEODUDE | Mods::SHADOW,
             self::FIELD_CANDY => 25
-        ],
-        Pokemon::GOLEM | Mods::ALOLAN => [
-            self::FIELD_PARENT => Pokemon::GRAVELER | Mods::ALOLAN,
-            self::FIELD_CANDY => 100,
-            self::FIELD_TRADED => true
         ],
         Pokemon::GOLEM | Mods::PURIFIED => [
             self::FIELD_PARENT => Pokemon::GRAVELER | Mods::PURIFIED,
@@ -1755,10 +2075,6 @@ class Evolutions
             self::FIELD_PARENT => Pokemon::MAGNETON | Mods::SHADOW,
             self::FIELD_CANDY => 100,
             self::FIELD_LURE => 'ITEM_TROY_DISK_MAGNETIC'
-        ],
-        Pokemon::MUK | Mods::ALOLAN => [
-            self::FIELD_PARENT => Pokemon::GRIMER | Mods::ALOLAN,
-            self::FIELD_CANDY => 50
         ],
         Pokemon::MUK | Mods::PURIFIED => [
             self::FIELD_PARENT => Pokemon::GRIMER | Mods::PURIFIED,
@@ -2030,10 +2346,6 @@ class Evolutions
             self::FIELD_PARENT => Pokemon::MARSHTOMP | Mods::SHADOW,
             self::FIELD_CANDY => 100
         ],
-        Pokemon::LINOONE | Mods::GALARIAN => [
-            self::FIELD_PARENT => Pokemon::ZIGZAGOON | Mods::GALARIAN,
-            self::FIELD_CANDY => 25
-        ],
         Pokemon::LINOONE | Mods::PURIFIED => [
             self::FIELD_PARENT => Pokemon::ZIGZAGOON | Mods::PURIFIED,
             self::FIELD_CANDY => 50
@@ -2041,10 +2353,6 @@ class Evolutions
         Pokemon::LINOONE | Mods::SHADOW => [
             self::FIELD_PARENT => Pokemon::ZIGZAGOON | Mods::SHADOW,
             self::FIELD_CANDY => 50
-        ],
-        Pokemon::OBSTAGOON => [
-            self::FIELD_PARENT => Pokemon::LINOONE | Mods::GALARIAN,
-            self::FIELD_CANDY => 100
         ],
         Pokemon::NUZLEAF | Mods::PURIFIED => [
             self::FIELD_PARENT => Pokemon::SEEDOT | Mods::PURIFIED,
@@ -2250,10 +2558,6 @@ class Evolutions
         ],
         Pokemon::ABOMASNOW | Mods::SHADOW => [
             self::FIELD_PARENT => Pokemon::SNOVER | Mods::SHADOW,
-            self::FIELD_CANDY => 50
-        ],
-        Pokemon::DARMANITAN | FormsAlias::DARMANITAN_STANDARD | Mods::GALARIAN => [
-            self::FIELD_PARENT => Pokemon::DARUMAKA | Mods::GALARIAN,
             self::FIELD_CANDY => 50
         ]
     ];

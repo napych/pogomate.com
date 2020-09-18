@@ -925,7 +925,7 @@ class Evolve
         Pokemon::CURSOLA => null,
         Pokemon::SIRFETCH_D => null,
         Pokemon::MR_RIME => null,
-        Pokemon::RINERIGUS => null,
+        Pokemon::RUNERIGUS => null,
         Pokemon::MILCERY => null,
         Pokemon::ALCREMIE => Pokemon::MILCERY,
         Pokemon::FALINKS => null,

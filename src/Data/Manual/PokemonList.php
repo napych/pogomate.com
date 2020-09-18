@@ -2,6 +2,8 @@
 
 namespace Pogo\Data\Manual;
 
+use Pogo\Pokemon\Mods;
+
 class PokemonList
 {
     const BULBASAUR = 1;
@@ -870,7 +872,7 @@ class PokemonList
     const CURSOLA = 864;
     const SIRFETCH_D = 865;
     const MR_RIME = 866;
-    const RINERIGUS = 867;
+    const RUNERIGUS = 867;
     const MILCERY = 868;
     const ALCREMIE = 869;
     const FALINKS = 870;
@@ -900,14 +902,15 @@ class PokemonList
 
     /**
      * Get constant name from value (for code generation)
-     * @param string $type
+     * @param string $code
      * @return string|null
      */
-    public static function getConst(string $type): ?string
+    public static function getConst(string $code): ?string
     {
+        $id = Mods::getId($code);
         static $typeConst = null;
         if ($typeConst) {
-            return $typeConst[$type] ?? null;
+            return $typeConst[$id] ?? null;
         }
         $reflection = new \ReflectionClass(__CLASS__);
         $constants = $reflection->getConstants();
@@ -915,7 +918,7 @@ class PokemonList
         foreach ($constants as $name => $value) {
             $typeConst[$value] = $name;
         }
-        return $typeConst[$type] ?? null;
+        return $typeConst[$id] ?? null;
     }
 
 }

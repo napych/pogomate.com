@@ -1305,7 +1305,7 @@ class PokemonData
             self::FIELD_BUDDY_DISTANCE => 3,
             self::FIELD_THIRD_MOVE_CANDY => 50,
             self::FIELD_THIRD_MOVE_STARDUST => 50000,
-            self::FIELD_EVOLVES => [Pokemon::RAPIDASH],
+            self::FIELD_EVOLVES => [Pokemon::RAPIDASH | Mods::GALARIAN],
             self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_EMBER_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLAME_CHARGE, Moves::MOVE_FLAME_WHEEL, Moves::MOVE_STOMP],
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FIRE_BLAST]
@@ -1339,7 +1339,7 @@ class PokemonData
             self::FIELD_BUDDY_DISTANCE => 3,
             self::FIELD_THIRD_MOVE_CANDY => 50,
             self::FIELD_THIRD_MOVE_STARDUST => 50000,
-            self::FIELD_EVOLVES => [Pokemon::SLOWBRO, Pokemon::SLOWKING],
+            self::FIELD_EVOLVES => [Pokemon::SLOWBRO | Mods::GALARIAN, Pokemon::SLOWKING],
             self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_CONFUSION_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_WATER_PULSE, Moves::MOVE_PSYSHOCK, Moves::MOVE_PSYCHIC]
         ],
@@ -7367,7 +7367,7 @@ class PokemonData
             self::FIELD_BUDDY_DISTANCE => 5,
             self::FIELD_THIRD_MOVE_CANDY => 25,
             self::FIELD_THIRD_MOVE_STARDUST => 10000,
-            self::FIELD_EVOLVES => [Pokemon::MR_MIME],
+            self::FIELD_EVOLVES => [Pokemon::MR_MIME | Mods::GALARIAN],
             self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_POUND_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYBEAM, Moves::MOVE_PSYCHIC, Moves::MOVE_PSYSHOCK]
         ],
@@ -11223,7 +11223,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DRAGON_CLAW, Moves::MOVE_BLIZZARD, Moves::MOVE_DRACO_METEOR]
         ],
         Pokemon::KYUREM | FormsAlias::KYUREM_BLACK => [
-            self::FIELD_NAME => 'Kyurem (Black)',
+            self::FIELD_NAME => 'Black Kyurem',
             self::FIELD_NAME_SHORT => 'Kyurem',
             self::FIELD_ATTACK => 310,
             self::FIELD_DEFENSE => 183,
@@ -11239,7 +11239,7 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_IRON_HEAD, Moves::MOVE_BLIZZARD, Moves::MOVE_STONE_EDGE, Moves::MOVE_OUTRAGE]
         ],
         Pokemon::KYUREM | FormsAlias::KYUREM_WHITE => [
-            self::FIELD_NAME => 'Kyurem (White)',
+            self::FIELD_NAME => 'White Kyurem',
             self::FIELD_NAME_SHORT => 'Kyurem',
             self::FIELD_ATTACK => 310,
             self::FIELD_DEFENSE => 183,
@@ -11397,27 +11397,35 @@ class PokemonData
         Pokemon::CHESPIN => [
             self::FIELD_NAME => 'Chespin',
             self::FIELD_NAME_SHORT => 'Chespin',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GRASS,
+            self::FIELD_EVOLVES => [Pokemon::QUILLADIN]
         ],
         Pokemon::QUILLADIN => [
             self::FIELD_NAME => 'Quilladin',
             self::FIELD_NAME_SHORT => 'Quilladin',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GRASS,
+            self::FIELD_EVOLVES => [Pokemon::CHESNAUGHT]
         ],
         Pokemon::CHESNAUGHT => [
             self::FIELD_NAME => 'Chesnaught',
             self::FIELD_NAME_SHORT => 'Chesnaught',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GRASS,
+            self::FIELD_TYPE2 => Types::FIGHTING
         ],
         Pokemon::FENNEKIN => [
             self::FIELD_NAME => 'Fennekin',
             self::FIELD_NAME_SHORT => 'Fennekin',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::BRAIXEN]
         ],
         Pokemon::BRAIXEN => [
             self::FIELD_NAME => 'Braixen',
             self::FIELD_NAME_SHORT => 'Braixen',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::DELPHOX]
         ],
         Pokemon::DELPHOX => [
             self::FIELD_NAME => 'Delphox',
@@ -11427,12 +11435,14 @@ class PokemonData
         Pokemon::FROAKIE => [
             self::FIELD_NAME => 'Froakie',
             self::FIELD_NAME_SHORT => 'Froakie',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::FROGADIER]
         ],
         Pokemon::FROGADIER => [
             self::FIELD_NAME => 'Frogadier',
             self::FIELD_NAME_SHORT => 'Frogadier',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::GRENINJA]
         ],
         Pokemon::GRENINJA => [
             self::FIELD_NAME => 'Greninja',
@@ -11442,7 +11452,8 @@ class PokemonData
         Pokemon::BUNNELBY => [
             self::FIELD_NAME => 'Bunnelby',
             self::FIELD_NAME_SHORT => 'Bunnelby',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::DIGGERSBY]
         ],
         Pokemon::DIGGERSBY => [
             self::FIELD_NAME => 'Diggersby',
@@ -11452,12 +11463,14 @@ class PokemonData
         Pokemon::FLETCHLING => [
             self::FIELD_NAME => 'Fletchling',
             self::FIELD_NAME_SHORT => 'Fletchling',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::FLETCHINDER]
         ],
         Pokemon::FLETCHINDER => [
             self::FIELD_NAME => 'Fletchinder',
             self::FIELD_NAME_SHORT => 'Fletchinder',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::TALONFLAME]
         ],
         Pokemon::TALONFLAME => [
             self::FIELD_NAME => 'Talonflame',
@@ -11467,12 +11480,14 @@ class PokemonData
         Pokemon::SCATTERBUG => [
             self::FIELD_NAME => 'Scatterbug',
             self::FIELD_NAME_SHORT => 'Scatterbug',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::SPEWPA]
         ],
         Pokemon::SPEWPA => [
             self::FIELD_NAME => 'Spewpa',
             self::FIELD_NAME_SHORT => 'Spewpa',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::VIVILLON]
         ],
         Pokemon::VIVILLON => [
             self::FIELD_NAME => 'Vivillon',
@@ -11482,7 +11497,8 @@ class PokemonData
         Pokemon::LITLEO => [
             self::FIELD_NAME => 'Litleo',
             self::FIELD_NAME_SHORT => 'Litleo',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::PYROAR]
         ],
         Pokemon::PYROAR => [
             self::FIELD_NAME => 'Pyroar',
@@ -11492,12 +11508,14 @@ class PokemonData
         Pokemon::FLABEBE => [
             self::FIELD_NAME => 'Flabebe',
             self::FIELD_NAME_SHORT => 'Flabebe',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::FLOETTE]
         ],
         Pokemon::FLOETTE => [
             self::FIELD_NAME => 'Floette',
             self::FIELD_NAME_SHORT => 'Floette',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::FLORGES]
         ],
         Pokemon::FLORGES => [
             self::FIELD_NAME => 'Florges',
@@ -11507,7 +11525,8 @@ class PokemonData
         Pokemon::SKIDDO => [
             self::FIELD_NAME => 'Skiddo',
             self::FIELD_NAME_SHORT => 'Skiddo',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::GOGOAT]
         ],
         Pokemon::GOGOAT => [
             self::FIELD_NAME => 'Gogoat',
@@ -11517,7 +11536,8 @@ class PokemonData
         Pokemon::PANCHAM => [
             self::FIELD_NAME => 'Pancham',
             self::FIELD_NAME_SHORT => 'Pancham',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::PANGORO]
         ],
         Pokemon::PANGORO => [
             self::FIELD_NAME => 'Pangoro',
@@ -11532,7 +11552,8 @@ class PokemonData
         Pokemon::ESPURR => [
             self::FIELD_NAME => 'Espurr',
             self::FIELD_NAME_SHORT => 'Espurr',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::MEOWSTIC]
         ],
         Pokemon::MEOWSTIC => [
             self::FIELD_NAME => 'Meowstic',
@@ -11542,22 +11563,30 @@ class PokemonData
         Pokemon::HONEDGE => [
             self::FIELD_NAME => 'Honedge',
             self::FIELD_NAME_SHORT => 'Honedge',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::DOUBLADE]
         ],
         Pokemon::DOUBLADE => [
             self::FIELD_NAME => 'Doublade',
             self::FIELD_NAME_SHORT => 'Doublade',
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::AEGISLASH | FormsAlias::AEGISLASH_BLADE]
+        ],
+        Pokemon::AEGISLASH | FormsAlias::AEGISLASH_SHIELD => [
+            self::FIELD_NAME => 'Aegislash (Shield Forme)',
+            self::FIELD_NAME_SHORT => 'Aegislash',
             self::FIELD_UNRELEASED => true
         ],
-        Pokemon::AEGISLASH => [
-            self::FIELD_NAME => 'Aegislash',
+        Pokemon::AEGISLASH | FormsAlias::AEGISLASH_BLADE => [
+            self::FIELD_NAME => 'Aegislash (Blade Forme)',
             self::FIELD_NAME_SHORT => 'Aegislash',
             self::FIELD_UNRELEASED => true
         ],
         Pokemon::SPIRITZEE => [
             self::FIELD_NAME => 'Spiritzee',
             self::FIELD_NAME_SHORT => 'Spiritzee',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::AROMATISSE]
         ],
         Pokemon::AROMATISSE => [
             self::FIELD_NAME => 'Aromatisse',
@@ -11567,7 +11596,8 @@ class PokemonData
         Pokemon::SWIRLIX => [
             self::FIELD_NAME => 'Swirlix',
             self::FIELD_NAME_SHORT => 'Swirlix',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::SLURPUFF]
         ],
         Pokemon::SLURPUFF => [
             self::FIELD_NAME => 'Slurpuff',
@@ -11577,7 +11607,8 @@ class PokemonData
         Pokemon::INKAY => [
             self::FIELD_NAME => 'Inkay',
             self::FIELD_NAME_SHORT => 'Inkay',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::MALAMAR]
         ],
         Pokemon::MALAMAR => [
             self::FIELD_NAME => 'Malamar',
@@ -11587,7 +11618,8 @@ class PokemonData
         Pokemon::BINACLE => [
             self::FIELD_NAME => 'Binacle',
             self::FIELD_NAME_SHORT => 'Binacle',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::BARBARACLE]
         ],
         Pokemon::BARBARACLE => [
             self::FIELD_NAME => 'Barbaracle',
@@ -11597,7 +11629,8 @@ class PokemonData
         Pokemon::SKRELP => [
             self::FIELD_NAME => 'Skrelp',
             self::FIELD_NAME_SHORT => 'Skrelp',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::DRAGALGE]
         ],
         Pokemon::DRAGALGE => [
             self::FIELD_NAME => 'Dragalge',
@@ -11607,7 +11640,8 @@ class PokemonData
         Pokemon::CLAUNCHER => [
             self::FIELD_NAME => 'Clauncher',
             self::FIELD_NAME_SHORT => 'Clauncher',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::CLAWITZER]
         ],
         Pokemon::CLAWITZER => [
             self::FIELD_NAME => 'Clawitzer',
@@ -11617,7 +11651,8 @@ class PokemonData
         Pokemon::HELIOPTILE => [
             self::FIELD_NAME => 'Helioptile',
             self::FIELD_NAME_SHORT => 'Helioptile',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::HELIOLISK]
         ],
         Pokemon::HELIOLISK => [
             self::FIELD_NAME => 'Heliolisk',
@@ -11627,7 +11662,8 @@ class PokemonData
         Pokemon::TYRUNT => [
             self::FIELD_NAME => 'Tyrunt',
             self::FIELD_NAME_SHORT => 'Tyrunt',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::TYRANTRUM]
         ],
         Pokemon::TYRANTRUM => [
             self::FIELD_NAME => 'Tyrantrum',
@@ -11637,7 +11673,8 @@ class PokemonData
         Pokemon::AMAURA => [
             self::FIELD_NAME => 'Amaura',
             self::FIELD_NAME_SHORT => 'Amaura',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::AURORUS]
         ],
         Pokemon::AURORUS => [
             self::FIELD_NAME => 'Aurorus',
@@ -11667,12 +11704,14 @@ class PokemonData
         Pokemon::GOOMY => [
             self::FIELD_NAME => 'Goomy',
             self::FIELD_NAME_SHORT => 'Goomy',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::SLIGGOO]
         ],
         Pokemon::SLIGGOO => [
             self::FIELD_NAME => 'Sliggoo',
             self::FIELD_NAME_SHORT => 'Sliggoo',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::GOODRA]
         ],
         Pokemon::GOODRA => [
             self::FIELD_NAME => 'Goodra',
@@ -11687,7 +11726,8 @@ class PokemonData
         Pokemon::PHANTUMP => [
             self::FIELD_NAME => 'Phantump',
             self::FIELD_NAME_SHORT => 'Phantump',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::TREVEANT]
         ],
         Pokemon::TREVEANT => [
             self::FIELD_NAME => 'Treveant',
@@ -11697,7 +11737,8 @@ class PokemonData
         Pokemon::PUMPKABOO => [
             self::FIELD_NAME => 'Pumpkaboo',
             self::FIELD_NAME_SHORT => 'Pumpkaboo',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::GOURGEIST]
         ],
         Pokemon::GOURGEIST => [
             self::FIELD_NAME => 'Gourgeist',
@@ -11707,7 +11748,8 @@ class PokemonData
         Pokemon::BERGMITE => [
             self::FIELD_NAME => 'Bergmite',
             self::FIELD_NAME_SHORT => 'Bergmite',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::AVALUGG]
         ],
         Pokemon::AVALUGG => [
             self::FIELD_NAME => 'Avalugg',
@@ -11717,7 +11759,8 @@ class PokemonData
         Pokemon::NOIBAT => [
             self::FIELD_NAME => 'Noibat',
             self::FIELD_NAME_SHORT => 'Noibat',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::NOIVERN]
         ],
         Pokemon::NOIVERN => [
             self::FIELD_NAME => 'Noivern',
@@ -11734,8 +11777,18 @@ class PokemonData
             self::FIELD_NAME_SHORT => 'Yveltal',
             self::FIELD_UNRELEASED => true
         ],
-        Pokemon::ZYGARGE => [
-            self::FIELD_NAME => 'Zygarge',
+        Pokemon::ZYGARGE | FormsAlias::ZYGARGE_HALF => [
+            self::FIELD_NAME => 'Zygarge (50% Forme)',
+            self::FIELD_NAME_SHORT => 'Zygarge',
+            self::FIELD_UNRELEASED => true
+        ],
+        Pokemon::ZYGARGE | FormsAlias::ZYGARGE_TENTH => [
+            self::FIELD_NAME => 'Zygarge (10% Forme)',
+            self::FIELD_NAME_SHORT => 'Zygarge',
+            self::FIELD_UNRELEASED => true
+        ],
+        Pokemon::ZYGARGE | FormsAlias::ZYGARGE_FULL => [
+            self::FIELD_NAME => 'Zygarge (Complete Forme)',
             self::FIELD_NAME_SHORT => 'Zygarge',
             self::FIELD_UNRELEASED => true
         ],
@@ -11744,8 +11797,13 @@ class PokemonData
             self::FIELD_NAME_SHORT => 'Diancie',
             self::FIELD_UNRELEASED => true
         ],
-        Pokemon::HOOPA => [
-            self::FIELD_NAME => 'Hoopa',
+        Pokemon::HOOPA | FormsAlias::HOOPA_CONFINED => [
+            self::FIELD_NAME => 'Hoopa Confined',
+            self::FIELD_NAME_SHORT => 'Hoopa',
+            self::FIELD_UNRELEASED => true
+        ],
+        Pokemon::HOOPA | FormsAlias::HOOPA_UNBOUND => [
+            self::FIELD_NAME => 'Hoopa Unbound',
             self::FIELD_NAME_SHORT => 'Hoopa',
             self::FIELD_UNRELEASED => true
         ],
@@ -11757,12 +11815,14 @@ class PokemonData
         Pokemon::ROWLET => [
             self::FIELD_NAME => 'Rowlet',
             self::FIELD_NAME_SHORT => 'Rowlet',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::DARTRIX]
         ],
         Pokemon::DARTRIX => [
             self::FIELD_NAME => 'Dartrix',
             self::FIELD_NAME_SHORT => 'Dartrix',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::DECIDUEYE]
         ],
         Pokemon::DECIDUEYE => [
             self::FIELD_NAME => 'Decidueye',
@@ -11772,12 +11832,14 @@ class PokemonData
         Pokemon::LITTEN => [
             self::FIELD_NAME => 'Litten',
             self::FIELD_NAME_SHORT => 'Litten',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::TORRACAT]
         ],
         Pokemon::TORRACAT => [
             self::FIELD_NAME => 'Torracat',
             self::FIELD_NAME_SHORT => 'Torracat',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::INCINEROAR]
         ],
         Pokemon::INCINEROAR => [
             self::FIELD_NAME => 'Incineroar',
@@ -11787,12 +11849,14 @@ class PokemonData
         Pokemon::POPPLIO => [
             self::FIELD_NAME => 'Popplio',
             self::FIELD_NAME_SHORT => 'Popplio',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::BRIONNE]
         ],
         Pokemon::BRIONNE => [
             self::FIELD_NAME => 'Brionne',
             self::FIELD_NAME_SHORT => 'Brionne',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::PRIMARINA]
         ],
         Pokemon::PRIMARINA => [
             self::FIELD_NAME => 'Primarina',
@@ -11802,12 +11866,14 @@ class PokemonData
         Pokemon::PIKIPEK => [
             self::FIELD_NAME => 'Pikipek',
             self::FIELD_NAME_SHORT => 'Pikipek',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::TRUMBEAK]
         ],
         Pokemon::TRUMBEAK => [
             self::FIELD_NAME => 'Trumbeak',
             self::FIELD_NAME_SHORT => 'Trumbeak',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::TOUCANNON]
         ],
         Pokemon::TOUCANNON => [
             self::FIELD_NAME => 'Toucannon',
@@ -11817,7 +11883,8 @@ class PokemonData
         Pokemon::YUNGOOS => [
             self::FIELD_NAME => 'Yungoos',
             self::FIELD_NAME_SHORT => 'Yungoos',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::GUMSHOOS]
         ],
         Pokemon::GUMSHOOS => [
             self::FIELD_NAME => 'Gumshoos',
@@ -11827,12 +11894,14 @@ class PokemonData
         Pokemon::GRUBBIN => [
             self::FIELD_NAME => 'Grubbin',
             self::FIELD_NAME_SHORT => 'Grubbin',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::CHARJABUG]
         ],
         Pokemon::CHARJABUG => [
             self::FIELD_NAME => 'Charjabug',
             self::FIELD_NAME_SHORT => 'Charjabug',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::VIKAVOLT]
         ],
         Pokemon::VIKAVOLT => [
             self::FIELD_NAME => 'Vikavolt',
@@ -11842,7 +11911,8 @@ class PokemonData
         Pokemon::CRABAWLER => [
             self::FIELD_NAME => 'Crabawler',
             self::FIELD_NAME_SHORT => 'Crabawler',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::CRABOMINABLE]
         ],
         Pokemon::CRABOMINABLE => [
             self::FIELD_NAME => 'Crabominable',
@@ -11857,7 +11927,8 @@ class PokemonData
         Pokemon::CUTIEFLY => [
             self::FIELD_NAME => 'Cutiefly',
             self::FIELD_NAME_SHORT => 'Cutiefly',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::RIBOMBEE]
         ],
         Pokemon::RIBOMBEE => [
             self::FIELD_NAME => 'Ribombee',
@@ -11867,10 +11938,21 @@ class PokemonData
         Pokemon::ROCKRUFF => [
             self::FIELD_NAME => 'Rockruff',
             self::FIELD_NAME_SHORT => 'Rockruff',
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::LYCANROC | FormsAlias::LYCANROC_DUSK, Pokemon::LYCANROC | FormsAlias::LYCANROC_DUSK, Pokemon::LYCANROC | FormsAlias::LYCANROC_DUSK]
+        ],
+        Pokemon::LYCANROC | FormsAlias::LYCANROC_MIDDAY => [
+            self::FIELD_NAME => 'Lycanroc (Midday Form)',
+            self::FIELD_NAME_SHORT => 'Lycanroc',
             self::FIELD_UNRELEASED => true
         ],
-        Pokemon::LYCANROC => [
-            self::FIELD_NAME => 'Lycanroc',
+        Pokemon::LYCANROC | FormsAlias::LYCANROC_MIDNIGHT => [
+            self::FIELD_NAME => 'Lycanroc (Midnight Form)',
+            self::FIELD_NAME_SHORT => 'Lycanroc',
+            self::FIELD_UNRELEASED => true
+        ],
+        Pokemon::LYCANROC | FormsAlias::LYCANROC_DUSK => [
+            self::FIELD_NAME => 'Lycanroc (Dusk Form)',
             self::FIELD_NAME_SHORT => 'Lycanroc',
             self::FIELD_UNRELEASED => true
         ],
@@ -11882,7 +11964,8 @@ class PokemonData
         Pokemon::MAREANIE => [
             self::FIELD_NAME => 'Mareanie',
             self::FIELD_NAME_SHORT => 'Mareanie',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::TOXAPEX]
         ],
         Pokemon::TOXAPEX => [
             self::FIELD_NAME => 'Toxapex',
@@ -11892,7 +11975,8 @@ class PokemonData
         Pokemon::MUDBRAY => [
             self::FIELD_NAME => 'Mudbray',
             self::FIELD_NAME_SHORT => 'Mudbray',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::MUDSDALE]
         ],
         Pokemon::MUDSDALE => [
             self::FIELD_NAME => 'Mudsdale',
@@ -11902,7 +11986,8 @@ class PokemonData
         Pokemon::DEWPIDER => [
             self::FIELD_NAME => 'Dewpider',
             self::FIELD_NAME_SHORT => 'Dewpider',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::ARAQUANID]
         ],
         Pokemon::ARAQUANID => [
             self::FIELD_NAME => 'Araquanid',
@@ -11912,7 +11997,8 @@ class PokemonData
         Pokemon::FOMANTIS => [
             self::FIELD_NAME => 'Fomantis',
             self::FIELD_NAME_SHORT => 'Fomantis',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::LURANTIS]
         ],
         Pokemon::LURANTIS => [
             self::FIELD_NAME => 'Lurantis',
@@ -11922,7 +12008,8 @@ class PokemonData
         Pokemon::MORELULL => [
             self::FIELD_NAME => 'Morelull',
             self::FIELD_NAME_SHORT => 'Morelull',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::SHIINOTIC]
         ],
         Pokemon::SHIINOTIC => [
             self::FIELD_NAME => 'Shiinotic',
@@ -11932,7 +12019,8 @@ class PokemonData
         Pokemon::SALANDIT => [
             self::FIELD_NAME => 'Salandit',
             self::FIELD_NAME_SHORT => 'Salandit',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::SALAZZLE]
         ],
         Pokemon::SALAZZLE => [
             self::FIELD_NAME => 'Salazzle',
@@ -11942,7 +12030,8 @@ class PokemonData
         Pokemon::STUFFUL => [
             self::FIELD_NAME => 'Stufful',
             self::FIELD_NAME_SHORT => 'Stufful',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::BEWEAR]
         ],
         Pokemon::BEWEAR => [
             self::FIELD_NAME => 'Bewear',
@@ -11952,12 +12041,14 @@ class PokemonData
         Pokemon::BOUNSWEET => [
             self::FIELD_NAME => 'Bounsweet',
             self::FIELD_NAME_SHORT => 'Bounsweet',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::STEENEE]
         ],
         Pokemon::STEENEE => [
             self::FIELD_NAME => 'Steenee',
             self::FIELD_NAME_SHORT => 'Steenee',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::TSAREENA]
         ],
         Pokemon::TSAREENA => [
             self::FIELD_NAME => 'Tsareena',
@@ -11982,7 +12073,8 @@ class PokemonData
         Pokemon::WIMPOD => [
             self::FIELD_NAME => 'Wimpod',
             self::FIELD_NAME_SHORT => 'Wimpod',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::GOLISOPOD]
         ],
         Pokemon::GOLISOPOD => [
             self::FIELD_NAME => 'Golisopod',
@@ -11992,7 +12084,8 @@ class PokemonData
         Pokemon::SANDYGAST => [
             self::FIELD_NAME => 'Sandygast',
             self::FIELD_NAME_SHORT => 'Sandygast',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::PALOSSAND]
         ],
         Pokemon::PALOSSAND => [
             self::FIELD_NAME => 'Palossand',
@@ -12007,15 +12100,21 @@ class PokemonData
         Pokemon::TYPE_NULL => [
             self::FIELD_NAME => 'Type: Null',
             self::FIELD_NAME_SHORT => 'Type: Null',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::SILVALLY]
         ],
         Pokemon::SILVALLY => [
             self::FIELD_NAME => 'Silvally',
             self::FIELD_NAME_SHORT => 'Silvally',
             self::FIELD_UNRELEASED => true
         ],
-        Pokemon::MINIOR => [
-            self::FIELD_NAME => 'Minior',
+        Pokemon::MINIOR | FormsAlias::MINIOR_METEOR => [
+            self::FIELD_NAME => 'Minior (Meteor Form)',
+            self::FIELD_NAME_SHORT => 'Minior',
+            self::FIELD_UNRELEASED => true
+        ],
+        Pokemon::MINIOR | FormsAlias::MINIOR_RED => [
+            self::FIELD_NAME => 'Minior (Red Core)',
             self::FIELD_NAME_SHORT => 'Minior',
             self::FIELD_UNRELEASED => true
         ],
@@ -12057,12 +12156,14 @@ class PokemonData
         Pokemon::JANGMO_O => [
             self::FIELD_NAME => 'Jangmo-o',
             self::FIELD_NAME_SHORT => 'Jangmo-o',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::HAKAMO_O]
         ],
         Pokemon::HAKAMO_O => [
             self::FIELD_NAME => 'Hakamo-o',
             self::FIELD_NAME_SHORT => 'Hakamo-o',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::KOMMO_O]
         ],
         Pokemon::KOMMO_O => [
             self::FIELD_NAME => 'Kommo-o',
@@ -12092,12 +12193,14 @@ class PokemonData
         Pokemon::COSMOG => [
             self::FIELD_NAME => 'Cosmog',
             self::FIELD_NAME_SHORT => 'Cosmog',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::COSMOEM]
         ],
         Pokemon::COSMOEM => [
             self::FIELD_NAME => 'Cosmoem',
             self::FIELD_NAME_SHORT => 'Cosmoem',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::SOLGALEO, Pokemon::LUNALA]
         ],
         Pokemon::SOLGALEO => [
             self::FIELD_NAME => 'Solgaleo',
@@ -12144,8 +12247,23 @@ class PokemonData
             self::FIELD_NAME_SHORT => 'Guzzlord',
             self::FIELD_UNRELEASED => true
         ],
-        Pokemon::NECROZMA => [
+        Pokemon::NECROZMA | FormsAlias::NECROZMA_NORMAL => [
             self::FIELD_NAME => 'Necrozma',
+            self::FIELD_NAME_SHORT => 'Necrozma',
+            self::FIELD_UNRELEASED => true
+        ],
+        Pokemon::NECROZMA | FormsAlias::NECROZMA_DUSK => [
+            self::FIELD_NAME => 'Necrozma (Dusk Mane)',
+            self::FIELD_NAME_SHORT => 'Necrozma',
+            self::FIELD_UNRELEASED => true
+        ],
+        Pokemon::NECROZMA | FormsAlias::NECROZMA_DAWN => [
+            self::FIELD_NAME => 'Necrozma (Dawn Wings)',
+            self::FIELD_NAME_SHORT => 'Necrozma',
+            self::FIELD_UNRELEASED => true
+        ],
+        Pokemon::NECROZMA | FormsAlias::NECROZMA_ULTRA => [
+            self::FIELD_NAME => 'Ultra Necrozma',
             self::FIELD_NAME_SHORT => 'Necrozma',
             self::FIELD_UNRELEASED => true
         ],
@@ -12162,7 +12280,8 @@ class PokemonData
         Pokemon::POIPOLE => [
             self::FIELD_NAME => 'Poipole',
             self::FIELD_NAME_SHORT => 'Poipole',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::NAGANADEL]
         ],
         Pokemon::NAGANADEL => [
             self::FIELD_NAME => 'Naganadel',
@@ -12220,12 +12339,14 @@ class PokemonData
         Pokemon::GROOKEY => [
             self::FIELD_NAME => 'Grookey',
             self::FIELD_NAME_SHORT => 'Grookey',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::THWACKEY]
         ],
         Pokemon::THWACKEY => [
             self::FIELD_NAME => 'Thwackey',
             self::FIELD_NAME_SHORT => 'Thwackey',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::RILLABOOM]
         ],
         Pokemon::RILLABOOM => [
             self::FIELD_NAME => 'Rillaboom',
@@ -12235,12 +12356,14 @@ class PokemonData
         Pokemon::SCORBUNNY => [
             self::FIELD_NAME => 'Scorbunny',
             self::FIELD_NAME_SHORT => 'Scorbunny',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::RABOOT]
         ],
         Pokemon::RABOOT => [
             self::FIELD_NAME => 'Raboot',
             self::FIELD_NAME_SHORT => 'Raboot',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::CINDERACE]
         ],
         Pokemon::CINDERACE => [
             self::FIELD_NAME => 'Cinderace',
@@ -12250,12 +12373,14 @@ class PokemonData
         Pokemon::SOBBLE => [
             self::FIELD_NAME => 'Sobble',
             self::FIELD_NAME_SHORT => 'Sobble',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::DRIZZILE]
         ],
         Pokemon::DRIZZILE => [
             self::FIELD_NAME => 'Drizzile',
             self::FIELD_NAME_SHORT => 'Drizzile',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::INTELEON]
         ],
         Pokemon::INTELEON => [
             self::FIELD_NAME => 'Inteleon',
@@ -12265,217 +12390,307 @@ class PokemonData
         Pokemon::SKWOVET => [
             self::FIELD_NAME => 'Skwovet',
             self::FIELD_NAME_SHORT => 'Skwovet',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_EVOLVES => [Pokemon::GREEDENT]
         ],
         Pokemon::GREEDENT => [
             self::FIELD_NAME => 'Greedent',
             self::FIELD_NAME_SHORT => 'Greedent',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::NORMAL
         ],
         Pokemon::ROOKIDEE => [
             self::FIELD_NAME => 'Rookidee',
             self::FIELD_NAME_SHORT => 'Rookidee',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FLYING,
+            self::FIELD_EVOLVES => [Pokemon::CORVISQUIRE]
         ],
         Pokemon::CORVISQUIRE => [
             self::FIELD_NAME => 'Corvisquire',
             self::FIELD_NAME_SHORT => 'Corvisquire',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FLYING,
+            self::FIELD_EVOLVES => [Pokemon::CORVIKNIGHT]
         ],
         Pokemon::CORVIKNIGHT => [
             self::FIELD_NAME => 'Corviknight',
             self::FIELD_NAME_SHORT => 'Corviknight',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FLYING,
+            self::FIELD_TYPE2 => Types::STEEL
         ],
         Pokemon::BLIPBUG => [
             self::FIELD_NAME => 'Blipbug',
             self::FIELD_NAME_SHORT => 'Blipbug',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::BUG,
+            self::FIELD_EVOLVES => [Pokemon::DOTTLER]
         ],
         Pokemon::DOTTLER => [
             self::FIELD_NAME => 'Dottler',
             self::FIELD_NAME_SHORT => 'Dottler',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::BUG,
+            self::FIELD_TYPE2 => Types::PSYCHIC,
+            self::FIELD_EVOLVES => [Pokemon::ORBEETLE]
         ],
         Pokemon::ORBEETLE => [
             self::FIELD_NAME => 'Orbeetle',
             self::FIELD_NAME_SHORT => 'Orbeetle',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::BUG,
+            self::FIELD_TYPE2 => Types::PSYCHIC
         ],
         Pokemon::NICKIT => [
             self::FIELD_NAME => 'Nickit',
             self::FIELD_NAME_SHORT => 'Nickit',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::DARK,
+            self::FIELD_EVOLVES => [Pokemon::THIEVUL]
         ],
         Pokemon::THIEVUL => [
             self::FIELD_NAME => 'Thievul',
             self::FIELD_NAME_SHORT => 'Thievul',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::DARK
         ],
         Pokemon::GOSSIFLEUR => [
             self::FIELD_NAME => 'Gossifleur',
             self::FIELD_NAME_SHORT => 'Gossifleur',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GRASS,
+            self::FIELD_EVOLVES => [Pokemon::ELDEGOSS]
         ],
         Pokemon::ELDEGOSS => [
             self::FIELD_NAME => 'Eldegoss',
             self::FIELD_NAME_SHORT => 'Eldegoss',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GRASS
         ],
         Pokemon::WOOLOO => [
             self::FIELD_NAME => 'Wooloo',
             self::FIELD_NAME_SHORT => 'Wooloo',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::NORMAL,
+            self::FIELD_EVOLVES => [Pokemon::DUBWOOL]
         ],
         Pokemon::DUBWOOL => [
             self::FIELD_NAME => 'Dubwool',
             self::FIELD_NAME_SHORT => 'Dubwool',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::NORMAL
         ],
         Pokemon::CHEWTLE => [
             self::FIELD_NAME => 'Chewtle',
             self::FIELD_NAME_SHORT => 'Chewtle',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::WATER,
+            self::FIELD_EVOLVES => [Pokemon::DREDNAW]
         ],
         Pokemon::DREDNAW => [
             self::FIELD_NAME => 'Drednaw',
             self::FIELD_NAME_SHORT => 'Drednaw',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::WATER,
+            self::FIELD_TYPE2 => Types::ROCK
         ],
         Pokemon::YAMPER => [
             self::FIELD_NAME => 'Yamper',
             self::FIELD_NAME_SHORT => 'Yamper',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ELECTRIC,
+            self::FIELD_EVOLVES => [Pokemon::BOLTUND]
         ],
         Pokemon::BOLTUND => [
             self::FIELD_NAME => 'Boltund',
             self::FIELD_NAME_SHORT => 'Boltund',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ELECTRIC
         ],
         Pokemon::ROLYCOLY => [
             self::FIELD_NAME => 'Rolycoly',
             self::FIELD_NAME_SHORT => 'Rolycoly',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ROCK,
+            self::FIELD_EVOLVES => [Pokemon::CARKOL]
         ],
         Pokemon::CARKOL => [
             self::FIELD_NAME => 'Carkol',
             self::FIELD_NAME_SHORT => 'Carkol',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ROCK,
+            self::FIELD_TYPE2 => Types::FIRE,
+            self::FIELD_EVOLVES => [Pokemon::COALOSSAL]
         ],
         Pokemon::COALOSSAL => [
             self::FIELD_NAME => 'Coalossal',
             self::FIELD_NAME_SHORT => 'Coalossal',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ROCK,
+            self::FIELD_TYPE2 => Types::FIRE
         ],
         Pokemon::APPLIN => [
             self::FIELD_NAME => 'Applin',
             self::FIELD_NAME_SHORT => 'Applin',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GRASS,
+            self::FIELD_TYPE2 => Types::DRAGON,
+            self::FIELD_EVOLVES => [Pokemon::FLAPPLE, Pokemon::APPLETUN]
         ],
         Pokemon::FLAPPLE => [
             self::FIELD_NAME => 'Flapple',
             self::FIELD_NAME_SHORT => 'Flapple',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GRASS,
+            self::FIELD_TYPE2 => Types::DRAGON
         ],
         Pokemon::APPLETUN => [
             self::FIELD_NAME => 'Appletun',
             self::FIELD_NAME_SHORT => 'Appletun',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GRASS,
+            self::FIELD_TYPE2 => Types::DRAGON
         ],
         Pokemon::SILICOBRA => [
             self::FIELD_NAME => 'Silicobra',
             self::FIELD_NAME_SHORT => 'Silicobra',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GROUND,
+            self::FIELD_EVOLVES => [Pokemon::SANDACONDA]
         ],
         Pokemon::SANDACONDA => [
             self::FIELD_NAME => 'Sandaconda',
             self::FIELD_NAME_SHORT => 'Sandaconda',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GROUND
         ],
         Pokemon::CRAMORANT => [
             self::FIELD_NAME => 'Cramorant',
             self::FIELD_NAME_SHORT => 'Cramorant',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FLYING,
+            self::FIELD_TYPE2 => Types::WATER
         ],
         Pokemon::ARROKUDA => [
             self::FIELD_NAME => 'Arrokuda',
             self::FIELD_NAME_SHORT => 'Arrokuda',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::WATER,
+            self::FIELD_EVOLVES => [Pokemon::BARRASKEWDA]
         ],
         Pokemon::BARRASKEWDA => [
             self::FIELD_NAME => 'Barraskewda',
             self::FIELD_NAME_SHORT => 'Barraskewda',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::WATER
         ],
         Pokemon::TOXEL => [
             self::FIELD_NAME => 'Toxel',
             self::FIELD_NAME_SHORT => 'Toxel',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ELECTRIC,
+            self::FIELD_TYPE2 => Types::POISON,
+            self::FIELD_EVOLVES => [Pokemon::TOXTRICITY | FormsAlias::TOXTRICITY_AMPED]
         ],
-        Pokemon::TOXTRICITY => [
-            self::FIELD_NAME => 'Toxtricity',
+        Pokemon::TOXTRICITY | FormsAlias::TOXTRICITY_LOW => [
+            self::FIELD_NAME => 'Toxtricity (Low Key Form)',
             self::FIELD_NAME_SHORT => 'Toxtricity',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ELECTRIC,
+            self::FIELD_TYPE2 => Types::POISON
+        ],
+        Pokemon::TOXTRICITY | FormsAlias::TOXTRICITY_AMPED => [
+            self::FIELD_NAME => 'Toxtricity (Amped Form)',
+            self::FIELD_NAME_SHORT => 'Toxtricity',
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ELECTRIC,
+            self::FIELD_TYPE2 => Types::POISON
         ],
         Pokemon::SIZZLIPEDE => [
             self::FIELD_NAME => 'Sizzlipede',
             self::FIELD_NAME_SHORT => 'Sizzlipede',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FIRE,
+            self::FIELD_TYPE2 => Types::BUG,
+            self::FIELD_EVOLVES => [Pokemon::CENTISKORCH]
         ],
         Pokemon::CENTISKORCH => [
             self::FIELD_NAME => 'Centiskorch',
             self::FIELD_NAME_SHORT => 'Centiskorch',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FIRE,
+            self::FIELD_TYPE2 => Types::BUG
         ],
         Pokemon::CLOBBOPUS => [
             self::FIELD_NAME => 'Clobbopus',
             self::FIELD_NAME_SHORT => 'Clobbopus',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FIGHTING,
+            self::FIELD_EVOLVES => [Pokemon::GRAPPLOCT]
         ],
         Pokemon::GRAPPLOCT => [
             self::FIELD_NAME => 'Grapploct',
             self::FIELD_NAME_SHORT => 'Grapploct',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FIGHTING
         ],
         Pokemon::SINISTEA => [
             self::FIELD_NAME => 'Sinistea',
             self::FIELD_NAME_SHORT => 'Sinistea',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GHOST,
+            self::FIELD_EVOLVES => [Pokemon::POLTEAGEIST]
         ],
         Pokemon::POLTEAGEIST => [
             self::FIELD_NAME => 'Polteageist',
             self::FIELD_NAME_SHORT => 'Polteageist',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GHOST
         ],
         Pokemon::HATENNA => [
             self::FIELD_NAME => 'Hatenna',
             self::FIELD_NAME_SHORT => 'Hatenna',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::PSYCHIC,
+            self::FIELD_EVOLVES => [Pokemon::HATTREM]
         ],
         Pokemon::HATTREM => [
             self::FIELD_NAME => 'Hattrem',
             self::FIELD_NAME_SHORT => 'Hattrem',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::PSYCHIC,
+            self::FIELD_EVOLVES => [Pokemon::HATTERENE]
         ],
         Pokemon::HATTERENE => [
             self::FIELD_NAME => 'Hatterene',
             self::FIELD_NAME_SHORT => 'Hatterene',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::PSYCHIC,
+            self::FIELD_TYPE2 => Types::FAIRY
         ],
         Pokemon::IMPIDIMP => [
             self::FIELD_NAME => 'Impidimp',
             self::FIELD_NAME_SHORT => 'Impidimp',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::DARK,
+            self::FIELD_TYPE2 => Types::FAIRY,
+            self::FIELD_EVOLVES => [Pokemon::MORGREM]
         ],
         Pokemon::MORGREM => [
             self::FIELD_NAME => 'Morgrem',
             self::FIELD_NAME_SHORT => 'Morgrem',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::DARK,
+            self::FIELD_TYPE2 => Types::FAIRY,
+            self::FIELD_EVOLVES => [Pokemon::GRIMMSNARL]
         ],
         Pokemon::GRIMMSNARL => [
             self::FIELD_NAME => 'Grimmsnarl',
             self::FIELD_NAME_SHORT => 'Grimmsnarl',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::DARK,
+            self::FIELD_TYPE2 => Types::FAIRY
         ],
         Pokemon::OBSTAGOON => [
             self::FIELD_NAME => 'Obstagoon',
@@ -12511,7 +12726,8 @@ class PokemonData
         Pokemon::CURSOLA => [
             self::FIELD_NAME => 'Cursola',
             self::FIELD_NAME_SHORT => 'Cursola',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GHOST
         ],
         Pokemon::SIRFETCH_D => [
             self::FIELD_NAME => 'Sirfetch’d',
@@ -12531,117 +12747,180 @@ class PokemonData
         Pokemon::MR_RIME => [
             self::FIELD_NAME => 'Mr. Rime',
             self::FIELD_NAME_SHORT => 'Mr. Rime',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ICE,
+            self::FIELD_TYPE2 => Types::PSYCHIC
         ],
-        Pokemon::RINERIGUS => [
-            self::FIELD_NAME => 'Rinerigus',
-            self::FIELD_NAME_SHORT => 'Rinerigus',
-            self::FIELD_UNRELEASED => true
+        Pokemon::RUNERIGUS => [
+            self::FIELD_NAME => 'Runerigus',
+            self::FIELD_NAME_SHORT => 'Runerigus',
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GROUND,
+            self::FIELD_TYPE2 => Types::GHOST
         ],
         Pokemon::MILCERY => [
             self::FIELD_NAME => 'Milcery',
             self::FIELD_NAME_SHORT => 'Milcery',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FAIRY,
+            self::FIELD_EVOLVES => [Pokemon::ALCREMIE | FormsAlias::ALCREMIE_VANILLA]
         ],
-        Pokemon::ALCREMIE => [
-            self::FIELD_NAME => 'Alcremie',
+        Pokemon::ALCREMIE | FormsAlias::ALCREMIE_VANILLA => [
+            self::FIELD_NAME => 'Alcremie (Vanilla Cream)',
             self::FIELD_NAME_SHORT => 'Alcremie',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FAIRY
         ],
         Pokemon::FALINKS => [
             self::FIELD_NAME => 'Falinks',
             self::FIELD_NAME_SHORT => 'Falinks',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FIGHTING
         ],
         Pokemon::PINCURCHIN => [
             self::FIELD_NAME => 'Pincurchin',
             self::FIELD_NAME_SHORT => 'Pincurchin',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ELECTRIC
         ],
         Pokemon::SNOM => [
             self::FIELD_NAME => 'Snom',
             self::FIELD_NAME_SHORT => 'Snom',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ICE,
+            self::FIELD_TYPE2 => Types::BUG,
+            self::FIELD_EVOLVES => [Pokemon::FROSMOTH]
         ],
         Pokemon::FROSMOTH => [
             self::FIELD_NAME => 'Frosmoth',
             self::FIELD_NAME_SHORT => 'Frosmoth',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ICE,
+            self::FIELD_TYPE2 => Types::BUG
         ],
         Pokemon::STONJOURNER => [
             self::FIELD_NAME => 'Stonjourner',
             self::FIELD_NAME_SHORT => 'Stonjourner',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ROCK
         ],
         Pokemon::EISCUE => [
             self::FIELD_NAME => 'Eiscue',
             self::FIELD_NAME_SHORT => 'Eiscue',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ICE
         ],
-        Pokemon::INDEEDEE => [
-            self::FIELD_NAME => 'Indeedee',
+        Pokemon::INDEEDEE | FormsAlias::INDEEDEE_FEMALE => [
+            self::FIELD_NAME => 'Indeedee (Female)',
             self::FIELD_NAME_SHORT => 'Indeedee',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::PSYCHIC,
+            self::FIELD_TYPE2 => Types::NORMAL
         ],
-        Pokemon::MORPEKO => [
-            self::FIELD_NAME => 'Morpeko',
+        Pokemon::INDEEDEE | FormsAlias::INDEEDEE_MALE => [
+            self::FIELD_NAME => 'Indeedee (Male)',
+            self::FIELD_NAME_SHORT => 'Indeedee',
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::PSYCHIC,
+            self::FIELD_TYPE2 => Types::NORMAL
+        ],
+        Pokemon::MORPEKO | FormsAlias::MORPEKO_BELLY => [
+            self::FIELD_NAME => 'Morpeko (Full Belly Mode)',
             self::FIELD_NAME_SHORT => 'Morpeko',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ELECTRIC,
+            self::FIELD_TYPE2 => Types::DARK
+        ],
+        Pokemon::MORPEKO | FormsAlias::MORPEKO_HANGRY => [
+            self::FIELD_NAME => 'Morpeko (Hangry Mode)',
+            self::FIELD_NAME_SHORT => 'Morpeko',
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ELECTRIC,
+            self::FIELD_TYPE2 => Types::DARK
         ],
         Pokemon::CUFANT => [
             self::FIELD_NAME => 'Cufant',
             self::FIELD_NAME_SHORT => 'Cufant',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::STEEL,
+            self::FIELD_EVOLVES => [Pokemon::COPPERAJAH]
         ],
         Pokemon::COPPERAJAH => [
             self::FIELD_NAME => 'Copperajah',
             self::FIELD_NAME_SHORT => 'Copperajah',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::STEEL
         ],
         Pokemon::DRACOZOLT => [
             self::FIELD_NAME => 'Dracozolt',
             self::FIELD_NAME_SHORT => 'Dracozolt',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ELECTRIC,
+            self::FIELD_TYPE2 => Types::DRAGON
         ],
         Pokemon::ARCTOZOLT => [
             self::FIELD_NAME => 'Arctozolt',
             self::FIELD_NAME_SHORT => 'Arctozolt',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ELECTRIC,
+            self::FIELD_TYPE2 => Types::ICE
         ],
         Pokemon::DRACOVISH => [
             self::FIELD_NAME => 'Dracovish',
             self::FIELD_NAME_SHORT => 'Dracovish',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::WATER,
+            self::FIELD_TYPE2 => Types::DRAGON
         ],
         Pokemon::ARCTOVISH => [
             self::FIELD_NAME => 'Arctovish',
             self::FIELD_NAME_SHORT => 'Arctovish',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::WATER,
+            self::FIELD_TYPE2 => Types::ICE
         ],
         Pokemon::DURALUDON => [
             self::FIELD_NAME => 'Duraludon',
             self::FIELD_NAME_SHORT => 'Duraludon',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::STEEL,
+            self::FIELD_TYPE2 => Types::DRAGON
         ],
         Pokemon::DREEPY => [
             self::FIELD_NAME => 'Dreepy',
             self::FIELD_NAME_SHORT => 'Dreepy',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::DRAGON,
+            self::FIELD_TYPE2 => Types::GHOST,
+            self::FIELD_EVOLVES => [Pokemon::DRAKLOAK]
         ],
         Pokemon::DRAKLOAK => [
             self::FIELD_NAME => 'Drakloak',
             self::FIELD_NAME_SHORT => 'Drakloak',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::DRAGON,
+            self::FIELD_TYPE2 => Types::GHOST,
+            self::FIELD_EVOLVES => [Pokemon::DRAGAPULT]
         ],
         Pokemon::DRAGAPULT => [
             self::FIELD_NAME => 'Dragapult',
             self::FIELD_NAME_SHORT => 'Dragapult',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::DRAGON,
+            self::FIELD_TYPE2 => Types::GHOST
         ],
-        Pokemon::ZACIAN => [
-            self::FIELD_NAME => 'Zacian',
+        Pokemon::ZACIAN | FormsAlias::ZACIAN_HERO => [
+            self::FIELD_NAME => 'Zacian (Hero of Many Battles)',
             self::FIELD_NAME_SHORT => 'Zacian',
-            self::FIELD_UNRELEASED => true
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FAIRY
+        ],
+        Pokemon::ZACIAN | FormsAlias::ZACIAN_CROWNED => [
+            self::FIELD_NAME => 'Zacian (Crowned Sword)',
+            self::FIELD_NAME_SHORT => 'Zacian',
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::FAIRY,
+            self::FIELD_TYPE2 => Types::STEEL
         ],
         Pokemon::ZAMAZENTA | FormsAlias::ZAMAZENTA_HERO => [
             self::FIELD_NAME => 'Zamazenta (Hero of Many Battles)',
@@ -12667,7 +12946,8 @@ class PokemonData
             self::FIELD_NAME => 'Kubfu',
             self::FIELD_NAME_SHORT => 'Kubfu',
             self::FIELD_UNRELEASED => true,
-            self::FIELD_TYPE1 => Types::FIGHTING
+            self::FIELD_TYPE1 => Types::FIGHTING,
+            self::FIELD_EVOLVES => [Pokemon::URSHIFU | FormsAlias::URSHIFU_RAPID, Pokemon::URSHIFU | FormsAlias::URSHIFU_RAPID]
         ],
         Pokemon::URSHIFU | FormsAlias::URSHIFU_SINGLE => [
             self::FIELD_NAME => 'Urshifu (Single Strike Style)',
@@ -12689,6 +12969,491 @@ class PokemonData
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::DARK,
             self::FIELD_TYPE2 => Types::GRASS
+        ],
+        Pokemon::RATATTA | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Alolan Rattata',
+            self::FIELD_NAME_SHORT => 'Rattata',
+            self::FIELD_ATTACK => 103,
+            self::FIELD_DEFENSE => 70,
+            self::FIELD_STAMINA => 102,
+            self::FIELD_TYPE1 => Types::DARK,
+            self::FIELD_TYPE2 => Types::NORMAL,
+            self::FIELD_TRANSFERABLE => true,
+            self::FIELD_DEPLOYABLE => true,
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::RATICATE | Mods::ALOLAN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_HYPER_FANG, Moves::MOVE_SHADOW_BALL]
+        ],
+        Pokemon::RATICATE | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Alolan Raticate',
+            self::FIELD_NAME_SHORT => 'Raticate',
+            self::FIELD_ATTACK => 135,
+            self::FIELD_DEFENSE => 154,
+            self::FIELD_STAMINA => 181,
+            self::FIELD_TYPE1 => Types::DARK,
+            self::FIELD_TYPE2 => Types::NORMAL,
+            self::FIELD_TRANSFERABLE => true,
+            self::FIELD_DEPLOYABLE => true,
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_HYPER_FANG, Moves::MOVE_HYPER_BEAM]
+        ],
+        Pokemon::RAICHU | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Alolan Raichu',
+            self::FIELD_NAME_SHORT => 'Raichu',
+            self::FIELD_ATTACK => 201,
+            self::FIELD_DEFENSE => 154,
+            self::FIELD_STAMINA => 155,
+            self::FIELD_TYPE1 => Types::ELECTRIC,
+            self::FIELD_TYPE2 => Types::PSYCHIC,
+            self::FIELD_TRANSFERABLE => true,
+            self::FIELD_DEPLOYABLE => true,
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_VOLT_SWITCH_FAST, Moves::MOVE_SPARK_FAST, Moves::MOVE_THUNDER_SHOCK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_WILD_CHARGE, Moves::MOVE_GRASS_KNOT]
+        ],
+        Pokemon::SANDSHREW | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Alolan Sandshrew',
+            self::FIELD_NAME_SHORT => 'Sandshrew',
+            self::FIELD_ATTACK => 125,
+            self::FIELD_DEFENSE => 129,
+            self::FIELD_STAMINA => 137,
+            self::FIELD_TYPE1 => Types::ICE,
+            self::FIELD_TYPE2 => Types::STEEL,
+            self::FIELD_TRANSFERABLE => true,
+            self::FIELD_DEPLOYABLE => true,
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::SANDSLASH | Mods::ALOLAN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_METAL_CLAW_FAST, Moves::MOVE_POWDER_SNOW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BLIZZARD, Moves::MOVE_GYRO_BALL, Moves::MOVE_NIGHT_SLASH]
+        ],
+        Pokemon::SANDSLASH | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Alolan Sandslash',
+            self::FIELD_NAME_SHORT => 'Sandslash',
+            self::FIELD_ATTACK => 177,
+            self::FIELD_DEFENSE => 195,
+            self::FIELD_STAMINA => 181,
+            self::FIELD_TYPE1 => Types::ICE,
+            self::FIELD_TYPE2 => Types::STEEL,
+            self::FIELD_TRANSFERABLE => true,
+            self::FIELD_DEPLOYABLE => true,
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_METAL_CLAW_FAST, Moves::MOVE_POWDER_SNOW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BLIZZARD, Moves::MOVE_GYRO_BALL, Moves::MOVE_BULLDOZE, Moves::MOVE_ICE_PUNCH]
+        ],
+        Pokemon::VULPIX | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Alolan Vulpix',
+            self::FIELD_NAME_SHORT => 'Vulpix',
+            self::FIELD_ATTACK => 96,
+            self::FIELD_DEFENSE => 109,
+            self::FIELD_STAMINA => 116,
+            self::FIELD_TYPE1 => Types::ICE,
+            self::FIELD_TRANSFERABLE => true,
+            self::FIELD_DEPLOYABLE => true,
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::NINETALES | Mods::ALOLAN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ZEN_HEADBUTT_FAST, Moves::MOVE_POWDER_SNOW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_ICE_BEAM, Moves::MOVE_BLIZZARD]
+        ],
+        Pokemon::NINETALES | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Alolan Ninetales',
+            self::FIELD_NAME_SHORT => 'Ninetales',
+            self::FIELD_ATTACK => 170,
+            self::FIELD_DEFENSE => 193,
+            self::FIELD_STAMINA => 177,
+            self::FIELD_TYPE1 => Types::ICE,
+            self::FIELD_TYPE2 => Types::FAIRY,
+            self::FIELD_TRANSFERABLE => true,
+            self::FIELD_DEPLOYABLE => true,
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_POWDER_SNOW_FAST, Moves::MOVE_CHARM_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_ICE_BEAM, Moves::MOVE_BLIZZARD, Moves::MOVE_PSYSHOCK]
+        ],
+        Pokemon::DIGLETT | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Alolan Diglett',
+            self::FIELD_NAME_SHORT => 'Diglett',
+            self::FIELD_ATTACK => 108,
+            self::FIELD_DEFENSE => 81,
+            self::FIELD_STAMINA => 67,
+            self::FIELD_TYPE1 => Types::GROUND,
+            self::FIELD_TYPE2 => Types::STEEL,
+            self::FIELD_TRANSFERABLE => true,
+            self::FIELD_DEPLOYABLE => true,
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::DUGTRIO | Mods::ALOLAN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_METAL_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_MUD_BOMB, Moves::MOVE_ROCK_TOMB]
+        ],
+        Pokemon::DUGTRIO | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Alolan Dugtrio',
+            self::FIELD_NAME_SHORT => 'Dugtrio',
+            self::FIELD_ATTACK => 201,
+            self::FIELD_DEFENSE => 142,
+            self::FIELD_STAMINA => 111,
+            self::FIELD_TYPE1 => Types::GROUND,
+            self::FIELD_TYPE2 => Types::STEEL,
+            self::FIELD_TRANSFERABLE => true,
+            self::FIELD_DEPLOYABLE => true,
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_METAL_CLAW_FAST, Moves::MOVE_MUD_SLAP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_MUD_BOMB, Moves::MOVE_IRON_HEAD]
+        ],
+        Pokemon::MEOWTH | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Alolan Meowth',
+            self::FIELD_NAME_SHORT => 'Meowth',
+            self::FIELD_ATTACK => 99,
+            self::FIELD_DEFENSE => 78,
+            self::FIELD_STAMINA => 120,
+            self::FIELD_TYPE1 => Types::DARK,
+            self::FIELD_TRANSFERABLE => true,
+            self::FIELD_DEPLOYABLE => true,
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::PERSIAN | Mods::ALOLAN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SLASH, Moves::MOVE_DARK_PULSE, Moves::MOVE_FOUL_PLAY]
+        ],
+        Pokemon::MEOWTH | Mods::GALARIAN => [
+            self::FIELD_NAME => 'Galarian Meowth',
+            self::FIELD_NAME_SHORT => 'Meowth',
+            self::FIELD_ATTACK => 115,
+            self::FIELD_DEFENSE => 92,
+            self::FIELD_STAMINA => 137,
+            self::FIELD_TYPE1 => Types::STEEL,
+            self::FIELD_TRANSFERABLE => true,
+            self::FIELD_DEPLOYABLE => true,
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::PERRSERKER],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_METAL_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SLASH, Moves::MOVE_GYRO_BALL, Moves::MOVE_DIG]
+        ],
+        Pokemon::PERSIAN | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Alolan Persian',
+            self::FIELD_NAME_SHORT => 'Persian',
+            self::FIELD_ATTACK => 158,
+            self::FIELD_DEFENSE => 136,
+            self::FIELD_STAMINA => 163,
+            self::FIELD_TYPE1 => Types::DARK,
+            self::FIELD_TRANSFERABLE => true,
+            self::FIELD_DEPLOYABLE => true,
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_FEINT_ATTACK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FOUL_PLAY, Moves::MOVE_DARK_PULSE, Moves::MOVE_PLAY_ROUGH]
+        ],
+        Pokemon::GEODUDE | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Alolan Geodude',
+            self::FIELD_NAME_SHORT => 'Geodude',
+            self::FIELD_ATTACK => 132,
+            self::FIELD_DEFENSE => 132,
+            self::FIELD_STAMINA => 120,
+            self::FIELD_TYPE1 => Types::ROCK,
+            self::FIELD_TYPE2 => Types::ELECTRIC,
+            self::FIELD_TRANSFERABLE => true,
+            self::FIELD_DEPLOYABLE => true,
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::GRAVELER | Mods::ALOLAN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_THROW_FAST, Moves::MOVE_VOLT_SWITCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_SLIDE, Moves::MOVE_ROCK_TOMB, Moves::MOVE_THUNDERBOLT]
+        ],
+        Pokemon::GRAVELER | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Alolan Graveler',
+            self::FIELD_NAME_SHORT => 'Graveler',
+            self::FIELD_ATTACK => 164,
+            self::FIELD_DEFENSE => 164,
+            self::FIELD_STAMINA => 146,
+            self::FIELD_TYPE1 => Types::ROCK,
+            self::FIELD_TYPE2 => Types::ELECTRIC,
+            self::FIELD_TRANSFERABLE => true,
+            self::FIELD_DEPLOYABLE => true,
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::GOLEM | Mods::ALOLAN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_THROW_FAST, Moves::MOVE_VOLT_SWITCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDERBOLT, Moves::MOVE_STONE_EDGE, Moves::MOVE_ROCK_BLAST]
+        ],
+        Pokemon::GOLEM | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Alolan Golem',
+            self::FIELD_NAME_SHORT => 'Golem',
+            self::FIELD_ATTACK => 211,
+            self::FIELD_DEFENSE => 198,
+            self::FIELD_STAMINA => 190,
+            self::FIELD_TYPE1 => Types::ROCK,
+            self::FIELD_TYPE2 => Types::ELECTRIC,
+            self::FIELD_TRANSFERABLE => true,
+            self::FIELD_DEPLOYABLE => true,
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_THROW_FAST, Moves::MOVE_VOLT_SWITCH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STONE_EDGE, Moves::MOVE_ROCK_BLAST, Moves::MOVE_WILD_CHARGE]
+        ],
+        Pokemon::PONYTA | Mods::GALARIAN => [
+            self::FIELD_NAME => 'Galarian Ponyta',
+            self::FIELD_NAME_SHORT => 'Ponyta',
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::PSYCHIC,
+            self::FIELD_EVOLVES => [Pokemon::RAPIDASH | Mods::GALARIAN]
+        ],
+        Pokemon::RAPIDASH | Mods::GALARIAN => [
+            self::FIELD_NAME => 'Galarian Rapidash',
+            self::FIELD_NAME_SHORT => 'Rapidash',
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::PSYCHIC,
+            self::FIELD_TYPE2 => Types::FAIRY
+        ],
+        Pokemon::SLOWPOKE | Mods::GALARIAN => [
+            self::FIELD_NAME => 'Galarian Slowpoke',
+            self::FIELD_NAME_SHORT => 'Slowpoke',
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::PSYCHIC,
+            self::FIELD_EVOLVES => [Pokemon::SLOWBRO | Mods::GALARIAN]
+        ],
+        Pokemon::SLOWBRO | Mods::GALARIAN => [
+            self::FIELD_NAME => 'Galarian Slowbro',
+            self::FIELD_NAME_SHORT => 'Slowbro',
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::POISON,
+            self::FIELD_TYPE2 => Types::PSYCHIC
+        ],
+        Pokemon::FARFETCH_D | Mods::GALARIAN => [
+            self::FIELD_NAME => 'Galarian Farfetch\'d',
+            self::FIELD_NAME_SHORT => 'Farfetch\'d',
+            self::FIELD_ATTACK => 174,
+            self::FIELD_DEFENSE => 114,
+            self::FIELD_STAMINA => 141,
+            self::FIELD_TYPE1 => Types::FIGHTING,
+            self::FIELD_TRANSFERABLE => true,
+            self::FIELD_DEPLOYABLE => true,
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_SMASH_FAST, Moves::MOVE_FURY_CUTTER_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRICK_BREAK, Moves::MOVE_BRAVE_BIRD, Moves::MOVE_LEAF_BLADE]
+        ],
+        Pokemon::GRIMER | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Alolan Grimer',
+            self::FIELD_NAME_SHORT => 'Grimer',
+            self::FIELD_ATTACK => 135,
+            self::FIELD_DEFENSE => 90,
+            self::FIELD_STAMINA => 190,
+            self::FIELD_TYPE1 => Types::POISON,
+            self::FIELD_TYPE2 => Types::DARK,
+            self::FIELD_TRANSFERABLE => true,
+            self::FIELD_DEPLOYABLE => true,
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::MUK | Mods::ALOLAN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_GUNK_SHOT, Moves::MOVE_SLUDGE_BOMB]
+        ],
+        Pokemon::MUK | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Alolan Muk',
+            self::FIELD_NAME_SHORT => 'Muk',
+            self::FIELD_ATTACK => 190,
+            self::FIELD_DEFENSE => 172,
+            self::FIELD_STAMINA => 233,
+            self::FIELD_TYPE1 => Types::POISON,
+            self::FIELD_TYPE2 => Types::DARK,
+            self::FIELD_TRANSFERABLE => true,
+            self::FIELD_DEPLOYABLE => true,
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_SNARL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_GUNK_SHOT, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_ACID_SPRAY]
+        ],
+        Pokemon::EXEGGUTOR | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Alolan Exeggutor',
+            self::FIELD_NAME_SHORT => 'Exeggutor',
+            self::FIELD_ATTACK => 230,
+            self::FIELD_DEFENSE => 153,
+            self::FIELD_STAMINA => 216,
+            self::FIELD_TYPE1 => Types::GRASS,
+            self::FIELD_TYPE2 => Types::DRAGON,
+            self::FIELD_TRANSFERABLE => true,
+            self::FIELD_DEPLOYABLE => true,
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_BULLET_SEED_FAST, Moves::MOVE_DRAGON_TAIL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SEED_BOMB, Moves::MOVE_DRAGON_PULSE, Moves::MOVE_SOLAR_BEAM]
+        ],
+        Pokemon::MAROWAK | Mods::ALOLAN => [
+            self::FIELD_NAME => 'Alolan Marowak',
+            self::FIELD_NAME_SHORT => 'Marowak',
+            self::FIELD_ATTACK => 144,
+            self::FIELD_DEFENSE => 186,
+            self::FIELD_STAMINA => 155,
+            self::FIELD_TYPE1 => Types::FIRE,
+            self::FIELD_TYPE2 => Types::GHOST,
+            self::FIELD_TRANSFERABLE => true,
+            self::FIELD_DEPLOYABLE => true,
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_HEX_FAST, Moves::MOVE_ROCK_SMASH_FAST, Moves::MOVE_FIRE_SPIN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BONE_CLUB, Moves::MOVE_SHADOW_BALL, Moves::MOVE_FIRE_BLAST, Moves::MOVE_FLAME_WHEEL]
+        ],
+        Pokemon::WEEZING | Mods::GALARIAN => [
+            self::FIELD_NAME => 'Galarian Weezing',
+            self::FIELD_NAME_SHORT => 'Weezing',
+            self::FIELD_ATTACK => 174,
+            self::FIELD_DEFENSE => 197,
+            self::FIELD_STAMINA => 163,
+            self::FIELD_TYPE1 => Types::POISON,
+            self::FIELD_TYPE2 => Types::FAIRY,
+            self::FIELD_TRANSFERABLE => true,
+            self::FIELD_DEPLOYABLE => true,
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE, Moves::MOVE_HYPER_BEAM, Moves::MOVE_PLAY_ROUGH, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OVERHEAT]
+        ],
+        Pokemon::MR_MIME | Mods::GALARIAN => [
+            self::FIELD_NAME => 'Galarian Mr. Mime',
+            self::FIELD_NAME_SHORT => 'Mr. Mime',
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::ICE,
+            self::FIELD_TYPE2 => Types::PSYCHIC
+        ],
+        Pokemon::MEWTWO | FormsAlias::MEWTWO_ARMORED => [
+            self::FIELD_NAME => 'Mewtwo',
+            self::FIELD_NAME_SHORT => 'Mewtwo',
+            self::FIELD_ATTACK => 182,
+            self::FIELD_DEFENSE => 278,
+            self::FIELD_STAMINA => 214,
+            self::FIELD_TYPE1 => Types::PSYCHIC,
+            self::FIELD_LEGENDARY => true,
+            self::FIELD_TRANSFERABLE => true,
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_IRON_TAIL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_SLIDE, Moves::MOVE_DYNAMIC_PUNCH, Moves::MOVE_EARTHQUAKE, Moves::MOVE_FUTURESIGHT],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_PSYSTRIKE]
+        ],
+        Pokemon::CORSOLA | Mods::GALARIAN => [
+            self::FIELD_NAME => 'Galarian Corsola',
+            self::FIELD_NAME_SHORT => 'Corsola',
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GHOST
+        ],
+        Pokemon::ZIGZAGOON | Mods::GALARIAN => [
+            self::FIELD_NAME => 'Galarian Zigzagoon',
+            self::FIELD_NAME_SHORT => 'Zigzagoon',
+            self::FIELD_ATTACK => 58,
+            self::FIELD_DEFENSE => 80,
+            self::FIELD_STAMINA => 116,
+            self::FIELD_TYPE1 => Types::DARK,
+            self::FIELD_TYPE2 => Types::NORMAL,
+            self::FIELD_TRANSFERABLE => true,
+            self::FIELD_DEPLOYABLE => true,
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::LINOONE | Mods::GALARIAN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_TAKE_DOWN_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_BODY_SLAM, Moves::MOVE_SWIFT]
+        ],
+        Pokemon::LINOONE | Mods::GALARIAN => [
+            self::FIELD_NAME => 'Galarian Linoone',
+            self::FIELD_NAME_SHORT => 'Linoone',
+            self::FIELD_ATTACK => 142,
+            self::FIELD_DEFENSE => 128,
+            self::FIELD_STAMINA => 186,
+            self::FIELD_TYPE1 => Types::DARK,
+            self::FIELD_TYPE2 => Types::NORMAL,
+            self::FIELD_TRANSFERABLE => true,
+            self::FIELD_DEPLOYABLE => true,
+            self::FIELD_BUDDY_DISTANCE => 1,
+            self::FIELD_THIRD_MOVE_CANDY => 25,
+            self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::OBSTAGOON],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SNARL_FAST, Moves::MOVE_LICK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_BODY_SLAM, Moves::MOVE_GUNK_SHOT]
+        ],
+        Pokemon::DARUMAKA | Mods::GALARIAN => [
+            self::FIELD_NAME => 'Galarian Darumaka',
+            self::FIELD_NAME_SHORT => 'Darumaka',
+            self::FIELD_ATTACK => 153,
+            self::FIELD_DEFENSE => 86,
+            self::FIELD_STAMINA => 172,
+            self::FIELD_TYPE1 => Types::ICE,
+            self::FIELD_TRANSFERABLE => true,
+            self::FIELD_DEPLOYABLE => true,
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::DARMANITAN | FormsAlias::DARMANITAN_STANDARD | Mods::GALARIAN],
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_ICE_FANG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_PUNCH, Moves::MOVE_ICE_BEAM]
+        ],
+        Pokemon::DARMANITAN | FormsAlias::DARMANITAN_STANDARD | Mods::GALARIAN => [
+            self::FIELD_NAME => 'Galarian Darmanitan (Standard Mode)',
+            self::FIELD_NAME_SHORT => 'Darmanitan',
+            self::FIELD_ATTACK => 263,
+            self::FIELD_DEFENSE => 114,
+            self::FIELD_STAMINA => 233,
+            self::FIELD_TYPE1 => Types::ICE,
+            self::FIELD_TRANSFERABLE => true,
+            self::FIELD_DEPLOYABLE => true,
+            self::FIELD_BUDDY_DISTANCE => 3,
+            self::FIELD_THIRD_MOVE_CANDY => 50,
+            self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_ICE_FANG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_OVERHEAT, Moves::MOVE_AVALANCHE, Moves::MOVE_SUPER_POWER, Moves::MOVE_ICE_PUNCH]
+        ],
+        Pokemon::YAMASK | Mods::GALARIAN => [
+            self::FIELD_NAME => 'Galarian Yamask',
+            self::FIELD_NAME_SHORT => 'Yamask',
+            self::FIELD_UNRELEASED => true,
+            self::FIELD_TYPE1 => Types::GROUND,
+            self::FIELD_TYPE2 => Types::GHOST
+        ],
+        Pokemon::STUNFISK | Mods::GALARIAN => [
+            self::FIELD_NAME => 'Galarian Stunfisk',
+            self::FIELD_NAME_SHORT => 'Stunfisk',
+            self::FIELD_ATTACK => 144,
+            self::FIELD_DEFENSE => 171,
+            self::FIELD_STAMINA => 240,
+            self::FIELD_TYPE1 => Types::GROUND,
+            self::FIELD_TYPE2 => Types::STEEL,
+            self::FIELD_TRANSFERABLE => true,
+            self::FIELD_DEPLOYABLE => true,
+            self::FIELD_BUDDY_DISTANCE => 5,
+            self::FIELD_THIRD_MOVE_CANDY => 75,
+            self::FIELD_THIRD_MOVE_STARDUST => 75000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_METAL_CLAW_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_FLASH_CANNON, Moves::MOVE_MUDDY_WATER, Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::BULBASAUR | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Bulbasaur',
@@ -13118,23 +13883,6 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_AERIAL_ACE, Moves::MOVE_X_SCISSOR, Moves::MOVE_FELL_STINGER],
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRILL_RUN]
         ],
-        Pokemon::RATATTA | Mods::ALOLAN => [
-            self::FIELD_NAME => 'Alolan Rattata',
-            self::FIELD_NAME_SHORT => 'Rattata',
-            self::FIELD_ATTACK => 103,
-            self::FIELD_DEFENSE => 70,
-            self::FIELD_STAMINA => 102,
-            self::FIELD_TYPE1 => Types::DARK,
-            self::FIELD_TYPE2 => Types::NORMAL,
-            self::FIELD_TRANSFERABLE => true,
-            self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1,
-            self::FIELD_THIRD_MOVE_CANDY => 25,
-            self::FIELD_THIRD_MOVE_STARDUST => 10000,
-            self::FIELD_EVOLVES => [Pokemon::RATICATE | Mods::ALOLAN],
-            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
-            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_HYPER_FANG, Moves::MOVE_SHADOW_BALL]
-        ],
         Pokemon::RATATTA | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Rattata',
             self::FIELD_NAME_SHORT => 'Rattata',
@@ -13168,22 +13916,6 @@ class PokemonData
             self::FIELD_EVOLVES => [Pokemon::RATICATE | Mods::SHADOW],
             self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_HYPER_FANG, Moves::MOVE_BODY_SLAM]
-        ],
-        Pokemon::RATICATE | Mods::ALOLAN => [
-            self::FIELD_NAME => 'Alolan Raticate',
-            self::FIELD_NAME_SHORT => 'Raticate',
-            self::FIELD_ATTACK => 135,
-            self::FIELD_DEFENSE => 154,
-            self::FIELD_STAMINA => 181,
-            self::FIELD_TYPE1 => Types::DARK,
-            self::FIELD_TYPE2 => Types::NORMAL,
-            self::FIELD_TRANSFERABLE => true,
-            self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1,
-            self::FIELD_THIRD_MOVE_CANDY => 25,
-            self::FIELD_THIRD_MOVE_STARDUST => 10000,
-            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_QUICK_ATTACK_FAST],
-            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_HYPER_FANG, Moves::MOVE_HYPER_BEAM]
         ],
         Pokemon::RATICATE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Raticate',
@@ -13285,39 +14017,6 @@ class PokemonData
             self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_ACID_FAST, Moves::MOVE_DRAGON_TAIL_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_GUNK_SHOT, Moves::MOVE_ACID_SPRAY]
         ],
-        Pokemon::RAICHU | Mods::ALOLAN => [
-            self::FIELD_NAME => 'Alolan Raichu',
-            self::FIELD_NAME_SHORT => 'Raichu',
-            self::FIELD_ATTACK => 201,
-            self::FIELD_DEFENSE => 154,
-            self::FIELD_STAMINA => 155,
-            self::FIELD_TYPE1 => Types::ELECTRIC,
-            self::FIELD_TYPE2 => Types::PSYCHIC,
-            self::FIELD_TRANSFERABLE => true,
-            self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1,
-            self::FIELD_THIRD_MOVE_CANDY => 25,
-            self::FIELD_THIRD_MOVE_STARDUST => 10000,
-            self::FIELD_FAST_MOVES => [Moves::MOVE_VOLT_SWITCH_FAST, Moves::MOVE_SPARK_FAST, Moves::MOVE_THUNDER_SHOCK_FAST],
-            self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_THUNDER_PUNCH, Moves::MOVE_WILD_CHARGE, Moves::MOVE_GRASS_KNOT]
-        ],
-        Pokemon::SANDSHREW | Mods::ALOLAN => [
-            self::FIELD_NAME => 'Alolan Sandshrew',
-            self::FIELD_NAME_SHORT => 'Sandshrew',
-            self::FIELD_ATTACK => 125,
-            self::FIELD_DEFENSE => 129,
-            self::FIELD_STAMINA => 137,
-            self::FIELD_TYPE1 => Types::ICE,
-            self::FIELD_TYPE2 => Types::STEEL,
-            self::FIELD_TRANSFERABLE => true,
-            self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3,
-            self::FIELD_THIRD_MOVE_CANDY => 50,
-            self::FIELD_THIRD_MOVE_STARDUST => 50000,
-            self::FIELD_EVOLVES => [Pokemon::SANDSLASH | Mods::ALOLAN],
-            self::FIELD_FAST_MOVES => [Moves::MOVE_METAL_CLAW_FAST, Moves::MOVE_POWDER_SNOW_FAST],
-            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BLIZZARD, Moves::MOVE_GYRO_BALL, Moves::MOVE_NIGHT_SLASH]
-        ],
         Pokemon::SANDSHREW | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Sandshrew',
             self::FIELD_NAME_SHORT => 'Sandshrew',
@@ -13353,22 +14052,6 @@ class PokemonData
             self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_MUD_SHOT_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_ROCK_SLIDE, Moves::MOVE_SAND_TOMB],
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_TOMB]
-        ],
-        Pokemon::SANDSLASH | Mods::ALOLAN => [
-            self::FIELD_NAME => 'Alolan Sandslash',
-            self::FIELD_NAME_SHORT => 'Sandslash',
-            self::FIELD_ATTACK => 177,
-            self::FIELD_DEFENSE => 195,
-            self::FIELD_STAMINA => 181,
-            self::FIELD_TYPE1 => Types::ICE,
-            self::FIELD_TYPE2 => Types::STEEL,
-            self::FIELD_TRANSFERABLE => true,
-            self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3,
-            self::FIELD_THIRD_MOVE_CANDY => 50,
-            self::FIELD_THIRD_MOVE_STARDUST => 50000,
-            self::FIELD_FAST_MOVES => [Moves::MOVE_METAL_CLAW_FAST, Moves::MOVE_POWDER_SNOW_FAST],
-            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BLIZZARD, Moves::MOVE_GYRO_BALL, Moves::MOVE_BULLDOZE, Moves::MOVE_ICE_PUNCH]
         ],
         Pokemon::SANDSLASH | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Sandslash',
@@ -13608,22 +14291,6 @@ class PokemonData
             self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_FURY_CUTTER_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_MEGAHORN, Moves::MOVE_EARTH_POWER]
         ],
-        Pokemon::VULPIX | Mods::ALOLAN => [
-            self::FIELD_NAME => 'Alolan Vulpix',
-            self::FIELD_NAME_SHORT => 'Vulpix',
-            self::FIELD_ATTACK => 96,
-            self::FIELD_DEFENSE => 109,
-            self::FIELD_STAMINA => 116,
-            self::FIELD_TYPE1 => Types::ICE,
-            self::FIELD_TRANSFERABLE => true,
-            self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3,
-            self::FIELD_THIRD_MOVE_CANDY => 50,
-            self::FIELD_THIRD_MOVE_STARDUST => 50000,
-            self::FIELD_EVOLVES => [Pokemon::NINETALES | Mods::ALOLAN],
-            self::FIELD_FAST_MOVES => [Moves::MOVE_ZEN_HEADBUTT_FAST, Moves::MOVE_POWDER_SNOW_FAST],
-            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_ICE_BEAM, Moves::MOVE_BLIZZARD]
-        ],
         Pokemon::VULPIX | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Vulpix',
             self::FIELD_NAME_SHORT => 'Vulpix',
@@ -13657,22 +14324,6 @@ class PokemonData
             self::FIELD_EVOLVES => [Pokemon::NINETALES | Mods::SHADOW],
             self::FIELD_FAST_MOVES => [Moves::MOVE_QUICK_ATTACK_FAST, Moves::MOVE_EMBER_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BODY_SLAM, Moves::MOVE_FLAMETHROWER, Moves::MOVE_FLAME_CHARGE]
-        ],
-        Pokemon::NINETALES | Mods::ALOLAN => [
-            self::FIELD_NAME => 'Alolan Ninetales',
-            self::FIELD_NAME_SHORT => 'Ninetales',
-            self::FIELD_ATTACK => 170,
-            self::FIELD_DEFENSE => 193,
-            self::FIELD_STAMINA => 177,
-            self::FIELD_TYPE1 => Types::ICE,
-            self::FIELD_TYPE2 => Types::FAIRY,
-            self::FIELD_TRANSFERABLE => true,
-            self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3,
-            self::FIELD_THIRD_MOVE_CANDY => 50,
-            self::FIELD_THIRD_MOVE_STARDUST => 50000,
-            self::FIELD_FAST_MOVES => [Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_POWDER_SNOW_FAST, Moves::MOVE_CHARM_FAST],
-            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DAZZLING_GLEAM, Moves::MOVE_ICE_BEAM, Moves::MOVE_BLIZZARD, Moves::MOVE_PSYSHOCK]
         ],
         Pokemon::NINETALES | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Ninetales',
@@ -13964,23 +14615,6 @@ class PokemonData
             self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_BUG_BITE_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SILVER_WIND, Moves::MOVE_PSYCHIC, Moves::MOVE_BUG_BUZZ, Moves::MOVE_POISON_FANG]
         ],
-        Pokemon::DIGLETT | Mods::ALOLAN => [
-            self::FIELD_NAME => 'Alolan Diglett',
-            self::FIELD_NAME_SHORT => 'Diglett',
-            self::FIELD_ATTACK => 108,
-            self::FIELD_DEFENSE => 81,
-            self::FIELD_STAMINA => 67,
-            self::FIELD_TYPE1 => Types::GROUND,
-            self::FIELD_TYPE2 => Types::STEEL,
-            self::FIELD_TRANSFERABLE => true,
-            self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3,
-            self::FIELD_THIRD_MOVE_CANDY => 50,
-            self::FIELD_THIRD_MOVE_STARDUST => 50000,
-            self::FIELD_EVOLVES => [Pokemon::DUGTRIO | Mods::ALOLAN],
-            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_METAL_CLAW_FAST],
-            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_MUD_BOMB, Moves::MOVE_ROCK_TOMB]
-        ],
         Pokemon::DIGLETT | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Diglett',
             self::FIELD_NAME_SHORT => 'Diglett',
@@ -14015,22 +14649,6 @@ class PokemonData
             self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_SCRATCH_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_MUD_BOMB, Moves::MOVE_ROCK_TOMB]
         ],
-        Pokemon::DUGTRIO | Mods::ALOLAN => [
-            self::FIELD_NAME => 'Alolan Dugtrio',
-            self::FIELD_NAME_SHORT => 'Dugtrio',
-            self::FIELD_ATTACK => 201,
-            self::FIELD_DEFENSE => 142,
-            self::FIELD_STAMINA => 111,
-            self::FIELD_TYPE1 => Types::GROUND,
-            self::FIELD_TYPE2 => Types::STEEL,
-            self::FIELD_TRANSFERABLE => true,
-            self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3,
-            self::FIELD_THIRD_MOVE_CANDY => 50,
-            self::FIELD_THIRD_MOVE_STARDUST => 50000,
-            self::FIELD_FAST_MOVES => [Moves::MOVE_METAL_CLAW_FAST, Moves::MOVE_MUD_SLAP_FAST],
-            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_MUD_BOMB, Moves::MOVE_IRON_HEAD]
-        ],
         Pokemon::DUGTRIO | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Dugtrio',
             self::FIELD_NAME_SHORT => 'Dugtrio',
@@ -14062,38 +14680,6 @@ class PokemonData
             self::FIELD_THIRD_MOVE_STARDUST => 60000,
             self::FIELD_FAST_MOVES => [Moves::MOVE_SUCKER_PUNCH_FAST, Moves::MOVE_MUD_SLAP_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_MUD_BOMB, Moves::MOVE_STONE_EDGE]
-        ],
-        Pokemon::MEOWTH | Mods::ALOLAN => [
-            self::FIELD_NAME => 'Alolan Meowth',
-            self::FIELD_NAME_SHORT => 'Meowth',
-            self::FIELD_ATTACK => 99,
-            self::FIELD_DEFENSE => 78,
-            self::FIELD_STAMINA => 120,
-            self::FIELD_TYPE1 => Types::DARK,
-            self::FIELD_TRANSFERABLE => true,
-            self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3,
-            self::FIELD_THIRD_MOVE_CANDY => 50,
-            self::FIELD_THIRD_MOVE_STARDUST => 50000,
-            self::FIELD_EVOLVES => [Pokemon::PERSIAN | Mods::ALOLAN],
-            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_BITE_FAST],
-            self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SLASH, Moves::MOVE_DARK_PULSE, Moves::MOVE_FOUL_PLAY]
-        ],
-        Pokemon::MEOWTH | Mods::GALARIAN => [
-            self::FIELD_NAME => 'Galarian Meowth',
-            self::FIELD_NAME_SHORT => 'Meowth',
-            self::FIELD_ATTACK => 115,
-            self::FIELD_DEFENSE => 92,
-            self::FIELD_STAMINA => 137,
-            self::FIELD_TYPE1 => Types::STEEL,
-            self::FIELD_TRANSFERABLE => true,
-            self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3,
-            self::FIELD_THIRD_MOVE_CANDY => 50,
-            self::FIELD_THIRD_MOVE_STARDUST => 50000,
-            self::FIELD_EVOLVES => [Pokemon::PERRSERKER],
-            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_METAL_CLAW_FAST],
-            self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SLASH, Moves::MOVE_GYRO_BALL, Moves::MOVE_DIG]
         ],
         Pokemon::MEOWTH | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Meowth',
@@ -14130,21 +14716,6 @@ class PokemonData
             self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_BITE_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_NIGHT_SLASH, Moves::MOVE_DARK_PULSE, Moves::MOVE_FOUL_PLAY],
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BODY_SLAM]
-        ],
-        Pokemon::PERSIAN | Mods::ALOLAN => [
-            self::FIELD_NAME => 'Alolan Persian',
-            self::FIELD_NAME_SHORT => 'Persian',
-            self::FIELD_ATTACK => 158,
-            self::FIELD_DEFENSE => 136,
-            self::FIELD_STAMINA => 163,
-            self::FIELD_TYPE1 => Types::DARK,
-            self::FIELD_TRANSFERABLE => true,
-            self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3,
-            self::FIELD_THIRD_MOVE_CANDY => 50,
-            self::FIELD_THIRD_MOVE_STARDUST => 50000,
-            self::FIELD_FAST_MOVES => [Moves::MOVE_SCRATCH_FAST, Moves::MOVE_FEINT_ATTACK_FAST],
-            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FOUL_PLAY, Moves::MOVE_DARK_PULSE, Moves::MOVE_PLAY_ROUGH]
         ],
         Pokemon::PERSIAN | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Persian',
@@ -14742,23 +15313,6 @@ class PokemonData
             self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_ACID_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_LEAF_BLADE, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_LEAF_TORNADO, Moves::MOVE_ACID_SPRAY]
         ],
-        Pokemon::GEODUDE | Mods::ALOLAN => [
-            self::FIELD_NAME => 'Alolan Geodude',
-            self::FIELD_NAME_SHORT => 'Geodude',
-            self::FIELD_ATTACK => 132,
-            self::FIELD_DEFENSE => 132,
-            self::FIELD_STAMINA => 120,
-            self::FIELD_TYPE1 => Types::ROCK,
-            self::FIELD_TYPE2 => Types::ELECTRIC,
-            self::FIELD_TRANSFERABLE => true,
-            self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1,
-            self::FIELD_THIRD_MOVE_CANDY => 25,
-            self::FIELD_THIRD_MOVE_STARDUST => 10000,
-            self::FIELD_EVOLVES => [Pokemon::GRAVELER | Mods::ALOLAN],
-            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_THROW_FAST, Moves::MOVE_VOLT_SWITCH_FAST],
-            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_SLIDE, Moves::MOVE_ROCK_TOMB, Moves::MOVE_THUNDERBOLT]
-        ],
         Pokemon::GEODUDE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Geodude',
             self::FIELD_NAME_SHORT => 'Geodude',
@@ -14794,23 +15348,6 @@ class PokemonData
             self::FIELD_EVOLVES => [Pokemon::GRAVELER | Mods::SHADOW],
             self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_THROW_FAST, Moves::MOVE_TACKLE_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_SLIDE, Moves::MOVE_ROCK_TOMB, Moves::MOVE_DIG]
-        ],
-        Pokemon::GRAVELER | Mods::ALOLAN => [
-            self::FIELD_NAME => 'Alolan Graveler',
-            self::FIELD_NAME_SHORT => 'Graveler',
-            self::FIELD_ATTACK => 164,
-            self::FIELD_DEFENSE => 164,
-            self::FIELD_STAMINA => 146,
-            self::FIELD_TYPE1 => Types::ROCK,
-            self::FIELD_TYPE2 => Types::ELECTRIC,
-            self::FIELD_TRANSFERABLE => true,
-            self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1,
-            self::FIELD_THIRD_MOVE_CANDY => 25,
-            self::FIELD_THIRD_MOVE_STARDUST => 10000,
-            self::FIELD_EVOLVES => [Pokemon::GOLEM | Mods::ALOLAN],
-            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_THROW_FAST, Moves::MOVE_VOLT_SWITCH_FAST],
-            self::FIELD_CHARGE_MOVES => [Moves::MOVE_THUNDERBOLT, Moves::MOVE_STONE_EDGE, Moves::MOVE_ROCK_BLAST]
         ],
         Pokemon::GRAVELER | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Graveler',
@@ -14849,22 +15386,6 @@ class PokemonData
             self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_THROW_FAST, Moves::MOVE_MUD_SLAP_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_STONE_EDGE, Moves::MOVE_ROCK_BLAST],
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_ROCK_SLIDE]
-        ],
-        Pokemon::GOLEM | Mods::ALOLAN => [
-            self::FIELD_NAME => 'Alolan Golem',
-            self::FIELD_NAME_SHORT => 'Golem',
-            self::FIELD_ATTACK => 211,
-            self::FIELD_DEFENSE => 198,
-            self::FIELD_STAMINA => 190,
-            self::FIELD_TYPE1 => Types::ROCK,
-            self::FIELD_TYPE2 => Types::ELECTRIC,
-            self::FIELD_TRANSFERABLE => true,
-            self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1,
-            self::FIELD_THIRD_MOVE_CANDY => 25,
-            self::FIELD_THIRD_MOVE_STARDUST => 10000,
-            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_THROW_FAST, Moves::MOVE_VOLT_SWITCH_FAST],
-            self::FIELD_CHARGE_MOVES => [Moves::MOVE_STONE_EDGE, Moves::MOVE_ROCK_BLAST, Moves::MOVE_WILD_CHARGE]
         ],
         Pokemon::GOLEM | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Golem',
@@ -14972,21 +15493,6 @@ class PokemonData
             self::FIELD_FAST_MOVES => [Moves::MOVE_SPARK_FAST, Moves::MOVE_CHARGE_BEAM_FAST, Moves::MOVE_THUNDER_SHOCK_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ZAP_CANNON, Moves::MOVE_MAGNET_BOMB, Moves::MOVE_FLASH_CANNON, Moves::MOVE_DISCHARGE]
         ],
-        Pokemon::FARFETCH_D | Mods::GALARIAN => [
-            self::FIELD_NAME => 'Galarian Farfetch\'d',
-            self::FIELD_NAME_SHORT => 'Farfetch\'d',
-            self::FIELD_ATTACK => 174,
-            self::FIELD_DEFENSE => 114,
-            self::FIELD_STAMINA => 141,
-            self::FIELD_TYPE1 => Types::FIGHTING,
-            self::FIELD_TRANSFERABLE => true,
-            self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3,
-            self::FIELD_THIRD_MOVE_CANDY => 50,
-            self::FIELD_THIRD_MOVE_STARDUST => 50000,
-            self::FIELD_FAST_MOVES => [Moves::MOVE_ROCK_SMASH_FAST, Moves::MOVE_FURY_CUTTER_FAST],
-            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BRICK_BREAK, Moves::MOVE_BRAVE_BIRD, Moves::MOVE_LEAF_BLADE]
-        ],
         Pokemon::FARFETCH_D | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Farfetch\'d',
             self::FIELD_NAME_SHORT => 'Farfetch\'d',
@@ -15023,23 +15529,6 @@ class PokemonData
             self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_CUT_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AERIAL_ACE, Moves::MOVE_AIR_CUTTER, Moves::MOVE_LEAF_BLADE]
         ],
-        Pokemon::GRIMER | Mods::ALOLAN => [
-            self::FIELD_NAME => 'Alolan Grimer',
-            self::FIELD_NAME_SHORT => 'Grimer',
-            self::FIELD_ATTACK => 135,
-            self::FIELD_DEFENSE => 90,
-            self::FIELD_STAMINA => 190,
-            self::FIELD_TYPE1 => Types::POISON,
-            self::FIELD_TYPE2 => Types::DARK,
-            self::FIELD_TRANSFERABLE => true,
-            self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3,
-            self::FIELD_THIRD_MOVE_CANDY => 50,
-            self::FIELD_THIRD_MOVE_STARDUST => 50000,
-            self::FIELD_EVOLVES => [Pokemon::MUK | Mods::ALOLAN],
-            self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_BITE_FAST],
-            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_GUNK_SHOT, Moves::MOVE_SLUDGE_BOMB]
-        ],
         Pokemon::GRIMER | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Grimer',
             self::FIELD_NAME_SHORT => 'Grimer',
@@ -15073,22 +15562,6 @@ class PokemonData
             self::FIELD_EVOLVES => [Pokemon::MUK | Mods::SHADOW],
             self::FIELD_FAST_MOVES => [Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_MUD_SLAP_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE, Moves::MOVE_MUD_BOMB, Moves::MOVE_SLUDGE_BOMB]
-        ],
-        Pokemon::MUK | Mods::ALOLAN => [
-            self::FIELD_NAME => 'Alolan Muk',
-            self::FIELD_NAME_SHORT => 'Muk',
-            self::FIELD_ATTACK => 190,
-            self::FIELD_DEFENSE => 172,
-            self::FIELD_STAMINA => 233,
-            self::FIELD_TYPE1 => Types::POISON,
-            self::FIELD_TYPE2 => Types::DARK,
-            self::FIELD_TRANSFERABLE => true,
-            self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3,
-            self::FIELD_THIRD_MOVE_CANDY => 50,
-            self::FIELD_THIRD_MOVE_STARDUST => 50000,
-            self::FIELD_FAST_MOVES => [Moves::MOVE_BITE_FAST, Moves::MOVE_POISON_JAB_FAST, Moves::MOVE_SNARL_FAST],
-            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_GUNK_SHOT, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_ACID_SPRAY]
         ],
         Pokemon::MUK | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Muk',
@@ -15404,22 +15877,6 @@ class PokemonData
             self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_BULLET_SEED_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SEED_BOMB, Moves::MOVE_PSYCHIC, Moves::MOVE_ANCIENT_POWER]
         ],
-        Pokemon::EXEGGUTOR | Mods::ALOLAN => [
-            self::FIELD_NAME => 'Alolan Exeggutor',
-            self::FIELD_NAME_SHORT => 'Exeggutor',
-            self::FIELD_ATTACK => 230,
-            self::FIELD_DEFENSE => 153,
-            self::FIELD_STAMINA => 216,
-            self::FIELD_TYPE1 => Types::GRASS,
-            self::FIELD_TYPE2 => Types::DRAGON,
-            self::FIELD_TRANSFERABLE => true,
-            self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3,
-            self::FIELD_THIRD_MOVE_CANDY => 50,
-            self::FIELD_THIRD_MOVE_STARDUST => 50000,
-            self::FIELD_FAST_MOVES => [Moves::MOVE_BULLET_SEED_FAST, Moves::MOVE_DRAGON_TAIL_FAST],
-            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SEED_BOMB, Moves::MOVE_DRAGON_PULSE, Moves::MOVE_SOLAR_BEAM]
-        ],
         Pokemon::EXEGGUTOR | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Exeggutor',
             self::FIELD_NAME_SHORT => 'Exeggutor',
@@ -15489,22 +15946,6 @@ class PokemonData
             self::FIELD_EVOLVES => [Pokemon::MAROWAK | Mods::SHADOW],
             self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SLAP_FAST, Moves::MOVE_ROCK_SMASH_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BONE_CLUB, Moves::MOVE_DIG, Moves::MOVE_BULLDOZE]
-        ],
-        Pokemon::MAROWAK | Mods::ALOLAN => [
-            self::FIELD_NAME => 'Alolan Marowak',
-            self::FIELD_NAME_SHORT => 'Marowak',
-            self::FIELD_ATTACK => 144,
-            self::FIELD_DEFENSE => 186,
-            self::FIELD_STAMINA => 155,
-            self::FIELD_TYPE1 => Types::FIRE,
-            self::FIELD_TYPE2 => Types::GHOST,
-            self::FIELD_TRANSFERABLE => true,
-            self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3,
-            self::FIELD_THIRD_MOVE_CANDY => 50,
-            self::FIELD_THIRD_MOVE_STARDUST => 50000,
-            self::FIELD_FAST_MOVES => [Moves::MOVE_HEX_FAST, Moves::MOVE_ROCK_SMASH_FAST, Moves::MOVE_FIRE_SPIN_FAST],
-            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BONE_CLUB, Moves::MOVE_SHADOW_BALL, Moves::MOVE_FIRE_BLAST, Moves::MOVE_FLAME_WHEEL]
         ],
         Pokemon::MAROWAK | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Marowak',
@@ -15641,22 +16082,6 @@ class PokemonData
             self::FIELD_EVOLVES => [Pokemon::WEEZING | Mods::SHADOW],
             self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_INFESTATION_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE, Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_DARK_PULSE]
-        ],
-        Pokemon::WEEZING | Mods::GALARIAN => [
-            self::FIELD_NAME => 'Galarian Weezing',
-            self::FIELD_NAME_SHORT => 'Weezing',
-            self::FIELD_ATTACK => 174,
-            self::FIELD_DEFENSE => 197,
-            self::FIELD_STAMINA => 163,
-            self::FIELD_TYPE1 => Types::POISON,
-            self::FIELD_TYPE2 => Types::FAIRY,
-            self::FIELD_TRANSFERABLE => true,
-            self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3,
-            self::FIELD_THIRD_MOVE_CANDY => 50,
-            self::FIELD_THIRD_MOVE_STARDUST => 50000,
-            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST],
-            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE, Moves::MOVE_HYPER_BEAM, Moves::MOVE_PLAY_ROUGH, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OVERHEAT]
         ],
         Pokemon::WEEZING | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Weezing',
@@ -16409,22 +16834,6 @@ class PokemonData
             self::FIELD_FAST_MOVES => [Moves::MOVE_DRAGON_TAIL_FAST, Moves::MOVE_STEEL_WING_FAST, Moves::MOVE_DRAGON_BREATH_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HURRICANE, Moves::MOVE_HYPER_BEAM, Moves::MOVE_OUTRAGE, Moves::MOVE_DRAGON_CLAW],
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRACO_METEOR, Moves::MOVE_DRAGON_PULSE]
-        ],
-        Pokemon::MEWTWO | FormsAlias::MEWTWO_ARMORED => [
-            self::FIELD_NAME => 'Mewtwo',
-            self::FIELD_NAME_SHORT => 'Mewtwo',
-            self::FIELD_ATTACK => 182,
-            self::FIELD_DEFENSE => 278,
-            self::FIELD_STAMINA => 214,
-            self::FIELD_TYPE1 => Types::PSYCHIC,
-            self::FIELD_LEGENDARY => true,
-            self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20,
-            self::FIELD_THIRD_MOVE_CANDY => 100,
-            self::FIELD_THIRD_MOVE_STARDUST => 100000,
-            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_IRON_TAIL_FAST],
-            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_SLIDE, Moves::MOVE_DYNAMIC_PUNCH, Moves::MOVE_EARTHQUAKE, Moves::MOVE_FUTURESIGHT],
-            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_PSYSTRIKE]
         ],
         Pokemon::MEWTWO | FormsAlias::MEWTWO_NORMAL | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Mewtwo',
@@ -17488,23 +17897,6 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_SURF, Moves::MOVE_MUDDY_WATER],
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_HYDRO_CANNON]
         ],
-        Pokemon::ZIGZAGOON | Mods::GALARIAN => [
-            self::FIELD_NAME => 'Galarian Zigzagoon',
-            self::FIELD_NAME_SHORT => 'Zigzagoon',
-            self::FIELD_ATTACK => 58,
-            self::FIELD_DEFENSE => 80,
-            self::FIELD_STAMINA => 116,
-            self::FIELD_TYPE1 => Types::DARK,
-            self::FIELD_TYPE2 => Types::NORMAL,
-            self::FIELD_TRANSFERABLE => true,
-            self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1,
-            self::FIELD_THIRD_MOVE_CANDY => 25,
-            self::FIELD_THIRD_MOVE_STARDUST => 10000,
-            self::FIELD_EVOLVES => [Pokemon::LINOONE | Mods::GALARIAN],
-            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_TAKE_DOWN_FAST],
-            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_BODY_SLAM, Moves::MOVE_SWIFT]
-        ],
         Pokemon::ZIGZAGOON | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Zigzagoon',
             self::FIELD_NAME_SHORT => 'Zigzagoon',
@@ -17538,23 +17930,6 @@ class PokemonData
             self::FIELD_EVOLVES => [Pokemon::LINOONE | Mods::SHADOW],
             self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_ROCK_SMASH_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_GRASS_KNOT, Moves::MOVE_THUNDERBOLT]
-        ],
-        Pokemon::LINOONE | Mods::GALARIAN => [
-            self::FIELD_NAME => 'Galarian Linoone',
-            self::FIELD_NAME_SHORT => 'Linoone',
-            self::FIELD_ATTACK => 142,
-            self::FIELD_DEFENSE => 128,
-            self::FIELD_STAMINA => 186,
-            self::FIELD_TYPE1 => Types::DARK,
-            self::FIELD_TYPE2 => Types::NORMAL,
-            self::FIELD_TRANSFERABLE => true,
-            self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 1,
-            self::FIELD_THIRD_MOVE_CANDY => 25,
-            self::FIELD_THIRD_MOVE_STARDUST => 10000,
-            self::FIELD_EVOLVES => [Pokemon::OBSTAGOON],
-            self::FIELD_FAST_MOVES => [Moves::MOVE_SNARL_FAST, Moves::MOVE_LICK_FAST],
-            self::FIELD_CHARGE_MOVES => [Moves::MOVE_DIG, Moves::MOVE_BODY_SLAM, Moves::MOVE_GUNK_SHOT]
         ],
         Pokemon::LINOONE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Linoone',
@@ -19382,22 +19757,6 @@ class PokemonData
             self::FIELD_FAST_MOVES => [Moves::MOVE_HEX_FAST, Moves::MOVE_ASTONISH_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_OMINOUS_WIND, Moves::MOVE_PSYCHIC, Moves::MOVE_DARK_PULSE]
         ],
-        Pokemon::DARUMAKA | Mods::GALARIAN => [
-            self::FIELD_NAME => 'Galarian Darumaka',
-            self::FIELD_NAME_SHORT => 'Darumaka',
-            self::FIELD_ATTACK => 153,
-            self::FIELD_DEFENSE => 86,
-            self::FIELD_STAMINA => 172,
-            self::FIELD_TYPE1 => Types::ICE,
-            self::FIELD_TRANSFERABLE => true,
-            self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3,
-            self::FIELD_THIRD_MOVE_CANDY => 50,
-            self::FIELD_THIRD_MOVE_STARDUST => 50000,
-            self::FIELD_EVOLVES => [Pokemon::DARMANITAN | FormsAlias::DARMANITAN_STANDARD | Mods::GALARIAN],
-            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_ICE_FANG_FAST],
-            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_PUNCH, Moves::MOVE_ICE_BEAM]
-        ],
         Pokemon::DARUMAKA | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Darumaka',
             self::FIELD_NAME_SHORT => 'Darumaka',
@@ -19430,21 +19789,6 @@ class PokemonData
             self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_FIRE_FANG_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_PUNCH, Moves::MOVE_FLAME_CHARGE]
         ],
-        Pokemon::DARMANITAN | FormsAlias::DARMANITAN_STANDARD | Mods::GALARIAN => [
-            self::FIELD_NAME => 'Galarian Darmanitan (Standard Mode)',
-            self::FIELD_NAME_SHORT => 'Darmanitan',
-            self::FIELD_ATTACK => 263,
-            self::FIELD_DEFENSE => 114,
-            self::FIELD_STAMINA => 233,
-            self::FIELD_TYPE1 => Types::ICE,
-            self::FIELD_TRANSFERABLE => true,
-            self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3,
-            self::FIELD_THIRD_MOVE_CANDY => 50,
-            self::FIELD_THIRD_MOVE_STARDUST => 50000,
-            self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_ICE_FANG_FAST],
-            self::FIELD_CHARGE_MOVES => [Moves::MOVE_OVERHEAT, Moves::MOVE_AVALANCHE, Moves::MOVE_SUPER_POWER, Moves::MOVE_ICE_PUNCH]
-        ],
         Pokemon::DARMANITAN | FormsAlias::DARMANITAN_ZEN | Mods::GALARIAN => [
             self::FIELD_NAME => 'Galarian Darmanitan (Zen Mode)',
             self::FIELD_NAME_SHORT => 'Darmanitan',
@@ -19460,22 +19804,6 @@ class PokemonData
             self::FIELD_THIRD_MOVE_STARDUST => 50000,
             self::FIELD_FAST_MOVES => [Moves::MOVE_TACKLE_FAST, Moves::MOVE_ICE_FANG_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_OVERHEAT, Moves::MOVE_AVALANCHE, Moves::MOVE_SUPER_POWER, Moves::MOVE_ICE_PUNCH]
-        ],
-        Pokemon::STUNFISK | Mods::GALARIAN => [
-            self::FIELD_NAME => 'Galarian Stunfisk',
-            self::FIELD_NAME_SHORT => 'Stunfisk',
-            self::FIELD_ATTACK => 144,
-            self::FIELD_DEFENSE => 171,
-            self::FIELD_STAMINA => 240,
-            self::FIELD_TYPE1 => Types::GROUND,
-            self::FIELD_TYPE2 => Types::STEEL,
-            self::FIELD_TRANSFERABLE => true,
-            self::FIELD_DEPLOYABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 5,
-            self::FIELD_THIRD_MOVE_CANDY => 75,
-            self::FIELD_THIRD_MOVE_STARDUST => 75000,
-            self::FIELD_FAST_MOVES => [Moves::MOVE_MUD_SHOT_FAST, Moves::MOVE_METAL_CLAW_FAST],
-            self::FIELD_CHARGE_MOVES => [Moves::MOVE_EARTHQUAKE, Moves::MOVE_FLASH_CANNON, Moves::MOVE_MUDDY_WATER, Moves::MOVE_ROCK_SLIDE]
         ],
         Pokemon::STUNFISK | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Stunfisk',

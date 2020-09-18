@@ -364,15 +364,19 @@ class PokemonForms
         ],
         Pokemon::PONYTA => [
             Pokemon::PONYTA,
+            Pokemon::PONYTA | Mods::GALARIAN,
         ],
         Pokemon::RAPIDASH => [
             Pokemon::RAPIDASH,
+            Pokemon::RAPIDASH | Mods::GALARIAN,
         ],
         Pokemon::SLOWPOKE => [
             Pokemon::SLOWPOKE,
+            Pokemon::SLOWPOKE | Mods::GALARIAN,
         ],
         Pokemon::SLOWBRO => [
             Pokemon::SLOWBRO,
+            Pokemon::SLOWBRO | Mods::GALARIAN,
         ],
         Pokemon::MAGNEMITE => [
             Pokemon::MAGNEMITE,
@@ -551,6 +555,7 @@ class PokemonForms
         ],
         Pokemon::MR_MIME => [
             Pokemon::MR_MIME,
+            Pokemon::MR_MIME | Mods::GALARIAN,
         ],
         Pokemon::SCYTHER => [
             Pokemon::SCYTHER,
@@ -920,6 +925,7 @@ class PokemonForms
         ],
         Pokemon::CORSOLA => [
             Pokemon::CORSOLA,
+            Pokemon::CORSOLA | Mods::GALARIAN,
         ],
         Pokemon::REMORAID => [
             Pokemon::REMORAID,
@@ -2122,6 +2128,7 @@ class PokemonForms
         ],
         Pokemon::YAMASK => [
             Pokemon::YAMASK,
+            Pokemon::YAMASK | Mods::GALARIAN,
         ],
         Pokemon::COFAGRIGUS => [
             Pokemon::COFAGRIGUS,
@@ -2500,7 +2507,8 @@ class PokemonForms
             Pokemon::DOUBLADE,
         ],
         Pokemon::AEGISLASH => [
-            Pokemon::AEGISLASH,
+            Pokemon::AEGISLASH | FormsAlias::AEGISLASH_SHIELD,
+            Pokemon::AEGISLASH | FormsAlias::AEGISLASH_BLADE,
         ],
         Pokemon::SPIRITZEE => [
             Pokemon::SPIRITZEE,
@@ -2611,13 +2619,16 @@ class PokemonForms
             Pokemon::YVELTAL,
         ],
         Pokemon::ZYGARGE => [
-            Pokemon::ZYGARGE,
+            Pokemon::ZYGARGE | FormsAlias::ZYGARGE_HALF,
+            Pokemon::ZYGARGE | FormsAlias::ZYGARGE_TENTH,
+            Pokemon::ZYGARGE | FormsAlias::ZYGARGE_FULL,
         ],
         Pokemon::DIANCIE => [
             Pokemon::DIANCIE,
         ],
         Pokemon::HOOPA => [
-            Pokemon::HOOPA,
+            Pokemon::HOOPA | FormsAlias::HOOPA_CONFINED,
+            Pokemon::HOOPA | FormsAlias::HOOPA_UNBOUND,
         ],
         Pokemon::VOLCANION => [
             Pokemon::VOLCANION,
@@ -2692,7 +2703,9 @@ class PokemonForms
             Pokemon::ROCKRUFF,
         ],
         Pokemon::LYCANROC => [
-            Pokemon::LYCANROC,
+            Pokemon::LYCANROC | FormsAlias::LYCANROC_MIDDAY,
+            Pokemon::LYCANROC | FormsAlias::LYCANROC_MIDNIGHT,
+            Pokemon::LYCANROC | FormsAlias::LYCANROC_DUSK,
         ],
         Pokemon::WISHIWASHI => [
             Pokemon::WISHIWASHI,
@@ -2779,7 +2792,8 @@ class PokemonForms
             Pokemon::SILVALLY,
         ],
         Pokemon::MINIOR => [
-            Pokemon::MINIOR,
+            Pokemon::MINIOR | FormsAlias::MINIOR_METEOR,
+            Pokemon::MINIOR | FormsAlias::MINIOR_RED,
         ],
         Pokemon::KOMALA => [
             Pokemon::KOMALA,
@@ -2857,7 +2871,10 @@ class PokemonForms
             Pokemon::GUZZLORD,
         ],
         Pokemon::NECROZMA => [
-            Pokemon::NECROZMA,
+            Pokemon::NECROZMA | FormsAlias::NECROZMA_NORMAL,
+            Pokemon::NECROZMA | FormsAlias::NECROZMA_DUSK,
+            Pokemon::NECROZMA | FormsAlias::NECROZMA_DAWN,
+            Pokemon::NECROZMA | FormsAlias::NECROZMA_ULTRA,
         ],
         Pokemon::MAGEARNA => [
             Pokemon::MAGEARNA,
@@ -3004,7 +3021,8 @@ class PokemonForms
             Pokemon::TOXEL,
         ],
         Pokemon::TOXTRICITY => [
-            Pokemon::TOXTRICITY,
+            Pokemon::TOXTRICITY | FormsAlias::TOXTRICITY_LOW,
+            Pokemon::TOXTRICITY | FormsAlias::TOXTRICITY_AMPED,
         ],
         Pokemon::SIZZLIPEDE => [
             Pokemon::SIZZLIPEDE,
@@ -3063,14 +3081,14 @@ class PokemonForms
         Pokemon::MR_RIME => [
             Pokemon::MR_RIME,
         ],
-        Pokemon::RINERIGUS => [
-            Pokemon::RINERIGUS,
+        Pokemon::RUNERIGUS => [
+            Pokemon::RUNERIGUS,
         ],
         Pokemon::MILCERY => [
             Pokemon::MILCERY,
         ],
         Pokemon::ALCREMIE => [
-            Pokemon::ALCREMIE,
+            Pokemon::ALCREMIE | FormsAlias::ALCREMIE_VANILLA,
         ],
         Pokemon::FALINKS => [
             Pokemon::FALINKS,
@@ -3091,10 +3109,12 @@ class PokemonForms
             Pokemon::EISCUE,
         ],
         Pokemon::INDEEDEE => [
-            Pokemon::INDEEDEE,
+            Pokemon::INDEEDEE | FormsAlias::INDEEDEE_FEMALE,
+            Pokemon::INDEEDEE | FormsAlias::INDEEDEE_MALE,
         ],
         Pokemon::MORPEKO => [
-            Pokemon::MORPEKO,
+            Pokemon::MORPEKO | FormsAlias::MORPEKO_BELLY,
+            Pokemon::MORPEKO | FormsAlias::MORPEKO_HANGRY,
         ],
         Pokemon::CUFANT => [
             Pokemon::CUFANT,
@@ -3127,7 +3147,8 @@ class PokemonForms
             Pokemon::DRAGAPULT,
         ],
         Pokemon::ZACIAN => [
-            Pokemon::ZACIAN,
+            Pokemon::ZACIAN | FormsAlias::ZACIAN_HERO,
+            Pokemon::ZACIAN | FormsAlias::ZACIAN_CROWNED,
         ],
         Pokemon::ZAMAZENTA => [
             Pokemon::ZAMAZENTA | FormsAlias::ZAMAZENTA_HERO,

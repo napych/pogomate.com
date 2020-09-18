@@ -88,8 +88,8 @@ class Forms extends FormsAlias
         ],
         Pokemon::KYUREM => [
             self::KYUREM_NORMAL => null,
-            self::KYUREM_BLACK => 'Black',
-            self::KYUREM_WHITE => 'White'
+            self::KYUREM_BLACK => 'Black Kyurem',
+            self::KYUREM_WHITE => 'White Kyurem'
         ],
         Pokemon::DEERLING => [
             self::DEERLING_SPRING => 'Spring Form',
@@ -138,6 +138,53 @@ class Forms extends FormsAlias
             self::GENESECT_DOUSE => 'Douse Drive',
             self::GENESECT_SHOCK => 'Shock Drive'
         ],
+        Pokemon::AEGISLASH => [
+            self::AEGISLASH_SHIELD => 'Shield Forme',
+            self::AEGISLASH_BLADE => 'Blade Forme'
+        ],
+        Pokemon::ZYGARGE => [
+            self::ZYGARGE_HALF => '50% Forme',
+            self::ZYGARGE_TENTH => '10% Forme',
+            self::ZYGARGE_FULL => 'Complete Forme'
+        ],
+        Pokemon::HOOPA => [
+            self::HOOPA_CONFINED => 'Hoopa Confined',
+            self::HOOPA_UNBOUND => 'Hoopa Unbound'
+        ],
+        Pokemon::LYCANROC => [
+            self::LYCANROC_MIDDAY => 'Midday Form',
+            self::LYCANROC_MIDNIGHT => 'Midnight Form',
+            self::LYCANROC_DUSK => 'Dusk Form'
+        ],
+        Pokemon::MINIOR => [
+            self::MINIOR_METEOR => 'Meteor Form',
+            self::MINIOR_RED => 'Red Core'
+        ],
+        Pokemon::NECROZMA => [
+            self::NECROZMA_NORMAL => null,
+            self::NECROZMA_DUSK => 'Dusk Mane',
+            self::NECROZMA_DAWN => 'Dawn Wings',
+            self::NECROZMA_ULTRA => 'Ultra Necrozma'
+        ],
+        Pokemon::TOXTRICITY => [
+            self::TOXTRICITY_LOW => 'Low Key Form',
+            self::TOXTRICITY_AMPED => 'Amped Form'
+        ],
+        Pokemon::ALCREMIE => [
+            self::ALCREMIE_VANILLA => 'Vanilla Cream'
+        ],
+        Pokemon::INDEEDEE => [
+            self::INDEEDEE_FEMALE => 'Female',
+            self::INDEEDEE_MALE => 'Male'
+        ],
+        Pokemon::MORPEKO => [
+            self::MORPEKO_BELLY => 'Full Belly Mode',
+            self::MORPEKO_HANGRY => 'Hangry Mode'
+        ],
+        Pokemon::ZACIAN => [
+            self::ZACIAN_HERO => 'Hero of Many Battles',
+            self::ZACIAN_CROWNED => 'Crowned Sword'
+        ],
         Pokemon::ZAMAZENTA => [
             self::ZAMAZENTA_HERO => 'Hero of Many Battles',
             self::ZAMAZENTA_CROWNED => 'Crowned Shield'
@@ -155,16 +202,6 @@ class Forms extends FormsAlias
         Pokemon::KYOGRE => [null, 'Primal Reversion'],
         Pokemon::GROUDON => [null, 'Primal Reversion'],
 //        Pokemon::FURFROU => ['Natural Form', 'Heart Trim', 'Star Trim', 'Diamond Trim'],
-        Pokemon::AEGISLASH => ['Shield Forme', 'Blade Forme'],
-        Pokemon::ZYGARGE => ['50% Forme', '10% Forme', 'Complete Forme'],
-        Pokemon::HOOPA => ['Hoopa Confined', 'Hoopa Unbound'],
-        Pokemon::LYCANROC => ['Midday Form', 'Midnight Form', 'Dusk Form'],
         Pokemon::WISHIWASHI => ['Solo Form', 'School Form'],
-        Pokemon::MINIOR => ['Meteor Form', 'Red Core'],
-        Pokemon::NECROZMA => [null, 'Dusk Mane', 'Dawn Wings', 'Ultra Necrozma'],
-        Pokemon::TOXTRICITY => ['Low Key Form', 'Amped Form'],
-        Pokemon::INDEEDEE => ['Female', 'Male'],
-//        Pokemon::MORPEKO => ['Full Belly Mode', 'Hangry Mode'],
-        Pokemon::ZACIAN => ['Hero of Many Battles', 'Crowned Sword'],
     ];
 }
