@@ -14,7 +14,7 @@
 -->
 <!--        <h2 class="h3">Usage</h2>-->
         <xsl:apply-templates select="pokemon" mode="reasons"/>
-        <xsl:apply-templates select="pokemon" mode="pokemon-info"/>
+<!--        <xsl:apply-templates select="pokemon" mode="pokemon-info"/>-->
         <h2 class="h3">Pokémon search</h2>
         <xsl:call-template name="snippet-search"/>
     </xsl:template>
@@ -67,6 +67,12 @@
                 </xsl:choose>
             </div>
         </xsl:for-each>
+        <xsl:if test="count(evolve/evolve)>0">
+            <p class="evolutions">
+                <xsl:text>Evolutions: </xsl:text>
+                <xsl:apply-templates select="evolve"/>
+            </p>
+        </xsl:if>
     </xsl:template>
 
     <xsl:template match="reason" mode="pokemon">
