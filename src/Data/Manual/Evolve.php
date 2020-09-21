@@ -971,29 +971,4 @@ class Evolve
         Pokemon::URSHIFU | Mods::FORM2 => Pokemon::KUBFU,
         Pokemon::ZARUDE => null
     ];
-
-    /*
-    public static function getEvolveFrom(int $pokedexId)
-    {
-        return self::EVOLVE_FROM[$pokedexId] ?? null;
-    }
-
-    public static function getEvolveTo(int $pokedexId, $baseForms = false)
-    {
-        $result = [];
-        foreach (self::EVOLVE_FROM as $to => $from) {
-            if ($from !== $pokedexId) {
-                continue;
-            }
-            if ($baseForms) {
-                $result[Mods::getId($to)] = 1;
-            } else {
-                $result[$to] = 1;
-            }
-        }
-        $result = array_keys($result);
-        sort($result);
-        return $result;
-    }
-    */
 }
