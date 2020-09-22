@@ -172,13 +172,13 @@ class Strings
             }
             if (!empty($sortedBits)) {
                 // TODO: re-enable this when !alola and !galar work again
-                //$result[] = '!' . $id . ',!' . implode(',!', $sortedBits);
+                $result[] = '!' . $id . ',!' . implode(',!', $sortedBits);
                 // TODO: remove this when !alola and !galar work again
-                if (!empty($bits[self::SHADOW])) {
-                    $result[] = '!' . $id . ',!shadow';
-                } else {
-                    $result[] = '!' . $id;
-                }
+//                if (!empty($bits[self::SHADOW])) {
+//                    $result[] = '!' . $id . ',!shadow';
+//                } else {
+//                    $result[] = '!' . $id;
+//                }
             }
         }
 
