@@ -123,11 +123,14 @@ class Sitemap
         }
 
         // files
-        for ($page = 1; $page < $pages; $page++) {
+        for ($page = 1; $page <= $pages; $page++) {
             $doc = new \DOMDocument();
             $doc->formatOutput = true;
             $root = $doc->appendChild($doc->createElementNS('http://www.sitemaps.org/schemas/sitemap/0.9', 'urlset'));
             for ($i = ($page - 1) * $perpage; $i < $page * $perpage; $i++) {
+                if (!isset($result[$i])) {
+                    continue;
+                }
                 $node = $root->appendChild($doc->createElement('url'));
                 $node->appendChild($doc->createElement('loc', 'https://pogomate.com' . str_replace('&', '&amp;', $result[$i])));
                 $node->appendChild($doc->createElement('lastmod', $conf['lastmod']));
