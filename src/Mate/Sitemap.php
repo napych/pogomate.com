@@ -12,8 +12,8 @@ class Sitemap
 {
     protected function __construct()
     {
-//        $this->prefix = 'https://' . Envi::getHost(true) . '/sitemap/';
-        $this->prefix = '/sitemap';
+        $this->prefix = 'https://' . Envi::getHost(true) . '/sitemap';
+//        $this->prefix = '/sitemap';
     }
 
     protected function __clone()
