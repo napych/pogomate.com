@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>/</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>/cleanup</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>/lists</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>/pokemon</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+</urlset>

@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'version' => '0.99.25',
+    'version' => '0.99.26',
 
     'locale' => 'en_US',
     'plugins' => [
@@ -33,5 +33,24 @@ return [
 
     'auth' => [
         'registration' => false
+    ],
+
+    'sitemap' => [
+        'maxLines' => 10000,
+        'main' => [
+            ['loc' => '/', 'changefreq' => 'weekly'],
+            ['loc' => '/cleanup', 'changefreq' => 'weekly'],
+            ['loc' => '/lists', 'changefreq' => 'weekly'],
+            ['loc' => '/pokemon', 'changefreq' => 'monthly']
+        ],
+        'mainLastmod' => '2020-09-22',
+        'pokemon' => [
+            'lastmod' => '2020-09-22',
+            'changefreq' => 'weekly'
+        ],
+        'counters' => [
+            'lastmod' => '2020-09-22',
+            'changefreq' => 'monthly'
+        ]
     ]
 ];
