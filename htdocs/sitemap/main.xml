@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/</loc>
+    <loc>https://pogomate.com/</loc>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>/cleanup</loc>
+    <loc>https://pogomate.com/cleanup</loc>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>/lists</loc>
+    <loc>https://pogomate.com/lists</loc>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>/pokemon</loc>
+    <loc>https://pogomate.com/pokemon</loc>
     <changefreq>monthly</changefreq>
   </url>
 </urlset>

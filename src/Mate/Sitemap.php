@@ -12,7 +12,7 @@ class Sitemap
 {
     protected function __construct()
     {
-        $this->prefix = 'https://' . Envi::getHost(true) . '/sitemap';
+        $this->prefix = 'https://pogomate.com/sitemap';
 //        $this->prefix = '/sitemap';
     }
 
@@ -129,7 +129,7 @@ class Sitemap
             $root = $doc->appendChild($doc->createElementNS('http://www.sitemaps.org/schemas/sitemap/0.9', 'urlset'));
             for ($i = ($page - 1) * $perpage; $i < $page * $perpage; $i++) {
                 $node = $root->appendChild($doc->createElement('url'));
-                $node->appendChild($doc->createElement('loc', str_replace('&', '&amp;', $result[$i])));
+                $node->appendChild($doc->createElement('loc', 'https://pogomate.com' . str_replace('&', '&amp;', $result[$i])));
                 $node->appendChild($doc->createElement('lastmod', $conf['lastmod']));
                 $node->appendChild($doc->createElement('changefreq', $conf['changefreq']));
             }
@@ -147,7 +147,7 @@ class Sitemap
         foreach (Links::POKEMON2LINK as $link)
         {
             $node = $root->appendChild($doc->createElement('url'));
-            $node->appendChild($doc->createElement('loc', '/pokemon/' . $link));
+            $node->appendChild($doc->createElement('loc', 'https://pogomate.com/pokemon/' . $link));
             $node->appendChild($doc->createElement('lastmod', $conf['lastmod']));
             $node->appendChild($doc->createElement('changefreq', $conf['changefreq']));
         }
@@ -164,7 +164,7 @@ class Sitemap
         $root = $doc->appendChild($doc->createElementNS('http://www.sitemaps.org/schemas/sitemap/0.9', 'urlset'));
         foreach ($locs as $loc) {
             $node = $root->appendChild($doc->createElement('url'));
-            $node->appendChild($doc->createElement('loc', $loc['loc']));
+            $node->appendChild($doc->createElement('loc', 'https://pogomate.com' . $loc['loc']));
             $node->appendChild($doc->createElement('changefreq', $loc['changefreq']));
         }
         $doc->save(Envi\Roots::getRoot() . '/htdocs/sitemap/main.xml');
@@ -177,7 +177,7 @@ class Sitemap
         $root = $doc->appendChild($doc->createElementNS('http://www.sitemaps.org/schemas/sitemap/0.9', 'sitemapindex'));
         foreach ($this->index as $item) {
             $node = $root->appendChild($doc->createElement('sitemap'));
-            $node->appendChild($doc->createElement('loc', 'https://pogomate.com' . $item['loc']));
+            $node->appendChild($doc->createElement('loc', $item['loc']));
             $node->appendChild($doc->createElement('lastmod', $item['lastmod']));
         }
         $doc->save(Envi\Roots::getRoot() . '/htdocs/sitemap.xml');
