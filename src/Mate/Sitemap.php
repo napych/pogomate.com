@@ -4,7 +4,7 @@ namespace Pogo\Mate;
 
 use Difra\Config;
 use Difra\Envi;
-use Pogo\Data\Generated\Links;
+use Pogo\Data\Generated\PokemonLinks;
 use Pogo\Pokemon\Types;
 use Pogo\Pokemon;
 
@@ -147,7 +147,7 @@ class Sitemap
         $doc = new \DOMDocument();
         $doc->formatOutput = true;
         $root = $doc->appendChild($doc->createElementNS('http://www.sitemaps.org/schemas/sitemap/0.9', 'urlset'));
-        foreach (Links::POKEMON2LINK as $link)
+        foreach (PokemonLinks::POKEMON2LINK as $link)
         {
             $node = $root->appendChild($doc->createElement('url'));
             $node->appendChild($doc->createElement('loc', 'https://pogomate.com/pokemon/' . $link));

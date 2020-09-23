@@ -7,8 +7,7 @@ use Pogo\Data\Generated\Evolutions;
 use Pogo\Data\Generated\PokemonData;
 use Pogo\Data\Generated\PokemonForms;
 use Pogo\Data\Manual\Evolve;
-use Pogo\Data\Manual\Forms;
-use Pogo\Data\Generated\Links;
+use Pogo\Data\Generated\PokemonLinks;
 use Pogo\Pokemon\Mods;
 
 use const false;
@@ -44,10 +43,10 @@ class Pokemon extends Data\Manual\PokemonList
      */
     public static function getByLink($name): ?Pokemon
     {
-        if (!isset(Links::LINK2POKEMON[$name])) {
+        if (!isset(PokemonLinks::LINK2POKEMON[$name])) {
             return null;
         }
-        return static::get(Links::LINK2POKEMON[$name]);
+        return static::get(PokemonLinks::LINK2POKEMON[$name]);
     }
 
     /**
@@ -57,11 +56,11 @@ class Pokemon extends Data\Manual\PokemonList
      */
     public static function getFormsByLink(string $link, bool $ignorePurified = true): ?array
     {
-        if (empty(PokemonForms::FORMS[Links::LINK2POKEMON[$link]])) {
+        if (empty(PokemonForms::FORMS[PokemonLinks::LINK2POKEMON[$link]])) {
             return null;
         }
         $result = [];
-        foreach (PokemonForms::FORMS[Links::LINK2POKEMON[$link]] as $formCode) {
+        foreach (PokemonForms::FORMS[PokemonLinks::LINK2POKEMON[$link]] as $formCode) {
             if ($ignorePurified && Mods::isPurified($formCode)) {
                 continue;
             }
@@ -152,7 +151,7 @@ class Pokemon extends Data\Manual\PokemonList
 
     public function getLinkName(): string
     {
-        return Links::POKEMON2LINK[$this->getPokedexId()];
+        return PokemonLinks::POKEMON2LINK[$this->getPokedexId()];
     }
 
     /**

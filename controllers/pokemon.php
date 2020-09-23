@@ -31,6 +31,11 @@ class Pokemon extends \Difra\Controller
 
     private function pokemon(string $name)
     {
+        // old links correction
+        if (strpos($name, '_') !== false) {
+            View::redirect($this->getUri() . '/' . str_replace('_', '-', $name), true);
+        }
+
         // pokemon page
         $pokemonList = \Pogo\Pokemon::getFormsByLink($name);
         if (empty($pokemonList)) {
