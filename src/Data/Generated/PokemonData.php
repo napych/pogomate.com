@@ -2529,6 +2529,22 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_PSYCHIC, Moves::MOVE_THUNDERBOLT, Moves::MOVE_ICE_BEAM, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_FLAMETHROWER],
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_PSYSTRIKE, Moves::MOVE_SHADOW_BALL, Moves::MOVE_HYPER_BEAM]
         ],
+        Pokemon::MEWTWO | FormsAlias::MEWTWO_ARMORED => [
+            self::FIELD_NAME => 'Armored Mewtwo',
+            self::FIELD_NAME_SHORT => 'Mewtwo',
+            self::FIELD_ATTACK => 182,
+            self::FIELD_DEFENSE => 278,
+            self::FIELD_STAMINA => 214,
+            self::FIELD_TYPE1 => Types::PSYCHIC,
+            self::FIELD_LEGENDARY => true,
+            self::FIELD_TRANSFERABLE => true,
+            self::FIELD_BUDDY_DISTANCE => 20,
+            self::FIELD_THIRD_MOVE_CANDY => 100,
+            self::FIELD_THIRD_MOVE_STARDUST => 100000,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_IRON_TAIL_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_SLIDE, Moves::MOVE_DYNAMIC_PUNCH, Moves::MOVE_EARTHQUAKE, Moves::MOVE_FUTURESIGHT],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_PSYSTRIKE]
+        ],
         Pokemon::MEW => [
             self::FIELD_NAME => 'Mew',
             self::FIELD_NAME_SHORT => 'Mew',
@@ -13729,22 +13745,6 @@ class PokemonData
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ICE,
             self::FIELD_TYPE2 => Types::PSYCHIC
-        ],
-        Pokemon::MEWTWO | FormsAlias::MEWTWO_ARMORED => [
-            self::FIELD_NAME => 'Mewtwo',
-            self::FIELD_NAME_SHORT => 'Mewtwo',
-            self::FIELD_ATTACK => 182,
-            self::FIELD_DEFENSE => 278,
-            self::FIELD_STAMINA => 214,
-            self::FIELD_TYPE1 => Types::PSYCHIC,
-            self::FIELD_LEGENDARY => true,
-            self::FIELD_TRANSFERABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 20,
-            self::FIELD_THIRD_MOVE_CANDY => 100,
-            self::FIELD_THIRD_MOVE_STARDUST => 100000,
-            self::FIELD_FAST_MOVES => [Moves::MOVE_CONFUSION_FAST, Moves::MOVE_IRON_TAIL_FAST],
-            self::FIELD_CHARGE_MOVES => [Moves::MOVE_ROCK_SLIDE, Moves::MOVE_DYNAMIC_PUNCH, Moves::MOVE_EARTHQUAKE, Moves::MOVE_FUTURESIGHT],
-            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_PSYSTRIKE]
         ],
         Pokemon::CORSOLA | Mods::GALARIAN => [
             self::FIELD_NAME => 'Galarian Corsola',

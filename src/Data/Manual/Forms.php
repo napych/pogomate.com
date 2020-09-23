@@ -54,6 +54,10 @@ class Forms extends FormsAlias
             self::GASTRODON_EAST_SEA => 'East Sea',
             self::GASTRODON_WEST_SEA => 'West Sea'
         ],
+        Pokemon::MEWTWO => [
+            self::MEWTWO_NORMAL => null,
+            self::MEWTWO_ARMORED => 'Armored Mewtwo'
+        ],
         Pokemon::SHAYMIN => [
             self::SHAYMIN_LAND => 'Land Forme',
             self::SHAYMIN_SKY => 'Sky Forme',

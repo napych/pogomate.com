@@ -176,9 +176,10 @@ class Pokemon extends Data\Manual\PokemonList
     /**
      * @param \DOMElement|\DOMNode $node
      * @param bool|string $addNode
+     * @param bool $extended
      * @return \DOMElement|\DOMNode
      */
-    public function getXML($node, $addNode = false)
+    public function getXML($node, $addNode = false, bool $extended = false)
     {
         if ($addNode === true) {
             $node = $node->appendChild($node->ownerDocument->createElement('pokemon'));
@@ -190,6 +191,15 @@ class Pokemon extends Data\Manual\PokemonList
         $node->setAttribute('name', $this->getName());
         $node->setAttribute('shortName', $this->getShortName());
         $node->setAttribute('link', $this->getLinkName());
+        if (!$extended) {
+            return $node;
+        }
+
+        $data = PokemonData::POKEMON[$this->code];
+        $node->setAttribute('unreleased', !empty($data[PokemonData::FIELD_UNRELEASED]) ? '1' : '0');
+        $node->setAttribute('type1', $data[PokemonData::FIELD_TYPE1]);
+        $node->setAttribute('type2', $data[PokemonData::FIELD_TYPE2] ?? '');
+
         return $node;
     }
 

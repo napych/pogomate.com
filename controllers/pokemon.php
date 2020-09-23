@@ -2,21 +2,24 @@
 
 namespace Controller;
 
+use Difra\Debugger;
 use Difra\Param\AnyString;
 use Difra\View;
 use Difra\View\HttpError;
 
 class Pokemon extends \Difra\Controller
 {
-    protected function indexAction(AnyString $name = null)
+    protected function indexAction(AnyString $link = null)
     {
-        $this->putExpires(86400);
+        if (!Debugger::isEnabled()) {
+            $this->putExpires(86400);
+        }
 
         // search form
-        if (!$name) {
+        if (!$link) {
             $this->searchForm();
         } else {
-            $this->pokemon($name->val());
+            $this->pokemon($link->val());
         }
     }
 
@@ -54,7 +57,7 @@ class Pokemon extends \Difra\Controller
         $all->addLists(\Pogo\Lists::getAll());
 
         foreach ($pokemonList as $pokemon) {
-            $pokemonNode = $pokemon->getXML($node, true);
+            $pokemonNode = $pokemon->getXML($node, true, true);
 
             $pokemon->getFamilyXML($pokemonNode, false);
 
