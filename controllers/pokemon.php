@@ -11,9 +11,7 @@ class Pokemon extends \Difra\Controller
 {
     protected function indexAction(AnyString $link = null)
     {
-        if (!Debugger::isEnabled()) {
-            $this->putExpires(86400);
-        }
+        $this->putExpires(86400);
 
         // search form
         if (!$link) {
