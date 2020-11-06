@@ -24,8 +24,8 @@ return [
     'instances' => [
         'main' => [
             'include' => [
-                'bootstrap' => true,
-                'jquery' => true,
+                'bootstrap4' => true,
+                'jquery3' => true,
                 'all' => true,
             ]
         ]

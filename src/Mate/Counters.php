@@ -137,8 +137,7 @@ class Counters
      * @param bool|string $addNode
      * @return \DOMElement|\DOMNode
      */
-    public
-    function getXML(
+    public function getXML(
         $node,
         $addNode = false
     ) {

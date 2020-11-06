@@ -4,10 +4,20 @@
         {
             "type": "vcs",
             "url": "git@github.com:difra-org/difra.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:difra-org/bootstrap4.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:difra-org/jquery3.git"
         }
     ],
     "require": {
         "difra/difra": "dev-master as 7.0.0",
+        "difra/bootstrap4": "*",
+        "difra/jquery3": "*",
         "symfony/console": "*",
         "ext-dom": "*",
         "ext-json": "*"

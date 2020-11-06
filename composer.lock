@@ -4,20 +4,102 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9a13a8973e1f0829fe21a62eb9bcac0f",
+    "content-hash": "a1b1e8e9b64fdb64bfa6f03d7b991819",
     "packages": [
+        {
+            "name": "components/jquery",
+            "version": "3.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/components/jquery.git",
+                "reference": "b33e8f0f9a1cb2ae390cf05d766a900b53d2125b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/components/jquery/zipball/b33e8f0f9a1cb2ae390cf05d766a900b53d2125b",
+                "reference": "b33e8f0f9a1cb2ae390cf05d766a900b53d2125b",
+                "shasum": ""
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "jquery.js"
+                    ],
+                    "files": [
+                        "jquery.min.js",
+                        "jquery.min.map",
+                        "jquery.slim.js",
+                        "jquery.slim.min.js",
+                        "jquery.slim.min.map"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "JS Foundation and other contributors"
+                }
+            ],
+            "description": "jQuery JavaScript Library",
+            "homepage": "http://jquery.com",
+            "time": "2020-05-05T13:21:02+00:00"
+        },
+        {
+            "name": "difra/bootstrap4",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/difra-org/bootstrap4.git",
+                "reference": "c33ba06a430503355742f8b3bc5157ce1cd1dfeb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/difra-org/bootstrap4/archive/1.0.1.zip",
+                "reference": "c33ba06a430503355742f8b3bc5157ce1cd1dfeb"
+            },
+            "require": {
+                "difra/jquery3": "*",
+                "twbs/bootstrap": "4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "main.php"
+                ],
+                "classmap": [],
+                "psr-4": {
+                    "Difra\\Bootstrap4\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Eduard Kutuev",
+                    "email": "ed@napych.com"
+                }
+            ],
+            "description": "Bootstrap 4 bindings for Difra framework",
+            "time": "2020-10-21T08:59:15+00:00"
+        },
         {
             "name": "difra/difra",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/difra-org/difra.git",
-                "reference": "a7770312deecfcce43091fac79e2c7d115e8a8ca"
+                "reference": "be84267742a179b4e95f10176cf1f45961ac61e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/difra-org/difra/zipball/a7770312deecfcce43091fac79e2c7d115e8a8ca",
-                "reference": "a7770312deecfcce43091fac79e2c7d115e8a8ca",
+                "url": "https://api.github.com/repos/difra-org/difra/zipball/be84267742a179b4e95f10176cf1f45961ac61e4",
+                "reference": "be84267742a179b4e95f10176cf1f45961ac61e4",
                 "shasum": ""
             },
             "require": {
@@ -56,9 +138,49 @@
                 "php"
             ],
             "support": {
-                "source": "https://github.com/difra-org/difra/tree/master"
+                "source": "https://github.com/difra-org/difra/tree/master",
+                "issues": "https://github.com/difra-org/difra/issues"
             },
-            "time": "2020-09-10T10:40:59+00:00"
+            "time": "2020-11-02T17:50:42+00:00"
+        },
+        {
+            "name": "difra/jquery3",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/difra-org/jquery3.git",
+                "reference": "6b531c06e65b97b3f1e17bcb00461ac305cbc6c4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/difra-org/jquery3/archive/1.0.0.zip",
+                "reference": "6b531c06e65b97b3f1e17bcb00461ac305cbc6c4"
+            },
+            "require": {
+                "components/jquery": "3.*"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "main.php"
+                ],
+                "classmap": [],
+                "psr-4": {
+                    "Difra\\Jquery3\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Eduard Kutuev",
+                    "email": "ed@napych.com"
+                }
+            ],
+            "description": "jQuery bindings for Difra framework",
+            "time": "2020-10-21T08:56:36+00:00"
         },
         {
             "name": "oyejorge/less.php",
@@ -126,21 +248,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/container.git",
-                "reference": "fc1bc363ecf887921e3897c7b1dad3587ae154eb"
+                "reference": "381524e8568e07f31d504a945b88556548c8c42e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/container/zipball/fc1bc363ecf887921e3897c7b1dad3587ae154eb",
-                "reference": "fc1bc363ecf887921e3897c7b1dad3587ae154eb",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/381524e8568e07f31d504a945b88556548c8c42e",
+                "reference": "381524e8568e07f31d504a945b88556548c8c42e",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": ">=7.2.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -155,7 +277,7 @@
             "authors": [
                 {
                     "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
+                    "homepage": "https://www.php-fig.org/"
                 }
             ],
             "description": "Common Container Interface (PHP FIG PSR-11)",
@@ -167,7 +289,7 @@
                 "container-interop",
                 "psr"
             ],
-            "time": "2019-10-04T14:07:35+00:00"
+            "time": "2020-10-13T07:07:53+00:00"
         },
         {
             "name": "scssphp/scssphp",
@@ -331,20 +453,20 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "dev-master",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "1c302646f6efc070cd46856e600e5e0684d6b454"
+                "reference": "fade6deebd931cfd7a544f68479405a6a08979a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/1c302646f6efc070cd46856e600e5e0684d6b454",
-                "reference": "1c302646f6efc070cd46856e600e5e0684d6b454",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/fade6deebd931cfd7a544f68479405a6a08979a3",
+                "reference": "fade6deebd931cfd7a544f68479405a6a08979a3",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=7.1"
             },
             "suggest": {
                 "ext-ctype": "For best performance"
@@ -352,7 +474,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.18-dev"
+                    "dev-main": "1.21-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -403,24 +525,24 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-07-14T12:35:20+00:00"
+            "time": "2020-10-26T13:35:45+00:00"
         },
         {
             "name": "symfony/polyfill-intl-grapheme",
-            "version": "dev-master",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-grapheme.git",
-                "reference": "b740103edbdcc39602239ee8860f0f45a8eb9aa5"
+                "reference": "ee2f954ea0f9ab61dad0170eddc919ee83bef327"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-grapheme/zipball/b740103edbdcc39602239ee8860f0f45a8eb9aa5",
-                "reference": "b740103edbdcc39602239ee8860f0f45a8eb9aa5",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-grapheme/zipball/ee2f954ea0f9ab61dad0170eddc919ee83bef327",
+                "reference": "ee2f954ea0f9ab61dad0170eddc919ee83bef327",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=7.1"
             },
             "suggest": {
                 "ext-intl": "For best performance"
@@ -428,7 +550,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.18-dev"
+                    "dev-main": "1.21-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -481,24 +603,24 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-07-14T12:35:20+00:00"
+            "time": "2020-10-26T13:35:45+00:00"
         },
         {
             "name": "symfony/polyfill-intl-normalizer",
-            "version": "dev-master",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-normalizer.git",
-                "reference": "37078a8dd4a2a1e9ab0231af7c6cb671b2ed5a7e"
+                "reference": "69609f9f06790591b4b13a45ee117e7bab6395aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-normalizer/zipball/37078a8dd4a2a1e9ab0231af7c6cb671b2ed5a7e",
-                "reference": "37078a8dd4a2a1e9ab0231af7c6cb671b2ed5a7e",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-normalizer/zipball/69609f9f06790591b4b13a45ee117e7bab6395aa",
+                "reference": "69609f9f06790591b4b13a45ee117e7bab6395aa",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=7.1"
             },
             "suggest": {
                 "ext-intl": "For best performance"
@@ -506,7 +628,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.18-dev"
+                    "dev-main": "1.21-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -562,24 +684,24 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-07-14T12:35:20+00:00"
+            "time": "2020-10-26T13:35:45+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "dev-master",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "48928d471ede0548b399f54b0286fe0d0ed79267"
+                "reference": "401c9d9d3400c53a8f1a39425f0543406c137a43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/48928d471ede0548b399f54b0286fe0d0ed79267",
-                "reference": "48928d471ede0548b399f54b0286fe0d0ed79267",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/401c9d9d3400c53a8f1a39425f0543406c137a43",
+                "reference": "401c9d9d3400c53a8f1a39425f0543406c137a43",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=7.1"
             },
             "suggest": {
                 "ext-mbstring": "For best performance"
@@ -587,7 +709,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.18-dev"
+                    "dev-main": "1.21-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -639,29 +761,29 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-09-14T11:01:58+00:00"
+            "time": "2020-10-26T13:35:45+00:00"
         },
         {
             "name": "symfony/polyfill-php73",
-            "version": "dev-master",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php73.git",
-                "reference": "fffa1a52a023e782cdcc221d781fe1ec8f87fcca"
+                "reference": "8c0d39c1526009b97f43beea4cc685bbc353a70b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/fffa1a52a023e782cdcc221d781fe1ec8f87fcca",
-                "reference": "fffa1a52a023e782cdcc221d781fe1ec8f87fcca",
+                "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/8c0d39c1526009b97f43beea4cc685bbc353a70b",
+                "reference": "8c0d39c1526009b97f43beea4cc685bbc353a70b",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=7.1"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.18-dev"
+                    "dev-main": "1.21-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -715,29 +837,29 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-07-14T12:35:20+00:00"
+            "time": "2020-10-26T13:35:45+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "dev-master",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
-                "reference": "c3616e7b303d0bd8c261de7921c72bf818b52b91"
+                "reference": "3a11f3dfb34ad50f978cb2b8cf936933b87739aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/c3616e7b303d0bd8c261de7921c72bf818b52b91",
-                "reference": "c3616e7b303d0bd8c261de7921c72bf818b52b91",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/3a11f3dfb34ad50f978cb2b8cf936933b87739aa",
+                "reference": "3a11f3dfb34ad50f978cb2b8cf936933b87739aa",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.0.8"
+                "php": ">=7.1"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.18-dev"
+                    "dev-main": "1.21-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -795,20 +917,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-09-14T10:02:33+00:00"
+            "time": "2020-10-26T13:35:45+00:00"
         },
         {
             "name": "symfony/service-contracts",
-            "version": "dev-master",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/service-contracts.git",
-                "reference": "d15da7ba4957ffb8f1747218be9e1a121fd298a1"
+                "reference": "0aeee2f70f4550e6c48c9a796d98f5ceda58dfda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/d15da7ba4957ffb8f1747218be9e1a121fd298a1",
-                "reference": "d15da7ba4957ffb8f1747218be9e1a121fd298a1",
+                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/0aeee2f70f4550e6c48c9a796d98f5ceda58dfda",
+                "reference": "0aeee2f70f4550e6c48c9a796d98f5ceda58dfda",
                 "shasum": ""
             },
             "require": {
@@ -820,8 +942,9 @@
             },
             "type": "library",
             "extra": {
+                "branch-version": "2.3",
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-main": "2.3-dev"
                 },
                 "thanks": {
                     "name": "symfony/contracts",
@@ -871,20 +994,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-09-07T11:33:47+00:00"
+            "time": "2020-10-14T17:08:19+00:00"
         },
         {
             "name": "symfony/string",
-            "version": "dev-master",
+            "version": "5.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/string.git",
-                "reference": "82a2cb8a1b96d6a8c0d801eaedf0ac7f0281aded"
+                "reference": "40e975edadd4e32cd16f3753b3bad65d9ac48242"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/string/zipball/82a2cb8a1b96d6a8c0d801eaedf0ac7f0281aded",
-                "reference": "82a2cb8a1b96d6a8c0d801eaedf0ac7f0281aded",
+                "url": "https://api.github.com/repos/symfony/string/zipball/40e975edadd4e32cd16f3753b3bad65d9ac48242",
+                "reference": "40e975edadd4e32cd16f3753b3bad65d9ac48242",
                 "shasum": ""
             },
             "require": {
@@ -902,11 +1025,6 @@
                 "symfony/var-exporter": "^4.4|^5.0"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.2-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Symfony\\Component\\String\\": ""
@@ -956,7 +1074,64 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-09-11T12:25:32+00:00"
+            "time": "2020-10-24T12:08:07+00:00"
+        },
+        {
+            "name": "twbs/bootstrap",
+            "version": "v4.5.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twbs/bootstrap.git",
+                "reference": "a716fb03f965dc0846df479e14388b1b4b93d7ce"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/a716fb03f965dc0846df479e14388b1b4b93d7ce",
+                "reference": "a716fb03f965dc0846df479e14388b1b4b93d7ce",
+                "shasum": ""
+            },
+            "replace": {
+                "twitter/bootstrap": "self.version"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Otto",
+                    "email": "markdotto@gmail.com"
+                },
+                {
+                    "name": "Jacob Thornton",
+                    "email": "jacobthornton@gmail.com"
+                }
+            ],
+            "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+            "homepage": "https://getbootstrap.com/",
+            "keywords": [
+                "JS",
+                "css",
+                "framework",
+                "front-end",
+                "mobile-first",
+                "responsive",
+                "sass",
+                "web"
+            ],
+            "funding": [
+                {
+                    "url": "https://opencollective.com/bootstrap",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2020-10-13T15:38:30+00:00"
         }
     ],
     "packages-dev": [],
