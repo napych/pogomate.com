@@ -37,7 +37,7 @@ class ML
         ],
         'Tier 2.5' => [
             Pokemon::MACHAMP,
-            Pokemon::REGICE,
+            Pokemon::REGIROCK,
             Pokemon::LANDORUS | FormsAlias::LANDORUS_INCARNATE,
             Pokemon::RESHIRAM,
             Pokemon::CONKELDURR,
@@ -46,16 +46,17 @@ class ML
             Pokemon::MAMOSWINE,
             Pokemon::RHYPERIOR,
             Pokemon::MAGNEZONE,
-            Pokemon::LUCARIO,
             Pokemon::LATIOS,
+            Pokemon::REGICE,
+            Pokemon::LUCARIO,
             Pokemon::MACHAMP | Mods::SHADOW,
-            Pokemon::REGIROCK,
-            Pokemon::ZAPDOS,
-            Pokemon::HARIYAMA,
+            Pokemon::HO_OH,
             Pokemon::TYRANITAR,
             Pokemon::SUICUNE,
             Pokemon::RAIKOU,
             Pokemon::GYARADOS,
+            Pokemon::HARIYAMA,
+            Pokemon::ZAPDOS,
         ]
     ];
 }

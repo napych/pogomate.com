@@ -11,36 +11,39 @@ class Defenders
 
     const TIERS = [
         'Tier 1' => [
-            Pokemon::BLISSEY
+            Pokemon::BLISSEY,
+            Pokemon::METAGROSS,
         ],
         'Tier 2' => [
-            Pokemon::DRAGONITE,
-            Pokemon::METAGROSS,
+            Pokemon::SNORLAX,
+            Pokemon::DRIFBLIM,
             Pokemon::MILOTIC,
-            Pokemon::DRAGONITE | Mods::SHADOW
-        ],
-        'Tier 2.5' => [
-            Pokemon::EXEGGUTOR,
-            Pokemon::FERROTHORN,
-            Pokemon::GYARADOS,
-            Pokemon::HYPNO,
-            Pokemon::SLOWBRO,
-            Pokemon::SLOWKING,
-            Pokemon::STEELIX
         ],
         'Tier 3' => [
-            Pokemon::CHANSEY,
-            Pokemon::MELMETAL,
-            Pokemon::SLAKING,
-            Pokemon::SNORLAX
-        ],
-        'Tier 3.5' => [
-            Pokemon::CHARIZARD,
-            Pokemon::CLAYDOL,
-            Pokemon::DONPHAN,
-            Pokemon::EMPOLEON,
+            Pokemon::GYARADOS,
+            Pokemon::GARCHOMP,
+            Pokemon::DRAGONITE,
+            Pokemon::TYRANITAR,
             Pokemon::GARDEVOIR,
-            Pokemon::TOGEKISS
+        ],
+        'Tier 4' => [
+            Pokemon::CONKELDURR,
+            Pokemon::MAGNEZONE,
+            Pokemon::VENUSAUR,
+            Pokemon::AZUMARILL,
+            Pokemon::ESCAVALIER,
+            Pokemon::SALAMENCE,
+            Pokemon::SWAMPERT,
+            Pokemon::MELMETAL,
+            Pokemon::CHANSEY,
+        ],
+        'Tier 5' => [
+            Pokemon::BLASTOISE,
+            Pokemon::STEELIX,
+            Pokemon::BASTIODON,
+            Pokemon::MUK | Mods::ALOLAN,
+            Pokemon::RHYPERIOR,
+            Pokemon::SLAKING,
         ]
     ];
 }
