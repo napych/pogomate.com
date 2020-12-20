@@ -234,8 +234,12 @@ class MovesLinks
         Moves::MOVE_FLYING_PRESS => 'flying-press',
         Moves::MOVE_AURA_SPHERE => 'aura-sphere',
         Moves::MOVE_ROCK_WRECKER => 'rock-wrecker',
+        Moves::MOVE_AEROBLAST => 'aeroblast',
         Moves::MOVE_FLY => 'fly',
-        Moves::MOVE_V_CREATE => 'v-create'
+        Moves::MOVE_V_CREATE => 'v-create',
+        Moves::MOVE_TRI_ATTACK => '',
+        Moves::MOVE_GUST_FAST => '',
+        Moves::MOVE_INCINERATE_FAST => ''
     ];
     
     const LINK2MOVE = [
@@ -478,7 +482,13 @@ class MovesLinks
         'flying-press' => [Moves::MOVE_FLYING_PRESS],
         'aura-sphere' => [Moves::MOVE_AURA_SPHERE],
         'rock-wrecker' => [Moves::MOVE_ROCK_WRECKER],
+        'aeroblast' => [Moves::MOVE_AEROBLAST],
         'fly' => [Moves::MOVE_FLY],
-        'v-create' => [Moves::MOVE_V_CREATE]
+        'v-create' => [Moves::MOVE_V_CREATE],
+        '' => [
+            Moves::MOVE_TRI_ATTACK,
+            Moves::MOVE_GUST_FAST,
+            Moves::MOVE_INCINERATE_FAST
+        ]
     ];
 }

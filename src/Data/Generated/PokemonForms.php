@@ -365,18 +365,26 @@ class PokemonForms
         Pokemon::PONYTA => [
             Pokemon::PONYTA,
             Pokemon::PONYTA | Mods::GALARIAN,
+            Pokemon::PONYTA | Mods::PURIFIED,
+            Pokemon::PONYTA | Mods::SHADOW,
         ],
         Pokemon::RAPIDASH => [
             Pokemon::RAPIDASH,
             Pokemon::RAPIDASH | Mods::GALARIAN,
+            Pokemon::RAPIDASH | Mods::PURIFIED,
+            Pokemon::RAPIDASH | Mods::SHADOW,
         ],
         Pokemon::SLOWPOKE => [
             Pokemon::SLOWPOKE,
             Pokemon::SLOWPOKE | Mods::GALARIAN,
+            Pokemon::SLOWPOKE | Mods::PURIFIED,
+            Pokemon::SLOWPOKE | Mods::SHADOW,
         ],
         Pokemon::SLOWBRO => [
             Pokemon::SLOWBRO,
             Pokemon::SLOWBRO | Mods::GALARIAN,
+            Pokemon::SLOWBRO | Mods::PURIFIED,
+            Pokemon::SLOWBRO | Mods::SHADOW,
         ],
         Pokemon::MAGNEMITE => [
             Pokemon::MAGNEMITE,
@@ -556,6 +564,8 @@ class PokemonForms
         Pokemon::MR_MIME => [
             Pokemon::MR_MIME,
             Pokemon::MR_MIME | Mods::GALARIAN,
+            Pokemon::MR_MIME | Mods::PURIFIED,
+            Pokemon::MR_MIME | Mods::SHADOW,
         ],
         Pokemon::SCYTHER => [
             Pokemon::SCYTHER,
@@ -630,12 +640,18 @@ class PokemonForms
         ],
         Pokemon::KABUTO => [
             Pokemon::KABUTO,
+            Pokemon::KABUTO | Mods::PURIFIED,
+            Pokemon::KABUTO | Mods::SHADOW,
         ],
         Pokemon::KABUTOPS => [
             Pokemon::KABUTOPS,
+            Pokemon::KABUTOPS | Mods::PURIFIED,
+            Pokemon::KABUTOPS | Mods::SHADOW,
         ],
         Pokemon::AERODACTYL => [
             Pokemon::AERODACTYL,
+            Pokemon::AERODACTYL | Mods::PURIFIED,
+            Pokemon::AERODACTYL | Mods::SHADOW,
         ],
         Pokemon::SNORLAX => [
             Pokemon::SNORLAX,
@@ -800,15 +816,23 @@ class PokemonForms
         ],
         Pokemon::HOPPIP => [
             Pokemon::HOPPIP,
+            Pokemon::HOPPIP | Mods::PURIFIED,
+            Pokemon::HOPPIP | Mods::SHADOW,
         ],
         Pokemon::SKIPLOOM => [
             Pokemon::SKIPLOOM,
+            Pokemon::SKIPLOOM | Mods::PURIFIED,
+            Pokemon::SKIPLOOM | Mods::SHADOW,
         ],
         Pokemon::JUMPLUFF => [
             Pokemon::JUMPLUFF,
+            Pokemon::JUMPLUFF | Mods::PURIFIED,
+            Pokemon::JUMPLUFF | Mods::SHADOW,
         ],
         Pokemon::AIPOM => [
             Pokemon::AIPOM,
+            Pokemon::AIPOM | Mods::PURIFIED,
+            Pokemon::AIPOM | Mods::SHADOW,
         ],
         Pokemon::SUNKERN => [
             Pokemon::SUNKERN,
@@ -821,9 +845,13 @@ class PokemonForms
         ],
         Pokemon::WOOPER => [
             Pokemon::WOOPER,
+            Pokemon::WOOPER | Mods::PURIFIED,
+            Pokemon::WOOPER | Mods::SHADOW,
         ],
         Pokemon::QUAGSIRE => [
             Pokemon::QUAGSIRE,
+            Pokemon::QUAGSIRE | Mods::PURIFIED,
+            Pokemon::QUAGSIRE | Mods::SHADOW,
         ],
         Pokemon::ESPEON => [
             Pokemon::ESPEON,
@@ -838,6 +866,8 @@ class PokemonForms
         ],
         Pokemon::SLOWKING => [
             Pokemon::SLOWKING,
+            Pokemon::SLOWKING | Mods::PURIFIED,
+            Pokemon::SLOWKING | Mods::SHADOW,
         ],
         Pokemon::MISDREAVUS => [
             Pokemon::MISDREAVUS,
@@ -907,9 +937,13 @@ class PokemonForms
         ],
         Pokemon::TEDDIURSA => [
             Pokemon::TEDDIURSA,
+            Pokemon::TEDDIURSA | Mods::PURIFIED,
+            Pokemon::TEDDIURSA | Mods::SHADOW,
         ],
         Pokemon::URSARING => [
             Pokemon::URSARING,
+            Pokemon::URSARING | Mods::PURIFIED,
+            Pokemon::URSARING | Mods::SHADOW,
         ],
         Pokemon::SLUGMA => [
             Pokemon::SLUGMA,
@@ -943,6 +977,8 @@ class PokemonForms
         ],
         Pokemon::SKARMORY => [
             Pokemon::SKARMORY,
+            Pokemon::SKARMORY | Mods::PURIFIED,
+            Pokemon::SKARMORY | Mods::SHADOW,
         ],
         Pokemon::HOUNDOUR => [
             Pokemon::HOUNDOUR,
@@ -1643,6 +1679,8 @@ class PokemonForms
         ],
         Pokemon::AMBIPOM => [
             Pokemon::AMBIPOM,
+            Pokemon::AMBIPOM | Mods::PURIFIED,
+            Pokemon::AMBIPOM | Mods::SHADOW,
         ],
         Pokemon::DRIFLOON => [
             Pokemon::DRIFLOON,
@@ -2129,9 +2167,13 @@ class PokemonForms
         Pokemon::YAMASK => [
             Pokemon::YAMASK,
             Pokemon::YAMASK | Mods::GALARIAN,
+            Pokemon::YAMASK | Mods::PURIFIED,
+            Pokemon::YAMASK | Mods::SHADOW,
         ],
         Pokemon::COFAGRIGUS => [
             Pokemon::COFAGRIGUS,
+            Pokemon::COFAGRIGUS | Mods::PURIFIED,
+            Pokemon::COFAGRIGUS | Mods::SHADOW,
         ],
         Pokemon::TIRTOUGA => [
             Pokemon::TIRTOUGA,
@@ -3096,9 +3138,13 @@ class PokemonForms
         ],
         Pokemon::MR_RIME => [
             Pokemon::MR_RIME,
+            Pokemon::MR_RIME | Mods::PURIFIED,
+            Pokemon::MR_RIME | Mods::SHADOW,
         ],
         Pokemon::RUNERIGUS => [
             Pokemon::RUNERIGUS,
+            Pokemon::RUNERIGUS | Mods::PURIFIED,
+            Pokemon::RUNERIGUS | Mods::SHADOW,
         ],
         Pokemon::MILCERY => [
             Pokemon::MILCERY,

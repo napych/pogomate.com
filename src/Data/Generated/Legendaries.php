@@ -41,6 +41,9 @@ class Legendaries
         Pokemon::RESHIRAM,
         Pokemon::ZEKROM,
         Pokemon::LANDORUS,
-        Pokemon::KYUREM
+        Pokemon::KYUREM,
+        Pokemon::XERNEAS,
+        Pokemon::YVELTAL,
+        Pokemon::ZYGARGE
     ];
 }

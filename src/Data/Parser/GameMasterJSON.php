@@ -10,9 +10,10 @@ use Pogo\Pokemon;
 
 class GameMasterJSON
 {
-    const FILE = __DIR__ . '/../blobs/master/1595879989869.json';
+    const FILE = __DIR__ . '/../blobs/master/1608378319559.json';
     const IGNORE_KEYS = [
         'templateId',
+        'arTelemetrySettings',
         'avatarGroupOrderSettings',
         'avatarCustomization',
         'backgroundModeSettings',
@@ -127,6 +128,8 @@ class GameMasterJSON
                     break;
                 case 'experimentId': // strange int[]
                     break;
+                case 'result': // "COMPLETE" string
+                    break;
                 default:
                     throw new \Exception("Unknown level 1 entry: " . $k);
             }
@@ -185,10 +188,10 @@ class GameMasterJSON
     }
 
     public $moves = [];
-    const MOVE_TYPE_TRANSLATE = [
-        'ATTACK_01' => Result\Moves::MOVES_CLASS_FAST,
-        'ATTACK_02' => Result\Moves::MOVES_CLASS_CHARGE
-    ];
+//    const MOVE_TYPE_TRANSLATE = [
+//        'ATTACK_01' => Result\Moves::MOVES_CLASS_FAST,
+//        'ATTACK_02' => Result\Moves::MOVES_CLASS_CHARGE
+//    ];
     const TYPE_TRANSLATE = [
         'POKEMON_TYPE_BUG' => Types::BUG,
         'POKEMON_TYPE_DARK' => Types::DARK,
@@ -217,9 +220,9 @@ class GameMasterJSON
         foreach ($data as $template => $move) {
             $chunks = explode('_', $template);
             $id = (int)substr($chunks[0], 1);
-            $this->move2id[$move['movementId']] = $id;
+            $this->move2id[$move['uniqueId']] = $id;
 
-            $movementId = $move['movementId'];
+            $movementId = $move['uniqueId'];
             if (!isset($this->pvpMoves[$movementId])) {
                 echo 'WARNING: missing combatMove data for ', $movementId, PHP_EOL;
             }
@@ -228,8 +231,9 @@ class GameMasterJSON
                 $id,
                 [
                     Result\Moves::FIELD_CONST => 'MOVE_' . $movementId,
-                    Result\Moves::FIELD_CLASS => static::MOVE_TYPE_TRANSLATE[$move['animationId']],
-                    Result\Moves::FIELD_TYPE => static::TYPE_TRANSLATE[$move['pokemonType']],
+                    //Result\Moves::FIELD_CLASS => static::MOVE_TYPE_TRANSLATE[$move['animationId']],
+                    Result\Moves::FIELD_CLASS => $move['energyDelta'] < 0 ? Result\Moves::MOVES_CLASS_CHARGE : Result\Moves::MOVES_CLASS_FAST,
+                    Result\Moves::FIELD_TYPE => static::TYPE_TRANSLATE[$move['type']],
                     Result\Moves::FIELD_POWER => $move['power'],
                     Result\Moves::FIELD_ACCURACY => $move['accuracyChance'],
                     Result\Moves::FIELD_CRIT => $move['criticalChance'],
@@ -252,15 +256,6 @@ class GameMasterJSON
 
     public function parseCombatMoves(array $data)
     {
-        /*
-        $data = {
-            "uniqueId" => "WRAP",
-            "type" => "POKEMON_TYPE_NORMAL",
-            "power" => 60.0,
-            "vfxName" => "wrap",
-            "energyDelta" => -45
-        }
-         */
         foreach ($data as $move) {
             $this->pvpMoves[$move['uniqueId']] = [
                 'power' => $move['power'],
@@ -298,13 +293,17 @@ class GameMasterJSON
                 //                 'collisionHeadRadiusM' => 0.2725, 'movementType' => 'MOVEMENT_JUMP', 'movementTimerS' => 10.0, 'jumpTimeS' => 1.15,
                 //                 'attackTimerS' => 29.0, 'attackProbability' => 0.1, 'dodgeProbability' => 0.15, 'dodgeDurationS' => 1.0,
                 //                 'dodgeDistance' => 1.0, 'cameraDistance' => 3.75, 'minPokemonActionFrequencyS' => 0.2, 'maxPokemonActionFrequencyS' => 1.6],
-                Result\Pokemon::FIELD_ATTACK => $pokemon['stats']['baseAttack'],
-                Result\Pokemon::FIELD_DEFENSE => $pokemon['stats']['baseDefense'],
-                Result\Pokemon::FIELD_STAMINA => $pokemon['stats']['baseStamina'],
-                Result\Pokemon::FIELD_FAST_MOVES => [], // fill later
-                Result\Pokemon::FIELD_FAST_MOVES_ELITE => [], // fill later
-                Result\Pokemon::FIELD_CHARGE_MOVES => [], // fill later
-                Result\Pokemon::FIELD_CHARGE_MOVES_ELITE => [], // fill later
+                Result\Pokemon::FIELD_ATTACK => $pokemon['stats']['baseAttack'] ?? null,
+                Result\Pokemon::FIELD_DEFENSE => $pokemon['stats']['baseDefense'] ?? null,
+                Result\Pokemon::FIELD_STAMINA => $pokemon['stats']['baseStamina'] ?? null,
+                Result\Pokemon::FIELD_FAST_MOVES => [],
+                // fill later
+                Result\Pokemon::FIELD_FAST_MOVES_ELITE => [],
+                // fill later
+                Result\Pokemon::FIELD_CHARGE_MOVES => [],
+                // fill later
+                Result\Pokemon::FIELD_CHARGE_MOVES_ELITE => [],
+                // fill later
                 // 'evolution' => ['IVYSAUR'],
                 // 'evolutionPips' => 1,
                 // 'pokedexHeightM' => 0.7,
@@ -372,7 +371,11 @@ class GameMasterJSON
             if (!empty($pokemon['evolutionBranch'])) {
                 $add[Result\Pokemon::FIELD_EVOLUTIONS] = [];
                 foreach ($pokemon['evolutionBranch'] as $branch) {
-                    $add[Result\Pokemon::FIELD_EVOLUTIONS][] = $this->parseEvolutionBranch($template, $branch);
+                    if (!empty($branch['evolution'])) {
+                        $add[Result\Pokemon::FIELD_EVOLUTIONS][] = $this->parseEvolutionBranch($template, $branch);
+                    } elseif (!empty($branch['temporaryEvolution'])) {
+
+                    }
                 }
             }
 
@@ -380,14 +383,12 @@ class GameMasterJSON
         }
     }
 
-    protected function parseEvolutionBranch (string $template, array $branch) {
+    protected function parseEvolutionBranch(string $template, array $branch)
+    {
         $evolution = [];
         foreach ($branch as $k => $v) {
             switch ($k) {
                 case 'evolution':
-//                    if (empty($branch['form'])) {
-//                        $evolution[Result\Pokemon::FIELD_EVOLUTION_POKEMON] = $this->getCode($v);
-//                    }
                     $evolution[Result\Pokemon::FIELD_EVOLUTION_POKEMON] = $v;
                     break;
                 case 'form':
@@ -429,6 +430,10 @@ class GameMasterJSON
                         echo 'WARNING: Unknown genderRequirement: ', $v, PHP_EOL;
                     }
                     break;
+                case 'questDisplay':
+                    // TODO
+                    break;
+
                 default:
                     echo 'WARNING: Unknown evolutionBranch property: ', $k, ' for ', $template, PHP_EOL;
             }
@@ -438,6 +443,10 @@ class GameMasterJSON
 
     protected function getCode(int $id, string $uniqueId, string $form)
     {
+        $ignore = ['PIKACHU_ADVENTURE_HAT_2020', 'PIKACHU_WINTER_2020', 'DELIBIRD_WINTER_2020', 'CUBCHOO_WINTER_2020', ''];
+        if (in_array($uniqueId, $ignore)) {
+            throw new \Exception('Skip thrash form');
+        }
         $code = $id;
         $cut = str_replace($uniqueId, '', $form);
         $flags = explode('_', $cut);
@@ -463,6 +472,8 @@ class GameMasterJSON
                 case 'COPY':
                 case 'VS':
                 case 'FALL':
+                case '2020':
+                case '2021':
                     throw new \Exception('Skip thrash pokemon');
                 default:
                     if (isset(self::FLAG2FORM[$id][$flags[$i]])) {
@@ -575,7 +586,11 @@ class GameMasterJSON
          */
         foreach ($data as $templateName => $effective) {
             foreach ($effective['attackScalar'] as $k => $v) {
-                $this->result->types->setEffectiveness(self::TYPE_TRANSLATE[$effective['attackType']], self::TYPE_ORDER_TRANSLATE[$k], $v);
+                $this->result->types->setEffectiveness(
+                    self::TYPE_TRANSLATE[$effective['attackType']],
+                    self::TYPE_ORDER_TRANSLATE[$k],
+                    $v
+                );
             }
         }
     }
@@ -640,7 +655,11 @@ class GameMasterJSON
         'combatDefaultCameraAngle',
         'combatPlayerFocusCameraAngle',
         'combatOpponentFocusCameraAngle',
-        'combatPlayerPokemonPositionOffset'
+        'combatPlayerPokemonPositionOffset',
+        'buddyWalkedMegaEnergyAward',
+        'tempEvoOverrides',
+        'disableTransferToPokemonHome',
+        'raidBossDistanceOffset'
     ];
 
     const FLAG2FORM = [

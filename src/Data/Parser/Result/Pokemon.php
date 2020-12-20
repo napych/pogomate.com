@@ -176,9 +176,9 @@ class Pokemon
             ];
 
             if (empty($pokemon[self::FIELD_UNRELEASED])) {
-                $data[] = 'self::FIELD_ATTACK => ' . $pokemon[Pokemon::FIELD_ATTACK];
-                $data[] = 'self::FIELD_DEFENSE => ' . $pokemon[Pokemon::FIELD_DEFENSE];
-                $data[] = 'self::FIELD_STAMINA => ' . $pokemon[Pokemon::FIELD_STAMINA];
+                $data[] = 'self::FIELD_ATTACK => ' . ($pokemon[Pokemon::FIELD_ATTACK] ?? 'null');
+                $data[] = 'self::FIELD_DEFENSE => ' . ($pokemon[Pokemon::FIELD_DEFENSE] ?? 'null');
+                $data[] = 'self::FIELD_STAMINA => ' . ($pokemon[Pokemon::FIELD_STAMINA] ?? 'null');
                 if (!empty($pokemon[Pokemon::FIELD_TYPE1])) {
                     $data[] = 'self::FIELD_TYPE1 => Types::' . \Pogo\Data\Manual\Types::getConst($pokemon[Pokemon::FIELD_TYPE1]);
                 }

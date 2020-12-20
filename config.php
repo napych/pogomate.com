@@ -43,9 +43,9 @@ return [
             ['loc' => '/lists', 'changefreq' => 'weekly'],
             ['loc' => '/pokemon', 'changefreq' => 'monthly']
         ],
-        'mainLastmod' => '2020-09-22',
+        'mainLastmod' => '2020-12-20',
         'pokemon' => [
-            'lastmod' => '2020-09-22',
+            'lastmod' => '2020-12-20',
             'changefreq' => 'weekly'
         ],
         'counters' => [

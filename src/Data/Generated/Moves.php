@@ -233,6 +233,10 @@ class Moves
     const MOVE_FLYING_PRESS = 331;
     const MOVE_AURA_SPHERE = 332;
     const MOVE_ROCK_WRECKER = 334;
+    const MOVE_AEROBLAST = 335;
     const MOVE_FLY = 341;
     const MOVE_V_CREATE = 342;
+    const MOVE_TRI_ATTACK = 344;
+    const MOVE_GUST_FAST = 345;
+    const MOVE_INCINERATE_FAST = 346;
 }
