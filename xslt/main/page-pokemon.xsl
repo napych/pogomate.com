@@ -16,11 +16,9 @@
 
     <xsl:template match="pokemon" mode="reasons">
         <xsl:if test="count(../pokemon)&gt;1">
-            <!--            <h3 class="h5">-->
-            <h2 class="h3">
+            <h3 class="h5">
                 <xsl:value-of select="@name"/>
-            </h2>
-            <!--            </h3>-->
+            </h3>
         </xsl:if>
         <div class="evolution-reasons-list">
             <xsl:if test="count(reason)&lt;1">
