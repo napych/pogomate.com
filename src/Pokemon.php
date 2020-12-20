@@ -108,7 +108,7 @@ class Pokemon extends Data\Manual\PokemonList
      * @return int|null
      * @throws Exception
      */
-    public function getEvolveFrom()
+    public function getEvolveFrom(): ?int
     {
         if ($this->evolveFrom !== null) {
             return $this->evolveFrom ?: null;
@@ -126,7 +126,7 @@ class Pokemon extends Data\Manual\PokemonList
         }
         if (!array_key_exists($code, Evolve::EVOLVE_FROM)) {
             $this->evolveFrom = 0;
-            throw new Exception('Evolve from is not set for pokemon ' . $code . ' ' . $this->getName());
+            return null;
         }
         $this->evolveFrom = Evolve::EVOLVE_FROM[$code];
         if ($this->evolveFrom && $this->isShadow()) {
@@ -141,7 +141,7 @@ class Pokemon extends Data\Manual\PokemonList
 
     public function getName(): string
     {
-        return PokemonData::POKEMON[$this->getCode()][PokemonData::FIELD_NAME];
+        return PokemonData::POKEMON[$this->getCode()][PokemonData::FIELD_NAME] ?? 'Unknown';
     }
 
     public function getShortName()
