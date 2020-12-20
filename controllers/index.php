@@ -23,5 +23,4 @@ class Index extends \Difra\Controller
             . "\nappService.build='" . Envi\Version::getBuild(true) . "';"
             . "\nappService.cacheName='PoGoMate-' + appService.build;";
     }
-
 }

@@ -20,17 +20,20 @@
             </h2>
             <!--            </h3>-->
         </xsl:if>
-        <xsl:if test="count(reason)&lt;1">
-            <p>No known usages were found for this pokémon.</p>
-        </xsl:if>
-        <xsl:if test="reason[not(evolve)]">
-            <div class="evolution-reasons">
-                <xsl:apply-templates select="reason[not(evolve)]" mode="pokemon"/>
-            </div>
-        </xsl:if>
-        <xsl:for-each select="reason[evolve and not(evolve/@code=preceding-sibling::reason/evolve/@code)]">
-            <xsl:sort select="evolve/@code" data-type="number"/>
-            <div class="evolution-reasons">
+        <div class="evolution-reasons-list">
+            <xsl:if test="count(reason)&lt;1">
+                <p>No known usages were found for this pokémon.</p>
+            </xsl:if>
+            <xsl:if test="reason[not(evolve)]">
+                <p class="reason-title">
+                    <xsl:value-of select="@name"/>
+                </p>
+                <div class="reason-list">
+                    <xsl:apply-templates select="reason[not(evolve)]" mode="pokemon"/>
+                </div>
+            </xsl:if>
+            <xsl:for-each select="reason[evolve and not(evolve/@code=preceding-sibling::reason/evolve/@code)]">
+                <xsl:sort select="evolve/@code" data-type="number"/>
                 <xsl:choose>
                     <xsl:when test="evolve">
                         <p class="reason-title">
@@ -45,11 +48,14 @@
                         </div>
                     </xsl:when>
                     <xsl:otherwise>
-                        <xsl:apply-templates select="../reason[not(evolve)]" mode="pokemon"/>
+                        <p class="reason-title"/>
+                        <div class="reason-list">
+                            <xsl:apply-templates select="../reason[not(evolve)]" mode="pokemon"/>
+                        </div>
                     </xsl:otherwise>
                 </xsl:choose>
-            </div>
-        </xsl:for-each>
+            </xsl:for-each>
+        </div>
         <xsl:if test="count(evolve/evolve)>0">
             <p class="evolutions">
                 <xsl:text>Evolutions: </xsl:text>
@@ -108,7 +114,8 @@
         <div class="card">
             <div class="card-header" id="name{$postfix}">
                 <h2 class="mb-0">
-                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#form{$postfix}" aria-expanded="false"
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                            data-target="#form{$postfix}" aria-expanded="false"
                             aria-controls="form{$postfix}">
                         <xsl:value-of select="@name"/>
                     </button>
