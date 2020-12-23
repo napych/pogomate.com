@@ -1,4 +1,6 @@
 function snippetStringCopy(event) {
+    $('.btn.string-copy').removeClass('ready');
+    $(event.target).addClass('ready');
     clipboard.writeText($(event.target).closest('.string').data('string'));
     event.preventDefault();
 }

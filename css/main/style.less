@@ -35,3 +35,54 @@ img.twitter {
 .twitter {
     filter: invert(50%) sepia(68%) saturate(2210%) hue-rotate(176deg) brightness(100%) contrast(91%);
 }
+
+/* buttons */
+
+.btn {
+    &.btn-primary:before, &.btn-secondary:before {
+        filter: invert(100%);
+    }
+    &.btn-outline-secondary {
+        &:before {
+            filter: invert(50%);
+            transition: filter 0.3s;
+        }
+        &:hover:before {
+            filter: invert(100%);
+        }
+    }
+
+    &.string-copy, &.string-reveal, &.string-conceal, &.ready {
+        &:before {
+            content: '';
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            position: relative;
+        }
+    }
+
+    &.string-copy:before {
+        top: 1px;
+        left: -1px;
+        background: url('/fontawesome/svgs/regular/clipboard.svg') left center no-repeat;
+    }
+
+    &.btn.string-reveal:before {
+        top: 2px;
+        left: -3px;
+        background: url('/fontawesome/svgs/regular/eye.svg') left center no-repeat;
+    }
+
+    &.btn.string-conceal:before {
+        top: 2px;
+        left: -3px;
+        background: url('/fontawesome/svgs/regular/eye-slash.svg') left center no-repeat;
+    }
+
+    &.ready:before {
+        top: 2px;
+        left: -3px;
+        background: url('/fontawesome/svgs/solid/check.svg') left center no-repeat;
+    }
+}

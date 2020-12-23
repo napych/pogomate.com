@@ -46,6 +46,13 @@
             ],
             "description": "jQuery JavaScript Library",
             "homepage": "http://jquery.com",
+            "support": {
+                "forum": "http://forum.jquery.com",
+                "irc": "irc://irc.freenode.org/jquery",
+                "issues": "https://github.com/jquery/jquery/issues",
+                "source": "https://github.com/jquery/jquery",
+                "wiki": "http://docs.jquery.com/"
+            },
             "time": "2020-05-05T13:21:02+00:00"
         },
         {
@@ -54,17 +61,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/difra-org/bootstrap4.git",
-                "reference": "c33ba06a430503355742f8b3bc5157ce1cd1dfeb"
+                "reference": "5c3415aa8fe4f37f4be464f36d0e42867a2908e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/difra-org/bootstrap4/archive/1.0.1.zip",
-                "reference": "c33ba06a430503355742f8b3bc5157ce1cd1dfeb"
+                "url": "https://github.com/difra-org/bootstrap4/archive/1.0.1.zip"
             },
             "require": {
                 "difra/jquery3": "*",
                 "twbs/bootstrap": "4.*"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "files": [
@@ -75,7 +82,6 @@
                     "Difra\\Bootstrap4\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-2-Clause"
             ],
@@ -86,7 +92,11 @@
                 }
             ],
             "description": "Bootstrap 4 bindings for Difra framework",
-            "time": "2020-10-21T08:59:15+00:00"
+            "support": {
+                "source": "https://github.com/difra-org/bootstrap4/tree/master",
+                "issues": "https://github.com/difra-org/bootstrap4/issues"
+            },
+            "time": "2020-12-09T20:16:46+00:00"
         },
         {
             "name": "difra/difra",
@@ -94,12 +104,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/difra-org/difra.git",
-                "reference": "be84267742a179b4e95f10176cf1f45961ac61e4"
+                "reference": "783c94017ab785a11728e09ea246bc43b4ea23e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/difra-org/difra/zipball/be84267742a179b4e95f10176cf1f45961ac61e4",
-                "reference": "be84267742a179b4e95f10176cf1f45961ac61e4",
+                "url": "https://api.github.com/repos/difra-org/difra/zipball/783c94017ab785a11728e09ea246bc43b4ea23e1",
+                "reference": "783c94017ab785a11728e09ea246bc43b4ea23e1",
                 "shasum": ""
             },
             "require": {
@@ -119,6 +129,7 @@
                 "php": "7.x",
                 "scssphp/scssphp": "1.1"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "classmap": [
@@ -141,7 +152,7 @@
                 "source": "https://github.com/difra-org/difra/tree/master",
                 "issues": "https://github.com/difra-org/difra/issues"
             },
-            "time": "2020-11-02T17:50:42+00:00"
+            "time": "2020-12-11T19:59:32+00:00"
         },
         {
             "name": "difra/jquery3",
@@ -149,16 +160,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/difra-org/jquery3.git",
-                "reference": "6b531c06e65b97b3f1e17bcb00461ac305cbc6c4"
+                "reference": "8276b27706ec906350726210342a558d1cb99527"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/difra-org/jquery3/archive/1.0.0.zip",
-                "reference": "6b531c06e65b97b3f1e17bcb00461ac305cbc6c4"
+                "url": "https://github.com/difra-org/jquery3/archive/1.0.0.zip"
             },
             "require": {
                 "components/jquery": "3.*"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "files": [
@@ -169,7 +180,6 @@
                     "Difra\\Jquery3\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-2-Clause"
             ],
@@ -180,7 +190,11 @@
                 }
             ],
             "description": "jQuery bindings for Difra framework",
-            "time": "2020-10-21T08:56:36+00:00"
+            "support": {
+                "source": "https://github.com/difra-org/jquery3/tree/master",
+                "issues": "https://github.com/difra-org/jquery3/issues"
+            },
+            "time": "2020-12-09T20:17:46+00:00"
         },
         {
             "name": "oyejorge/less.php",
@@ -239,6 +253,10 @@
                 "php",
                 "stylesheet"
             ],
+            "support": {
+                "issues": "https://github.com/oyejorge/less.php/issues",
+                "source": "https://github.com/oyejorge/less.php/tree/1.7"
+            },
             "abandoned": true,
             "time": "2014-03-04T18:49:54+00:00"
         },
@@ -259,6 +277,7 @@
             "require": {
                 "php": ">=7.2.0"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -289,6 +308,10 @@
                 "container-interop",
                 "psr"
             ],
+            "support": {
+                "issues": "https://github.com/php-fig/container/issues",
+                "source": "https://github.com/php-fig/container/tree/master"
+            },
             "time": "2020-10-13T07:07:53+00:00"
         },
         {
@@ -350,20 +373,24 @@
                 "scss",
                 "stylesheet"
             ],
+            "support": {
+                "issues": "https://github.com/scssphp/scssphp/issues",
+                "source": "https://github.com/scssphp/scssphp/tree/1.1.0"
+            },
             "time": "2020-04-21T15:53:32+00:00"
         },
         {
             "name": "symfony/console",
-            "version": "dev-master",
+            "version": "5.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "8f67de03e7a717137a443b438260351d67072210"
+                "reference": "15c96194f32e1b1aa30d1b302c71c5f83fd4dea9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/8f67de03e7a717137a443b438260351d67072210",
-                "reference": "8f67de03e7a717137a443b438260351d67072210",
+                "url": "https://api.github.com/repos/symfony/console/zipball/15c96194f32e1b1aa30d1b302c71c5f83fd4dea9",
+                "reference": "15c96194f32e1b1aa30d1b302c71c5f83fd4dea9",
                 "shasum": ""
             },
             "require": {
@@ -399,12 +426,8 @@
                 "symfony/lock": "",
                 "symfony/process": ""
             },
+            "default-branch": true,
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.2-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Symfony\\Component\\Console\\": ""
@@ -435,6 +458,9 @@
                 "console",
                 "terminal"
             ],
+            "support": {
+                "source": "https://github.com/symfony/console/tree/5.x"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -449,7 +475,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-09-09T12:41:49+00:00"
+            "time": "2020-12-18T08:03:24+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -471,6 +497,7 @@
             "suggest": {
                 "ext-ctype": "For best performance"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -511,6 +538,9 @@
                 "polyfill",
                 "portable"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-ctype/tree/main"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -533,12 +563,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-grapheme.git",
-                "reference": "ee2f954ea0f9ab61dad0170eddc919ee83bef327"
+                "reference": "be092746c3ab9f9c62608c82e0f04687f8a879f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-grapheme/zipball/ee2f954ea0f9ab61dad0170eddc919ee83bef327",
-                "reference": "ee2f954ea0f9ab61dad0170eddc919ee83bef327",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-grapheme/zipball/be092746c3ab9f9c62608c82e0f04687f8a879f9",
+                "reference": "be092746c3ab9f9c62608c82e0f04687f8a879f9",
                 "shasum": ""
             },
             "require": {
@@ -547,6 +577,7 @@
             "suggest": {
                 "ext-intl": "For best performance"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -589,6 +620,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-intl-grapheme/tree/main"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -603,7 +637,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-10-26T13:35:45+00:00"
+            "time": "2020-11-13T15:40:22+00:00"
         },
         {
             "name": "symfony/polyfill-intl-normalizer",
@@ -625,6 +659,7 @@
             "suggest": {
                 "ext-intl": "For best performance"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -670,6 +705,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/main"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -706,6 +744,7 @@
             "suggest": {
                 "ext-mbstring": "For best performance"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -747,6 +786,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/main"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -780,6 +822,7 @@
             "require": {
                 "php": ">=7.1"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -823,6 +866,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php73/tree/main"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -856,6 +902,7 @@
             "require": {
                 "php": ">=7.1"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -903,6 +950,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php80/tree/main"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -940,6 +990,7 @@
             "suggest": {
                 "symfony/service-implementation": ""
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-version": "2.3",
@@ -980,6 +1031,9 @@
                 "interoperability",
                 "standards"
             ],
+            "support": {
+                "source": "https://github.com/symfony/service-contracts/tree/main"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -1002,12 +1056,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/string.git",
-                "reference": "40e975edadd4e32cd16f3753b3bad65d9ac48242"
+                "reference": "5bd67751d2e3f7d6f770c9154b8fbcb2aa05f7ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/string/zipball/40e975edadd4e32cd16f3753b3bad65d9ac48242",
-                "reference": "40e975edadd4e32cd16f3753b3bad65d9ac48242",
+                "url": "https://api.github.com/repos/symfony/string/zipball/5bd67751d2e3f7d6f770c9154b8fbcb2aa05f7ed",
+                "reference": "5bd67751d2e3f7d6f770c9154b8fbcb2aa05f7ed",
                 "shasum": ""
             },
             "require": {
@@ -1024,6 +1078,7 @@
                 "symfony/translation-contracts": "^1.1|^2",
                 "symfony/var-exporter": "^4.4|^5.0"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -1060,6 +1115,9 @@
                 "utf-8",
                 "utf8"
             ],
+            "support": {
+                "source": "https://github.com/symfony/string/tree/v5.2.1"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -1074,7 +1132,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-10-24T12:08:07+00:00"
+            "time": "2020-12-05T07:33:16+00:00"
         },
         {
             "name": "twbs/bootstrap",
@@ -1125,6 +1183,10 @@
                 "sass",
                 "web"
             ],
+            "support": {
+                "issues": "https://github.com/twbs/bootstrap/issues",
+                "source": "https://github.com/twbs/bootstrap/tree/v4.5.3"
+            },
             "funding": [
                 {
                     "url": "https://opencollective.com/bootstrap",
@@ -1137,10 +1199,10 @@
     "packages-dev": [],
     "aliases": [
         {
-            "alias": "7.0.0",
-            "alias_normalized": "7.0.0.0",
+            "package": "difra/difra",
             "version": "9999999-dev",
-            "package": "difra/difra"
+            "alias": "7.0.0",
+            "alias_normalized": "7.0.0.0"
         }
     ],
     "minimum-stability": "dev",
@@ -1154,5 +1216,5 @@
         "ext-json": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }

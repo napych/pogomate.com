@@ -22,6 +22,10 @@ appService.install = function (e) {
                 '/fontawesome/svgs/solid/list-ul.svg',
                 '/fontawesome/svgs/solid/fire-alt.svg',
                 '/fontawesome/svgs/solid/search.svg',
+                '/fontawesome/svgs/regular/clipboard.svg',
+                '/fontawesome/svgs/solid/check.svg',
+                '/fontawesome/svgs/regular/eye.svg',
+                '/fontawesome/svgs/regular/eye-slash.svg',
 
                 '/site.webmanifest?' + appService.build,
                 '/img/maskable-512.png',
