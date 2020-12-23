@@ -10,7 +10,6 @@
         <h2 class="h3">Information</h2>
         <xsl:call-template name="pokemon-accordion"/>
         -->
-        <h2 class="h3">Pokémon search</h2>
         <xsl:call-template name="snippet-search"/>
     </xsl:template>
 

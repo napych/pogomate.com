@@ -49,12 +49,18 @@ pokemonSearch.add = function (id, name, link, priority) {
     }
 }
 
+pokemonSearch.scroll = function () {
+    $('html').animate({scrollTop: $('#search').offset().top}, 300);
+}
+
 pokemonSearch.done = function () {
     if (pokemonSearch.found_0 === '' && pokemonSearch.found_1 === '' && pokemonSearch.search.length > 2) {
         $('#pokemon-search-result').html('Pokémon not found');
     } else {
         $('#pokemon-search-result').append(pokemonSearch.found_0 + pokemonSearch.found_1);
     }
+    pokemonSearch.scroll();
 }
 
 $(document).on('input', '#pokemon-search', pokemonSearch.update);
+$(document).on('focus', '#pokemon-search', pokemonSearch.scroll);

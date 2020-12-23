@@ -7,10 +7,7 @@
             <p>Add WebApp icon to Home Screen for quick access.</p>
             <a href="#" class="a2hs-install btn btn-primary">Add to home screen</a>
         </div>
-        <div id="search">
-            <h2 class="h3">Pokémon search</h2>
-            <xsl:call-template name="snippet-search"/>
-        </div>
+        <xsl:call-template name="snippet-search"/>
         <!--
         <div id="news">
             <h2>News</h2>
