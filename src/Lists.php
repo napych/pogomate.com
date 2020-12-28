@@ -99,6 +99,7 @@ class Lists
                 self::ENT_DEFAULT => true,
                 self::ENT_CLEANUP => true
             ],
+            /*
             [
                 self::ENT_BLOCK => self::BLOCK_OTHER,
                 self::ENT_TAG => 'JMT10',
@@ -110,6 +111,7 @@ class Lists
                 self::ENT_DEFAULT => false,
                 self::ENT_CLEANUP => false
             ],
+            */
             [
                 self::ENT_BLOCK => self::BLOCK_GAMEPRESS,
                 self::ENT_TAG => 'GP_DEF',
