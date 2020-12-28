@@ -10,6 +10,8 @@ use Pogo\Data\Manual\Evolve;
 use Pogo\Data\Generated\PokemonLinks;
 use Pogo\Pokemon\Mods;
 
+use Pogo\Pokemon\Move;
+
 use const false;
 
 class Pokemon extends Data\Manual\PokemonList
@@ -199,6 +201,25 @@ class Pokemon extends Data\Manual\PokemonList
         $node->setAttribute('unreleased', !empty($data[PokemonData::FIELD_UNRELEASED]) ? '1' : '0');
         $node->setAttribute('type1', $data[PokemonData::FIELD_TYPE1]);
         $node->setAttribute('type2', $data[PokemonData::FIELD_TYPE2] ?? '');
+        $node->setAttribute('attack', $data[PokemonData::FIELD_ATTACK] ?? '');
+        $node->setAttribute('defense', $data[PokemonData::FIELD_DEFENSE] ?? '');
+        $node->setAttribute('stamina', $data[PokemonData::FIELD_STAMINA] ?? '');
+        foreach (
+            [
+                PokemonData::FIELD_FAST_MOVES,
+                PokemonData::FIELD_FAST_MOVES_ELITE,
+                PokemonData::FIELD_CHARGE_MOVES,
+                PokemonData::FIELD_CHARGE_MOVES_ELITE
+            ] as $moveType
+        ) {
+            if (!empty($data[$moveType])) {
+                $movesNode = $node->appendChild($node->ownerDocument->createElement('moves'));
+                $movesNode->setAttribute('type', $moveType);
+                foreach ($data[$moveType] as $move) {
+                    Move::get($move)->getXML($movesNode, true, false);
+                }
+            }
+        }
 
         return $node;
     }
