@@ -6,10 +6,8 @@
         </h1>
         <h2 class="h3">Usage</h2>
         <xsl:apply-templates select="pokemon" mode="reasons"/>
-        <!--
         <h2 class="h3">Information</h2>
         <xsl:call-template name="pokemon-accordion"/>
-        -->
         <xsl:call-template name="snippet-search"/>
     </xsl:template>
 
@@ -157,8 +155,45 @@
                             <xsl:apply-templates select="evolve"/>
                         </p>
                     </xsl:if>
+
+                    <xsl:call-template name="pokemon-moves">
+                        <xsl:with-param name="title" select="'Fast moves'"/>
+                        <xsl:with-param name="moves" select="moves[@type='fastMoves']/move"/>
+                    </xsl:call-template>
+
+                    <xsl:call-template name="pokemon-moves">
+                        <xsl:with-param name="title" select="'Elite fast moves'"/>
+                        <xsl:with-param name="moves" select="moves[@type='fastMovesElite']/move"/>
+                    </xsl:call-template>
+
+                    <xsl:call-template name="pokemon-moves">
+                        <xsl:with-param name="title" select="'Charge moves'"/>
+                        <xsl:with-param name="moves" select="moves[@type='chargeMoves']/move"/>
+                    </xsl:call-template>
+
+                    <xsl:call-template name="pokemon-moves">
+                        <xsl:with-param name="title" select="'Elite charge moves'"/>
+                        <xsl:with-param name="moves" select="moves[@type='chargeMovesElite']/move"/>
+                    </xsl:call-template>
                 </div>
             </div>
         </div>
+    </xsl:template>
+
+    <xsl:template name="pokemon-moves">
+        <xsl:param name="title"/>
+        <xsl:param name="moves"/>
+        <xsl:if test="$moves">
+            <p>
+                <xsl:value-of select="$title"/>
+                <xsl:text>: </xsl:text>
+                <xsl:for-each select="$moves">
+                    <a href="/move/{@link}" class="type-{@type}">
+                        <xsl:value-of select="@name"/>
+                    </a>
+                    <xsl:text> &#160; </xsl:text>
+                </xsl:for-each>
+            </p>
+        </xsl:if>
     </xsl:template>
 </xsl:stylesheet>
