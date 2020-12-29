@@ -8,5 +8,39 @@
         <h2>
             <xsl:value-of select="@name"/>
         </h2>
+        <xsl:choose>
+            <xsl:when test="@class='fast'">
+                <p>Fast move</p>
+            </xsl:when>
+            <xsl:when test="@class='charge'">
+                <p>Charge move</p>
+            </xsl:when>
+        </xsl:choose>
+        <xsl:if test="@type">
+            <p>
+                <xsl:text>Type: </xsl:text>
+                <span class="type-{@type}">
+                    <xsl:value-of select="@type"/>
+                </span>
+            </p>
+        </xsl:if>
+        <xsl:if test="@power or @energy">
+            <p>
+                <xsl:text>Power: </xsl:text>
+                <xsl:value-of select="@power"/>
+                <br/>
+                <xsl:text>Energy: </xsl:text>
+                <xsl:value-of select="@energy"/>
+            </p>
+        </xsl:if>
+        <xsl:if test="@pvpPower or @pvpEnergy">
+            <p>
+                <xsl:text>PVP power: </xsl:text>
+                <xsl:value-of select="@pvpPower"/>
+                <br/>
+                <xsl:text>PVP energy: </xsl:text>
+                <xsl:value-of select="@pvpEnergy"/>
+            </p>
+        </xsl:if>
     </xsl:template>
 </xsl:stylesheet>
