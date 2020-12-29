@@ -39,6 +39,11 @@ class Move
         return static::$cache[$moveId] = $moveObj;
     }
 
+    public function getId(): int
+    {
+        return $this->moveId;
+    }
+
     public function getLink(): string
     {
         return MovesLinks::MOVE2LINK[$this->moveId];

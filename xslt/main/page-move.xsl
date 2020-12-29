@@ -42,5 +42,17 @@
                 <xsl:value-of select="@pvpEnergy"/>
             </p>
         </xsl:if>
+        <xsl:if test="pokemon">
+            <xsl:text>Available for: </xsl:text>
+            <p class="move-users">
+                <xsl:apply-templates select="pokemon" mode="page-move"/>
+            </p>
+        </xsl:if>
+    </xsl:template>
+
+    <xsl:template match="pokemon" mode="page-move">
+        <a href="/pokemon/{@link}">
+            <xsl:value-of select="@name"/>
+        </a>
     </xsl:template>
 </xsl:stylesheet>

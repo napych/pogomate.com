@@ -5,6 +5,7 @@ namespace Controller;
 use Difra\Controller;
 use Difra\Param\AnyString;
 use Difra\View\HttpError;
+use Pogo\Data\Generated\MoveUsers;
 
 class Move extends Controller
 {
@@ -16,7 +17,13 @@ class Move extends Controller
         }
         $pageNode = $this->root->appendChild($this->xml->createElement('page-move'));
         foreach ($moves as $move) {
-            $move->getXML($pageNode, true, true);
+            $moveNode = $move->getXML($pageNode, true, true);
+            if (!empty(MoveUsers::MOVES[$move->getId()])) {
+                foreach (MoveUsers::MOVES[$move->getId()] as $user) {
+                    $pokemon = \Pogo\Pokemon::get($user);
+                    $pokemon->getXML($moveNode, true, false);
+                }
+            }
         }
     }
 }
