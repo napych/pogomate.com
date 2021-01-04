@@ -166,6 +166,15 @@ class Pokemon extends Data\Manual\PokemonList
         if ($this->isGalarian()) {
             $hash[] = 'galarian';
         }
+        if ($this->code & Mods::MEGA) {
+            $hash[] = 'mega';
+        }
+        if ($this->code & Mods::MEGA_X) {
+            $hash[] = 'mega-x';
+        }
+        if ($this->code & Mods::MEGA_Y) {
+            $hash[] = 'mega-y';
+        }
         if (!$forceForm || !empty($hash)) {
             return implode('-', $hash);
         } else {

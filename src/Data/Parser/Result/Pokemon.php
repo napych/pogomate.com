@@ -26,7 +26,7 @@ class Pokemon
     const FIELD_CHARGE_MOVES_ELITE = 'chargeMovesElite';
     const FIELD_EVOLUTIONS = 'evolutions';
     const FIELD_THIRD_MOVE_DUST = 'thirdDust';
-    const FIELD_THIRD_MOVE_CANDY = ' thirdCandy';
+    const FIELD_THIRD_MOVE_CANDY = 'thirdCandy';
     const FIELD_TRANSFERABLE = 'transferable';
     const FIELD_DEPLOYABLE = 'deployable';
     const FIELD_PARENT = 'parent';
@@ -205,7 +205,9 @@ class Pokemon
                 if ($pokemon[Pokemon::FIELD_DEPLOYABLE]) {
                     $data[] = 'self::FIELD_DEPLOYABLE => true';
                 }
-                $data[] = 'self::FIELD_BUDDY_DISTANCE => ' . $pokemon[Pokemon::FIELD_BUDDY_DISTANCE];
+                if ($pokemon[Pokemon::FIELD_BUDDY_DISTANCE]) {
+                    $data[] = 'self::FIELD_BUDDY_DISTANCE => ' . $pokemon[Pokemon::FIELD_BUDDY_DISTANCE];
+                }
                 if ($pokemon[Pokemon::FIELD_THIRD_MOVE_CANDY]) {
                     $data[] = 'self::FIELD_THIRD_MOVE_CANDY => ' . $pokemon[Pokemon::FIELD_THIRD_MOVE_CANDY];
                 }
@@ -496,6 +498,9 @@ PHP;
         !($code & Mods::ALOLAN) ?: $codeConst .= ' | Mods::ALOLAN';
         !($code & Mods::PURIFIED) ?: $codeConst .= ' | Mods::PURIFIED';
         !($code & Mods::GALARIAN) ?: $codeConst .= ' | Mods::GALARIAN';
+        !($code & Mods::MEGA) ?: $codeConst .= ' | Mods::MEGA';
+        !($code & Mods::MEGA_X) ?: $codeConst .= ' | Mods::MEGA_X';
+        !($code & Mods::MEGA_Y) ?: $codeConst .= ' | Mods::MEGA_Y';
         return $codeConst;
     }
 
@@ -573,6 +578,9 @@ PHP;
             if (Mods::isPurified($code)) {
                 $name .= 'Purified ';
             }
+            if ($code & (Mods::MEGA | Mods::MEGA_X | Mods::MEGA_Y)) {
+                $name = 'Mega ' . $name;
+            }
         }
 
         $pokemonName = $this->getPokemonName($code, true);
@@ -584,6 +592,15 @@ PHP;
             }
         } else {
             $name .= $pokemonName;
+        }
+
+        if (!$short) {
+            if ($code & Mods::MEGA_X) {
+                $name .= ' X';
+            }
+            if ($code & Mods::MEGA_Y) {
+                $name .= ' Y';
+            }
         }
 
         return $name;

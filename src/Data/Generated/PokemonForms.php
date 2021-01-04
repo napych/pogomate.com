@@ -19,6 +19,8 @@ class PokemonForms
         ],
         Pokemon::VENUSAUR => [
             Pokemon::VENUSAUR,
+            Pokemon::VENUSAUR | Mods::MEGA,
+            Pokemon::VENUSAUR | Mods::PURIFIED | Mods::MEGA,
             Pokemon::VENUSAUR | Mods::PURIFIED,
             Pokemon::VENUSAUR | Mods::SHADOW,
         ],
@@ -34,6 +36,10 @@ class PokemonForms
         ],
         Pokemon::CHARIZARD => [
             Pokemon::CHARIZARD,
+            Pokemon::CHARIZARD | Mods::MEGA_X,
+            Pokemon::CHARIZARD | Mods::MEGA_Y,
+            Pokemon::CHARIZARD | Mods::PURIFIED | Mods::MEGA_X,
+            Pokemon::CHARIZARD | Mods::PURIFIED | Mods::MEGA_Y,
             Pokemon::CHARIZARD | Mods::PURIFIED,
             Pokemon::CHARIZARD | Mods::SHADOW,
         ],
@@ -49,6 +55,8 @@ class PokemonForms
         ],
         Pokemon::BLASTOISE => [
             Pokemon::BLASTOISE,
+            Pokemon::BLASTOISE | Mods::MEGA,
+            Pokemon::BLASTOISE | Mods::PURIFIED | Mods::MEGA,
             Pokemon::BLASTOISE | Mods::PURIFIED,
             Pokemon::BLASTOISE | Mods::SHADOW,
         ],
@@ -73,6 +81,8 @@ class PokemonForms
         ],
         Pokemon::BEEDRILL => [
             Pokemon::BEEDRILL,
+            Pokemon::BEEDRILL | Mods::MEGA,
+            Pokemon::BEEDRILL | Mods::PURIFIED | Mods::MEGA,
             Pokemon::BEEDRILL | Mods::PURIFIED,
             Pokemon::BEEDRILL | Mods::SHADOW,
         ],
@@ -84,6 +94,7 @@ class PokemonForms
         ],
         Pokemon::PIDGEOT => [
             Pokemon::PIDGEOT,
+            Pokemon::PIDGEOT | Mods::MEGA,
         ],
         Pokemon::RATATTA => [
             Pokemon::RATATTA,
@@ -444,6 +455,7 @@ class PokemonForms
         ],
         Pokemon::GENGAR => [
             Pokemon::GENGAR,
+            Pokemon::GENGAR | Mods::MEGA,
         ],
         Pokemon::ONIX => [
             Pokemon::ONIX,
@@ -987,6 +999,8 @@ class PokemonForms
         ],
         Pokemon::HOUNDOOM => [
             Pokemon::HOUNDOOM,
+            Pokemon::HOUNDOOM | Mods::MEGA,
+            Pokemon::HOUNDOOM | Mods::PURIFIED | Mods::MEGA,
             Pokemon::HOUNDOOM | Mods::PURIFIED,
             Pokemon::HOUNDOOM | Mods::SHADOW,
         ],
@@ -1809,6 +1823,8 @@ class PokemonForms
         ],
         Pokemon::ABOMASNOW => [
             Pokemon::ABOMASNOW,
+            Pokemon::ABOMASNOW | Mods::MEGA,
+            Pokemon::ABOMASNOW | Mods::PURIFIED | Mods::MEGA,
             Pokemon::ABOMASNOW | Mods::PURIFIED,
             Pokemon::ABOMASNOW | Mods::SHADOW,
         ],

@@ -51,9 +51,9 @@ class Mods
     const GALARIAN = 1 << (self::FLAGS_SHIFT + 1);
     const SHADOW = 1 << (self::FLAGS_SHIFT + 2);
     const MEGA = 1 << (self::FLAGS_SHIFT + 3);
-    const MEGA_X = self::MEGA;
-    const MEGA_Y = 1 << (self::FLAGS_SHIFT + 4);
-    const PURIFIED = 1 << (self::FLAGS_SHIFT + 5);
+    const MEGA_X = 1 << (self::FLAGS_SHIFT + 4);
+    const MEGA_Y = 1 << (self::FLAGS_SHIFT + 5);
+    const PURIFIED = 1 << (self::FLAGS_SHIFT + 6);
 
     public static function getId($code)
     {

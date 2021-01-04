@@ -374,8 +374,75 @@ class GameMasterJSON
                     if (!empty($branch['evolution'])) {
                         $add[Result\Pokemon::FIELD_EVOLUTIONS][] = $this->parseEvolutionBranch($template, $branch);
                     } elseif (!empty($branch['temporaryEvolution'])) {
-
+//                        $add[Result\Pokemon::FIELD_EVOLUTIONS][] = $this->parseTempEvolutionBranch($template, $branch);
                     }
+                }
+            }
+
+            // mega evolutions
+            if (!empty($pokemon['tempEvoOverrides'])) {
+                foreach ($pokemon['tempEvoOverrides'] as $tempEvo) {
+                    if (empty($tempEvo['tempEvoId'])) {
+                        echo 'WARNING: missing tempEvoId', PHP_EOL;
+                        continue;
+                    }
+
+                    $mega = $add;
+                    $mega['parent'] = $mega['const']; // TODO: or $mega['name'] ?
+                    switch ($tempEvo['tempEvoId']) {
+                        case 'TEMP_EVOLUTION_MEGA':
+                            $megaMod = Mods::MEGA;
+                            $mega['const'] .= '_MEGA';
+                            break;
+                        case 'TEMP_EVOLUTION_MEGA_X':
+                            $megaMod = Mods::MEGA_X;
+                            $mega['const'] .= '_MEGA_X';
+                            break;
+                        case 'TEMP_EVOLUTION_MEGA_Y':
+                            $megaMod = Mods::MEGA_Y;
+                            $mega['const'] .= '_MEGA_Y';
+                            break;
+                        default:
+                            echo 'WARNING: invalid tempEvoId: ', $tempEvo['tempEvoId'], PHP_EOL;
+                            continue 2;
+                    }
+                    if (!empty($tempEvo['stats'])) {
+                        if (!empty($tempEvo['stats']['baseAttack'])) {
+                            $mega[\Pogo\Data\Parser\Result\Pokemon::FIELD_ATTACK] = $tempEvo['stats']['baseAttack'];
+                        }
+                        if (!empty($tempEvo['stats']['baseDefense'])) {
+                            $mega[\Pogo\Data\Parser\Result\Pokemon::FIELD_DEFENSE] = $tempEvo['stats']['baseDefense'];
+                        }
+                        if (!empty($tempEvo['stats']['baseStamina'])) {
+                            $mega[\Pogo\Data\Parser\Result\Pokemon::FIELD_STAMINA] = $tempEvo['stats']['baseStamina'];
+                        }
+                    }
+                    if (!empty($tempEvo['typeOverride1'])) {
+                        $mega[\Pogo\Data\Parser\Result\Pokemon::FIELD_TYPE1] = self::TYPE_TRANSLATE[$tempEvo['typeOverride1']];
+                    }
+                    if (!empty($tempEvo['typeOverride2'])) {
+                        $mega[\Pogo\Data\Parser\Result\Pokemon::FIELD_TYPE2] = self::TYPE_TRANSLATE[$tempEvo['typeOverride2']];
+                    } else {
+                        unset($mega[\Pogo\Data\Parser\Result\Pokemon::FIELD_TYPE2]);
+                    }
+                    unset($mega['evolutions']);
+                    unset($mega['thirdCandy']);
+                    unset($mega['thirdDust']);
+                    unset($mega['buddyDistance']);
+                    unset($mega['transferable']);
+                    unset($mega['deployable']);
+                    unset($mega['purifyCandy']);
+                    unset($mega['purifyDust']);
+                    unset($mega['legendary']);
+                    unset($mega['mythic']);
+//                    var_dump($mega);
+//                    echo $code | $megaMod;
+//                    die();
+                    $add[Result\Pokemon::FIELD_EVOLUTIONS][] = [
+                        \Pogo\Data\Parser\Result\Pokemon::FIELD_EVOLUTION_POKEMON => $mega['const'],
+                        \Pogo\Data\Parser\Result\Pokemon::FIELD_EVOLUTION_FORM => $mega['const']
+                    ];
+                    $this->result->pokemon->add($code | $megaMod, $mega);
                 }
             }
 

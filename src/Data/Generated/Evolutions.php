@@ -28,6 +28,9 @@ class Evolutions
             self::FIELD_PARENT => Pokemon::IVYSAUR,
             self::FIELD_CANDY => 100
         ],
+        Pokemon::VENUSAUR | Mods::MEGA => [
+            self::FIELD_PARENT => Pokemon::VENUSAUR
+        ],
         Pokemon::CHARMELEON => [
             self::FIELD_PARENT => Pokemon::CHARMANDER,
             self::FIELD_CANDY => 25
@@ -36,6 +39,12 @@ class Evolutions
             self::FIELD_PARENT => Pokemon::CHARMELEON,
             self::FIELD_CANDY => 100
         ],
+        Pokemon::CHARIZARD | Mods::MEGA_X => [
+            self::FIELD_PARENT => Pokemon::CHARIZARD
+        ],
+        Pokemon::CHARIZARD | Mods::MEGA_Y => [
+            self::FIELD_PARENT => Pokemon::CHARIZARD
+        ],
         Pokemon::WARTORTLE => [
             self::FIELD_PARENT => Pokemon::SQUIRTLE,
             self::FIELD_CANDY => 25
@@ -43,6 +52,9 @@ class Evolutions
         Pokemon::BLASTOISE => [
             self::FIELD_PARENT => Pokemon::WARTORTLE,
             self::FIELD_CANDY => 100
+        ],
+        Pokemon::BLASTOISE | Mods::MEGA => [
+            self::FIELD_PARENT => Pokemon::BLASTOISE
         ],
         Pokemon::METAPOD => [
             self::FIELD_PARENT => Pokemon::CATERPIE,
@@ -60,6 +72,9 @@ class Evolutions
             self::FIELD_PARENT => Pokemon::KAKUNA,
             self::FIELD_CANDY => 50
         ],
+        Pokemon::BEEDRILL | Mods::MEGA => [
+            self::FIELD_PARENT => Pokemon::BEEDRILL
+        ],
         Pokemon::PIDGEOTTO => [
             self::FIELD_PARENT => Pokemon::PIDGEY,
             self::FIELD_CANDY => 12
@@ -67,6 +82,9 @@ class Evolutions
         Pokemon::PIDGEOT => [
             self::FIELD_PARENT => Pokemon::PIDGEOTTO,
             self::FIELD_CANDY => 50
+        ],
+        Pokemon::PIDGEOT | Mods::MEGA => [
+            self::FIELD_PARENT => Pokemon::PIDGEOT
         ],
         Pokemon::RATICATE => [
             self::FIELD_PARENT => Pokemon::RATATTA,
@@ -263,6 +281,9 @@ class Evolutions
             self::FIELD_PARENT => Pokemon::HAUNTER,
             self::FIELD_CANDY => 100,
             self::FIELD_TRADED => true
+        ],
+        Pokemon::GENGAR | Mods::MEGA => [
+            self::FIELD_PARENT => Pokemon::GENGAR
         ],
         Pokemon::STEELIX => [
             self::FIELD_PARENT => Pokemon::ONIX,
@@ -573,6 +594,9 @@ class Evolutions
         Pokemon::HOUNDOOM => [
             self::FIELD_PARENT => Pokemon::HOUNDOUR,
             self::FIELD_CANDY => 50
+        ],
+        Pokemon::HOUNDOOM | Mods::MEGA => [
+            self::FIELD_PARENT => Pokemon::HOUNDOOM
         ],
         Pokemon::DONPHAN => [
             self::FIELD_PARENT => Pokemon::PHANPY,
@@ -1070,6 +1094,9 @@ class Evolutions
         Pokemon::ABOMASNOW => [
             self::FIELD_PARENT => Pokemon::SNOVER,
             self::FIELD_CANDY => 50
+        ],
+        Pokemon::ABOMASNOW | Mods::MEGA => [
+            self::FIELD_PARENT => Pokemon::ABOMASNOW
         ],
         Pokemon::SERVINE => [
             self::FIELD_PARENT => Pokemon::SNIVY,
@@ -1846,6 +1873,9 @@ class Evolutions
             self::FIELD_PARENT => Pokemon::IVYSAUR | Mods::SHADOW,
             self::FIELD_CANDY => 100
         ],
+        Pokemon::VENUSAUR | Mods::PURIFIED | Mods::MEGA => [
+            self::FIELD_PARENT => Pokemon::VENUSAUR | Mods::PURIFIED
+        ],
         Pokemon::CHARMELEON | Mods::PURIFIED => [
             self::FIELD_PARENT => Pokemon::CHARMANDER | Mods::PURIFIED,
             self::FIELD_CANDY => 22
@@ -1861,6 +1891,12 @@ class Evolutions
         Pokemon::CHARIZARD | Mods::SHADOW => [
             self::FIELD_PARENT => Pokemon::CHARMELEON | Mods::SHADOW,
             self::FIELD_CANDY => 100
+        ],
+        Pokemon::CHARIZARD | Mods::PURIFIED | Mods::MEGA_X => [
+            self::FIELD_PARENT => Pokemon::CHARIZARD | Mods::PURIFIED
+        ],
+        Pokemon::CHARIZARD | Mods::PURIFIED | Mods::MEGA_Y => [
+            self::FIELD_PARENT => Pokemon::CHARIZARD | Mods::PURIFIED
         ],
         Pokemon::WARTORTLE | Mods::PURIFIED => [
             self::FIELD_PARENT => Pokemon::SQUIRTLE | Mods::PURIFIED,
@@ -1878,6 +1914,9 @@ class Evolutions
             self::FIELD_PARENT => Pokemon::WARTORTLE | Mods::SHADOW,
             self::FIELD_CANDY => 100
         ],
+        Pokemon::BLASTOISE | Mods::PURIFIED | Mods::MEGA => [
+            self::FIELD_PARENT => Pokemon::BLASTOISE | Mods::PURIFIED
+        ],
         Pokemon::KAKUNA | Mods::PURIFIED => [
             self::FIELD_PARENT => Pokemon::WEEDLE | Mods::PURIFIED,
             self::FIELD_CANDY => 10
@@ -1893,6 +1932,9 @@ class Evolutions
         Pokemon::BEEDRILL | Mods::SHADOW => [
             self::FIELD_PARENT => Pokemon::KAKUNA | Mods::SHADOW,
             self::FIELD_CANDY => 50
+        ],
+        Pokemon::BEEDRILL | Mods::PURIFIED | Mods::MEGA => [
+            self::FIELD_PARENT => Pokemon::BEEDRILL | Mods::PURIFIED
         ],
         Pokemon::RATICATE | Mods::PURIFIED => [
             self::FIELD_PARENT => Pokemon::RATATTA | Mods::PURIFIED,
@@ -2456,6 +2498,9 @@ class Evolutions
             self::FIELD_PARENT => Pokemon::HOUNDOUR | Mods::SHADOW,
             self::FIELD_CANDY => 50
         ],
+        Pokemon::HOUNDOOM | Mods::PURIFIED | Mods::MEGA => [
+            self::FIELD_PARENT => Pokemon::HOUNDOOM | Mods::PURIFIED
+        ],
         Pokemon::PORYGON_Z | Mods::PURIFIED => [
             self::FIELD_PARENT => Pokemon::PORYGON2 | Mods::PURIFIED,
             self::FIELD_ITEM => 'ITEM_GEN4_EVOLUTION_STONE',
@@ -2711,6 +2756,9 @@ class Evolutions
         Pokemon::ABOMASNOW | Mods::SHADOW => [
             self::FIELD_PARENT => Pokemon::SNOVER | Mods::SHADOW,
             self::FIELD_CANDY => 50
+        ],
+        Pokemon::ABOMASNOW | Mods::PURIFIED | Mods::MEGA => [
+            self::FIELD_PARENT => Pokemon::ABOMASNOW | Mods::PURIFIED
         ],
         Pokemon::COFAGRIGUS | Mods::PURIFIED => [
             self::FIELD_PARENT => Pokemon::YAMASK | Mods::PURIFIED,

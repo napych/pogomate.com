@@ -77,6 +77,7 @@ class PokemonData
             self::FIELD_BUDDY_DISTANCE => 3,
             self::FIELD_THIRD_MOVE_CANDY => 25,
             self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::VENUSAUR | Mods::MEGA],
             self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_VINE_WHIP_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_SOLAR_BEAM],
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FRENZY_PLANT]
@@ -127,6 +128,7 @@ class PokemonData
             self::FIELD_BUDDY_DISTANCE => 3,
             self::FIELD_THIRD_MOVE_CANDY => 25,
             self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::CHARIZARD | Mods::MEGA_X, Pokemon::CHARIZARD | Mods::MEGA_Y],
             self::FIELD_FAST_MOVES => [Moves::MOVE_FIRE_SPIN_FAST, Moves::MOVE_AIR_SLASH_FAST],
             self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_EMBER_FAST, Moves::MOVE_WING_ATTACK_FAST, Moves::MOVE_DRAGON_BREATH_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_DRAGON_CLAW, Moves::MOVE_OVERHEAT],
@@ -176,6 +178,7 @@ class PokemonData
             self::FIELD_BUDDY_DISTANCE => 3,
             self::FIELD_THIRD_MOVE_CANDY => 25,
             self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::BLASTOISE | Mods::MEGA],
             self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_BITE_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLASH_CANNON, Moves::MOVE_ICE_BEAM, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_SKULL_BASH],
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_HYDRO_CANNON]
@@ -276,6 +279,7 @@ class PokemonData
             self::FIELD_BUDDY_DISTANCE => 1,
             self::FIELD_THIRD_MOVE_CANDY => 25,
             self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::BEEDRILL | Mods::MEGA],
             self::FIELD_FAST_MOVES => [Moves::MOVE_INFESTATION_FAST, Moves::MOVE_POISON_JAB_FAST],
             self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_BUG_BITE_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_AERIAL_ACE, Moves::MOVE_X_SCISSOR, Moves::MOVE_FELL_STINGER],
@@ -328,6 +332,7 @@ class PokemonData
             self::FIELD_BUDDY_DISTANCE => 1,
             self::FIELD_THIRD_MOVE_CANDY => 25,
             self::FIELD_THIRD_MOVE_STARDUST => 10000,
+            self::FIELD_EVOLVES => [Pokemon::PIDGEOT | Mods::MEGA],
             self::FIELD_FAST_MOVES => [Moves::MOVE_AIR_SLASH_FAST, Moves::MOVE_STEEL_WING_FAST],
             self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_WING_ATTACK_FAST, Moves::MOVE_GUST_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_HURRICANE, Moves::MOVE_AERIAL_ACE, Moves::MOVE_BRAVE_BIRD],
@@ -1596,6 +1601,7 @@ class PokemonData
             self::FIELD_BUDDY_DISTANCE => 3,
             self::FIELD_THIRD_MOVE_CANDY => 50,
             self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::GENGAR | Mods::MEGA],
             self::FIELD_FAST_MOVES => [Moves::MOVE_SUCKER_PUNCH_FAST, Moves::MOVE_HEX_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
             self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_LICK_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_SLUDGE_BOMB],
@@ -3817,6 +3823,7 @@ class PokemonData
             self::FIELD_BUDDY_DISTANCE => 3,
             self::FIELD_THIRD_MOVE_CANDY => 50,
             self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::HOUNDOOM | Mods::MEGA],
             self::FIELD_FAST_MOVES => [Moves::MOVE_SNARL_FAST, Moves::MOVE_FIRE_FANG_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_FIRE_BLAST, Moves::MOVE_FOUL_PLAY, Moves::MOVE_FLAMETHROWER]
         ],
@@ -7724,6 +7731,7 @@ class PokemonData
             self::FIELD_BUDDY_DISTANCE => 3,
             self::FIELD_THIRD_MOVE_CANDY => 50,
             self::FIELD_THIRD_MOVE_STARDUST => 50000,
+            self::FIELD_EVOLVES => [Pokemon::ABOMASNOW | Mods::MEGA],
             self::FIELD_FAST_MOVES => [Moves::MOVE_POWDER_SNOW_FAST, Moves::MOVE_RAZOR_LEAF_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BLIZZARD, Moves::MOVE_ENERGY_BALL, Moves::MOVE_OUTRAGE, Moves::MOVE_WEATHER_BALL_ICE]
         ],
@@ -14594,6 +14602,30 @@ class PokemonData
             self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_VINE_WHIP_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_SOLAR_BEAM, Moves::MOVE_POWER_WHIP]
         ],
+        Pokemon::VENUSAUR | Mods::MEGA => [
+            self::FIELD_NAME => 'Mega Venusaur',
+            self::FIELD_NAME_SHORT => 'Venusaur',
+            self::FIELD_ATTACK => 241,
+            self::FIELD_DEFENSE => 246,
+            self::FIELD_STAMINA => 190,
+            self::FIELD_TYPE1 => Types::GRASS,
+            self::FIELD_TYPE2 => Types::POISON,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_VINE_WHIP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_SOLAR_BEAM],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FRENZY_PLANT]
+        ],
+        Pokemon::VENUSAUR | Mods::PURIFIED | Mods::MEGA => [
+            self::FIELD_NAME => 'Mega Purified Venusaur',
+            self::FIELD_NAME_SHORT => 'Venusaur',
+            self::FIELD_ATTACK => 241,
+            self::FIELD_DEFENSE => 246,
+            self::FIELD_STAMINA => 190,
+            self::FIELD_TYPE1 => Types::GRASS,
+            self::FIELD_TYPE2 => Types::POISON,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_VINE_WHIP_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_SOLAR_BEAM],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FRENZY_PLANT]
+        ],
         Pokemon::VENUSAUR | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Venusaur',
             self::FIELD_NAME_SHORT => 'Venusaur',
@@ -14607,6 +14639,7 @@ class PokemonData
             self::FIELD_BUDDY_DISTANCE => 3,
             self::FIELD_THIRD_MOVE_CANDY => 20,
             self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_EVOLVES => [Pokemon::VENUSAUR | Mods::PURIFIED | Mods::MEGA],
             self::FIELD_FAST_MOVES => [Moves::MOVE_RAZOR_LEAF_FAST, Moves::MOVE_VINE_WHIP_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_PETAL_BLIZZARD, Moves::MOVE_SOLAR_BEAM],
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_FRENZY_PLANT]
@@ -14700,6 +14733,58 @@ class PokemonData
             self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_SCRATCH_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_PUNCH, Moves::MOVE_FLAME_BURST, Moves::MOVE_FLAMETHROWER]
         ],
+        Pokemon::CHARIZARD | Mods::MEGA_X => [
+            self::FIELD_NAME => 'Mega Charizard X',
+            self::FIELD_NAME_SHORT => 'Charizard',
+            self::FIELD_ATTACK => 273,
+            self::FIELD_DEFENSE => 213,
+            self::FIELD_STAMINA => 186,
+            self::FIELD_TYPE1 => Types::FIRE,
+            self::FIELD_TYPE2 => Types::DRAGON,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FIRE_SPIN_FAST, Moves::MOVE_AIR_SLASH_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_EMBER_FAST, Moves::MOVE_WING_ATTACK_FAST, Moves::MOVE_DRAGON_BREATH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_DRAGON_CLAW, Moves::MOVE_OVERHEAT],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BLAST_BURN, Moves::MOVE_FLAMETHROWER]
+        ],
+        Pokemon::CHARIZARD | Mods::MEGA_Y => [
+            self::FIELD_NAME => 'Mega Charizard Y',
+            self::FIELD_NAME_SHORT => 'Charizard',
+            self::FIELD_ATTACK => 319,
+            self::FIELD_DEFENSE => 212,
+            self::FIELD_STAMINA => 186,
+            self::FIELD_TYPE1 => Types::FIRE,
+            self::FIELD_TYPE2 => Types::FLYING,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FIRE_SPIN_FAST, Moves::MOVE_AIR_SLASH_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_EMBER_FAST, Moves::MOVE_WING_ATTACK_FAST, Moves::MOVE_DRAGON_BREATH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_DRAGON_CLAW, Moves::MOVE_OVERHEAT],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BLAST_BURN, Moves::MOVE_FLAMETHROWER]
+        ],
+        Pokemon::CHARIZARD | Mods::PURIFIED | Mods::MEGA_X => [
+            self::FIELD_NAME => 'Mega Purified Charizard X',
+            self::FIELD_NAME_SHORT => 'Charizard',
+            self::FIELD_ATTACK => 273,
+            self::FIELD_DEFENSE => 213,
+            self::FIELD_STAMINA => 186,
+            self::FIELD_TYPE1 => Types::FIRE,
+            self::FIELD_TYPE2 => Types::DRAGON,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FIRE_SPIN_FAST, Moves::MOVE_AIR_SLASH_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_EMBER_FAST, Moves::MOVE_WING_ATTACK_FAST, Moves::MOVE_DRAGON_BREATH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_DRAGON_CLAW, Moves::MOVE_OVERHEAT],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BLAST_BURN, Moves::MOVE_FLAMETHROWER]
+        ],
+        Pokemon::CHARIZARD | Mods::PURIFIED | Mods::MEGA_Y => [
+            self::FIELD_NAME => 'Mega Purified Charizard Y',
+            self::FIELD_NAME_SHORT => 'Charizard',
+            self::FIELD_ATTACK => 319,
+            self::FIELD_DEFENSE => 212,
+            self::FIELD_STAMINA => 186,
+            self::FIELD_TYPE1 => Types::FIRE,
+            self::FIELD_TYPE2 => Types::FLYING,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_FIRE_SPIN_FAST, Moves::MOVE_AIR_SLASH_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_EMBER_FAST, Moves::MOVE_WING_ATTACK_FAST, Moves::MOVE_DRAGON_BREATH_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_DRAGON_CLAW, Moves::MOVE_OVERHEAT],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BLAST_BURN, Moves::MOVE_FLAMETHROWER]
+        ],
         Pokemon::CHARIZARD | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Charizard',
             self::FIELD_NAME_SHORT => 'Charizard',
@@ -14713,6 +14798,7 @@ class PokemonData
             self::FIELD_BUDDY_DISTANCE => 3,
             self::FIELD_THIRD_MOVE_CANDY => 20,
             self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_EVOLVES => [Pokemon::CHARIZARD | Mods::PURIFIED | Mods::MEGA_X, Pokemon::CHARIZARD | Mods::PURIFIED | Mods::MEGA_Y],
             self::FIELD_FAST_MOVES => [Moves::MOVE_FIRE_SPIN_FAST, Moves::MOVE_AIR_SLASH_FAST],
             self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_EMBER_FAST, Moves::MOVE_WING_ATTACK_FAST, Moves::MOVE_DRAGON_BREATH_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FIRE_BLAST, Moves::MOVE_DRAGON_CLAW, Moves::MOVE_OVERHEAT],
@@ -14806,6 +14892,28 @@ class PokemonData
             self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_BITE_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AQUA_JET, Moves::MOVE_ICE_BEAM, Moves::MOVE_HYDRO_PUMP]
         ],
+        Pokemon::BLASTOISE | Mods::MEGA => [
+            self::FIELD_NAME => 'Mega Blastoise',
+            self::FIELD_NAME_SHORT => 'Blastoise',
+            self::FIELD_ATTACK => 264,
+            self::FIELD_DEFENSE => 237,
+            self::FIELD_STAMINA => 188,
+            self::FIELD_TYPE1 => Types::WATER,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLASH_CANNON, Moves::MOVE_ICE_BEAM, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_SKULL_BASH],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_HYDRO_CANNON]
+        ],
+        Pokemon::BLASTOISE | Mods::PURIFIED | Mods::MEGA => [
+            self::FIELD_NAME => 'Mega Purified Blastoise',
+            self::FIELD_NAME_SHORT => 'Blastoise',
+            self::FIELD_ATTACK => 264,
+            self::FIELD_DEFENSE => 237,
+            self::FIELD_STAMINA => 188,
+            self::FIELD_TYPE1 => Types::WATER,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLASH_CANNON, Moves::MOVE_ICE_BEAM, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_SKULL_BASH],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_HYDRO_CANNON]
+        ],
         Pokemon::BLASTOISE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Blastoise',
             self::FIELD_NAME_SHORT => 'Blastoise',
@@ -14818,6 +14926,7 @@ class PokemonData
             self::FIELD_BUDDY_DISTANCE => 3,
             self::FIELD_THIRD_MOVE_CANDY => 20,
             self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_EVOLVES => [Pokemon::BLASTOISE | Mods::PURIFIED | Mods::MEGA],
             self::FIELD_FAST_MOVES => [Moves::MOVE_WATER_GUN_FAST, Moves::MOVE_BITE_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_FLASH_CANNON, Moves::MOVE_ICE_BEAM, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_SKULL_BASH],
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_HYDRO_CANNON]
@@ -14912,6 +15021,32 @@ class PokemonData
             self::FIELD_FAST_MOVES => [Moves::MOVE_BUG_BITE_FAST, Moves::MOVE_POISON_STING_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_STRUGGLE]
         ],
+        Pokemon::BEEDRILL | Mods::MEGA => [
+            self::FIELD_NAME => 'Mega Beedrill',
+            self::FIELD_NAME_SHORT => 'Beedrill',
+            self::FIELD_ATTACK => 303,
+            self::FIELD_DEFENSE => 148,
+            self::FIELD_STAMINA => 163,
+            self::FIELD_TYPE1 => Types::BUG,
+            self::FIELD_TYPE2 => Types::POISON,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_INFESTATION_FAST, Moves::MOVE_POISON_JAB_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_AERIAL_ACE, Moves::MOVE_X_SCISSOR, Moves::MOVE_FELL_STINGER],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRILL_RUN]
+        ],
+        Pokemon::BEEDRILL | Mods::PURIFIED | Mods::MEGA => [
+            self::FIELD_NAME => 'Mega Purified Beedrill',
+            self::FIELD_NAME_SHORT => 'Beedrill',
+            self::FIELD_ATTACK => 303,
+            self::FIELD_DEFENSE => 148,
+            self::FIELD_STAMINA => 163,
+            self::FIELD_TYPE1 => Types::BUG,
+            self::FIELD_TYPE2 => Types::POISON,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_INFESTATION_FAST, Moves::MOVE_POISON_JAB_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_BUG_BITE_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_AERIAL_ACE, Moves::MOVE_X_SCISSOR, Moves::MOVE_FELL_STINGER],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRILL_RUN]
+        ],
         Pokemon::BEEDRILL | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Beedrill',
             self::FIELD_NAME_SHORT => 'Beedrill',
@@ -14925,6 +15060,7 @@ class PokemonData
             self::FIELD_BUDDY_DISTANCE => 1,
             self::FIELD_THIRD_MOVE_CANDY => 20,
             self::FIELD_THIRD_MOVE_STARDUST => 8000,
+            self::FIELD_EVOLVES => [Pokemon::BEEDRILL | Mods::PURIFIED | Mods::MEGA],
             self::FIELD_FAST_MOVES => [Moves::MOVE_INFESTATION_FAST, Moves::MOVE_POISON_JAB_FAST],
             self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_BUG_BITE_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_AERIAL_ACE, Moves::MOVE_X_SCISSOR, Moves::MOVE_FELL_STINGER],
@@ -14949,6 +15085,19 @@ class PokemonData
             self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_BUG_BITE_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SLUDGE_BOMB, Moves::MOVE_AERIAL_ACE, Moves::MOVE_X_SCISSOR, Moves::MOVE_FELL_STINGER],
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_DRILL_RUN]
+        ],
+        Pokemon::PIDGEOT | Mods::MEGA => [
+            self::FIELD_NAME => 'Mega Pidgeot',
+            self::FIELD_NAME_SHORT => 'Pidgeot',
+            self::FIELD_ATTACK => 280,
+            self::FIELD_DEFENSE => 175,
+            self::FIELD_STAMINA => 195,
+            self::FIELD_TYPE1 => Types::NORMAL,
+            self::FIELD_TYPE2 => Types::FLYING,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_AIR_SLASH_FAST, Moves::MOVE_STEEL_WING_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_WING_ATTACK_FAST, Moves::MOVE_GUST_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_HURRICANE, Moves::MOVE_AERIAL_ACE, Moves::MOVE_BRAVE_BIRD],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_AIR_CUTTER]
         ],
         Pokemon::RATATTA | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Rattata',
@@ -16873,6 +17022,19 @@ class PokemonData
             self::FIELD_FAST_MOVES => [Moves::MOVE_FROST_BREATH_FAST, Moves::MOVE_ICE_SHARD_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_AURORA_BEAM, Moves::MOVE_HYDRO_PUMP, Moves::MOVE_AVALANCHE, Moves::MOVE_ICY_WIND],
             self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_BLIZZARD]
+        ],
+        Pokemon::GENGAR | Mods::MEGA => [
+            self::FIELD_NAME => 'Mega Gengar',
+            self::FIELD_NAME_SHORT => 'Gengar',
+            self::FIELD_ATTACK => 349,
+            self::FIELD_DEFENSE => 199,
+            self::FIELD_STAMINA => 155,
+            self::FIELD_TYPE1 => Types::GHOST,
+            self::FIELD_TYPE2 => Types::POISON,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SUCKER_PUNCH_FAST, Moves::MOVE_HEX_FAST, Moves::MOVE_SHADOW_CLAW_FAST],
+            self::FIELD_FAST_MOVES_ELITE => [Moves::MOVE_LICK_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_SHADOW_BALL, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_SLUDGE_BOMB],
+            self::FIELD_CHARGE_MOVES_ELITE => [Moves::MOVE_SLUDGE_WAVE, Moves::MOVE_DARK_PULSE, Moves::MOVE_PSYCHIC, Moves::MOVE_SHADOW_PUNCH]
         ],
         Pokemon::ONIX | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Onix',
@@ -19176,6 +19338,28 @@ class PokemonData
             self::FIELD_FAST_MOVES => [Moves::MOVE_FEINT_ATTACK_FAST, Moves::MOVE_EMBER_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_FLAMETHROWER, Moves::MOVE_DARK_PULSE]
         ],
+        Pokemon::HOUNDOOM | Mods::MEGA => [
+            self::FIELD_NAME => 'Mega Houndoom',
+            self::FIELD_NAME_SHORT => 'Houndoom',
+            self::FIELD_ATTACK => 289,
+            self::FIELD_DEFENSE => 194,
+            self::FIELD_STAMINA => 181,
+            self::FIELD_TYPE1 => Types::DARK,
+            self::FIELD_TYPE2 => Types::FIRE,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SNARL_FAST, Moves::MOVE_FIRE_FANG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_FIRE_BLAST, Moves::MOVE_FOUL_PLAY, Moves::MOVE_FLAMETHROWER]
+        ],
+        Pokemon::HOUNDOOM | Mods::PURIFIED | Mods::MEGA => [
+            self::FIELD_NAME => 'Mega Purified Houndoom',
+            self::FIELD_NAME_SHORT => 'Houndoom',
+            self::FIELD_ATTACK => 289,
+            self::FIELD_DEFENSE => 194,
+            self::FIELD_STAMINA => 181,
+            self::FIELD_TYPE1 => Types::DARK,
+            self::FIELD_TYPE2 => Types::FIRE,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_SNARL_FAST, Moves::MOVE_FIRE_FANG_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_FIRE_BLAST, Moves::MOVE_FOUL_PLAY, Moves::MOVE_FLAMETHROWER]
+        ],
         Pokemon::HOUNDOOM | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Houndoom',
             self::FIELD_NAME_SHORT => 'Houndoom',
@@ -19189,6 +19373,7 @@ class PokemonData
             self::FIELD_BUDDY_DISTANCE => 3,
             self::FIELD_THIRD_MOVE_CANDY => 40,
             self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::HOUNDOOM | Mods::PURIFIED | Mods::MEGA],
             self::FIELD_FAST_MOVES => [Moves::MOVE_SNARL_FAST, Moves::MOVE_FIRE_FANG_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_CRUNCH, Moves::MOVE_FIRE_BLAST, Moves::MOVE_FOUL_PLAY, Moves::MOVE_FLAMETHROWER]
         ],
@@ -21144,6 +21329,28 @@ class PokemonData
             self::FIELD_FAST_MOVES => [Moves::MOVE_POWDER_SNOW_FAST, Moves::MOVE_ICE_SHARD_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_ICE_BEAM, Moves::MOVE_ENERGY_BALL, Moves::MOVE_STOMP]
         ],
+        Pokemon::ABOMASNOW | Mods::MEGA => [
+            self::FIELD_NAME => 'Mega Abomasnow',
+            self::FIELD_NAME_SHORT => 'Abomasnow',
+            self::FIELD_ATTACK => 240,
+            self::FIELD_DEFENSE => 191,
+            self::FIELD_STAMINA => 207,
+            self::FIELD_TYPE1 => Types::GRASS,
+            self::FIELD_TYPE2 => Types::ICE,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POWDER_SNOW_FAST, Moves::MOVE_RAZOR_LEAF_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BLIZZARD, Moves::MOVE_ENERGY_BALL, Moves::MOVE_OUTRAGE, Moves::MOVE_WEATHER_BALL_ICE]
+        ],
+        Pokemon::ABOMASNOW | Mods::PURIFIED | Mods::MEGA => [
+            self::FIELD_NAME => 'Mega Purified Abomasnow',
+            self::FIELD_NAME_SHORT => 'Abomasnow',
+            self::FIELD_ATTACK => 240,
+            self::FIELD_DEFENSE => 191,
+            self::FIELD_STAMINA => 207,
+            self::FIELD_TYPE1 => Types::GRASS,
+            self::FIELD_TYPE2 => Types::ICE,
+            self::FIELD_FAST_MOVES => [Moves::MOVE_POWDER_SNOW_FAST, Moves::MOVE_RAZOR_LEAF_FAST],
+            self::FIELD_CHARGE_MOVES => [Moves::MOVE_BLIZZARD, Moves::MOVE_ENERGY_BALL, Moves::MOVE_OUTRAGE, Moves::MOVE_WEATHER_BALL_ICE]
+        ],
         Pokemon::ABOMASNOW | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Abomasnow',
             self::FIELD_NAME_SHORT => 'Abomasnow',
@@ -21157,6 +21364,7 @@ class PokemonData
             self::FIELD_BUDDY_DISTANCE => 3,
             self::FIELD_THIRD_MOVE_CANDY => 40,
             self::FIELD_THIRD_MOVE_STARDUST => 40000,
+            self::FIELD_EVOLVES => [Pokemon::ABOMASNOW | Mods::PURIFIED | Mods::MEGA],
             self::FIELD_FAST_MOVES => [Moves::MOVE_POWDER_SNOW_FAST, Moves::MOVE_RAZOR_LEAF_FAST],
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_BLIZZARD, Moves::MOVE_ENERGY_BALL, Moves::MOVE_OUTRAGE, Moves::MOVE_WEATHER_BALL_ICE]
         ],
