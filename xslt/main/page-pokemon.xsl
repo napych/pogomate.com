@@ -52,12 +52,6 @@
                 </xsl:choose>
             </xsl:for-each>
         </div>
-        <xsl:if test="count(evolve/evolve)>0">
-            <p class="evolutions">
-                <xsl:text>Evolutions: </xsl:text>
-                <xsl:apply-templates select="evolve"/>
-            </p>
-        </xsl:if>
     </xsl:template>
 
     <xsl:template match="reason" mode="pokemon">
