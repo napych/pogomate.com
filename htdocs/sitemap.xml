@@ -6,7 +6,7 @@
   </sitemap>
   <sitemap>
     <loc>https://pogomate.com/sitemap/pokemon.xml</loc>
-    <lastmod>2020-12-20</lastmod>
+    <lastmod>2021-01-04</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://pogomate.com/sitemap/counters-1.xml</loc>
@@ -51,5 +51,9 @@
   <sitemap>
     <loc>https://pogomate.com/sitemap/counters-11.xml</loc>
     <lastmod>2020-09-22</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://pogomate.com/sitemap/moves.xml</loc>
+    <lastmod>2021-01-04</lastmod>
   </sitemap>
 </sitemapindex>

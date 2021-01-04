@@ -4,6 +4,7 @@ namespace Pogo\Mate;
 
 use Difra\Config;
 use Difra\Envi;
+use Pogo\Data\Generated\MovesLinks;
 use Pogo\Data\Generated\PokemonLinks;
 use Pogo\Pokemon\Types;
 use Pogo\Pokemon;
@@ -82,6 +83,7 @@ class Sitemap
         $sitemap->writeMain();
         $sitemap->writePokemon();
         $sitemap->writeCounters();
+        $sitemap->writeMoves();
         $sitemap->writeIndex();
     }
 
@@ -155,6 +157,23 @@ class Sitemap
             $node->appendChild($doc->createElement('changefreq', $conf['changefreq']));
         }
         $doc->save(Envi\Roots::getRoot() . '/htdocs/sitemap/pokemon.xml');
+    }
+
+    protected function writeMoves()
+    {
+        $conf = Config::getInstance()->getValue('sitemap', 'moves');
+        $this->index[] = ['loc' => $this->prefix . '/moves.xml', 'lastmod' => $conf['lastmod']];
+        $doc = new \DOMDocument();
+        $doc->formatOutput = true;
+        $root = $doc->appendChild($doc->createElementNS('http://www.sitemaps.org/schemas/sitemap/0.9', 'urlset'));
+        foreach (MovesLinks::MOVE2LINK as $link)
+        {
+            $node = $root->appendChild($doc->createElement('url'));
+            $node->appendChild($doc->createElement('loc', 'https://pogomate.com/move/' . $link));
+            $node->appendChild($doc->createElement('lastmod', $conf['lastmod']));
+            $node->appendChild($doc->createElement('changefreq', $conf['changefreq']));
+        }
+        $doc->save(Envi\Roots::getRoot() . '/htdocs/sitemap/moves.xml');
     }
 
     protected function writeMain()
