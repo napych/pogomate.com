@@ -6,8 +6,7 @@
         </h1>
         <h2 class="h3">Usage</h2>
         <xsl:apply-templates select="pokemon" mode="reasons"/>
-        <h2 class="h3">Information</h2>
-        <xsl:call-template name="pokemon-accordion"/>
+        <xsl:apply-templates select="pokemon" mode="pokemon-info"/>
         <xsl:call-template name="snippet-search"/>
     </xsl:template>
 
@@ -35,7 +34,7 @@
                     <xsl:when test="evolve">
                         <p class="reason-title">
                             <xsl:text> ⇨ </xsl:text>
-                            <a href="/pokemon/{evolve/@link}">
+                            <a href="/pokemon/{evolve/@linkForm}">
                                 <xsl:value-of select="evolve/@name"/>
                             </a>
                         </p>
@@ -85,7 +84,7 @@
                     </span>
                 </xsl:when>
                 <xsl:otherwise>
-                    <a href="/pokemon/{@link}">
+                    <a href="/pokemon/{@linkForm}">
                         <xsl:value-of select="@name"/>
                     </a>
                 </xsl:otherwise>
@@ -99,84 +98,66 @@
         </span>
     </xsl:template>
 
-    <xsl:template name="pokemon-accordion">
-        <div class="accordion" id="pokemonInfo">
-            <xsl:apply-templates select="pokemon" mode="pokemon-info"/>
-        </div>
-        <br/>
-    </xsl:template>
-
     <xsl:template match="pokemon" mode="pokemon-info">
         <xsl:variable name="postfix" select="position()"/>
-        <div class="card">
-            <div class="card-header" id="name{$postfix}">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                            data-target="#form{$postfix}" aria-expanded="false"
-                            aria-controls="form{$postfix}">
-                        <xsl:value-of select="@name"/>
-                    </button>
-                </h2>
-            </div>
+        <h2 class="h3" id="{@form}">
+            <xsl:value-of select="@name"/>
+        </h2>
+        <div class="card-body">
+            <p class="card-pokedex-id">
+                <span class="label">
+                    <xsl:text>Pokedex ID: #</xsl:text>
+                </span>
+                <span class="value">
+                    <xsl:value-of select="@pokedexId"/>
+                </span>
+            </p>
 
-            <div id="form{$postfix}" class="collapse" aria-labelledby="name{$postfix}" data-parent="#pokemonInfo">
-                <div class="card-body">
-                    <p class="card-pokedex-id">
-                        <span class="label">
-                            <xsl:text>Pokedex ID: #</xsl:text>
-                        </span>
-                        <span class="value">
-                            <xsl:value-of select="@pokedexId"/>
-                        </span>
-                    </p>
+            <xsl:if test="@unreleased>0">
+                <p class="card-unreleased">Not released yet</p>
+            </xsl:if>
 
-                    <xsl:if test="@unreleased>0">
-                        <p class="card-unreleased">Not released yet</p>
-                    </xsl:if>
+            <p class="card-types">
+                <span class="label">
+                    <xsl:text>Type: </xsl:text>
+                </span>
+                <span class="type-{@type1}">
+                    <xsl:value-of select="@type1"/>
+                </span>
+                <xsl:text> </xsl:text>
+                <xsl:if test="@type2 != ''">
+                    <span class="type-{@type2}">
+                        <xsl:value-of select="@type2"/>
+                    </span>
+                </xsl:if>
+            </p>
 
-                    <p class="card-types">
-                        <span class="label">
-                            <xsl:text>Type: </xsl:text>
-                        </span>
-                        <span class="type-{@type1}">
-                            <xsl:value-of select="@type1"/>
-                        </span>
-                        <xsl:text> </xsl:text>
-                        <xsl:if test="@type2 != ''">
-                            <span class="type-{@type2}">
-                                <xsl:value-of select="@type2"/>
-                            </span>
-                        </xsl:if>
-                    </p>
+            <xsl:if test="count(evolve/evolve)>0">
+                <p class="evolutions">
+                    <xsl:text>Evolutions: </xsl:text>
+                    <xsl:apply-templates select="evolve"/>
+                </p>
+            </xsl:if>
 
-                    <xsl:if test="count(evolve/evolve)>0">
-                        <p class="evolutions">
-                            <xsl:text>Evolutions: </xsl:text>
-                            <xsl:apply-templates select="evolve"/>
-                        </p>
-                    </xsl:if>
+            <xsl:call-template name="pokemon-moves">
+                <xsl:with-param name="title" select="'Fast moves'"/>
+                <xsl:with-param name="moves" select="moves[@type='fastMoves']/move"/>
+            </xsl:call-template>
 
-                    <xsl:call-template name="pokemon-moves">
-                        <xsl:with-param name="title" select="'Fast moves'"/>
-                        <xsl:with-param name="moves" select="moves[@type='fastMoves']/move"/>
-                    </xsl:call-template>
+            <xsl:call-template name="pokemon-moves">
+                <xsl:with-param name="title" select="'Elite fast moves'"/>
+                <xsl:with-param name="moves" select="moves[@type='fastMovesElite']/move"/>
+            </xsl:call-template>
 
-                    <xsl:call-template name="pokemon-moves">
-                        <xsl:with-param name="title" select="'Elite fast moves'"/>
-                        <xsl:with-param name="moves" select="moves[@type='fastMovesElite']/move"/>
-                    </xsl:call-template>
+            <xsl:call-template name="pokemon-moves">
+                <xsl:with-param name="title" select="'Charge moves'"/>
+                <xsl:with-param name="moves" select="moves[@type='chargeMoves']/move"/>
+            </xsl:call-template>
 
-                    <xsl:call-template name="pokemon-moves">
-                        <xsl:with-param name="title" select="'Charge moves'"/>
-                        <xsl:with-param name="moves" select="moves[@type='chargeMoves']/move"/>
-                    </xsl:call-template>
-
-                    <xsl:call-template name="pokemon-moves">
-                        <xsl:with-param name="title" select="'Elite charge moves'"/>
-                        <xsl:with-param name="moves" select="moves[@type='chargeMovesElite']/move"/>
-                    </xsl:call-template>
-                </div>
-            </div>
+            <xsl:call-template name="pokemon-moves">
+                <xsl:with-param name="title" select="'Elite charge moves'"/>
+                <xsl:with-param name="moves" select="moves[@type='chargeMovesElite']/move"/>
+            </xsl:call-template>
         </div>
     </xsl:template>
 

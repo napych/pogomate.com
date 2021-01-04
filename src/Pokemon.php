@@ -151,9 +151,35 @@ class Pokemon extends Data\Manual\PokemonList
         return PokemonData::POKEMON[$this->code][PokemonData::FIELD_NAME_SHORT];
     }
 
-    public function getLinkName(): string
+    public function getLinkHash($forceForm = false): string
     {
-        return PokemonLinks::POKEMON2LINK[$this->getPokedexId()];
+        $hash = [];
+        if ($this->isShadow()) {
+            $hash[] = 'shadow';
+        }
+        if ($this->isPurified()) {
+            $hash[] = 'purified';
+        }
+        if ($this->isAlolan()) {
+            $hash[] = 'alolan';
+        }
+        if ($this->isGalarian()) {
+            $hash[] = 'galarian';
+        }
+        if (!$forceForm || !empty($hash)) {
+            return implode('-', $hash);
+        } else {
+            return 'regular';
+        }
+    }
+
+    public function getLinkName($forceForm = false): string
+    {
+        $link = PokemonLinks::POKEMON2LINK[$this->getPokedexId()];
+        if (!empty($hash = $this->getLinkHash($forceForm))) {
+            $link .= '#' . $hash;
+        }
+        return $link;
     }
 
     /**
@@ -193,6 +219,8 @@ class Pokemon extends Data\Manual\PokemonList
         $node->setAttribute('name', $this->getName());
         $node->setAttribute('shortName', $this->getShortName());
         $node->setAttribute('link', $this->getLinkName());
+        $node->setAttribute('linkForm', $this->getLinkName(true));
+        $node->setAttribute('form', $this->getLinkHash(true));
         if (!$extended) {
             return $node;
         }
