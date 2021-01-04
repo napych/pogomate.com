@@ -93,7 +93,6 @@
     </xsl:template>
 
     <xsl:template match="pokemon" mode="pokemon-info">
-        <xsl:variable name="postfix" select="position()"/>
         <h2 class="h3" id="{@form}">
             <xsl:value-of select="@name"/>
         </h2>
