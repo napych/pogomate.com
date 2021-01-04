@@ -21,6 +21,9 @@ class Move extends Controller
             if (!empty(MoveUsers::MOVES[$move->getId()])) {
                 foreach (MoveUsers::MOVES[$move->getId()] as $user) {
                     $pokemon = \Pogo\Pokemon::get($user);
+                    if ($pokemon->isPurified()) {
+                        continue;
+                    }
                     $pokemon->getXML($moveNode, true, false);
                 }
             }
