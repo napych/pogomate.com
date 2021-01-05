@@ -45,8 +45,29 @@ class Pokemon extends \Difra\Controller
 
         $commonName = reset($pokemonList)->getShortName();
         $this->setTitle($commonName . ' pokémon');
-        $this->setDescription($commonName . ' pokémon information');
-        $this->setKeywords('pokémon go, ' . $commonName . ' pokémon, tier list, pokémon usefulness, pvp, pve, pokémon species');
+
+        $keywords = ['pokémon go'];
+        $mythical = $legendary = false;
+        foreach ($pokemonList as $pokemon) {
+            $keywords[] = $pokemon->getName();
+            if ($pokemon->isLegendary()) {
+                $legendary = true;
+            }
+            if ($pokemon->isMythical()) {
+                $mythical = true;
+            }
+        }
+        if ($mythical) {
+            $this->setDescription($commonName . ' mythical pokémon information');
+            $keywords[] = 'mytical pokémon';
+        } elseif ($legendary) {
+            $this->setDescription($commonName . ' legendary pokémon information');
+            $keywords[] = 'legendary pokémon';
+        } else {
+            $this->setDescription($commonName . ' pokémon information');
+        }
+
+        $this->setKeywords(implode(', ', $keywords) . ', attacker tier list, PVP tiers, top PVP, defenders, top by type');
 
         $node = $this->root->appendChild($this->xml->createElement('page-pokemon'));
         $node->setAttribute('name', $commonName);
