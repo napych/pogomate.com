@@ -11,13 +11,5 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
         <link rel="manifest" href="/site.webmanifest?{/root/@build}"/>
         <meta name="theme-color" content="#ffffff"/>
-        <script async="async" type="text/javascript" src="/js/clipboard-polyfill.promise.js?{/root/@build}"/>
-        <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-177435892-1"/>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-177435892-1');
-        </script>
     </xsl:template>
 </xsl:stylesheet>
