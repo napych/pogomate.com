@@ -237,9 +237,9 @@ class MovesLinks
         Moves::MOVE_AEROBLAST => 'aeroblast',
         Moves::MOVE_FLY => 'fly',
         Moves::MOVE_V_CREATE => 'v-create',
-        Moves::MOVE_TRI_ATTACK => '',
-        Moves::MOVE_GUST_FAST => '',
-        Moves::MOVE_INCINERATE_FAST => ''
+        Moves::MOVE_TRI_ATTACK => 'tri-attack',
+        Moves::MOVE_GUST_FAST => 'gust',
+        Moves::MOVE_INCINERATE_FAST => 'incinerate'
     ];
     
     const LINK2MOVE = [
@@ -485,10 +485,8 @@ class MovesLinks
         'aeroblast' => [Moves::MOVE_AEROBLAST],
         'fly' => [Moves::MOVE_FLY],
         'v-create' => [Moves::MOVE_V_CREATE],
-        '' => [
-            Moves::MOVE_TRI_ATTACK,
-            Moves::MOVE_GUST_FAST,
-            Moves::MOVE_INCINERATE_FAST
-        ]
+        'tri-attack' => [Moves::MOVE_TRI_ATTACK],
+        'gust' => [Moves::MOVE_GUST_FAST],
+        'incinerate' => [Moves::MOVE_INCINERATE_FAST]
     ];
 }

@@ -3272,7 +3272,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -40
         ],
         self::MOVE_TRI_ATTACK => [
-            self::FIELD_NAME => '',
+            self::FIELD_NAME => 'Tri Attack',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 75,
@@ -3286,7 +3286,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -50
         ],
         self::MOVE_GUST_FAST => [
-            self::FIELD_NAME => '',
+            self::FIELD_NAME => 'Gust',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::FLYING,
             self::FIELD_POWER => 25,
@@ -3300,7 +3300,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 12
         ],
         self::MOVE_INCINERATE_FAST => [
-            self::FIELD_NAME => '',
+            self::FIELD_NAME => 'Incinerate',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::FIRE,
             self::FIELD_POWER => 29,

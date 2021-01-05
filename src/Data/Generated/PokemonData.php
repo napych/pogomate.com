@@ -12023,8 +12023,8 @@ class PokemonData
             self::FIELD_TYPE2 => Types::GHOST
         ],
         Pokemon::SPIRITZEE => [
-            self::FIELD_NAME => 'Spiritzee',
-            self::FIELD_NAME_SHORT => 'Spiritzee',
+            self::FIELD_NAME => 'Spritzee',
+            self::FIELD_NAME_SHORT => 'Spritzee',
             self::FIELD_ATTACK => 110,
             self::FIELD_DEFENSE => 113,
             self::FIELD_STAMINA => 186,
@@ -12458,8 +12458,8 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_SEED_BOMB, Moves::MOVE_SHADOW_BALL, Moves::MOVE_FOUL_PLAY]
         ],
         Pokemon::TREVEANT => [
-            self::FIELD_NAME => 'Treveant',
-            self::FIELD_NAME_SHORT => 'Treveant',
+            self::FIELD_NAME => 'Trevenant',
+            self::FIELD_NAME_SHORT => 'Trevenant',
             self::FIELD_ATTACK => 201,
             self::FIELD_DEFENSE => 154,
             self::FIELD_STAMINA => 198,
@@ -12600,8 +12600,8 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_DARK_PULSE, Moves::MOVE_HURRICANE, Moves::MOVE_FOCUS_BLAST, Moves::MOVE_HYPER_BEAM, Moves::MOVE_PSYCHIC]
         ],
         Pokemon::ZYGARGE | FormsAlias::ZYGARGE_HALF => [
-            self::FIELD_NAME => 'Zygarge (50% Forme)',
-            self::FIELD_NAME_SHORT => 'Zygarge',
+            self::FIELD_NAME => 'Zygarde (50% Forme)',
+            self::FIELD_NAME_SHORT => 'Zygarde',
             self::FIELD_ATTACK => null,
             self::FIELD_DEFENSE => null,
             self::FIELD_STAMINA => null,
@@ -12616,15 +12616,15 @@ class PokemonData
             self::FIELD_CHARGE_MOVES => [Moves::MOVE_OUTRAGE, Moves::MOVE_EARTHQUAKE, Moves::MOVE_CRUNCH, Moves::MOVE_HYPER_BEAM, Moves::MOVE_BULLDOZE]
         ],
         Pokemon::ZYGARGE | FormsAlias::ZYGARGE_TENTH => [
-            self::FIELD_NAME => 'Zygarge (10% Forme)',
-            self::FIELD_NAME_SHORT => 'Zygarge',
+            self::FIELD_NAME => 'Zygarde (10% Forme)',
+            self::FIELD_NAME_SHORT => 'Zygarde',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::DRAGON,
             self::FIELD_TYPE2 => Types::GROUND
         ],
         Pokemon::ZYGARGE | FormsAlias::ZYGARGE_FULL => [
-            self::FIELD_NAME => 'Zygarge (Complete Forme)',
-            self::FIELD_NAME_SHORT => 'Zygarge',
+            self::FIELD_NAME => 'Zygarde (Complete Forme)',
+            self::FIELD_NAME_SHORT => 'Zygarde',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::DRAGON,
             self::FIELD_TYPE2 => Types::GROUND
