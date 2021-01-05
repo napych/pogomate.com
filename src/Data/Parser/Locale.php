@@ -59,7 +59,7 @@ class Locale
 
     public static function getCategory(int $code): ?string
     {
-        $id = (string)Mods::getId($code);
+        $id = (string)$intId = Mods::getId($code);
         while (strlen($id) < 4) {
             $id = '0' . $id;
         }
@@ -70,6 +70,9 @@ class Locale
         } elseif($code & Mods::MEGA_Y) {
             return static::get('pokemon_desc_tmpevo_' . $id . '_0003');
         } else {
+            if ($intId !== $code) {
+                return null;
+            }
             return static::get('pokemon_category_' . $id);
         }
     }
