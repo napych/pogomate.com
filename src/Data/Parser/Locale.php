@@ -42,5 +42,35 @@ class Locale
         while (strlen($id) < 4) {
             $id = '0' . $id;
         }
-        return static::get('pokemon_name_' . $id);}
+        return static::get('pokemon_name_' . $id);
+    }
+
+    public static function getDescription(int $code): ?string
+    {
+        $id = (string)Mods::getId($code);
+        if ($id != $code) {
+            return null;
+        }
+        while (strlen($id) < 4) {
+            $id = '0' . $id;
+        }
+        return static::get('pokemon_desc_' . $id);
+    }
+
+    public static function getCategory(int $code): ?string
+    {
+        $id = (string)Mods::getId($code);
+        while (strlen($id) < 4) {
+            $id = '0' . $id;
+        }
+        if ($code & Mods::MEGA) {
+            return static::get('pokemon_desc_tmpevo_' . $id . '_0001');
+        } elseif($code & Mods::MEGA_X) {
+            return static::get('pokemon_desc_tmpevo_' . $id . '_0002');
+        } elseif($code & Mods::MEGA_Y) {
+            return static::get('pokemon_desc_tmpevo_' . $id . '_0003');
+        } else {
+            return static::get('pokemon_category_' . $id);
+        }
+    }
 }

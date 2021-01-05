@@ -8,6 +8,8 @@ class PokemonData
 {
     const FIELD_NAME = 'name';
     const FIELD_NAME_SHORT = 'short';
+    const FIELD_DESC = 'desc';
+    const FIELD_CATEGORY = 'category';
     const FIELD_TYPE1 = 'type1';
     const FIELD_TYPE2 = 'type2';
     const FIELD_ATTACK = 'attack';
@@ -33,6 +35,8 @@ class PokemonData
         Pokemon::BULBASAUR => [
             self::FIELD_NAME => 'Bulbasaur',
             self::FIELD_NAME_SHORT => 'Bulbasaur',
+            self::FIELD_DESC => 'Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun\'s rays, the seed grows progressively larger.',
+            self::FIELD_CATEGORY => 'Seed Pokémon',
             self::FIELD_ATTACK => 118,
             self::FIELD_DEFENSE => 111,
             self::FIELD_STAMINA => 128,
@@ -50,6 +54,8 @@ class PokemonData
         Pokemon::IVYSAUR => [
             self::FIELD_NAME => 'Ivysaur',
             self::FIELD_NAME_SHORT => 'Ivysaur',
+            self::FIELD_DESC => 'There is a bud on this Pokémon\'s back. To support its weight, Ivysaur\'s legs and trunk grow thick and strong. If it starts spending more time lying in the sunlight, it\'s a sign that the bud will bloom into a large flower soon.',
+            self::FIELD_CATEGORY => 'Seed Pokémon',
             self::FIELD_ATTACK => 151,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 155,
@@ -67,6 +73,8 @@ class PokemonData
         Pokemon::VENUSAUR => [
             self::FIELD_NAME => 'Venusaur',
             self::FIELD_NAME_SHORT => 'Venusaur',
+            self::FIELD_DESC => 'There is a large flower on Venusaur\'s back. The flower is said to take on vivid colors if it gets plenty of nutrition and sunlight. The flower\'s aroma soothes the emotions of people.',
+            self::FIELD_CATEGORY => 'Seed Pokémon',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 189,
             self::FIELD_STAMINA => 190,
@@ -85,6 +93,8 @@ class PokemonData
         Pokemon::CHARMANDER => [
             self::FIELD_NAME => 'Charmander',
             self::FIELD_NAME_SHORT => 'Charmander',
+            self::FIELD_DESC => 'The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is enjoying itself. If the Pokémon becomes enraged, the flame burns fiercely.',
+            self::FIELD_CATEGORY => 'Lizard Pokémon',
             self::FIELD_ATTACK => 116,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 118,
@@ -101,6 +111,8 @@ class PokemonData
         Pokemon::CHARMELEON => [
             self::FIELD_NAME => 'Charmeleon',
             self::FIELD_NAME_SHORT => 'Charmeleon',
+            self::FIELD_DESC => 'Charmeleon mercilessly destroys its foes using its sharp claws. If it encounters a strong foe, it turns aggressive. In this excited state, the flame at the tip of its tail flares with a bluish white color.',
+            self::FIELD_CATEGORY => 'Flame Pokémon',
             self::FIELD_ATTACK => 158,
             self::FIELD_DEFENSE => 126,
             self::FIELD_STAMINA => 151,
@@ -118,6 +130,8 @@ class PokemonData
         Pokemon::CHARIZARD => [
             self::FIELD_NAME => 'Charizard',
             self::FIELD_NAME_SHORT => 'Charizard',
+            self::FIELD_DESC => 'Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself.',
+            self::FIELD_CATEGORY => 'Flame Pokémon',
             self::FIELD_ATTACK => 223,
             self::FIELD_DEFENSE => 173,
             self::FIELD_STAMINA => 186,
@@ -137,6 +151,8 @@ class PokemonData
         Pokemon::SQUIRTLE => [
             self::FIELD_NAME => 'Squirtle',
             self::FIELD_NAME_SHORT => 'Squirtle',
+            self::FIELD_DESC => 'Squirtle\'s shell is not merely used for protection. The shell\'s rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds.',
+            self::FIELD_CATEGORY => 'Tiny Turtle Pokémon',
             self::FIELD_ATTACK => 94,
             self::FIELD_DEFENSE => 121,
             self::FIELD_STAMINA => 127,
@@ -153,6 +169,8 @@ class PokemonData
         Pokemon::WARTORTLE => [
             self::FIELD_NAME => 'Wartortle',
             self::FIELD_NAME_SHORT => 'Wartortle',
+            self::FIELD_DESC => 'Its tail is large and covered with a rich, thick fur. The tail becomes increasingly deeper in color as Wartortle ages. The scratches on its shell are evidence of this Pokémon\'s toughness as a battler.',
+            self::FIELD_CATEGORY => 'Turtle Pokémon',
             self::FIELD_ATTACK => 126,
             self::FIELD_DEFENSE => 155,
             self::FIELD_STAMINA => 153,
@@ -169,6 +187,8 @@ class PokemonData
         Pokemon::BLASTOISE => [
             self::FIELD_NAME => 'Blastoise',
             self::FIELD_NAME_SHORT => 'Blastoise',
+            self::FIELD_DESC => 'Blastoise has water spouts that protrude from its shell. The water spouts are very accurate. They can shoot bullets of water with enough accuracy to strike empty cans from a distance of over 160 feet.',
+            self::FIELD_CATEGORY => 'Shellfish Pokémon',
             self::FIELD_ATTACK => 171,
             self::FIELD_DEFENSE => 207,
             self::FIELD_STAMINA => 188,
@@ -186,6 +206,8 @@ class PokemonData
         Pokemon::CATERPIE => [
             self::FIELD_NAME => 'Caterpie',
             self::FIELD_NAME_SHORT => 'Caterpie',
+            self::FIELD_DESC => 'Caterpie has a voracious appetite. It can devour leaves bigger than its body right before your eyes. From its antenna, this Pokémon releases a terrifically strong odor.',
+            self::FIELD_CATEGORY => 'Worm Pokémon',
             self::FIELD_ATTACK => 55,
             self::FIELD_DEFENSE => 55,
             self::FIELD_STAMINA => 128,
@@ -202,6 +224,8 @@ class PokemonData
         Pokemon::METAPOD => [
             self::FIELD_NAME => 'Metapod',
             self::FIELD_NAME_SHORT => 'Metapod',
+            self::FIELD_DESC => 'The shell covering this Pokémon\'s body is as hard as an iron slab. Metapod does not move very much. It stays still because it is preparing its soft innards for evolution inside the hard shell.',
+            self::FIELD_CATEGORY => 'Cocoon Pokémon',
             self::FIELD_ATTACK => 45,
             self::FIELD_DEFENSE => 80,
             self::FIELD_STAMINA => 137,
@@ -218,6 +242,8 @@ class PokemonData
         Pokemon::BUTTERFREE => [
             self::FIELD_NAME => 'Butterfree',
             self::FIELD_NAME_SHORT => 'Butterfree',
+            self::FIELD_DESC => 'Butterfree has a superior ability to search for delicious honey from flowers. It can even search out, extract, and carry honey from flowers that are blooming over six miles from its nest.',
+            self::FIELD_CATEGORY => 'Butterfly Pokémon',
             self::FIELD_ATTACK => 167,
             self::FIELD_DEFENSE => 137,
             self::FIELD_STAMINA => 155,
@@ -235,6 +261,8 @@ class PokemonData
         Pokemon::WEEDLE => [
             self::FIELD_NAME => 'Weedle',
             self::FIELD_NAME_SHORT => 'Weedle',
+            self::FIELD_DESC => 'Weedle has an extremely acute sense of smell. It is capable of distinguishing its favorite kinds of leaves from those it dislikes just by sniffing with its big red proboscis (nose).',
+            self::FIELD_CATEGORY => 'Hairy Bug Pokémon',
             self::FIELD_ATTACK => 63,
             self::FIELD_DEFENSE => 50,
             self::FIELD_STAMINA => 120,
@@ -252,6 +280,8 @@ class PokemonData
         Pokemon::KAKUNA => [
             self::FIELD_NAME => 'Kakuna',
             self::FIELD_NAME_SHORT => 'Kakuna',
+            self::FIELD_DESC => 'Kakuna remains virtually immobile as it clings to a tree. However, on the inside, it is extremely busy as it prepares for its coming evolution. This is evident from how hot the shell becomes to the touch.',
+            self::FIELD_CATEGORY => 'Cocoon Pokémon',
             self::FIELD_ATTACK => 46,
             self::FIELD_DEFENSE => 75,
             self::FIELD_STAMINA => 128,
@@ -269,6 +299,8 @@ class PokemonData
         Pokemon::BEEDRILL => [
             self::FIELD_NAME => 'Beedrill',
             self::FIELD_NAME_SHORT => 'Beedrill',
+            self::FIELD_DESC => 'Beedrill is extremely territorial. No one should ever approach its nest—this is for their own safety. If angered, they will attack in a furious swarm.',
+            self::FIELD_CATEGORY => 'Poison Bee Pokémon',
             self::FIELD_ATTACK => 169,
             self::FIELD_DEFENSE => 130,
             self::FIELD_STAMINA => 163,
@@ -288,6 +320,8 @@ class PokemonData
         Pokemon::PIDGEY => [
             self::FIELD_NAME => 'Pidgey',
             self::FIELD_NAME_SHORT => 'Pidgey',
+            self::FIELD_DESC => 'Pidgey has an extremely sharp sense of direction. It is capable of unerringly returning home to its nest, however far it may be removed from its familiar surroundings.',
+            self::FIELD_CATEGORY => 'Tiny Bird Pokémon',
             self::FIELD_ATTACK => 85,
             self::FIELD_DEFENSE => 73,
             self::FIELD_STAMINA => 120,
@@ -305,6 +339,8 @@ class PokemonData
         Pokemon::PIDGEOTTO => [
             self::FIELD_NAME => 'Pidgeotto',
             self::FIELD_NAME_SHORT => 'Pidgeotto',
+            self::FIELD_DESC => 'Pidgeotto claims a large area as its own territory. This Pokémon flies around, patrolling its living space. If its territory is violated, it shows no mercy in thoroughly punishing the foe with its sharp claws.',
+            self::FIELD_CATEGORY => 'Bird Pokémon',
             self::FIELD_ATTACK => 117,
             self::FIELD_DEFENSE => 105,
             self::FIELD_STAMINA => 160,
@@ -322,6 +358,8 @@ class PokemonData
         Pokemon::PIDGEOT => [
             self::FIELD_NAME => 'Pidgeot',
             self::FIELD_NAME_SHORT => 'Pidgeot',
+            self::FIELD_DESC => 'This Pokémon has a dazzling plumage of beautifully glossy feathers. Many Trainers are captivated by the striking beauty of the feathers on its head, compelling them to choose Pidgeot as their Pokémon.',
+            self::FIELD_CATEGORY => 'Bird Pokémon',
             self::FIELD_ATTACK => 166,
             self::FIELD_DEFENSE => 154,
             self::FIELD_STAMINA => 195,
@@ -341,6 +379,8 @@ class PokemonData
         Pokemon::RATATTA => [
             self::FIELD_NAME => 'Rattata',
             self::FIELD_NAME_SHORT => 'Rattata',
+            self::FIELD_DESC => 'Rattata is cautious in the extreme. Even while it is asleep, it constantly listens by moving its ears around. It is not picky about where it lives—it will make its nest anywhere.',
+            self::FIELD_CATEGORY => 'Mouse Pokémon',
             self::FIELD_ATTACK => 103,
             self::FIELD_DEFENSE => 70,
             self::FIELD_STAMINA => 102,
@@ -357,6 +397,8 @@ class PokemonData
         Pokemon::RATICATE => [
             self::FIELD_NAME => 'Raticate',
             self::FIELD_NAME_SHORT => 'Raticate',
+            self::FIELD_DESC => 'Raticate\'s sturdy fangs grow steadily. To keep them ground down, it gnaws on rocks and logs. It may even chew on the walls of houses.',
+            self::FIELD_CATEGORY => 'Mouse Pokémon',
             self::FIELD_ATTACK => 161,
             self::FIELD_DEFENSE => 139,
             self::FIELD_STAMINA => 146,
@@ -372,6 +414,8 @@ class PokemonData
         Pokemon::SPEAROW => [
             self::FIELD_NAME => 'Spearow',
             self::FIELD_NAME_SHORT => 'Spearow',
+            self::FIELD_DESC => 'Spearow has a very loud cry that can be heard over half a mile away. If its high, keening cry is heard echoing all around, it is a sign that they are warning each other of danger.',
+            self::FIELD_CATEGORY => 'Tiny Bird Pokémon',
             self::FIELD_ATTACK => 112,
             self::FIELD_DEFENSE => 60,
             self::FIELD_STAMINA => 120,
@@ -390,6 +434,8 @@ class PokemonData
         Pokemon::FEAROW => [
             self::FIELD_NAME => 'Fearow',
             self::FIELD_NAME_SHORT => 'Fearow',
+            self::FIELD_DESC => 'Fearow is recognized by its long neck and elongated beak. They are conveniently shaped for catching prey in soil or water. It deftly moves its long and skinny beak to pluck prey.',
+            self::FIELD_CATEGORY => 'Beak Pokémon',
             self::FIELD_ATTACK => 182,
             self::FIELD_DEFENSE => 133,
             self::FIELD_STAMINA => 163,
@@ -407,6 +453,8 @@ class PokemonData
         Pokemon::EKANS => [
             self::FIELD_NAME => 'Ekans',
             self::FIELD_NAME_SHORT => 'Ekans',
+            self::FIELD_DESC => 'Ekans curls itself up in a spiral while it rests. Assuming this position allows it to quickly respond to a threat from any direction with a glare from its upraised head.',
+            self::FIELD_CATEGORY => 'Snake Pokémon',
             self::FIELD_ATTACK => 110,
             self::FIELD_DEFENSE => 97,
             self::FIELD_STAMINA => 111,
@@ -424,6 +472,8 @@ class PokemonData
         Pokemon::ARBOK => [
             self::FIELD_NAME => 'Arbok',
             self::FIELD_NAME_SHORT => 'Arbok',
+            self::FIELD_DESC => 'This Pokémon is terrifically strong in order to constrict things with its body. It can even flatten steel oil drums. Once Arbok wraps its body around its foe, escaping its crushing embrace is impossible.',
+            self::FIELD_CATEGORY => 'Cobra Pokémon',
             self::FIELD_ATTACK => 167,
             self::FIELD_DEFENSE => 153,
             self::FIELD_STAMINA => 155,
@@ -439,6 +489,8 @@ class PokemonData
         Pokemon::PIKACHU => [
             self::FIELD_NAME => 'Pikachu',
             self::FIELD_NAME_SHORT => 'Pikachu',
+            self::FIELD_DESC => 'Whenever Pikachu comes across something new, it blasts it with a jolt of electricity. If you come across a blackened berry, it\'s evidence that this Pokémon mistook the intensity of its charge.',
+            self::FIELD_CATEGORY => 'Mouse Pokémon',
             self::FIELD_ATTACK => 112,
             self::FIELD_DEFENSE => 96,
             self::FIELD_STAMINA => 111,
@@ -457,6 +509,8 @@ class PokemonData
         Pokemon::RAICHU => [
             self::FIELD_NAME => 'Raichu',
             self::FIELD_NAME_SHORT => 'Raichu',
+            self::FIELD_DESC => 'If the electrical sacs become excessively charged, Raichu plants its tail in the ground and discharges. Scorched patches of ground will be found near this Pokémon\'s nest.',
+            self::FIELD_CATEGORY => 'Mouse Pokémon',
             self::FIELD_ATTACK => 193,
             self::FIELD_DEFENSE => 151,
             self::FIELD_STAMINA => 155,
@@ -473,6 +527,8 @@ class PokemonData
         Pokemon::SANDSHREW => [
             self::FIELD_NAME => 'Sandshrew',
             self::FIELD_NAME_SHORT => 'Sandshrew',
+            self::FIELD_DESC => 'Sandshrew\'s body is configured to absorb water without waste, enabling it to survive in an arid desert. This Pokémon curls up to protect itself from its enemies.',
+            self::FIELD_CATEGORY => 'Mouse Pokémon',
             self::FIELD_ATTACK => 126,
             self::FIELD_DEFENSE => 120,
             self::FIELD_STAMINA => 137,
@@ -490,6 +546,8 @@ class PokemonData
         Pokemon::SANDSLASH => [
             self::FIELD_NAME => 'Sandslash',
             self::FIELD_NAME_SHORT => 'Sandslash',
+            self::FIELD_DESC => 'Sandslash\'s body is covered by tough spikes, which are hardened sections of its hide. Once a year, the old spikes fall out, to be replaced with new spikes that grow out from beneath the old ones.',
+            self::FIELD_CATEGORY => 'Mouse Pokémon',
             self::FIELD_ATTACK => 182,
             self::FIELD_DEFENSE => 175,
             self::FIELD_STAMINA => 181,
@@ -505,6 +563,8 @@ class PokemonData
         Pokemon::NIDORAN_F => [
             self::FIELD_NAME => 'Nidoran♀',
             self::FIELD_NAME_SHORT => 'Nidoran♀',
+            self::FIELD_DESC => 'Nidoran♀ has barbs that secrete a powerful poison. They are thought to have developed as protection for this small-bodied Pokémon. When enraged, it releases a horrible toxin from its horn.',
+            self::FIELD_CATEGORY => 'Poison Pin Pokémon',
             self::FIELD_ATTACK => 86,
             self::FIELD_DEFENSE => 89,
             self::FIELD_STAMINA => 146,
@@ -521,6 +581,8 @@ class PokemonData
         Pokemon::NIDORINA => [
             self::FIELD_NAME => 'Nidorina',
             self::FIELD_NAME_SHORT => 'Nidorina',
+            self::FIELD_DESC => 'When Nidorina are with their friends or family, they keep their barbs tucked away to prevent hurting each other. This Pokémon appears to become nervous if separated from the others.',
+            self::FIELD_CATEGORY => 'Poison Pin Pokémon',
             self::FIELD_ATTACK => 117,
             self::FIELD_DEFENSE => 120,
             self::FIELD_STAMINA => 172,
@@ -537,6 +599,8 @@ class PokemonData
         Pokemon::NIDOQUEEN => [
             self::FIELD_NAME => 'Nidoqueen',
             self::FIELD_NAME_SHORT => 'Nidoqueen',
+            self::FIELD_DESC => 'Nidoqueen\'s body is encased in extremely hard scales. It is adept at sending foes flying with harsh tackles. This Pokémon is at its strongest when it is defending its young.',
+            self::FIELD_CATEGORY => 'Drill Pokémon',
             self::FIELD_ATTACK => 180,
             self::FIELD_DEFENSE => 173,
             self::FIELD_STAMINA => 207,
@@ -553,6 +617,8 @@ class PokemonData
         Pokemon::NIDORAN_M => [
             self::FIELD_NAME => 'Nidoran♂',
             self::FIELD_NAME_SHORT => 'Nidoran♂',
+            self::FIELD_DESC => 'Nidoran♂ has developed muscles for moving its ears. Thanks to them, the ears can be freely moved in any direction. Even the slightest sound does not escape this Pokémon\'s notice.',
+            self::FIELD_CATEGORY => 'Poison Pin Pokémon',
             self::FIELD_ATTACK => 105,
             self::FIELD_DEFENSE => 76,
             self::FIELD_STAMINA => 130,
@@ -569,6 +635,8 @@ class PokemonData
         Pokemon::NIDORINO => [
             self::FIELD_NAME => 'Nidorino',
             self::FIELD_NAME_SHORT => 'Nidorino',
+            self::FIELD_DESC => 'Nidorino has a horn that is harder than a diamond. If it senses a hostile presence, all the barbs on its back bristle up at once, and it challenges the foe with all its might.',
+            self::FIELD_CATEGORY => 'Poison Pin Pokémon',
             self::FIELD_ATTACK => 137,
             self::FIELD_DEFENSE => 111,
             self::FIELD_STAMINA => 156,
@@ -585,6 +653,8 @@ class PokemonData
         Pokemon::NIDOKING => [
             self::FIELD_NAME => 'Nidoking',
             self::FIELD_NAME_SHORT => 'Nidoking',
+            self::FIELD_DESC => 'Nidoking\'s thick tail packs enormously destructive power. With one swing, it can topple a metal transmission tower. Once this Pokémon goes on a rampage, there is no stopping it.',
+            self::FIELD_CATEGORY => 'Drill Pokémon',
             self::FIELD_ATTACK => 204,
             self::FIELD_DEFENSE => 156,
             self::FIELD_STAMINA => 191,
@@ -602,6 +672,8 @@ class PokemonData
         Pokemon::CLEFAIRY => [
             self::FIELD_NAME => 'Clefairy',
             self::FIELD_NAME_SHORT => 'Clefairy',
+            self::FIELD_DESC => 'On every night of a full moon, groups of this Pokémon come out to play. When dawn arrives, the tired Clefairy return to their quiet mountain retreats and go to sleep nestled up against each other.',
+            self::FIELD_CATEGORY => 'Fairy Pokémon',
             self::FIELD_ATTACK => 107,
             self::FIELD_DEFENSE => 108,
             self::FIELD_STAMINA => 172,
@@ -618,6 +690,8 @@ class PokemonData
         Pokemon::CLEFABLE => [
             self::FIELD_NAME => 'Clefable',
             self::FIELD_NAME_SHORT => 'Clefable',
+            self::FIELD_DESC => 'Clefable moves by skipping lightly as if it were flying using its wings. Its bouncy step lets it even walk on water. It is known to take strolls on lakes on quiet, moonlit nights.',
+            self::FIELD_CATEGORY => 'Fairy Pokémon',
             self::FIELD_ATTACK => 178,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 216,
@@ -634,6 +708,8 @@ class PokemonData
         Pokemon::VULPIX => [
             self::FIELD_NAME => 'Vulpix',
             self::FIELD_NAME_SHORT => 'Vulpix',
+            self::FIELD_DESC => 'At the time of its birth, Vulpix has one white tail. The tail separates into six if this Pokémon receives plenty of love from its Trainer. The six tails become magnificently curled.',
+            self::FIELD_CATEGORY => 'Fox Pokémon',
             self::FIELD_ATTACK => 96,
             self::FIELD_DEFENSE => 109,
             self::FIELD_STAMINA => 116,
@@ -650,6 +726,8 @@ class PokemonData
         Pokemon::NINETALES => [
             self::FIELD_NAME => 'Ninetales',
             self::FIELD_NAME_SHORT => 'Ninetales',
+            self::FIELD_DESC => 'Ninetales casts a sinister light from its bright red eyes to gain total control over its foe\'s mind. This Pokémon is said to live for a thousand years.',
+            self::FIELD_CATEGORY => 'Fox Pokémon',
             self::FIELD_ATTACK => 169,
             self::FIELD_DEFENSE => 190,
             self::FIELD_STAMINA => 177,
@@ -667,6 +745,8 @@ class PokemonData
         Pokemon::JIGGLYPUFF => [
             self::FIELD_NAME => 'Jigglypuff',
             self::FIELD_NAME_SHORT => 'Jigglypuff',
+            self::FIELD_DESC => 'Jigglypuff\'s vocal cords can freely adjust the wavelength of its voice. This Pokémon uses this ability to sing at precisely the right wavelength to make its foes most drowsy.',
+            self::FIELD_CATEGORY => 'Balloon Pokémon',
             self::FIELD_ATTACK => 80,
             self::FIELD_DEFENSE => 41,
             self::FIELD_STAMINA => 251,
@@ -685,6 +765,8 @@ class PokemonData
         Pokemon::WIGGLYTUFF => [
             self::FIELD_NAME => 'Wigglytuff',
             self::FIELD_NAME_SHORT => 'Wigglytuff',
+            self::FIELD_DESC => 'Wigglytuff has large, saucerlike eyes. The surfaces of its eyes are always covered with a thin layer of tears. If any dust gets in this Pokémon\'s eyes, it is quickly washed away.',
+            self::FIELD_CATEGORY => 'Balloon Pokémon',
             self::FIELD_ATTACK => 156,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 295,
@@ -701,6 +783,8 @@ class PokemonData
         Pokemon::ZUBAT => [
             self::FIELD_NAME => 'Zubat',
             self::FIELD_NAME_SHORT => 'Zubat',
+            self::FIELD_DESC => 'Zubat remains quietly unmoving in a dark spot during the bright daylight hours. It does so because prolonged exposure to the sun causes its body to become slightly burned.',
+            self::FIELD_CATEGORY => 'Bat Pokémon',
             self::FIELD_ATTACK => 83,
             self::FIELD_DEFENSE => 73,
             self::FIELD_STAMINA => 120,
@@ -719,6 +803,8 @@ class PokemonData
         Pokemon::GOLBAT => [
             self::FIELD_NAME => 'Golbat',
             self::FIELD_NAME_SHORT => 'Golbat',
+            self::FIELD_DESC => 'Golbat loves to drink the blood of living things. It is particularly active in the pitch black of night. This Pokémon flits around in the night skies, seeking fresh blood.',
+            self::FIELD_CATEGORY => 'Bat Pokémon',
             self::FIELD_ATTACK => 161,
             self::FIELD_DEFENSE => 150,
             self::FIELD_STAMINA => 181,
@@ -737,6 +823,8 @@ class PokemonData
         Pokemon::ODDISH => [
             self::FIELD_NAME => 'Oddish',
             self::FIELD_NAME_SHORT => 'Oddish',
+            self::FIELD_DESC => 'During the daytime, Oddish buries itself in soil to absorb nutrients from the ground using its entire body. The more fertile the soil, the glossier its leaves become.',
+            self::FIELD_CATEGORY => 'Weed Pokémon',
             self::FIELD_ATTACK => 131,
             self::FIELD_DEFENSE => 112,
             self::FIELD_STAMINA => 128,
@@ -754,6 +842,8 @@ class PokemonData
         Pokemon::GLOOM => [
             self::FIELD_NAME => 'Gloom',
             self::FIELD_NAME_SHORT => 'Gloom',
+            self::FIELD_DESC => 'Gloom releases a foul fragrance from the pistil of its flower. When faced with danger, the stench worsens. If this Pokémon is feeling calm and secure, it does not release its usual stinky aroma.',
+            self::FIELD_CATEGORY => 'Weed Pokémon',
             self::FIELD_ATTACK => 153,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 155,
@@ -771,6 +861,8 @@ class PokemonData
         Pokemon::VILEPLUME => [
             self::FIELD_NAME => 'Vileplume',
             self::FIELD_NAME_SHORT => 'Vileplume',
+            self::FIELD_DESC => 'Vileplume\'s toxic pollen triggers atrocious allergy attacks. That\'s why it is advisable never to approach any attractive flowers in a jungle, however pretty they may be.',
+            self::FIELD_CATEGORY => 'Flower Pokémon',
             self::FIELD_ATTACK => 202,
             self::FIELD_DEFENSE => 167,
             self::FIELD_STAMINA => 181,
@@ -787,6 +879,8 @@ class PokemonData
         Pokemon::PARAS => [
             self::FIELD_NAME => 'Paras',
             self::FIELD_NAME_SHORT => 'Paras',
+            self::FIELD_DESC => 'Paras has parasitic mushrooms growing on its back called tochukaso. They grow large by drawing nutrients from this Bug Pokémon host. They are highly valued as a medicine for extending life.',
+            self::FIELD_CATEGORY => 'Mushroom Pokémon',
             self::FIELD_ATTACK => 121,
             self::FIELD_DEFENSE => 99,
             self::FIELD_STAMINA => 111,
@@ -804,6 +898,8 @@ class PokemonData
         Pokemon::PARASECT => [
             self::FIELD_NAME => 'Parasect',
             self::FIELD_NAME_SHORT => 'Parasect',
+            self::FIELD_DESC => 'Parasect is known to infest large trees en masse and drain nutrients from the lower trunk and roots. When an infested tree dies, they move onto another tree all at once.',
+            self::FIELD_CATEGORY => 'Mushroom Pokémon',
             self::FIELD_ATTACK => 165,
             self::FIELD_DEFENSE => 146,
             self::FIELD_STAMINA => 155,
@@ -821,6 +917,8 @@ class PokemonData
         Pokemon::VENONAT => [
             self::FIELD_NAME => 'Venonat',
             self::FIELD_NAME_SHORT => 'Venonat',
+            self::FIELD_DESC => 'Venonat is said to have evolved with a coat of thin, stiff hair that covers its entire body for protection. It possesses large eyes that never fail to spot even minuscule prey.',
+            self::FIELD_CATEGORY => 'Insect Pokémon',
             self::FIELD_ATTACK => 100,
             self::FIELD_DEFENSE => 100,
             self::FIELD_STAMINA => 155,
@@ -838,6 +936,8 @@ class PokemonData
         Pokemon::VENOMOTH => [
             self::FIELD_NAME => 'Venomoth',
             self::FIELD_NAME_SHORT => 'Venomoth',
+            self::FIELD_DESC => 'Venomoth is nocturnal—it is a Pokémon that only becomes active at night. Its favorite prey are small insects that gather around streetlights, attracted by the light in the darkness.',
+            self::FIELD_CATEGORY => 'Poison Moth Pokémon',
             self::FIELD_ATTACK => 179,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 172,
@@ -855,6 +955,8 @@ class PokemonData
         Pokemon::DIGLETT => [
             self::FIELD_NAME => 'Diglett',
             self::FIELD_NAME_SHORT => 'Diglett',
+            self::FIELD_DESC => 'Diglett are raised in most farms. The reason is simple—wherever this Pokémon burrows, the soil is left perfectly tilled for planting crops. This soil is made ideal for growing delicious vegetables.',
+            self::FIELD_CATEGORY => 'Mole Pokémon',
             self::FIELD_ATTACK => 109,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 67,
@@ -871,6 +973,8 @@ class PokemonData
         Pokemon::DUGTRIO => [
             self::FIELD_NAME => 'Dugtrio',
             self::FIELD_NAME_SHORT => 'Dugtrio',
+            self::FIELD_DESC => 'Dugtrio are actually triplets that emerged from one body. As a result, each triplet thinks exactly like the other two triplets. They work cooperatively to burrow endlessly.',
+            self::FIELD_CATEGORY => 'Mole Pokémon',
             self::FIELD_ATTACK => 167,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 111,
@@ -886,6 +990,8 @@ class PokemonData
         Pokemon::MEOWTH => [
             self::FIELD_NAME => 'Meowth',
             self::FIELD_NAME_SHORT => 'Meowth',
+            self::FIELD_DESC => 'Meowth withdraws its sharp claws into its paws to slinkily sneak about without making any incriminating footsteps. For some reason, this Pokémon loves shiny coins that glitter with light.',
+            self::FIELD_CATEGORY => 'Scratch Cat Pokémon',
             self::FIELD_ATTACK => 92,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 120,
@@ -903,6 +1009,8 @@ class PokemonData
         Pokemon::PERSIAN => [
             self::FIELD_NAME => 'Persian',
             self::FIELD_NAME_SHORT => 'Persian',
+            self::FIELD_DESC => 'Persian has six bold whiskers that give it a look of toughness. The whiskers sense air movements to determine what is in the Pokémon\'s surrounding vicinity. It becomes docile if grabbed by the whiskers.',
+            self::FIELD_CATEGORY => 'Classy Cat Pokémon',
             self::FIELD_ATTACK => 150,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 163,
@@ -919,6 +1027,8 @@ class PokemonData
         Pokemon::PSYDUCK => [
             self::FIELD_NAME => 'Psyduck',
             self::FIELD_NAME_SHORT => 'Psyduck',
+            self::FIELD_DESC => 'Psyduck uses a mysterious power. When it does so, this Pokémon generates brain waves that are supposedly only seen in sleepers. This discovery spurred controversy among scholars.',
+            self::FIELD_CATEGORY => 'Duck Pokémon',
             self::FIELD_ATTACK => 122,
             self::FIELD_DEFENSE => 95,
             self::FIELD_STAMINA => 137,
@@ -935,6 +1045,8 @@ class PokemonData
         Pokemon::GOLDUCK => [
             self::FIELD_NAME => 'Golduck',
             self::FIELD_NAME_SHORT => 'Golduck',
+            self::FIELD_DESC => 'The webbed flippers on its forelegs and hind legs and the streamlined body of Golduck give it frightening speed. This Pokémon is definitely much faster than even the most athletic swimmer.',
+            self::FIELD_CATEGORY => 'Duck Pokémon',
             self::FIELD_ATTACK => 191,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 190,
@@ -950,6 +1062,8 @@ class PokemonData
         Pokemon::MANKEY => [
             self::FIELD_NAME => 'Mankey',
             self::FIELD_NAME_SHORT => 'Mankey',
+            self::FIELD_DESC => 'When Mankey starts shaking and its nasal breathing turns rough, it\'s a sure sign that it is becoming angry. However, because it goes into a towering rage almost instantly, it is impossible for anyone to flee its wrath.',
+            self::FIELD_CATEGORY => 'Pig Monkey Pokémon',
             self::FIELD_ATTACK => 148,
             self::FIELD_DEFENSE => 82,
             self::FIELD_STAMINA => 120,
@@ -966,6 +1080,8 @@ class PokemonData
         Pokemon::PRIMEAPE => [
             self::FIELD_NAME => 'Primeape',
             self::FIELD_NAME_SHORT => 'Primeape',
+            self::FIELD_DESC => 'When Primeape becomes furious, its blood circulation is boosted. In turn, its muscles are made even stronger. However, it also becomes much less intelligent at the same time.',
+            self::FIELD_CATEGORY => 'Pig Monkey Pokémon',
             self::FIELD_ATTACK => 207,
             self::FIELD_DEFENSE => 138,
             self::FIELD_STAMINA => 163,
@@ -983,6 +1099,8 @@ class PokemonData
         Pokemon::GROWLITHE => [
             self::FIELD_NAME => 'Growlithe',
             self::FIELD_NAME_SHORT => 'Growlithe',
+            self::FIELD_DESC => 'Growlithe has a superb sense of smell. Once it smells anything, this Pokémon won\'t forget the scent, no matter what. It uses its advanced olfactory sense to determine the emotions of other living things.',
+            self::FIELD_CATEGORY => 'Puppy Pokémon',
             self::FIELD_ATTACK => 136,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 146,
@@ -999,6 +1117,8 @@ class PokemonData
         Pokemon::ARCANINE => [
             self::FIELD_NAME => 'Arcanine',
             self::FIELD_NAME_SHORT => 'Arcanine',
+            self::FIELD_DESC => 'Arcanine is known for its high speed. It is said to be capable of running over 6,200 miles in a single day and night. The fire that blazes wildly within this Pokémon\'s body is its source of power.',
+            self::FIELD_CATEGORY => 'Legendary Pokémon',
             self::FIELD_ATTACK => 227,
             self::FIELD_DEFENSE => 166,
             self::FIELD_STAMINA => 207,
@@ -1016,6 +1136,8 @@ class PokemonData
         Pokemon::POLIWAG => [
             self::FIELD_NAME => 'Poliwag',
             self::FIELD_NAME_SHORT => 'Poliwag',
+            self::FIELD_DESC => 'Poliwag has a very thin skin. It is possible to see the Pokémon\'s spiral innards right through the skin. Despite its thinness, however, the skin is also very flexible. Even sharp fangs bounce right off it.',
+            self::FIELD_CATEGORY => 'Tadpole Pokémon',
             self::FIELD_ATTACK => 101,
             self::FIELD_DEFENSE => 82,
             self::FIELD_STAMINA => 120,
@@ -1032,6 +1154,8 @@ class PokemonData
         Pokemon::POLIWHIRL => [
             self::FIELD_NAME => 'Poliwhirl',
             self::FIELD_NAME_SHORT => 'Poliwhirl',
+            self::FIELD_DESC => 'The surface of Poliwhirl\'s body is always wet and slick with a slimy fluid. Because of this slippery covering, it can easily slip and slide out of the clutches of any enemy in battle.',
+            self::FIELD_CATEGORY => 'Tadpole Pokémon',
             self::FIELD_ATTACK => 130,
             self::FIELD_DEFENSE => 123,
             self::FIELD_STAMINA => 163,
@@ -1049,6 +1173,8 @@ class PokemonData
         Pokemon::POLIWRATH => [
             self::FIELD_NAME => 'Poliwrath',
             self::FIELD_NAME_SHORT => 'Poliwrath',
+            self::FIELD_DESC => 'Poliwrath\'s highly developed, brawny muscles never grow fatigued, however much it exercises. It is so tirelessly strong, this Pokémon can swim back and forth across the ocean without effort.',
+            self::FIELD_CATEGORY => 'Tadpole Pokémon',
             self::FIELD_ATTACK => 182,
             self::FIELD_DEFENSE => 184,
             self::FIELD_STAMINA => 207,
@@ -1066,6 +1192,8 @@ class PokemonData
         Pokemon::ABRA => [
             self::FIELD_NAME => 'Abra',
             self::FIELD_NAME_SHORT => 'Abra',
+            self::FIELD_DESC => 'Abra sleeps for 18 hours a day. However, it can sense the presence of foes even while it is sleeping. In such a situation, this Pokémon immediately teleports to safety.',
+            self::FIELD_CATEGORY => 'Psi Pokémon',
             self::FIELD_ATTACK => 195,
             self::FIELD_DEFENSE => 82,
             self::FIELD_STAMINA => 93,
@@ -1082,6 +1210,8 @@ class PokemonData
         Pokemon::KADABRA => [
             self::FIELD_NAME => 'Kadabra',
             self::FIELD_NAME_SHORT => 'Kadabra',
+            self::FIELD_DESC => 'Kadabra emits a peculiar alpha wave if it develops a headache. Only those people with a particularly strong psyche can hope to become a Trainer of this Pokémon.',
+            self::FIELD_CATEGORY => 'Psi Pokémon',
             self::FIELD_ATTACK => 232,
             self::FIELD_DEFENSE => 117,
             self::FIELD_STAMINA => 120,
@@ -1098,6 +1228,8 @@ class PokemonData
         Pokemon::ALAKAZAM => [
             self::FIELD_NAME => 'Alakazam',
             self::FIELD_NAME_SHORT => 'Alakazam',
+            self::FIELD_DESC => 'Alakazam\'s brain continually grows, making its head far too heavy to support with its neck. This Pokémon holds its head up using its psychokinetic power instead.',
+            self::FIELD_CATEGORY => 'Psi Pokémon',
             self::FIELD_ATTACK => 271,
             self::FIELD_DEFENSE => 167,
             self::FIELD_STAMINA => 146,
@@ -1115,6 +1247,8 @@ class PokemonData
         Pokemon::MACHOP => [
             self::FIELD_NAME => 'Machop',
             self::FIELD_NAME_SHORT => 'Machop',
+            self::FIELD_DESC => 'Machop\'s muscles are special—they never get sore no matter how much they are used in exercise. This Pokémon has sufficient power to hurl a hundred adult humans.',
+            self::FIELD_CATEGORY => 'Superpower Pokémon',
             self::FIELD_ATTACK => 137,
             self::FIELD_DEFENSE => 82,
             self::FIELD_STAMINA => 172,
@@ -1132,6 +1266,8 @@ class PokemonData
         Pokemon::MACHOKE => [
             self::FIELD_NAME => 'Machoke',
             self::FIELD_NAME_SHORT => 'Machoke',
+            self::FIELD_DESC => 'Machoke\'s thoroughly toned muscles possess the hardness of steel. This Pokémon has so much strength, it can easily hold aloft a sumo wrestler on just one finger.',
+            self::FIELD_CATEGORY => 'Superpower Pokémon',
             self::FIELD_ATTACK => 177,
             self::FIELD_DEFENSE => 125,
             self::FIELD_STAMINA => 190,
@@ -1149,6 +1285,8 @@ class PokemonData
         Pokemon::MACHAMP => [
             self::FIELD_NAME => 'Machamp',
             self::FIELD_NAME_SHORT => 'Machamp',
+            self::FIELD_DESC => 'Machamp has the power to hurl anything aside. However, trying to do any work requiring care and dexterity causes its arms to get tangled. This Pokémon tends to leap into action before it thinks.',
+            self::FIELD_CATEGORY => 'Superpower Pokémon',
             self::FIELD_ATTACK => 234,
             self::FIELD_DEFENSE => 159,
             self::FIELD_STAMINA => 207,
@@ -1166,6 +1304,8 @@ class PokemonData
         Pokemon::BELLSPROUT => [
             self::FIELD_NAME => 'Bellsprout',
             self::FIELD_NAME_SHORT => 'Bellsprout',
+            self::FIELD_DESC => 'Bellsprout\'s thin and flexible body lets it bend and sway to avoid any attack, however strong it may be. From its mouth, this Pokémon spits a corrosive fluid that melts even iron.',
+            self::FIELD_CATEGORY => 'Flower Pokémon',
             self::FIELD_ATTACK => 139,
             self::FIELD_DEFENSE => 61,
             self::FIELD_STAMINA => 137,
@@ -1183,6 +1323,8 @@ class PokemonData
         Pokemon::WEEPINBELL => [
             self::FIELD_NAME => 'Weepinbell',
             self::FIELD_NAME_SHORT => 'Weepinbell',
+            self::FIELD_DESC => 'Weepinbell has a large hook on its rear end. At night, the Pokémon hooks on to a tree branch and goes to sleep. If it moves around in its sleep, it may wake up to find itself on the ground.',
+            self::FIELD_CATEGORY => 'Flycatcher Pokémon',
             self::FIELD_ATTACK => 172,
             self::FIELD_DEFENSE => 92,
             self::FIELD_STAMINA => 163,
@@ -1201,6 +1343,8 @@ class PokemonData
         Pokemon::VICTREEBEL => [
             self::FIELD_NAME => 'Victreebel',
             self::FIELD_NAME_SHORT => 'Victreebel',
+            self::FIELD_DESC => 'Victreebel has a long vine that extends from its head. This vine is waved and flicked about as if it were an animal to attract prey. When an unsuspecting prey draws near, this Pokémon swallows it whole.',
+            self::FIELD_CATEGORY => 'Flycatcher Pokémon',
             self::FIELD_ATTACK => 207,
             self::FIELD_DEFENSE => 135,
             self::FIELD_STAMINA => 190,
@@ -1217,6 +1361,8 @@ class PokemonData
         Pokemon::TENTACOOL => [
             self::FIELD_NAME => 'Tentacool',
             self::FIELD_NAME_SHORT => 'Tentacool',
+            self::FIELD_DESC => 'Tentacool\'s body is largely composed of water. If it is removed from the sea, it dries up like parchment. If this Pokémon happens to become dehydrated, put it back into the sea.',
+            self::FIELD_CATEGORY => 'Jellyfish Pokémon',
             self::FIELD_ATTACK => 97,
             self::FIELD_DEFENSE => 149,
             self::FIELD_STAMINA => 120,
@@ -1234,6 +1380,8 @@ class PokemonData
         Pokemon::TENTACRUEL => [
             self::FIELD_NAME => 'Tentacruel',
             self::FIELD_NAME_SHORT => 'Tentacruel',
+            self::FIELD_DESC => 'Tentacruel has large red orbs on its head. The orbs glow before lashing the vicinity with a harsh ultrasonic blast. This Pokémon\'s outburst creates rough waves around it.',
+            self::FIELD_CATEGORY => 'Jellyfish Pokémon',
             self::FIELD_ATTACK => 166,
             self::FIELD_DEFENSE => 209,
             self::FIELD_STAMINA => 190,
@@ -1250,6 +1398,8 @@ class PokemonData
         Pokemon::GEODUDE => [
             self::FIELD_NAME => 'Geodude',
             self::FIELD_NAME_SHORT => 'Geodude',
+            self::FIELD_DESC => 'The longer a Geodude lives, the more its edges are chipped and worn away, making it more rounded in appearance. However, this Pokémon\'s heart will remain hard, craggy, and rough always.',
+            self::FIELD_CATEGORY => 'Rock Pokémon',
             self::FIELD_ATTACK => 132,
             self::FIELD_DEFENSE => 132,
             self::FIELD_STAMINA => 120,
@@ -1267,6 +1417,8 @@ class PokemonData
         Pokemon::GRAVELER => [
             self::FIELD_NAME => 'Graveler',
             self::FIELD_NAME_SHORT => 'Graveler',
+            self::FIELD_DESC => 'Graveler grows by feeding on rocks. Apparently, it prefers to eat rocks that are covered in moss. This Pokémon eats its way through a ton of rocks on a daily basis.',
+            self::FIELD_CATEGORY => 'Rock Pokémon',
             self::FIELD_ATTACK => 164,
             self::FIELD_DEFENSE => 164,
             self::FIELD_STAMINA => 146,
@@ -1285,6 +1437,8 @@ class PokemonData
         Pokemon::GOLEM => [
             self::FIELD_NAME => 'Golem',
             self::FIELD_NAME_SHORT => 'Golem',
+            self::FIELD_DESC => 'Golem live up on mountains. If there is a large earthquake, these Pokémon will come rolling down off the mountains en masse to the foothills below.',
+            self::FIELD_CATEGORY => 'Megaton Pokémon',
             self::FIELD_ATTACK => 211,
             self::FIELD_DEFENSE => 198,
             self::FIELD_STAMINA => 190,
@@ -1301,6 +1455,8 @@ class PokemonData
         Pokemon::PONYTA => [
             self::FIELD_NAME => 'Ponyta',
             self::FIELD_NAME_SHORT => 'Ponyta',
+            self::FIELD_DESC => 'Ponyta is very weak at birth. It can barely stand up. This Pokémon becomes stronger by stumbling and falling to keep up with its parent.',
+            self::FIELD_CATEGORY => 'Fire Horse Pokémon',
             self::FIELD_ATTACK => 170,
             self::FIELD_DEFENSE => 127,
             self::FIELD_STAMINA => 137,
@@ -1318,6 +1474,8 @@ class PokemonData
         Pokemon::RAPIDASH => [
             self::FIELD_NAME => 'Rapidash',
             self::FIELD_NAME_SHORT => 'Rapidash',
+            self::FIELD_DESC => 'Rapidash usually can be seen casually cantering in the fields and plains. However, when this Pokémon turns serious, its fiery manes flare and blaze as it gallops its way up to 150 mph.',
+            self::FIELD_CATEGORY => 'Fire Horse Pokémon',
             self::FIELD_ATTACK => 207,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 163,
@@ -1334,6 +1492,8 @@ class PokemonData
         Pokemon::SLOWPOKE => [
             self::FIELD_NAME => 'Slowpoke',
             self::FIELD_NAME_SHORT => 'Slowpoke',
+            self::FIELD_DESC => 'Slowpoke uses its tail to catch prey by dipping it in water at the side of a river. However, this Pokémon often forgets what it\'s doing and often spends entire days just loafing at water\'s edge.',
+            self::FIELD_CATEGORY => 'Dopey Pokémon',
             self::FIELD_ATTACK => 109,
             self::FIELD_DEFENSE => 98,
             self::FIELD_STAMINA => 207,
@@ -1351,6 +1511,8 @@ class PokemonData
         Pokemon::SLOWBRO => [
             self::FIELD_NAME => 'Slowbro',
             self::FIELD_NAME_SHORT => 'Slowbro',
+            self::FIELD_DESC => 'Slowbro\'s tail has a Shellder firmly attached with a bite. As a result, the tail can\'t be used for fishing anymore. This causes Slowbro to grudgingly swim and catch prey instead.',
+            self::FIELD_CATEGORY => 'Hermit Crab Pokémon',
             self::FIELD_ATTACK => 177,
             self::FIELD_DEFENSE => 180,
             self::FIELD_STAMINA => 216,
@@ -1367,6 +1529,8 @@ class PokemonData
         Pokemon::MAGNEMITE => [
             self::FIELD_NAME => 'Magnemite',
             self::FIELD_NAME_SHORT => 'Magnemite',
+            self::FIELD_DESC => 'Magnemite attaches itself to power lines to feed on electricity. If your house has a power outage, check your circuit breakers. You may find a large number of this Pokémon clinging to the breaker box.',
+            self::FIELD_CATEGORY => 'Magnet Pokémon',
             self::FIELD_ATTACK => 165,
             self::FIELD_DEFENSE => 121,
             self::FIELD_STAMINA => 93,
@@ -1384,6 +1548,8 @@ class PokemonData
         Pokemon::MAGNETON => [
             self::FIELD_NAME => 'Magneton',
             self::FIELD_NAME_SHORT => 'Magneton',
+            self::FIELD_DESC => 'Magneton emits a powerful magnetic force that is fatal to mechanical devices. As a result, large cities sound sirens to warn citizens of large-scale outbreaks of this Pokémon.',
+            self::FIELD_CATEGORY => 'Magnet Pokémon',
             self::FIELD_ATTACK => 223,
             self::FIELD_DEFENSE => 169,
             self::FIELD_STAMINA => 137,
@@ -1401,6 +1567,8 @@ class PokemonData
         Pokemon::FARFETCH_D => [
             self::FIELD_NAME => 'Farfetch\'d',
             self::FIELD_NAME_SHORT => 'Farfetch\'d',
+            self::FIELD_DESC => 'Farfetch\'d is always seen with a stalk from a plant of some sort. Apparently, there are good stalks and bad stalks. This Pokémon has been known to fight with others over stalks.',
+            self::FIELD_CATEGORY => 'Wild Duck Pokémon',
             self::FIELD_ATTACK => 124,
             self::FIELD_DEFENSE => 115,
             self::FIELD_STAMINA => 141,
@@ -1418,6 +1586,8 @@ class PokemonData
         Pokemon::DODUO => [
             self::FIELD_NAME => 'Doduo',
             self::FIELD_NAME_SHORT => 'Doduo',
+            self::FIELD_DESC => 'Doduo\'s two heads never sleep at the same time. Its two heads take turns sleeping, so one head can always keep watch for enemies while the other one sleeps.',
+            self::FIELD_CATEGORY => 'Twin Bird Pokémon',
             self::FIELD_ATTACK => 158,
             self::FIELD_DEFENSE => 83,
             self::FIELD_STAMINA => 111,
@@ -1436,6 +1606,8 @@ class PokemonData
         Pokemon::DODRIO => [
             self::FIELD_NAME => 'Dodrio',
             self::FIELD_NAME_SHORT => 'Dodrio',
+            self::FIELD_DESC => 'Watch out if Dodrio\'s three heads are looking in three separate directions. It\'s a sure sign that it is on its guard. Don\'t go near this Pokémon if it\'s being wary—it may decide to peck you.',
+            self::FIELD_CATEGORY => 'Triple Bird Pokémon',
             self::FIELD_ATTACK => 218,
             self::FIELD_DEFENSE => 140,
             self::FIELD_STAMINA => 155,
@@ -1453,6 +1625,8 @@ class PokemonData
         Pokemon::SEEL => [
             self::FIELD_NAME => 'Seel',
             self::FIELD_NAME_SHORT => 'Seel',
+            self::FIELD_DESC => 'Seel hunts for prey in the frigid sea underneath sheets of ice. When it needs to breathe, it punches a hole through the ice with the sharply protruding section of its head.',
+            self::FIELD_CATEGORY => 'Sea Lion Pokémon',
             self::FIELD_ATTACK => 85,
             self::FIELD_DEFENSE => 121,
             self::FIELD_STAMINA => 163,
@@ -1471,6 +1645,8 @@ class PokemonData
         Pokemon::DEWGONG => [
             self::FIELD_NAME => 'Dewgong',
             self::FIELD_NAME_SHORT => 'Dewgong',
+            self::FIELD_DESC => 'Dewgong loves to snooze on bitterly cold ice. The sight of this Pokémon sleeping on a glacier was mistakenly thought to be a mermaid by a mariner long ago.',
+            self::FIELD_CATEGORY => 'Sea Lion Pokémon',
             self::FIELD_ATTACK => 139,
             self::FIELD_DEFENSE => 177,
             self::FIELD_STAMINA => 207,
@@ -1489,6 +1665,8 @@ class PokemonData
         Pokemon::GRIMER => [
             self::FIELD_NAME => 'Grimer',
             self::FIELD_NAME_SHORT => 'Grimer',
+            self::FIELD_DESC => 'Grimer\'s sludgy and rubbery body can be forced through any opening, however small it may be. This Pokémon enters sewer pipes to drink filthy wastewater.',
+            self::FIELD_CATEGORY => 'Sludge Pokémon',
             self::FIELD_ATTACK => 135,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 190,
@@ -1505,6 +1683,8 @@ class PokemonData
         Pokemon::MUK => [
             self::FIELD_NAME => 'Muk',
             self::FIELD_NAME_SHORT => 'Muk',
+            self::FIELD_DESC => 'From Muk\'s body seeps a foul fluid that gives off a nose-bendingly horrible stench. Just one drop of this Pokémon\'s body fluid can turn a pool stagnant and rancid.',
+            self::FIELD_CATEGORY => 'Sludge Pokémon',
             self::FIELD_ATTACK => 190,
             self::FIELD_DEFENSE => 172,
             self::FIELD_STAMINA => 233,
@@ -1521,6 +1701,8 @@ class PokemonData
         Pokemon::SHELLDER => [
             self::FIELD_NAME => 'Shellder',
             self::FIELD_NAME_SHORT => 'Shellder',
+            self::FIELD_DESC => 'At night, this Pokémon uses its broad tongue to burrow a hole in the seafloor sand and then sleep in it. While it is sleeping, Shellder closes its shell, but leaves its tongue hanging out.',
+            self::FIELD_CATEGORY => 'Bivalve Pokémon',
             self::FIELD_ATTACK => 116,
             self::FIELD_DEFENSE => 134,
             self::FIELD_STAMINA => 102,
@@ -1537,6 +1719,8 @@ class PokemonData
         Pokemon::CLOYSTER => [
             self::FIELD_NAME => 'Cloyster',
             self::FIELD_NAME_SHORT => 'Cloyster',
+            self::FIELD_DESC => 'Cloyster is capable of swimming in the sea. It does so by swallowing water, then jetting it out toward the rear. This Pokémon shoots spikes from its shell using the same system.',
+            self::FIELD_CATEGORY => 'Bivalve Pokémon',
             self::FIELD_ATTACK => 186,
             self::FIELD_DEFENSE => 256,
             self::FIELD_STAMINA => 137,
@@ -1554,6 +1738,8 @@ class PokemonData
         Pokemon::GASTLY => [
             self::FIELD_NAME => 'Gastly',
             self::FIELD_NAME_SHORT => 'Gastly',
+            self::FIELD_DESC => 'Gastly is largely composed of gaseous matter. When exposed to a strong wind, the gaseous body quickly dwindles away. Groups of this Pokémon cluster under the eaves of houses to escape the ravages of wind.',
+            self::FIELD_CATEGORY => 'Gas Pokémon',
             self::FIELD_ATTACK => 186,
             self::FIELD_DEFENSE => 67,
             self::FIELD_STAMINA => 102,
@@ -1573,6 +1759,8 @@ class PokemonData
         Pokemon::HAUNTER => [
             self::FIELD_NAME => 'Haunter',
             self::FIELD_NAME_SHORT => 'Haunter',
+            self::FIELD_DESC => 'Haunter is a dangerous Pokémon. If one beckons you while floating in darkness, you must never approach it. This Pokémon will try to lick you with its tongue and steal your life away.',
+            self::FIELD_CATEGORY => 'Gas Pokémon',
             self::FIELD_ATTACK => 223,
             self::FIELD_DEFENSE => 107,
             self::FIELD_STAMINA => 128,
@@ -1591,6 +1779,8 @@ class PokemonData
         Pokemon::GENGAR => [
             self::FIELD_NAME => 'Gengar',
             self::FIELD_NAME_SHORT => 'Gengar',
+            self::FIELD_DESC => 'Sometimes, on a dark night, your shadow thrown by a streetlight will suddenly and startlingly overtake you. It is actually a Gengar running past you, pretending to be your shadow.',
+            self::FIELD_CATEGORY => 'Shadow Pokémon',
             self::FIELD_ATTACK => 261,
             self::FIELD_DEFENSE => 149,
             self::FIELD_STAMINA => 155,
@@ -1610,6 +1800,8 @@ class PokemonData
         Pokemon::ONIX => [
             self::FIELD_NAME => 'Onix',
             self::FIELD_NAME_SHORT => 'Onix',
+            self::FIELD_DESC => 'Onix has a magnet in its brain. It acts as a compass so that this Pokémon does not lose direction while it is tunneling. As it grows older, its body becomes increasingly rounder and smoother.',
+            self::FIELD_CATEGORY => 'Rock Snake Pokémon',
             self::FIELD_ATTACK => 85,
             self::FIELD_DEFENSE => 232,
             self::FIELD_STAMINA => 111,
@@ -1628,6 +1820,8 @@ class PokemonData
         Pokemon::DROWZEE => [
             self::FIELD_NAME => 'Drowzee',
             self::FIELD_NAME_SHORT => 'Drowzee',
+            self::FIELD_DESC => 'If your nose becomes itchy while you are sleeping, it\'s a sure sign that one of these Pokémon is standing above your pillow and trying to eat your dream through your nostrils.',
+            self::FIELD_CATEGORY => 'Hypnosis Pokémon',
             self::FIELD_ATTACK => 89,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 155,
@@ -1644,6 +1838,8 @@ class PokemonData
         Pokemon::HYPNO => [
             self::FIELD_NAME => 'Hypno',
             self::FIELD_NAME_SHORT => 'Hypno',
+            self::FIELD_DESC => 'Hypno holds a pendulum in its hand. The arcing movement and glitter of the pendulum lull the foe into a deep state of hypnosis. While this Pokémon searches for prey, it polishes the pendulum.',
+            self::FIELD_CATEGORY => 'Hypnosis Pokémon',
             self::FIELD_ATTACK => 144,
             self::FIELD_DEFENSE => 193,
             self::FIELD_STAMINA => 198,
@@ -1660,6 +1856,8 @@ class PokemonData
         Pokemon::KRABBY => [
             self::FIELD_NAME => 'Krabby',
             self::FIELD_NAME_SHORT => 'Krabby',
+            self::FIELD_DESC => 'Krabby live on beaches, burrowed inside holes dug into the sand. On sandy beaches with little in the way of food, these Pokémon can be seen squabbling with each other over territory.',
+            self::FIELD_CATEGORY => 'River Crab Pokémon',
             self::FIELD_ATTACK => 181,
             self::FIELD_DEFENSE => 124,
             self::FIELD_STAMINA => 102,
@@ -1676,6 +1874,8 @@ class PokemonData
         Pokemon::KINGLER => [
             self::FIELD_NAME => 'Kingler',
             self::FIELD_NAME_SHORT => 'Kingler',
+            self::FIELD_DESC => 'Kingler has an enormous, oversized claw. It waves this huge claw in the air to communicate with others. However, because the claw is so heavy, the Pokémon quickly tires.',
+            self::FIELD_CATEGORY => 'Pincer Pokémon',
             self::FIELD_ATTACK => 240,
             self::FIELD_DEFENSE => 181,
             self::FIELD_STAMINA => 146,
@@ -1692,6 +1892,8 @@ class PokemonData
         Pokemon::VOLTORB => [
             self::FIELD_NAME => 'Voltorb',
             self::FIELD_NAME_SHORT => 'Voltorb',
+            self::FIELD_DESC => 'Voltorb was first sighted at a company that manufactures Poké Balls. The link between that sighting and the fact that this Pokémon looks very similar to a Poké Ball remains a mystery.',
+            self::FIELD_CATEGORY => 'Ball Pokémon',
             self::FIELD_ATTACK => 109,
             self::FIELD_DEFENSE => 111,
             self::FIELD_STAMINA => 120,
@@ -1709,6 +1911,8 @@ class PokemonData
         Pokemon::ELECTRODE => [
             self::FIELD_NAME => 'Electrode',
             self::FIELD_NAME_SHORT => 'Electrode',
+            self::FIELD_DESC => 'Electrode eats electricity in the atmosphere. On days when lightning strikes, you can see this Pokémon exploding all over the place from eating too much electricity.',
+            self::FIELD_CATEGORY => 'Ball Pokémon',
             self::FIELD_ATTACK => 173,
             self::FIELD_DEFENSE => 173,
             self::FIELD_STAMINA => 155,
@@ -1725,6 +1929,8 @@ class PokemonData
         Pokemon::EXEGGCUTE => [
             self::FIELD_NAME => 'Exeggcute',
             self::FIELD_NAME_SHORT => 'Exeggcute',
+            self::FIELD_DESC => 'This Pokémon consists of six eggs that form a closely knit cluster. The six eggs attract each other and spin around. When cracks increasingly appear on the eggs, Exeggcute is close to evolution.',
+            self::FIELD_CATEGORY => 'Egg Pokémon',
             self::FIELD_ATTACK => 107,
             self::FIELD_DEFENSE => 125,
             self::FIELD_STAMINA => 155,
@@ -1742,6 +1948,8 @@ class PokemonData
         Pokemon::EXEGGUTOR => [
             self::FIELD_NAME => 'Exeggutor',
             self::FIELD_NAME_SHORT => 'Exeggutor',
+            self::FIELD_DESC => 'Exeggutor originally came from the tropics. Its heads steadily grow larger from exposure to strong sunlight. It is said that when the heads fall off, they group together to form Exeggcute.',
+            self::FIELD_CATEGORY => 'Coconut Pokémon',
             self::FIELD_ATTACK => 233,
             self::FIELD_DEFENSE => 149,
             self::FIELD_STAMINA => 216,
@@ -1759,6 +1967,8 @@ class PokemonData
         Pokemon::CUBONE => [
             self::FIELD_NAME => 'Cubone',
             self::FIELD_NAME_SHORT => 'Cubone',
+            self::FIELD_DESC => 'Cubone pines for the mother it will never see again. Seeing a likeness of its mother in the full moon, it cries. The stains on the skull the Pokémon wears are made by the tears it sheds.',
+            self::FIELD_CATEGORY => 'Lonely Pokémon',
             self::FIELD_ATTACK => 90,
             self::FIELD_DEFENSE => 144,
             self::FIELD_STAMINA => 137,
@@ -1775,6 +1985,8 @@ class PokemonData
         Pokemon::MAROWAK => [
             self::FIELD_NAME => 'Marowak',
             self::FIELD_NAME_SHORT => 'Marowak',
+            self::FIELD_DESC => 'Marowak is the evolved form of a Cubone that has overcome its sadness at the loss of its mother and grown tough. This Pokémon\'s tempered and hardened spirit is not easily broken.',
+            self::FIELD_CATEGORY => 'Bone Keeper Pokémon',
             self::FIELD_ATTACK => 144,
             self::FIELD_DEFENSE => 186,
             self::FIELD_STAMINA => 155,
@@ -1790,6 +2002,8 @@ class PokemonData
         Pokemon::HITMONLEE => [
             self::FIELD_NAME => 'Hitmonlee',
             self::FIELD_NAME_SHORT => 'Hitmonlee',
+            self::FIELD_DESC => 'Hitmonlee\'s legs freely contract and stretch. Using these springlike legs, it bowls over foes with devastating kicks. After battle, it rubs down its legs and loosens the muscles to overcome fatigue.',
+            self::FIELD_CATEGORY => 'Kicking Pokémon',
             self::FIELD_ATTACK => 224,
             self::FIELD_DEFENSE => 181,
             self::FIELD_STAMINA => 137,
@@ -1806,6 +2020,8 @@ class PokemonData
         Pokemon::HITMONCHAN => [
             self::FIELD_NAME => 'Hitmonchan',
             self::FIELD_NAME_SHORT => 'Hitmonchan',
+            self::FIELD_DESC => 'Hitmonchan is said to possess the spirit of a boxer who had been working toward a world championship. This Pokémon has an indomitable spirit and will never give up in the face of adversity.',
+            self::FIELD_CATEGORY => 'Punching Pokémon',
             self::FIELD_ATTACK => 193,
             self::FIELD_DEFENSE => 197,
             self::FIELD_STAMINA => 137,
@@ -1823,6 +2039,8 @@ class PokemonData
         Pokemon::LICKITUNG => [
             self::FIELD_NAME => 'Lickitung',
             self::FIELD_NAME_SHORT => 'Lickitung',
+            self::FIELD_DESC => 'Whenever Lickitung comes across something new, it will unfailingly give it a lick. It does so because it memorizes things by texture and by taste. It is somewhat put off by sour things.',
+            self::FIELD_CATEGORY => 'Licking Pokémon',
             self::FIELD_ATTACK => 108,
             self::FIELD_DEFENSE => 137,
             self::FIELD_STAMINA => 207,
@@ -1840,6 +2058,8 @@ class PokemonData
         Pokemon::KOFFING => [
             self::FIELD_NAME => 'Koffing',
             self::FIELD_NAME_SHORT => 'Koffing',
+            self::FIELD_DESC => 'If Koffing becomes agitated, it raises the toxicity of its internal gases and jets them out from all over its body. This Pokémon may also overinflate its round body, then explode.',
+            self::FIELD_CATEGORY => 'Poison Gas Pokémon',
             self::FIELD_ATTACK => 119,
             self::FIELD_DEFENSE => 141,
             self::FIELD_STAMINA => 120,
@@ -1856,6 +2076,8 @@ class PokemonData
         Pokemon::WEEZING => [
             self::FIELD_NAME => 'Weezing',
             self::FIELD_NAME_SHORT => 'Weezing',
+            self::FIELD_DESC => 'Weezing loves the gases given off by rotted kitchen garbage. This Pokémon will find a dirty, unkempt house and make it its home. At night, when the people in the house are asleep, it will go through the trash.',
+            self::FIELD_CATEGORY => 'Poison Gas Pokémon',
             self::FIELD_ATTACK => 174,
             self::FIELD_DEFENSE => 197,
             self::FIELD_STAMINA => 163,
@@ -1871,6 +2093,8 @@ class PokemonData
         Pokemon::RHYHORN => [
             self::FIELD_NAME => 'Rhyhorn',
             self::FIELD_NAME_SHORT => 'Rhyhorn',
+            self::FIELD_DESC => 'Rhyhorn runs in a straight line, smashing everything in its path. It is not bothered even if it rushes headlong into a block of steel. This Pokémon may feel some pain from the collision the next day, however.',
+            self::FIELD_CATEGORY => 'Spikes Pokémon',
             self::FIELD_ATTACK => 140,
             self::FIELD_DEFENSE => 127,
             self::FIELD_STAMINA => 190,
@@ -1888,6 +2112,8 @@ class PokemonData
         Pokemon::RHYDON => [
             self::FIELD_NAME => 'Rhydon',
             self::FIELD_NAME_SHORT => 'Rhydon',
+            self::FIELD_DESC => 'Rhydon\'s horn can crush even uncut diamonds. One sweeping blow of its tail can topple a building. This Pokémon\'s hide is extremely tough. Even direct cannon hits don\'t leave a scratch.',
+            self::FIELD_CATEGORY => 'Drill Pokémon',
             self::FIELD_ATTACK => 222,
             self::FIELD_DEFENSE => 171,
             self::FIELD_STAMINA => 233,
@@ -1906,6 +2132,8 @@ class PokemonData
         Pokemon::CHANSEY => [
             self::FIELD_NAME => 'Chansey',
             self::FIELD_NAME_SHORT => 'Chansey',
+            self::FIELD_DESC => 'Chansey lays nutritionally excellent eggs on an everyday basis. The eggs are so delicious, they are easily and eagerly devoured by even those people who have lost their appetite.',
+            self::FIELD_CATEGORY => 'Egg Pokémon',
             self::FIELD_ATTACK => 60,
             self::FIELD_DEFENSE => 128,
             self::FIELD_STAMINA => 487,
@@ -1922,6 +2150,8 @@ class PokemonData
         Pokemon::TANGELA => [
             self::FIELD_NAME => 'Tangela',
             self::FIELD_NAME_SHORT => 'Tangela',
+            self::FIELD_DESC => 'Tangela\'s vines snap off easily if they are grabbed. This happens without pain, allowing it to make a quick getaway. The lost vines are replaced by newly grown vines the very next day.',
+            self::FIELD_CATEGORY => 'Vine Pokémon',
             self::FIELD_ATTACK => 183,
             self::FIELD_DEFENSE => 169,
             self::FIELD_STAMINA => 163,
@@ -1939,6 +2169,8 @@ class PokemonData
         Pokemon::KANGASKHAN => [
             self::FIELD_NAME => 'Kangaskhan',
             self::FIELD_NAME_SHORT => 'Kangaskhan',
+            self::FIELD_DESC => 'If you come across a young Kangaskhan playing by itself, you must never disturb it or attempt to catch it. The baby Pokémon\'s parent is sure to be in the area, and it will become violently enraged at you.',
+            self::FIELD_CATEGORY => 'Parent Pokémon',
             self::FIELD_ATTACK => 181,
             self::FIELD_DEFENSE => 165,
             self::FIELD_STAMINA => 233,
@@ -1955,6 +2187,8 @@ class PokemonData
         Pokemon::HORSEA => [
             self::FIELD_NAME => 'Horsea',
             self::FIELD_NAME_SHORT => 'Horsea',
+            self::FIELD_DESC => 'Horsea eats small insects and moss off of rocks. If the ocean current turns fast, this Pokémon anchors itself by wrapping its tail around rocks or coral to prevent being washed away.',
+            self::FIELD_CATEGORY => 'Dragon Pokémon',
             self::FIELD_ATTACK => 129,
             self::FIELD_DEFENSE => 103,
             self::FIELD_STAMINA => 102,
@@ -1971,6 +2205,8 @@ class PokemonData
         Pokemon::SEADRA => [
             self::FIELD_NAME => 'Seadra',
             self::FIELD_NAME_SHORT => 'Seadra',
+            self::FIELD_DESC => 'Seadra sleeps after wriggling itself between the branches of coral. Those trying to harvest coral are occasionally stung by this Pokémon\'s poison barbs if they fail to notice it.',
+            self::FIELD_CATEGORY => 'Dragon Pokémon',
             self::FIELD_ATTACK => 187,
             self::FIELD_DEFENSE => 156,
             self::FIELD_STAMINA => 146,
@@ -1988,6 +2224,8 @@ class PokemonData
         Pokemon::GOLDEEN => [
             self::FIELD_NAME => 'Goldeen',
             self::FIELD_NAME_SHORT => 'Goldeen',
+            self::FIELD_DESC => 'Goldeen is a very beautiful Pokémon with fins that billow elegantly in water. However, don\'t let your guard down around this Pokémon—it could ram you powerfully with its horn.',
+            self::FIELD_CATEGORY => 'Goldfish Pokémon',
             self::FIELD_ATTACK => 123,
             self::FIELD_DEFENSE => 110,
             self::FIELD_STAMINA => 128,
@@ -2004,6 +2242,8 @@ class PokemonData
         Pokemon::SEAKING => [
             self::FIELD_NAME => 'Seaking',
             self::FIELD_NAME_SHORT => 'Seaking',
+            self::FIELD_DESC => 'In the autumn, Seaking males can be seen performing courtship dances in riverbeds to woo females. During this season, this Pokémon\'s body coloration is at its most beautiful.',
+            self::FIELD_CATEGORY => 'Goldfish Pokémon',
             self::FIELD_ATTACK => 175,
             self::FIELD_DEFENSE => 147,
             self::FIELD_STAMINA => 190,
@@ -2021,6 +2261,8 @@ class PokemonData
         Pokemon::STARYU => [
             self::FIELD_NAME => 'Staryu',
             self::FIELD_NAME_SHORT => 'Staryu',
+            self::FIELD_DESC => 'Staryu\'s center section has an organ called the core that shines bright red. If you go to a beach toward the end of summer, the glowing cores of these Pokémon look like the stars in the sky.',
+            self::FIELD_CATEGORY => 'Star Shape Pokémon',
             self::FIELD_ATTACK => 137,
             self::FIELD_DEFENSE => 112,
             self::FIELD_STAMINA => 102,
@@ -2037,6 +2279,8 @@ class PokemonData
         Pokemon::STARMIE => [
             self::FIELD_NAME => 'Starmie',
             self::FIELD_NAME_SHORT => 'Starmie',
+            self::FIELD_DESC => 'Starmie\'s center section—the core—glows brightly in seven colors. Because of its luminous nature, this Pokémon has been given the nickname “the gem of the sea.”',
+            self::FIELD_CATEGORY => 'Mysterious Pokémon',
             self::FIELD_ATTACK => 210,
             self::FIELD_DEFENSE => 184,
             self::FIELD_STAMINA => 155,
@@ -2054,6 +2298,8 @@ class PokemonData
         Pokemon::MR_MIME => [
             self::FIELD_NAME => 'Mr. Mime',
             self::FIELD_NAME_SHORT => 'Mr. Mime',
+            self::FIELD_DESC => 'Mr. Mime is a master of pantomime. Its gestures and motions convince watchers that something unseeable actually exists. Once the watchers are convinced, the unseeable thing exists as if it were real.',
+            self::FIELD_CATEGORY => 'Barrier Pokémon',
             self::FIELD_ATTACK => 192,
             self::FIELD_DEFENSE => 205,
             self::FIELD_STAMINA => 120,
@@ -2070,6 +2316,8 @@ class PokemonData
         Pokemon::SCYTHER => [
             self::FIELD_NAME => 'Scyther',
             self::FIELD_NAME_SHORT => 'Scyther',
+            self::FIELD_DESC => 'Scyther is blindingly fast. Its blazing speed enhances the effectiveness of the twin scythes on its forearms. This Pokémon\'s scythes are so effective, they can slice through thick logs in one wicked stroke.',
+            self::FIELD_CATEGORY => 'Mantis Pokémon',
             self::FIELD_ATTACK => 218,
             self::FIELD_DEFENSE => 170,
             self::FIELD_STAMINA => 172,
@@ -2089,6 +2337,8 @@ class PokemonData
         Pokemon::JYNX => [
             self::FIELD_NAME => 'Jynx',
             self::FIELD_NAME_SHORT => 'Jynx',
+            self::FIELD_DESC => 'Jynx walks rhythmically, swaying and shaking its hips as if it were dancing. Its motions are so bouncingly alluring, people seeing it are compelled to shake their hips without giving any thought to what they are doing.',
+            self::FIELD_CATEGORY => 'Human Shape Pokémon',
             self::FIELD_ATTACK => 223,
             self::FIELD_DEFENSE => 151,
             self::FIELD_STAMINA => 163,
@@ -2107,6 +2357,8 @@ class PokemonData
         Pokemon::ELECTABUZZ => [
             self::FIELD_NAME => 'Electabuzz',
             self::FIELD_NAME_SHORT => 'Electabuzz',
+            self::FIELD_DESC => 'When a storm arrives, gangs of this Pokémon compete with each other to scale heights that are likely to be stricken by lightning bolts. Some towns use Electabuzz in place of lightning rods.',
+            self::FIELD_CATEGORY => 'Electric Pokémon',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 158,
             self::FIELD_STAMINA => 163,
@@ -2123,6 +2375,8 @@ class PokemonData
         Pokemon::MAGMAR => [
             self::FIELD_NAME => 'Magmar',
             self::FIELD_NAME_SHORT => 'Magmar',
+            self::FIELD_DESC => 'In battle, Magmar blows out intensely hot flames from all over its body to intimidate its opponent. This Pokémon\'s fiery bursts create heat waves that ignite grass and trees in its surroundings.',
+            self::FIELD_CATEGORY => 'Spitfire Pokémon',
             self::FIELD_ATTACK => 206,
             self::FIELD_DEFENSE => 154,
             self::FIELD_STAMINA => 163,
@@ -2139,6 +2393,8 @@ class PokemonData
         Pokemon::PINSIR => [
             self::FIELD_NAME => 'Pinsir',
             self::FIELD_NAME_SHORT => 'Pinsir',
+            self::FIELD_DESC => 'Pinsir is astoundingly strong. It can grip a foe weighing twice its weight in its horns and easily lift it. This Pokémon\'s movements turn sluggish in cold places.',
+            self::FIELD_CATEGORY => 'Stag Beetle Pokémon',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 182,
             self::FIELD_STAMINA => 163,
@@ -2155,6 +2411,8 @@ class PokemonData
         Pokemon::TAUROS => [
             self::FIELD_NAME => 'Tauros',
             self::FIELD_NAME_SHORT => 'Tauros',
+            self::FIELD_DESC => 'This Pokémon is not satisfied unless it is rampaging at all times. If there is no opponent for Tauros to battle, it will charge at thick trees and knock them down to calm itself.',
+            self::FIELD_CATEGORY => 'Wild Bull Pokémon',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 183,
             self::FIELD_STAMINA => 181,
@@ -2170,6 +2428,8 @@ class PokemonData
         Pokemon::MAGIKARP => [
             self::FIELD_NAME => 'Magikarp',
             self::FIELD_NAME_SHORT => 'Magikarp',
+            self::FIELD_DESC => 'Magikarp is a pathetic excuse for a Pokémon that is only capable of flopping and splashing. This behavior prompted scientists to undertake research into it.',
+            self::FIELD_CATEGORY => 'Fish Pokémon',
             self::FIELD_ATTACK => 29,
             self::FIELD_DEFENSE => 85,
             self::FIELD_STAMINA => 85,
@@ -2186,6 +2446,8 @@ class PokemonData
         Pokemon::GYARADOS => [
             self::FIELD_NAME => 'Gyarados',
             self::FIELD_NAME_SHORT => 'Gyarados',
+            self::FIELD_DESC => 'When Magikarp evolves into Gyarados, its brain cells undergo a structural transformation. It is said that this transformation is to blame for this Pokémon\'s wildly violent nature.',
+            self::FIELD_CATEGORY => 'Atrocious Pokémon',
             self::FIELD_ATTACK => 237,
             self::FIELD_DEFENSE => 186,
             self::FIELD_STAMINA => 216,
@@ -2204,6 +2466,8 @@ class PokemonData
         Pokemon::LAPRAS => [
             self::FIELD_NAME => 'Lapras',
             self::FIELD_NAME_SHORT => 'Lapras',
+            self::FIELD_DESC => 'People have driven Lapras almost to the point of extinction. In the evenings, this Pokémon is said to sing plaintively as it seeks what few others of its kind still remain.',
+            self::FIELD_CATEGORY => 'Transport Pokémon',
             self::FIELD_ATTACK => 165,
             self::FIELD_DEFENSE => 174,
             self::FIELD_STAMINA => 277,
@@ -2222,6 +2486,8 @@ class PokemonData
         Pokemon::DITTO => [
             self::FIELD_NAME => 'Ditto',
             self::FIELD_NAME_SHORT => 'Ditto',
+            self::FIELD_DESC => 'Ditto rearranges its cell structure to transform itself into other shapes. However, if it tries to transform itself into something by relying on its memory, this Pokémon manages to get details wrong.',
+            self::FIELD_CATEGORY => 'Transform Pokémon',
             self::FIELD_ATTACK => 91,
             self::FIELD_DEFENSE => 91,
             self::FIELD_STAMINA => 134,
@@ -2237,6 +2503,8 @@ class PokemonData
         Pokemon::EEVEE => [
             self::FIELD_NAME => 'Eevee',
             self::FIELD_NAME_SHORT => 'Eevee',
+            self::FIELD_DESC => 'Eevee has an unstable genetic makeup that suddenly mutates due to the environment in which it lives. Radiation from various stones causes this Pokémon to evolve.',
+            self::FIELD_CATEGORY => 'Evolution Pokémon',
             self::FIELD_ATTACK => 104,
             self::FIELD_DEFENSE => 114,
             self::FIELD_STAMINA => 146,
@@ -2254,6 +2522,8 @@ class PokemonData
         Pokemon::VAPOREON => [
             self::FIELD_NAME => 'Vaporeon',
             self::FIELD_NAME_SHORT => 'Vaporeon',
+            self::FIELD_DESC => 'Vaporeon underwent a spontaneous mutation and grew fins and gills that allow it to live underwater. This Pokémon has the ability to freely control water.',
+            self::FIELD_CATEGORY => 'Bubble Jet Pokémon',
             self::FIELD_ATTACK => 205,
             self::FIELD_DEFENSE => 161,
             self::FIELD_STAMINA => 277,
@@ -2270,6 +2540,8 @@ class PokemonData
         Pokemon::JOLTEON => [
             self::FIELD_NAME => 'Jolteon',
             self::FIELD_NAME_SHORT => 'Jolteon',
+            self::FIELD_DESC => 'Jolteon\'s cells generate a low level of electricity. This power is amplified by the static electricity of its fur, enabling the Pokémon to drop thunderbolts. The bristling fur is made of electrically charged needles.',
+            self::FIELD_CATEGORY => 'Lightning Pokémon',
             self::FIELD_ATTACK => 232,
             self::FIELD_DEFENSE => 182,
             self::FIELD_STAMINA => 163,
@@ -2286,6 +2558,8 @@ class PokemonData
         Pokemon::FLAREON => [
             self::FIELD_NAME => 'Flareon',
             self::FIELD_NAME_SHORT => 'Flareon',
+            self::FIELD_DESC => 'Flareon\'s fluffy fur has a functional purpose—it releases heat into the air so that its body does not get excessively hot. This Pokémon\'s body temperature can rise to a maximum of 1,650 degrees Fahrenheit.',
+            self::FIELD_CATEGORY => 'Flame Pokémon',
             self::FIELD_ATTACK => 246,
             self::FIELD_DEFENSE => 179,
             self::FIELD_STAMINA => 163,
@@ -2302,6 +2576,8 @@ class PokemonData
         Pokemon::PORYGON => [
             self::FIELD_NAME => 'Porygon',
             self::FIELD_NAME_SHORT => 'Porygon',
+            self::FIELD_DESC => 'Porygon is capable of reverting itself entirely back to program data and entering cyberspace. This Pokémon is copy protected so it cannot be duplicated by copying.',
+            self::FIELD_CATEGORY => 'Virtual Pokémon',
             self::FIELD_ATTACK => 153,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 163,
@@ -2320,6 +2596,8 @@ class PokemonData
         Pokemon::OMANYTE => [
             self::FIELD_NAME => 'Omanyte',
             self::FIELD_NAME_SHORT => 'Omanyte',
+            self::FIELD_DESC => 'Omanyte is one of the ancient and long-since-extinct Pokémon that have been regenerated from fossils by people. If attacked by an enemy, it withdraws itself inside its hard shell.',
+            self::FIELD_CATEGORY => 'Spiral Pokémon',
             self::FIELD_ATTACK => 155,
             self::FIELD_DEFENSE => 153,
             self::FIELD_STAMINA => 111,
@@ -2338,6 +2616,8 @@ class PokemonData
         Pokemon::OMASTAR => [
             self::FIELD_NAME => 'Omastar',
             self::FIELD_NAME_SHORT => 'Omastar',
+            self::FIELD_DESC => 'Omastar uses its tentacles to capture its prey. It is believed to have become extinct because its shell grew too large and heavy, causing its movements to become too slow and ponderous.',
+            self::FIELD_CATEGORY => 'Spiral Pokémon',
             self::FIELD_ATTACK => 207,
             self::FIELD_DEFENSE => 201,
             self::FIELD_STAMINA => 172,
@@ -2356,6 +2636,8 @@ class PokemonData
         Pokemon::KABUTO => [
             self::FIELD_NAME => 'Kabuto',
             self::FIELD_NAME_SHORT => 'Kabuto',
+            self::FIELD_DESC => 'Kabuto is a Pokémon that has been regenerated from a fossil. However, in extremely rare cases, living examples have been discovered. The Pokémon has not changed at all for 300 million years.',
+            self::FIELD_CATEGORY => 'Shellfish Pokémon',
             self::FIELD_ATTACK => 148,
             self::FIELD_DEFENSE => 140,
             self::FIELD_STAMINA => 102,
@@ -2373,6 +2655,8 @@ class PokemonData
         Pokemon::KABUTOPS => [
             self::FIELD_NAME => 'Kabutops',
             self::FIELD_NAME_SHORT => 'Kabutops',
+            self::FIELD_DESC => 'Kabutops swam underwater to hunt for its prey in ancient times. The Pokémon was apparently evolving from being a water dweller to living on land as evident from the beginnings of change in its gills and legs.',
+            self::FIELD_CATEGORY => 'Shellfish Pokémon',
             self::FIELD_ATTACK => 220,
             self::FIELD_DEFENSE => 186,
             self::FIELD_STAMINA => 155,
@@ -2390,6 +2674,8 @@ class PokemonData
         Pokemon::AERODACTYL => [
             self::FIELD_NAME => 'Aerodactyl',
             self::FIELD_NAME_SHORT => 'Aerodactyl',
+            self::FIELD_DESC => 'Aerodactyl is a Pokémon from the age of dinosaurs. It was regenerated from genetic material extracted from amber. It is imagined to have been the king of the skies in ancient times.',
+            self::FIELD_CATEGORY => 'Fossil Pokémon',
             self::FIELD_ATTACK => 221,
             self::FIELD_DEFENSE => 159,
             self::FIELD_STAMINA => 190,
@@ -2406,6 +2692,8 @@ class PokemonData
         Pokemon::SNORLAX => [
             self::FIELD_NAME => 'Snorlax',
             self::FIELD_NAME_SHORT => 'Snorlax',
+            self::FIELD_DESC => 'Snorlax\'s typical day consists of nothing more than eating and sleeping. It is such a docile Pokémon that there are children who use its expansive belly as a place to play.',
+            self::FIELD_CATEGORY => 'Sleeping Pokémon',
             self::FIELD_ATTACK => 190,
             self::FIELD_DEFENSE => 169,
             self::FIELD_STAMINA => 330,
@@ -2422,6 +2710,8 @@ class PokemonData
         Pokemon::ARTICUNO => [
             self::FIELD_NAME => 'Articuno',
             self::FIELD_NAME_SHORT => 'Articuno',
+            self::FIELD_DESC => 'Articuno is a Legendary Pokémon that can control ice. The flapping of its wings chills the air. As a result, it is said that when this Pokémon flies, snow will fall.',
+            self::FIELD_CATEGORY => 'Freeze Pokémon',
             self::FIELD_ATTACK => 192,
             self::FIELD_DEFENSE => 236,
             self::FIELD_STAMINA => 207,
@@ -2439,6 +2729,8 @@ class PokemonData
         Pokemon::ZAPDOS => [
             self::FIELD_NAME => 'Zapdos',
             self::FIELD_NAME_SHORT => 'Zapdos',
+            self::FIELD_DESC => 'Zapdos is a Legendary Pokémon that has the ability to control electricity. It usually lives in thunderclouds. The Pokémon gains power if it is stricken by lightning bolts.',
+            self::FIELD_CATEGORY => 'Electric Pokémon',
             self::FIELD_ATTACK => 253,
             self::FIELD_DEFENSE => 185,
             self::FIELD_STAMINA => 207,
@@ -2456,6 +2748,8 @@ class PokemonData
         Pokemon::MOLTRES => [
             self::FIELD_NAME => 'Moltres',
             self::FIELD_NAME_SHORT => 'Moltres',
+            self::FIELD_DESC => 'Moltres is a Legendary Pokémon that has the ability to control fire. If this Pokémon is injured, it is said to dip its body in the molten magma of a volcano to burn and heal itself.',
+            self::FIELD_CATEGORY => 'Flame Pokémon',
             self::FIELD_ATTACK => 251,
             self::FIELD_DEFENSE => 181,
             self::FIELD_STAMINA => 207,
@@ -2473,6 +2767,8 @@ class PokemonData
         Pokemon::DRATINI => [
             self::FIELD_NAME => 'Dratini',
             self::FIELD_NAME_SHORT => 'Dratini',
+            self::FIELD_DESC => 'Dratini continually molts and sloughs off its old skin. It does so because the life energy within its body steadily builds to reach uncontrollable levels.',
+            self::FIELD_CATEGORY => 'Dragon Pokémon',
             self::FIELD_ATTACK => 119,
             self::FIELD_DEFENSE => 91,
             self::FIELD_STAMINA => 121,
@@ -2489,6 +2785,8 @@ class PokemonData
         Pokemon::DRAGONAIR => [
             self::FIELD_NAME => 'Dragonair',
             self::FIELD_NAME_SHORT => 'Dragonair',
+            self::FIELD_DESC => 'Dragonair stores an enormous amount of energy inside its body. It is said to alter weather conditions in its vicinity by discharging energy from the crystals on its neck and tail.',
+            self::FIELD_CATEGORY => 'Dragon Pokémon',
             self::FIELD_ATTACK => 163,
             self::FIELD_DEFENSE => 135,
             self::FIELD_STAMINA => 156,
@@ -2505,6 +2803,8 @@ class PokemonData
         Pokemon::DRAGONITE => [
             self::FIELD_NAME => 'Dragonite',
             self::FIELD_NAME_SHORT => 'Dragonite',
+            self::FIELD_DESC => 'Dragonite is capable of circling the globe in just 16 hours. It is a kindhearted Pokémon that leads lost and foundering ships in a storm to the safety of land.',
+            self::FIELD_CATEGORY => 'Dragon Pokémon',
             self::FIELD_ATTACK => 263,
             self::FIELD_DEFENSE => 198,
             self::FIELD_STAMINA => 209,
@@ -2522,6 +2822,8 @@ class PokemonData
         Pokemon::MEWTWO | FormsAlias::MEWTWO_NORMAL => [
             self::FIELD_NAME => 'Mewtwo',
             self::FIELD_NAME_SHORT => 'Mewtwo',
+            self::FIELD_DESC => 'Mewtwo is a Pokémon that was created by genetic manipulation. However, even though the scientific power of humans created this Pokémon\'s body, they failed to endow Mewtwo with a compassionate heart.',
+            self::FIELD_CATEGORY => 'Genetic Pokémon',
             self::FIELD_ATTACK => 300,
             self::FIELD_DEFENSE => 182,
             self::FIELD_STAMINA => 214,
@@ -2538,6 +2840,8 @@ class PokemonData
         Pokemon::MEWTWO | FormsAlias::MEWTWO_ARMORED => [
             self::FIELD_NAME => 'Armored Mewtwo',
             self::FIELD_NAME_SHORT => 'Mewtwo',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Genetic Pokémon',
             self::FIELD_ATTACK => 182,
             self::FIELD_DEFENSE => 278,
             self::FIELD_STAMINA => 214,
@@ -2554,6 +2858,8 @@ class PokemonData
         Pokemon::MEW => [
             self::FIELD_NAME => 'Mew',
             self::FIELD_NAME_SHORT => 'Mew',
+            self::FIELD_DESC => 'Mew is said to possess the genetic composition of all Pokémon. It is capable of making itself invisible at will, so it entirely avoids notice even if it approaches people.',
+            self::FIELD_CATEGORY => 'New Species Pokémon',
             self::FIELD_ATTACK => 210,
             self::FIELD_DEFENSE => 210,
             self::FIELD_STAMINA => 225,
@@ -2568,6 +2874,8 @@ class PokemonData
         Pokemon::CHIKORITA => [
             self::FIELD_NAME => 'Chikorita',
             self::FIELD_NAME_SHORT => 'Chikorita',
+            self::FIELD_DESC => 'In battle, Chikorita waves its leaf around to keep the foe at bay. However, a sweet fragrance also wafts from the leaf, becalming the battling Pokémon and creating a cozy, friendly atmosphere all around.',
+            self::FIELD_CATEGORY => 'Leaf Pokémon',
             self::FIELD_ATTACK => 92,
             self::FIELD_DEFENSE => 122,
             self::FIELD_STAMINA => 128,
@@ -2584,6 +2892,8 @@ class PokemonData
         Pokemon::BAYLEEF => [
             self::FIELD_NAME => 'Bayleef',
             self::FIELD_NAME_SHORT => 'Bayleef',
+            self::FIELD_DESC => 'Bayleef\'s neck is ringed by curled-up leaves. Inside each tubular leaf is a small shoot of a tree. The fragrance of this shoot makes people peppy.',
+            self::FIELD_CATEGORY => 'Leaf Pokémon',
             self::FIELD_ATTACK => 122,
             self::FIELD_DEFENSE => 155,
             self::FIELD_STAMINA => 155,
@@ -2600,6 +2910,8 @@ class PokemonData
         Pokemon::MEGANIUM => [
             self::FIELD_NAME => 'Meganium',
             self::FIELD_NAME_SHORT => 'Meganium',
+            self::FIELD_DESC => 'The fragrance of Meganium\'s flower soothes and calms emotions. In battle, this Pokémon gives off more of its becalming scent to blunt the foe\'s fighting spirit.',
+            self::FIELD_CATEGORY => 'Herb Pokémon',
             self::FIELD_ATTACK => 168,
             self::FIELD_DEFENSE => 202,
             self::FIELD_STAMINA => 190,
@@ -2616,6 +2928,8 @@ class PokemonData
         Pokemon::CYNDAQUIL => [
             self::FIELD_NAME => 'Cyndaquil',
             self::FIELD_NAME_SHORT => 'Cyndaquil',
+            self::FIELD_DESC => 'Cyndaquil protects itself by flaring up the flames on its back. The flames are vigorous if the Pokémon is angry. However, if it is tired, the flames splutter fitfully with incomplete combustion.',
+            self::FIELD_CATEGORY => 'Fire Mouse Pokémon',
             self::FIELD_ATTACK => 116,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 118,
@@ -2632,6 +2946,8 @@ class PokemonData
         Pokemon::QUILAVA => [
             self::FIELD_NAME => 'Quilava',
             self::FIELD_NAME_SHORT => 'Quilava',
+            self::FIELD_DESC => 'Quilava keeps its foes at bay with the intensity of its flames and gusts of superheated air. This Pokémon applies its outstanding nimbleness to dodge attacks even while scorching the foe with flames.',
+            self::FIELD_CATEGORY => 'Volcano Pokémon',
             self::FIELD_ATTACK => 158,
             self::FIELD_DEFENSE => 126,
             self::FIELD_STAMINA => 151,
@@ -2648,6 +2964,8 @@ class PokemonData
         Pokemon::TYPHLOSION => [
             self::FIELD_NAME => 'Typhlosion',
             self::FIELD_NAME_SHORT => 'Typhlosion',
+            self::FIELD_DESC => 'Typhlosion obscures itself behind a shimmering heat haze that it creates using its intensely hot flames. This Pokémon creates blazing explosive blasts that burn everything to cinders.',
+            self::FIELD_CATEGORY => 'Volcano Pokémon',
             self::FIELD_ATTACK => 223,
             self::FIELD_DEFENSE => 173,
             self::FIELD_STAMINA => 186,
@@ -2664,6 +2982,8 @@ class PokemonData
         Pokemon::TOTODILE => [
             self::FIELD_NAME => 'Totodile',
             self::FIELD_NAME_SHORT => 'Totodile',
+            self::FIELD_DESC => 'Despite the smallness of its body, Totodile\'s jaws are very powerful. While the Pokémon may think it is just playfully nipping, its bite has enough power to cause serious injury.',
+            self::FIELD_CATEGORY => 'Big Jaw Pokémon',
             self::FIELD_ATTACK => 117,
             self::FIELD_DEFENSE => 109,
             self::FIELD_STAMINA => 137,
@@ -2680,6 +3000,8 @@ class PokemonData
         Pokemon::CROCONAW => [
             self::FIELD_NAME => 'Croconaw',
             self::FIELD_NAME_SHORT => 'Croconaw',
+            self::FIELD_DESC => 'Once Croconaw has clamped its jaws on its foe, it will absolutely not let go. Because the tips of its fangs are forked back like barbed fishhooks, they become impossible to remove when they have sunk in.',
+            self::FIELD_CATEGORY => 'Big Jaw Pokémon',
             self::FIELD_ATTACK => 150,
             self::FIELD_DEFENSE => 142,
             self::FIELD_STAMINA => 163,
@@ -2696,6 +3018,8 @@ class PokemonData
         Pokemon::FERALIGATR => [
             self::FIELD_NAME => 'Feraligatr',
             self::FIELD_NAME_SHORT => 'Feraligatr',
+            self::FIELD_DESC => 'Feraligatr intimidates its foes by opening its huge mouth. In battle, it will kick the ground hard with its thick and powerful hind legs to charge at the foe at an incredible speed.',
+            self::FIELD_CATEGORY => 'Big Jaw Pokémon',
             self::FIELD_ATTACK => 205,
             self::FIELD_DEFENSE => 188,
             self::FIELD_STAMINA => 198,
@@ -2713,6 +3037,8 @@ class PokemonData
         Pokemon::SENTRET => [
             self::FIELD_NAME => 'Sentret',
             self::FIELD_NAME_SHORT => 'Sentret',
+            self::FIELD_DESC => 'When Sentret sleeps, it does so while another stands guard. The sentry wakes the others at the first sign of danger. When this Pokémon becomes separated from its pack, it becomes incapable of sleep due to fear.',
+            self::FIELD_CATEGORY => 'Scout Pokémon',
             self::FIELD_ATTACK => 79,
             self::FIELD_DEFENSE => 73,
             self::FIELD_STAMINA => 111,
@@ -2729,6 +3055,8 @@ class PokemonData
         Pokemon::FURRET => [
             self::FIELD_NAME => 'Furret',
             self::FIELD_NAME_SHORT => 'Furret',
+            self::FIELD_DESC => 'Furret has a very slim build. When under attack, it can slickly squirm through narrow spaces and get away. In spite of its short limbs, this Pokémon is very nimble and fleet.',
+            self::FIELD_CATEGORY => 'Long Body Pokémon',
             self::FIELD_ATTACK => 148,
             self::FIELD_DEFENSE => 125,
             self::FIELD_STAMINA => 198,
@@ -2744,6 +3072,8 @@ class PokemonData
         Pokemon::HOOTHOOT => [
             self::FIELD_NAME => 'Hoothoot',
             self::FIELD_NAME_SHORT => 'Hoothoot',
+            self::FIELD_DESC => 'Hoothoot has an internal organ that senses and tracks the earth\'s rotation. Using this special organ, this Pokémon begins hooting at precisely the same time every day.',
+            self::FIELD_CATEGORY => 'Owl Pokémon',
             self::FIELD_ATTACK => 67,
             self::FIELD_DEFENSE => 88,
             self::FIELD_STAMINA => 155,
@@ -2761,6 +3091,8 @@ class PokemonData
         Pokemon::NOCTOWL => [
             self::FIELD_NAME => 'Noctowl',
             self::FIELD_NAME_SHORT => 'Noctowl',
+            self::FIELD_DESC => 'Noctowl never fails at catching prey in darkness. This Pokémon owes its success to its superior vision that allows it to see in minimal light, and to its soft, supple wings that make no sound in flight.',
+            self::FIELD_CATEGORY => 'Owl Pokémon',
             self::FIELD_ATTACK => 145,
             self::FIELD_DEFENSE => 156,
             self::FIELD_STAMINA => 225,
@@ -2777,6 +3109,8 @@ class PokemonData
         Pokemon::LEDYBA => [
             self::FIELD_NAME => 'Ledyba',
             self::FIELD_NAME_SHORT => 'Ledyba',
+            self::FIELD_DESC => 'Ledyba secretes an aromatic fluid from where its legs join its body. This fluid is used for communicating with others. This Pokémon conveys its feelings to others by altering the fluid\'s scent.',
+            self::FIELD_CATEGORY => 'Five Star Pokémon',
             self::FIELD_ATTACK => 72,
             self::FIELD_DEFENSE => 118,
             self::FIELD_STAMINA => 120,
@@ -2794,6 +3128,8 @@ class PokemonData
         Pokemon::LEDIAN => [
             self::FIELD_NAME => 'Ledian',
             self::FIELD_NAME_SHORT => 'Ledian',
+            self::FIELD_DESC => 'It is said that in lands with clean air, where the stars fill the sky, there live Ledian in countless numbers. There is a good reason for this—the Pokémon uses the light of the stars as its energy.',
+            self::FIELD_CATEGORY => 'Five Star Pokémon',
             self::FIELD_ATTACK => 107,
             self::FIELD_DEFENSE => 179,
             self::FIELD_STAMINA => 146,
@@ -2810,6 +3146,8 @@ class PokemonData
         Pokemon::SPINARAK => [
             self::FIELD_NAME => 'Spinarak',
             self::FIELD_NAME_SHORT => 'Spinarak',
+            self::FIELD_DESC => 'The web spun by Spinarak can be considered its second nervous system. It is said that this Pokémon can determine what kind of prey is touching its web just by the tiny vibrations it feels through the web\'s strands.',
+            self::FIELD_CATEGORY => 'String Spit Pokémon',
             self::FIELD_ATTACK => 105,
             self::FIELD_DEFENSE => 73,
             self::FIELD_STAMINA => 120,
@@ -2827,6 +3165,8 @@ class PokemonData
         Pokemon::ARIADOS => [
             self::FIELD_NAME => 'Ariados',
             self::FIELD_NAME_SHORT => 'Ariados',
+            self::FIELD_DESC => 'Ariados\'s feet are tipped with tiny hooked claws that enable it to scuttle on ceilings and vertical walls. This Pokémon constricts the foe with thin and strong silk webbing.',
+            self::FIELD_CATEGORY => 'Long Leg Pokémon',
             self::FIELD_ATTACK => 161,
             self::FIELD_DEFENSE => 124,
             self::FIELD_STAMINA => 172,
@@ -2843,6 +3183,8 @@ class PokemonData
         Pokemon::CROBAT => [
             self::FIELD_NAME => 'Crobat',
             self::FIELD_NAME_SHORT => 'Crobat',
+            self::FIELD_DESC => 'If this Pokémon is flying by fluttering only a pair of wings on either the forelegs or hind legs, it\'s proof that Crobat has been flying a long distance. It switches the wings it uses if it is tired.',
+            self::FIELD_CATEGORY => 'Bat Pokémon',
             self::FIELD_ATTACK => 194,
             self::FIELD_DEFENSE => 178,
             self::FIELD_STAMINA => 198,
@@ -2859,6 +3201,8 @@ class PokemonData
         Pokemon::CHINCHOU => [
             self::FIELD_NAME => 'Chinchou',
             self::FIELD_NAME_SHORT => 'Chinchou',
+            self::FIELD_DESC => 'Chinchou lets loose positive and negative electrical charges from its two antennas to make its prey faint. This Pokémon flashes its electric lights to exchange signals with others.',
+            self::FIELD_CATEGORY => 'Angler Pokémon',
             self::FIELD_ATTACK => 106,
             self::FIELD_DEFENSE => 97,
             self::FIELD_STAMINA => 181,
@@ -2876,6 +3220,8 @@ class PokemonData
         Pokemon::LANTURN => [
             self::FIELD_NAME => 'Lanturn',
             self::FIELD_NAME_SHORT => 'Lanturn',
+            self::FIELD_DESC => 'Lanturn is nicknamed “the deep-sea star” for its illuminated antenna. This Pokémon produces light by causing a chemical reaction between bacteria and its bodily fluids inside the antenna.',
+            self::FIELD_CATEGORY => 'Light Pokémon',
             self::FIELD_ATTACK => 146,
             self::FIELD_DEFENSE => 137,
             self::FIELD_STAMINA => 268,
@@ -2892,6 +3238,8 @@ class PokemonData
         Pokemon::PICHU => [
             self::FIELD_NAME => 'Pichu',
             self::FIELD_NAME_SHORT => 'Pichu',
+            self::FIELD_DESC => 'Pichu charges itself with electricity more easily on days with thunderclouds or when the air is very dry. You can hear the crackling of static electricity coming off this Pokémon.',
+            self::FIELD_CATEGORY => 'Tiny Mouse Pokémon',
             self::FIELD_ATTACK => 77,
             self::FIELD_DEFENSE => 53,
             self::FIELD_STAMINA => 85,
@@ -2908,6 +3256,8 @@ class PokemonData
         Pokemon::CLEFFA => [
             self::FIELD_NAME => 'Cleffa',
             self::FIELD_NAME_SHORT => 'Cleffa',
+            self::FIELD_DESC => 'On nights with many shooting stars, Cleffa can be seen dancing in a ring. They dance through the night and stop only at the break of day, when these Pokémon quench their thirst with the morning dew.',
+            self::FIELD_CATEGORY => 'Star Shape Pokémon',
             self::FIELD_ATTACK => 75,
             self::FIELD_DEFENSE => 79,
             self::FIELD_STAMINA => 137,
@@ -2925,6 +3275,8 @@ class PokemonData
         Pokemon::IGGLYBUFF => [
             self::FIELD_NAME => 'Igglybuff',
             self::FIELD_NAME_SHORT => 'Igglybuff',
+            self::FIELD_DESC => 'Igglybuff\'s vocal cords are not sufficiently developed. It would hurt its throat if it were to sing too much. This Pokémon gargles with freshwater from a clean stream.',
+            self::FIELD_CATEGORY => 'Balloon Pokémon',
             self::FIELD_ATTACK => 69,
             self::FIELD_DEFENSE => 32,
             self::FIELD_STAMINA => 207,
@@ -2943,6 +3295,8 @@ class PokemonData
         Pokemon::TOGEPI => [
             self::FIELD_NAME => 'Togepi',
             self::FIELD_NAME_SHORT => 'Togepi',
+            self::FIELD_DESC => 'As its energy, Togepi uses the positive emotions of compassion and pleasure exuded by people and Pokémon. This Pokémon stores up feelings of happiness inside its shell, then shares them with others.',
+            self::FIELD_CATEGORY => 'Spike Ball Pokémon',
             self::FIELD_ATTACK => 67,
             self::FIELD_DEFENSE => 116,
             self::FIELD_STAMINA => 111,
@@ -2960,6 +3314,8 @@ class PokemonData
         Pokemon::TOGETIC => [
             self::FIELD_NAME => 'Togetic',
             self::FIELD_NAME_SHORT => 'Togetic',
+            self::FIELD_DESC => 'Togetic is said to be a Pokémon that brings good fortune. When the Pokémon spots someone who is pure of heart, it is said to appear and share its happiness with that person.',
+            self::FIELD_CATEGORY => 'Happiness Pokémon',
             self::FIELD_ATTACK => 139,
             self::FIELD_DEFENSE => 181,
             self::FIELD_STAMINA => 146,
@@ -2978,6 +3334,8 @@ class PokemonData
         Pokemon::NATU => [
             self::FIELD_NAME => 'Natu',
             self::FIELD_NAME_SHORT => 'Natu',
+            self::FIELD_DESC => 'Natu cannot fly because its wings are not yet fully grown. If your eyes meet with this Pokémon\'s eyes, it will stare back intently at you. But if you move even slightly, it will hop away to safety.',
+            self::FIELD_CATEGORY => 'Tiny Bird Pokémon',
             self::FIELD_ATTACK => 134,
             self::FIELD_DEFENSE => 89,
             self::FIELD_STAMINA => 120,
@@ -2995,6 +3353,8 @@ class PokemonData
         Pokemon::XATU => [
             self::FIELD_NAME => 'Xatu',
             self::FIELD_NAME_SHORT => 'Xatu',
+            self::FIELD_DESC => 'Xatu stands rooted and still in one spot all day long. People believe that this Pokémon does so out of fear of the terrible things it has foreseen in the future.',
+            self::FIELD_CATEGORY => 'Mystic Pokémon',
             self::FIELD_ATTACK => 192,
             self::FIELD_DEFENSE => 146,
             self::FIELD_STAMINA => 163,
@@ -3011,6 +3371,8 @@ class PokemonData
         Pokemon::MAREEP => [
             self::FIELD_NAME => 'Mareep',
             self::FIELD_NAME_SHORT => 'Mareep',
+            self::FIELD_DESC => 'Mareep\'s fluffy coat of wool rubs together and builds a static charge. The more static electricity is charged, the more brightly the lightbulb at the tip of its tail glows.',
+            self::FIELD_CATEGORY => 'Wool Pokémon',
             self::FIELD_ATTACK => 114,
             self::FIELD_DEFENSE => 79,
             self::FIELD_STAMINA => 146,
@@ -3027,6 +3389,8 @@ class PokemonData
         Pokemon::FLAAFFY => [
             self::FIELD_NAME => 'Flaaffy',
             self::FIELD_NAME_SHORT => 'Flaaffy',
+            self::FIELD_DESC => 'Flaaffy\'s wool quality changes so that it can generate a high amount of static electricity with a small amount of wool. The bare and slick parts of its hide are shielded against electricity.',
+            self::FIELD_CATEGORY => 'Wool Pokémon',
             self::FIELD_ATTACK => 145,
             self::FIELD_DEFENSE => 109,
             self::FIELD_STAMINA => 172,
@@ -3043,6 +3407,8 @@ class PokemonData
         Pokemon::AMPHAROS => [
             self::FIELD_NAME => 'Ampharos',
             self::FIELD_NAME_SHORT => 'Ampharos',
+            self::FIELD_DESC => 'Ampharos gives off so much light that it can be seen even from space. People in the old days used the light of this Pokémon to send signals back and forth with others far away.',
+            self::FIELD_CATEGORY => 'Light Pokémon',
             self::FIELD_ATTACK => 211,
             self::FIELD_DEFENSE => 169,
             self::FIELD_STAMINA => 207,
@@ -3059,6 +3425,8 @@ class PokemonData
         Pokemon::BELLOSSOM => [
             self::FIELD_NAME => 'Bellossom',
             self::FIELD_NAME_SHORT => 'Bellossom',
+            self::FIELD_DESC => 'When Bellossom gets exposed to plenty of sunlight, the leaves ringing its body begin to spin around. This Pokémon\'s dancing is renowned in the southern lands.',
+            self::FIELD_CATEGORY => 'Flower Pokémon',
             self::FIELD_ATTACK => 169,
             self::FIELD_DEFENSE => 186,
             self::FIELD_STAMINA => 181,
@@ -3074,6 +3442,8 @@ class PokemonData
         Pokemon::MARILL => [
             self::FIELD_NAME => 'Marill',
             self::FIELD_NAME_SHORT => 'Marill',
+            self::FIELD_DESC => 'Marill\'s oil-filled tail acts much like a life preserver. If you see just its tail bobbing on the water\'s surface, it\'s a sure indication that this Pokémon is diving beneath the water to feed on aquatic plants.',
+            self::FIELD_CATEGORY => 'Aqua Mouse Pokémon',
             self::FIELD_ATTACK => 37,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 172,
@@ -3091,6 +3461,8 @@ class PokemonData
         Pokemon::AZUMARILL => [
             self::FIELD_NAME => 'Azumarill',
             self::FIELD_NAME_SHORT => 'Azumarill',
+            self::FIELD_DESC => 'Azumarill\'s long ears are indispensable sensors. By focusing its hearing, this Pokémon can identify what kinds of prey are around, even in rough and fast-running rivers.',
+            self::FIELD_CATEGORY => 'Aqua Rabbit Pokémon',
             self::FIELD_ATTACK => 112,
             self::FIELD_DEFENSE => 152,
             self::FIELD_STAMINA => 225,
@@ -3107,6 +3479,8 @@ class PokemonData
         Pokemon::SUDOWOODO => [
             self::FIELD_NAME => 'Sudowoodo',
             self::FIELD_NAME_SHORT => 'Sudowoodo',
+            self::FIELD_DESC => 'Sudowoodo camouflages itself as a tree to avoid being attacked by enemies. However, because its hands remain green throughout the year, the Pokémon is easily identified as a fake during the winter.',
+            self::FIELD_CATEGORY => 'Imitation Pokémon',
             self::FIELD_ATTACK => 167,
             self::FIELD_DEFENSE => 176,
             self::FIELD_STAMINA => 172,
@@ -3122,6 +3496,8 @@ class PokemonData
         Pokemon::POLITOED => [
             self::FIELD_NAME => 'Politoed',
             self::FIELD_NAME_SHORT => 'Politoed',
+            self::FIELD_DESC => 'The curled hair on Politoed\'s head is proof of its status as a king. It is said that the longer and more curled the hair, the more respect this Pokémon earns from its peers.',
+            self::FIELD_CATEGORY => 'Frog Pokémon',
             self::FIELD_ATTACK => 174,
             self::FIELD_DEFENSE => 179,
             self::FIELD_STAMINA => 207,
@@ -3138,6 +3514,8 @@ class PokemonData
         Pokemon::HOPPIP => [
             self::FIELD_NAME => 'Hoppip',
             self::FIELD_NAME_SHORT => 'Hoppip',
+            self::FIELD_DESC => 'This Pokémon drifts and floats with the wind. If it senses the approach of strong winds, Hoppip links its leaves with other Hoppip to prepare against being blown away.',
+            self::FIELD_CATEGORY => 'Cottonweed Pokémon',
             self::FIELD_ATTACK => 67,
             self::FIELD_DEFENSE => 94,
             self::FIELD_STAMINA => 111,
@@ -3155,6 +3533,8 @@ class PokemonData
         Pokemon::SKIPLOOM => [
             self::FIELD_NAME => 'Skiploom',
             self::FIELD_NAME_SHORT => 'Skiploom',
+            self::FIELD_DESC => 'Skiploom\'s flower blossoms when the temperature rises above 64 degrees Fahrenheit. How much the flower opens depends on the temperature. For that reason, this Pokémon is sometimes used as a thermometer.',
+            self::FIELD_CATEGORY => 'Cottonweed Pokémon',
             self::FIELD_ATTACK => 91,
             self::FIELD_DEFENSE => 120,
             self::FIELD_STAMINA => 146,
@@ -3172,6 +3552,8 @@ class PokemonData
         Pokemon::JUMPLUFF => [
             self::FIELD_NAME => 'Jumpluff',
             self::FIELD_NAME_SHORT => 'Jumpluff',
+            self::FIELD_DESC => 'Jumpluff rides warm southern winds to cross the sea and fly to foreign lands. The Pokémon descends to the ground when it encounters cold air while it is floating.',
+            self::FIELD_CATEGORY => 'Cottonweed Pokémon',
             self::FIELD_ATTACK => 118,
             self::FIELD_DEFENSE => 183,
             self::FIELD_STAMINA => 181,
@@ -3188,6 +3570,8 @@ class PokemonData
         Pokemon::AIPOM => [
             self::FIELD_NAME => 'Aipom',
             self::FIELD_NAME_SHORT => 'Aipom',
+            self::FIELD_DESC => 'Aipom\'s tail ends in a hand-like appendage that can be cleverly manipulated. However, because the Pokémon uses its tail so much, its real hands have become rather clumsy.',
+            self::FIELD_CATEGORY => 'Long Tail Pokémon',
             self::FIELD_ATTACK => 136,
             self::FIELD_DEFENSE => 112,
             self::FIELD_STAMINA => 146,
@@ -3204,6 +3588,8 @@ class PokemonData
         Pokemon::SUNKERN => [
             self::FIELD_NAME => 'Sunkern',
             self::FIELD_NAME_SHORT => 'Sunkern',
+            self::FIELD_DESC => 'Sunkern tries to move as little as it possibly can. It does so because it tries to conserve all the nutrients it has stored in its body for its evolution. It will not eat a thing, subsisting only on morning dew.',
+            self::FIELD_CATEGORY => 'Seed Pokémon',
             self::FIELD_ATTACK => 55,
             self::FIELD_DEFENSE => 55,
             self::FIELD_STAMINA => 102,
@@ -3220,6 +3606,8 @@ class PokemonData
         Pokemon::SUNFLORA => [
             self::FIELD_NAME => 'Sunflora',
             self::FIELD_NAME_SHORT => 'Sunflora',
+            self::FIELD_DESC => 'Sunflora converts solar energy into nutrition. It moves around actively in the daytime when it is warm. It stops moving as soon as the sun goes down for the night.',
+            self::FIELD_CATEGORY => 'Sun Pokémon',
             self::FIELD_ATTACK => 185,
             self::FIELD_DEFENSE => 135,
             self::FIELD_STAMINA => 181,
@@ -3235,6 +3623,8 @@ class PokemonData
         Pokemon::YANMA => [
             self::FIELD_NAME => 'Yanma',
             self::FIELD_NAME_SHORT => 'Yanma',
+            self::FIELD_DESC => 'Yanma is capable of seeing 360 degrees without having to move its eyes. It is a great flier that is adept at making sudden stops and turning midair. This Pokémon uses its flying ability to quickly chase down targeted prey.',
+            self::FIELD_CATEGORY => 'Clear Wing Pokémon',
             self::FIELD_ATTACK => 154,
             self::FIELD_DEFENSE => 94,
             self::FIELD_STAMINA => 163,
@@ -3252,6 +3642,8 @@ class PokemonData
         Pokemon::WOOPER => [
             self::FIELD_NAME => 'Wooper',
             self::FIELD_NAME_SHORT => 'Wooper',
+            self::FIELD_DESC => 'Wooper usually lives in water. However, it occasionally comes out onto land in search of food. On land, it coats its body with a gooey, toxic film.',
+            self::FIELD_CATEGORY => 'Water Fish Pokémon',
             self::FIELD_ATTACK => 75,
             self::FIELD_DEFENSE => 66,
             self::FIELD_STAMINA => 146,
@@ -3269,6 +3661,8 @@ class PokemonData
         Pokemon::QUAGSIRE => [
             self::FIELD_NAME => 'Quagsire',
             self::FIELD_NAME_SHORT => 'Quagsire',
+            self::FIELD_DESC => 'Quagsire hunts for food by leaving its mouth wide open in water and waiting for its prey to blunder in unaware. Because the Pokémon does not move, it does not get very hungry.',
+            self::FIELD_CATEGORY => 'Water Fish Pokémon',
             self::FIELD_ATTACK => 152,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 216,
@@ -3285,6 +3679,8 @@ class PokemonData
         Pokemon::ESPEON => [
             self::FIELD_NAME => 'Espeon',
             self::FIELD_NAME_SHORT => 'Espeon',
+            self::FIELD_DESC => 'Espeon is extremely loyal to any Trainer it considers to be worthy. It is said that this Pokémon developed its precognitive powers to protect its Trainer from harm.',
+            self::FIELD_CATEGORY => 'Sun Pokémon',
             self::FIELD_ATTACK => 261,
             self::FIELD_DEFENSE => 175,
             self::FIELD_STAMINA => 163,
@@ -3301,6 +3697,8 @@ class PokemonData
         Pokemon::UMBREON => [
             self::FIELD_NAME => 'Umbreon',
             self::FIELD_NAME_SHORT => 'Umbreon',
+            self::FIELD_DESC => 'Umbreon evolved as a result of exposure to the moon\'s waves. It hides silently in darkness and waits for its foes to make a move. The rings on its body glow when it leaps to attack.',
+            self::FIELD_CATEGORY => 'Moonlight Pokémon',
             self::FIELD_ATTACK => 126,
             self::FIELD_DEFENSE => 240,
             self::FIELD_STAMINA => 216,
@@ -3317,6 +3715,8 @@ class PokemonData
         Pokemon::MURKROW => [
             self::FIELD_NAME => 'Murkrow',
             self::FIELD_NAME_SHORT => 'Murkrow',
+            self::FIELD_DESC => 'Murkrow was feared and loathed as the alleged bearer of ill fortune. This Pokémon shows strong interest in anything that sparkles or glitters. It will even try to steal rings from women.',
+            self::FIELD_CATEGORY => 'Darkness Pokémon',
             self::FIELD_ATTACK => 175,
             self::FIELD_DEFENSE => 87,
             self::FIELD_STAMINA => 155,
@@ -3334,6 +3734,8 @@ class PokemonData
         Pokemon::SLOWKING => [
             self::FIELD_NAME => 'Slowking',
             self::FIELD_NAME_SHORT => 'Slowking',
+            self::FIELD_DESC => 'Slowking undertakes research every day in an effort to solve the mysteries of the world. However, this Pokémon apparently forgets everything it has learned if the Shellder on its head comes off.',
+            self::FIELD_CATEGORY => 'Royal Pokémon',
             self::FIELD_ATTACK => 177,
             self::FIELD_DEFENSE => 180,
             self::FIELD_STAMINA => 216,
@@ -3350,6 +3752,8 @@ class PokemonData
         Pokemon::MISDREAVUS => [
             self::FIELD_NAME => 'Misdreavus',
             self::FIELD_NAME_SHORT => 'Misdreavus',
+            self::FIELD_DESC => 'Misdreavus frightens people with a creepy, sobbing cry. The Pokémon apparently uses its red spheres to absorb the fearful feelings of foes and turn them into nutrition.',
+            self::FIELD_CATEGORY => 'Screech Pokémon',
             self::FIELD_ATTACK => 167,
             self::FIELD_DEFENSE => 154,
             self::FIELD_STAMINA => 155,
@@ -3366,6 +3770,8 @@ class PokemonData
         Pokemon::UNOWN => [
             self::FIELD_NAME => 'Unown',
             self::FIELD_NAME_SHORT => 'Unown',
+            self::FIELD_DESC => 'This Pokémon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known.',
+            self::FIELD_CATEGORY => 'Symbol Pokémon',
             self::FIELD_ATTACK => 136,
             self::FIELD_DEFENSE => 91,
             self::FIELD_STAMINA => 134,
@@ -3381,6 +3787,8 @@ class PokemonData
         Pokemon::WOBBUFFET => [
             self::FIELD_NAME => 'Wobbuffet',
             self::FIELD_NAME_SHORT => 'Wobbuffet',
+            self::FIELD_DESC => 'If two or more Wobbuffet meet, they will turn competitive and try to outdo each other\'s endurance. However, they may try to see which one can endure the longest without food. Trainers need to beware of this habit.',
+            self::FIELD_CATEGORY => 'Patient Pokémon',
             self::FIELD_ATTACK => 60,
             self::FIELD_DEFENSE => 106,
             self::FIELD_STAMINA => 382,
@@ -3396,6 +3804,8 @@ class PokemonData
         Pokemon::GIRAFARIG => [
             self::FIELD_NAME => 'Girafarig',
             self::FIELD_NAME_SHORT => 'Girafarig',
+            self::FIELD_DESC => 'Girafarig\'s rear head also has a brain, but it is small. The rear head attacks in response to smells and sounds. Approaching this Pokémon from behind can cause the rear head to suddenly lash out and bite.',
+            self::FIELD_CATEGORY => 'Long Neck Pokémon',
             self::FIELD_ATTACK => 182,
             self::FIELD_DEFENSE => 133,
             self::FIELD_STAMINA => 172,
@@ -3412,6 +3822,8 @@ class PokemonData
         Pokemon::PINECO => [
             self::FIELD_NAME => 'Pineco',
             self::FIELD_NAME_SHORT => 'Pineco',
+            self::FIELD_DESC => 'Pineco hangs from a tree branch and patiently waits for prey to come along. If the Pokémon is disturbed while eating by someone shaking its tree, it drops down to the ground and explodes with no warning.',
+            self::FIELD_CATEGORY => 'Bagworm Pokémon',
             self::FIELD_ATTACK => 108,
             self::FIELD_DEFENSE => 122,
             self::FIELD_STAMINA => 137,
@@ -3428,6 +3840,8 @@ class PokemonData
         Pokemon::FORRETRESS => [
             self::FIELD_NAME => 'Forretress',
             self::FIELD_NAME_SHORT => 'Forretress',
+            self::FIELD_DESC => 'Forretress conceals itself inside its hardened steel shell. The shell is opened when the Pokémon is catching prey, but it does so at such a quick pace that the shell\'s inside cannot be seen.',
+            self::FIELD_CATEGORY => 'Bagworm Pokémon',
             self::FIELD_ATTACK => 161,
             self::FIELD_DEFENSE => 205,
             self::FIELD_STAMINA => 181,
@@ -3444,6 +3858,8 @@ class PokemonData
         Pokemon::DUNSPARCE => [
             self::FIELD_NAME => 'Dunsparce',
             self::FIELD_NAME_SHORT => 'Dunsparce',
+            self::FIELD_DESC => 'Dunsparce has a drill for its tail. It uses this tail to burrow into the ground backward. This Pokémon is known to make its nest in complex shapes deep under the ground.',
+            self::FIELD_CATEGORY => 'Land Snake Pokémon',
             self::FIELD_ATTACK => 131,
             self::FIELD_DEFENSE => 128,
             self::FIELD_STAMINA => 225,
@@ -3459,6 +3875,8 @@ class PokemonData
         Pokemon::GLIGAR => [
             self::FIELD_NAME => 'Gligar',
             self::FIELD_NAME_SHORT => 'Gligar',
+            self::FIELD_DESC => 'Gligar glides through the air without a sound as if it were sliding. This Pokémon hangs on to the face of its foe using its clawed hind legs and the large pincers on its forelegs, then injects the prey with its poison barb.',
+            self::FIELD_CATEGORY => 'Fly Scorpion Pokémon',
             self::FIELD_ATTACK => 143,
             self::FIELD_DEFENSE => 184,
             self::FIELD_STAMINA => 163,
@@ -3476,6 +3894,8 @@ class PokemonData
         Pokemon::STEELIX => [
             self::FIELD_NAME => 'Steelix',
             self::FIELD_NAME_SHORT => 'Steelix',
+            self::FIELD_DESC => 'Steelix lives even further underground than Onix. This Pokémon is known to dig toward the earth\'s core. There are records of this Pokémon reaching a depth of over six-tenths of a mile underground.',
+            self::FIELD_CATEGORY => 'Iron Snake Pokémon',
             self::FIELD_ATTACK => 148,
             self::FIELD_DEFENSE => 272,
             self::FIELD_STAMINA => 181,
@@ -3492,6 +3912,8 @@ class PokemonData
         Pokemon::SNUBBULL => [
             self::FIELD_NAME => 'Snubbull',
             self::FIELD_NAME_SHORT => 'Snubbull',
+            self::FIELD_DESC => 'By baring its fangs and making a scary face, Snubbull sends smaller Pokémon scurrying away in terror. However, this Pokémon seems a little sad at making its foes flee.',
+            self::FIELD_CATEGORY => 'Fairy Pokémon',
             self::FIELD_ATTACK => 137,
             self::FIELD_DEFENSE => 85,
             self::FIELD_STAMINA => 155,
@@ -3508,6 +3930,8 @@ class PokemonData
         Pokemon::GRANBULL => [
             self::FIELD_NAME => 'Granbull',
             self::FIELD_NAME_SHORT => 'Granbull',
+            self::FIELD_DESC => 'Granbull has a particularly well-developed lower jaw. The enormous fangs are heavy, causing the Pokémon to tip its head back for balance. Unless it is startled, it will not try to bite indiscriminately.',
+            self::FIELD_CATEGORY => 'Fairy Pokémon',
             self::FIELD_ATTACK => 212,
             self::FIELD_DEFENSE => 131,
             self::FIELD_STAMINA => 207,
@@ -3523,6 +3947,8 @@ class PokemonData
         Pokemon::QWILFISH => [
             self::FIELD_NAME => 'Qwilfish',
             self::FIELD_NAME_SHORT => 'Qwilfish',
+            self::FIELD_DESC => 'Qwilfish sucks in water, inflating itself. This Pokémon uses the pressure of the water it swallowed to shoot toxic quills all at once from all over its body. It finds swimming somewhat challenging.',
+            self::FIELD_CATEGORY => 'Balloon Pokémon',
             self::FIELD_ATTACK => 184,
             self::FIELD_DEFENSE => 138,
             self::FIELD_STAMINA => 163,
@@ -3539,6 +3965,8 @@ class PokemonData
         Pokemon::SCIZOR => [
             self::FIELD_NAME => 'Scizor',
             self::FIELD_NAME_SHORT => 'Scizor',
+            self::FIELD_DESC => 'Scizor has a body with the hardness of steel. It is not easily fazed by ordinary sorts of attacks. This Pokémon flaps its wings to regulate its body temperature.',
+            self::FIELD_CATEGORY => 'Pincer Pokémon',
             self::FIELD_ATTACK => 236,
             self::FIELD_DEFENSE => 181,
             self::FIELD_STAMINA => 172,
@@ -3555,6 +3983,8 @@ class PokemonData
         Pokemon::SHUCKLE => [
             self::FIELD_NAME => 'Shuckle',
             self::FIELD_NAME_SHORT => 'Shuckle',
+            self::FIELD_DESC => 'Shuckle quietly hides itself under rocks, keeping its body concealed inside its hard shell while eating berries it has stored away. The berries mix with its body fluids to become a juice.',
+            self::FIELD_CATEGORY => 'Mold Pokémon',
             self::FIELD_ATTACK => 17,
             self::FIELD_DEFENSE => 396,
             self::FIELD_STAMINA => 85,
@@ -3571,6 +4001,8 @@ class PokemonData
         Pokemon::HERACROSS => [
             self::FIELD_NAME => 'Heracross',
             self::FIELD_NAME_SHORT => 'Heracross',
+            self::FIELD_DESC => 'Heracross charges in a straight line at its foe, slips beneath the foe\'s grasp, and then scoops up and hurls the opponent with its mighty horn. This Pokémon even has enough power to topple a massive tree.',
+            self::FIELD_CATEGORY => 'Single Horn Pokémon',
             self::FIELD_ATTACK => 234,
             self::FIELD_DEFENSE => 179,
             self::FIELD_STAMINA => 190,
@@ -3587,6 +4019,8 @@ class PokemonData
         Pokemon::SNEASEL => [
             self::FIELD_NAME => 'Sneasel',
             self::FIELD_NAME_SHORT => 'Sneasel',
+            self::FIELD_DESC => 'Sneasel scales trees by punching its hooked claws into the bark. This Pokémon seeks out unguarded nests and steals eggs for food while the parents are away.',
+            self::FIELD_CATEGORY => 'Sharp Claw Pokémon',
             self::FIELD_ATTACK => 189,
             self::FIELD_DEFENSE => 146,
             self::FIELD_STAMINA => 146,
@@ -3604,6 +4038,8 @@ class PokemonData
         Pokemon::TEDDIURSA => [
             self::FIELD_NAME => 'Teddiursa',
             self::FIELD_NAME_SHORT => 'Teddiursa',
+            self::FIELD_DESC => 'This Pokémon likes to lick its palms that are sweetened by being soaked in honey. Teddiursa concocts its own honey by blending fruits and pollen collected by Beedrill.',
+            self::FIELD_CATEGORY => 'Little Bear Pokémon',
             self::FIELD_ATTACK => 142,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 155,
@@ -3620,6 +4056,8 @@ class PokemonData
         Pokemon::URSARING => [
             self::FIELD_NAME => 'Ursaring',
             self::FIELD_NAME_SHORT => 'Ursaring',
+            self::FIELD_DESC => 'In the forests inhabited by Ursaring, it is said that there are many streams and towering trees where they gather food. This Pokémon walks through its forest gathering food every day.',
+            self::FIELD_CATEGORY => 'Hibernator Pokémon',
             self::FIELD_ATTACK => 236,
             self::FIELD_DEFENSE => 144,
             self::FIELD_STAMINA => 207,
@@ -3635,6 +4073,8 @@ class PokemonData
         Pokemon::SLUGMA => [
             self::FIELD_NAME => 'Slugma',
             self::FIELD_NAME_SHORT => 'Slugma',
+            self::FIELD_DESC => 'Molten magma courses throughout Slugma\'s circulatory system. If this Pokémon is chilled, the magma cools and hardens. Its body turns brittle and chunks fall off, reducing its size.',
+            self::FIELD_CATEGORY => 'Lava Pokémon',
             self::FIELD_ATTACK => 118,
             self::FIELD_DEFENSE => 71,
             self::FIELD_STAMINA => 120,
@@ -3651,6 +4091,8 @@ class PokemonData
         Pokemon::MAGCARGO => [
             self::FIELD_NAME => 'Magcargo',
             self::FIELD_NAME_SHORT => 'Magcargo',
+            self::FIELD_DESC => 'Magcargo\'s shell is actually its skin that hardened as a result of cooling. Its shell is very brittle and fragile—just touching it causes it to crumble apart. This Pokémon returns to its original size by dipping itself in magma.',
+            self::FIELD_CATEGORY => 'Lava Pokémon',
             self::FIELD_ATTACK => 139,
             self::FIELD_DEFENSE => 191,
             self::FIELD_STAMINA => 137,
@@ -3667,6 +4109,8 @@ class PokemonData
         Pokemon::SWINUB => [
             self::FIELD_NAME => 'Swinub',
             self::FIELD_NAME_SHORT => 'Swinub',
+            self::FIELD_DESC => 'Swinub roots for food by rubbing its snout against the ground. Its favorite food is a mushroom that grows under the cover of dead grass. This Pokémon occasionally roots out hot springs.',
+            self::FIELD_CATEGORY => 'Pig Pokémon',
             self::FIELD_ATTACK => 90,
             self::FIELD_DEFENSE => 69,
             self::FIELD_STAMINA => 137,
@@ -3684,6 +4128,8 @@ class PokemonData
         Pokemon::PILOSWINE => [
             self::FIELD_NAME => 'Piloswine',
             self::FIELD_NAME_SHORT => 'Piloswine',
+            self::FIELD_DESC => 'Piloswine is covered by a thick coat of long hair that enables it to endure the freezing cold. This Pokémon uses its tusks to dig up food that has been buried under ice.',
+            self::FIELD_CATEGORY => 'Swine Pokémon',
             self::FIELD_ATTACK => 181,
             self::FIELD_DEFENSE => 138,
             self::FIELD_STAMINA => 225,
@@ -3701,6 +4147,8 @@ class PokemonData
         Pokemon::CORSOLA => [
             self::FIELD_NAME => 'Corsola',
             self::FIELD_NAME_SHORT => 'Corsola',
+            self::FIELD_DESC => 'Corsola\'s branches glitter very beautifully in seven colors when they catch sunlight. If any branch breaks off, this Pokémon grows it back in just one night.',
+            self::FIELD_CATEGORY => 'Coral Pokémon',
             self::FIELD_ATTACK => 118,
             self::FIELD_DEFENSE => 156,
             self::FIELD_STAMINA => 146,
@@ -3717,6 +4165,8 @@ class PokemonData
         Pokemon::REMORAID => [
             self::FIELD_NAME => 'Remoraid',
             self::FIELD_NAME_SHORT => 'Remoraid',
+            self::FIELD_DESC => 'Remoraid sucks in water, then expels it at high velocity using its abdominal muscles to shoot down flying prey. When evolution draws near, this Pokémon travels downstream from rivers.',
+            self::FIELD_CATEGORY => 'Jet Pokémon',
             self::FIELD_ATTACK => 127,
             self::FIELD_DEFENSE => 69,
             self::FIELD_STAMINA => 111,
@@ -3733,6 +4183,8 @@ class PokemonData
         Pokemon::OCTILLERY => [
             self::FIELD_NAME => 'Octillery',
             self::FIELD_NAME_SHORT => 'Octillery',
+            self::FIELD_DESC => 'Octillery grabs onto its foe using its tentacles. This Pokémon tries to immobilize it before delivering the finishing blow. If the foe turns out to be too strong, Octillery spews ink to escape.',
+            self::FIELD_CATEGORY => 'Jet Pokémon',
             self::FIELD_ATTACK => 197,
             self::FIELD_DEFENSE => 141,
             self::FIELD_STAMINA => 181,
@@ -3748,6 +4200,8 @@ class PokemonData
         Pokemon::DELIBIRD => [
             self::FIELD_NAME => 'Delibird',
             self::FIELD_NAME_SHORT => 'Delibird',
+            self::FIELD_DESC => 'Delibird carries its food bundled up in its tail. There once was a famous explorer who managed to reach the peak of the world\'s highest mountain, thanks to one of these Pokémon sharing its food.',
+            self::FIELD_CATEGORY => 'Delivery Pokémon',
             self::FIELD_ATTACK => 128,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 128,
@@ -3764,6 +4218,8 @@ class PokemonData
         Pokemon::MANTINE => [
             self::FIELD_NAME => 'Mantine',
             self::FIELD_NAME_SHORT => 'Mantine',
+            self::FIELD_DESC => 'On sunny days, schools of Mantine can be seen elegantly leaping over the sea\'s waves. This Pokémon is not bothered by the Remoraid that hitches rides.',
+            self::FIELD_CATEGORY => 'Kite Pokémon',
             self::FIELD_ATTACK => 148,
             self::FIELD_DEFENSE => 226,
             self::FIELD_STAMINA => 163,
@@ -3780,6 +4236,8 @@ class PokemonData
         Pokemon::SKARMORY => [
             self::FIELD_NAME => 'Skarmory',
             self::FIELD_NAME_SHORT => 'Skarmory',
+            self::FIELD_DESC => 'Skarmory is entirely encased in hard, protective armor. This Pokémon flies at close to 190 mph. It slashes foes with its wings that possess swordlike cutting edges.',
+            self::FIELD_CATEGORY => 'Armor Bird Pokémon',
             self::FIELD_ATTACK => 148,
             self::FIELD_DEFENSE => 226,
             self::FIELD_STAMINA => 163,
@@ -3796,6 +4254,8 @@ class PokemonData
         Pokemon::HOUNDOUR => [
             self::FIELD_NAME => 'Houndour',
             self::FIELD_NAME_SHORT => 'Houndour',
+            self::FIELD_DESC => 'Houndour hunt as a coordinated pack. They communicate with each other using a variety of cries to corner their prey. This Pokémon\'s remarkable teamwork is unparalleled.',
+            self::FIELD_CATEGORY => 'Dark Pokémon',
             self::FIELD_ATTACK => 152,
             self::FIELD_DEFENSE => 83,
             self::FIELD_STAMINA => 128,
@@ -3813,6 +4273,8 @@ class PokemonData
         Pokemon::HOUNDOOM => [
             self::FIELD_NAME => 'Houndoom',
             self::FIELD_NAME_SHORT => 'Houndoom',
+            self::FIELD_DESC => 'In a Houndoom pack, the one with its horns raked sharply toward the back serves a leadership role. These Pokémon choose their leader by fighting among themselves.',
+            self::FIELD_CATEGORY => 'Dark Pokémon',
             self::FIELD_ATTACK => 224,
             self::FIELD_DEFENSE => 144,
             self::FIELD_STAMINA => 181,
@@ -3830,6 +4292,8 @@ class PokemonData
         Pokemon::KINGDRA => [
             self::FIELD_NAME => 'Kingdra',
             self::FIELD_NAME_SHORT => 'Kingdra',
+            self::FIELD_DESC => 'Kingdra lives at extreme ocean depths that are otherwise uninhabited. It has long been believed that the yawning of this Pokémon creates spiraling ocean currents.',
+            self::FIELD_CATEGORY => 'Dragon Pokémon',
             self::FIELD_ATTACK => 194,
             self::FIELD_DEFENSE => 194,
             self::FIELD_STAMINA => 181,
@@ -3847,6 +4311,8 @@ class PokemonData
         Pokemon::PHANPY => [
             self::FIELD_NAME => 'Phanpy',
             self::FIELD_NAME_SHORT => 'Phanpy',
+            self::FIELD_DESC => 'For its nest, Phanpy digs a vertical pit in the ground at the edge of a river. It marks the area around its nest with its trunk to let the others know that the area has been claimed.',
+            self::FIELD_CATEGORY => 'Long Nose Pokémon',
             self::FIELD_ATTACK => 107,
             self::FIELD_DEFENSE => 98,
             self::FIELD_STAMINA => 207,
@@ -3863,6 +4329,8 @@ class PokemonData
         Pokemon::DONPHAN => [
             self::FIELD_NAME => 'Donphan',
             self::FIELD_NAME_SHORT => 'Donphan',
+            self::FIELD_DESC => 'Donphan\'s favorite attack is curling its body into a ball, then charging at its foe while rolling at high speed. Once it starts rolling, this Pokémon can\'t stop very easily.',
+            self::FIELD_CATEGORY => 'Armor Pokémon',
             self::FIELD_ATTACK => 214,
             self::FIELD_DEFENSE => 185,
             self::FIELD_STAMINA => 207,
@@ -3878,6 +4346,8 @@ class PokemonData
         Pokemon::PORYGON2 => [
             self::FIELD_NAME => 'Porygon2',
             self::FIELD_NAME_SHORT => 'Porygon2',
+            self::FIELD_DESC => 'Porygon2 was created by humans using the power of science. The man-made Pokémon has been endowed with artificial intelligence that enables it to learn new gestures and emotions on its own.',
+            self::FIELD_CATEGORY => 'Virtual Pokémon',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 180,
             self::FIELD_STAMINA => 198,
@@ -3894,6 +4364,8 @@ class PokemonData
         Pokemon::STANTLER => [
             self::FIELD_NAME => 'Stantler',
             self::FIELD_NAME_SHORT => 'Stantler',
+            self::FIELD_DESC => 'Stantler\'s magnificent antlers were traded at high prices as works of art. As a result, this Pokémon was hunted close to extinction by those who were after the priceless antlers.',
+            self::FIELD_CATEGORY => 'Big Horn Pokémon',
             self::FIELD_ATTACK => 192,
             self::FIELD_DEFENSE => 131,
             self::FIELD_STAMINA => 177,
@@ -3909,6 +4381,8 @@ class PokemonData
         Pokemon::SMEARGLE => [
             self::FIELD_NAME => 'Smeargle',
             self::FIELD_NAME_SHORT => 'Smeargle',
+            self::FIELD_DESC => 'Smeargle marks the boundaries of its territory using a body fluid that leaks out from the tip of its tail. Over 5,000 different marks left by this Pokémon have been found.',
+            self::FIELD_CATEGORY => 'Painter Pokémon',
             self::FIELD_ATTACK => 40,
             self::FIELD_DEFENSE => 83,
             self::FIELD_STAMINA => 146,
@@ -3923,6 +4397,8 @@ class PokemonData
         Pokemon::TYROGUE => [
             self::FIELD_NAME => 'Tyrogue',
             self::FIELD_NAME_SHORT => 'Tyrogue',
+            self::FIELD_DESC => 'Tyrogue becomes stressed out if it does not get to train every day. When raising this Pokémon, the Trainer must establish and uphold various training methods.',
+            self::FIELD_CATEGORY => 'Scuffle Pokémon',
             self::FIELD_ATTACK => 64,
             self::FIELD_DEFENSE => 64,
             self::FIELD_STAMINA => 111,
@@ -3939,6 +4415,8 @@ class PokemonData
         Pokemon::HITMONTOP => [
             self::FIELD_NAME => 'Hitmontop',
             self::FIELD_NAME_SHORT => 'Hitmontop',
+            self::FIELD_DESC => 'Hitmontop spins on its head at high speed, all the while delivering kicks. This technique is a remarkable mix of both offense and defense at the same time. The Pokémon travels faster spinning than it does walking.',
+            self::FIELD_CATEGORY => 'Handstand Pokémon',
             self::FIELD_ATTACK => 173,
             self::FIELD_DEFENSE => 207,
             self::FIELD_STAMINA => 137,
@@ -3954,6 +4432,8 @@ class PokemonData
         Pokemon::SMOOCHUM => [
             self::FIELD_NAME => 'Smoochum',
             self::FIELD_NAME_SHORT => 'Smoochum',
+            self::FIELD_DESC => 'Smoochum actively runs about, but also falls quite often. Whenever the chance arrives, it will look for its reflection to make sure its face hasn\'t become dirty.',
+            self::FIELD_CATEGORY => 'Kiss Pokémon',
             self::FIELD_ATTACK => 153,
             self::FIELD_DEFENSE => 91,
             self::FIELD_STAMINA => 128,
@@ -3972,6 +4452,8 @@ class PokemonData
         Pokemon::ELEKID => [
             self::FIELD_NAME => 'Elekid',
             self::FIELD_NAME_SHORT => 'Elekid',
+            self::FIELD_DESC => 'Elekid stores electricity in its body. If it touches metal and accidentally discharges all its built-up electricity, this Pokémon begins swinging its arms in circles to recharge itself.',
+            self::FIELD_CATEGORY => 'Electric Pokémon',
             self::FIELD_ATTACK => 135,
             self::FIELD_DEFENSE => 101,
             self::FIELD_STAMINA => 128,
@@ -3989,6 +4471,8 @@ class PokemonData
         Pokemon::MAGBY => [
             self::FIELD_NAME => 'Magby',
             self::FIELD_NAME_SHORT => 'Magby',
+            self::FIELD_DESC => 'Magby\'s state of health is determined by observing the fire it breathes. If the Pokémon is spouting yellow flames from its mouth, it is in good health. When it is fatigued, black smoke will be mixed in with the flames.',
+            self::FIELD_CATEGORY => 'Live Coal Pokémon',
             self::FIELD_ATTACK => 151,
             self::FIELD_DEFENSE => 99,
             self::FIELD_STAMINA => 128,
@@ -4006,6 +4490,8 @@ class PokemonData
         Pokemon::MILTANK => [
             self::FIELD_NAME => 'Miltank',
             self::FIELD_NAME_SHORT => 'Miltank',
+            self::FIELD_DESC => 'Miltank gives over five gallons of milk on a daily basis. Its sweet milk is enjoyed by children and grown-ups alike. People who can\'t drink milk turn it into yogurt and eat it instead.',
+            self::FIELD_CATEGORY => 'Milk Cow Pokémon',
             self::FIELD_ATTACK => 157,
             self::FIELD_DEFENSE => 193,
             self::FIELD_STAMINA => 216,
@@ -4021,6 +4507,8 @@ class PokemonData
         Pokemon::BLISSEY => [
             self::FIELD_NAME => 'Blissey',
             self::FIELD_NAME_SHORT => 'Blissey',
+            self::FIELD_DESC => 'Blissey senses sadness with its fluffy coat of fur. If it does so, this Pokémon will rush over to a sad person, no matter how far away, to share a Lucky Egg that brings a smile to any face.',
+            self::FIELD_CATEGORY => 'Happiness Pokémon',
             self::FIELD_ATTACK => 129,
             self::FIELD_DEFENSE => 169,
             self::FIELD_STAMINA => 496,
@@ -4036,6 +4524,8 @@ class PokemonData
         Pokemon::RAIKOU => [
             self::FIELD_NAME => 'Raikou',
             self::FIELD_NAME_SHORT => 'Raikou',
+            self::FIELD_DESC => 'Raikou embodies the speed of lightning. The roars of this Pokémon send shock waves shuddering through the air and shake the ground as if lightning bolts had come crashing down.',
+            self::FIELD_CATEGORY => 'Thunder Pokémon',
             self::FIELD_ATTACK => 241,
             self::FIELD_DEFENSE => 195,
             self::FIELD_STAMINA => 207,
@@ -4051,6 +4541,8 @@ class PokemonData
         Pokemon::ENTEI => [
             self::FIELD_NAME => 'Entei',
             self::FIELD_NAME_SHORT => 'Entei',
+            self::FIELD_DESC => 'Entei embodies the passion of magma. This Pokémon is thought to have been born in the eruption of a volcano. It sends up massive bursts of fire that utterly consume all that they touch.',
+            self::FIELD_CATEGORY => 'Volcano Pokémon',
             self::FIELD_ATTACK => 235,
             self::FIELD_DEFENSE => 171,
             self::FIELD_STAMINA => 251,
@@ -4066,6 +4558,8 @@ class PokemonData
         Pokemon::SUICUNE => [
             self::FIELD_NAME => 'Suicune',
             self::FIELD_NAME_SHORT => 'Suicune',
+            self::FIELD_DESC => 'Suicune embodies the compassion of a pure spring of water. It runs across the land with gracefulness. This Pokémon has the power to purify dirty water.',
+            self::FIELD_CATEGORY => 'Aurora Pokémon',
             self::FIELD_ATTACK => 180,
             self::FIELD_DEFENSE => 235,
             self::FIELD_STAMINA => 225,
@@ -4082,6 +4576,8 @@ class PokemonData
         Pokemon::LARVITAR => [
             self::FIELD_NAME => 'Larvitar',
             self::FIELD_NAME_SHORT => 'Larvitar',
+            self::FIELD_DESC => 'Larvitar is born deep under the ground. To come up to the surface, this Pokémon must eat its way through the soil above. Until it does so, Larvitar cannot see its parents.',
+            self::FIELD_CATEGORY => 'Rock Skin Pokémon',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 137,
@@ -4099,6 +4595,8 @@ class PokemonData
         Pokemon::PUPITAR => [
             self::FIELD_NAME => 'Pupitar',
             self::FIELD_NAME_SHORT => 'Pupitar',
+            self::FIELD_DESC => 'Pupitar creates a gas inside its body that it compresses and forcefully ejects to propel itself like a jet. The body is very durable—it avoids damage even if it hits solid steel.',
+            self::FIELD_CATEGORY => 'Hard Shell Pokémon',
             self::FIELD_ATTACK => 155,
             self::FIELD_DEFENSE => 133,
             self::FIELD_STAMINA => 172,
@@ -4116,6 +4614,8 @@ class PokemonData
         Pokemon::TYRANITAR => [
             self::FIELD_NAME => 'Tyranitar',
             self::FIELD_NAME_SHORT => 'Tyranitar',
+            self::FIELD_DESC => 'Tyranitar is so overwhelmingly powerful, it can bring down a whole mountain to make its nest. This Pokémon wanders about in mountains seeking new opponents to fight.',
+            self::FIELD_CATEGORY => 'Armor Pokémon',
             self::FIELD_ATTACK => 251,
             self::FIELD_DEFENSE => 207,
             self::FIELD_STAMINA => 225,
@@ -4133,6 +4633,8 @@ class PokemonData
         Pokemon::LUGIA => [
             self::FIELD_NAME => 'Lugia',
             self::FIELD_NAME_SHORT => 'Lugia',
+            self::FIELD_DESC => 'Lugia\'s wings pack devastating power—a light fluttering of its wings can blow apart regular houses. As a result, this Pokémon chooses to live out of sight deep under the sea.',
+            self::FIELD_CATEGORY => 'Diving Pokémon',
             self::FIELD_ATTACK => 193,
             self::FIELD_DEFENSE => 310,
             self::FIELD_STAMINA => 235,
@@ -4150,6 +4652,8 @@ class PokemonData
         Pokemon::HO_OH => [
             self::FIELD_NAME => 'Ho-Oh',
             self::FIELD_NAME_SHORT => 'Ho-Oh',
+            self::FIELD_DESC => 'Ho-Oh\'s feathers glow in seven colors depending on the angle at which they are struck by light. These feathers are said to bring happiness to the bearers. This Pokémon is said to live at the foot of a rainbow.',
+            self::FIELD_CATEGORY => 'Rainbow Pokémon',
             self::FIELD_ATTACK => 239,
             self::FIELD_DEFENSE => 244,
             self::FIELD_STAMINA => 214,
@@ -4167,6 +4671,8 @@ class PokemonData
         Pokemon::CELEBI => [
             self::FIELD_NAME => 'Celebi',
             self::FIELD_NAME_SHORT => 'Celebi',
+            self::FIELD_DESC => 'This Pokémon came from the future by crossing over time. It is thought that so long as Celebi appears, a bright and shining future awaits us.',
+            self::FIELD_CATEGORY => 'Time Travel Pokémon',
             self::FIELD_ATTACK => 210,
             self::FIELD_DEFENSE => 210,
             self::FIELD_STAMINA => 225,
@@ -4182,6 +4688,8 @@ class PokemonData
         Pokemon::TREECKO => [
             self::FIELD_NAME => 'Treecko',
             self::FIELD_NAME_SHORT => 'Treecko',
+            self::FIELD_DESC => 'Treecko has small hooks on the bottom of its feet that enable it to scale vertical walls. This Pokémon attacks by slamming foes with its thick tail.',
+            self::FIELD_CATEGORY => 'Wood Gecko Pokémon',
             self::FIELD_ATTACK => 124,
             self::FIELD_DEFENSE => 94,
             self::FIELD_STAMINA => 120,
@@ -4198,6 +4706,8 @@ class PokemonData
         Pokemon::GROVYLE => [
             self::FIELD_NAME => 'Grovyle',
             self::FIELD_NAME_SHORT => 'Grovyle',
+            self::FIELD_DESC => 'The leaves growing out of Grovyle\'s body are convenient for camouflaging it from enemies in the forest. This Pokémon is a master at climbing trees in jungles.',
+            self::FIELD_CATEGORY => 'Wood Gecko Pokémon',
             self::FIELD_ATTACK => 172,
             self::FIELD_DEFENSE => 120,
             self::FIELD_STAMINA => 137,
@@ -4214,6 +4724,8 @@ class PokemonData
         Pokemon::SCEPTILE => [
             self::FIELD_NAME => 'Sceptile',
             self::FIELD_NAME_SHORT => 'Sceptile',
+            self::FIELD_DESC => 'The leaves growing on Sceptile\'s body are very sharp edged. This Pokémon is very agile—it leaps all over the branches of trees and jumps on its foe from above or behind.',
+            self::FIELD_CATEGORY => 'Forest Pokémon',
             self::FIELD_ATTACK => 223,
             self::FIELD_DEFENSE => 169,
             self::FIELD_STAMINA => 172,
@@ -4230,6 +4742,8 @@ class PokemonData
         Pokemon::TORCHIC => [
             self::FIELD_NAME => 'Torchic',
             self::FIELD_NAME_SHORT => 'Torchic',
+            self::FIELD_DESC => 'Torchic sticks with its Trainer, following behind with unsteady steps. This Pokémon breathes fire of over 1,800 degrees Fahrenheit, including fireballs that leave the foe scorched black.',
+            self::FIELD_CATEGORY => 'Chick Pokémon',
             self::FIELD_ATTACK => 130,
             self::FIELD_DEFENSE => 87,
             self::FIELD_STAMINA => 128,
@@ -4246,6 +4760,8 @@ class PokemonData
         Pokemon::COMBUSKEN => [
             self::FIELD_NAME => 'Combusken',
             self::FIELD_NAME_SHORT => 'Combusken',
+            self::FIELD_DESC => 'Combusken toughens up its legs and thighs by running through fields and mountains. This Pokémon\'s legs possess both speed and power, enabling it to dole out 10 kicks in one second.',
+            self::FIELD_CATEGORY => 'Young Fowl Pokémon',
             self::FIELD_ATTACK => 163,
             self::FIELD_DEFENSE => 115,
             self::FIELD_STAMINA => 155,
@@ -4263,6 +4779,8 @@ class PokemonData
         Pokemon::BLAZIKEN => [
             self::FIELD_NAME => 'Blaziken',
             self::FIELD_NAME_SHORT => 'Blaziken',
+            self::FIELD_DESC => 'In battle, Blaziken blows out intense flames from its wrists and attacks foes courageously. The stronger the foe, the more intensely this Pokémon\'s wrists burn.',
+            self::FIELD_CATEGORY => 'Blaze Pokémon',
             self::FIELD_ATTACK => 240,
             self::FIELD_DEFENSE => 141,
             self::FIELD_STAMINA => 190,
@@ -4280,6 +4798,8 @@ class PokemonData
         Pokemon::MUDKIP => [
             self::FIELD_NAME => 'Mudkip',
             self::FIELD_NAME_SHORT => 'Mudkip',
+            self::FIELD_DESC => 'The fin on Mudkip\'s head acts as highly sensitive radar. Using this fin to sense movements of water and air, this Pokémon can determine what is taking place around it without using its eyes.',
+            self::FIELD_CATEGORY => 'Mud Fish Pokémon',
             self::FIELD_ATTACK => 126,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 137,
@@ -4296,6 +4816,8 @@ class PokemonData
         Pokemon::MARSHTOMP => [
             self::FIELD_NAME => 'Marshtomp',
             self::FIELD_NAME_SHORT => 'Marshtomp',
+            self::FIELD_DESC => 'The surface of Marshtomp\'s body is enveloped by a thin, sticky film that enables it to live on land. This Pokémon plays in mud on beaches when the ocean tide is low.',
+            self::FIELD_CATEGORY => 'Mud Fish Pokémon',
             self::FIELD_ATTACK => 156,
             self::FIELD_DEFENSE => 133,
             self::FIELD_STAMINA => 172,
@@ -4313,6 +4835,8 @@ class PokemonData
         Pokemon::SWAMPERT => [
             self::FIELD_NAME => 'Swampert',
             self::FIELD_NAME_SHORT => 'Swampert',
+            self::FIELD_DESC => 'Swampert is very strong. It has enough power to easily drag a boulder weighing more than a ton. This Pokémon also has powerful vision that lets it see even in murky water.',
+            self::FIELD_CATEGORY => 'Mud Fish Pokémon',
             self::FIELD_ATTACK => 208,
             self::FIELD_DEFENSE => 175,
             self::FIELD_STAMINA => 225,
@@ -4330,6 +4854,8 @@ class PokemonData
         Pokemon::POOCHYENA => [
             self::FIELD_NAME => 'Poochyena',
             self::FIELD_NAME_SHORT => 'Poochyena',
+            self::FIELD_DESC => 'At first sight, Poochyena takes a bite at anything that moves. This Pokémon chases after prey until the victim becomes exhausted. However, it may turn tail if the prey strikes back.',
+            self::FIELD_CATEGORY => 'Bite Pokémon',
             self::FIELD_ATTACK => 96,
             self::FIELD_DEFENSE => 61,
             self::FIELD_STAMINA => 111,
@@ -4346,6 +4872,8 @@ class PokemonData
         Pokemon::MIGTYENA => [
             self::FIELD_NAME => 'Mightyena',
             self::FIELD_NAME_SHORT => 'Mightyena',
+            self::FIELD_DESC => 'Mightyena gives obvious signals when it is preparing to attack. It starts to growl deeply and then flattens its body. This Pokémon will bite savagely with its sharply pointed fangs.',
+            self::FIELD_CATEGORY => 'Bite Pokémon',
             self::FIELD_ATTACK => 171,
             self::FIELD_DEFENSE => 132,
             self::FIELD_STAMINA => 172,
@@ -4361,6 +4889,8 @@ class PokemonData
         Pokemon::ZIGZAGOON => [
             self::FIELD_NAME => 'Zigzagoon',
             self::FIELD_NAME_SHORT => 'Zigzagoon',
+            self::FIELD_DESC => 'Zigzagoon restlessly wanders everywhere at all times. This Pokémon does so because it is very curious. It becomes interested in anything that it happens to see.',
+            self::FIELD_CATEGORY => 'Tiny Raccoon Pokémon',
             self::FIELD_ATTACK => 58,
             self::FIELD_DEFENSE => 80,
             self::FIELD_STAMINA => 116,
@@ -4377,6 +4907,8 @@ class PokemonData
         Pokemon::LINOONE => [
             self::FIELD_NAME => 'Linoone',
             self::FIELD_NAME_SHORT => 'Linoone',
+            self::FIELD_DESC => 'Linoone always runs full speed and only in straight lines. If facing an obstacle, it makes a right-angle turn to evade it. This Pokémon is very challenged by gently curving roads.',
+            self::FIELD_CATEGORY => 'Rushing Pokémon',
             self::FIELD_ATTACK => 142,
             self::FIELD_DEFENSE => 128,
             self::FIELD_STAMINA => 186,
@@ -4392,6 +4924,8 @@ class PokemonData
         Pokemon::WURMPLE => [
             self::FIELD_NAME => 'Wurmple',
             self::FIELD_NAME_SHORT => 'Wurmple',
+            self::FIELD_DESC => 'Using the spikes on its rear end, Wurmple peels the bark off trees and feeds on the sap that oozes out. This Pokémon\'s feet are tipped with suction pads that allow it to cling to glass without slipping.',
+            self::FIELD_CATEGORY => 'Worm Pokémon',
             self::FIELD_ATTACK => 75,
             self::FIELD_DEFENSE => 59,
             self::FIELD_STAMINA => 128,
@@ -4408,6 +4942,8 @@ class PokemonData
         Pokemon::SILCOON => [
             self::FIELD_NAME => 'Silcoon',
             self::FIELD_NAME_SHORT => 'Silcoon',
+            self::FIELD_DESC => 'Silcoon tethers itself to a tree branch using silk to keep from falling. There, this Pokémon hangs quietly while it awaits evolution. It peers out of the silk cocoon through a small hole.',
+            self::FIELD_CATEGORY => 'Cocoon Pokémon',
             self::FIELD_ATTACK => 60,
             self::FIELD_DEFENSE => 77,
             self::FIELD_STAMINA => 137,
@@ -4424,6 +4960,8 @@ class PokemonData
         Pokemon::BEAUTIFLY => [
             self::FIELD_NAME => 'Beautifly',
             self::FIELD_NAME_SHORT => 'Beautifly',
+            self::FIELD_DESC => 'Beautifly\'s favorite food is the sweet pollen of flowers. If you want to see this Pokémon, just leave a potted flower by an open window. Beautifly is sure to come looking for pollen.',
+            self::FIELD_CATEGORY => 'Butterfly Pokémon',
             self::FIELD_ATTACK => 189,
             self::FIELD_DEFENSE => 98,
             self::FIELD_STAMINA => 155,
@@ -4440,6 +4978,8 @@ class PokemonData
         Pokemon::CASCOON => [
             self::FIELD_NAME => 'Cascoon',
             self::FIELD_NAME_SHORT => 'Cascoon',
+            self::FIELD_DESC => 'Cascoon makes its protective cocoon by wrapping its body entirely with a fine silk from its mouth. Once the silk goes around its body, it hardens. This Pokémon prepares for its evolution inside the cocoon.',
+            self::FIELD_CATEGORY => 'Cocoon Pokémon',
             self::FIELD_ATTACK => 60,
             self::FIELD_DEFENSE => 77,
             self::FIELD_STAMINA => 137,
@@ -4456,6 +4996,8 @@ class PokemonData
         Pokemon::DUSTOX => [
             self::FIELD_NAME => 'Dustox',
             self::FIELD_NAME_SHORT => 'Dustox',
+            self::FIELD_DESC => 'Dustox is instinctively drawn to light. Swarms of this Pokémon are attracted by the bright lights of cities, where they wreak havoc by stripping the leaves off roadside trees for food.',
+            self::FIELD_CATEGORY => 'Poison Moth Pokémon',
             self::FIELD_ATTACK => 98,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 155,
@@ -4472,6 +5014,8 @@ class PokemonData
         Pokemon::LOTAD => [
             self::FIELD_NAME => 'Lotad',
             self::FIELD_NAME_SHORT => 'Lotad',
+            self::FIELD_DESC => 'Lotad live in ponds and lakes, where they float on the surface. It grows weak if its broad leaf dies. On rare occasions, this Pokémon travels on land in search of clean water.',
+            self::FIELD_CATEGORY => 'Water Weed Pokémon',
             self::FIELD_ATTACK => 71,
             self::FIELD_DEFENSE => 77,
             self::FIELD_STAMINA => 120,
@@ -4489,6 +5033,8 @@ class PokemonData
         Pokemon::LOMBRE => [
             self::FIELD_NAME => 'Lombre',
             self::FIELD_NAME_SHORT => 'Lombre',
+            self::FIELD_DESC => 'Lombre is nocturnal—it will get active after dusk. It is also a mischief maker. When this Pokémon spots anglers, it tugs on their fishing lines from beneath the surface and enjoys their consternation.',
+            self::FIELD_CATEGORY => 'Jolly Pokémon',
             self::FIELD_ATTACK => 112,
             self::FIELD_DEFENSE => 119,
             self::FIELD_STAMINA => 155,
@@ -4506,6 +5052,8 @@ class PokemonData
         Pokemon::LUDICOLO => [
             self::FIELD_NAME => 'Ludicolo',
             self::FIELD_NAME_SHORT => 'Ludicolo',
+            self::FIELD_DESC => 'Ludicolo begins dancing as soon as it hears cheerful, festive music. This Pokémon is said to appear when it hears the singing of children on hiking outings.',
+            self::FIELD_CATEGORY => 'Carefree Pokémon',
             self::FIELD_ATTACK => 173,
             self::FIELD_DEFENSE => 176,
             self::FIELD_STAMINA => 190,
@@ -4522,6 +5070,8 @@ class PokemonData
         Pokemon::SEEDOT => [
             self::FIELD_NAME => 'Seedot',
             self::FIELD_NAME_SHORT => 'Seedot',
+            self::FIELD_DESC => 'Seedot attaches itself to a tree branch using the top of its head. It sucks moisture from the tree while hanging off the branch. The more water it drinks, the glossier this Pokémon\'s body becomes.',
+            self::FIELD_CATEGORY => 'Acorn Pokémon',
             self::FIELD_ATTACK => 71,
             self::FIELD_DEFENSE => 77,
             self::FIELD_STAMINA => 120,
@@ -4538,6 +5088,8 @@ class PokemonData
         Pokemon::NUZLEAF => [
             self::FIELD_NAME => 'Nuzleaf',
             self::FIELD_NAME_SHORT => 'Nuzleaf',
+            self::FIELD_DESC => 'Nuzleaf live in densely overgrown forests. They occasionally venture out of the forest to startle people. This Pokémon dislikes having its long nose pinched.',
+            self::FIELD_CATEGORY => 'Wily Pokémon',
             self::FIELD_ATTACK => 134,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 172,
@@ -4555,6 +5107,8 @@ class PokemonData
         Pokemon::SHIFTRY => [
             self::FIELD_NAME => 'Shiftry',
             self::FIELD_NAME_SHORT => 'Shiftry',
+            self::FIELD_DESC => 'Shiftry is a mysterious Pokémon that is said to live atop towering trees dating back over a thousand years. It creates terrific windstorms with the fans it holds.',
+            self::FIELD_CATEGORY => 'Wicked Pokémon',
             self::FIELD_ATTACK => 200,
             self::FIELD_DEFENSE => 121,
             self::FIELD_STAMINA => 207,
@@ -4572,6 +5126,8 @@ class PokemonData
         Pokemon::TAILLOW => [
             self::FIELD_NAME => 'Taillow',
             self::FIELD_NAME_SHORT => 'Taillow',
+            self::FIELD_DESC => 'Taillow courageously stands its ground against foes, however strong they may be. This gutsy Pokémon will remain defiant even after a loss. On the other hand, it cries loudly if it becomes hungry.',
+            self::FIELD_CATEGORY => 'Tiny Swallow Pokémon',
             self::FIELD_ATTACK => 106,
             self::FIELD_DEFENSE => 61,
             self::FIELD_STAMINA => 120,
@@ -4589,6 +5145,8 @@ class PokemonData
         Pokemon::SWELLOW => [
             self::FIELD_NAME => 'Swellow',
             self::FIELD_NAME_SHORT => 'Swellow',
+            self::FIELD_DESC => 'Swellow flies high above our heads, making graceful arcs in the sky. This Pokémon dives at a steep angle as soon as it spots its prey. The hapless prey is tightly grasped by Swellow\'s clawed feet, preventing escape.',
+            self::FIELD_CATEGORY => 'Swallow Pokémon',
             self::FIELD_ATTACK => 185,
             self::FIELD_DEFENSE => 124,
             self::FIELD_STAMINA => 155,
@@ -4605,6 +5163,8 @@ class PokemonData
         Pokemon::WINGULL => [
             self::FIELD_NAME => 'Wingull',
             self::FIELD_NAME_SHORT => 'Wingull',
+            self::FIELD_DESC => 'Wingull has the habit of carrying prey and valuables in its beak and hiding them in all sorts of locations. This Pokémon rides the winds and flies as if it were skating across the sky.',
+            self::FIELD_CATEGORY => 'Seagull Pokémon',
             self::FIELD_ATTACK => 106,
             self::FIELD_DEFENSE => 61,
             self::FIELD_STAMINA => 120,
@@ -4622,6 +5182,8 @@ class PokemonData
         Pokemon::PELIPPER => [
             self::FIELD_NAME => 'Pelipper',
             self::FIELD_NAME_SHORT => 'Pelipper',
+            self::FIELD_DESC => 'Pelipper is a flying transporter that carries small Pokémon and eggs inside its massive bill. This Pokémon builds its nest on steep cliffs facing the sea.',
+            self::FIELD_CATEGORY => 'Water Bird Pokémon',
             self::FIELD_ATTACK => 175,
             self::FIELD_DEFENSE => 174,
             self::FIELD_STAMINA => 155,
@@ -4638,6 +5200,8 @@ class PokemonData
         Pokemon::RALTS => [
             self::FIELD_NAME => 'Ralts',
             self::FIELD_NAME_SHORT => 'Ralts',
+            self::FIELD_DESC => 'Ralts senses the emotions of people using the horns on its head. This Pokémon rarely appears before people. But when it does, it draws closer if it senses that the person has a positive disposition.',
+            self::FIELD_CATEGORY => 'Feeling Pokémon',
             self::FIELD_ATTACK => 79,
             self::FIELD_DEFENSE => 59,
             self::FIELD_STAMINA => 99,
@@ -4655,6 +5219,8 @@ class PokemonData
         Pokemon::KIRLIA => [
             self::FIELD_NAME => 'Kirlia',
             self::FIELD_NAME_SHORT => 'Kirlia',
+            self::FIELD_DESC => 'It is said that a Kirlia that is exposed to the positive emotions of its Trainer grows beautiful. This Pokémon controls psychokinetic powers with its highly developed brain.',
+            self::FIELD_CATEGORY => 'Emotion Pokémon',
             self::FIELD_ATTACK => 117,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 116,
@@ -4672,6 +5238,8 @@ class PokemonData
         Pokemon::GARDEVOIR => [
             self::FIELD_NAME => 'Gardevoir',
             self::FIELD_NAME_SHORT => 'Gardevoir',
+            self::FIELD_DESC => 'Gardevoir has the ability to read the future. If it senses impending danger to its Trainer, this Pokémon is said to unleash its psychokinetic energy at full power.',
+            self::FIELD_CATEGORY => 'Embrace Pokémon',
             self::FIELD_ATTACK => 237,
             self::FIELD_DEFENSE => 195,
             self::FIELD_STAMINA => 169,
@@ -4689,6 +5257,8 @@ class PokemonData
         Pokemon::SURSKIT => [
             self::FIELD_NAME => 'Surskit',
             self::FIELD_NAME_SHORT => 'Surskit',
+            self::FIELD_DESC => 'From the tips of its feet, Surskit secretes an oil that enables it to walk on water as if it were skating. This Pokémon feeds on microscopic organisms in ponds and lakes.',
+            self::FIELD_CATEGORY => 'Pond Skater Pokémon',
             self::FIELD_ATTACK => 93,
             self::FIELD_DEFENSE => 87,
             self::FIELD_STAMINA => 120,
@@ -4706,6 +5276,8 @@ class PokemonData
         Pokemon::MASQUERAIN => [
             self::FIELD_NAME => 'Masquerain',
             self::FIELD_NAME_SHORT => 'Masquerain',
+            self::FIELD_DESC => 'Masquerain intimidates enemies with the eyelike patterns on its antennas. This Pokémon flaps its four wings to freely fly in any direction—even sideways and backwards—as if it were a helicopter.',
+            self::FIELD_CATEGORY => 'Eyeball Pokémon',
             self::FIELD_ATTACK => 192,
             self::FIELD_DEFENSE => 150,
             self::FIELD_STAMINA => 172,
@@ -4722,6 +5294,8 @@ class PokemonData
         Pokemon::SHROOMISH => [
             self::FIELD_NAME => 'Shroomish',
             self::FIELD_NAME_SHORT => 'Shroomish',
+            self::FIELD_DESC => 'Shroomish live in damp soil in the dark depths of forests. They are often found keeping still under fallen leaves. This Pokémon feeds on compost that is made up of fallen, rotted leaves.',
+            self::FIELD_CATEGORY => 'Mushroom Pokémon',
             self::FIELD_ATTACK => 74,
             self::FIELD_DEFENSE => 110,
             self::FIELD_STAMINA => 155,
@@ -4738,6 +5312,8 @@ class PokemonData
         Pokemon::BRELOOM => [
             self::FIELD_NAME => 'Breloom',
             self::FIELD_NAME_SHORT => 'Breloom',
+            self::FIELD_DESC => 'Breloom closes in on its foe with light and sprightly footwork, then throws punches with its stretchy arms. This Pokémon\'s fighting technique puts boxers to shame.',
+            self::FIELD_CATEGORY => 'Mushroom Pokémon',
             self::FIELD_ATTACK => 241,
             self::FIELD_DEFENSE => 144,
             self::FIELD_STAMINA => 155,
@@ -4755,6 +5331,8 @@ class PokemonData
         Pokemon::SLAKOTH => [
             self::FIELD_NAME => 'Slakoth',
             self::FIELD_NAME_SHORT => 'Slakoth',
+            self::FIELD_DESC => 'Slakoth lolls around for over 20 hours every day. Because it moves so little, it does not need much food. This Pokémon\'s sole daily meal consists of just three leaves.',
+            self::FIELD_CATEGORY => 'Slacker Pokémon',
             self::FIELD_ATTACK => 104,
             self::FIELD_DEFENSE => 92,
             self::FIELD_STAMINA => 155,
@@ -4771,6 +5349,8 @@ class PokemonData
         Pokemon::VIGOROTH => [
             self::FIELD_NAME => 'Vigoroth',
             self::FIELD_NAME_SHORT => 'Vigoroth',
+            self::FIELD_DESC => 'Vigoroth is always itching and agitated to go on a wild rampage. It simply can\'t tolerate sitting still for even a minute. This Pokémon\'s stress level rises if it can\'t be moving constantly.',
+            self::FIELD_CATEGORY => 'Wild Monkey Pokémon',
             self::FIELD_ATTACK => 159,
             self::FIELD_DEFENSE => 145,
             self::FIELD_STAMINA => 190,
@@ -4787,6 +5367,8 @@ class PokemonData
         Pokemon::SLAKING => [
             self::FIELD_NAME => 'Slaking',
             self::FIELD_NAME_SHORT => 'Slaking',
+            self::FIELD_DESC => 'Slaking spends all day lying down and lolling about. It eats grass growing within its reach. If it eats all the grass it can reach, this Pokémon reluctantly moves to another spot.',
+            self::FIELD_CATEGORY => 'Lazy Pokémon',
             self::FIELD_ATTACK => 290,
             self::FIELD_DEFENSE => 166,
             self::FIELD_STAMINA => 284,
@@ -4803,6 +5385,8 @@ class PokemonData
         Pokemon::NINCADA => [
             self::FIELD_NAME => 'Nincada',
             self::FIELD_NAME_SHORT => 'Nincada',
+            self::FIELD_DESC => 'Nincada lives underground for many years in complete darkness. This Pokémon absorbs nutrients from the roots of trees. It stays motionless as it waits for evolution.',
+            self::FIELD_CATEGORY => 'Trainee Pokémon',
             self::FIELD_ATTACK => 80,
             self::FIELD_DEFENSE => 126,
             self::FIELD_STAMINA => 104,
@@ -4820,6 +5404,8 @@ class PokemonData
         Pokemon::NINJASK => [
             self::FIELD_NAME => 'Ninjask',
             self::FIELD_NAME_SHORT => 'Ninjask',
+            self::FIELD_DESC => 'Ninjask moves around at such a high speed that it cannot be seen, even while its crying can be clearly heard. For that reason, this Pokémon was long believed to be invisible.',
+            self::FIELD_CATEGORY => 'Ninja Pokémon',
             self::FIELD_ATTACK => 199,
             self::FIELD_DEFENSE => 112,
             self::FIELD_STAMINA => 156,
@@ -4836,6 +5422,8 @@ class PokemonData
         Pokemon::SHEDINJA => [
             self::FIELD_NAME => 'Shedinja',
             self::FIELD_NAME_SHORT => 'Shedinja',
+            self::FIELD_DESC => 'Shedinja\'s hard body doesn\'t move—not even a twitch. In fact, its body appears to be merely a hollow shell. It is believed that this Pokémon will steal the spirit of anyone peering into its hollow body from its back.',
+            self::FIELD_CATEGORY => 'Shed Pokémon',
             self::FIELD_ATTACK => 153,
             self::FIELD_DEFENSE => 73,
             self::FIELD_STAMINA => 1,
@@ -4853,6 +5441,8 @@ class PokemonData
         Pokemon::WHISMUR => [
             self::FIELD_NAME => 'Whismur',
             self::FIELD_NAME_SHORT => 'Whismur',
+            self::FIELD_DESC => 'Normally, Whismur\'s voice is very quiet—it is barely audible even if one is paying close attention. However, if this Pokémon senses danger, it starts crying at an earsplitting volume.',
+            self::FIELD_CATEGORY => 'Whisper Pokémon',
             self::FIELD_ATTACK => 92,
             self::FIELD_DEFENSE => 42,
             self::FIELD_STAMINA => 162,
@@ -4869,6 +5459,8 @@ class PokemonData
         Pokemon::LOUDRED => [
             self::FIELD_NAME => 'Loudred',
             self::FIELD_NAME_SHORT => 'Loudred',
+            self::FIELD_DESC => 'Loudred\'s bellowing can completely decimate a wood-frame house. It uses its voice to punish its foes. This Pokémon\'s round ears serve as loudspeakers.',
+            self::FIELD_CATEGORY => 'Big Voice Pokémon',
             self::FIELD_ATTACK => 134,
             self::FIELD_DEFENSE => 81,
             self::FIELD_STAMINA => 197,
@@ -4885,6 +5477,8 @@ class PokemonData
         Pokemon::EXPLOUD => [
             self::FIELD_NAME => 'Exploud',
             self::FIELD_NAME_SHORT => 'Exploud',
+            self::FIELD_DESC => 'Exploud triggers earthquakes with the tremors it creates by bellowing. If this Pokémon violently inhales from the ports on its body, it\'s a sign that it is preparing to let loose a huge bellow.',
+            self::FIELD_CATEGORY => 'Loud Noise Pokémon',
             self::FIELD_ATTACK => 179,
             self::FIELD_DEFENSE => 137,
             self::FIELD_STAMINA => 232,
@@ -4900,6 +5494,8 @@ class PokemonData
         Pokemon::MAKUHITA => [
             self::FIELD_NAME => 'Makuhita',
             self::FIELD_NAME_SHORT => 'Makuhita',
+            self::FIELD_DESC => 'Makuhita is tenacious—it will keep getting up and attacking its foe however many times it is knocked down. Every time it gets back up, this Pokémon stores more energy in its body for evolving.',
+            self::FIELD_CATEGORY => 'Guts Pokémon',
             self::FIELD_ATTACK => 99,
             self::FIELD_DEFENSE => 54,
             self::FIELD_STAMINA => 176,
@@ -4916,6 +5512,8 @@ class PokemonData
         Pokemon::HARIYAMA => [
             self::FIELD_NAME => 'Hariyama',
             self::FIELD_NAME_SHORT => 'Hariyama',
+            self::FIELD_DESC => 'Hariyama practices its straight-arm slaps in any number of locations. One hit of this Pokémon\'s powerful, openhanded, straight-arm punches could snap a telephone pole in two.',
+            self::FIELD_CATEGORY => 'Arm Thrust Pokémon',
             self::FIELD_ATTACK => 209,
             self::FIELD_DEFENSE => 114,
             self::FIELD_STAMINA => 302,
@@ -4931,6 +5529,8 @@ class PokemonData
         Pokemon::AZURILL => [
             self::FIELD_NAME => 'Azurill',
             self::FIELD_NAME_SHORT => 'Azurill',
+            self::FIELD_DESC => 'Azurill spins its tail as if it were a lasso, then hurls it far. The momentum of the throw sends its body flying, too. Using this unique action, one of these Pokémon managed to hurl itself a record 33 feet.',
+            self::FIELD_CATEGORY => 'Polka Dot Pokémon',
             self::FIELD_ATTACK => 36,
             self::FIELD_DEFENSE => 71,
             self::FIELD_STAMINA => 137,
@@ -4948,6 +5548,8 @@ class PokemonData
         Pokemon::NOSEPASS => [
             self::FIELD_NAME => 'Nosepass',
             self::FIELD_NAME_SHORT => 'Nosepass',
+            self::FIELD_DESC => 'Nosepass\'s magnetic nose is always pointed to the north. If two of these Pokémon meet, they cannot turn their faces to each other when they are close because their magnetic noses repel one another.',
+            self::FIELD_CATEGORY => 'Compass Pokémon',
             self::FIELD_ATTACK => 82,
             self::FIELD_DEFENSE => 215,
             self::FIELD_STAMINA => 102,
@@ -4964,6 +5566,8 @@ class PokemonData
         Pokemon::SKITTY => [
             self::FIELD_NAME => 'Skitty',
             self::FIELD_NAME_SHORT => 'Skitty',
+            self::FIELD_DESC => 'Skitty has the habit of becoming fascinated by moving objects and chasing them around. This Pokémon is known to chase after its own tail and become dizzy.',
+            self::FIELD_CATEGORY => 'Kitten Pokémon',
             self::FIELD_ATTACK => 84,
             self::FIELD_DEFENSE => 79,
             self::FIELD_STAMINA => 137,
@@ -4980,6 +5584,8 @@ class PokemonData
         Pokemon::DELCATTY => [
             self::FIELD_NAME => 'Delcatty',
             self::FIELD_NAME_SHORT => 'Delcatty',
+            self::FIELD_DESC => 'Delcatty prefers to live an unfettered existence in which it can do as it pleases at its own pace. Because this Pokémon eats and sleeps whenever it decides, its daily routines are completely random.',
+            self::FIELD_CATEGORY => 'Prim Pokémon',
             self::FIELD_ATTACK => 132,
             self::FIELD_DEFENSE => 127,
             self::FIELD_STAMINA => 172,
@@ -4995,6 +5601,8 @@ class PokemonData
         Pokemon::SABLEYE => [
             self::FIELD_NAME => 'Sableye',
             self::FIELD_NAME_SHORT => 'Sableye',
+            self::FIELD_DESC => 'Sableye lead quiet lives deep inside caverns. They are feared, however, because these Pokémon are thought to steal the spirits of people when their eyes burn with a sinister glow in the darkness.',
+            self::FIELD_CATEGORY => 'Darkness Pokémon',
             self::FIELD_ATTACK => 141,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 137,
@@ -5011,6 +5619,8 @@ class PokemonData
         Pokemon::MAWILE => [
             self::FIELD_NAME => 'Mawile',
             self::FIELD_NAME_SHORT => 'Mawile',
+            self::FIELD_DESC => 'Mawile\'s huge jaws are actually steel horns that have been transformed. Its docile-looking face serves to lull its foe into letting down its guard. When the foe least expects it, Mawile chomps it with its gaping jaws.',
+            self::FIELD_CATEGORY => 'Deceiver Pokémon',
             self::FIELD_ATTACK => 155,
             self::FIELD_DEFENSE => 141,
             self::FIELD_STAMINA => 137,
@@ -5027,6 +5637,8 @@ class PokemonData
         Pokemon::ARON => [
             self::FIELD_NAME => 'Aron',
             self::FIELD_NAME_SHORT => 'Aron',
+            self::FIELD_DESC => 'This Pokémon has a body of steel. To make its body, Aron feeds on iron ore that it digs from mountains. Occasionally, it causes major trouble by eating bridges and rails.',
+            self::FIELD_CATEGORY => 'Iron Armor Pokémon',
             self::FIELD_ATTACK => 121,
             self::FIELD_DEFENSE => 141,
             self::FIELD_STAMINA => 137,
@@ -5044,6 +5656,8 @@ class PokemonData
         Pokemon::LAIRON => [
             self::FIELD_NAME => 'Lairon',
             self::FIELD_NAME_SHORT => 'Lairon',
+            self::FIELD_DESC => 'Lairon tempers its steel body by drinking highly nutritious mineral springwater until it is bloated. This Pokémon makes its nest close to springs of delicious water.',
+            self::FIELD_CATEGORY => 'Iron Armor Pokémon',
             self::FIELD_ATTACK => 158,
             self::FIELD_DEFENSE => 198,
             self::FIELD_STAMINA => 155,
@@ -5061,6 +5675,8 @@ class PokemonData
         Pokemon::AGGRON => [
             self::FIELD_NAME => 'Aggron',
             self::FIELD_NAME_SHORT => 'Aggron',
+            self::FIELD_DESC => 'Aggron claims an entire mountain as its own territory. It mercilessly beats up anything that violates its environment. This Pokémon vigilantly patrols its territory at all times.',
+            self::FIELD_CATEGORY => 'Iron Armor Pokémon',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 257,
             self::FIELD_STAMINA => 172,
@@ -5077,6 +5693,8 @@ class PokemonData
         Pokemon::MEDITITE => [
             self::FIELD_NAME => 'Meditite',
             self::FIELD_NAME_SHORT => 'Meditite',
+            self::FIELD_DESC => 'Meditite undertakes rigorous mental training deep in the mountains. However, whenever it meditates, this Pokémon always loses its concentration and focus. As a result, its training never ends.',
+            self::FIELD_CATEGORY => 'Meditate Pokémon',
             self::FIELD_ATTACK => 78,
             self::FIELD_DEFENSE => 107,
             self::FIELD_STAMINA => 102,
@@ -5094,6 +5712,8 @@ class PokemonData
         Pokemon::MEDICHAM => [
             self::FIELD_NAME => 'Medicham',
             self::FIELD_NAME_SHORT => 'Medicham',
+            self::FIELD_DESC => 'It is said that through meditation, Medicham heightens energy inside its body and sharpens its sixth sense. This Pokémon hides its presence by merging itself with fields and mountains.',
+            self::FIELD_CATEGORY => 'Meditate Pokémon',
             self::FIELD_ATTACK => 121,
             self::FIELD_DEFENSE => 152,
             self::FIELD_STAMINA => 155,
@@ -5110,6 +5730,8 @@ class PokemonData
         Pokemon::ELECTRIKE => [
             self::FIELD_NAME => 'Electrike',
             self::FIELD_NAME_SHORT => 'Electrike',
+            self::FIELD_DESC => 'Electrike stores electricity in its long body hair. This Pokémon stimulates its leg muscles with electric charges. These jolts of power give its legs explosive acceleration performance.',
+            self::FIELD_CATEGORY => 'Lightning Pokémon',
             self::FIELD_ATTACK => 123,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 120,
@@ -5126,6 +5748,8 @@ class PokemonData
         Pokemon::MANELECTRIC => [
             self::FIELD_NAME => 'Manectric',
             self::FIELD_NAME_SHORT => 'Manectric',
+            self::FIELD_DESC => 'Manectric is constantly discharging electricity from its mane. The sparks sometimes ignite forest fires. When it enters a battle, this Pokémon creates thunderclouds.',
+            self::FIELD_CATEGORY => 'Discharge Pokémon',
             self::FIELD_ATTACK => 215,
             self::FIELD_DEFENSE => 127,
             self::FIELD_STAMINA => 172,
@@ -5141,6 +5765,8 @@ class PokemonData
         Pokemon::PLUSLE => [
             self::FIELD_NAME => 'Plusle',
             self::FIELD_NAME_SHORT => 'Plusle',
+            self::FIELD_DESC => 'Plusle always acts as a cheerleader for its partners. Whenever a teammate puts out a good effort in battle, this Pokémon shorts out its body to create the crackling noises of sparks to show its joy.',
+            self::FIELD_CATEGORY => 'Cheering Pokémon',
             self::FIELD_ATTACK => 167,
             self::FIELD_DEFENSE => 129,
             self::FIELD_STAMINA => 155,
@@ -5156,6 +5782,8 @@ class PokemonData
         Pokemon::MINUN => [
             self::FIELD_NAME => 'Minun',
             self::FIELD_NAME_SHORT => 'Minun',
+            self::FIELD_DESC => 'Minun is more concerned about cheering on its partners than its own safety. It shorts out the electricity in its body to create brilliant showers of sparks to cheer on its teammates.',
+            self::FIELD_CATEGORY => 'Cheering Pokémon',
             self::FIELD_ATTACK => 147,
             self::FIELD_DEFENSE => 150,
             self::FIELD_STAMINA => 155,
@@ -5171,6 +5799,8 @@ class PokemonData
         Pokemon::VOLBEAT => [
             self::FIELD_NAME => 'Volbeat',
             self::FIELD_NAME_SHORT => 'Volbeat',
+            self::FIELD_DESC => 'With the arrival of night, Volbeat emits light from its tail. It communicates with others by adjusting the intensity and flashing of its light. This Pokémon is attracted by the sweet aroma of Illumise.',
+            self::FIELD_CATEGORY => 'Firefly Pokémon',
             self::FIELD_ATTACK => 143,
             self::FIELD_DEFENSE => 166,
             self::FIELD_STAMINA => 163,
@@ -5186,6 +5816,8 @@ class PokemonData
         Pokemon::ILLUMISE => [
             self::FIELD_NAME => 'Illumise',
             self::FIELD_NAME_SHORT => 'Illumise',
+            self::FIELD_DESC => 'Illumise attracts a swarm of Volbeat using a sweet fragrance. Once the Volbeat have gathered, this Pokémon leads the lit-up swarm in drawing geometric designs on the canvas of the night sky.',
+            self::FIELD_CATEGORY => 'Firefly Pokémon',
             self::FIELD_ATTACK => 143,
             self::FIELD_DEFENSE => 166,
             self::FIELD_STAMINA => 163,
@@ -5201,6 +5833,8 @@ class PokemonData
         Pokemon::ROSELIA => [
             self::FIELD_NAME => 'Roselia',
             self::FIELD_NAME_SHORT => 'Roselia',
+            self::FIELD_DESC => 'Roselia shoots sharp thorns as projectiles at any opponent that tries to steal the flowers on its arms. The aroma of this Pokémon brings serenity to living things.',
+            self::FIELD_CATEGORY => 'Thorn Pokémon',
             self::FIELD_ATTACK => 186,
             self::FIELD_DEFENSE => 131,
             self::FIELD_STAMINA => 137,
@@ -5218,6 +5852,8 @@ class PokemonData
         Pokemon::GULPIN => [
             self::FIELD_NAME => 'Gulpin',
             self::FIELD_NAME_SHORT => 'Gulpin',
+            self::FIELD_DESC => 'Virtually all of Gulpin\'s body is its stomach. As a result, it can swallow something its own size. This Pokémon\'s stomach contains a special fluid that digests anything.',
+            self::FIELD_CATEGORY => 'Stomach Pokémon',
             self::FIELD_ATTACK => 80,
             self::FIELD_DEFENSE => 99,
             self::FIELD_STAMINA => 172,
@@ -5234,6 +5870,8 @@ class PokemonData
         Pokemon::SWALOT => [
             self::FIELD_NAME => 'Swalot',
             self::FIELD_NAME_SHORT => 'Swalot',
+            self::FIELD_DESC => 'When Swalot spots prey, it spurts out a hideously toxic fluid from its pores and sprays the target. Once the prey has weakened, this Pokémon gulps it down whole with its cavernous mouth.',
+            self::FIELD_CATEGORY => 'Poison Bag Pokémon',
             self::FIELD_ATTACK => 140,
             self::FIELD_DEFENSE => 159,
             self::FIELD_STAMINA => 225,
@@ -5249,6 +5887,8 @@ class PokemonData
         Pokemon::CARAVANHA => [
             self::FIELD_NAME => 'Carvanha',
             self::FIELD_NAME_SHORT => 'Carvanha',
+            self::FIELD_DESC => 'Carvanha\'s strongly developed jaws and its sharply pointed fangs pack the destructive power to rip out boat hulls. Many boats have been attacked and sunk by this Pokémon.',
+            self::FIELD_CATEGORY => 'Savage Pokémon',
             self::FIELD_ATTACK => 171,
             self::FIELD_DEFENSE => 39,
             self::FIELD_STAMINA => 128,
@@ -5266,6 +5906,8 @@ class PokemonData
         Pokemon::SHARPEDO => [
             self::FIELD_NAME => 'Sharpedo',
             self::FIELD_NAME_SHORT => 'Sharpedo',
+            self::FIELD_DESC => 'Nicknamed “the bully of the sea,” Sharpedo is widely feared. Its cruel fangs grow back immediately if they snap off. Just one of these Pokémon can thoroughly tear apart a supertanker.',
+            self::FIELD_CATEGORY => 'Brutal Pokémon',
             self::FIELD_ATTACK => 243,
             self::FIELD_DEFENSE => 83,
             self::FIELD_STAMINA => 172,
@@ -5282,6 +5924,8 @@ class PokemonData
         Pokemon::WAILMER => [
             self::FIELD_NAME => 'Wailmer',
             self::FIELD_NAME_SHORT => 'Wailmer',
+            self::FIELD_DESC => 'Wailmer\'s nostrils are located above its eyes. This playful Pokémon loves to startle people by forcefully snorting out seawater it stores inside its body out of its nostrils.',
+            self::FIELD_CATEGORY => 'Ball Whale Pokémon',
             self::FIELD_ATTACK => 136,
             self::FIELD_DEFENSE => 68,
             self::FIELD_STAMINA => 277,
@@ -5298,6 +5942,8 @@ class PokemonData
         Pokemon::WAILORD => [
             self::FIELD_NAME => 'Wailord',
             self::FIELD_NAME_SHORT => 'Wailord',
+            self::FIELD_DESC => 'Wailord is the largest of all identified Pokémon up to now. This giant Pokémon swims languorously in the vast open sea, eating massive amounts of food at once with its enormous mouth.',
+            self::FIELD_CATEGORY => 'Float Whale Pokémon',
             self::FIELD_ATTACK => 175,
             self::FIELD_DEFENSE => 87,
             self::FIELD_STAMINA => 347,
@@ -5313,6 +5959,8 @@ class PokemonData
         Pokemon::NUMEL => [
             self::FIELD_NAME => 'Numel',
             self::FIELD_NAME_SHORT => 'Numel',
+            self::FIELD_DESC => 'Numel is extremely dull witted—it doesn\'t notice being hit. However, it can\'t stand hunger for even a second. This Pokémon\'s body is a seething cauldron of boiling magma.',
+            self::FIELD_CATEGORY => 'Numb Pokémon',
             self::FIELD_ATTACK => 119,
             self::FIELD_DEFENSE => 79,
             self::FIELD_STAMINA => 155,
@@ -5330,6 +5978,8 @@ class PokemonData
         Pokemon::CAMERUPT => [
             self::FIELD_NAME => 'Camerupt',
             self::FIELD_NAME_SHORT => 'Camerupt',
+            self::FIELD_DESC => 'Camerupt has a volcano inside its body. Magma of 18,000 degrees Fahrenheit courses through its body. Occasionally, the humps on this Pokémon\'s back erupt, spewing the superheated magma.',
+            self::FIELD_CATEGORY => 'Eruption Pokémon',
             self::FIELD_ATTACK => 194,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 172,
@@ -5346,6 +5996,8 @@ class PokemonData
         Pokemon::TORKOAL => [
             self::FIELD_NAME => 'Torkoal',
             self::FIELD_NAME_SHORT => 'Torkoal',
+            self::FIELD_DESC => 'Torkoal digs through mountains in search of coal. If it finds some, it fills hollow spaces on its shell with the coal and burns it. If it is attacked, this Pokémon spouts thick black smoke to beat a retreat.',
+            self::FIELD_CATEGORY => 'Coal Pokémon',
             self::FIELD_ATTACK => 151,
             self::FIELD_DEFENSE => 203,
             self::FIELD_STAMINA => 172,
@@ -5361,6 +6013,8 @@ class PokemonData
         Pokemon::SPOINK => [
             self::FIELD_NAME => 'Spoink',
             self::FIELD_NAME_SHORT => 'Spoink',
+            self::FIELD_DESC => 'Spoink bounces around on its tail. The shock of its bouncing makes its heart pump. As a result, this Pokémon cannot afford to stop bouncing—if it stops, its heart will stop.',
+            self::FIELD_CATEGORY => 'Bounce Pokémon',
             self::FIELD_ATTACK => 125,
             self::FIELD_DEFENSE => 122,
             self::FIELD_STAMINA => 155,
@@ -5377,6 +6031,8 @@ class PokemonData
         Pokemon::GRUMPIG => [
             self::FIELD_NAME => 'Grumpig',
             self::FIELD_NAME_SHORT => 'Grumpig',
+            self::FIELD_DESC => 'Grumpig uses the black pearls on its body to amplify its psychic power waves for gaining total control over its foe. When this Pokémon uses its special power, its snorting breath grows labored.',
+            self::FIELD_CATEGORY => 'Manipulate Pokémon',
             self::FIELD_ATTACK => 171,
             self::FIELD_DEFENSE => 188,
             self::FIELD_STAMINA => 190,
@@ -5392,6 +6048,8 @@ class PokemonData
         Pokemon::SPINDA => [
             self::FIELD_NAME => 'Spinda',
             self::FIELD_NAME_SHORT => 'Spinda',
+            self::FIELD_DESC => 'All the Spinda that exist in the world are said to have utterly unique spot patterns. The shaky, tottering steps of this Pokémon give it the appearance of dancing.',
+            self::FIELD_CATEGORY => 'Spot Panda Pokémon',
             self::FIELD_ATTACK => 116,
             self::FIELD_DEFENSE => 116,
             self::FIELD_STAMINA => 155,
@@ -5407,6 +6065,8 @@ class PokemonData
         Pokemon::TRAPINCH => [
             self::FIELD_NAME => 'Trapinch',
             self::FIELD_NAME_SHORT => 'Trapinch',
+            self::FIELD_DESC => 'Trapinch\'s nest is a sloped, bowl-like pit dug in sand. This Pokémon patiently waits for prey to tumble down the pit. Its giant jaws have enough strength to crush even boulders.',
+            self::FIELD_CATEGORY => 'Ant Pit Pokémon',
             self::FIELD_ATTACK => 162,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 128,
@@ -5423,6 +6083,8 @@ class PokemonData
         Pokemon::VIBRAVA => [
             self::FIELD_NAME => 'Vibrava',
             self::FIELD_NAME_SHORT => 'Vibrava',
+            self::FIELD_DESC => 'To make prey faint, Vibrava generates ultrasonic waves by vigorously making its two wings vibrate. This Pokémon\'s ultrasonic waves are so powerful, they can bring on headaches in people.',
+            self::FIELD_CATEGORY => 'Vibration Pokémon',
             self::FIELD_ATTACK => 134,
             self::FIELD_DEFENSE => 99,
             self::FIELD_STAMINA => 137,
@@ -5440,6 +6102,8 @@ class PokemonData
         Pokemon::FLYGON => [
             self::FIELD_NAME => 'Flygon',
             self::FIELD_NAME_SHORT => 'Flygon',
+            self::FIELD_DESC => 'Flygon is nicknamed “the elemental spirit of the desert.” Because its flapping wings whip up a cloud of sand, this Pokémon is always enveloped in a sandstorm while flying.',
+            self::FIELD_CATEGORY => 'Mystic Pokémon',
             self::FIELD_ATTACK => 205,
             self::FIELD_DEFENSE => 168,
             self::FIELD_STAMINA => 190,
@@ -5457,6 +6121,8 @@ class PokemonData
         Pokemon::CACNEA => [
             self::FIELD_NAME => 'Cacnea',
             self::FIELD_NAME_SHORT => 'Cacnea',
+            self::FIELD_DESC => 'Cacnea lives in arid locations such as deserts. It releases a strong aroma from its flower to attract prey. When prey comes near, this Pokémon shoots sharp thorns from its body to bring the victim down.',
+            self::FIELD_CATEGORY => 'Cactus Pokémon',
             self::FIELD_ATTACK => 156,
             self::FIELD_DEFENSE => 74,
             self::FIELD_STAMINA => 137,
@@ -5473,6 +6139,8 @@ class PokemonData
         Pokemon::CACTURNE => [
             self::FIELD_NAME => 'Cacturne',
             self::FIELD_NAME_SHORT => 'Cacturne',
+            self::FIELD_DESC => 'During the daytime, Cacturne remains unmoving so that it does not lose any moisture to the harsh desert sun. This Pokémon becomes active at night when the temperature drops.',
+            self::FIELD_CATEGORY => 'Scarecrow Pokémon',
             self::FIELD_ATTACK => 221,
             self::FIELD_DEFENSE => 115,
             self::FIELD_STAMINA => 172,
@@ -5489,6 +6157,8 @@ class PokemonData
         Pokemon::SWABLU => [
             self::FIELD_NAME => 'Swablu',
             self::FIELD_NAME_SHORT => 'Swablu',
+            self::FIELD_DESC => 'Swablu has light and fluffy wings that are like cottony clouds. This Pokémon is not frightened of people. It lands on the heads of people and sits there like a cotton-fluff hat.',
+            self::FIELD_CATEGORY => 'Cotton Bird Pokémon',
             self::FIELD_ATTACK => 76,
             self::FIELD_DEFENSE => 132,
             self::FIELD_STAMINA => 128,
@@ -5506,6 +6176,8 @@ class PokemonData
         Pokemon::ALTARIA => [
             self::FIELD_NAME => 'Altaria',
             self::FIELD_NAME_SHORT => 'Altaria',
+            self::FIELD_DESC => 'Altaria dances and wheels through the sky among billowing, cotton-like clouds. By singing melodies in its crystal-clear voice, this Pokémon makes its listeners experience dreamy wonderment.',
+            self::FIELD_CATEGORY => 'Humming Pokémon',
             self::FIELD_ATTACK => 141,
             self::FIELD_DEFENSE => 201,
             self::FIELD_STAMINA => 181,
@@ -5522,6 +6194,8 @@ class PokemonData
         Pokemon::ZANGOOSE => [
             self::FIELD_NAME => 'Zangoose',
             self::FIELD_NAME_SHORT => 'Zangoose',
+            self::FIELD_DESC => 'Memories of battling its archrival Seviper are etched into every cell of Zangoose\'s body. This Pokémon adroitly dodges attacks with incredible agility.',
+            self::FIELD_CATEGORY => 'Cat Ferret Pokémon',
             self::FIELD_ATTACK => 222,
             self::FIELD_DEFENSE => 124,
             self::FIELD_STAMINA => 177,
@@ -5537,6 +6211,8 @@ class PokemonData
         Pokemon::SEVIPER => [
             self::FIELD_NAME => 'Seviper',
             self::FIELD_NAME_SHORT => 'Seviper',
+            self::FIELD_DESC => 'Seviper shares a generations-long feud with Zangoose. The scars on its body are evidence of vicious battles. This Pokémon attacks using its sword-edged tail.',
+            self::FIELD_CATEGORY => 'Fang Snake Pokémon',
             self::FIELD_ATTACK => 196,
             self::FIELD_DEFENSE => 118,
             self::FIELD_STAMINA => 177,
@@ -5552,6 +6228,8 @@ class PokemonData
         Pokemon::LUNATONE => [
             self::FIELD_NAME => 'Lunatone',
             self::FIELD_NAME_SHORT => 'Lunatone',
+            self::FIELD_DESC => 'Lunatone was discovered at a location where a meteoroid fell. As a result, some people theorize that this Pokémon came from space. However, no one has been able to prove this theory so far.',
+            self::FIELD_CATEGORY => 'Meteorite Pokémon',
             self::FIELD_ATTACK => 178,
             self::FIELD_DEFENSE => 153,
             self::FIELD_STAMINA => 207,
@@ -5568,6 +6246,8 @@ class PokemonData
         Pokemon::SOLROCK => [
             self::FIELD_NAME => 'Solrock',
             self::FIELD_NAME_SHORT => 'Solrock',
+            self::FIELD_DESC => 'Solrock is a new species of Pokémon that is said to have fallen from space. It floats in air and moves silently. In battle, this Pokémon releases intensely bright light.',
+            self::FIELD_CATEGORY => 'Meteorite Pokémon',
             self::FIELD_ATTACK => 178,
             self::FIELD_DEFENSE => 153,
             self::FIELD_STAMINA => 207,
@@ -5584,6 +6264,8 @@ class PokemonData
         Pokemon::BARBOACH => [
             self::FIELD_NAME => 'Barboach',
             self::FIELD_NAME_SHORT => 'Barboach',
+            self::FIELD_DESC => 'Barboach\'s sensitive whiskers serve as a superb radar system. This Pokémon hides in mud, leaving only its two whiskers exposed while it waits for prey to come along.',
+            self::FIELD_CATEGORY => 'Whiskers Pokémon',
             self::FIELD_ATTACK => 93,
             self::FIELD_DEFENSE => 82,
             self::FIELD_STAMINA => 137,
@@ -5601,6 +6283,8 @@ class PokemonData
         Pokemon::WHISCASH => [
             self::FIELD_NAME => 'Whiscash',
             self::FIELD_NAME_SHORT => 'Whiscash',
+            self::FIELD_DESC => 'Whiscash is extremely territorial. Just one of these Pokémon will claim a large pond as its exclusive territory. If a foe approaches it, it thrashes about and triggers a massive earthquake.',
+            self::FIELD_CATEGORY => 'Whiskers Pokémon',
             self::FIELD_ATTACK => 151,
             self::FIELD_DEFENSE => 141,
             self::FIELD_STAMINA => 242,
@@ -5617,6 +6301,8 @@ class PokemonData
         Pokemon::CORPHISH => [
             self::FIELD_NAME => 'Corphish',
             self::FIELD_NAME_SHORT => 'Corphish',
+            self::FIELD_DESC => 'Corphish were originally foreign Pokémon that were imported as pets. They eventually turned up in the wild. This Pokémon is very hardy and has greatly increased its population.',
+            self::FIELD_CATEGORY => 'Ruffian Pokémon',
             self::FIELD_ATTACK => 141,
             self::FIELD_DEFENSE => 99,
             self::FIELD_STAMINA => 125,
@@ -5633,6 +6319,8 @@ class PokemonData
         Pokemon::CRAWDAUNT => [
             self::FIELD_NAME => 'Crawdaunt',
             self::FIELD_NAME_SHORT => 'Crawdaunt',
+            self::FIELD_DESC => 'Crawdaunt has an extremely violent nature that compels it to challenge other living things to battle. Other life-forms refuse to live in ponds inhabited by this Pokémon, making them desolate places.',
+            self::FIELD_CATEGORY => 'Rogue Pokémon',
             self::FIELD_ATTACK => 224,
             self::FIELD_DEFENSE => 142,
             self::FIELD_STAMINA => 160,
@@ -5649,6 +6337,8 @@ class PokemonData
         Pokemon::BALTOY => [
             self::FIELD_NAME => 'Baltoy',
             self::FIELD_NAME_SHORT => 'Baltoy',
+            self::FIELD_DESC => 'Baltoy moves while spinning around on its one foot. Primitive wall paintings depicting this Pokémon living among people were discovered in some ancient ruins.',
+            self::FIELD_CATEGORY => 'Clay Doll Pokémon',
             self::FIELD_ATTACK => 77,
             self::FIELD_DEFENSE => 124,
             self::FIELD_STAMINA => 120,
@@ -5666,6 +6356,8 @@ class PokemonData
         Pokemon::CLAYDOL => [
             self::FIELD_NAME => 'Claydol',
             self::FIELD_NAME_SHORT => 'Claydol',
+            self::FIELD_DESC => 'Claydol are said to be dolls of mud made by primitive humans and brought to life by exposure to a mysterious ray. This Pokémon moves about while levitating.',
+            self::FIELD_CATEGORY => 'Clay Doll Pokémon',
             self::FIELD_ATTACK => 140,
             self::FIELD_DEFENSE => 229,
             self::FIELD_STAMINA => 155,
@@ -5682,6 +6374,8 @@ class PokemonData
         Pokemon::LILEEP => [
             self::FIELD_NAME => 'Lileep',
             self::FIELD_NAME_SHORT => 'Lileep',
+            self::FIELD_DESC => 'Lileep became extinct approximately a hundred million years ago. This ancient Pokémon attaches itself to a rock on the seafloor and catches approaching prey using tentacles shaped like flower petals.',
+            self::FIELD_CATEGORY => 'Sea Lily Pokémon',
             self::FIELD_ATTACK => 105,
             self::FIELD_DEFENSE => 150,
             self::FIELD_STAMINA => 165,
@@ -5699,6 +6393,8 @@ class PokemonData
         Pokemon::CRADILY => [
             self::FIELD_NAME => 'Cradily',
             self::FIELD_NAME_SHORT => 'Cradily',
+            self::FIELD_DESC => 'Cradily roams around the ocean floor in search of food. This Pokémon freely extends its tree trunk-like neck and captures unwary prey using its eight tentacles.',
+            self::FIELD_CATEGORY => 'Barnacle Pokémon',
             self::FIELD_ATTACK => 152,
             self::FIELD_DEFENSE => 194,
             self::FIELD_STAMINA => 200,
@@ -5715,6 +6411,8 @@ class PokemonData
         Pokemon::ANORITH => [
             self::FIELD_NAME => 'Anorith',
             self::FIELD_NAME_SHORT => 'Anorith',
+            self::FIELD_DESC => 'Anorith was regenerated from a prehistoric fossil. This primitive Pokémon once lived in warm seas. It grips its prey firmly between its two large claws.',
+            self::FIELD_CATEGORY => 'Old Shrimp Pokémon',
             self::FIELD_ATTACK => 176,
             self::FIELD_DEFENSE => 100,
             self::FIELD_STAMINA => 128,
@@ -5732,6 +6430,8 @@ class PokemonData
         Pokemon::ARMALDO => [
             self::FIELD_NAME => 'Armaldo',
             self::FIELD_NAME_SHORT => 'Armaldo',
+            self::FIELD_DESC => 'Armaldo\'s tough armor makes all attacks bounce off. This Pokémon\'s two enormous claws can be freely extended or contracted. They have the power to punch right through a steel slab.',
+            self::FIELD_CATEGORY => 'Plate Pokémon',
             self::FIELD_ATTACK => 222,
             self::FIELD_DEFENSE => 174,
             self::FIELD_STAMINA => 181,
@@ -5748,6 +6448,8 @@ class PokemonData
         Pokemon::FEEBAS => [
             self::FIELD_NAME => 'Feebas',
             self::FIELD_NAME_SHORT => 'Feebas',
+            self::FIELD_DESC => 'Feebas\'s fins are ragged and tattered from the start of its life. Because of its shoddy appearance, this Pokémon is largely ignored. It is capable of living in both the sea and in rivers.',
+            self::FIELD_CATEGORY => 'Fish Pokémon',
             self::FIELD_ATTACK => 29,
             self::FIELD_DEFENSE => 85,
             self::FIELD_STAMINA => 85,
@@ -5764,6 +6466,8 @@ class PokemonData
         Pokemon::MILOTIC => [
             self::FIELD_NAME => 'Milotic',
             self::FIELD_NAME_SHORT => 'Milotic',
+            self::FIELD_DESC => 'Milotic is said to be the most beautiful of all the Pokémon. It has the power to becalm such emotions as anger and hostility to quell bitter feuding.',
+            self::FIELD_CATEGORY => 'Tender Pokémon',
             self::FIELD_ATTACK => 192,
             self::FIELD_DEFENSE => 219,
             self::FIELD_STAMINA => 216,
@@ -5779,6 +6483,8 @@ class PokemonData
         Pokemon::CASTFORM | FormsAlias::CASTFORM_NORMAL => [
             self::FIELD_NAME => 'Castform',
             self::FIELD_NAME_SHORT => 'Castform',
+            self::FIELD_DESC => 'Castform\'s appearance changes with the weather. This Pokémon gained the ability to use the vast power of nature to protect its tiny body.',
+            self::FIELD_CATEGORY => 'Weather Pokémon',
             self::FIELD_ATTACK => 139,
             self::FIELD_DEFENSE => 139,
             self::FIELD_STAMINA => 172,
@@ -5794,6 +6500,8 @@ class PokemonData
         Pokemon::CASTFORM | FormsAlias::CASTFORM_RAINY => [
             self::FIELD_NAME => 'Castform (Rainy)',
             self::FIELD_NAME_SHORT => 'Castform',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Weather Pokémon',
             self::FIELD_ATTACK => 139,
             self::FIELD_DEFENSE => 139,
             self::FIELD_STAMINA => 172,
@@ -5809,6 +6517,8 @@ class PokemonData
         Pokemon::CASTFORM | FormsAlias::CASTFORM_SNOWY => [
             self::FIELD_NAME => 'Castform (Snowy)',
             self::FIELD_NAME_SHORT => 'Castform',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Weather Pokémon',
             self::FIELD_ATTACK => 139,
             self::FIELD_DEFENSE => 139,
             self::FIELD_STAMINA => 172,
@@ -5824,6 +6534,8 @@ class PokemonData
         Pokemon::CASTFORM | FormsAlias::CASTFORM_SUNNY => [
             self::FIELD_NAME => 'Castform (Sunny)',
             self::FIELD_NAME_SHORT => 'Castform',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Weather Pokémon',
             self::FIELD_ATTACK => 139,
             self::FIELD_DEFENSE => 139,
             self::FIELD_STAMINA => 172,
@@ -5839,6 +6551,8 @@ class PokemonData
         Pokemon::KECLEON => [
             self::FIELD_NAME => 'Kecleon',
             self::FIELD_NAME_SHORT => 'Kecleon',
+            self::FIELD_DESC => 'Kecleon is capable of changing its body colors at will to blend in with its surroundings. There is one exception—this Pokémon can\'t change the zigzag pattern on its belly.',
+            self::FIELD_CATEGORY => 'Color Swap Pokémon',
             self::FIELD_ATTACK => 161,
             self::FIELD_DEFENSE => 189,
             self::FIELD_STAMINA => 155,
@@ -5854,6 +6568,8 @@ class PokemonData
         Pokemon::SHUPPET => [
             self::FIELD_NAME => 'Shuppet',
             self::FIELD_NAME_SHORT => 'Shuppet',
+            self::FIELD_DESC => 'Shuppet is attracted by feelings of jealousy and vindictiveness. If someone develops strong feelings of vengeance, this Pokémon will appear in a swarm and line up beneath the eaves of that person\'s home.',
+            self::FIELD_CATEGORY => 'Puppet Pokémon',
             self::FIELD_ATTACK => 138,
             self::FIELD_DEFENSE => 65,
             self::FIELD_STAMINA => 127,
@@ -5870,6 +6586,8 @@ class PokemonData
         Pokemon::BANETTE => [
             self::FIELD_NAME => 'Banette',
             self::FIELD_NAME_SHORT => 'Banette',
+            self::FIELD_DESC => 'Banette generates energy for laying strong curses by sticking pins into its own body. This Pokémon was originally a pitiful plush doll that was thrown away.',
+            self::FIELD_CATEGORY => 'Marionette Pokémon',
             self::FIELD_ATTACK => 218,
             self::FIELD_DEFENSE => 126,
             self::FIELD_STAMINA => 162,
@@ -5885,6 +6603,8 @@ class PokemonData
         Pokemon::DUSKULL => [
             self::FIELD_NAME => 'Duskull',
             self::FIELD_NAME_SHORT => 'Duskull',
+            self::FIELD_DESC => 'Duskull can pass through any wall no matter how thick it may be. Once this Pokémon chooses a target, it will doggedly pursue the intended victim until the break of dawn.',
+            self::FIELD_CATEGORY => 'Requiem Pokémon',
             self::FIELD_ATTACK => 70,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 85,
@@ -5901,6 +6621,8 @@ class PokemonData
         Pokemon::DUSCLOPS => [
             self::FIELD_NAME => 'Dusclops',
             self::FIELD_NAME_SHORT => 'Dusclops',
+            self::FIELD_DESC => 'Dusclops\'s body is completely hollow—there is nothing at all inside. It is said that its body is like a black hole. This Pokémon will absorb anything into its body, but nothing will ever come back out.',
+            self::FIELD_CATEGORY => 'Beckon Pokémon',
             self::FIELD_ATTACK => 124,
             self::FIELD_DEFENSE => 234,
             self::FIELD_STAMINA => 120,
@@ -5917,6 +6639,8 @@ class PokemonData
         Pokemon::TROPIUS => [
             self::FIELD_NAME => 'Tropius',
             self::FIELD_NAME_SHORT => 'Tropius',
+            self::FIELD_DESC => 'The bunches of fruit around Tropius\'s neck are very popular with children. This Pokémon loves fruit, and eats it continuously. Apparently, its love for fruit resulted in its own outgrowth of fruit.',
+            self::FIELD_CATEGORY => 'Fruit Pokémon',
             self::FIELD_ATTACK => 136,
             self::FIELD_DEFENSE => 163,
             self::FIELD_STAMINA => 223,
@@ -5933,6 +6657,8 @@ class PokemonData
         Pokemon::CHIMECHO => [
             self::FIELD_NAME => 'Chimecho',
             self::FIELD_NAME_SHORT => 'Chimecho',
+            self::FIELD_DESC => 'Chimecho makes its cries echo inside its hollow body. When this Pokémon becomes enraged, its cries result in ultrasonic waves that have the power to knock foes flying.',
+            self::FIELD_CATEGORY => 'Wind Chime Pokémon',
             self::FIELD_ATTACK => 175,
             self::FIELD_DEFENSE => 170,
             self::FIELD_STAMINA => 181,
@@ -5948,6 +6674,8 @@ class PokemonData
         Pokemon::ABSOL => [
             self::FIELD_NAME => 'Absol',
             self::FIELD_NAME_SHORT => 'Absol',
+            self::FIELD_DESC => 'Every time Absol appears before people, it is followed by a disaster such as an earthquake or a tidal wave. As a result, it came to be known as the disaster Pokémon.',
+            self::FIELD_CATEGORY => 'Disaster Pokémon',
             self::FIELD_ATTACK => 246,
             self::FIELD_DEFENSE => 120,
             self::FIELD_STAMINA => 163,
@@ -5963,6 +6691,8 @@ class PokemonData
         Pokemon::WYNAUT => [
             self::FIELD_NAME => 'Wynaut',
             self::FIELD_NAME_SHORT => 'Wynaut',
+            self::FIELD_DESC => 'Wynaut can always be seen with a big, happy smile on its face. Look at its tail to determine if it is angry. When angered, this Pokémon will be slapping the ground with its tail.',
+            self::FIELD_CATEGORY => 'Bright Pokémon',
             self::FIELD_ATTACK => 41,
             self::FIELD_DEFENSE => 86,
             self::FIELD_STAMINA => 216,
@@ -5979,6 +6709,8 @@ class PokemonData
         Pokemon::SNORUNT => [
             self::FIELD_NAME => 'Snorunt',
             self::FIELD_NAME_SHORT => 'Snorunt',
+            self::FIELD_DESC => 'Snorunt live in regions with heavy snowfall. In seasons without snow, such as spring and summer, this Pokémon steals away to live quietly among stalactites and stalagmites deep in caverns.',
+            self::FIELD_CATEGORY => 'Snow Hat Pokémon',
             self::FIELD_ATTACK => 95,
             self::FIELD_DEFENSE => 95,
             self::FIELD_STAMINA => 137,
@@ -5995,6 +6727,8 @@ class PokemonData
         Pokemon::GLALIE => [
             self::FIELD_NAME => 'Glalie',
             self::FIELD_NAME_SHORT => 'Glalie',
+            self::FIELD_DESC => 'Glalie has a body made of rock, which it hardens with an armor of ice. This Pokémon has the ability to freeze moisture in the atmosphere into any shape it desires.',
+            self::FIELD_CATEGORY => 'Face Pokémon',
             self::FIELD_ATTACK => 162,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 190,
@@ -6010,6 +6744,8 @@ class PokemonData
         Pokemon::SPHEAL => [
             self::FIELD_NAME => 'Spheal',
             self::FIELD_NAME_SHORT => 'Spheal',
+            self::FIELD_DESC => 'Spheal is much faster rolling than walking to get around. When groups of this Pokémon eat, they all clap at once to show their pleasure. Because of this, their mealtimes are noisy.',
+            self::FIELD_CATEGORY => 'Clap Pokémon',
             self::FIELD_ATTACK => 95,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 172,
@@ -6027,6 +6763,8 @@ class PokemonData
         Pokemon::SEALEO => [
             self::FIELD_NAME => 'Sealeo',
             self::FIELD_NAME_SHORT => 'Sealeo',
+            self::FIELD_DESC => 'Sealeo has the habit of always juggling on the tip of its nose anything it sees for the first time. This Pokémon occasionally entertains itself by balancing and rolling a Spheal on its nose.',
+            self::FIELD_CATEGORY => 'Ball Roll Pokémon',
             self::FIELD_ATTACK => 137,
             self::FIELD_DEFENSE => 132,
             self::FIELD_STAMINA => 207,
@@ -6044,6 +6782,8 @@ class PokemonData
         Pokemon::WALREIN => [
             self::FIELD_NAME => 'Walrein',
             self::FIELD_NAME_SHORT => 'Walrein',
+            self::FIELD_DESC => 'Walrein\'s two massively developed tusks can totally shatter blocks of ice weighing 10 tons with one blow. This Pokémon\'s thick coat of blubber insulates it from subzero temperatures.',
+            self::FIELD_CATEGORY => 'Ice Break Pokémon',
             self::FIELD_ATTACK => 182,
             self::FIELD_DEFENSE => 176,
             self::FIELD_STAMINA => 242,
@@ -6060,6 +6800,8 @@ class PokemonData
         Pokemon::CLAMPERL => [
             self::FIELD_NAME => 'Clamperl',
             self::FIELD_NAME_SHORT => 'Clamperl',
+            self::FIELD_DESC => 'Clamperl\'s sturdy shell is not only good for protection—it is also used for clamping and catching prey. A fully grown Clamperl\'s shell will be scored with nicks and scratches all over.',
+            self::FIELD_CATEGORY => 'Bivalve Pokémon',
             self::FIELD_ATTACK => 133,
             self::FIELD_DEFENSE => 135,
             self::FIELD_STAMINA => 111,
@@ -6076,6 +6818,8 @@ class PokemonData
         Pokemon::HUNTAIL => [
             self::FIELD_NAME => 'Huntail',
             self::FIELD_NAME_SHORT => 'Huntail',
+            self::FIELD_DESC => 'Huntail\'s presence went unnoticed by people for a long time because it lives at extreme depths in the sea. This Pokémon\'s eyes can see clearly even in the murky dark depths of the ocean.',
+            self::FIELD_CATEGORY => 'Deep Sea Pokémon',
             self::FIELD_ATTACK => 197,
             self::FIELD_DEFENSE => 179,
             self::FIELD_STAMINA => 146,
@@ -6091,6 +6835,8 @@ class PokemonData
         Pokemon::GOREBYSS => [
             self::FIELD_NAME => 'Gorebyss',
             self::FIELD_NAME_SHORT => 'Gorebyss',
+            self::FIELD_DESC => 'Gorebyss lives in the southern seas at extreme depths. Its body is built to withstand the enormous pressure of water at incredible depths. Because of this, this Pokémon\'s body is unharmed by ordinary attacks.',
+            self::FIELD_CATEGORY => 'South Sea Pokémon',
             self::FIELD_ATTACK => 211,
             self::FIELD_DEFENSE => 179,
             self::FIELD_STAMINA => 146,
@@ -6106,6 +6852,8 @@ class PokemonData
         Pokemon::RELICANTH => [
             self::FIELD_NAME => 'Relicanth',
             self::FIELD_NAME_SHORT => 'Relicanth',
+            self::FIELD_DESC => 'Relicanth is a Pokémon species that existed for a hundred million years without ever changing its form. This ancient Pokémon feeds on microscopic organisms with its toothless mouth.',
+            self::FIELD_CATEGORY => 'Longevity Pokémon',
             self::FIELD_ATTACK => 162,
             self::FIELD_DEFENSE => 203,
             self::FIELD_STAMINA => 225,
@@ -6122,6 +6870,8 @@ class PokemonData
         Pokemon::LUVDISC => [
             self::FIELD_NAME => 'Luvdisc',
             self::FIELD_NAME_SHORT => 'Luvdisc',
+            self::FIELD_DESC => 'Luvdisc live in shallow seas in the tropics. This heart-shaped Pokémon earned its name by swimming after loving couples it spotted in the ocean\'s waves.',
+            self::FIELD_CATEGORY => 'Rendezvous Pokémon',
             self::FIELD_ATTACK => 81,
             self::FIELD_DEFENSE => 128,
             self::FIELD_STAMINA => 125,
@@ -6137,6 +6887,8 @@ class PokemonData
         Pokemon::BAGON => [
             self::FIELD_NAME => 'Bagon',
             self::FIELD_NAME_SHORT => 'Bagon',
+            self::FIELD_DESC => 'Bagon has a dream of one day soaring in the sky. In doomed efforts to fly, this Pokémon hurls itself off cliffs. As a result of its dives, its head has grown tough and as hard as tempered steel.',
+            self::FIELD_CATEGORY => 'Rock Head Pokémon',
             self::FIELD_ATTACK => 134,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 128,
@@ -6153,6 +6905,8 @@ class PokemonData
         Pokemon::SHELGON => [
             self::FIELD_NAME => 'Shelgon',
             self::FIELD_NAME_SHORT => 'Shelgon',
+            self::FIELD_DESC => 'Inside Shelgon\'s armor-like shell, cells are in the midst of transformation to create an entirely new body. This Pokémon\'s shell is extremely heavy, making its movements sluggish.',
+            self::FIELD_CATEGORY => 'Endurance Pokémon',
             self::FIELD_ATTACK => 172,
             self::FIELD_DEFENSE => 155,
             self::FIELD_STAMINA => 163,
@@ -6169,6 +6923,8 @@ class PokemonData
         Pokemon::SALAMENCE => [
             self::FIELD_NAME => 'Salamence',
             self::FIELD_NAME_SHORT => 'Salamence',
+            self::FIELD_DESC => 'Salamence came about as a result of a strong, long-held dream of growing wings. It is said that this powerful desire triggered a sudden mutation in this Pokémon\'s cells, causing it to sprout its magnificent wings.',
+            self::FIELD_CATEGORY => 'Dragon Pokémon',
             self::FIELD_ATTACK => 277,
             self::FIELD_DEFENSE => 168,
             self::FIELD_STAMINA => 216,
@@ -6186,6 +6942,8 @@ class PokemonData
         Pokemon::BELDUM => [
             self::FIELD_NAME => 'Beldum',
             self::FIELD_NAME_SHORT => 'Beldum',
+            self::FIELD_DESC => 'Instead of blood, a powerful magnetic force courses throughout Beldum\'s body. This Pokémon communicates with others by sending controlled pulses of magnetism.',
+            self::FIELD_CATEGORY => 'Iron Ball Pokémon',
             self::FIELD_ATTACK => 96,
             self::FIELD_DEFENSE => 132,
             self::FIELD_STAMINA => 120,
@@ -6203,6 +6961,8 @@ class PokemonData
         Pokemon::METANG => [
             self::FIELD_NAME => 'Metang',
             self::FIELD_NAME_SHORT => 'Metang',
+            self::FIELD_DESC => 'When two Beldum fuse together, Metang is formed. The brains of the Beldum are joined by a magnetic nervous system. By linking its brains magnetically, this Pokémon generates strong psychokinetic power.',
+            self::FIELD_CATEGORY => 'Iron Claw Pokémon',
             self::FIELD_ATTACK => 138,
             self::FIELD_DEFENSE => 176,
             self::FIELD_STAMINA => 155,
@@ -6220,6 +6980,8 @@ class PokemonData
         Pokemon::METAGROSS => [
             self::FIELD_NAME => 'Metagross',
             self::FIELD_NAME_SHORT => 'Metagross',
+            self::FIELD_DESC => 'Metagross has four brains in total. Combined, the four brains can breeze through difficult calculations faster than a supercomputer. This Pokémon can float in the air by tucking in its four legs.',
+            self::FIELD_CATEGORY => 'Iron Leg Pokémon',
             self::FIELD_ATTACK => 257,
             self::FIELD_DEFENSE => 228,
             self::FIELD_STAMINA => 190,
@@ -6237,6 +6999,8 @@ class PokemonData
         Pokemon::REGIROCK => [
             self::FIELD_NAME => 'Regirock',
             self::FIELD_NAME_SHORT => 'Regirock',
+            self::FIELD_DESC => 'Regirock was sealed away by people long ago. If this Pokémon\'s body is damaged in battle, it is said to seek out suitable rocks on its own to repair itself.',
+            self::FIELD_CATEGORY => 'Rock Peak Pokémon',
             self::FIELD_ATTACK => 179,
             self::FIELD_DEFENSE => 309,
             self::FIELD_STAMINA => 190,
@@ -6252,6 +7016,8 @@ class PokemonData
         Pokemon::REGICE => [
             self::FIELD_NAME => 'Regice',
             self::FIELD_NAME_SHORT => 'Regice',
+            self::FIELD_DESC => 'Regice\'s body was made during an ice age. The deep-frozen body can\'t be melted, even by fire. This Pokémon controls frigid air of -328 degrees Fahrenheit.',
+            self::FIELD_CATEGORY => 'Iceberg Pokémon',
             self::FIELD_ATTACK => 179,
             self::FIELD_DEFENSE => 309,
             self::FIELD_STAMINA => 190,
@@ -6267,6 +7033,8 @@ class PokemonData
         Pokemon::REGISTEEL => [
             self::FIELD_NAME => 'Registeel',
             self::FIELD_NAME_SHORT => 'Registeel',
+            self::FIELD_DESC => 'Registeel has a body that is harder than any kind of metal. Its body is apparently hollow. No one has any idea what this Pokémon eats.',
+            self::FIELD_CATEGORY => 'Iron Pokémon',
             self::FIELD_ATTACK => 143,
             self::FIELD_DEFENSE => 285,
             self::FIELD_STAMINA => 190,
@@ -6282,6 +7050,8 @@ class PokemonData
         Pokemon::LATIAS => [
             self::FIELD_NAME => 'Latias',
             self::FIELD_NAME_SHORT => 'Latias',
+            self::FIELD_DESC => 'Latias is highly sensitive to the emotions of people. If it senses any hostility, this Pokémon ruffles the feathers all over its body and cries shrilly to intimidate the foe.',
+            self::FIELD_CATEGORY => 'Eon Pokémon',
             self::FIELD_ATTACK => 228,
             self::FIELD_DEFENSE => 246,
             self::FIELD_STAMINA => 190,
@@ -6298,6 +7068,8 @@ class PokemonData
         Pokemon::LATIOS => [
             self::FIELD_NAME => 'Latios',
             self::FIELD_NAME_SHORT => 'Latios',
+            self::FIELD_DESC => 'Latios has the ability to make others see an image of what it has seen or imagines in its head. This Pokémon is intelligent and understands human speech.',
+            self::FIELD_CATEGORY => 'Eon Pokémon',
             self::FIELD_ATTACK => 268,
             self::FIELD_DEFENSE => 212,
             self::FIELD_STAMINA => 190,
@@ -6314,6 +7086,8 @@ class PokemonData
         Pokemon::KYOGRE => [
             self::FIELD_NAME => 'Kyogre',
             self::FIELD_NAME_SHORT => 'Kyogre',
+            self::FIELD_DESC => 'Through Primal Reversion and with nature\'s full power, it will take back its true form. It can summon storms that cause the sea levels to rise.',
+            self::FIELD_CATEGORY => 'Sea Basin Pokémon',
             self::FIELD_ATTACK => 270,
             self::FIELD_DEFENSE => 228,
             self::FIELD_STAMINA => 205,
@@ -6329,6 +7103,8 @@ class PokemonData
         Pokemon::GROUDON => [
             self::FIELD_NAME => 'Groudon',
             self::FIELD_NAME_SHORT => 'Groudon',
+            self::FIELD_DESC => 'Groudon is said to be the personification of the land itself. Legends tell of its many clashes against Kyogre, as each sought to gain the power of nature.',
+            self::FIELD_CATEGORY => 'Continent Pokémon',
             self::FIELD_ATTACK => 270,
             self::FIELD_DEFENSE => 228,
             self::FIELD_STAMINA => 205,
@@ -6345,6 +7121,8 @@ class PokemonData
         Pokemon::RAYQUAZA => [
             self::FIELD_NAME => 'Rayquaza',
             self::FIELD_NAME_SHORT => 'Rayquaza',
+            self::FIELD_DESC => 'Rayquaza is said to have lived for hundreds of millions of years. Legends remain of how it put to rest the clash between Kyogre and Groudon.',
+            self::FIELD_CATEGORY => 'Sky High Pokémon',
             self::FIELD_ATTACK => 284,
             self::FIELD_DEFENSE => 170,
             self::FIELD_STAMINA => 213,
@@ -6361,6 +7139,8 @@ class PokemonData
         Pokemon::JIRACHI => [
             self::FIELD_NAME => 'Jirachi',
             self::FIELD_NAME_SHORT => 'Jirachi',
+            self::FIELD_DESC => 'A legend states that Jirachi will make true any wish that is written on notes attached to its head when it awakens. If this Pokémon senses danger, it will fight without awakening.',
+            self::FIELD_CATEGORY => 'Wish Pokémon',
             self::FIELD_ATTACK => 210,
             self::FIELD_DEFENSE => 210,
             self::FIELD_STAMINA => 225,
@@ -6376,6 +7156,8 @@ class PokemonData
         Pokemon::DEOXYS | FormsAlias::DEOXYS_NORMAL => [
             self::FIELD_NAME => 'Deoxys (Normal Forme)',
             self::FIELD_NAME_SHORT => 'Deoxys',
+            self::FIELD_DESC => 'The DNA of a space virus underwent a sudden mutation upon exposure to a laser beam and resulted in Deoxys. The crystalline organ on this Pokémon\'s chest appears to be its brain.',
+            self::FIELD_CATEGORY => 'DNA Pokémon',
             self::FIELD_ATTACK => 345,
             self::FIELD_DEFENSE => 115,
             self::FIELD_STAMINA => 137,
@@ -6391,6 +7173,8 @@ class PokemonData
         Pokemon::DEOXYS | FormsAlias::DEOXYS_ATTACK => [
             self::FIELD_NAME => 'Deoxys (Attack Forme)',
             self::FIELD_NAME_SHORT => 'Deoxys',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'DNA Pokémon',
             self::FIELD_ATTACK => 414,
             self::FIELD_DEFENSE => 46,
             self::FIELD_STAMINA => 137,
@@ -6406,6 +7190,8 @@ class PokemonData
         Pokemon::DEOXYS | FormsAlias::DEOXYS_DEFENSE => [
             self::FIELD_NAME => 'Deoxys (Defense Forme)',
             self::FIELD_NAME_SHORT => 'Deoxys',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'DNA Pokémon',
             self::FIELD_ATTACK => 144,
             self::FIELD_DEFENSE => 330,
             self::FIELD_STAMINA => 137,
@@ -6421,6 +7207,8 @@ class PokemonData
         Pokemon::DEOXYS | FormsAlias::DEOXYS_SPEED => [
             self::FIELD_NAME => 'Deoxys (Speed Forme)',
             self::FIELD_NAME_SHORT => 'Deoxys',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'DNA Pokémon',
             self::FIELD_ATTACK => 230,
             self::FIELD_DEFENSE => 218,
             self::FIELD_STAMINA => 137,
@@ -6436,6 +7224,8 @@ class PokemonData
         Pokemon::TURTWIG => [
             self::FIELD_NAME => 'Turtwig',
             self::FIELD_NAME_SHORT => 'Turtwig',
+            self::FIELD_DESC => 'It undertakes photosynthesis with its body, making oxygen. The leaf on its head wilts if it is thirsty.',
+            self::FIELD_CATEGORY => 'Tiny Leaf Pokémon',
             self::FIELD_ATTACK => 119,
             self::FIELD_DEFENSE => 110,
             self::FIELD_STAMINA => 146,
@@ -6452,6 +7242,8 @@ class PokemonData
         Pokemon::GROTLE => [
             self::FIELD_NAME => 'Grotle',
             self::FIELD_NAME_SHORT => 'Grotle',
+            self::FIELD_DESC => 'It knows where pure water wells up. It carries fellow Pokémon there on its back.',
+            self::FIELD_CATEGORY => 'Grove Pokémon',
             self::FIELD_ATTACK => 157,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 181,
@@ -6468,6 +7260,8 @@ class PokemonData
         Pokemon::TORTERRA => [
             self::FIELD_NAME => 'Torterra',
             self::FIELD_NAME_SHORT => 'Torterra',
+            self::FIELD_DESC => 'Small Pokémon occasionally gather on its unmoving back to begin building their nests.',
+            self::FIELD_CATEGORY => 'Continent Pokémon',
             self::FIELD_ATTACK => 202,
             self::FIELD_DEFENSE => 188,
             self::FIELD_STAMINA => 216,
@@ -6485,6 +7279,8 @@ class PokemonData
         Pokemon::CHIMCHAR => [
             self::FIELD_NAME => 'Chimchar',
             self::FIELD_NAME_SHORT => 'Chimchar',
+            self::FIELD_DESC => 'The gas made in its belly burns from its rear end. The fire burns weakly when it feels sick.',
+            self::FIELD_CATEGORY => 'Chimp Pokémon',
             self::FIELD_ATTACK => 113,
             self::FIELD_DEFENSE => 86,
             self::FIELD_STAMINA => 127,
@@ -6501,6 +7297,8 @@ class PokemonData
         Pokemon::MONFERNO => [
             self::FIELD_NAME => 'Monferno',
             self::FIELD_NAME_SHORT => 'Monferno',
+            self::FIELD_DESC => 'It uses ceilings and walls to launch aerial attacks. Its fiery tail is but one weapon.',
+            self::FIELD_CATEGORY => 'Playful Pokémon',
             self::FIELD_ATTACK => 158,
             self::FIELD_DEFENSE => 105,
             self::FIELD_STAMINA => 162,
@@ -6518,6 +7316,8 @@ class PokemonData
         Pokemon::INFERNAPE => [
             self::FIELD_NAME => 'Infernape',
             self::FIELD_NAME_SHORT => 'Infernape',
+            self::FIELD_DESC => 'It tosses its enemies around with agility. It uses all its limbs to fight in its own unique style.',
+            self::FIELD_CATEGORY => 'Flame Pokémon',
             self::FIELD_ATTACK => 222,
             self::FIELD_DEFENSE => 151,
             self::FIELD_STAMINA => 183,
@@ -6535,6 +7335,8 @@ class PokemonData
         Pokemon::PILUP => [
             self::FIELD_NAME => 'Piplup',
             self::FIELD_NAME_SHORT => 'Piplup',
+            self::FIELD_DESC => 'Because it is very proud, it hates accepting food from people. Its thick down guards it from cold.',
+            self::FIELD_CATEGORY => 'Penguin Pokémon',
             self::FIELD_ATTACK => 112,
             self::FIELD_DEFENSE => 102,
             self::FIELD_STAMINA => 142,
@@ -6551,6 +7353,8 @@ class PokemonData
         Pokemon::PRINPLUP => [
             self::FIELD_NAME => 'Prinplup',
             self::FIELD_NAME_SHORT => 'Prinplup',
+            self::FIELD_DESC => 'It lives a solitary life. Its wings deliver wicked blows that can snap even the thickest of trees.',
+            self::FIELD_CATEGORY => 'Penguin Pokémon',
             self::FIELD_ATTACK => 150,
             self::FIELD_DEFENSE => 139,
             self::FIELD_STAMINA => 162,
@@ -6567,6 +7371,8 @@ class PokemonData
         Pokemon::EMPOLEON => [
             self::FIELD_NAME => 'Empoleon',
             self::FIELD_NAME_SHORT => 'Empoleon',
+            self::FIELD_DESC => 'The three horns that extend from its beak attest to its power. The leader has the biggest horns.',
+            self::FIELD_CATEGORY => 'Emperor Pokémon',
             self::FIELD_ATTACK => 210,
             self::FIELD_DEFENSE => 186,
             self::FIELD_STAMINA => 197,
@@ -6584,6 +7390,8 @@ class PokemonData
         Pokemon::STARLY => [
             self::FIELD_NAME => 'Starly',
             self::FIELD_NAME_SHORT => 'Starly',
+            self::FIELD_DESC => 'They flock around mountains and fields, chasing after bug Pokémon. Their singing is noisy and annoying.',
+            self::FIELD_CATEGORY => 'Starling Pokémon',
             self::FIELD_ATTACK => 101,
             self::FIELD_DEFENSE => 58,
             self::FIELD_STAMINA => 120,
@@ -6601,6 +7409,8 @@ class PokemonData
         Pokemon::STARAVIA => [
             self::FIELD_NAME => 'Staravia',
             self::FIELD_NAME_SHORT => 'Staravia',
+            self::FIELD_DESC => 'It lives in forests and fields. Squabbles over territory occur when flocks collide.',
+            self::FIELD_CATEGORY => 'Starling Pokémon',
             self::FIELD_ATTACK => 142,
             self::FIELD_DEFENSE => 94,
             self::FIELD_STAMINA => 146,
@@ -6618,6 +7428,8 @@ class PokemonData
         Pokemon::STARAPTOR => [
             self::FIELD_NAME => 'Staraptor',
             self::FIELD_NAME_SHORT => 'Staraptor',
+            self::FIELD_DESC => 'When Staravia evolve into Staraptor, they leave the flock to live alone. They have sturdy wings.',
+            self::FIELD_CATEGORY => 'Predator Pokémon',
             self::FIELD_ATTACK => 234,
             self::FIELD_DEFENSE => 140,
             self::FIELD_STAMINA => 198,
@@ -6634,6 +7446,8 @@ class PokemonData
         Pokemon::BIDOOF => [
             self::FIELD_NAME => 'Bidoof',
             self::FIELD_NAME_SHORT => 'Bidoof',
+            self::FIELD_DESC => 'It constantly gnaws on logs and rocks to whittle down its front teeth. It nests alongside water.',
+            self::FIELD_CATEGORY => 'Plump Mouse Pokémon',
             self::FIELD_ATTACK => 80,
             self::FIELD_DEFENSE => 73,
             self::FIELD_STAMINA => 153,
@@ -6650,6 +7464,8 @@ class PokemonData
         Pokemon::BIBAREL => [
             self::FIELD_NAME => 'Bibarel',
             self::FIELD_NAME_SHORT => 'Bibarel',
+            self::FIELD_DESC => 'It makes its nest by damming streams with bark and mud. It is known as an industrious worker.',
+            self::FIELD_CATEGORY => 'Beaver Pokémon',
             self::FIELD_ATTACK => 162,
             self::FIELD_DEFENSE => 119,
             self::FIELD_STAMINA => 188,
@@ -6666,6 +7482,8 @@ class PokemonData
         Pokemon::KRICKETOT => [
             self::FIELD_NAME => 'Kricketot',
             self::FIELD_NAME_SHORT => 'Kricketot',
+            self::FIELD_DESC => 'When its antennae hit each other, it sounds like the music of a xylophone.',
+            self::FIELD_CATEGORY => 'Cricket Pokémon',
             self::FIELD_ATTACK => 45,
             self::FIELD_DEFENSE => 74,
             self::FIELD_STAMINA => 114,
@@ -6682,6 +7500,8 @@ class PokemonData
         Pokemon::KRICKETUNE => [
             self::FIELD_NAME => 'Kricketune',
             self::FIELD_NAME_SHORT => 'Kricketune',
+            self::FIELD_DESC => 'It signals its emotions with its melodies. Scientists are studying these melodic patterns.',
+            self::FIELD_CATEGORY => 'Cricket Pokémon',
             self::FIELD_ATTACK => 160,
             self::FIELD_DEFENSE => 100,
             self::FIELD_STAMINA => 184,
@@ -6697,6 +7517,8 @@ class PokemonData
         Pokemon::SHINX => [
             self::FIELD_NAME => 'Shinx',
             self::FIELD_NAME_SHORT => 'Shinx',
+            self::FIELD_DESC => 'All of its fur dazzles if danger is sensed. It flees while the foe is momentarily blinded.',
+            self::FIELD_CATEGORY => 'Flash Pokémon',
             self::FIELD_ATTACK => 117,
             self::FIELD_DEFENSE => 64,
             self::FIELD_STAMINA => 128,
@@ -6713,6 +7535,8 @@ class PokemonData
         Pokemon::LUXIO => [
             self::FIELD_NAME => 'Luxio',
             self::FIELD_NAME_SHORT => 'Luxio',
+            self::FIELD_DESC => 'Strong electricity courses through the tips of its sharp claws. A light scratch causes fainting in foes.',
+            self::FIELD_CATEGORY => 'Spark Pokémon',
             self::FIELD_ATTACK => 159,
             self::FIELD_DEFENSE => 95,
             self::FIELD_STAMINA => 155,
@@ -6729,6 +7553,8 @@ class PokemonData
         Pokemon::LUXRAY => [
             self::FIELD_NAME => 'Luxray',
             self::FIELD_NAME_SHORT => 'Luxray',
+            self::FIELD_DESC => 'Luxray\'s ability to see through objects comes in handy when it\'s scouting for danger.',
+            self::FIELD_CATEGORY => 'Gleam Eyes Pokémon',
             self::FIELD_ATTACK => 232,
             self::FIELD_DEFENSE => 156,
             self::FIELD_STAMINA => 190,
@@ -6744,6 +7570,8 @@ class PokemonData
         Pokemon::BUDEW => [
             self::FIELD_NAME => 'Budew',
             self::FIELD_NAME_SHORT => 'Budew',
+            self::FIELD_DESC => 'Over the winter, it closes its bud and endures the cold. In spring, the bud opens and releases pollen.',
+            self::FIELD_CATEGORY => 'Bud Pokémon',
             self::FIELD_ATTACK => 91,
             self::FIELD_DEFENSE => 109,
             self::FIELD_STAMINA => 120,
@@ -6761,6 +7589,8 @@ class PokemonData
         Pokemon::ROSERADE => [
             self::FIELD_NAME => 'Roserade',
             self::FIELD_NAME_SHORT => 'Roserade',
+            self::FIELD_DESC => 'With the movements of a dancer, it strikes with whips that are densely lined with poison thorns.',
+            self::FIELD_CATEGORY => 'Bouquet Pokémon',
             self::FIELD_ATTACK => 243,
             self::FIELD_DEFENSE => 185,
             self::FIELD_STAMINA => 155,
@@ -6777,6 +7607,8 @@ class PokemonData
         Pokemon::CRANIDOS => [
             self::FIELD_NAME => 'Cranidos',
             self::FIELD_NAME_SHORT => 'Cranidos',
+            self::FIELD_DESC => 'Its hard skull is its distinguishing feature. It snapped trees by headbutting them, and then it fed on their ripe berries.',
+            self::FIELD_CATEGORY => 'Head Butt Pokémon',
             self::FIELD_ATTACK => 218,
             self::FIELD_DEFENSE => 71,
             self::FIELD_STAMINA => 167,
@@ -6793,6 +7625,8 @@ class PokemonData
         Pokemon::RAMPARDOS => [
             self::FIELD_NAME => 'Rampardos',
             self::FIELD_NAME_SHORT => 'Rampardos',
+            self::FIELD_DESC => 'This ancient Pokémon used headbutts skillfully. Its brain was really small, so some theories suggest that its stupidity led to its extinction.',
+            self::FIELD_CATEGORY => 'Head Butt Pokémon',
             self::FIELD_ATTACK => 295,
             self::FIELD_DEFENSE => 109,
             self::FIELD_STAMINA => 219,
@@ -6808,6 +7642,8 @@ class PokemonData
         Pokemon::SHIELDON => [
             self::FIELD_NAME => 'Shieldon',
             self::FIELD_NAME_SHORT => 'Shieldon',
+            self::FIELD_DESC => 'Although its fossils can be found in layers of primeval rock, nothing but its face has ever been discovered.',
+            self::FIELD_CATEGORY => 'Shield Pokémon',
             self::FIELD_ATTACK => 76,
             self::FIELD_DEFENSE => 195,
             self::FIELD_STAMINA => 102,
@@ -6825,6 +7661,8 @@ class PokemonData
         Pokemon::BASTIODON => [
             self::FIELD_NAME => 'Bastiodon',
             self::FIELD_NAME_SHORT => 'Bastiodon',
+            self::FIELD_DESC => 'This Pokémon is from roughly 100 million years ago. Its terrifyingly tough face is harder than steel.',
+            self::FIELD_CATEGORY => 'Shield Pokémon',
             self::FIELD_ATTACK => 94,
             self::FIELD_DEFENSE => 286,
             self::FIELD_STAMINA => 155,
@@ -6841,6 +7679,8 @@ class PokemonData
         Pokemon::BURMY | FormsAlias::BURMY_PLANT => [
             self::FIELD_NAME => 'Burmy (Plant Cloak)',
             self::FIELD_NAME_SHORT => 'Burmy',
+            self::FIELD_DESC => 'If its cloak is broken in battle, it quickly remakes the cloak with materials nearby.',
+            self::FIELD_CATEGORY => 'Bagworm Pokémon',
             self::FIELD_ATTACK => 53,
             self::FIELD_DEFENSE => 83,
             self::FIELD_STAMINA => 120,
@@ -6857,6 +7697,8 @@ class PokemonData
         Pokemon::BURMY | FormsAlias::BURMY_TRASH => [
             self::FIELD_NAME => 'Burmy (Trash Cloak)',
             self::FIELD_NAME_SHORT => 'Burmy',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Bagworm Pokémon',
             self::FIELD_ATTACK => 53,
             self::FIELD_DEFENSE => 83,
             self::FIELD_STAMINA => 120,
@@ -6873,6 +7715,8 @@ class PokemonData
         Pokemon::BURMY | FormsAlias::BURMY_SANDY => [
             self::FIELD_NAME => 'Burmy (Sandy Cloak)',
             self::FIELD_NAME_SHORT => 'Burmy',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Bagworm Pokémon',
             self::FIELD_ATTACK => 53,
             self::FIELD_DEFENSE => 83,
             self::FIELD_STAMINA => 120,
@@ -6889,6 +7733,8 @@ class PokemonData
         Pokemon::WORMADAM | FormsAlias::WORMADAM_PLANT => [
             self::FIELD_NAME => 'Wormadam (Plant Cloak)',
             self::FIELD_NAME_SHORT => 'Wormadam',
+            self::FIELD_DESC => 'When Burmy evolved, its cloak became a part of this Pokémon\'s body. The cloak is never shed.',
+            self::FIELD_CATEGORY => 'Bagworm Pokémon',
             self::FIELD_ATTACK => 141,
             self::FIELD_DEFENSE => 180,
             self::FIELD_STAMINA => 155,
@@ -6905,6 +7751,8 @@ class PokemonData
         Pokemon::WORMADAM | FormsAlias::WORMADAM_SANDY => [
             self::FIELD_NAME => 'Wormadam (Sandy Cloak)',
             self::FIELD_NAME_SHORT => 'Wormadam',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Bagworm Pokémon',
             self::FIELD_ATTACK => 141,
             self::FIELD_DEFENSE => 180,
             self::FIELD_STAMINA => 155,
@@ -6921,6 +7769,8 @@ class PokemonData
         Pokemon::WORMADAM | FormsAlias::WORMADAM_TRASH => [
             self::FIELD_NAME => 'Wormadam (Trash Cloak)',
             self::FIELD_NAME_SHORT => 'Wormadam',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Bagworm Pokémon',
             self::FIELD_ATTACK => 127,
             self::FIELD_DEFENSE => 175,
             self::FIELD_STAMINA => 155,
@@ -6937,6 +7787,8 @@ class PokemonData
         Pokemon::MOTHIM => [
             self::FIELD_NAME => 'Mothim',
             self::FIELD_NAME_SHORT => 'Mothim',
+            self::FIELD_DESC => 'It flutters around at night and steals honey from the Combee hive.',
+            self::FIELD_CATEGORY => 'Moth Pokémon',
             self::FIELD_ATTACK => 185,
             self::FIELD_DEFENSE => 98,
             self::FIELD_STAMINA => 172,
@@ -6953,6 +7805,8 @@ class PokemonData
         Pokemon::COMBEE => [
             self::FIELD_NAME => 'Combee',
             self::FIELD_NAME_SHORT => 'Combee',
+            self::FIELD_DESC => 'It collects and delivers honey to its colony. At night, they cluster to form a beehive and sleep.',
+            self::FIELD_CATEGORY => 'Tiny Bee Pokémon',
             self::FIELD_ATTACK => 59,
             self::FIELD_DEFENSE => 83,
             self::FIELD_STAMINA => 102,
@@ -6970,6 +7824,8 @@ class PokemonData
         Pokemon::VESPIQUEN => [
             self::FIELD_NAME => 'Vespiquen',
             self::FIELD_NAME_SHORT => 'Vespiquen',
+            self::FIELD_DESC => 'Its abdomen is a honeycomb for grubs. It raises its grubs on honey collected by Combee.',
+            self::FIELD_CATEGORY => 'Beehive Pokémon',
             self::FIELD_ATTACK => 149,
             self::FIELD_DEFENSE => 190,
             self::FIELD_STAMINA => 172,
@@ -6986,6 +7842,8 @@ class PokemonData
         Pokemon::PACHIRISU => [
             self::FIELD_NAME => 'Pachirisu',
             self::FIELD_NAME_SHORT => 'Pachirisu',
+            self::FIELD_DESC => 'A pair may be seen rubbing their cheek pouches together in an effort to share stored electricity.',
+            self::FIELD_CATEGORY => 'EleSquirrel Pokémon',
             self::FIELD_ATTACK => 94,
             self::FIELD_DEFENSE => 172,
             self::FIELD_STAMINA => 155,
@@ -7001,6 +7859,8 @@ class PokemonData
         Pokemon::BUZIEL => [
             self::FIELD_NAME => 'Buizel',
             self::FIELD_NAME_SHORT => 'Buizel',
+            self::FIELD_DESC => 'It inflates the flotation sac around its neck and pokes its head out of the water to see what is going on.',
+            self::FIELD_CATEGORY => 'Sea Weasel Pokémon',
             self::FIELD_ATTACK => 132,
             self::FIELD_DEFENSE => 67,
             self::FIELD_STAMINA => 146,
@@ -7017,6 +7877,8 @@ class PokemonData
         Pokemon::FLOATZEL => [
             self::FIELD_NAME => 'Floatzel',
             self::FIELD_NAME_SHORT => 'Floatzel',
+            self::FIELD_DESC => 'Its flotation sac developed as a result of pursuing aquatic prey. It can double as a rubber raft.',
+            self::FIELD_CATEGORY => 'Sea Weasel Pokémon',
             self::FIELD_ATTACK => 221,
             self::FIELD_DEFENSE => 114,
             self::FIELD_STAMINA => 198,
@@ -7032,6 +7894,8 @@ class PokemonData
         Pokemon::CHERUBI => [
             self::FIELD_NAME => 'Cherubi',
             self::FIELD_NAME_SHORT => 'Cherubi',
+            self::FIELD_DESC => 'It evolves by sucking the energy out of the small ball where it had been storing nutrients.',
+            self::FIELD_CATEGORY => 'Cherry Pokémon',
             self::FIELD_ATTACK => 108,
             self::FIELD_DEFENSE => 92,
             self::FIELD_STAMINA => 128,
@@ -7048,6 +7912,8 @@ class PokemonData
         Pokemon::CHERRIM | FormsAlias::CHERRIM_SUNNY => [
             self::FIELD_NAME => 'Cherrim (Sunshine Form)',
             self::FIELD_NAME_SHORT => 'Cherrim',
+            self::FIELD_DESC => 'If it senses strong sunlight, it opens its folded petals to absorb the sun\'s rays with its whole body.',
+            self::FIELD_CATEGORY => 'Blossom Pokémon',
             self::FIELD_ATTACK => 170,
             self::FIELD_DEFENSE => 153,
             self::FIELD_STAMINA => 172,
@@ -7063,6 +7929,8 @@ class PokemonData
         Pokemon::CHERRIM | FormsAlias::CHERRIM_OVERCAST => [
             self::FIELD_NAME => 'Cherrim (Overcast Form)',
             self::FIELD_NAME_SHORT => 'Cherrim',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Blossom Pokémon',
             self::FIELD_ATTACK => 170,
             self::FIELD_DEFENSE => 153,
             self::FIELD_STAMINA => 172,
@@ -7078,6 +7946,8 @@ class PokemonData
         Pokemon::SHELLOS | FormsAlias::SHELLOS_EAST_SEA => [
             self::FIELD_NAME => 'Shellos (East Sea)',
             self::FIELD_NAME_SHORT => 'Shellos',
+            self::FIELD_DESC => 'When it senses danger, a purple liquid oozes out of it. The liquid is thought to be something like greasy sweat.',
+            self::FIELD_CATEGORY => 'Sea Slug Pokémon',
             self::FIELD_ATTACK => 103,
             self::FIELD_DEFENSE => 105,
             self::FIELD_STAMINA => 183,
@@ -7094,6 +7964,8 @@ class PokemonData
         Pokemon::SHELLOS | FormsAlias::SHELLOS_WEST_SEA => [
             self::FIELD_NAME => 'Shellos (West Sea)',
             self::FIELD_NAME_SHORT => 'Shellos',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Sea Slug Pokémon',
             self::FIELD_ATTACK => 103,
             self::FIELD_DEFENSE => 105,
             self::FIELD_STAMINA => 183,
@@ -7110,6 +7982,8 @@ class PokemonData
         Pokemon::GASTRODON | FormsAlias::GASTRODON_EAST_SEA => [
             self::FIELD_NAME => 'Gastrodon (East Sea)',
             self::FIELD_NAME_SHORT => 'Gastrodon',
+            self::FIELD_DESC => 'Their shape and color change, depending on their environment and diet. There are many of them at beaches where the waves are calm.',
+            self::FIELD_CATEGORY => 'Sea Slug Pokémon',
             self::FIELD_ATTACK => 169,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 244,
@@ -7126,6 +8000,8 @@ class PokemonData
         Pokemon::GASTRODON | FormsAlias::GASTRODON_WEST_SEA => [
             self::FIELD_NAME => 'Gastrodon (West Sea)',
             self::FIELD_NAME_SHORT => 'Gastrodon',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Sea Slug Pokémon',
             self::FIELD_ATTACK => 169,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 244,
@@ -7142,6 +8018,8 @@ class PokemonData
         Pokemon::AMBIPOM => [
             self::FIELD_NAME => 'Ambipom',
             self::FIELD_NAME_SHORT => 'Ambipom',
+            self::FIELD_DESC => 'It uses its tails for everything. If it wraps both of its tails around you and gives you a squeeze, that\'s proof it really likes you.',
+            self::FIELD_CATEGORY => 'Long Tail Pokémon',
             self::FIELD_ATTACK => 205,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 181,
@@ -7157,6 +8035,8 @@ class PokemonData
         Pokemon::DRIFLOON => [
             self::FIELD_NAME => 'Drifloon',
             self::FIELD_NAME_SHORT => 'Drifloon',
+            self::FIELD_DESC => 'Wandering souls gathered together to form this Pokémon. When trying to make friends with children, Drifloon grabs them by the hand.',
+            self::FIELD_CATEGORY => 'Balloon Pokémon',
             self::FIELD_ATTACK => 117,
             self::FIELD_DEFENSE => 80,
             self::FIELD_STAMINA => 207,
@@ -7174,6 +8054,8 @@ class PokemonData
         Pokemon::DRIFBLIM => [
             self::FIELD_NAME => 'Drifblim',
             self::FIELD_NAME_SHORT => 'Drifblim',
+            self::FIELD_DESC => 'The raw material for the gas inside its body is souls. When its body starts to deflate, it\'s thought to carry away people and Pokémon.',
+            self::FIELD_CATEGORY => 'Blimp Pokémon',
             self::FIELD_ATTACK => 180,
             self::FIELD_DEFENSE => 102,
             self::FIELD_STAMINA => 312,
@@ -7190,6 +8072,8 @@ class PokemonData
         Pokemon::BUNEARY => [
             self::FIELD_NAME => 'Buneary',
             self::FIELD_NAME_SHORT => 'Buneary',
+            self::FIELD_DESC => 'The reason it keeps one ear rolled up is so it can launch a swift counterattack if it\'s attacked by an enemy.',
+            self::FIELD_CATEGORY => 'Rabbit Pokémon',
             self::FIELD_ATTACK => 130,
             self::FIELD_DEFENSE => 105,
             self::FIELD_STAMINA => 146,
@@ -7206,6 +8090,8 @@ class PokemonData
         Pokemon::LOPUNNY => [
             self::FIELD_NAME => 'Lopunny',
             self::FIELD_NAME_SHORT => 'Lopunny',
+            self::FIELD_DESC => 'It\'s notably wary and has a dislike of fighting, but at the same time, it can deliver powerful kicks with its lithe legs.',
+            self::FIELD_CATEGORY => 'Rabbit Pokémon',
             self::FIELD_ATTACK => 156,
             self::FIELD_DEFENSE => 194,
             self::FIELD_STAMINA => 163,
@@ -7221,6 +8107,8 @@ class PokemonData
         Pokemon::MISMAGIUS => [
             self::FIELD_NAME => 'Mismagius',
             self::FIELD_NAME_SHORT => 'Mismagius',
+            self::FIELD_DESC => 'Its muttered curses can cause awful headaches or terrifying visions that torment others.',
+            self::FIELD_CATEGORY => 'Magical Pokémon',
             self::FIELD_ATTACK => 211,
             self::FIELD_DEFENSE => 187,
             self::FIELD_STAMINA => 155,
@@ -7236,6 +8124,8 @@ class PokemonData
         Pokemon::HONCHKROW => [
             self::FIELD_NAME => 'Honchkrow',
             self::FIELD_NAME_SHORT => 'Honchkrow',
+            self::FIELD_DESC => 'Its goons take care of most of the fighting for it. The only time it dirties its own hands is in delivering a final blow to finish off an opponent.',
+            self::FIELD_CATEGORY => 'Big Boss Pokémon',
             self::FIELD_ATTACK => 243,
             self::FIELD_DEFENSE => 103,
             self::FIELD_STAMINA => 225,
@@ -7252,6 +8142,8 @@ class PokemonData
         Pokemon::GLAMEOW => [
             self::FIELD_NAME => 'Glameow',
             self::FIELD_NAME_SHORT => 'Glameow',
+            self::FIELD_DESC => 'When it\'s happy, Glameow demonstrates beautiful movements of its tail, like a dancing ribbon.',
+            self::FIELD_CATEGORY => 'Catty Pokémon',
             self::FIELD_ATTACK => 109,
             self::FIELD_DEFENSE => 82,
             self::FIELD_STAMINA => 135,
@@ -7268,6 +8160,8 @@ class PokemonData
         Pokemon::PURUGLY => [
             self::FIELD_NAME => 'Purugly',
             self::FIELD_NAME_SHORT => 'Purugly',
+            self::FIELD_DESC => 'To make itself appear intimidatingly beefy, it tightly cinches its waist with its twin tails.',
+            self::FIELD_CATEGORY => 'Tiger Cat Pokémon',
             self::FIELD_ATTACK => 172,
             self::FIELD_DEFENSE => 133,
             self::FIELD_STAMINA => 174,
@@ -7283,6 +8177,8 @@ class PokemonData
         Pokemon::CHINGLING => [
             self::FIELD_NAME => 'Chingling',
             self::FIELD_NAME_SHORT => 'Chingling',
+            self::FIELD_DESC => 'There is an orb inside its mouth. When it hops, the orb bounces all over and makes a ringing sound.',
+            self::FIELD_CATEGORY => 'Bell Pokémon',
             self::FIELD_ATTACK => 114,
             self::FIELD_DEFENSE => 94,
             self::FIELD_STAMINA => 128,
@@ -7299,6 +8195,8 @@ class PokemonData
         Pokemon::STUNKY => [
             self::FIELD_NAME => 'Stunky',
             self::FIELD_NAME_SHORT => 'Stunky',
+            self::FIELD_DESC => 'It protects itself by spraying a noxious fluid from its rear. The stench lingers for 24 hours.',
+            self::FIELD_CATEGORY => 'Skunk Pokémon',
             self::FIELD_ATTACK => 121,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 160,
@@ -7316,6 +8214,8 @@ class PokemonData
         Pokemon::SKUNTANK => [
             self::FIELD_NAME => 'Skuntank',
             self::FIELD_NAME_SHORT => 'Skuntank',
+            self::FIELD_DESC => 'It sprays a stinky fluid from its tail. The fluid smells worse the longer it is allowed to fester.',
+            self::FIELD_CATEGORY => 'Skunk Pokémon',
             self::FIELD_ATTACK => 184,
             self::FIELD_DEFENSE => 132,
             self::FIELD_STAMINA => 230,
@@ -7332,6 +8232,8 @@ class PokemonData
         Pokemon::BRONZOR => [
             self::FIELD_NAME => 'Bronzor',
             self::FIELD_NAME_SHORT => 'Bronzor',
+            self::FIELD_DESC => 'Implements shaped like it were discovered in ancient tombs. It is unknown if they are related.',
+            self::FIELD_CATEGORY => 'Bronze Pokémon',
             self::FIELD_ATTACK => 43,
             self::FIELD_DEFENSE => 154,
             self::FIELD_STAMINA => 149,
@@ -7349,6 +8251,8 @@ class PokemonData
         Pokemon::BRONZONG => [
             self::FIELD_NAME => 'Bronzong',
             self::FIELD_NAME_SHORT => 'Bronzong',
+            self::FIELD_DESC => 'Ancient people believed that petitioning Bronzong for rain was the way to make crops grow.',
+            self::FIELD_CATEGORY => 'Bronze Bell Pokémon',
             self::FIELD_ATTACK => 161,
             self::FIELD_DEFENSE => 213,
             self::FIELD_STAMINA => 167,
@@ -7365,6 +8269,8 @@ class PokemonData
         Pokemon::BONSLY => [
             self::FIELD_NAME => 'Bonsly',
             self::FIELD_NAME_SHORT => 'Bonsly',
+            self::FIELD_DESC => 'If its body gets too damp, it will die. So, in a process reminiscent of sweating, its eyes expel moisture.',
+            self::FIELD_CATEGORY => 'Bonsai Pokémon',
             self::FIELD_ATTACK => 124,
             self::FIELD_DEFENSE => 133,
             self::FIELD_STAMINA => 137,
@@ -7381,6 +8287,8 @@ class PokemonData
         Pokemon::MIME_JR => [
             self::FIELD_NAME => 'Mime Jr.',
             self::FIELD_NAME_SHORT => 'Mime Jr.',
+            self::FIELD_DESC => 'When this gifted mimic surprises an opponent, Mime Jr. feels so happy that it ends up forgetting it was imitating something.',
+            self::FIELD_CATEGORY => 'Mime Pokémon',
             self::FIELD_ATTACK => 125,
             self::FIELD_DEFENSE => 142,
             self::FIELD_STAMINA => 85,
@@ -7398,6 +8306,8 @@ class PokemonData
         Pokemon::HAPPINY => [
             self::FIELD_NAME => 'Happiny',
             self::FIELD_NAME_SHORT => 'Happiny',
+            self::FIELD_DESC => 'When it sees something round and white, Happiny puts it into the pouch on its stomach. It sometimes becomes overloaded and can\'t move.',
+            self::FIELD_CATEGORY => 'Playhouse Pokémon',
             self::FIELD_ATTACK => 25,
             self::FIELD_DEFENSE => 77,
             self::FIELD_STAMINA => 225,
@@ -7414,6 +8324,8 @@ class PokemonData
         Pokemon::CHATOT => [
             self::FIELD_NAME => 'Chatot',
             self::FIELD_NAME_SHORT => 'Chatot',
+            self::FIELD_DESC => 'It can learn and speak human words. If they gather, they all learn the same saying.',
+            self::FIELD_CATEGORY => 'Music Note Pokémon',
             self::FIELD_ATTACK => 183,
             self::FIELD_DEFENSE => 91,
             self::FIELD_STAMINA => 183,
@@ -7430,6 +8342,8 @@ class PokemonData
         Pokemon::SPIRITOMB => [
             self::FIELD_NAME => 'Spiritomb',
             self::FIELD_NAME_SHORT => 'Spiritomb',
+            self::FIELD_DESC => 'It was bound to a fissure in an odd keystone as punishment for misdeeds 500 years ago.',
+            self::FIELD_CATEGORY => 'Forbidden Pokémon',
             self::FIELD_ATTACK => 169,
             self::FIELD_DEFENSE => 199,
             self::FIELD_STAMINA => 137,
@@ -7446,6 +8360,8 @@ class PokemonData
         Pokemon::GIBLE => [
             self::FIELD_NAME => 'Gible',
             self::FIELD_NAME_SHORT => 'Gible',
+            self::FIELD_DESC => 'Its original home is an area much hotter than Alola. If you\'re planning to live with one, your heating bill will soar.',
+            self::FIELD_CATEGORY => 'Land Shark Pokémon',
             self::FIELD_ATTACK => 124,
             self::FIELD_DEFENSE => 84,
             self::FIELD_STAMINA => 151,
@@ -7463,6 +8379,8 @@ class PokemonData
         Pokemon::GABITE => [
             self::FIELD_NAME => 'Gabite',
             self::FIELD_NAME_SHORT => 'Gabite',
+            self::FIELD_DESC => 'It sheds its skin and gradually grows larger. Its scales can be ground into a powder and used as raw materials for traditional medicine.',
+            self::FIELD_CATEGORY => 'Cave Pokémon',
             self::FIELD_ATTACK => 172,
             self::FIELD_DEFENSE => 125,
             self::FIELD_STAMINA => 169,
@@ -7480,6 +8398,8 @@ class PokemonData
         Pokemon::GARCHOMP => [
             self::FIELD_NAME => 'Garchomp',
             self::FIELD_NAME_SHORT => 'Garchomp',
+            self::FIELD_DESC => 'Its fine scales don\'t just reduce wind resistance—their sharp edges also cause injury to any opponent who attacks it.',
+            self::FIELD_CATEGORY => 'Mach Pokémon',
             self::FIELD_ATTACK => 261,
             self::FIELD_DEFENSE => 193,
             self::FIELD_STAMINA => 239,
@@ -7496,6 +8416,8 @@ class PokemonData
         Pokemon::MUNCHLAX => [
             self::FIELD_NAME => 'Munchlax',
             self::FIELD_NAME_SHORT => 'Munchlax',
+            self::FIELD_DESC => 'Anything that looks edible, Munchlax will go on and swallow whole. Its stomach is tough enough to handle it even if the food has gone rotten.',
+            self::FIELD_CATEGORY => 'Big Eater Pokémon',
             self::FIELD_ATTACK => 137,
             self::FIELD_DEFENSE => 117,
             self::FIELD_STAMINA => 286,
@@ -7512,6 +8434,8 @@ class PokemonData
         Pokemon::RIOLU => [
             self::FIELD_NAME => 'Riolu',
             self::FIELD_NAME_SHORT => 'Riolu',
+            self::FIELD_DESC => 'It uses waves called auras to communicate with others of its kind. It doesn\'t make any noise during this time, so its enemies can\'t detect it.',
+            self::FIELD_CATEGORY => 'Emanation Pokémon',
             self::FIELD_ATTACK => 127,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 120,
@@ -7528,6 +8452,8 @@ class PokemonData
         Pokemon::LUCARIO => [
             self::FIELD_NAME => 'Lucario',
             self::FIELD_NAME_SHORT => 'Lucario',
+            self::FIELD_DESC => 'Lucario reads its opponent\'s feelings with its aura waves. It finds out things it would rather not know, so it gets stressed out easily.',
+            self::FIELD_CATEGORY => 'Aura Pokémon',
             self::FIELD_ATTACK => 236,
             self::FIELD_DEFENSE => 144,
             self::FIELD_STAMINA => 172,
@@ -7544,6 +8470,8 @@ class PokemonData
         Pokemon::HIPPOPOTAS => [
             self::FIELD_NAME => 'Hippopotas',
             self::FIELD_NAME_SHORT => 'Hippopotas',
+            self::FIELD_DESC => 'It enshrouds itself with sand to protect itself from germs. It does not enjoy getting wet.',
+            self::FIELD_CATEGORY => 'Hippo Pokémon',
             self::FIELD_ATTACK => 124,
             self::FIELD_DEFENSE => 118,
             self::FIELD_STAMINA => 169,
@@ -7560,6 +8488,8 @@ class PokemonData
         Pokemon::HIPPOWDON => [
             self::FIELD_NAME => 'Hippowdon',
             self::FIELD_NAME_SHORT => 'Hippowdon',
+            self::FIELD_DESC => 'It blasts internally stored sand from ports on its body to create a towering twister for attack.',
+            self::FIELD_CATEGORY => 'Heavyweight Pokémon',
             self::FIELD_ATTACK => 201,
             self::FIELD_DEFENSE => 191,
             self::FIELD_STAMINA => 239,
@@ -7575,6 +8505,8 @@ class PokemonData
         Pokemon::SKORUPI => [
             self::FIELD_NAME => 'Skorupi',
             self::FIELD_NAME_SHORT => 'Skorupi',
+            self::FIELD_DESC => 'It burrows under the sand to lie in wait for prey. Its tail claws can inject its prey with a savage poison.',
+            self::FIELD_CATEGORY => 'Scorpion Pokémon',
             self::FIELD_ATTACK => 93,
             self::FIELD_DEFENSE => 151,
             self::FIELD_STAMINA => 120,
@@ -7592,6 +8524,8 @@ class PokemonData
         Pokemon::DRAPION => [
             self::FIELD_NAME => 'Drapion',
             self::FIELD_NAME_SHORT => 'Drapion',
+            self::FIELD_DESC => 'It has the power in its clawed arms to make scrap of a car. The tips of its claws release poison.',
+            self::FIELD_CATEGORY => 'Ogre Scorpion Pokémon',
             self::FIELD_ATTACK => 180,
             self::FIELD_DEFENSE => 202,
             self::FIELD_STAMINA => 172,
@@ -7608,6 +8542,8 @@ class PokemonData
         Pokemon::CROAGUNK => [
             self::FIELD_NAME => 'Croagunk',
             self::FIELD_NAME_SHORT => 'Croagunk',
+            self::FIELD_DESC => 'Inflating its poison sacs, it fills the area with an odd sound and hits flinching opponents with a poison jab.',
+            self::FIELD_CATEGORY => 'Toxic Mouth Pokémon',
             self::FIELD_ATTACK => 116,
             self::FIELD_DEFENSE => 76,
             self::FIELD_STAMINA => 134,
@@ -7625,6 +8561,8 @@ class PokemonData
         Pokemon::TOXICROAK => [
             self::FIELD_NAME => 'Toxicroak',
             self::FIELD_NAME_SHORT => 'Toxicroak',
+            self::FIELD_DESC => 'Its knuckle claws secrete a toxin so vile that even a scratch could prove fatal.',
+            self::FIELD_CATEGORY => 'Toxic Mouth Pokémon',
             self::FIELD_ATTACK => 211,
             self::FIELD_DEFENSE => 133,
             self::FIELD_STAMINA => 195,
@@ -7641,6 +8579,8 @@ class PokemonData
         Pokemon::CARNIVINE => [
             self::FIELD_NAME => 'Carnivine',
             self::FIELD_NAME_SHORT => 'Carnivine',
+            self::FIELD_DESC => 'It binds itself to trees in marshes. It attracts prey with its sweet-smelling drool and gulps them down.',
+            self::FIELD_CATEGORY => 'Bug Catcher Pokémon',
             self::FIELD_ATTACK => 187,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 179,
@@ -7656,6 +8596,8 @@ class PokemonData
         Pokemon::FINNEON => [
             self::FIELD_NAME => 'Finneon',
             self::FIELD_NAME_SHORT => 'Finneon',
+            self::FIELD_DESC => 'It lures in prey with its shining tail fins. It stays near the surface during the day and moves to the depths when night falls.',
+            self::FIELD_CATEGORY => 'Wing Fish Pokémon',
             self::FIELD_ATTACK => 96,
             self::FIELD_DEFENSE => 116,
             self::FIELD_STAMINA => 135,
@@ -7672,6 +8614,8 @@ class PokemonData
         Pokemon::LUMINEON => [
             self::FIELD_NAME => 'Lumineon',
             self::FIELD_NAME_SHORT => 'Lumineon',
+            self::FIELD_DESC => 'They traverse the deep waters as if crawling over the seafloor. The fantastic lights of its fins shine like stars in the night sky.',
+            self::FIELD_CATEGORY => 'Neon Pokémon',
             self::FIELD_ATTACK => 142,
             self::FIELD_DEFENSE => 170,
             self::FIELD_STAMINA => 170,
@@ -7687,6 +8631,8 @@ class PokemonData
         Pokemon::MANTYKE => [
             self::FIELD_NAME => 'Mantyke',
             self::FIELD_NAME_SHORT => 'Mantyke',
+            self::FIELD_DESC => 'Mantyke are friendly toward people and will approach boats closely. The patterns on their backs differ depending on their habitat.',
+            self::FIELD_CATEGORY => 'Kite Pokémon',
             self::FIELD_ATTACK => 105,
             self::FIELD_DEFENSE => 179,
             self::FIELD_STAMINA => 128,
@@ -7704,6 +8650,8 @@ class PokemonData
         Pokemon::SNOVER => [
             self::FIELD_NAME => 'Snover',
             self::FIELD_NAME_SHORT => 'Snover',
+            self::FIELD_DESC => 'In the spring, it grows berries with the texture of frozen treats around its belly.',
+            self::FIELD_CATEGORY => 'Frost Tree Pokémon',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 105,
             self::FIELD_STAMINA => 155,
@@ -7721,6 +8669,8 @@ class PokemonData
         Pokemon::ABOMASNOW => [
             self::FIELD_NAME => 'Abomasnow',
             self::FIELD_NAME_SHORT => 'Abomasnow',
+            self::FIELD_DESC => 'It lives a quiet life on mountains that are perpetually covered in snow. It hides itself by whipping up blizzards.',
+            self::FIELD_CATEGORY => 'Frost Tree Pokémon',
             self::FIELD_ATTACK => 178,
             self::FIELD_DEFENSE => 158,
             self::FIELD_STAMINA => 207,
@@ -7738,6 +8688,8 @@ class PokemonData
         Pokemon::WEAVILE => [
             self::FIELD_NAME => 'Weavile',
             self::FIELD_NAME_SHORT => 'Weavile',
+            self::FIELD_DESC => 'Thanks to its increased intelligence, scrapping over food is a thing of the past. A scratch from its claws will give you a case of frostbite!',
+            self::FIELD_CATEGORY => 'Sharp Claw Pokémon',
             self::FIELD_ATTACK => 243,
             self::FIELD_DEFENSE => 171,
             self::FIELD_STAMINA => 172,
@@ -7754,6 +8706,8 @@ class PokemonData
         Pokemon::MAGNEZONE => [
             self::FIELD_NAME => 'Magnezone',
             self::FIELD_NAME_SHORT => 'Magnezone',
+            self::FIELD_DESC => 'There are still people who believe that this Pokémon came from outer space. It emanates a powerful magnetic field.',
+            self::FIELD_CATEGORY => 'Magnet Area Pokémon',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 205,
             self::FIELD_STAMINA => 172,
@@ -7770,6 +8724,8 @@ class PokemonData
         Pokemon::LICKILICKY => [
             self::FIELD_NAME => 'Lickilicky',
             self::FIELD_NAME_SHORT => 'Lickilicky',
+            self::FIELD_DESC => 'It uses its tongue much more skillfully than its hands or its feet. It can deftly pick up a single small bean with its tongue.',
+            self::FIELD_CATEGORY => 'Licking Pokémon',
             self::FIELD_ATTACK => 161,
             self::FIELD_DEFENSE => 181,
             self::FIELD_STAMINA => 242,
@@ -7786,6 +8742,8 @@ class PokemonData
         Pokemon::RHYPERIOR => [
             self::FIELD_NAME => 'Rhyperior',
             self::FIELD_NAME_SHORT => 'Rhyperior',
+            self::FIELD_DESC => 'It puts rocks in holes in its palms and uses its muscles to shoot them. Geodude are shot at rare times.',
+            self::FIELD_CATEGORY => 'Drill Pokémon',
             self::FIELD_ATTACK => 241,
             self::FIELD_DEFENSE => 190,
             self::FIELD_STAMINA => 251,
@@ -7803,6 +8761,8 @@ class PokemonData
         Pokemon::TANGROWTH => [
             self::FIELD_NAME => 'Tangrowth',
             self::FIELD_NAME_SHORT => 'Tangrowth',
+            self::FIELD_DESC => 'Its vines grow so profusely that, in the warm season, you can\'t even see its eyes.',
+            self::FIELD_CATEGORY => 'Vine Pokémon',
             self::FIELD_ATTACK => 207,
             self::FIELD_DEFENSE => 184,
             self::FIELD_STAMINA => 225,
@@ -7818,6 +8778,8 @@ class PokemonData
         Pokemon::ELECTIVIRE => [
             self::FIELD_NAME => 'Electivire',
             self::FIELD_NAME_SHORT => 'Electivire',
+            self::FIELD_DESC => 'A single Electivire can provide enough electricity for all the buildings in a big city for a year.',
+            self::FIELD_CATEGORY => 'Thunderbolt Pokémon',
             self::FIELD_ATTACK => 249,
             self::FIELD_DEFENSE => 163,
             self::FIELD_STAMINA => 181,
@@ -7834,6 +8796,8 @@ class PokemonData
         Pokemon::MAGMORTAR => [
             self::FIELD_NAME => 'Magmortar',
             self::FIELD_NAME_SHORT => 'Magmortar',
+            self::FIELD_DESC => 'Magmortar takes down its enemies by shooting fireballs, which burn them to a blackened crisp. It avoids this method when hunting prey.',
+            self::FIELD_CATEGORY => 'Blast Pokémon',
             self::FIELD_ATTACK => 247,
             self::FIELD_DEFENSE => 172,
             self::FIELD_STAMINA => 181,
@@ -7850,6 +8814,8 @@ class PokemonData
         Pokemon::TOGEKISS => [
             self::FIELD_NAME => 'Togekiss',
             self::FIELD_NAME_SHORT => 'Togekiss',
+            self::FIELD_DESC => 'It shares many blessings with people who respect one another\'s rights and avoid needless strife.',
+            self::FIELD_CATEGORY => 'Jubilee Pokémon',
             self::FIELD_ATTACK => 225,
             self::FIELD_DEFENSE => 217,
             self::FIELD_STAMINA => 198,
@@ -7866,6 +8832,8 @@ class PokemonData
         Pokemon::YANMEGA => [
             self::FIELD_NAME => 'Yanmega',
             self::FIELD_NAME_SHORT => 'Yanmega',
+            self::FIELD_DESC => 'This six-legged Pokémon is easily capable of transporting an adult in flight. The wings on its tail help it stay balanced.',
+            self::FIELD_CATEGORY => 'Ogre Darner Pokémon',
             self::FIELD_ATTACK => 231,
             self::FIELD_DEFENSE => 156,
             self::FIELD_STAMINA => 200,
@@ -7882,6 +8850,8 @@ class PokemonData
         Pokemon::LEAFEON => [
             self::FIELD_NAME => 'Leafeon',
             self::FIELD_NAME_SHORT => 'Leafeon',
+            self::FIELD_DESC => 'It gets its nutrition from photosynthesis. It lives a quiet life deep in forests where clean rivers flow.',
+            self::FIELD_CATEGORY => 'Verdant Pokémon',
             self::FIELD_ATTACK => 216,
             self::FIELD_DEFENSE => 219,
             self::FIELD_STAMINA => 163,
@@ -7898,6 +8868,8 @@ class PokemonData
         Pokemon::GLACEON => [
             self::FIELD_NAME => 'Glaceon',
             self::FIELD_NAME_SHORT => 'Glaceon',
+            self::FIELD_DESC => 'It can instantaneously freeze any moisture that\'s around it, creating ice pellets to shoot at its prey.',
+            self::FIELD_CATEGORY => 'Fresh Snow Pokémon',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 205,
             self::FIELD_STAMINA => 163,
@@ -7914,6 +8886,8 @@ class PokemonData
         Pokemon::GLISCOR => [
             self::FIELD_NAME => 'Gliscor',
             self::FIELD_NAME_SHORT => 'Gliscor',
+            self::FIELD_DESC => 'Its flight is soundless. It uses its lengthy tail to carry off its prey... Then its elongated fangs do the rest.',
+            self::FIELD_CATEGORY => 'Fang Scorpion Pokémon',
             self::FIELD_ATTACK => 185,
             self::FIELD_DEFENSE => 222,
             self::FIELD_STAMINA => 181,
@@ -7930,6 +8904,8 @@ class PokemonData
         Pokemon::MAMOSWINE => [
             self::FIELD_NAME => 'Mamoswine',
             self::FIELD_NAME_SHORT => 'Mamoswine',
+            self::FIELD_DESC => 'Its impressive tusks are made of ice. The population thinned when it turned warm after the ice age.',
+            self::FIELD_CATEGORY => 'Twin Tusk Pokémon',
             self::FIELD_ATTACK => 247,
             self::FIELD_DEFENSE => 146,
             self::FIELD_STAMINA => 242,
@@ -7947,6 +8923,8 @@ class PokemonData
         Pokemon::PORYGON_Z => [
             self::FIELD_NAME => 'Porygon-Z',
             self::FIELD_NAME_SHORT => 'Porygon-Z',
+            self::FIELD_DESC => 'A faulty update was added to its programming. Its behavior is noticeably strange, so the experiment may have been a failure.',
+            self::FIELD_CATEGORY => 'Virtual Pokémon',
             self::FIELD_ATTACK => 264,
             self::FIELD_DEFENSE => 150,
             self::FIELD_STAMINA => 198,
@@ -7963,6 +8941,8 @@ class PokemonData
         Pokemon::GALLADE => [
             self::FIELD_NAME => 'Gallade',
             self::FIELD_NAME_SHORT => 'Gallade',
+            self::FIELD_DESC => 'A master of courtesy and swordsmanship, it fights using extending swords on its elbows.',
+            self::FIELD_CATEGORY => 'Blade Pokémon',
             self::FIELD_ATTACK => 237,
             self::FIELD_DEFENSE => 195,
             self::FIELD_STAMINA => 169,
@@ -7980,6 +8960,8 @@ class PokemonData
         Pokemon::PROBOPASS => [
             self::FIELD_NAME => 'Probopass',
             self::FIELD_NAME_SHORT => 'Probopass',
+            self::FIELD_DESC => 'It uses three small units to catch prey and battle enemies. The main body mostly just gives orders.',
+            self::FIELD_CATEGORY => 'Compass Pokémon',
             self::FIELD_ATTACK => 135,
             self::FIELD_DEFENSE => 275,
             self::FIELD_STAMINA => 155,
@@ -7996,6 +8978,8 @@ class PokemonData
         Pokemon::DUSKNOIR => [
             self::FIELD_NAME => 'Dusknoir',
             self::FIELD_NAME_SHORT => 'Dusknoir',
+            self::FIELD_DESC => 'The antenna on its head captures radio waves from the world of spirits that command it to take people there.',
+            self::FIELD_CATEGORY => 'Gripper Pokémon',
             self::FIELD_ATTACK => 180,
             self::FIELD_DEFENSE => 254,
             self::FIELD_STAMINA => 128,
@@ -8011,6 +8995,8 @@ class PokemonData
         Pokemon::FROSLASS => [
             self::FIELD_NAME => 'Froslass',
             self::FIELD_NAME_SHORT => 'Froslass',
+            self::FIELD_DESC => 'It\'s said that on nights of terrible blizzards, it comes down to human settlements. If you hear it knocking at your door, do not open it!',
+            self::FIELD_CATEGORY => 'Snow Land Pokémon',
             self::FIELD_ATTACK => 171,
             self::FIELD_DEFENSE => 150,
             self::FIELD_STAMINA => 172,
@@ -8027,6 +9013,8 @@ class PokemonData
         Pokemon::ROTOM | FormsAlias::ROTOM_NORMAL => [
             self::FIELD_NAME => 'Rotom',
             self::FIELD_NAME_SHORT => 'Rotom',
+            self::FIELD_DESC => 'Its body is composed of plasma. It is known to infiltrate electronic devices and wreak havoc.',
+            self::FIELD_CATEGORY => 'Plasma Pokémon',
             self::FIELD_ATTACK => 185,
             self::FIELD_DEFENSE => 159,
             self::FIELD_STAMINA => 137,
@@ -8043,6 +9031,8 @@ class PokemonData
         Pokemon::ROTOM | FormsAlias::ROTOM_FAN => [
             self::FIELD_NAME => 'Rotom (Fan)',
             self::FIELD_NAME_SHORT => 'Rotom',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Plasma Pokémon',
             self::FIELD_ATTACK => 204,
             self::FIELD_DEFENSE => 219,
             self::FIELD_STAMINA => 137,
@@ -8059,6 +9049,8 @@ class PokemonData
         Pokemon::ROTOM | FormsAlias::ROTOM_FROST => [
             self::FIELD_NAME => 'Rotom (Frost)',
             self::FIELD_NAME_SHORT => 'Rotom',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Plasma Pokémon',
             self::FIELD_ATTACK => 204,
             self::FIELD_DEFENSE => 219,
             self::FIELD_STAMINA => 137,
@@ -8075,6 +9067,8 @@ class PokemonData
         Pokemon::ROTOM | FormsAlias::ROTOM_HEAT => [
             self::FIELD_NAME => 'Rotom (Fan)',
             self::FIELD_NAME_SHORT => 'Rotom',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Plasma Pokémon',
             self::FIELD_ATTACK => 204,
             self::FIELD_DEFENSE => 219,
             self::FIELD_STAMINA => 137,
@@ -8091,6 +9085,8 @@ class PokemonData
         Pokemon::ROTOM | FormsAlias::ROTOM_MOW => [
             self::FIELD_NAME => 'Rotom (Fan)',
             self::FIELD_NAME_SHORT => 'Rotom',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Plasma Pokémon',
             self::FIELD_ATTACK => 204,
             self::FIELD_DEFENSE => 219,
             self::FIELD_STAMINA => 137,
@@ -8107,6 +9103,8 @@ class PokemonData
         Pokemon::ROTOM | FormsAlias::ROTOM_WASH => [
             self::FIELD_NAME => 'Rotom (Wash)',
             self::FIELD_NAME_SHORT => 'Rotom',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Plasma Pokémon',
             self::FIELD_ATTACK => 204,
             self::FIELD_DEFENSE => 219,
             self::FIELD_STAMINA => 137,
@@ -8123,6 +9121,8 @@ class PokemonData
         Pokemon::UXIE => [
             self::FIELD_NAME => 'Uxie',
             self::FIELD_NAME_SHORT => 'Uxie',
+            self::FIELD_DESC => 'It is said that its emergence gave humans the intelligence to improve their quality of life.',
+            self::FIELD_CATEGORY => 'Knowledge Pokémon',
             self::FIELD_ATTACK => 156,
             self::FIELD_DEFENSE => 270,
             self::FIELD_STAMINA => 181,
@@ -8138,6 +9138,8 @@ class PokemonData
         Pokemon::MESPRIT => [
             self::FIELD_NAME => 'Mesprit',
             self::FIELD_NAME_SHORT => 'Mesprit',
+            self::FIELD_DESC => 'It sleeps at the bottom of a lake. Its spirit is said to leave its body to fly on the lake\'s surface.',
+            self::FIELD_CATEGORY => 'Emotion Pokémon',
             self::FIELD_ATTACK => 212,
             self::FIELD_DEFENSE => 212,
             self::FIELD_STAMINA => 190,
@@ -8153,6 +9155,8 @@ class PokemonData
         Pokemon::AZELF => [
             self::FIELD_NAME => 'Azelf',
             self::FIELD_NAME_SHORT => 'Azelf',
+            self::FIELD_DESC => 'It is thought that Uxie, Mesprit, and Azelf all came from the same egg.',
+            self::FIELD_CATEGORY => 'Willpower Pokémon',
             self::FIELD_ATTACK => 270,
             self::FIELD_DEFENSE => 151,
             self::FIELD_STAMINA => 181,
@@ -8168,6 +9172,8 @@ class PokemonData
         Pokemon::DIALGA => [
             self::FIELD_NAME => 'Dialga',
             self::FIELD_NAME_SHORT => 'Dialga',
+            self::FIELD_DESC => 'It has the power to control time. It appears in Sinnoh-region myths as an ancient deity.',
+            self::FIELD_CATEGORY => 'Temporal Pokémon',
             self::FIELD_ATTACK => 275,
             self::FIELD_DEFENSE => 211,
             self::FIELD_STAMINA => 205,
@@ -8184,6 +9190,8 @@ class PokemonData
         Pokemon::PALKIA => [
             self::FIELD_NAME => 'Palkia',
             self::FIELD_NAME_SHORT => 'Palkia',
+            self::FIELD_DESC => 'It has the ability to distort space. It is described as a deity in Sinnoh-region mythology.',
+            self::FIELD_CATEGORY => 'Spatial Pokémon',
             self::FIELD_ATTACK => 280,
             self::FIELD_DEFENSE => 215,
             self::FIELD_STAMINA => 189,
@@ -8200,6 +9208,8 @@ class PokemonData
         Pokemon::HEATRAN => [
             self::FIELD_NAME => 'Heatran',
             self::FIELD_NAME_SHORT => 'Heatran',
+            self::FIELD_DESC => 'Boiling blood, like magma, circulates through its body. It makes its dwelling place in volcanic caves.',
+            self::FIELD_CATEGORY => 'Lava Dome Pokémon',
             self::FIELD_ATTACK => 251,
             self::FIELD_DEFENSE => 213,
             self::FIELD_STAMINA => 209,
@@ -8216,6 +9226,8 @@ class PokemonData
         Pokemon::REGIGIGAS => [
             self::FIELD_NAME => 'Regigigas',
             self::FIELD_NAME_SHORT => 'Regigigas',
+            self::FIELD_DESC => 'There is an enduring legend that states this Pokémon towed continents with ropes.',
+            self::FIELD_CATEGORY => 'Colossal Pokémon',
             self::FIELD_ATTACK => 287,
             self::FIELD_DEFENSE => 210,
             self::FIELD_STAMINA => 221,
@@ -8231,6 +9243,8 @@ class PokemonData
         Pokemon::GIRATINA | FormsAlias::GIRATINA_ORIGIN => [
             self::FIELD_NAME => 'Giratina (Origin Forme)',
             self::FIELD_NAME_SHORT => 'Giratina',
+            self::FIELD_DESC => 'It was banished for its violence. It silently gazed upon the old world from the Distortion World.',
+            self::FIELD_CATEGORY => 'Renegade Pokémon',
             self::FIELD_ATTACK => 225,
             self::FIELD_DEFENSE => 187,
             self::FIELD_STAMINA => 284,
@@ -8247,6 +9261,8 @@ class PokemonData
         Pokemon::GIRATINA | FormsAlias::GIRATINA_ALTERED => [
             self::FIELD_NAME => 'Giratina (Altered Forme)',
             self::FIELD_NAME_SHORT => 'Giratina',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Renegade Pokémon',
             self::FIELD_ATTACK => 187,
             self::FIELD_DEFENSE => 225,
             self::FIELD_STAMINA => 284,
@@ -8263,6 +9279,8 @@ class PokemonData
         Pokemon::CRESSELIA => [
             self::FIELD_NAME => 'Cresselia',
             self::FIELD_NAME_SHORT => 'Cresselia',
+            self::FIELD_DESC => 'Those who sleep holding Cresselia\'s feather are assured of joyful dreams. It is said to represent the crescent moon.',
+            self::FIELD_CATEGORY => 'Lunar Pokémon',
             self::FIELD_ATTACK => 152,
             self::FIELD_DEFENSE => 258,
             self::FIELD_STAMINA => 260,
@@ -8279,6 +9297,8 @@ class PokemonData
         Pokemon::PHIONE => [
             self::FIELD_NAME => 'Phione',
             self::FIELD_NAME_SHORT => 'Phione',
+            self::FIELD_DESC => 'It drifts in warm seas. It always returns to where it was born, no matter how far it may have drifted.',
+            self::FIELD_CATEGORY => 'Sea Drifter Pokémon',
             self::FIELD_ATTACK => 162,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 190,
@@ -8293,6 +9313,8 @@ class PokemonData
         Pokemon::MANAPHY => [
             self::FIELD_NAME => 'Manaphy',
             self::FIELD_NAME_SHORT => 'Manaphy',
+            self::FIELD_DESC => 'It starts its life with a wondrous power that permits it to bond with any kind of Pokémon.',
+            self::FIELD_CATEGORY => 'Seafaring Pokémon',
             self::FIELD_ATTACK => 210,
             self::FIELD_DEFENSE => 210,
             self::FIELD_STAMINA => 225,
@@ -8307,6 +9329,8 @@ class PokemonData
         Pokemon::DARKRAI => [
             self::FIELD_NAME => 'Darkrai',
             self::FIELD_NAME_SHORT => 'Darkrai',
+            self::FIELD_DESC => 'It can lull people to sleep and make them dream. It is active during nights of the new moon.',
+            self::FIELD_CATEGORY => 'Pitch-Black Pokémon',
             self::FIELD_ATTACK => 285,
             self::FIELD_DEFENSE => 198,
             self::FIELD_STAMINA => 172,
@@ -8322,6 +9346,8 @@ class PokemonData
         Pokemon::SHAYMIN | FormsAlias::SHAYMIN_LAND => [
             self::FIELD_NAME => 'Shaymin (Land Forme)',
             self::FIELD_NAME_SHORT => 'Shaymin',
+            self::FIELD_DESC => 'The blooming of Gracidea flowers confers the power of flight upon it. Feelings of gratitude are the message it delivers.',
+            self::FIELD_CATEGORY => 'Gratitude Pokémon',
             self::FIELD_ATTACK => 210,
             self::FIELD_DEFENSE => 210,
             self::FIELD_STAMINA => 225,
@@ -8336,6 +9362,8 @@ class PokemonData
         Pokemon::SHAYMIN | FormsAlias::SHAYMIN_SKY => [
             self::FIELD_NAME => 'Shaymin (Sky Forme)',
             self::FIELD_NAME_SHORT => 'Shaymin',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Gratitude Pokémon',
             self::FIELD_ATTACK => 261,
             self::FIELD_DEFENSE => 166,
             self::FIELD_STAMINA => 225,
@@ -8351,6 +9379,8 @@ class PokemonData
         Pokemon::ARCEUS | FormsAlias::ARCEUS_NORMAL => [
             self::FIELD_NAME => 'Arceus (Normal)',
             self::FIELD_NAME_SHORT => 'Arceus',
+            self::FIELD_DESC => 'It is told in mythology that this Pokémon was born before the universe even existed.',
+            self::FIELD_CATEGORY => 'Alpha Pokémon',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -8365,6 +9395,8 @@ class PokemonData
         Pokemon::ARCEUS | FormsAlias::ARCEUS_BUG => [
             self::FIELD_NAME => 'Arceus (Bug)',
             self::FIELD_NAME_SHORT => 'Arceus',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Alpha Pokémon',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -8379,6 +9411,8 @@ class PokemonData
         Pokemon::ARCEUS | FormsAlias::ARCEUS_DARK => [
             self::FIELD_NAME => 'Arceus (Dark)',
             self::FIELD_NAME_SHORT => 'Arceus',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Alpha Pokémon',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -8393,6 +9427,8 @@ class PokemonData
         Pokemon::ARCEUS | FormsAlias::ARCEUS_DRAGON => [
             self::FIELD_NAME => 'Arceus (Dragon)',
             self::FIELD_NAME_SHORT => 'Arceus',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Alpha Pokémon',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -8407,6 +9443,8 @@ class PokemonData
         Pokemon::ARCEUS | FormsAlias::ARCEUS_ELECTRIC => [
             self::FIELD_NAME => 'Arceus (Electric)',
             self::FIELD_NAME_SHORT => 'Arceus',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Alpha Pokémon',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -8421,6 +9459,8 @@ class PokemonData
         Pokemon::ARCEUS | FormsAlias::ARCEUS_FAIRY => [
             self::FIELD_NAME => 'Arceus (Fairy)',
             self::FIELD_NAME_SHORT => 'Arceus',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Alpha Pokémon',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -8435,6 +9475,8 @@ class PokemonData
         Pokemon::ARCEUS | FormsAlias::ARCEUS_FIGHTING => [
             self::FIELD_NAME => 'Arceus (Fighting)',
             self::FIELD_NAME_SHORT => 'Arceus',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Alpha Pokémon',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -8449,6 +9491,8 @@ class PokemonData
         Pokemon::ARCEUS | FormsAlias::ARCEUS_FIRE => [
             self::FIELD_NAME => 'Arceus (Fire)',
             self::FIELD_NAME_SHORT => 'Arceus',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Alpha Pokémon',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -8463,6 +9507,8 @@ class PokemonData
         Pokemon::ARCEUS | FormsAlias::ARCEUS_FLYING => [
             self::FIELD_NAME => 'Arceus (Flying)',
             self::FIELD_NAME_SHORT => 'Arceus',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Alpha Pokémon',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -8477,6 +9523,8 @@ class PokemonData
         Pokemon::ARCEUS | FormsAlias::ARCEUS_GHOST => [
             self::FIELD_NAME => 'Arceus (Ghost)',
             self::FIELD_NAME_SHORT => 'Arceus',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Alpha Pokémon',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -8491,6 +9539,8 @@ class PokemonData
         Pokemon::ARCEUS | FormsAlias::ARCEUS_GRASS => [
             self::FIELD_NAME => 'Arceus (Grass)',
             self::FIELD_NAME_SHORT => 'Arceus',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Alpha Pokémon',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -8505,6 +9555,8 @@ class PokemonData
         Pokemon::ARCEUS | FormsAlias::ARCEUS_GROUND => [
             self::FIELD_NAME => 'Arceus (Ground)',
             self::FIELD_NAME_SHORT => 'Arceus',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Alpha Pokémon',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -8519,6 +9571,8 @@ class PokemonData
         Pokemon::ARCEUS | FormsAlias::ARCEUS_ICE => [
             self::FIELD_NAME => 'Arceus (Ice)',
             self::FIELD_NAME_SHORT => 'Arceus',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Alpha Pokémon',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -8533,6 +9587,8 @@ class PokemonData
         Pokemon::ARCEUS | FormsAlias::ARCEUS_POISON => [
             self::FIELD_NAME => 'Arceus (Poison)',
             self::FIELD_NAME_SHORT => 'Arceus',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Alpha Pokémon',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -8547,6 +9603,8 @@ class PokemonData
         Pokemon::ARCEUS | FormsAlias::ARCEUS_PSYCHIC => [
             self::FIELD_NAME => 'Arceus (Psychic)',
             self::FIELD_NAME_SHORT => 'Arceus',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Alpha Pokémon',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -8561,6 +9619,8 @@ class PokemonData
         Pokemon::ARCEUS | FormsAlias::ARCEUS_ROCK => [
             self::FIELD_NAME => 'Arceus (Rock)',
             self::FIELD_NAME_SHORT => 'Arceus',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Alpha Pokémon',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -8575,6 +9635,8 @@ class PokemonData
         Pokemon::ARCEUS | FormsAlias::ARCEUS_STEEL => [
             self::FIELD_NAME => 'Arceus (Steel)',
             self::FIELD_NAME_SHORT => 'Arceus',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Alpha Pokémon',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -8589,6 +9651,8 @@ class PokemonData
         Pokemon::ARCEUS | FormsAlias::ARCEUS_WATER => [
             self::FIELD_NAME => 'Arceus (Water)',
             self::FIELD_NAME_SHORT => 'Arceus',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Alpha Pokémon',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 238,
             self::FIELD_STAMINA => 237,
@@ -8603,6 +9667,8 @@ class PokemonData
         Pokemon::VICTINI => [
             self::FIELD_NAME => 'Victini',
             self::FIELD_NAME_SHORT => 'Victini',
+            self::FIELD_DESC => 'When it shares the infinite energy it creates, that being\'s entire body will be overflowing with power.',
+            self::FIELD_CATEGORY => 'Victory Pokémon',
             self::FIELD_ATTACK => 210,
             self::FIELD_DEFENSE => 210,
             self::FIELD_STAMINA => 225,
@@ -8618,6 +9684,8 @@ class PokemonData
         Pokemon::SNIVY => [
             self::FIELD_NAME => 'Snivy',
             self::FIELD_NAME_SHORT => 'Snivy',
+            self::FIELD_DESC => 'They photosynthesize by bathing their tails in sunlight. When they are not feeling well, their tails droop.',
+            self::FIELD_CATEGORY => 'Grass Snake Pokémon',
             self::FIELD_ATTACK => 88,
             self::FIELD_DEFENSE => 107,
             self::FIELD_STAMINA => 128,
@@ -8634,6 +9702,8 @@ class PokemonData
         Pokemon::SERVINE => [
             self::FIELD_NAME => 'Servine',
             self::FIELD_NAME_SHORT => 'Servine',
+            self::FIELD_DESC => 'When it gets dirty, its leaves can\'t be used in photosynthesis, so it always keeps itself clean.',
+            self::FIELD_CATEGORY => 'Grass Snake Pokémon',
             self::FIELD_ATTACK => 122,
             self::FIELD_DEFENSE => 152,
             self::FIELD_STAMINA => 155,
@@ -8650,6 +9720,8 @@ class PokemonData
         Pokemon::SERPERIOR => [
             self::FIELD_NAME => 'Serperior',
             self::FIELD_NAME_SHORT => 'Serperior',
+            self::FIELD_DESC => 'It can stop its opponents\' movements with just a glare. It takes in solar energy and boosts it internally.',
+            self::FIELD_CATEGORY => 'Regal Pokémon',
             self::FIELD_ATTACK => 161,
             self::FIELD_DEFENSE => 204,
             self::FIELD_STAMINA => 181,
@@ -8665,6 +9737,8 @@ class PokemonData
         Pokemon::TEPIG => [
             self::FIELD_NAME => 'Tepig',
             self::FIELD_NAME_SHORT => 'Tepig',
+            self::FIELD_DESC => 'It loves to eat roasted berries, but sometimes it gets too excited and burns them to a crisp.',
+            self::FIELD_CATEGORY => 'Fire Pig Pokémon',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 85,
             self::FIELD_STAMINA => 163,
@@ -8681,6 +9755,8 @@ class PokemonData
         Pokemon::PIGNITE => [
             self::FIELD_NAME => 'Pignite',
             self::FIELD_NAME_SHORT => 'Pignite',
+            self::FIELD_DESC => 'When its internal fire flares up, its movements grow sharper and faster. When in trouble, it emits smoke.',
+            self::FIELD_CATEGORY => 'Fire Pig Pokémon',
             self::FIELD_ATTACK => 173,
             self::FIELD_DEFENSE => 106,
             self::FIELD_STAMINA => 207,
@@ -8698,6 +9774,8 @@ class PokemonData
         Pokemon::EMBOAR => [
             self::FIELD_NAME => 'Emboar',
             self::FIELD_NAME_SHORT => 'Emboar',
+            self::FIELD_DESC => 'It has mastered fast and powerful fighting moves. It grows a beard of fire.',
+            self::FIELD_CATEGORY => 'Mega Fire Pig Pokémon',
             self::FIELD_ATTACK => 235,
             self::FIELD_DEFENSE => 127,
             self::FIELD_STAMINA => 242,
@@ -8714,6 +9792,8 @@ class PokemonData
         Pokemon::OSHAWOTT => [
             self::FIELD_NAME => 'Oshawott',
             self::FIELD_NAME_SHORT => 'Oshawott',
+            self::FIELD_DESC => 'It fights using the scalchop on its stomach. In response to an attack, it retaliates immediately by slashing.',
+            self::FIELD_CATEGORY => 'Sea Otter Pokémon',
             self::FIELD_ATTACK => 117,
             self::FIELD_DEFENSE => 85,
             self::FIELD_STAMINA => 146,
@@ -8730,6 +9810,8 @@ class PokemonData
         Pokemon::DEWOTT => [
             self::FIELD_NAME => 'Dewott',
             self::FIELD_NAME_SHORT => 'Dewott',
+            self::FIELD_DESC => 'As a result of strict training, each Dewott learns different forms for using the scalchops.',
+            self::FIELD_CATEGORY => 'Discipline Pokémon',
             self::FIELD_ATTACK => 159,
             self::FIELD_DEFENSE => 116,
             self::FIELD_STAMINA => 181,
@@ -8746,6 +9828,8 @@ class PokemonData
         Pokemon::SAMUROTT => [
             self::FIELD_NAME => 'Samurott',
             self::FIELD_NAME_SHORT => 'Samurott',
+            self::FIELD_DESC => 'One swing of the sword incorporated in its armor can fell an opponent. A simple glare from one of them quiets everybody.',
+            self::FIELD_CATEGORY => 'Formidable Pokémon',
             self::FIELD_ATTACK => 212,
             self::FIELD_DEFENSE => 157,
             self::FIELD_STAMINA => 216,
@@ -8761,6 +9845,8 @@ class PokemonData
         Pokemon::PATRAT => [
             self::FIELD_NAME => 'Patrat',
             self::FIELD_NAME_SHORT => 'Patrat',
+            self::FIELD_DESC => 'Extremely cautious, one of them will always be on the lookout, but it won\'t notice a foe coming from behind.',
+            self::FIELD_CATEGORY => 'Scout Pokémon',
             self::FIELD_ATTACK => 98,
             self::FIELD_DEFENSE => 73,
             self::FIELD_STAMINA => 128,
@@ -8777,6 +9863,8 @@ class PokemonData
         Pokemon::WATCHDOG => [
             self::FIELD_NAME => 'Watchog',
             self::FIELD_NAME_SHORT => 'Watchog',
+            self::FIELD_DESC => 'When they see an enemy, their tails stand high, and they spit the seeds of berries stored in their cheek pouches.',
+            self::FIELD_CATEGORY => 'Lookout Pokémon',
             self::FIELD_ATTACK => 165,
             self::FIELD_DEFENSE => 139,
             self::FIELD_STAMINA => 155,
@@ -8792,6 +9880,8 @@ class PokemonData
         Pokemon::LILLIPUP => [
             self::FIELD_NAME => 'Lillipup',
             self::FIELD_NAME_SHORT => 'Lillipup',
+            self::FIELD_DESC => 'This Pokémon is popular with beginners because it\'s intelligent, obedient to its Trainer\'s commands, and easy to raise.',
+            self::FIELD_CATEGORY => 'Puppy Pokémon',
             self::FIELD_ATTACK => 107,
             self::FIELD_DEFENSE => 86,
             self::FIELD_STAMINA => 128,
@@ -8808,6 +9898,8 @@ class PokemonData
         Pokemon::HERDIER => [
             self::FIELD_NAME => 'Herdier',
             self::FIELD_NAME_SHORT => 'Herdier',
+            self::FIELD_DESC => 'It has been living with people for so long that portrayals of it can be found on the walls of caves from long, long ago.',
+            self::FIELD_CATEGORY => 'Loyal Dog Pokémon',
             self::FIELD_ATTACK => 145,
             self::FIELD_DEFENSE => 126,
             self::FIELD_STAMINA => 163,
@@ -8824,6 +9916,8 @@ class PokemonData
         Pokemon::STOUTLAND => [
             self::FIELD_NAME => 'Stoutland',
             self::FIELD_NAME_SHORT => 'Stoutland',
+            self::FIELD_DESC => 'Its fur is long and thick. A long time ago in cold regions, every household kept a Stoutland.',
+            self::FIELD_CATEGORY => 'Big-Hearted Pokémon',
             self::FIELD_ATTACK => 206,
             self::FIELD_DEFENSE => 182,
             self::FIELD_STAMINA => 198,
@@ -8839,6 +9933,8 @@ class PokemonData
         Pokemon::PURROLIN => [
             self::FIELD_NAME => 'Purrloin',
             self::FIELD_NAME_SHORT => 'Purrloin',
+            self::FIELD_DESC => 'They steal from people for fun, but their victims can\'t help but forgive them. Their deceptively cute act is perfect.',
+            self::FIELD_CATEGORY => 'Devious Pokémon',
             self::FIELD_ATTACK => 98,
             self::FIELD_DEFENSE => 73,
             self::FIELD_STAMINA => 121,
@@ -8855,6 +9951,8 @@ class PokemonData
         Pokemon::LIEPARD => [
             self::FIELD_NAME => 'Liepard',
             self::FIELD_NAME_SHORT => 'Liepard',
+            self::FIELD_DESC => 'Stealthily, it sneaks up on its target, striking from behind before its victim has a chance to react.',
+            self::FIELD_CATEGORY => 'Cruel Pokémon',
             self::FIELD_ATTACK => 187,
             self::FIELD_DEFENSE => 106,
             self::FIELD_STAMINA => 162,
@@ -8870,6 +9968,8 @@ class PokemonData
         Pokemon::PANSAGE => [
             self::FIELD_NAME => 'Pansage',
             self::FIELD_NAME_SHORT => 'Pansage',
+            self::FIELD_DESC => 'It\'s good at finding berries and gathers them from all over. It\'s kind enough to share them with friends.',
+            self::FIELD_CATEGORY => 'Grass Monkey Pokémon',
             self::FIELD_ATTACK => 104,
             self::FIELD_DEFENSE => 94,
             self::FIELD_STAMINA => 137,
@@ -8886,6 +9986,8 @@ class PokemonData
         Pokemon::SIMISAGE => [
             self::FIELD_NAME => 'Simisage',
             self::FIELD_NAME_SHORT => 'Simisage',
+            self::FIELD_DESC => 'Ill tempered, it fights by swinging its barbed tail around wildly. The leaf growing on its head is very bitter.',
+            self::FIELD_CATEGORY => 'Thorn Monkey Pokémon',
             self::FIELD_ATTACK => 206,
             self::FIELD_DEFENSE => 133,
             self::FIELD_STAMINA => 181,
@@ -8901,6 +10003,8 @@ class PokemonData
         Pokemon::PANSEAR => [
             self::FIELD_NAME => 'Pansear',
             self::FIELD_NAME_SHORT => 'Pansear',
+            self::FIELD_DESC => 'This Pokémon lives in caves in volcanoes. The fire within the tuft on its head can reach 600 degrees Fahrenheit.',
+            self::FIELD_CATEGORY => 'High Temp Pokémon',
             self::FIELD_ATTACK => 104,
             self::FIELD_DEFENSE => 94,
             self::FIELD_STAMINA => 137,
@@ -8917,6 +10021,8 @@ class PokemonData
         Pokemon::SMISEAR => [
             self::FIELD_NAME => 'Simisear',
             self::FIELD_NAME_SHORT => 'Simisear',
+            self::FIELD_DESC => 'When it gets excited, embers rise from its head and tail and it gets hot. For some reason, it loves sweets.',
+            self::FIELD_CATEGORY => 'Ember Pokémon',
             self::FIELD_ATTACK => 206,
             self::FIELD_DEFENSE => 133,
             self::FIELD_STAMINA => 181,
@@ -8932,6 +10038,8 @@ class PokemonData
         Pokemon::PANPOUR => [
             self::FIELD_NAME => 'Panpour',
             self::FIELD_NAME_SHORT => 'Panpour',
+            self::FIELD_DESC => 'The water stored inside the tuft on its head is full of nutrients. Plants that receive its water grow large.',
+            self::FIELD_CATEGORY => 'Spray Pokémon',
             self::FIELD_ATTACK => 104,
             self::FIELD_DEFENSE => 94,
             self::FIELD_STAMINA => 137,
@@ -8948,6 +10056,8 @@ class PokemonData
         Pokemon::SMIPOUR => [
             self::FIELD_NAME => 'Simipour',
             self::FIELD_NAME_SHORT => 'Simipour',
+            self::FIELD_DESC => 'It prefers places with clean water. When its tuft runs low, it replenishes it by siphoning up water with its tail.',
+            self::FIELD_CATEGORY => 'Geyser Pokémon',
             self::FIELD_ATTACK => 206,
             self::FIELD_DEFENSE => 133,
             self::FIELD_STAMINA => 181,
@@ -8963,6 +10073,8 @@ class PokemonData
         Pokemon::MUNNA => [
             self::FIELD_NAME => 'Munna',
             self::FIELD_NAME_SHORT => 'Munna',
+            self::FIELD_DESC => 'It eats the dreams of people and Pokémon. When it eats a pleasant dream, it expels pink-colored mist.',
+            self::FIELD_CATEGORY => 'Dream Eater Pokémon',
             self::FIELD_ATTACK => 111,
             self::FIELD_DEFENSE => 92,
             self::FIELD_STAMINA => 183,
@@ -8979,6 +10091,8 @@ class PokemonData
         Pokemon::MUSHARNA => [
             self::FIELD_NAME => 'Musharna',
             self::FIELD_NAME_SHORT => 'Musharna',
+            self::FIELD_DESC => 'The dream mist coming from its forehead changes into many different colors depending on the dream that was eaten.',
+            self::FIELD_CATEGORY => 'Drowsing Pokémon',
             self::FIELD_ATTACK => 183,
             self::FIELD_DEFENSE => 166,
             self::FIELD_STAMINA => 253,
@@ -8994,6 +10108,8 @@ class PokemonData
         Pokemon::PIDOVE => [
             self::FIELD_NAME => 'Pidove',
             self::FIELD_NAME_SHORT => 'Pidove',
+            self::FIELD_DESC => 'These Pokémon live in cities. They are accustomed to people. Flocks often gather in parks and plazas.',
+            self::FIELD_CATEGORY => 'Tiny Pigeon Pokémon',
             self::FIELD_ATTACK => 98,
             self::FIELD_DEFENSE => 80,
             self::FIELD_STAMINA => 137,
@@ -9011,6 +10127,8 @@ class PokemonData
         Pokemon::TRANQUILL => [
             self::FIELD_NAME => 'Tranquill',
             self::FIELD_NAME_SHORT => 'Tranquill',
+            self::FIELD_DESC => 'No matter where in the world it goes, it knows where its nest is, so it never gets separated from its Trainer.',
+            self::FIELD_CATEGORY => 'Wild Pigeon Pokémon',
             self::FIELD_ATTACK => 144,
             self::FIELD_DEFENSE => 107,
             self::FIELD_STAMINA => 158,
@@ -9028,6 +10146,8 @@ class PokemonData
         Pokemon::UNFEZANT => [
             self::FIELD_NAME => 'Unfezant',
             self::FIELD_NAME_SHORT => 'Unfezant',
+            self::FIELD_DESC => 'Males have plumage on their heads. They will never let themselves feel close to anyone other than their Trainers.',
+            self::FIELD_CATEGORY => 'Proud Pokémon',
             self::FIELD_ATTACK => 226,
             self::FIELD_DEFENSE => 146,
             self::FIELD_STAMINA => 190,
@@ -9044,6 +10164,8 @@ class PokemonData
         Pokemon::BLITZLE => [
             self::FIELD_NAME => 'Blitzle',
             self::FIELD_NAME_SHORT => 'Blitzle',
+            self::FIELD_DESC => 'Its mane shines when it discharges electricity. They use the frequency and rhythm of these flashes to communicate.',
+            self::FIELD_CATEGORY => 'Electrified Pokémon',
             self::FIELD_ATTACK => 118,
             self::FIELD_DEFENSE => 64,
             self::FIELD_STAMINA => 128,
@@ -9060,6 +10182,8 @@ class PokemonData
         Pokemon::ZEBSTRIKA => [
             self::FIELD_NAME => 'Zebstrika',
             self::FIELD_NAME_SHORT => 'Zebstrika',
+            self::FIELD_DESC => 'They have lightning-like movements. When Zebstrika run at full speed, the sound of thunder reverberates.',
+            self::FIELD_CATEGORY => 'Thunderbolt Pokémon',
             self::FIELD_ATTACK => 211,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 181,
@@ -9075,6 +10199,8 @@ class PokemonData
         Pokemon::ROGGENROLA => [
             self::FIELD_NAME => 'Roggenrola',
             self::FIELD_NAME_SHORT => 'Roggenrola',
+            self::FIELD_DESC => 'It was found in a fissure in a layer of exposed rock. The material that makes up its body is dirt from several hundred years ago.',
+            self::FIELD_CATEGORY => 'Mantle Pokémon',
             self::FIELD_ATTACK => 121,
             self::FIELD_DEFENSE => 110,
             self::FIELD_STAMINA => 146,
@@ -9091,6 +10217,8 @@ class PokemonData
         Pokemon::BOLDORE => [
             self::FIELD_NAME => 'Boldore',
             self::FIELD_NAME_SHORT => 'Boldore',
+            self::FIELD_DESC => 'Its orange crystals are lumps of powerful energy. They\'re valuable, so Boldore is sometimes targeted for them.',
+            self::FIELD_CATEGORY => 'Ore Pokémon',
             self::FIELD_ATTACK => 174,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 172,
@@ -9107,6 +10235,8 @@ class PokemonData
         Pokemon::GIGALITH => [
             self::FIELD_NAME => 'Gigalith',
             self::FIELD_NAME_SHORT => 'Gigalith',
+            self::FIELD_DESC => 'It absorbs rays of sunlight and shoots out energy. It\'s usually lurking deep beneath the surface.',
+            self::FIELD_CATEGORY => 'Compressed Pokémon',
             self::FIELD_ATTACK => 226,
             self::FIELD_DEFENSE => 201,
             self::FIELD_STAMINA => 198,
@@ -9122,6 +10252,8 @@ class PokemonData
         Pokemon::WOOBAT => [
             self::FIELD_NAME => 'Woobat',
             self::FIELD_NAME_SHORT => 'Woobat',
+            self::FIELD_DESC => 'The heart-shaped mark left on a body after a Woobat has been attached to it is said to bring good fortune.',
+            self::FIELD_CATEGORY => 'Bat Pokémon',
             self::FIELD_ATTACK => 107,
             self::FIELD_DEFENSE => 85,
             self::FIELD_STAMINA => 163,
@@ -9139,6 +10271,8 @@ class PokemonData
         Pokemon::SWOOBAT => [
             self::FIELD_NAME => 'Swoobat',
             self::FIELD_NAME_SHORT => 'Swoobat',
+            self::FIELD_DESC => 'Anyone who comes into contact with the ultrasonic waves emitted by a courting male experiences a positive mood shift.',
+            self::FIELD_CATEGORY => 'Courting Pokémon',
             self::FIELD_ATTACK => 161,
             self::FIELD_DEFENSE => 119,
             self::FIELD_STAMINA => 167,
@@ -9155,6 +10289,8 @@ class PokemonData
         Pokemon::DRILBUR => [
             self::FIELD_NAME => 'Drilbur',
             self::FIELD_NAME_SHORT => 'Drilbur',
+            self::FIELD_DESC => 'By spinning its body, it can dig straight through the ground at a speed of 30 mph.',
+            self::FIELD_CATEGORY => 'Mole Pokémon',
             self::FIELD_ATTACK => 154,
             self::FIELD_DEFENSE => 85,
             self::FIELD_STAMINA => 155,
@@ -9171,6 +10307,8 @@ class PokemonData
         Pokemon::EXCADRILL => [
             self::FIELD_NAME => 'Excadrill',
             self::FIELD_NAME_SHORT => 'Excadrill',
+            self::FIELD_DESC => 'More than 300 feet below the surface, they build mazelike nests. Their activity can be destructive to subway tunnels.',
+            self::FIELD_CATEGORY => 'Subterrene Pokémon',
             self::FIELD_ATTACK => 255,
             self::FIELD_DEFENSE => 129,
             self::FIELD_STAMINA => 242,
@@ -9187,6 +10325,8 @@ class PokemonData
         Pokemon::AUDINO => [
             self::FIELD_NAME => 'Audino',
             self::FIELD_NAME_SHORT => 'Audino',
+            self::FIELD_DESC => 'It touches others with the feelers on its ears, using the sound of their heartbeats to tell how they are feeling.',
+            self::FIELD_CATEGORY => 'Hearing Pokémon',
             self::FIELD_ATTACK => 114,
             self::FIELD_DEFENSE => 163,
             self::FIELD_STAMINA => 230,
@@ -9202,6 +10342,8 @@ class PokemonData
         Pokemon::TIMBURR => [
             self::FIELD_NAME => 'Timburr',
             self::FIELD_NAME_SHORT => 'Timburr',
+            self::FIELD_DESC => 'Always carrying squared logs, they help out with construction. As they grow, they carry bigger logs.',
+            self::FIELD_CATEGORY => 'Muscular Pokémon',
             self::FIELD_ATTACK => 134,
             self::FIELD_DEFENSE => 87,
             self::FIELD_STAMINA => 181,
@@ -9218,6 +10360,8 @@ class PokemonData
         Pokemon::GURDURR => [
             self::FIELD_NAME => 'Gurdurr',
             self::FIELD_NAME_SHORT => 'Gurdurr',
+            self::FIELD_DESC => 'This Pokémon is so muscular and strongly built that even a group of wrestlers could not make it budge an inch.',
+            self::FIELD_CATEGORY => 'Muscular Pokémon',
             self::FIELD_ATTACK => 180,
             self::FIELD_DEFENSE => 134,
             self::FIELD_STAMINA => 198,
@@ -9234,6 +10378,8 @@ class PokemonData
         Pokemon::CONKELDURR => [
             self::FIELD_NAME => 'Conkeldurr',
             self::FIELD_NAME_SHORT => 'Conkeldurr',
+            self::FIELD_DESC => 'Rather than rely on force, they master moves that utilize the centrifugal force of spinning concrete.',
+            self::FIELD_CATEGORY => 'Muscular Pokémon',
             self::FIELD_ATTACK => 243,
             self::FIELD_DEFENSE => 158,
             self::FIELD_STAMINA => 233,
@@ -9249,6 +10395,8 @@ class PokemonData
         Pokemon::TYMPOLE => [
             self::FIELD_NAME => 'Tympole',
             self::FIELD_NAME_SHORT => 'Tympole',
+            self::FIELD_DESC => 'By vibrating its cheeks, it emits sound waves imperceptible to humans. It uses the rhythm of these sounds to talk.',
+            self::FIELD_CATEGORY => 'Tadpole Pokémon',
             self::FIELD_ATTACK => 98,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 137,
@@ -9265,6 +10413,8 @@ class PokemonData
         Pokemon::PALPITOAD => [
             self::FIELD_NAME => 'Palpitoad',
             self::FIELD_NAME_SHORT => 'Palpitoad',
+            self::FIELD_DESC => 'It lives in the water and on land. It uses its long, sticky tongue to immobilize its opponents.',
+            self::FIELD_CATEGORY => 'Vibration Pokémon',
             self::FIELD_ATTACK => 128,
             self::FIELD_DEFENSE => 109,
             self::FIELD_STAMINA => 181,
@@ -9282,6 +10432,8 @@ class PokemonData
         Pokemon::SEISMITOAD => [
             self::FIELD_NAME => 'Seismitoad',
             self::FIELD_NAME_SHORT => 'Seismitoad',
+            self::FIELD_DESC => 'They shoot paralyzing liquid from their head bumps. They use vibration to hurt their opponents.',
+            self::FIELD_CATEGORY => 'Vibration Pokémon',
             self::FIELD_ATTACK => 188,
             self::FIELD_DEFENSE => 150,
             self::FIELD_STAMINA => 233,
@@ -9298,6 +10450,8 @@ class PokemonData
         Pokemon::THROH => [
             self::FIELD_NAME => 'Throh',
             self::FIELD_NAME_SHORT => 'Throh',
+            self::FIELD_DESC => 'When it encounters a foe bigger than itself, it wants to throw it. It changes belts as it gets stronger.',
+            self::FIELD_CATEGORY => 'Judo Pokémon',
             self::FIELD_ATTACK => 172,
             self::FIELD_DEFENSE => 160,
             self::FIELD_STAMINA => 260,
@@ -9313,6 +10467,8 @@ class PokemonData
         Pokemon::SAWK => [
             self::FIELD_NAME => 'Sawk',
             self::FIELD_NAME_SHORT => 'Sawk',
+            self::FIELD_DESC => 'Tying their belts gets them pumped and makes their punches more destructive. Disturbing their training angers them.',
+            self::FIELD_CATEGORY => 'Karate Pokémon',
             self::FIELD_ATTACK => 231,
             self::FIELD_DEFENSE => 153,
             self::FIELD_STAMINA => 181,
@@ -9328,6 +10484,8 @@ class PokemonData
         Pokemon::SEWADDLE => [
             self::FIELD_NAME => 'Sewaddle',
             self::FIELD_NAME_SHORT => 'Sewaddle',
+            self::FIELD_DESC => 'Since this Pokémon makes its own clothes out of leaves, it is a popular mascot for fashion designers.',
+            self::FIELD_CATEGORY => 'Sewing Pokémon',
             self::FIELD_ATTACK => 96,
             self::FIELD_DEFENSE => 124,
             self::FIELD_STAMINA => 128,
@@ -9345,6 +10503,8 @@ class PokemonData
         Pokemon::SWADLOON => [
             self::FIELD_NAME => 'Swadloon',
             self::FIELD_NAME_SHORT => 'Swadloon',
+            self::FIELD_DESC => 'It protects itself from the cold by wrapping up in leaves. It stays on the move, eating leaves in forests.',
+            self::FIELD_CATEGORY => 'Leaf-Wrapped Pokémon',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 146,
@@ -9362,6 +10522,8 @@ class PokemonData
         Pokemon::LEVANNY => [
             self::FIELD_NAME => 'Leavanny',
             self::FIELD_NAME_SHORT => 'Leavanny',
+            self::FIELD_DESC => 'It keeps its eggs warm with heat from fermenting leaves. It also uses leaves to make warm wrappings for Sewaddle.',
+            self::FIELD_CATEGORY => 'Nurturing Pokémon',
             self::FIELD_ATTACK => 205,
             self::FIELD_DEFENSE => 165,
             self::FIELD_STAMINA => 181,
@@ -9378,6 +10540,8 @@ class PokemonData
         Pokemon::VENIPEDE => [
             self::FIELD_NAME => 'Venipede',
             self::FIELD_NAME_SHORT => 'Venipede',
+            self::FIELD_DESC => 'Its bite injects a potent poison, enough to paralyze large bird Pokémon that try to prey on it.',
+            self::FIELD_CATEGORY => 'Centipede Pokémon',
             self::FIELD_ATTACK => 83,
             self::FIELD_DEFENSE => 99,
             self::FIELD_STAMINA => 102,
@@ -9395,6 +10559,8 @@ class PokemonData
         Pokemon::WHIRLIPEDE => [
             self::FIELD_NAME => 'Whirlipede',
             self::FIELD_NAME_SHORT => 'Whirlipede',
+            self::FIELD_DESC => 'It is usually motionless, but when attacked, it rotates at high speed and then crashes into its opponent.',
+            self::FIELD_CATEGORY => 'Curlipede Pokémon',
             self::FIELD_ATTACK => 100,
             self::FIELD_DEFENSE => 173,
             self::FIELD_STAMINA => 120,
@@ -9412,6 +10578,8 @@ class PokemonData
         Pokemon::SCOLIPEDE => [
             self::FIELD_NAME => 'Scolipede',
             self::FIELD_NAME_SHORT => 'Scolipede',
+            self::FIELD_DESC => 'With quick movements, it chases down its foes, attacking relentlessly with its horns until it prevails.',
+            self::FIELD_CATEGORY => 'Megapede Pokémon',
             self::FIELD_ATTACK => 203,
             self::FIELD_DEFENSE => 175,
             self::FIELD_STAMINA => 155,
@@ -9428,6 +10596,8 @@ class PokemonData
         Pokemon::COTTONEE => [
             self::FIELD_NAME => 'Cottonee',
             self::FIELD_NAME_SHORT => 'Cottonee',
+            self::FIELD_DESC => 'When attacked, it expels cotton from its body to create a diversion. The cotton it loses grows back in quickly.',
+            self::FIELD_CATEGORY => 'Cotton Puff Pokémon',
             self::FIELD_ATTACK => 71,
             self::FIELD_DEFENSE => 111,
             self::FIELD_STAMINA => 120,
@@ -9445,6 +10615,8 @@ class PokemonData
         Pokemon::WHIMSICOTT => [
             self::FIELD_NAME => 'Whimsicott',
             self::FIELD_NAME_SHORT => 'Whimsicott',
+            self::FIELD_DESC => 'Whimsicott doesn\'t live in a fixed location. It floats around on whirling winds, appearing all over the place to perform its mischief.',
+            self::FIELD_CATEGORY => 'Windveiled Pokémon',
             self::FIELD_ATTACK => 164,
             self::FIELD_DEFENSE => 176,
             self::FIELD_STAMINA => 155,
@@ -9461,6 +10633,8 @@ class PokemonData
         Pokemon::PETILIL => [
             self::FIELD_NAME => 'Petilil',
             self::FIELD_NAME_SHORT => 'Petilil',
+            self::FIELD_DESC => 'They prefer clean water and soil. When the environment they live in turns bad, the whole bunch will up and move to a new area.',
+            self::FIELD_CATEGORY => 'Bulb Pokémon',
             self::FIELD_ATTACK => 119,
             self::FIELD_DEFENSE => 91,
             self::FIELD_STAMINA => 128,
@@ -9477,6 +10651,8 @@ class PokemonData
         Pokemon::LILLIGANT => [
             self::FIELD_NAME => 'Lilligant',
             self::FIELD_NAME_SHORT => 'Lilligant',
+            self::FIELD_DESC => 'It\'s well liked by other Pokémon because of its beauty. The flower on its head needs constant care, or it will soon wither and rot.',
+            self::FIELD_CATEGORY => 'Flowering Pokémon',
             self::FIELD_ATTACK => 214,
             self::FIELD_DEFENSE => 155,
             self::FIELD_STAMINA => 172,
@@ -9492,6 +10668,8 @@ class PokemonData
         Pokemon::BASCULIN | FormsAlias::BASCULIN_BLUE_STRIPED => [
             self::FIELD_NAME => 'Basculin (Blue-Striped)',
             self::FIELD_NAME_SHORT => 'Basculin',
+            self::FIELD_DESC => 'When a school of Basculin appears in a lake, everything else disappears, except for Corphish and Crawdaunt. That\'s how violent Basculin are.',
+            self::FIELD_CATEGORY => 'Hostile Pokémon',
             self::FIELD_ATTACK => 189,
             self::FIELD_DEFENSE => 129,
             self::FIELD_STAMINA => 172,
@@ -9507,6 +10685,8 @@ class PokemonData
         Pokemon::BASCULIN | FormsAlias::BASCULIN_RED_STRIPED => [
             self::FIELD_NAME => 'Basculin (Red-Striped)',
             self::FIELD_NAME_SHORT => 'Basculin',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Hostile Pokémon',
             self::FIELD_ATTACK => 189,
             self::FIELD_DEFENSE => 129,
             self::FIELD_STAMINA => 172,
@@ -9522,6 +10702,8 @@ class PokemonData
         Pokemon::SANDILE => [
             self::FIELD_NAME => 'Sandile',
             self::FIELD_NAME_SHORT => 'Sandile',
+            self::FIELD_DESC => 'Sandile\'s still not good at hunting, so it mostly eats things that have collapsed in the desert. It\'s called “the cleaner of the desert."',
+            self::FIELD_CATEGORY => 'Desert Croc Pokémon',
             self::FIELD_ATTACK => 132,
             self::FIELD_DEFENSE => 69,
             self::FIELD_STAMINA => 137,
@@ -9539,6 +10721,8 @@ class PokemonData
         Pokemon::KROKOROK => [
             self::FIELD_NAME => 'Krokorok',
             self::FIELD_NAME_SHORT => 'Krokorok',
+            self::FIELD_DESC => 'It buries some of its prey in the sand to use as emergency meals when its hunts are unsuccessful.',
+            self::FIELD_CATEGORY => 'Desert Croc Pokémon',
             self::FIELD_ATTACK => 155,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 155,
@@ -9556,6 +10740,8 @@ class PokemonData
         Pokemon::KROOKODILE => [
             self::FIELD_NAME => 'Krookodile',
             self::FIELD_NAME_SHORT => 'Krookodile',
+            self::FIELD_DESC => 'It conceals itself in sandstorms that Flygon whip up and waits patiently for prey to appear.',
+            self::FIELD_CATEGORY => 'Intimidation Pokémon',
             self::FIELD_ATTACK => 229,
             self::FIELD_DEFENSE => 158,
             self::FIELD_STAMINA => 216,
@@ -9572,6 +10758,8 @@ class PokemonData
         Pokemon::DARUMAKA => [
             self::FIELD_NAME => 'Darumaka',
             self::FIELD_NAME_SHORT => 'Darumaka',
+            self::FIELD_DESC => 'When it sleeps, it pulls its limbs into its body and its internal fire goes down to 1,100 degrees Fahrenheit.',
+            self::FIELD_CATEGORY => 'Zen Charm Pokémon',
             self::FIELD_ATTACK => 153,
             self::FIELD_DEFENSE => 86,
             self::FIELD_STAMINA => 172,
@@ -9588,6 +10776,8 @@ class PokemonData
         Pokemon::DARMANITAN | FormsAlias::DARMANITAN_STANDARD => [
             self::FIELD_NAME => 'Darmanitan (Standard Mode)',
             self::FIELD_NAME_SHORT => 'Darmanitan',
+            self::FIELD_DESC => 'Its internal fire burns at 2,500 degrees Fahrenheit, making enough power that it can destroy a dump truck with one punch.',
+            self::FIELD_CATEGORY => 'Blazing Pokémon',
             self::FIELD_ATTACK => 263,
             self::FIELD_DEFENSE => 114,
             self::FIELD_STAMINA => 233,
@@ -9603,6 +10793,8 @@ class PokemonData
         Pokemon::DARMANITAN | FormsAlias::DARMANITAN_ZEN => [
             self::FIELD_NAME => 'Darmanitan (Zen Mode)',
             self::FIELD_NAME_SHORT => 'Darmanitan',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Blazing Pokémon',
             self::FIELD_ATTACK => 243,
             self::FIELD_DEFENSE => 202,
             self::FIELD_STAMINA => 233,
@@ -9619,6 +10811,8 @@ class PokemonData
         Pokemon::MARACTUS => [
             self::FIELD_NAME => 'Maractus',
             self::FIELD_NAME_SHORT => 'Maractus',
+            self::FIELD_DESC => 'Arid regions are their habitat. They move rhythmically, making a sound similar to maracas.',
+            self::FIELD_CATEGORY => 'Cactus Pokémon',
             self::FIELD_ATTACK => 201,
             self::FIELD_DEFENSE => 130,
             self::FIELD_STAMINA => 181,
@@ -9634,6 +10828,8 @@ class PokemonData
         Pokemon::DWEBBLE => [
             self::FIELD_NAME => 'Dwebble',
             self::FIELD_NAME_SHORT => 'Dwebble',
+            self::FIELD_DESC => 'When it finds a stone of a suitable size, it secretes a liquid from its mouth to open up a hole to crawl into.',
+            self::FIELD_CATEGORY => 'Rock Inn Pokémon',
             self::FIELD_ATTACK => 118,
             self::FIELD_DEFENSE => 128,
             self::FIELD_STAMINA => 137,
@@ -9651,6 +10847,8 @@ class PokemonData
         Pokemon::CRUSTLE => [
             self::FIELD_NAME => 'Crustle',
             self::FIELD_NAME_SHORT => 'Crustle',
+            self::FIELD_DESC => 'Competing for territory, Crustle fight viciously. The one whose boulder is broken is the loser of the battle.',
+            self::FIELD_CATEGORY => 'Stone Home Pokémon',
             self::FIELD_ATTACK => 188,
             self::FIELD_DEFENSE => 200,
             self::FIELD_STAMINA => 172,
@@ -9667,6 +10865,8 @@ class PokemonData
         Pokemon::SCRAGGY => [
             self::FIELD_NAME => 'Scraggy',
             self::FIELD_NAME_SHORT => 'Scraggy',
+            self::FIELD_DESC => 'It stretches its saggy skin up to its neck to protect itself. The saggier their skin, the more respect they garner.',
+            self::FIELD_CATEGORY => 'Shedding Pokémon',
             self::FIELD_ATTACK => 132,
             self::FIELD_DEFENSE => 132,
             self::FIELD_STAMINA => 137,
@@ -9684,6 +10884,8 @@ class PokemonData
         Pokemon::SCRAFTY => [
             self::FIELD_NAME => 'Scrafty',
             self::FIELD_NAME_SHORT => 'Scrafty',
+            self::FIELD_DESC => 'It taunts its opponents by spitting. It has a certain territory that it never leaves its whole life long.',
+            self::FIELD_CATEGORY => 'Hoodlum Pokémon',
             self::FIELD_ATTACK => 163,
             self::FIELD_DEFENSE => 222,
             self::FIELD_STAMINA => 163,
@@ -9700,6 +10902,8 @@ class PokemonData
         Pokemon::SIGILYPH => [
             self::FIELD_NAME => 'Sigilyph',
             self::FIELD_NAME_SHORT => 'Sigilyph',
+            self::FIELD_DESC => 'The guardians of an ancient city, they always fly the same route while keeping watch for invaders.',
+            self::FIELD_CATEGORY => 'Avianoid Pokémon',
             self::FIELD_ATTACK => 204,
             self::FIELD_DEFENSE => 167,
             self::FIELD_STAMINA => 176,
@@ -9716,6 +10920,8 @@ class PokemonData
         Pokemon::YAMASK => [
             self::FIELD_NAME => 'Yamask',
             self::FIELD_NAME_SHORT => 'Yamask',
+            self::FIELD_DESC => 'Each of them carries a mask that used to be its face when it was human. Sometimes they look at it and cry.',
+            self::FIELD_CATEGORY => 'Spirit Pokémon',
             self::FIELD_ATTACK => 95,
             self::FIELD_DEFENSE => 141,
             self::FIELD_STAMINA => 116,
@@ -9732,6 +10938,8 @@ class PokemonData
         Pokemon::COFAGRIGUS => [
             self::FIELD_NAME => 'Cofagrigus',
             self::FIELD_NAME_SHORT => 'Cofagrigus',
+            self::FIELD_DESC => 'Grave robbers who mistake them for real coffins and get too close end up trapped inside their bodies.',
+            self::FIELD_CATEGORY => 'Coffin Pokémon',
             self::FIELD_ATTACK => 163,
             self::FIELD_DEFENSE => 237,
             self::FIELD_STAMINA => 151,
@@ -9747,6 +10955,8 @@ class PokemonData
         Pokemon::TIRTOUGA => [
             self::FIELD_NAME => 'Tirtouga',
             self::FIELD_NAME_SHORT => 'Tirtouga',
+            self::FIELD_DESC => 'Its hunting grounds encompassed a broad area, from the land to more than half a mile deep in the ocean.',
+            self::FIELD_CATEGORY => 'Prototurtle Pokémon',
             self::FIELD_ATTACK => 134,
             self::FIELD_DEFENSE => 146,
             self::FIELD_STAMINA => 144,
@@ -9764,6 +10974,8 @@ class PokemonData
         Pokemon::CARRACOSTA => [
             self::FIELD_NAME => 'Carracosta',
             self::FIELD_NAME_SHORT => 'Carracosta',
+            self::FIELD_DESC => 'Carracosta eats every last bit of the prey it catches, even the shells and bones, to further strengthen its sturdy shell.',
+            self::FIELD_CATEGORY => 'Prototurtle Pokémon',
             self::FIELD_ATTACK => 192,
             self::FIELD_DEFENSE => 197,
             self::FIELD_STAMINA => 179,
@@ -9780,6 +10992,8 @@ class PokemonData
         Pokemon::ARCHEN => [
             self::FIELD_NAME => 'Archen',
             self::FIELD_NAME_SHORT => 'Archen',
+            self::FIELD_DESC => 'Restored from a fossil, this ancient bird Pokémon has wings but can\'t yet fly.',
+            self::FIELD_CATEGORY => 'First Bird Pokémon',
             self::FIELD_ATTACK => 213,
             self::FIELD_DEFENSE => 89,
             self::FIELD_STAMINA => 146,
@@ -9797,6 +11011,8 @@ class PokemonData
         Pokemon::ARCHEOPS => [
             self::FIELD_NAME => 'Archeops',
             self::FIELD_NAME_SHORT => 'Archeops',
+            self::FIELD_DESC => 'Said to be an ancestor of bird Pokémon, the muscles it uses to flap its wings are still weak, so it needs a long runway in order to take off.',
+            self::FIELD_CATEGORY => 'First Bird Pokémon',
             self::FIELD_ATTACK => 292,
             self::FIELD_DEFENSE => 139,
             self::FIELD_STAMINA => 181,
@@ -9813,6 +11029,8 @@ class PokemonData
         Pokemon::TRUBBISH => [
             self::FIELD_NAME => 'Trubbish',
             self::FIELD_NAME_SHORT => 'Trubbish',
+            self::FIELD_DESC => 'If a young Pokémon or child breathes in the toxic gas that Trubbish belches out, it could be a life-threatening situation.',
+            self::FIELD_CATEGORY => 'Trash Bag Pokémon',
             self::FIELD_ATTACK => 96,
             self::FIELD_DEFENSE => 122,
             self::FIELD_STAMINA => 137,
@@ -9829,6 +11047,8 @@ class PokemonData
         Pokemon::GARBODOR => [
             self::FIELD_NAME => 'Garbodor',
             self::FIELD_NAME_SHORT => 'Garbodor',
+            self::FIELD_DESC => 'Some say the reason Garbodor in Alola are a little stronger than their counterparts elsewhere is the presence of Muk, their natural enemy.',
+            self::FIELD_CATEGORY => 'Trash Heap Pokémon',
             self::FIELD_ATTACK => 181,
             self::FIELD_DEFENSE => 164,
             self::FIELD_STAMINA => 190,
@@ -9844,6 +11064,8 @@ class PokemonData
         Pokemon::ZORUA => [
             self::FIELD_NAME => 'Zorua',
             self::FIELD_NAME_SHORT => 'Zorua',
+            self::FIELD_DESC => 'If a normally talkative child suddenly stops talking, it may have been replaced by Zorua.',
+            self::FIELD_CATEGORY => 'Tricky Fox Pokémon',
             self::FIELD_ATTACK => 153,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 120,
@@ -9860,6 +11082,8 @@ class PokemonData
         Pokemon::ZOROARK => [
             self::FIELD_NAME => 'Zoroark',
             self::FIELD_NAME_SHORT => 'Zoroark',
+            self::FIELD_DESC => 'If it thinks humans are going to discover its den, Zoroark shows them visions that make them wander around in the woods.',
+            self::FIELD_CATEGORY => 'Illusion Fox Pokémon',
             self::FIELD_ATTACK => 250,
             self::FIELD_DEFENSE => 127,
             self::FIELD_STAMINA => 155,
@@ -9875,6 +11099,8 @@ class PokemonData
         Pokemon::MINCCINO => [
             self::FIELD_NAME => 'Minccino',
             self::FIELD_NAME_SHORT => 'Minccino',
+            self::FIELD_DESC => 'When its tail has gotten dirty from self-cleaning or from cleaning its nest, Minccino spends a whole day washing its tail in clean spring water.',
+            self::FIELD_CATEGORY => 'Chinchilla Pokémon',
             self::FIELD_ATTACK => 98,
             self::FIELD_DEFENSE => 80,
             self::FIELD_STAMINA => 146,
@@ -9891,6 +11117,8 @@ class PokemonData
         Pokemon::CINCCINO => [
             self::FIELD_NAME => 'Cinccino',
             self::FIELD_NAME_SHORT => 'Cinccino',
+            self::FIELD_DESC => 'The oil that seeps from its body is really smooth. For people troubled by bad skin, this oil is an effective treatment.',
+            self::FIELD_CATEGORY => 'Scarf Pokémon',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 130,
             self::FIELD_STAMINA => 181,
@@ -9906,6 +11134,8 @@ class PokemonData
         Pokemon::GOTHITA => [
             self::FIELD_NAME => 'Gothita',
             self::FIELD_NAME_SHORT => 'Gothita',
+            self::FIELD_DESC => 'They intently observe both Trainers and Pokémon. Apparently, they are looking at something that only Gothita can see.',
+            self::FIELD_CATEGORY => 'Fixation Pokémon',
             self::FIELD_ATTACK => 98,
             self::FIELD_DEFENSE => 112,
             self::FIELD_STAMINA => 128,
@@ -9922,6 +11152,8 @@ class PokemonData
         Pokemon::GOTHORITA => [
             self::FIELD_NAME => 'Gothorita',
             self::FIELD_NAME_SHORT => 'Gothorita',
+            self::FIELD_DESC => 'According to many old tales, it creates friends for itself by controlling sleeping children on starry nights.',
+            self::FIELD_CATEGORY => 'Manipulate Pokémon',
             self::FIELD_ATTACK => 137,
             self::FIELD_DEFENSE => 153,
             self::FIELD_STAMINA => 155,
@@ -9938,6 +11170,8 @@ class PokemonData
         Pokemon::GOTHITELLE => [
             self::FIELD_NAME => 'Gothitelle',
             self::FIELD_NAME_SHORT => 'Gothitelle',
+            self::FIELD_DESC => 'They can predict the future from the placement and movement of the stars. They can see Trainers\' life spans.',
+            self::FIELD_CATEGORY => 'Astral Body Pokémon',
             self::FIELD_ATTACK => 176,
             self::FIELD_DEFENSE => 205,
             self::FIELD_STAMINA => 172,
@@ -9953,6 +11187,8 @@ class PokemonData
         Pokemon::SOLOSIS => [
             self::FIELD_NAME => 'Solosis',
             self::FIELD_NAME_SHORT => 'Solosis',
+            self::FIELD_DESC => 'They drive away attackers by unleashing psychic power. They can use telepathy to talk with others.',
+            self::FIELD_CATEGORY => 'Cell Pokémon',
             self::FIELD_ATTACK => 170,
             self::FIELD_DEFENSE => 83,
             self::FIELD_STAMINA => 128,
@@ -9969,6 +11205,8 @@ class PokemonData
         Pokemon::DUOSION => [
             self::FIELD_NAME => 'Duosion',
             self::FIELD_NAME_SHORT => 'Duosion',
+            self::FIELD_DESC => 'When their two divided brains think the same thoughts, their psychic power is maximized.',
+            self::FIELD_CATEGORY => 'Mitosis Pokémon',
             self::FIELD_ATTACK => 208,
             self::FIELD_DEFENSE => 103,
             self::FIELD_STAMINA => 163,
@@ -9985,6 +11223,8 @@ class PokemonData
         Pokemon::REUNICLUS => [
             self::FIELD_NAME => 'Reuniclus',
             self::FIELD_NAME_SHORT => 'Reuniclus',
+            self::FIELD_DESC => 'When Reuniclus shake hands, a network forms between their brains, increasing their psychic power.',
+            self::FIELD_CATEGORY => 'Multiplying Pokémon',
             self::FIELD_ATTACK => 214,
             self::FIELD_DEFENSE => 148,
             self::FIELD_STAMINA => 242,
@@ -10000,6 +11240,8 @@ class PokemonData
         Pokemon::DUCKLETT => [
             self::FIELD_NAME => 'Ducklett',
             self::FIELD_NAME_SHORT => 'Ducklett',
+            self::FIELD_DESC => 'They are better at swimming than flying, and they happily eat their favorite food, peat moss, as they dive underwater.',
+            self::FIELD_CATEGORY => 'Water Bird Pokémon',
             self::FIELD_ATTACK => 84,
             self::FIELD_DEFENSE => 96,
             self::FIELD_STAMINA => 158,
@@ -10017,6 +11259,8 @@ class PokemonData
         Pokemon::SWANNA => [
             self::FIELD_NAME => 'Swanna',
             self::FIELD_NAME_SHORT => 'Swanna',
+            self::FIELD_DESC => 'Swanna start to dance at dusk. The one dancing in the middle is the leader of the flock.',
+            self::FIELD_CATEGORY => 'White Bird Pokémon',
             self::FIELD_ATTACK => 182,
             self::FIELD_DEFENSE => 132,
             self::FIELD_STAMINA => 181,
@@ -10033,6 +11277,8 @@ class PokemonData
         Pokemon::VANILLITE => [
             self::FIELD_NAME => 'Vanillite',
             self::FIELD_NAME_SHORT => 'Vanillite',
+            self::FIELD_DESC => 'When the morning sun hit an icicle, it wished not to melt, and thus Vanillite was born. At night, it buries itself in snow to sleep.',
+            self::FIELD_CATEGORY => 'Fresh Snow Pokémon',
             self::FIELD_ATTACK => 118,
             self::FIELD_DEFENSE => 106,
             self::FIELD_STAMINA => 113,
@@ -10049,6 +11295,8 @@ class PokemonData
         Pokemon::VANILLISH => [
             self::FIELD_NAME => 'Vanillish',
             self::FIELD_NAME_SHORT => 'Vanillish',
+            self::FIELD_DESC => 'This hearty Pokémon survived the Ice Age. It\'s incredibly popular in very hot regions.',
+            self::FIELD_CATEGORY => 'Icy Snow Pokémon',
             self::FIELD_ATTACK => 151,
             self::FIELD_DEFENSE => 138,
             self::FIELD_STAMINA => 139,
@@ -10065,6 +11313,8 @@ class PokemonData
         Pokemon::VANILLUXE => [
             self::FIELD_NAME => 'Vanilluxe',
             self::FIELD_NAME_SHORT => 'Vanilluxe',
+            self::FIELD_DESC => 'Vanilluxe is born when two Vanillish, half-melted by the day\'s light, stick to each other and freeze together in the cold return of night.',
+            self::FIELD_CATEGORY => 'Snowstorm Pokémon',
             self::FIELD_ATTACK => 218,
             self::FIELD_DEFENSE => 184,
             self::FIELD_STAMINA => 174,
@@ -10080,6 +11330,8 @@ class PokemonData
         Pokemon::DEERLING | FormsAlias::DEERLING_SPRING => [
             self::FIELD_NAME => 'Deerling (Spring Form)',
             self::FIELD_NAME_SHORT => 'Deerling',
+            self::FIELD_DESC => 'The turning of the seasons changes the color and scent of this Pokémon\'s fur. People use it to mark the seasons.',
+            self::FIELD_CATEGORY => 'Season Pokémon',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 100,
             self::FIELD_STAMINA => 155,
@@ -10097,6 +11349,8 @@ class PokemonData
         Pokemon::DEERLING | FormsAlias::DEERLING_SUMMER => [
             self::FIELD_NAME => 'Deerling (Summer Form)',
             self::FIELD_NAME_SHORT => 'Deerling',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Season Pokémon',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 100,
             self::FIELD_STAMINA => 155,
@@ -10114,6 +11368,8 @@ class PokemonData
         Pokemon::DEERLING | FormsAlias::DEERLING_AUTUMN => [
             self::FIELD_NAME => 'Deerling (Autumn Form)',
             self::FIELD_NAME_SHORT => 'Deerling',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Season Pokémon',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 100,
             self::FIELD_STAMINA => 155,
@@ -10131,6 +11387,8 @@ class PokemonData
         Pokemon::DEERLING | FormsAlias::DEERLING_WINTER => [
             self::FIELD_NAME => 'Deerling (Winter Form)',
             self::FIELD_NAME_SHORT => 'Deerling',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Season Pokémon',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 100,
             self::FIELD_STAMINA => 155,
@@ -10148,6 +11406,8 @@ class PokemonData
         Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_SPRING => [
             self::FIELD_NAME => 'Sawsbuck (Spring Form)',
             self::FIELD_NAME_SHORT => 'Sawsbuck',
+            self::FIELD_DESC => 'They migrate according to the seasons, so some people call Sawsbuck the harbingers of spring.',
+            self::FIELD_CATEGORY => 'Season Pokémon',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 146,
             self::FIELD_STAMINA => 190,
@@ -10164,6 +11424,8 @@ class PokemonData
         Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_SUMMER => [
             self::FIELD_NAME => 'Sawsbuck (Summer Form)',
             self::FIELD_NAME_SHORT => 'Sawsbuck',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Season Pokémon',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 146,
             self::FIELD_STAMINA => 190,
@@ -10180,6 +11442,8 @@ class PokemonData
         Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_AUTUMN => [
             self::FIELD_NAME => 'Sawsbuck (Autumn Form)',
             self::FIELD_NAME_SHORT => 'Sawsbuck',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Season Pokémon',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 146,
             self::FIELD_STAMINA => 190,
@@ -10196,6 +11460,8 @@ class PokemonData
         Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_WINTER => [
             self::FIELD_NAME => 'Sawsbuck (Winter Form)',
             self::FIELD_NAME_SHORT => 'Sawsbuck',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Season Pokémon',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 146,
             self::FIELD_STAMINA => 190,
@@ -10212,6 +11478,8 @@ class PokemonData
         Pokemon::EMOLGA => [
             self::FIELD_NAME => 'Emolga',
             self::FIELD_NAME_SHORT => 'Emolga',
+            self::FIELD_DESC => 'As it flies, it scatters electricity around, so bird Pokémon keep their distance. That\'s why Emolga can keep all its food to itself.',
+            self::FIELD_CATEGORY => 'Sky Squirrel Pokémon',
             self::FIELD_ATTACK => 158,
             self::FIELD_DEFENSE => 127,
             self::FIELD_STAMINA => 146,
@@ -10228,6 +11496,8 @@ class PokemonData
         Pokemon::KARRABLAST => [
             self::FIELD_NAME => 'Karrablast',
             self::FIELD_NAME_SHORT => 'Karrablast',
+            self::FIELD_DESC => 'For some reason they evolve when they receive electrical energy while they are attacking Shelmet.',
+            self::FIELD_CATEGORY => 'Clamping Pokémon',
             self::FIELD_ATTACK => 137,
             self::FIELD_DEFENSE => 87,
             self::FIELD_STAMINA => 137,
@@ -10244,6 +11514,8 @@ class PokemonData
         Pokemon::ESCAVALIER => [
             self::FIELD_NAME => 'Escavalier',
             self::FIELD_NAME_SHORT => 'Escavalier',
+            self::FIELD_DESC => 'These Pokémon evolve by wearing the shell covering of a Shelmet. The steel armor protects their whole body.',
+            self::FIELD_CATEGORY => 'Cavalry Pokémon',
             self::FIELD_ATTACK => 223,
             self::FIELD_DEFENSE => 187,
             self::FIELD_STAMINA => 172,
@@ -10260,6 +11532,8 @@ class PokemonData
         Pokemon::FOONGUS => [
             self::FIELD_NAME => 'Foongus',
             self::FIELD_NAME_SHORT => 'Foongus',
+            self::FIELD_DESC => 'It lures Pokémon with its pattern that looks just like a Poké Ball, then releases poison spores.',
+            self::FIELD_CATEGORY => 'Mushroom Pokémon',
             self::FIELD_ATTACK => 97,
             self::FIELD_DEFENSE => 91,
             self::FIELD_STAMINA => 170,
@@ -10277,6 +11551,8 @@ class PokemonData
         Pokemon::AMOONGUSS => [
             self::FIELD_NAME => 'Amoonguss',
             self::FIELD_NAME_SHORT => 'Amoonguss',
+            self::FIELD_DESC => 'It lures prey close by dancing and waving its arm caps, which resemble Poké Balls, in a swaying motion.',
+            self::FIELD_CATEGORY => 'Mushroom Pokémon',
             self::FIELD_ATTACK => 155,
             self::FIELD_DEFENSE => 139,
             self::FIELD_STAMINA => 249,
@@ -10293,6 +11569,8 @@ class PokemonData
         Pokemon::FRILLISH | FormsAlias::FRILLISH_MALE => [
             self::FIELD_NAME => 'Frillish (Male)',
             self::FIELD_NAME_SHORT => 'Frillish',
+            self::FIELD_DESC => 'Using the invisible poison spikes on its veillike arms and legs, it paralyzes its enemies and causes them to drown.',
+            self::FIELD_CATEGORY => 'Floating Pokémon',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 134,
             self::FIELD_STAMINA => 146,
@@ -10310,6 +11588,8 @@ class PokemonData
         Pokemon::FRILLISH | FormsAlias::FRILLISH_FEMALE => [
             self::FIELD_NAME => 'Frillish (Female)',
             self::FIELD_NAME_SHORT => 'Frillish',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Floating Pokémon',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 134,
             self::FIELD_STAMINA => 146,
@@ -10327,6 +11607,8 @@ class PokemonData
         Pokemon::JELLICENT | FormsAlias::JELLICENT_MALE => [
             self::FIELD_NAME => 'Jellicent (Male)',
             self::FIELD_NAME_SHORT => 'Jellicent',
+            self::FIELD_DESC => 'Fishermen are terrified of Jellicent. It\'s rumored to drag them into the sea and steal their lives away.',
+            self::FIELD_CATEGORY => 'Floating Pokémon',
             self::FIELD_ATTACK => 159,
             self::FIELD_DEFENSE => 178,
             self::FIELD_STAMINA => 225,
@@ -10343,6 +11625,8 @@ class PokemonData
         Pokemon::JELLICENT | FormsAlias::JELLICENT_FEMALE => [
             self::FIELD_NAME => 'Jellicent (Female)',
             self::FIELD_NAME_SHORT => 'Jellicent',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Floating Pokémon',
             self::FIELD_ATTACK => 159,
             self::FIELD_DEFENSE => 178,
             self::FIELD_STAMINA => 225,
@@ -10359,6 +11643,8 @@ class PokemonData
         Pokemon::ALOMOMOLA => [
             self::FIELD_NAME => 'Alomomola',
             self::FIELD_NAME_SHORT => 'Alomomola',
+            self::FIELD_DESC => 'The reason it helps Pokémon in a weakened condition is that any Pokémon coming after them may also attack Alomomola.',
+            self::FIELD_CATEGORY => 'Caring Pokémon',
             self::FIELD_ATTACK => 138,
             self::FIELD_DEFENSE => 131,
             self::FIELD_STAMINA => 338,
@@ -10374,6 +11660,8 @@ class PokemonData
         Pokemon::JOLTIK => [
             self::FIELD_NAME => 'Joltik',
             self::FIELD_NAME_SHORT => 'Joltik',
+            self::FIELD_DESC => 'They attach themselves to large-bodied Pokémon and absorb static electricity, which they store in an electric pouch.',
+            self::FIELD_CATEGORY => 'Attaching Pokémon',
             self::FIELD_ATTACK => 110,
             self::FIELD_DEFENSE => 98,
             self::FIELD_STAMINA => 137,
@@ -10391,6 +11679,8 @@ class PokemonData
         Pokemon::GALVANTULA => [
             self::FIELD_NAME => 'Galvantula',
             self::FIELD_NAME_SHORT => 'Galvantula',
+            self::FIELD_DESC => 'When attacked, they create an electric barrier by spitting out many electrically charged threads.',
+            self::FIELD_CATEGORY => 'EleSpider Pokémon',
             self::FIELD_ATTACK => 201,
             self::FIELD_DEFENSE => 128,
             self::FIELD_STAMINA => 172,
@@ -10407,6 +11697,8 @@ class PokemonData
         Pokemon::FERROSEED => [
             self::FIELD_NAME => 'Ferroseed',
             self::FIELD_NAME_SHORT => 'Ferroseed',
+            self::FIELD_DESC => 'It absorbs the iron it finds in the rock while clinging to the ceiling. It shoots spikes when in danger.',
+            self::FIELD_CATEGORY => 'Thorn Seed Pokémon',
             self::FIELD_ATTACK => 82,
             self::FIELD_DEFENSE => 155,
             self::FIELD_STAMINA => 127,
@@ -10424,6 +11716,8 @@ class PokemonData
         Pokemon::FERROTHORN => [
             self::FIELD_NAME => 'Ferrothorn',
             self::FIELD_NAME_SHORT => 'Ferrothorn',
+            self::FIELD_DESC => 'They attach themselves to cave ceilings, firing steel spikes at targets passing beneath them.',
+            self::FIELD_CATEGORY => 'Thorn Pod Pokémon',
             self::FIELD_ATTACK => 158,
             self::FIELD_DEFENSE => 223,
             self::FIELD_STAMINA => 179,
@@ -10440,6 +11734,8 @@ class PokemonData
         Pokemon::KLINK => [
             self::FIELD_NAME => 'Klink',
             self::FIELD_NAME_SHORT => 'Klink',
+            self::FIELD_DESC => 'The two minigears that mesh together are predetermined. Each will rebound from other minigears without meshing.',
+            self::FIELD_CATEGORY => 'Gear Pokémon',
             self::FIELD_ATTACK => 98,
             self::FIELD_DEFENSE => 121,
             self::FIELD_STAMINA => 120,
@@ -10456,6 +11752,8 @@ class PokemonData
         Pokemon::KLANG => [
             self::FIELD_NAME => 'Klang',
             self::FIELD_NAME_SHORT => 'Klang',
+            self::FIELD_DESC => 'A minigear and big gear comprise its body. If the minigear it launches at a foe doesn\'t return, it will die.',
+            self::FIELD_CATEGORY => 'Gear Pokémon',
             self::FIELD_ATTACK => 150,
             self::FIELD_DEFENSE => 174,
             self::FIELD_STAMINA => 155,
@@ -10472,6 +11770,8 @@ class PokemonData
         Pokemon::KLINKLANG => [
             self::FIELD_NAME => 'Klinklang',
             self::FIELD_NAME_SHORT => 'Klinklang',
+            self::FIELD_DESC => 'Its red core functions as an energy tank. It fires the charged energy through its spikes into an area.',
+            self::FIELD_CATEGORY => 'Gear Pokémon',
             self::FIELD_ATTACK => 199,
             self::FIELD_DEFENSE => 214,
             self::FIELD_STAMINA => 155,
@@ -10487,6 +11787,8 @@ class PokemonData
         Pokemon::TYNAMO => [
             self::FIELD_NAME => 'Tynamo',
             self::FIELD_NAME_SHORT => 'Tynamo',
+            self::FIELD_DESC => 'One alone can emit only a trickle of electricity, so a group of them gathers to unleash a powerful electric shock.',
+            self::FIELD_CATEGORY => 'EleFish Pokémon',
             self::FIELD_ATTACK => 105,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 111,
@@ -10503,6 +11805,8 @@ class PokemonData
         Pokemon::ELEKTRIK => [
             self::FIELD_NAME => 'Eelektrik',
             self::FIELD_NAME_SHORT => 'Eelektrik',
+            self::FIELD_DESC => 'These Pokémon have a big appetite. When they spot their prey, they attack it and paralyze it with electricity.',
+            self::FIELD_CATEGORY => 'EleFish Pokémon',
             self::FIELD_ATTACK => 156,
             self::FIELD_DEFENSE => 130,
             self::FIELD_STAMINA => 163,
@@ -10519,6 +11823,8 @@ class PokemonData
         Pokemon::ELEKTROSS => [
             self::FIELD_NAME => 'Eelektross',
             self::FIELD_NAME_SHORT => 'Eelektross',
+            self::FIELD_DESC => 'They crawl out of the ocean using their arms. They will attack prey on shore and immediately drag it into the ocean.',
+            self::FIELD_CATEGORY => 'EleFish Pokémon',
             self::FIELD_ATTACK => 217,
             self::FIELD_DEFENSE => 152,
             self::FIELD_STAMINA => 198,
@@ -10534,6 +11840,8 @@ class PokemonData
         Pokemon::ELGYEM => [
             self::FIELD_NAME => 'Elgyem',
             self::FIELD_NAME_SHORT => 'Elgyem',
+            self::FIELD_DESC => 'This Pokémon is shrouded in mystery. It\'s said to have appeared from a UFO that fell from the sky about 50 years ago.',
+            self::FIELD_CATEGORY => 'Cerebral Pokémon',
             self::FIELD_ATTACK => 148,
             self::FIELD_DEFENSE => 100,
             self::FIELD_STAMINA => 146,
@@ -10550,6 +11858,8 @@ class PokemonData
         Pokemon::BEHEEYEM => [
             self::FIELD_NAME => 'Beheeyem',
             self::FIELD_NAME_SHORT => 'Beheeyem',
+            self::FIELD_DESC => 'It has strong psychic powers. Using its fingers that flash three different colors, it controls its opponents and rewrites their memories.',
+            self::FIELD_CATEGORY => 'Cerebral Pokémon',
             self::FIELD_ATTACK => 221,
             self::FIELD_DEFENSE => 163,
             self::FIELD_STAMINA => 181,
@@ -10565,6 +11875,8 @@ class PokemonData
         Pokemon::LITWICK => [
             self::FIELD_NAME => 'Litwick',
             self::FIELD_NAME_SHORT => 'Litwick',
+            self::FIELD_DESC => 'Litwick shines a light that absorbs the life energy of people and Pokémon, which becomes the fuel that it burns.',
+            self::FIELD_CATEGORY => 'Candle Pokémon',
             self::FIELD_ATTACK => 108,
             self::FIELD_DEFENSE => 98,
             self::FIELD_STAMINA => 137,
@@ -10582,6 +11894,8 @@ class PokemonData
         Pokemon::LAMPENT => [
             self::FIELD_NAME => 'Lampent',
             self::FIELD_NAME_SHORT => 'Lampent',
+            self::FIELD_DESC => 'It arrives near the moment of death and steals spirit from the body.',
+            self::FIELD_CATEGORY => 'Lamp Pokémon',
             self::FIELD_ATTACK => 169,
             self::FIELD_DEFENSE => 115,
             self::FIELD_STAMINA => 155,
@@ -10599,6 +11913,8 @@ class PokemonData
         Pokemon::CHANDELURE => [
             self::FIELD_NAME => 'Chandelure',
             self::FIELD_NAME_SHORT => 'Chandelure',
+            self::FIELD_DESC => 'The spirits burned up in its ominous flame lose their way and wander this world forever.',
+            self::FIELD_CATEGORY => 'Luring Pokémon',
             self::FIELD_ATTACK => 271,
             self::FIELD_DEFENSE => 182,
             self::FIELD_STAMINA => 155,
@@ -10615,6 +11931,8 @@ class PokemonData
         Pokemon::AXEW => [
             self::FIELD_NAME => 'Axew',
             self::FIELD_NAME_SHORT => 'Axew',
+            self::FIELD_DESC => 'They mark their territory by leaving gashes in trees with their tusks. If a tusk breaks, a new one grows in quickly.',
+            self::FIELD_CATEGORY => 'Tusk Pokémon',
             self::FIELD_ATTACK => 154,
             self::FIELD_DEFENSE => 101,
             self::FIELD_STAMINA => 130,
@@ -10631,6 +11949,8 @@ class PokemonData
         Pokemon::FRAXURE => [
             self::FIELD_NAME => 'Fraxure',
             self::FIELD_NAME_SHORT => 'Fraxure',
+            self::FIELD_DESC => 'A broken tusk will not grow back, so it diligently sharpens its tusks on river rocks after the end of a battle.',
+            self::FIELD_CATEGORY => 'Axe Jaw Pokémon',
             self::FIELD_ATTACK => 212,
             self::FIELD_DEFENSE => 123,
             self::FIELD_STAMINA => 165,
@@ -10647,6 +11967,8 @@ class PokemonData
         Pokemon::HAXORUS => [
             self::FIELD_NAME => 'Haxorus',
             self::FIELD_NAME_SHORT => 'Haxorus',
+            self::FIELD_DESC => 'Their sturdy tusks will stay sharp even if used to cut steel beams. These Pokémon are covered in hard armor.',
+            self::FIELD_CATEGORY => 'Axe Jaw Pokémon',
             self::FIELD_ATTACK => 284,
             self::FIELD_DEFENSE => 172,
             self::FIELD_STAMINA => 183,
@@ -10662,6 +11984,8 @@ class PokemonData
         Pokemon::CUBCHOO => [
             self::FIELD_NAME => 'Cubchoo',
             self::FIELD_NAME_SHORT => 'Cubchoo',
+            self::FIELD_DESC => 'Their snot is a barometer of health. When healthy, their snot is sticky and the power of their ice moves increases.',
+            self::FIELD_CATEGORY => 'Chill Pokémon',
             self::FIELD_ATTACK => 128,
             self::FIELD_DEFENSE => 74,
             self::FIELD_STAMINA => 146,
@@ -10678,6 +12002,8 @@ class PokemonData
         Pokemon::BEARTIC => [
             self::FIELD_NAME => 'Beartic',
             self::FIELD_NAME_SHORT => 'Beartic',
+            self::FIELD_DESC => 'It freezes its breath to create fangs and claws of ice to fight with. Cold northern areas are its habitat.',
+            self::FIELD_CATEGORY => 'Freezing Pokémon',
             self::FIELD_ATTACK => 233,
             self::FIELD_DEFENSE => 152,
             self::FIELD_STAMINA => 216,
@@ -10693,6 +12019,8 @@ class PokemonData
         Pokemon::CRYOGONAL => [
             self::FIELD_NAME => 'Cryogonal',
             self::FIELD_NAME_SHORT => 'Cryogonal',
+            self::FIELD_DESC => 'They are composed of ice crystals. They capture prey with chains of ice, freezing the prey at -148 degrees Fahrenheit.',
+            self::FIELD_CATEGORY => 'Crystallizing Pokémon',
             self::FIELD_ATTACK => 190,
             self::FIELD_DEFENSE => 218,
             self::FIELD_STAMINA => 190,
@@ -10708,6 +12036,8 @@ class PokemonData
         Pokemon::SHELMET => [
             self::FIELD_NAME => 'Shelmet',
             self::FIELD_NAME_SHORT => 'Shelmet',
+            self::FIELD_DESC => 'It evolves when bathed in an electric-like energy along with Karrablast. The reason is still unknown.',
+            self::FIELD_CATEGORY => 'Snail Pokémon',
             self::FIELD_ATTACK => 72,
             self::FIELD_DEFENSE => 140,
             self::FIELD_STAMINA => 137,
@@ -10724,6 +12054,8 @@ class PokemonData
         Pokemon::ACCELGOR => [
             self::FIELD_NAME => 'Accelgor',
             self::FIELD_NAME_SHORT => 'Accelgor',
+            self::FIELD_DESC => 'When its body dries out, it weakens. So, to prevent dehydration, it wraps itself in many layers of thin membrane.',
+            self::FIELD_CATEGORY => 'Shell Out Pokémon',
             self::FIELD_ATTACK => 220,
             self::FIELD_DEFENSE => 120,
             self::FIELD_STAMINA => 190,
@@ -10739,6 +12071,8 @@ class PokemonData
         Pokemon::STUNFISK => [
             self::FIELD_NAME => 'Stunfisk',
             self::FIELD_NAME_SHORT => 'Stunfisk',
+            self::FIELD_DESC => 'It conceals itself in the mud of the seashore. Then it waits. When prey touch it, it delivers a jolt of electricity.',
+            self::FIELD_CATEGORY => 'Trap Pokémon',
             self::FIELD_ATTACK => 144,
             self::FIELD_DEFENSE => 171,
             self::FIELD_STAMINA => 240,
@@ -10755,6 +12089,8 @@ class PokemonData
         Pokemon::MIENFOO => [
             self::FIELD_NAME => 'Mienfoo',
             self::FIELD_NAME_SHORT => 'Mienfoo',
+            self::FIELD_DESC => 'They seclude themselves in the mountains and devote themselves to training. The form of their kicks and chops differs from pack to pack.',
+            self::FIELD_CATEGORY => 'Martial Arts Pokémon',
             self::FIELD_ATTACK => 160,
             self::FIELD_DEFENSE => 98,
             self::FIELD_STAMINA => 128,
@@ -10771,6 +12107,8 @@ class PokemonData
         Pokemon::MIENSHAO => [
             self::FIELD_NAME => 'Mienshao',
             self::FIELD_NAME_SHORT => 'Mienshao',
+            self::FIELD_DESC => 'When Mienshao lets out a bizarre wail, you\'re in danger. A flurry of kicks and chops too fast to see is about to be unleashed!',
+            self::FIELD_CATEGORY => 'Martial Arts Pokémon',
             self::FIELD_ATTACK => 258,
             self::FIELD_DEFENSE => 127,
             self::FIELD_STAMINA => 163,
@@ -10786,6 +12124,8 @@ class PokemonData
         Pokemon::DRUDDIGON => [
             self::FIELD_NAME => 'Druddigon',
             self::FIELD_NAME_SHORT => 'Druddigon',
+            self::FIELD_DESC => 'It infiltrates tunnels that Pokémon like Diglett and Dugtrio have dug and quietly waits for prey to pass through.',
+            self::FIELD_CATEGORY => 'Cave Pokémon',
             self::FIELD_ATTACK => 213,
             self::FIELD_DEFENSE => 170,
             self::FIELD_STAMINA => 184,
@@ -10801,6 +12141,8 @@ class PokemonData
         Pokemon::GOLETT => [
             self::FIELD_NAME => 'Golett',
             self::FIELD_NAME_SHORT => 'Golett',
+            self::FIELD_DESC => 'Although ancient people apparently built it by working with clay, the source of its energy is unclear.',
+            self::FIELD_CATEGORY => 'Automaton Pokémon',
             self::FIELD_ATTACK => 127,
             self::FIELD_DEFENSE => 92,
             self::FIELD_STAMINA => 153,
@@ -10818,6 +12160,8 @@ class PokemonData
         Pokemon::GOLURK => [
             self::FIELD_NAME => 'Golurk',
             self::FIELD_NAME_SHORT => 'Golurk',
+            self::FIELD_DESC => 'When the seal on its chest is removed, it rages indiscriminately, turning the whole town around it into a mountain of rubble.',
+            self::FIELD_CATEGORY => 'Automaton Pokémon',
             self::FIELD_ATTACK => 222,
             self::FIELD_DEFENSE => 154,
             self::FIELD_STAMINA => 205,
@@ -10834,6 +12178,8 @@ class PokemonData
         Pokemon::PAWNIARD => [
             self::FIELD_NAME => 'Pawniard',
             self::FIELD_NAME_SHORT => 'Pawniard',
+            self::FIELD_DESC => 'It follows Bisharp\'s orders to a tee when it attacks enemies. After slashing an opponent, Pawniard clangs both of its blades together.',
+            self::FIELD_CATEGORY => 'Sharp Blade Pokémon',
             self::FIELD_ATTACK => 154,
             self::FIELD_DEFENSE => 114,
             self::FIELD_STAMINA => 128,
@@ -10851,6 +12197,8 @@ class PokemonData
         Pokemon::BISHARP => [
             self::FIELD_NAME => 'Bisharp',
             self::FIELD_NAME_SHORT => 'Bisharp',
+            self::FIELD_DESC => 'It leads a group of Pawniard. Bisharp doesn\'t even change its expression when it deals the finishing blow to an opponent.',
+            self::FIELD_CATEGORY => 'Sword Blade Pokémon',
             self::FIELD_ATTACK => 232,
             self::FIELD_DEFENSE => 176,
             self::FIELD_STAMINA => 163,
@@ -10867,6 +12215,8 @@ class PokemonData
         Pokemon::BOUFFALANT => [
             self::FIELD_NAME => 'Bouffalant',
             self::FIELD_NAME_SHORT => 'Bouffalant',
+            self::FIELD_DESC => 'Their fluffy fur absorbs damage, even if they strike foes with a fierce headbutt.',
+            self::FIELD_CATEGORY => 'Bash Buffalo Pokémon',
             self::FIELD_ATTACK => 195,
             self::FIELD_DEFENSE => 182,
             self::FIELD_STAMINA => 216,
@@ -10882,6 +12232,8 @@ class PokemonData
         Pokemon::RUFFLET => [
             self::FIELD_NAME => 'Rufflet',
             self::FIELD_NAME_SHORT => 'Rufflet',
+            self::FIELD_DESC => 'Known as a natural-born warrior, soon after its hatching, it will challenge its parent to a fight in order to gain their acceptance.',
+            self::FIELD_CATEGORY => 'Eaglet Pokémon',
             self::FIELD_ATTACK => 150,
             self::FIELD_DEFENSE => 97,
             self::FIELD_STAMINA => 172,
@@ -10899,6 +12251,8 @@ class PokemonData
         Pokemon::BRAVIARY => [
             self::FIELD_NAME => 'Braviary',
             self::FIELD_NAME_SHORT => 'Braviary',
+            self::FIELD_DESC => 'Known as “the hero of the skies," this Pokémon is so proud and so brave that it will never retreat, even when it\'s injured.',
+            self::FIELD_CATEGORY => 'Valiant Pokémon',
             self::FIELD_ATTACK => 232,
             self::FIELD_DEFENSE => 152,
             self::FIELD_STAMINA => 225,
@@ -10915,6 +12269,8 @@ class PokemonData
         Pokemon::VULLABY => [
             self::FIELD_NAME => 'Vullaby',
             self::FIELD_NAME_SHORT => 'Vullaby',
+            self::FIELD_DESC => 'Its healthy appetite leads to visible growth spurts. It often has to replace the bones it wears as its size increases.',
+            self::FIELD_CATEGORY => 'Diapered Pokémon',
             self::FIELD_ATTACK => 105,
             self::FIELD_DEFENSE => 139,
             self::FIELD_STAMINA => 172,
@@ -10932,6 +12288,8 @@ class PokemonData
         Pokemon::MANDIBUZZ => [
             self::FIELD_NAME => 'Mandibuzz',
             self::FIELD_NAME_SHORT => 'Mandibuzz',
+            self::FIELD_DESC => 'It\'s always searching for food for Vullaby. When it finds a weak Pokémon, Mandibuzz swoops it right off to its nest.',
+            self::FIELD_CATEGORY => 'Bone Vulture Pokémon',
             self::FIELD_ATTACK => 129,
             self::FIELD_DEFENSE => 205,
             self::FIELD_STAMINA => 242,
@@ -10948,6 +12306,8 @@ class PokemonData
         Pokemon::HEATMOR => [
             self::FIELD_NAME => 'Heatmor',
             self::FIELD_NAME_SHORT => 'Heatmor',
+            self::FIELD_DESC => 'It draws in air through its tail, transforms it into fire, and uses it like a tongue. It melts Durant and eats them.',
+            self::FIELD_CATEGORY => 'Anteater Pokémon',
             self::FIELD_ATTACK => 204,
             self::FIELD_DEFENSE => 129,
             self::FIELD_STAMINA => 198,
@@ -10963,6 +12323,8 @@ class PokemonData
         Pokemon::DURANT => [
             self::FIELD_NAME => 'Durant',
             self::FIELD_NAME_SHORT => 'Durant',
+            self::FIELD_DESC => 'They attack in groups, covering themselves in steel armor to protect themselves from Heatmor.',
+            self::FIELD_CATEGORY => 'Iron Ant Pokémon',
             self::FIELD_ATTACK => 217,
             self::FIELD_DEFENSE => 188,
             self::FIELD_STAMINA => 151,
@@ -10979,6 +12341,8 @@ class PokemonData
         Pokemon::DEINO => [
             self::FIELD_NAME => 'Deino',
             self::FIELD_NAME_SHORT => 'Deino',
+            self::FIELD_DESC => 'Lacking sight, it\'s unaware of its surroundings, so it bumps into things and eats anything that moves.',
+            self::FIELD_CATEGORY => 'Irate Pokémon',
             self::FIELD_ATTACK => 116,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 141,
@@ -10996,6 +12360,8 @@ class PokemonData
         Pokemon::ZWELIOUS => [
             self::FIELD_NAME => 'Zweilous',
             self::FIELD_NAME_SHORT => 'Zweilous',
+            self::FIELD_DESC => 'After it has eaten up all the food in its territory, it moves to another area. Its two heads do not get along.',
+            self::FIELD_CATEGORY => 'Hostile Pokémon',
             self::FIELD_ATTACK => 159,
             self::FIELD_DEFENSE => 135,
             self::FIELD_STAMINA => 176,
@@ -11013,6 +12379,8 @@ class PokemonData
         Pokemon::HYDREIGON => [
             self::FIELD_NAME => 'Hydreigon',
             self::FIELD_NAME_SHORT => 'Hydreigon',
+            self::FIELD_DESC => 'It responds to movement by attacking. This scary, three-headed Pokémon devours everything in its path!',
+            self::FIELD_CATEGORY => 'Brutal Pokémon',
             self::FIELD_ATTACK => 256,
             self::FIELD_DEFENSE => 188,
             self::FIELD_STAMINA => 211,
@@ -11029,6 +12397,8 @@ class PokemonData
         Pokemon::LARVESTA => [
             self::FIELD_NAME => 'Larvesta',
             self::FIELD_NAME_SHORT => 'Larvesta',
+            self::FIELD_DESC => 'It protects itself with flame. Long years ago, people believed Larvesta had a nest on the sun.',
+            self::FIELD_CATEGORY => 'Torch Pokémon',
             self::FIELD_ATTACK => 156,
             self::FIELD_DEFENSE => 107,
             self::FIELD_STAMINA => 146,
@@ -11046,6 +12416,8 @@ class PokemonData
         Pokemon::VOLCARONA => [
             self::FIELD_NAME => 'Volcarona',
             self::FIELD_NAME_SHORT => 'Volcarona',
+            self::FIELD_DESC => 'According to legends, it was hatched from a flaming cocoon to save people and Pokémon that were suffering from the cold.',
+            self::FIELD_CATEGORY => 'Sun Pokémon',
             self::FIELD_ATTACK => 264,
             self::FIELD_DEFENSE => 189,
             self::FIELD_STAMINA => 198,
@@ -11062,6 +12434,8 @@ class PokemonData
         Pokemon::COBALLION => [
             self::FIELD_NAME => 'Cobalion',
             self::FIELD_NAME_SHORT => 'Cobalion',
+            self::FIELD_DESC => 'It has a body and heart of steel. It worked with its allies to punish people when they hurt Pokémon.',
+            self::FIELD_CATEGORY => 'Iron Will Pokémon',
             self::FIELD_ATTACK => 192,
             self::FIELD_DEFENSE => 229,
             self::FIELD_STAMINA => 209,
@@ -11079,6 +12453,8 @@ class PokemonData
         Pokemon::TERRAKION => [
             self::FIELD_NAME => 'Terrakion',
             self::FIELD_NAME_SHORT => 'Terrakion',
+            self::FIELD_DESC => 'Spoken of in legend, this Pokémon used its phenomenal power to destroy a castle in its effort to protect Pokémon.',
+            self::FIELD_CATEGORY => 'Cavern Pokémon',
             self::FIELD_ATTACK => 260,
             self::FIELD_DEFENSE => 192,
             self::FIELD_STAMINA => 209,
@@ -11095,6 +12471,8 @@ class PokemonData
         Pokemon::VIRIZION => [
             self::FIELD_NAME => 'Virizion',
             self::FIELD_NAME_SHORT => 'Virizion',
+            self::FIELD_DESC => 'Legends say this Pokémon confounded opponents with its swift movements.',
+            self::FIELD_CATEGORY => 'Grassland Pokémon',
             self::FIELD_ATTACK => 192,
             self::FIELD_DEFENSE => 229,
             self::FIELD_STAMINA => 209,
@@ -11111,6 +12489,8 @@ class PokemonData
         Pokemon::TORNADUS | FormsAlias::TORNADUS_INCARNATE => [
             self::FIELD_NAME => 'Tornadus (Incarnate Forme)',
             self::FIELD_NAME_SHORT => 'Tornadus',
+            self::FIELD_DESC => 'Tornadus expels massive energy from its tail, causing severe storms. Its power is great enough to blow houses away.',
+            self::FIELD_CATEGORY => 'Cyclone Pokémon',
             self::FIELD_ATTACK => 266,
             self::FIELD_DEFENSE => 164,
             self::FIELD_STAMINA => 188,
@@ -11126,6 +12506,8 @@ class PokemonData
         Pokemon::TORNADUS | FormsAlias::TORNADUS_THERIAN => [
             self::FIELD_NAME => 'Tornadus (Therian Forme)',
             self::FIELD_NAME_SHORT => 'Tornadus',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Cyclone Pokémon',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 189,
             self::FIELD_STAMINA => 188,
@@ -11141,6 +12523,8 @@ class PokemonData
         Pokemon::THUNDURUS | FormsAlias::THUNDURUS_INCARNATE => [
             self::FIELD_NAME => 'Thundurus (Incarnate Forme)',
             self::FIELD_NAME_SHORT => 'Thundurus',
+            self::FIELD_DESC => 'As it flies around, it shoots lightning all over the place and causes forest fires. It is therefore disliked.',
+            self::FIELD_CATEGORY => 'Bolt Strike Pokémon',
             self::FIELD_ATTACK => 266,
             self::FIELD_DEFENSE => 164,
             self::FIELD_STAMINA => 188,
@@ -11157,6 +12541,8 @@ class PokemonData
         Pokemon::THUNDURUS | FormsAlias::THUNDURUS_THERIAN => [
             self::FIELD_NAME => 'Thundurus (Therian Forme)',
             self::FIELD_NAME_SHORT => 'Thundurus',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Bolt Strike Pokémon',
             self::FIELD_ATTACK => 295,
             self::FIELD_DEFENSE => 161,
             self::FIELD_STAMINA => 188,
@@ -11173,6 +12559,8 @@ class PokemonData
         Pokemon::RESHIRAM => [
             self::FIELD_NAME => 'Reshiram',
             self::FIELD_NAME_SHORT => 'Reshiram',
+            self::FIELD_DESC => 'When Reshiram\'s tail flares, the heat energy moves the atmosphere and changes the world\'s weather.',
+            self::FIELD_CATEGORY => 'Vast White Pokémon',
             self::FIELD_ATTACK => 275,
             self::FIELD_DEFENSE => 211,
             self::FIELD_STAMINA => 205,
@@ -11189,6 +12577,8 @@ class PokemonData
         Pokemon::ZEKROM => [
             self::FIELD_NAME => 'Zekrom',
             self::FIELD_NAME_SHORT => 'Zekrom',
+            self::FIELD_DESC => 'Concealing itself in lightning clouds, it flies throughout the Unova region. It creates electricity in its tail.',
+            self::FIELD_CATEGORY => 'Deep Black Pokémon',
             self::FIELD_ATTACK => 275,
             self::FIELD_DEFENSE => 211,
             self::FIELD_STAMINA => 205,
@@ -11205,6 +12595,8 @@ class PokemonData
         Pokemon::LANDORUS | FormsAlias::LANDORUS_INCARNATE => [
             self::FIELD_NAME => 'Landorus (Incarnate Forme)',
             self::FIELD_NAME_SHORT => 'Landorus',
+            self::FIELD_DESC => 'From the forces of lightning and wind, it creates energy to give nutrients to the soil and make the land abundant.',
+            self::FIELD_CATEGORY => 'Abundance Pokémon',
             self::FIELD_ATTACK => 261,
             self::FIELD_DEFENSE => 182,
             self::FIELD_STAMINA => 205,
@@ -11221,6 +12613,8 @@ class PokemonData
         Pokemon::LANDORUS | FormsAlias::LANDORUS_THERIAN => [
             self::FIELD_NAME => 'Landorus (Therian Forme)',
             self::FIELD_NAME_SHORT => 'Landorus',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Abundance Pokémon',
             self::FIELD_ATTACK => 289,
             self::FIELD_DEFENSE => 179,
             self::FIELD_STAMINA => 205,
@@ -11237,6 +12631,8 @@ class PokemonData
         Pokemon::KYUREM | FormsAlias::KYUREM_NORMAL => [
             self::FIELD_NAME => 'Kyurem',
             self::FIELD_NAME_SHORT => 'Kyurem',
+            self::FIELD_DESC => 'It generates a powerful, freezing energy inside itself, but its body became frozen when the energy leaked out.',
+            self::FIELD_CATEGORY => 'Boundary Pokémon',
             self::FIELD_ATTACK => 246,
             self::FIELD_DEFENSE => 170,
             self::FIELD_STAMINA => 245,
@@ -11253,6 +12649,8 @@ class PokemonData
         Pokemon::KYUREM | FormsAlias::KYUREM_BLACK => [
             self::FIELD_NAME => 'Black Kyurem',
             self::FIELD_NAME_SHORT => 'Kyurem',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Boundary Pokémon',
             self::FIELD_ATTACK => 310,
             self::FIELD_DEFENSE => 183,
             self::FIELD_STAMINA => 245,
@@ -11269,6 +12667,8 @@ class PokemonData
         Pokemon::KYUREM | FormsAlias::KYUREM_WHITE => [
             self::FIELD_NAME => 'White Kyurem',
             self::FIELD_NAME_SHORT => 'Kyurem',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Boundary Pokémon',
             self::FIELD_ATTACK => 310,
             self::FIELD_DEFENSE => 183,
             self::FIELD_STAMINA => 245,
@@ -11285,6 +12685,8 @@ class PokemonData
         Pokemon::KELDEO | FormsAlias::KELDEO_ORDINARY => [
             self::FIELD_NAME => 'Keldeo (Ordinary Form)',
             self::FIELD_NAME_SHORT => 'Keldeo',
+            self::FIELD_DESC => 'When it is resolute, its body fills with power and it becomes swifter. Its jumps are then too fast to follow.',
+            self::FIELD_CATEGORY => 'Colt Pokémon',
             self::FIELD_ATTACK => 260,
             self::FIELD_DEFENSE => 192,
             self::FIELD_STAMINA => 209,
@@ -11300,6 +12702,8 @@ class PokemonData
         Pokemon::KELDEO | FormsAlias::KELDEO_RESOLUTE => [
             self::FIELD_NAME => 'Keldeo (Resolute Form)',
             self::FIELD_NAME_SHORT => 'Keldeo',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Colt Pokémon',
             self::FIELD_ATTACK => 260,
             self::FIELD_DEFENSE => 192,
             self::FIELD_STAMINA => 209,
@@ -11315,6 +12719,8 @@ class PokemonData
         Pokemon::MELOETTA | FormsAlias::MELOETTA_ARIA => [
             self::FIELD_NAME => 'Meloetta (Aria Forme)',
             self::FIELD_NAME_SHORT => 'Meloetta',
+            self::FIELD_DESC => 'Its melodies are sung with a special vocalization method that can control the feelings of those who hear it.',
+            self::FIELD_CATEGORY => 'Melody Pokémon',
             self::FIELD_ATTACK => 250,
             self::FIELD_DEFENSE => 225,
             self::FIELD_STAMINA => 225,
@@ -11330,6 +12736,8 @@ class PokemonData
         Pokemon::MELOETTA | FormsAlias::MELOETTA_PIROUETTE => [
             self::FIELD_NAME => 'Meloetta (Pirouette Forme)',
             self::FIELD_NAME_SHORT => 'Meloetta',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Melody Pokémon',
             self::FIELD_ATTACK => 269,
             self::FIELD_DEFENSE => 188,
             self::FIELD_STAMINA => 225,
@@ -11345,6 +12753,8 @@ class PokemonData
         Pokemon::GENESECT | FormsAlias::GENESECT_NORMAL => [
             self::FIELD_NAME => 'Genesect',
             self::FIELD_NAME_SHORT => 'Genesect',
+            self::FIELD_DESC => 'This Pokémon existed 300 million years ago. Team Plasma altered it and attached a cannon to its back.',
+            self::FIELD_CATEGORY => 'Paleozoic Pokémon',
             self::FIELD_ATTACK => 252,
             self::FIELD_DEFENSE => 199,
             self::FIELD_STAMINA => 174,
@@ -11361,6 +12771,8 @@ class PokemonData
         Pokemon::GENESECT | FormsAlias::GENESECT_BURN => [
             self::FIELD_NAME => 'Genesect (Burn Drive)',
             self::FIELD_NAME_SHORT => 'Genesect',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Paleozoic Pokémon',
             self::FIELD_ATTACK => 252,
             self::FIELD_DEFENSE => 199,
             self::FIELD_STAMINA => 174,
@@ -11377,6 +12789,8 @@ class PokemonData
         Pokemon::GENESECT | FormsAlias::GENESECT_CHILL => [
             self::FIELD_NAME => 'Genesect (Chill Drive)',
             self::FIELD_NAME_SHORT => 'Genesect',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Paleozoic Pokémon',
             self::FIELD_ATTACK => 252,
             self::FIELD_DEFENSE => 199,
             self::FIELD_STAMINA => 174,
@@ -11393,6 +12807,8 @@ class PokemonData
         Pokemon::GENESECT | FormsAlias::GENESECT_DOUSE => [
             self::FIELD_NAME => 'Genesect (Douse Drive)',
             self::FIELD_NAME_SHORT => 'Genesect',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Paleozoic Pokémon',
             self::FIELD_ATTACK => 252,
             self::FIELD_DEFENSE => 199,
             self::FIELD_STAMINA => 174,
@@ -11409,6 +12825,8 @@ class PokemonData
         Pokemon::GENESECT | FormsAlias::GENESECT_SHOCK => [
             self::FIELD_NAME => 'Genesect (Shock Drive)',
             self::FIELD_NAME_SHORT => 'Genesect',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Paleozoic Pokémon',
             self::FIELD_ATTACK => 252,
             self::FIELD_DEFENSE => 199,
             self::FIELD_STAMINA => 174,
@@ -11425,6 +12843,8 @@ class PokemonData
         Pokemon::CHESPIN => [
             self::FIELD_NAME => 'Chespin',
             self::FIELD_NAME_SHORT => 'Chespin',
+            self::FIELD_DESC => 'The quills on its head are usually soft. When it flexes them, the points become so hard and sharp that they can pierce rock.',
+            self::FIELD_CATEGORY => 'Spiky Nut Pokémon',
             self::FIELD_ATTACK => 110,
             self::FIELD_DEFENSE => 106,
             self::FIELD_STAMINA => 148,
@@ -11441,6 +12861,8 @@ class PokemonData
         Pokemon::QUILLADIN => [
             self::FIELD_NAME => 'Quilladin',
             self::FIELD_NAME_SHORT => 'Quilladin',
+            self::FIELD_DESC => 'It relies on its sturdy shell to deflect predators’ attacks. It counterattacks with its sharp quills.',
+            self::FIELD_CATEGORY => 'Spiny Armor Pokémon',
             self::FIELD_ATTACK => 146,
             self::FIELD_DEFENSE => 156,
             self::FIELD_STAMINA => 156,
@@ -11457,6 +12879,8 @@ class PokemonData
         Pokemon::CHESNAUGHT => [
             self::FIELD_NAME => 'Chesnaught',
             self::FIELD_NAME_SHORT => 'Chesnaught',
+            self::FIELD_DESC => 'Its Tackle is forceful enough to flip a 50-ton tank. It shields its allies from danger with its own body.',
+            self::FIELD_CATEGORY => 'Spiny Armor Pokémon',
             self::FIELD_ATTACK => 201,
             self::FIELD_DEFENSE => 204,
             self::FIELD_STAMINA => 204,
@@ -11473,6 +12897,8 @@ class PokemonData
         Pokemon::FENNEKIN => [
             self::FIELD_NAME => 'Fennekin',
             self::FIELD_NAME_SHORT => 'Fennekin',
+            self::FIELD_DESC => 'Eating a twig fills it with energy, and its roomy ears give vent to air hotter than 390 degrees Fahrenheit.',
+            self::FIELD_CATEGORY => 'Fox Pokémon',
             self::FIELD_ATTACK => 116,
             self::FIELD_DEFENSE => 102,
             self::FIELD_STAMINA => 120,
@@ -11489,6 +12915,8 @@ class PokemonData
         Pokemon::BRAIXEN => [
             self::FIELD_NAME => 'Braixen',
             self::FIELD_NAME_SHORT => 'Braixen',
+            self::FIELD_DESC => 'It has a twig stuck in its tail. With friction from its tail fur, it sets the twig on fire and launches into battle.',
+            self::FIELD_CATEGORY => 'Fox Pokémon',
             self::FIELD_ATTACK => 171,
             self::FIELD_DEFENSE => 130,
             self::FIELD_STAMINA => 153,
@@ -11505,6 +12933,8 @@ class PokemonData
         Pokemon::DELPHOX => [
             self::FIELD_NAME => 'Delphox',
             self::FIELD_NAME_SHORT => 'Delphox',
+            self::FIELD_DESC => 'It gazes into the flame at the tip of its branch to achieve a focused state, which allows it to see into the future.',
+            self::FIELD_CATEGORY => 'Fox Pokémon',
             self::FIELD_ATTACK => 230,
             self::FIELD_DEFENSE => 189,
             self::FIELD_STAMINA => 181,
@@ -11521,6 +12951,8 @@ class PokemonData
         Pokemon::FROAKIE => [
             self::FIELD_NAME => 'Froakie',
             self::FIELD_NAME_SHORT => 'Froakie',
+            self::FIELD_DESC => 'It secretes flexible bubbles from its chest and back. The bubbles reduce the damage it would otherwise take when attacked.',
+            self::FIELD_CATEGORY => 'Bubble Frog Pokémon',
             self::FIELD_ATTACK => 122,
             self::FIELD_DEFENSE => 84,
             self::FIELD_STAMINA => 121,
@@ -11537,6 +12969,8 @@ class PokemonData
         Pokemon::FROGADIER => [
             self::FIELD_NAME => 'Frogadier',
             self::FIELD_NAME_SHORT => 'Frogadier',
+            self::FIELD_DESC => 'It can throw bubble-covered pebbles with precise control, hitting empty cans up to a hundred feet away.',
+            self::FIELD_CATEGORY => 'Bubble Frog Pokémon',
             self::FIELD_ATTACK => 168,
             self::FIELD_DEFENSE => 114,
             self::FIELD_STAMINA => 144,
@@ -11553,6 +12987,8 @@ class PokemonData
         Pokemon::GRENINJA | FormsAlias::GRENINJA_NORMAL => [
             self::FIELD_NAME => 'Greninja',
             self::FIELD_NAME_SHORT => 'Greninja',
+            self::FIELD_DESC => 'It creates throwing stars out of compressed water. When it spins them and throws them at high speed, these stars can split metal in two.',
+            self::FIELD_CATEGORY => 'Ninja Pokémon',
             self::FIELD_ATTACK => 223,
             self::FIELD_DEFENSE => 152,
             self::FIELD_STAMINA => 176,
@@ -11569,6 +13005,8 @@ class PokemonData
         Pokemon::GRENINJA | FormsAlias::GRENINJA_ASH => [
             self::FIELD_NAME => 'Ash-Greninja',
             self::FIELD_NAME_SHORT => 'Greninja',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Ninja Pokémon',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TYPE2 => Types::DARK
@@ -11576,6 +13014,8 @@ class PokemonData
         Pokemon::BUNNELBY => [
             self::FIELD_NAME => 'Bunnelby',
             self::FIELD_NAME_SHORT => 'Bunnelby',
+            self::FIELD_DESC => 'They use their large ears to dig burrows. They will dig the whole night through.',
+            self::FIELD_CATEGORY => 'Digging Pokémon',
             self::FIELD_ATTACK => 68,
             self::FIELD_DEFENSE => 72,
             self::FIELD_STAMINA => 116,
@@ -11592,6 +13032,8 @@ class PokemonData
         Pokemon::DIGGERSBY => [
             self::FIELD_NAME => 'Diggersby',
             self::FIELD_NAME_SHORT => 'Diggersby',
+            self::FIELD_DESC => 'With their powerful ears, they can heft boulders of a ton or more with ease. They can be a big help at construction sites.',
+            self::FIELD_CATEGORY => 'Digging Pokémon',
             self::FIELD_ATTACK => 112,
             self::FIELD_DEFENSE => 155,
             self::FIELD_STAMINA => 198,
@@ -11608,6 +13050,8 @@ class PokemonData
         Pokemon::FLETCHLING => [
             self::FIELD_NAME => 'Fletchling',
             self::FIELD_NAME_SHORT => 'Fletchling',
+            self::FIELD_DESC => 'These friendly Pokémon send signals to one another with beautiful chirps and tail-feather movements.',
+            self::FIELD_CATEGORY => 'Tiny Robin Pokémon',
             self::FIELD_ATTACK => 95,
             self::FIELD_DEFENSE => 80,
             self::FIELD_STAMINA => 128,
@@ -11625,6 +13069,8 @@ class PokemonData
         Pokemon::FLETCHINDER => [
             self::FIELD_NAME => 'Fletchinder',
             self::FIELD_NAME_SHORT => 'Fletchinder',
+            self::FIELD_DESC => 'From its beak, it expels embers that set the tall grass on fire. Then it pounces on the bewildered prey that pop out of the grass.',
+            self::FIELD_CATEGORY => 'Ember Pokémon',
             self::FIELD_ATTACK => 145,
             self::FIELD_DEFENSE => 110,
             self::FIELD_STAMINA => 158,
@@ -11642,6 +13088,8 @@ class PokemonData
         Pokemon::TALONFLAME => [
             self::FIELD_NAME => 'Talonflame',
             self::FIELD_NAME_SHORT => 'Talonflame',
+            self::FIELD_DESC => 'In the fever of an exciting battle, it showers embers from the gaps between its feathers and takes to the air.',
+            self::FIELD_CATEGORY => 'Scorching Pokémon',
             self::FIELD_ATTACK => 176,
             self::FIELD_DEFENSE => 155,
             self::FIELD_STAMINA => 186,
@@ -11658,6 +13106,8 @@ class PokemonData
         Pokemon::SCATTERBUG => [
             self::FIELD_NAME => 'Scatterbug',
             self::FIELD_NAME_SHORT => 'Scatterbug',
+            self::FIELD_DESC => 'When under attack from bird Pokémon, it spews a poisonous black powder that causes paralysis on contact.',
+            self::FIELD_CATEGORY => 'Scatterdust Pokémon',
             self::FIELD_ATTACK => 63,
             self::FIELD_DEFENSE => 63,
             self::FIELD_STAMINA => 116,
@@ -11674,6 +13124,8 @@ class PokemonData
         Pokemon::SPEWPA => [
             self::FIELD_NAME => 'Spewpa',
             self::FIELD_NAME_SHORT => 'Spewpa',
+            self::FIELD_DESC => 'It lives hidden within thicket shadows. When predators attack, it quickly bristles the fur covering its body in an effort to threaten them.',
+            self::FIELD_CATEGORY => 'Scatterdust Pokémon',
             self::FIELD_ATTACK => 48,
             self::FIELD_DEFENSE => 89,
             self::FIELD_STAMINA => 128,
@@ -11690,6 +13142,8 @@ class PokemonData
         Pokemon::VIVILLON | FormsAlias::VIVILLON_MEADOW => [
             self::FIELD_NAME => 'Vivillon (Meadow Pattern)',
             self::FIELD_NAME_SHORT => 'Vivillon',
+            self::FIELD_DESC => 'Vivillon with many different patterns are found all over the world. These patterns are affected by the climate of their habitat.',
+            self::FIELD_CATEGORY => 'Scale Pokémon',
             self::FIELD_ATTACK => 176,
             self::FIELD_DEFENSE => 103,
             self::FIELD_STAMINA => 190,
@@ -11706,6 +13160,8 @@ class PokemonData
         Pokemon::VIVILLON | FormsAlias::VIVILLON_CONTINENTAL => [
             self::FIELD_NAME => 'Vivillon (Continental Pattern)',
             self::FIELD_NAME_SHORT => 'Vivillon',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Scale Pokémon',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TYPE2 => Types::FLYING
@@ -11713,6 +13169,8 @@ class PokemonData
         Pokemon::VIVILLON | FormsAlias::VIVILLON_GARDEN => [
             self::FIELD_NAME => 'Vivillon (Garden Pattern)',
             self::FIELD_NAME_SHORT => 'Vivillon',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Scale Pokémon',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TYPE2 => Types::FLYING
@@ -11720,6 +13178,8 @@ class PokemonData
         Pokemon::VIVILLON | FormsAlias::VIVILLON_ELEGANT => [
             self::FIELD_NAME => 'Vivillon (Elegant Pattern)',
             self::FIELD_NAME_SHORT => 'Vivillon',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Scale Pokémon',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TYPE2 => Types::FLYING
@@ -11727,6 +13187,8 @@ class PokemonData
         Pokemon::VIVILLON | FormsAlias::VIVILLON_MARINE => [
             self::FIELD_NAME => 'Vivillon (Marine Pattern)',
             self::FIELD_NAME_SHORT => 'Vivillon',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Scale Pokémon',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TYPE2 => Types::FLYING
@@ -11734,6 +13196,8 @@ class PokemonData
         Pokemon::VIVILLON | FormsAlias::VIVILLON_PLAINS => [
             self::FIELD_NAME => 'Vivillon (High Plains Pattern)',
             self::FIELD_NAME_SHORT => 'Vivillon',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Scale Pokémon',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TYPE2 => Types::FLYING
@@ -11741,6 +13205,8 @@ class PokemonData
         Pokemon::VIVILLON | FormsAlias::VIVILLON_RIVER => [
             self::FIELD_NAME => 'Vivillon (River Pattern)',
             self::FIELD_NAME_SHORT => 'Vivillon',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Scale Pokémon',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TYPE2 => Types::FLYING
@@ -11748,6 +13214,8 @@ class PokemonData
         Pokemon::LITLEO => [
             self::FIELD_NAME => 'Litleo',
             self::FIELD_NAME_SHORT => 'Litleo',
+            self::FIELD_DESC => 'The stronger the opponent it faces, the more heat surges from its mane and the more power flows through its body.',
+            self::FIELD_CATEGORY => 'Lion Cub Pokémon',
             self::FIELD_ATTACK => 139,
             self::FIELD_DEFENSE => 112,
             self::FIELD_STAMINA => 158,
@@ -11765,6 +13233,8 @@ class PokemonData
         Pokemon::PYROAR | FormsAlias::PYROAR_MALE => [
             self::FIELD_NAME => 'Pyroar (Male)',
             self::FIELD_NAME_SHORT => 'Pyroar',
+            self::FIELD_DESC => 'The male with the largest mane of fire is the leader of the pride.',
+            self::FIELD_CATEGORY => 'Royal Pokémon',
             self::FIELD_ATTACK => 221,
             self::FIELD_DEFENSE => 149,
             self::FIELD_STAMINA => 200,
@@ -11781,6 +13251,8 @@ class PokemonData
         Pokemon::PYROAR | FormsAlias::PYROAR_FEMALE => [
             self::FIELD_NAME => 'Pyroar (Female)',
             self::FIELD_NAME_SHORT => 'Pyroar',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Royal Pokémon',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TYPE2 => Types::NORMAL
@@ -11788,6 +13260,8 @@ class PokemonData
         Pokemon::FLABEBE => [
             self::FIELD_NAME => 'Flabébé',
             self::FIELD_NAME_SHORT => 'Flabébé',
+            self::FIELD_DESC => 'It draws out and controls the hidden power of flowers. The flower Flabébé holds is most likely part of its body.',
+            self::FIELD_CATEGORY => 'Single Bloom Pokémon',
             self::FIELD_ATTACK => 108,
             self::FIELD_DEFENSE => 120,
             self::FIELD_STAMINA => 127,
@@ -11804,6 +13278,8 @@ class PokemonData
         Pokemon::FLOETTE => [
             self::FIELD_NAME => 'Floette',
             self::FIELD_NAME_SHORT => 'Floette',
+            self::FIELD_DESC => 'It flutters around fields of flowers and cares for flowers that are starting to wilt. It draws out the hidden power of flowers to battle.',
+            self::FIELD_CATEGORY => 'Single Bloom Pokémon',
             self::FIELD_ATTACK => 136,
             self::FIELD_DEFENSE => 151,
             self::FIELD_STAMINA => 144,
@@ -11820,6 +13296,8 @@ class PokemonData
         Pokemon::FLORGES => [
             self::FIELD_NAME => 'Florges',
             self::FIELD_NAME_SHORT => 'Florges',
+            self::FIELD_DESC => 'It claims exquisite flower gardens as its territory, and it obtains power from basking in the energy emitted by flowering plants.',
+            self::FIELD_CATEGORY => 'Garden Pokémon',
             self::FIELD_ATTACK => 212,
             self::FIELD_DEFENSE => 244,
             self::FIELD_STAMINA => 186,
@@ -11835,6 +13313,8 @@ class PokemonData
         Pokemon::SKIDDO => [
             self::FIELD_NAME => 'Skiddo',
             self::FIELD_NAME_SHORT => 'Skiddo',
+            self::FIELD_DESC => 'Thought to be one of the first Pokémon to live in harmony with humans, it has a placid disposition.',
+            self::FIELD_CATEGORY => 'Mount Pokémon',
             self::FIELD_ATTACK => 123,
             self::FIELD_DEFENSE => 102,
             self::FIELD_STAMINA => 165,
@@ -11851,6 +13331,8 @@ class PokemonData
         Pokemon::GOGOAT => [
             self::FIELD_NAME => 'Gogoat',
             self::FIELD_NAME_SHORT => 'Gogoat',
+            self::FIELD_DESC => 'It can tell how its Trainer is feeling by subtle shifts in the grip on its horns. This empathic sense lets them run as if one being.',
+            self::FIELD_CATEGORY => 'Mount Pokémon',
             self::FIELD_ATTACK => 196,
             self::FIELD_DEFENSE => 146,
             self::FIELD_STAMINA => 265,
@@ -11866,6 +13348,8 @@ class PokemonData
         Pokemon::PANCHAM => [
             self::FIELD_NAME => 'Pancham',
             self::FIELD_NAME_SHORT => 'Pancham',
+            self::FIELD_DESC => 'It does its best to be taken seriously by its enemies, but its glare is not sufficiently intimidating. Chewing on a leaf is its trademark.',
+            self::FIELD_CATEGORY => 'Playful Pokémon',
             self::FIELD_ATTACK => 145,
             self::FIELD_DEFENSE => 107,
             self::FIELD_STAMINA => 167,
@@ -11882,6 +13366,8 @@ class PokemonData
         Pokemon::PANGORO => [
             self::FIELD_NAME => 'Pangoro',
             self::FIELD_NAME_SHORT => 'Pangoro',
+            self::FIELD_DESC => 'Although it possesses a violent temperament, it won’t put up with bullying. It uses the leaf in its mouth to sense the movements of its enemies.',
+            self::FIELD_CATEGORY => 'Daunting Pokémon',
             self::FIELD_ATTACK => 226,
             self::FIELD_DEFENSE => 146,
             self::FIELD_STAMINA => 216,
@@ -11898,6 +13384,8 @@ class PokemonData
         Pokemon::FURFROU | FormsAlias::FURFROU_NATURAL => [
             self::FIELD_NAME => 'Furfrou (Natural Form)',
             self::FIELD_NAME_SHORT => 'Furfrou',
+            self::FIELD_DESC => 'Trimming its fluffy fur not only makes it more elegant but also increases the swiftness of its movements.',
+            self::FIELD_CATEGORY => 'Poodle Pokémon',
             self::FIELD_ATTACK => 164,
             self::FIELD_DEFENSE => 167,
             self::FIELD_STAMINA => 181,
@@ -11913,24 +13401,32 @@ class PokemonData
         Pokemon::FURFROU | FormsAlias::FURFROU_HEART => [
             self::FIELD_NAME => 'Furfrou (Heart Trim)',
             self::FIELD_NAME_SHORT => 'Furfrou',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Poodle Pokémon',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::NORMAL
         ],
         Pokemon::FURFROU | FormsAlias::FURFROU_STAR => [
             self::FIELD_NAME => 'Furfrou (Star Trim)',
             self::FIELD_NAME_SHORT => 'Furfrou',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Poodle Pokémon',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::NORMAL
         ],
         Pokemon::FURFROU | FormsAlias::FURFROU_DIAMOND => [
             self::FIELD_NAME => 'Furfrou (Diamond Trim)',
             self::FIELD_NAME_SHORT => 'Furfrou',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Poodle Pokémon',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::NORMAL
         ],
         Pokemon::ESPURR => [
             self::FIELD_NAME => 'Espurr',
             self::FIELD_NAME_SHORT => 'Espurr',
+            self::FIELD_DESC => 'The organ that emits its intense psychic power is sheltered by its ears to keep power from leaking out.',
+            self::FIELD_CATEGORY => 'Restraint Pokémon',
             self::FIELD_ATTACK => 120,
             self::FIELD_DEFENSE => 114,
             self::FIELD_STAMINA => 158,
@@ -11947,6 +13443,8 @@ class PokemonData
         Pokemon::MEOWSTIC | FormsAlias::MEOWSTIC_MALE => [
             self::FIELD_NAME => 'Meowstic (Male)',
             self::FIELD_NAME_SHORT => 'Meowstic',
+            self::FIELD_DESC => 'When in danger, it raises its ears and releases enough psychic power to grind a 10-ton truck into dust.',
+            self::FIELD_CATEGORY => 'Constraint Pokémon',
             self::FIELD_ATTACK => 166,
             self::FIELD_DEFENSE => 167,
             self::FIELD_STAMINA => 179,
@@ -11962,12 +13460,16 @@ class PokemonData
         Pokemon::MEOWSTIC | FormsAlias::MEOWSTIC_FEMALE => [
             self::FIELD_NAME => 'Meowstic (Female)',
             self::FIELD_NAME_SHORT => 'Meowstic',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Constraint Pokémon',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::PSYCHIC
         ],
         Pokemon::HONEDGE => [
             self::FIELD_NAME => 'Honedge',
             self::FIELD_NAME_SHORT => 'Honedge',
+            self::FIELD_DESC => 'Apparently this Pokémon is born when a departed spirit inhabits a sword. It attaches itself to people and drinks their life force.',
+            self::FIELD_CATEGORY => 'Sword Pokémon',
             self::FIELD_ATTACK => null,
             self::FIELD_DEFENSE => null,
             self::FIELD_STAMINA => null,
@@ -11985,6 +13487,8 @@ class PokemonData
         Pokemon::DOUBLADE => [
             self::FIELD_NAME => 'Doublade',
             self::FIELD_NAME_SHORT => 'Doublade',
+            self::FIELD_DESC => 'When Honedge evolves, it divides into two swords, which cooperate via telepathy to coordinate attacks and slash their enemies to ribbons.',
+            self::FIELD_CATEGORY => 'Sword Pokémon',
             self::FIELD_ATTACK => null,
             self::FIELD_DEFENSE => null,
             self::FIELD_STAMINA => null,
@@ -12002,6 +13506,8 @@ class PokemonData
         Pokemon::AEGISLASH | FormsAlias::AEGISLASH_SHIELD => [
             self::FIELD_NAME => 'Aegislash (Shield Forme)',
             self::FIELD_NAME_SHORT => 'Aegislash',
+            self::FIELD_DESC => 'Generations of kings were attended by these Pokémon, which used their spectral power to manipulate and control people and Pokémon.',
+            self::FIELD_CATEGORY => 'Royal Sword Pokémon',
             self::FIELD_ATTACK => null,
             self::FIELD_DEFENSE => null,
             self::FIELD_STAMINA => null,
@@ -12018,6 +13524,8 @@ class PokemonData
         Pokemon::AEGISLASH | FormsAlias::AEGISLASH_BLADE => [
             self::FIELD_NAME => 'Aegislash (Blade Forme)',
             self::FIELD_NAME_SHORT => 'Aegislash',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Royal Sword Pokémon',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::STEEL,
             self::FIELD_TYPE2 => Types::GHOST
@@ -12025,6 +13533,8 @@ class PokemonData
         Pokemon::SPIRITZEE => [
             self::FIELD_NAME => 'Spritzee',
             self::FIELD_NAME_SHORT => 'Spritzee',
+            self::FIELD_DESC => 'It emits a scent that enraptures those who smell it. This fragrance changes depending on what it has eaten.',
+            self::FIELD_CATEGORY => 'Perfume Pokémon',
             self::FIELD_ATTACK => 110,
             self::FIELD_DEFENSE => 113,
             self::FIELD_STAMINA => 186,
@@ -12041,6 +13551,8 @@ class PokemonData
         Pokemon::AROMATISSE => [
             self::FIELD_NAME => 'Aromatisse',
             self::FIELD_NAME_SHORT => 'Aromatisse',
+            self::FIELD_DESC => 'It devises various scents, pleasant and unpleasant, and emits scents that its enemies dislike in order to gain an edge in battle.',
+            self::FIELD_CATEGORY => 'Fragrance Pokémon',
             self::FIELD_ATTACK => 173,
             self::FIELD_DEFENSE => 150,
             self::FIELD_STAMINA => 226,
@@ -12056,6 +13568,8 @@ class PokemonData
         Pokemon::SWIRLIX => [
             self::FIELD_NAME => 'Swirlix',
             self::FIELD_NAME_SHORT => 'Swirlix',
+            self::FIELD_DESC => 'To entangle its opponents in battle, it extrudes white threads as sweet and sticky as cotton candy.',
+            self::FIELD_CATEGORY => 'Cotton Candy Pokémon',
             self::FIELD_ATTACK => 109,
             self::FIELD_DEFENSE => 119,
             self::FIELD_STAMINA => 158,
@@ -12072,6 +13586,8 @@ class PokemonData
         Pokemon::SLURPUFF => [
             self::FIELD_NAME => 'Slurpuff',
             self::FIELD_NAME_SHORT => 'Slurpuff',
+            self::FIELD_DESC => 'It can distinguish the faintest of scents. It puts its sensitive sense of smell to use by helping pastry chefs in their work.',
+            self::FIELD_CATEGORY => 'Meringue Pokémon',
             self::FIELD_ATTACK => 168,
             self::FIELD_DEFENSE => 163,
             self::FIELD_STAMINA => 193,
@@ -12087,6 +13603,8 @@ class PokemonData
         Pokemon::INKAY => [
             self::FIELD_NAME => 'Inkay',
             self::FIELD_NAME_SHORT => 'Inkay',
+            self::FIELD_DESC => 'Opponents who stare at the flashing of the light-emitting spots on its body become dazed and lose their will to fight.',
+            self::FIELD_CATEGORY => 'Revolving Pokémon',
             self::FIELD_ATTACK => 98,
             self::FIELD_DEFENSE => 95,
             self::FIELD_STAMINA => 142,
@@ -12104,6 +13622,8 @@ class PokemonData
         Pokemon::MALAMAR => [
             self::FIELD_NAME => 'Malamar',
             self::FIELD_NAME_SHORT => 'Malamar',
+            self::FIELD_DESC => 'It wields the most compelling hypnotic powers of any Pokémon, and it forces others to do whatever it wants.',
+            self::FIELD_CATEGORY => 'Overturning Pokémon',
             self::FIELD_ATTACK => 177,
             self::FIELD_DEFENSE => 165,
             self::FIELD_STAMINA => 200,
@@ -12120,6 +13640,8 @@ class PokemonData
         Pokemon::BINACLE => [
             self::FIELD_NAME => 'Binacle',
             self::FIELD_NAME_SHORT => 'Binacle',
+            self::FIELD_DESC => 'Two Binacle live together on one rock. When they fight, one of them will move to a different rock.',
+            self::FIELD_CATEGORY => 'Two-Handed Pokémon',
             self::FIELD_ATTACK => 96,
             self::FIELD_DEFENSE => 120,
             self::FIELD_STAMINA => 123,
@@ -12137,6 +13659,8 @@ class PokemonData
         Pokemon::BARBARACLE => [
             self::FIELD_NAME => 'Barbaracle',
             self::FIELD_NAME_SHORT => 'Barbaracle',
+            self::FIELD_DESC => 'When they evolve, two Binacle multiply into seven. They fight with the power of seven Binacle.',
+            self::FIELD_CATEGORY => 'Collective Pokémon',
             self::FIELD_ATTACK => 194,
             self::FIELD_DEFENSE => 205,
             self::FIELD_STAMINA => 176,
@@ -12153,6 +13677,8 @@ class PokemonData
         Pokemon::SKRELP => [
             self::FIELD_NAME => 'Skrelp',
             self::FIELD_NAME_SHORT => 'Skrelp',
+            self::FIELD_DESC => 'Camouflaged as rotten kelp, they spray liquid poison on prey that approaches unawares and then finish it off.',
+            self::FIELD_CATEGORY => 'Mock Kelp Pokémon',
             self::FIELD_ATTACK => 109,
             self::FIELD_DEFENSE => 109,
             self::FIELD_STAMINA => 137,
@@ -12170,6 +13696,8 @@ class PokemonData
         Pokemon::DRAGALGE => [
             self::FIELD_NAME => 'Dragalge',
             self::FIELD_NAME_SHORT => 'Dragalge',
+            self::FIELD_DESC => 'Their poison is strong enough to eat through the hull of a tanker, and they spit it indiscriminately at anything that enters their territory.',
+            self::FIELD_CATEGORY => 'Mock Kelp Pokémon',
             self::FIELD_ATTACK => 177,
             self::FIELD_DEFENSE => 207,
             self::FIELD_STAMINA => 163,
@@ -12186,6 +13714,8 @@ class PokemonData
         Pokemon::CLAUNCHER => [
             self::FIELD_NAME => 'Clauncher',
             self::FIELD_NAME_SHORT => 'Clauncher',
+            self::FIELD_DESC => 'They knock down flying prey by firing compressed water from their massive claws like shooting a pistol.',
+            self::FIELD_CATEGORY => 'Water Gun Pokémon',
             self::FIELD_ATTACK => 108,
             self::FIELD_DEFENSE => 117,
             self::FIELD_STAMINA => 137,
@@ -12202,6 +13732,8 @@ class PokemonData
         Pokemon::CLAWITZER => [
             self::FIELD_NAME => 'Clawitzer',
             self::FIELD_NAME_SHORT => 'Clawitzer',
+            self::FIELD_DESC => 'Their enormous claws launch cannonballs of water powerful enough to pierce tanker hulls.',
+            self::FIELD_CATEGORY => 'Howitzer Pokémon',
             self::FIELD_ATTACK => 221,
             self::FIELD_DEFENSE => 171,
             self::FIELD_STAMINA => 174,
@@ -12217,6 +13749,8 @@ class PokemonData
         Pokemon::HELIOPTILE => [
             self::FIELD_NAME => 'Helioptile',
             self::FIELD_NAME_SHORT => 'Helioptile',
+            self::FIELD_DESC => 'They make their home in deserts. They can generate their energy from basking in the sun, so eating food is not a requirement.',
+            self::FIELD_CATEGORY => 'Generator Pokémon',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 127,
@@ -12234,6 +13768,8 @@ class PokemonData
         Pokemon::HELIOLISK => [
             self::FIELD_NAME => 'Heliolisk',
             self::FIELD_NAME_SHORT => 'Heliolisk',
+            self::FIELD_DESC => 'They flare their frills and generate energy. A single Heliolisk can generate sufficient electricity to power a skyscraper.',
+            self::FIELD_CATEGORY => 'Generator Pokémon',
             self::FIELD_ATTACK => 219,
             self::FIELD_DEFENSE => 168,
             self::FIELD_STAMINA => 158,
@@ -12250,6 +13786,8 @@ class PokemonData
         Pokemon::TYRUNT => [
             self::FIELD_NAME => 'Tyrunt',
             self::FIELD_NAME_SHORT => 'Tyrunt',
+            self::FIELD_DESC => 'This Pokémon was restored from a fossil. If something happens that it doesn\'t like, it throws a tantrum and runs wild.',
+            self::FIELD_CATEGORY => 'Royal Heir Pokémon',
             self::FIELD_ATTACK => 158,
             self::FIELD_DEFENSE => 123,
             self::FIELD_STAMINA => 151,
@@ -12267,6 +13805,8 @@ class PokemonData
         Pokemon::TYRANTRUM => [
             self::FIELD_NAME => 'Tyrantrum',
             self::FIELD_NAME_SHORT => 'Tyrantrum',
+            self::FIELD_DESC => 'Thanks to its gargantuan jaws, which could shred thick metal plates as if they were paper, it was invincible in the ancient world it once inhabited.',
+            self::FIELD_CATEGORY => 'Despot Pokémon',
             self::FIELD_ATTACK => 227,
             self::FIELD_DEFENSE => 191,
             self::FIELD_STAMINA => 193,
@@ -12283,6 +13823,8 @@ class PokemonData
         Pokemon::AMAURA => [
             self::FIELD_NAME => 'Amaura',
             self::FIELD_NAME_SHORT => 'Amaura',
+            self::FIELD_DESC => 'This ancient Pokémon was restored from part of its body that had been frozen in ice for over 100 million years.',
+            self::FIELD_CATEGORY => 'Tundra Pokémon',
             self::FIELD_ATTACK => 124,
             self::FIELD_DEFENSE => 109,
             self::FIELD_STAMINA => 184,
@@ -12300,6 +13842,8 @@ class PokemonData
         Pokemon::AURORUS => [
             self::FIELD_NAME => 'Aurorus',
             self::FIELD_NAME_SHORT => 'Aurorus',
+            self::FIELD_DESC => 'The diamond-shaped crystals on its body expel air as cold as –240 degrees Fahrenheit, surrounding its enemies and encasing them in ice.',
+            self::FIELD_CATEGORY => 'Tundra Pokémon',
             self::FIELD_ATTACK => 186,
             self::FIELD_DEFENSE => 163,
             self::FIELD_STAMINA => 265,
@@ -12316,6 +13860,8 @@ class PokemonData
         Pokemon::SYLVEON => [
             self::FIELD_NAME => 'Sylveon',
             self::FIELD_NAME_SHORT => 'Sylveon',
+            self::FIELD_DESC => 'It sends a soothing aura from its ribbonlike feelers to calm fights.',
+            self::FIELD_CATEGORY => 'Intertwining Pokémon',
             self::FIELD_ATTACK => 203,
             self::FIELD_DEFENSE => 205,
             self::FIELD_STAMINA => 216,
@@ -12332,6 +13878,8 @@ class PokemonData
         Pokemon::HAWLUCHA => [
             self::FIELD_NAME => 'Hawlucha',
             self::FIELD_NAME_SHORT => 'Hawlucha',
+            self::FIELD_DESC => 'Although its body is small, its proficient fighting skills enable it to keep up with big bruisers like Machamp and Hariyama.',
+            self::FIELD_CATEGORY => 'Wrestling Pokémon',
             self::FIELD_ATTACK => 195,
             self::FIELD_DEFENSE => 153,
             self::FIELD_STAMINA => 186,
@@ -12348,6 +13896,8 @@ class PokemonData
         Pokemon::DEDENNE => [
             self::FIELD_NAME => 'Dedenne',
             self::FIELD_NAME_SHORT => 'Dedenne',
+            self::FIELD_DESC => 'Its whiskers serve as antennas. By sending and receiving electrical waves, it can communicate with others over vast distances.',
+            self::FIELD_CATEGORY => 'Antenna Pokémon',
             self::FIELD_ATTACK => 164,
             self::FIELD_DEFENSE => 134,
             self::FIELD_STAMINA => 167,
@@ -12364,6 +13914,8 @@ class PokemonData
         Pokemon::CARBINK => [
             self::FIELD_NAME => 'Carbink',
             self::FIELD_NAME_SHORT => 'Carbink',
+            self::FIELD_DESC => 'Born from the temperatures and pressures deep underground, it fires beams from the stone in its head.',
+            self::FIELD_CATEGORY => 'Jewel Pokémon',
             self::FIELD_ATTACK => 95,
             self::FIELD_DEFENSE => 285,
             self::FIELD_STAMINA => 137,
@@ -12380,6 +13932,8 @@ class PokemonData
         Pokemon::GOOMY => [
             self::FIELD_NAME => 'Goomy',
             self::FIELD_NAME_SHORT => 'Goomy',
+            self::FIELD_DESC => 'The weakest Dragon-type Pokémon, it lives in damp, shady places, so its body doesn’t dry out.',
+            self::FIELD_CATEGORY => 'Soft Tissue Pokémon',
             self::FIELD_ATTACK => 101,
             self::FIELD_DEFENSE => 112,
             self::FIELD_STAMINA => 128,
@@ -12396,6 +13950,8 @@ class PokemonData
         Pokemon::SLIGGOO => [
             self::FIELD_NAME => 'Sliggoo',
             self::FIELD_NAME_SHORT => 'Sliggoo',
+            self::FIELD_DESC => 'It drives away opponents by excreting a sticky liquid that can dissolve anything. Its eyes devolved, so it can’t see anything.',
+            self::FIELD_CATEGORY => 'Soft Tissue Pokémon',
             self::FIELD_ATTACK => 159,
             self::FIELD_DEFENSE => 176,
             self::FIELD_STAMINA => 169,
@@ -12412,6 +13968,8 @@ class PokemonData
         Pokemon::GOODRA => [
             self::FIELD_NAME => 'Goodra',
             self::FIELD_NAME_SHORT => 'Goodra',
+            self::FIELD_DESC => 'This very friendly Dragon-type Pokémon will hug its beloved Trainer, leaving that Trainer covered in sticky slime.',
+            self::FIELD_CATEGORY => 'Dragon Pokémon',
             self::FIELD_ATTACK => 220,
             self::FIELD_DEFENSE => 242,
             self::FIELD_STAMINA => 207,
@@ -12427,6 +13985,8 @@ class PokemonData
         Pokemon::KLEFKI => [
             self::FIELD_NAME => 'Klefki',
             self::FIELD_NAME_SHORT => 'Klefki',
+            self::FIELD_DESC => 'These key collectors threaten any attackers by fiercely jingling their keys at them.',
+            self::FIELD_CATEGORY => 'Key Ring Pokémon',
             self::FIELD_ATTACK => 160,
             self::FIELD_DEFENSE => 179,
             self::FIELD_STAMINA => 149,
@@ -12443,6 +14003,8 @@ class PokemonData
         Pokemon::PHANTUMP => [
             self::FIELD_NAME => 'Phantump',
             self::FIELD_NAME_SHORT => 'Phantump',
+            self::FIELD_DESC => 'These Pokémon are created when spirits possess rotten tree stumps. They prefer to live in abandoned forests.',
+            self::FIELD_CATEGORY => 'Stump Pokémon',
             self::FIELD_ATTACK => 125,
             self::FIELD_DEFENSE => 103,
             self::FIELD_STAMINA => 125,
@@ -12460,6 +14022,8 @@ class PokemonData
         Pokemon::TREVEANT => [
             self::FIELD_NAME => 'Trevenant',
             self::FIELD_NAME_SHORT => 'Trevenant',
+            self::FIELD_DESC => 'It can control trees at will. It will trap people who harm the forest, so they can never leave.',
+            self::FIELD_CATEGORY => 'Elder Tree Pokémon',
             self::FIELD_ATTACK => 201,
             self::FIELD_DEFENSE => 154,
             self::FIELD_STAMINA => 198,
@@ -12476,6 +14040,8 @@ class PokemonData
         Pokemon::PUMPKABOO => [
             self::FIELD_NAME => 'Pumpkaboo',
             self::FIELD_NAME_SHORT => 'Pumpkaboo',
+            self::FIELD_DESC => 'The pumpkin body is inhabited by a spirit trapped in this world. As the sun sets, it becomes restless and active.',
+            self::FIELD_CATEGORY => 'Pumpkin Pokémon',
             self::FIELD_ATTACK => null,
             self::FIELD_DEFENSE => null,
             self::FIELD_STAMINA => null,
@@ -12492,6 +14058,8 @@ class PokemonData
         Pokemon::GOURGEIST => [
             self::FIELD_NAME => 'Gourgeist',
             self::FIELD_NAME_SHORT => 'Gourgeist',
+            self::FIELD_DESC => 'Singing in eerie voices, they wander town streets on the night of the new moon. Anyone who hears their song is cursed.',
+            self::FIELD_CATEGORY => 'Pumpkin Pokémon',
             self::FIELD_ATTACK => null,
             self::FIELD_DEFENSE => null,
             self::FIELD_STAMINA => null,
@@ -12507,6 +14075,8 @@ class PokemonData
         Pokemon::BERGMITE => [
             self::FIELD_NAME => 'Bergmite',
             self::FIELD_NAME_SHORT => 'Bergmite',
+            self::FIELD_DESC => 'It blocks opponents’ attacks with the ice that shields its body. It uses cold air to repair any cracks with new ice.',
+            self::FIELD_CATEGORY => 'Ice Chunk Pokémon',
             self::FIELD_ATTACK => 117,
             self::FIELD_DEFENSE => 120,
             self::FIELD_STAMINA => 146,
@@ -12523,6 +14093,8 @@ class PokemonData
         Pokemon::AVALUGG => [
             self::FIELD_NAME => 'Avalugg',
             self::FIELD_NAME_SHORT => 'Avalugg',
+            self::FIELD_DESC => 'Its ice-covered body is as hard as steel. Its cumbersome frame crushes anything that stands in its way.',
+            self::FIELD_CATEGORY => 'Iceberg Pokémon',
             self::FIELD_ATTACK => 196,
             self::FIELD_DEFENSE => 240,
             self::FIELD_STAMINA => 216,
@@ -12538,6 +14110,8 @@ class PokemonData
         Pokemon::NOIBAT => [
             self::FIELD_NAME => 'Noibat',
             self::FIELD_NAME_SHORT => 'Noibat',
+            self::FIELD_DESC => 'They live in pitch-black caves. Their enormous ears can emit ultrasonic waves of 200,000 hertz.',
+            self::FIELD_CATEGORY => 'Sound Wave Pokémon',
             self::FIELD_ATTACK => 83,
             self::FIELD_DEFENSE => 73,
             self::FIELD_STAMINA => 120,
@@ -12555,6 +14129,8 @@ class PokemonData
         Pokemon::NOIVERN => [
             self::FIELD_NAME => 'Noivern',
             self::FIELD_NAME_SHORT => 'Noivern',
+            self::FIELD_DESC => 'They fly around on moonless nights and attack careless prey. Nothing can beat them in a battle in the dark.',
+            self::FIELD_CATEGORY => 'Sound Wave Pokémon',
             self::FIELD_ATTACK => 205,
             self::FIELD_DEFENSE => 175,
             self::FIELD_STAMINA => 198,
@@ -12571,6 +14147,8 @@ class PokemonData
         Pokemon::XERNEAS => [
             self::FIELD_NAME => 'Xerneas',
             self::FIELD_NAME_SHORT => 'Xerneas',
+            self::FIELD_DESC => 'Legends say it can share eternal life. It slept for a thousand years in the form of a tree before its revival.',
+            self::FIELD_CATEGORY => 'Life Pokémon',
             self::FIELD_ATTACK => 275,
             self::FIELD_DEFENSE => 203,
             self::FIELD_STAMINA => 270,
@@ -12586,6 +14164,8 @@ class PokemonData
         Pokemon::YVELTAL => [
             self::FIELD_NAME => 'Yveltal',
             self::FIELD_NAME_SHORT => 'Yveltal',
+            self::FIELD_DESC => 'When this legendary Pokémon’s wings and tail feathers spread wide and glow red, it absorbs the life force of living creatures.',
+            self::FIELD_CATEGORY => 'Destruction Pokémon',
             self::FIELD_ATTACK => 275,
             self::FIELD_DEFENSE => 203,
             self::FIELD_STAMINA => 270,
@@ -12602,6 +14182,8 @@ class PokemonData
         Pokemon::ZYGARGE | FormsAlias::ZYGARGE_HALF => [
             self::FIELD_NAME => 'Zygarde (50% Forme)',
             self::FIELD_NAME_SHORT => 'Zygarde',
+            self::FIELD_DESC => 'When the Kalos region’s ecosystem falls into disarray, it appears and reveals its secret power.',
+            self::FIELD_CATEGORY => 'Order Pokémon',
             self::FIELD_ATTACK => null,
             self::FIELD_DEFENSE => null,
             self::FIELD_STAMINA => null,
@@ -12618,6 +14200,8 @@ class PokemonData
         Pokemon::ZYGARGE | FormsAlias::ZYGARGE_TENTH => [
             self::FIELD_NAME => 'Zygarde (10% Forme)',
             self::FIELD_NAME_SHORT => 'Zygarde',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Order Pokémon',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::DRAGON,
             self::FIELD_TYPE2 => Types::GROUND
@@ -12625,6 +14209,8 @@ class PokemonData
         Pokemon::ZYGARGE | FormsAlias::ZYGARGE_FULL => [
             self::FIELD_NAME => 'Zygarde (Complete Forme)',
             self::FIELD_NAME_SHORT => 'Zygarde',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Order Pokémon',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::DRAGON,
             self::FIELD_TYPE2 => Types::GROUND
@@ -12632,6 +14218,8 @@ class PokemonData
         Pokemon::DIANCIE => [
             self::FIELD_NAME => 'Diancie',
             self::FIELD_NAME_SHORT => 'Diancie',
+            self::FIELD_DESC => 'A sudden transformation of Carbink, its pink, glimmering body is said to be the loveliest sight in the whole world.',
+            self::FIELD_CATEGORY => 'Jewel Pokémon',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ROCK,
             self::FIELD_TYPE2 => Types::FAIRY
@@ -12639,6 +14227,8 @@ class PokemonData
         Pokemon::HOOPA | FormsAlias::HOOPA_CONFINED => [
             self::FIELD_NAME => 'Hoopa Confined',
             self::FIELD_NAME_SHORT => 'Hoopa',
+            self::FIELD_DESC => 'In its true form, it possesses a huge amount of power. Legends of its avarice tell how it once carried off an entire castle to gain the treasure hidden within.',
+            self::FIELD_CATEGORY => 'Mischief Pokémon',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TYPE2 => Types::GHOST
@@ -12646,6 +14236,8 @@ class PokemonData
         Pokemon::HOOPA | FormsAlias::HOOPA_UNBOUND => [
             self::FIELD_NAME => 'Hoopa Unbound',
             self::FIELD_NAME_SHORT => 'Hoopa',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mischief Pokémon',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TYPE2 => Types::DARK
@@ -12653,6 +14245,8 @@ class PokemonData
         Pokemon::VOLCANION => [
             self::FIELD_NAME => 'Volcanion',
             self::FIELD_NAME_SHORT => 'Volcanion',
+            self::FIELD_DESC => 'It lets out billows of steam and disappears into the dense fog. It’s said to live in mountains where humans do not tread.',
+            self::FIELD_CATEGORY => 'Steam Pokémon',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TYPE2 => Types::WATER
@@ -12660,6 +14254,8 @@ class PokemonData
         Pokemon::ROWLET => [
             self::FIELD_NAME => 'Rowlet',
             self::FIELD_NAME_SHORT => 'Rowlet',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TYPE2 => Types::FLYING,
@@ -12668,6 +14264,8 @@ class PokemonData
         Pokemon::DARTRIX => [
             self::FIELD_NAME => 'Dartrix',
             self::FIELD_NAME_SHORT => 'Dartrix',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TYPE2 => Types::FLYING,
@@ -12676,6 +14274,8 @@ class PokemonData
         Pokemon::DECIDUEYE => [
             self::FIELD_NAME => 'Decidueye',
             self::FIELD_NAME_SHORT => 'Decidueye',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TYPE2 => Types::GHOST
@@ -12683,6 +14283,8 @@ class PokemonData
         Pokemon::LITTEN => [
             self::FIELD_NAME => 'Litten',
             self::FIELD_NAME_SHORT => 'Litten',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_EVOLVES => [Pokemon::TORRACAT]
@@ -12690,6 +14292,8 @@ class PokemonData
         Pokemon::TORRACAT => [
             self::FIELD_NAME => 'Torracat',
             self::FIELD_NAME_SHORT => 'Torracat',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_EVOLVES => [Pokemon::INCINEROAR]
@@ -12697,6 +14301,8 @@ class PokemonData
         Pokemon::INCINEROAR => [
             self::FIELD_NAME => 'Incineroar',
             self::FIELD_NAME_SHORT => 'Incineroar',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TYPE2 => Types::DARK
@@ -12704,6 +14310,8 @@ class PokemonData
         Pokemon::POPPLIO => [
             self::FIELD_NAME => 'Popplio',
             self::FIELD_NAME_SHORT => 'Popplio',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_EVOLVES => [Pokemon::BRIONNE]
@@ -12711,6 +14319,8 @@ class PokemonData
         Pokemon::BRIONNE => [
             self::FIELD_NAME => 'Brionne',
             self::FIELD_NAME_SHORT => 'Brionne',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_EVOLVES => [Pokemon::PRIMARINA]
@@ -12718,6 +14328,8 @@ class PokemonData
         Pokemon::PRIMARINA => [
             self::FIELD_NAME => 'Primarina',
             self::FIELD_NAME_SHORT => 'Primarina',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TYPE2 => Types::FAIRY
@@ -12725,6 +14337,8 @@ class PokemonData
         Pokemon::PIKIPEK => [
             self::FIELD_NAME => 'Pikipek',
             self::FIELD_NAME_SHORT => 'Pikipek',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TYPE2 => Types::FLYING,
@@ -12733,6 +14347,8 @@ class PokemonData
         Pokemon::TRUMBEAK => [
             self::FIELD_NAME => 'Trumbeak',
             self::FIELD_NAME_SHORT => 'Trumbeak',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TYPE2 => Types::FLYING,
@@ -12741,6 +14357,8 @@ class PokemonData
         Pokemon::TOUCANNON => [
             self::FIELD_NAME => 'Toucannon',
             self::FIELD_NAME_SHORT => 'Toucannon',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TYPE2 => Types::FLYING
@@ -12748,6 +14366,8 @@ class PokemonData
         Pokemon::YUNGOOS => [
             self::FIELD_NAME => 'Yungoos',
             self::FIELD_NAME_SHORT => 'Yungoos',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_EVOLVES => [Pokemon::GUMSHOOS]
@@ -12755,12 +14375,16 @@ class PokemonData
         Pokemon::GUMSHOOS => [
             self::FIELD_NAME => 'Gumshoos',
             self::FIELD_NAME_SHORT => 'Gumshoos',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::NORMAL
         ],
         Pokemon::GRUBBIN => [
             self::FIELD_NAME => 'Grubbin',
             self::FIELD_NAME_SHORT => 'Grubbin',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_EVOLVES => [Pokemon::CHARJABUG]
@@ -12768,6 +14392,8 @@ class PokemonData
         Pokemon::CHARJABUG => [
             self::FIELD_NAME => 'Charjabug',
             self::FIELD_NAME_SHORT => 'Charjabug',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TYPE2 => Types::ELECTRIC,
@@ -12776,6 +14402,8 @@ class PokemonData
         Pokemon::VIKAVOLT => [
             self::FIELD_NAME => 'Vikavolt',
             self::FIELD_NAME_SHORT => 'Vikavolt',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TYPE2 => Types::ELECTRIC
@@ -12783,6 +14411,8 @@ class PokemonData
         Pokemon::CRABAWLER => [
             self::FIELD_NAME => 'Crabawler',
             self::FIELD_NAME_SHORT => 'Crabawler',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_EVOLVES => [Pokemon::CRABOMINABLE]
@@ -12790,6 +14420,8 @@ class PokemonData
         Pokemon::CRABOMINABLE => [
             self::FIELD_NAME => 'Crabominable',
             self::FIELD_NAME_SHORT => 'Crabominable',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TYPE2 => Types::ICE
@@ -12797,6 +14429,8 @@ class PokemonData
         Pokemon::ORICORIO | FormsAlias::ORICORIO_BAILE => [
             self::FIELD_NAME => 'Oricorio (Baile Style)',
             self::FIELD_NAME_SHORT => 'Oricorio',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TYPE2 => Types::FLYING
@@ -12804,6 +14438,8 @@ class PokemonData
         Pokemon::ORICORIO | FormsAlias::ORICORIO_POMPOM => [
             self::FIELD_NAME => 'Oricorio (Pom-Pom Style)',
             self::FIELD_NAME_SHORT => 'Oricorio',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TYPE2 => Types::FLYING
@@ -12811,6 +14447,8 @@ class PokemonData
         Pokemon::ORICORIO | FormsAlias::ORICORIO_PAU => [
             self::FIELD_NAME => 'Oricorio (Pa\'u Style)',
             self::FIELD_NAME_SHORT => 'Oricorio',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TYPE2 => Types::FLYING
@@ -12818,6 +14456,8 @@ class PokemonData
         Pokemon::ORICORIO | FormsAlias::ORICORIO_SENSU => [
             self::FIELD_NAME => 'Oricorio (Sensu Style)',
             self::FIELD_NAME_SHORT => 'Oricorio',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GHOST,
             self::FIELD_TYPE2 => Types::FLYING
@@ -12825,6 +14465,8 @@ class PokemonData
         Pokemon::CUTIEFLY => [
             self::FIELD_NAME => 'Cutiefly',
             self::FIELD_NAME_SHORT => 'Cutiefly',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TYPE2 => Types::FAIRY,
@@ -12833,6 +14475,8 @@ class PokemonData
         Pokemon::RIBOMBEE => [
             self::FIELD_NAME => 'Ribombee',
             self::FIELD_NAME_SHORT => 'Ribombee',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TYPE2 => Types::FAIRY
@@ -12840,6 +14484,8 @@ class PokemonData
         Pokemon::ROCKRUFF => [
             self::FIELD_NAME => 'Rockruff',
             self::FIELD_NAME_SHORT => 'Rockruff',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ROCK,
             self::FIELD_EVOLVES => [Pokemon::LYCANROC | FormsAlias::LYCANROC_MIDDAY, Pokemon::LYCANROC | FormsAlias::LYCANROC_MIDNIGHT, Pokemon::LYCANROC | FormsAlias::LYCANROC_DUSK]
@@ -12847,36 +14493,48 @@ class PokemonData
         Pokemon::LYCANROC | FormsAlias::LYCANROC_MIDDAY => [
             self::FIELD_NAME => 'Lycanroc (Midday Form)',
             self::FIELD_NAME_SHORT => 'Lycanroc',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ROCK
         ],
         Pokemon::LYCANROC | FormsAlias::LYCANROC_MIDNIGHT => [
             self::FIELD_NAME => 'Lycanroc (Midnight Form)',
             self::FIELD_NAME_SHORT => 'Lycanroc',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ROCK
         ],
         Pokemon::LYCANROC | FormsAlias::LYCANROC_DUSK => [
             self::FIELD_NAME => 'Lycanroc (Dusk Form)',
             self::FIELD_NAME_SHORT => 'Lycanroc',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ROCK
         ],
         Pokemon::WISHIWASHI | FormsAlias::WISHIWASHI_SOLO => [
             self::FIELD_NAME => 'Wishiwashi (Solo Form)',
             self::FIELD_NAME_SHORT => 'Wishiwashi',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::WATER
         ],
         Pokemon::WISHIWASHI | FormsAlias::WISHIWASHI_SCHOOL => [
             self::FIELD_NAME => 'Wishiwashi (School Form)',
             self::FIELD_NAME_SHORT => 'Wishiwashi',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::WATER
         ],
         Pokemon::MAREANIE => [
             self::FIELD_NAME => 'Mareanie',
             self::FIELD_NAME_SHORT => 'Mareanie',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TYPE2 => Types::WATER,
@@ -12885,6 +14543,8 @@ class PokemonData
         Pokemon::TOXAPEX => [
             self::FIELD_NAME => 'Toxapex',
             self::FIELD_NAME_SHORT => 'Toxapex',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TYPE2 => Types::WATER
@@ -12892,6 +14552,8 @@ class PokemonData
         Pokemon::MUDBRAY => [
             self::FIELD_NAME => 'Mudbray',
             self::FIELD_NAME_SHORT => 'Mudbray',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GROUND,
             self::FIELD_EVOLVES => [Pokemon::MUDSDALE]
@@ -12899,12 +14561,16 @@ class PokemonData
         Pokemon::MUDSDALE => [
             self::FIELD_NAME => 'Mudsdale',
             self::FIELD_NAME_SHORT => 'Mudsdale',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GROUND
         ],
         Pokemon::DEWPIDER => [
             self::FIELD_NAME => 'Dewpider',
             self::FIELD_NAME_SHORT => 'Dewpider',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TYPE2 => Types::BUG,
@@ -12913,6 +14579,8 @@ class PokemonData
         Pokemon::ARAQUANID => [
             self::FIELD_NAME => 'Araquanid',
             self::FIELD_NAME_SHORT => 'Araquanid',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TYPE2 => Types::BUG
@@ -12920,6 +14588,8 @@ class PokemonData
         Pokemon::FOMANTIS => [
             self::FIELD_NAME => 'Fomantis',
             self::FIELD_NAME_SHORT => 'Fomantis',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_EVOLVES => [Pokemon::LURANTIS]
@@ -12927,12 +14597,16 @@ class PokemonData
         Pokemon::LURANTIS => [
             self::FIELD_NAME => 'Lurantis',
             self::FIELD_NAME_SHORT => 'Lurantis',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GRASS
         ],
         Pokemon::MORELULL => [
             self::FIELD_NAME => 'Morelull',
             self::FIELD_NAME_SHORT => 'Morelull',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TYPE2 => Types::FAIRY,
@@ -12941,6 +14615,8 @@ class PokemonData
         Pokemon::SHIINOTIC => [
             self::FIELD_NAME => 'Shiinotic',
             self::FIELD_NAME_SHORT => 'Shiinotic',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TYPE2 => Types::FAIRY
@@ -12948,6 +14624,8 @@ class PokemonData
         Pokemon::SALANDIT => [
             self::FIELD_NAME => 'Salandit',
             self::FIELD_NAME_SHORT => 'Salandit',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TYPE2 => Types::FIRE,
@@ -12956,6 +14634,8 @@ class PokemonData
         Pokemon::SALAZZLE => [
             self::FIELD_NAME => 'Salazzle',
             self::FIELD_NAME_SHORT => 'Salazzle',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TYPE2 => Types::FIRE
@@ -12963,6 +14643,8 @@ class PokemonData
         Pokemon::STUFFUL => [
             self::FIELD_NAME => 'Stufful',
             self::FIELD_NAME_SHORT => 'Stufful',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TYPE2 => Types::FIGHTING,
@@ -12971,6 +14653,8 @@ class PokemonData
         Pokemon::BEWEAR => [
             self::FIELD_NAME => 'Bewear',
             self::FIELD_NAME_SHORT => 'Bewear',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TYPE2 => Types::FIGHTING
@@ -12978,6 +14662,8 @@ class PokemonData
         Pokemon::BOUNSWEET => [
             self::FIELD_NAME => 'Bounsweet',
             self::FIELD_NAME_SHORT => 'Bounsweet',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_EVOLVES => [Pokemon::STEENEE]
@@ -12985,6 +14671,8 @@ class PokemonData
         Pokemon::STEENEE => [
             self::FIELD_NAME => 'Steenee',
             self::FIELD_NAME_SHORT => 'Steenee',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_EVOLVES => [Pokemon::TSAREENA]
@@ -12992,18 +14680,24 @@ class PokemonData
         Pokemon::TSAREENA => [
             self::FIELD_NAME => 'Tsareena',
             self::FIELD_NAME_SHORT => 'Tsareena',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GRASS
         ],
         Pokemon::COMFEY => [
             self::FIELD_NAME => 'Comfey',
             self::FIELD_NAME_SHORT => 'Comfey',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FAIRY
         ],
         Pokemon::ORANGURU => [
             self::FIELD_NAME => 'Oranguru',
             self::FIELD_NAME_SHORT => 'Oranguru',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TYPE2 => Types::PSYCHIC
@@ -13011,12 +14705,16 @@ class PokemonData
         Pokemon::PASSIMIAN => [
             self::FIELD_NAME => 'Passimian',
             self::FIELD_NAME_SHORT => 'Passimian',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FIGHTING
         ],
         Pokemon::WIMPOD => [
             self::FIELD_NAME => 'Wimpod',
             self::FIELD_NAME_SHORT => 'Wimpod',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TYPE2 => Types::WATER,
@@ -13025,6 +14723,8 @@ class PokemonData
         Pokemon::GOLISOPOD => [
             self::FIELD_NAME => 'Golisopod',
             self::FIELD_NAME_SHORT => 'Golisopod',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TYPE2 => Types::WATER
@@ -13032,6 +14732,8 @@ class PokemonData
         Pokemon::SANDYGAST => [
             self::FIELD_NAME => 'Sandygast',
             self::FIELD_NAME_SHORT => 'Sandygast',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GHOST,
             self::FIELD_TYPE2 => Types::GROUND,
@@ -13040,6 +14742,8 @@ class PokemonData
         Pokemon::PALOSSAND => [
             self::FIELD_NAME => 'Palossand',
             self::FIELD_NAME_SHORT => 'Palossand',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GHOST,
             self::FIELD_TYPE2 => Types::GROUND
@@ -13047,12 +14751,16 @@ class PokemonData
         Pokemon::PYUKUMUKU => [
             self::FIELD_NAME => 'Pyukumuku',
             self::FIELD_NAME_SHORT => 'Pyukumuku',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::WATER
         ],
         Pokemon::TYPE_NULL => [
             self::FIELD_NAME => 'Type: Null',
             self::FIELD_NAME_SHORT => 'Type: Null',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_EVOLVES => [Pokemon::SILVALLY]
@@ -13060,12 +14768,16 @@ class PokemonData
         Pokemon::SILVALLY => [
             self::FIELD_NAME => 'Silvally',
             self::FIELD_NAME_SHORT => 'Silvally',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::NORMAL
         ],
         Pokemon::MINIOR | FormsAlias::MINIOR_METEOR => [
             self::FIELD_NAME => 'Minior (Meteor Form)',
             self::FIELD_NAME_SHORT => 'Minior',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ROCK,
             self::FIELD_TYPE2 => Types::FLYING
@@ -13073,6 +14785,8 @@ class PokemonData
         Pokemon::MINIOR | FormsAlias::MINIOR_RED => [
             self::FIELD_NAME => 'Minior (Red Core)',
             self::FIELD_NAME_SHORT => 'Minior',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ROCK,
             self::FIELD_TYPE2 => Types::FLYING
@@ -13080,12 +14794,16 @@ class PokemonData
         Pokemon::KOMALA => [
             self::FIELD_NAME => 'Komala',
             self::FIELD_NAME_SHORT => 'Komala',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::NORMAL
         ],
         Pokemon::TURTONATOR => [
             self::FIELD_NAME => 'Turtonator',
             self::FIELD_NAME_SHORT => 'Turtonator',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TYPE2 => Types::DRAGON
@@ -13093,6 +14811,8 @@ class PokemonData
         Pokemon::TOGEDEMARU => [
             self::FIELD_NAME => 'Togedemaru',
             self::FIELD_NAME_SHORT => 'Togedemaru',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TYPE2 => Types::STEEL
@@ -13100,6 +14820,8 @@ class PokemonData
         Pokemon::MIMIKYU => [
             self::FIELD_NAME => 'Mimikyu',
             self::FIELD_NAME_SHORT => 'Mimikyu',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GHOST,
             self::FIELD_TYPE2 => Types::FAIRY
@@ -13107,6 +14829,8 @@ class PokemonData
         Pokemon::BRUXISH => [
             self::FIELD_NAME => 'Bruxish',
             self::FIELD_NAME_SHORT => 'Bruxish',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TYPE2 => Types::PSYCHIC
@@ -13114,6 +14838,8 @@ class PokemonData
         Pokemon::DRAMPA => [
             self::FIELD_NAME => 'Drampa',
             self::FIELD_NAME_SHORT => 'Drampa',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TYPE2 => Types::DRAGON
@@ -13121,6 +14847,8 @@ class PokemonData
         Pokemon::DHELMISE => [
             self::FIELD_NAME => 'Dhelmise',
             self::FIELD_NAME_SHORT => 'Dhelmise',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GHOST,
             self::FIELD_TYPE2 => Types::GRASS
@@ -13128,6 +14856,8 @@ class PokemonData
         Pokemon::JANGMO_O => [
             self::FIELD_NAME => 'Jangmo-o',
             self::FIELD_NAME_SHORT => 'Jangmo-o',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::DRAGON,
             self::FIELD_EVOLVES => [Pokemon::HAKAMO_O]
@@ -13135,6 +14865,8 @@ class PokemonData
         Pokemon::HAKAMO_O => [
             self::FIELD_NAME => 'Hakamo-o',
             self::FIELD_NAME_SHORT => 'Hakamo-o',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::DRAGON,
             self::FIELD_TYPE2 => Types::FIGHTING,
@@ -13143,6 +14875,8 @@ class PokemonData
         Pokemon::KOMMO_O => [
             self::FIELD_NAME => 'Kommo-o',
             self::FIELD_NAME_SHORT => 'Kommo-o',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::DRAGON,
             self::FIELD_TYPE2 => Types::FIGHTING
@@ -13150,6 +14884,8 @@ class PokemonData
         Pokemon::TAPU_KOKO => [
             self::FIELD_NAME => 'Tapu Koko',
             self::FIELD_NAME_SHORT => 'Tapu Koko',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TYPE2 => Types::FAIRY
@@ -13157,6 +14893,8 @@ class PokemonData
         Pokemon::TAPU_LELE => [
             self::FIELD_NAME => 'Tapu Lele',
             self::FIELD_NAME_SHORT => 'Tapu Lele',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TYPE2 => Types::FAIRY
@@ -13164,6 +14902,8 @@ class PokemonData
         Pokemon::TAPU_BULU => [
             self::FIELD_NAME => 'Tapu Bulu',
             self::FIELD_NAME_SHORT => 'Tapu Bulu',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TYPE2 => Types::FAIRY
@@ -13171,6 +14911,8 @@ class PokemonData
         Pokemon::TAPU_FINI => [
             self::FIELD_NAME => 'Tapu Fini',
             self::FIELD_NAME_SHORT => 'Tapu Fini',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TYPE2 => Types::FAIRY
@@ -13178,6 +14920,8 @@ class PokemonData
         Pokemon::COSMOG => [
             self::FIELD_NAME => 'Cosmog',
             self::FIELD_NAME_SHORT => 'Cosmog',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_EVOLVES => [Pokemon::COSMOEM]
@@ -13185,6 +14929,8 @@ class PokemonData
         Pokemon::COSMOEM => [
             self::FIELD_NAME => 'Cosmoem',
             self::FIELD_NAME_SHORT => 'Cosmoem',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_EVOLVES => [Pokemon::SOLGALEO, Pokemon::LUNALA]
@@ -13192,6 +14938,8 @@ class PokemonData
         Pokemon::SOLGALEO => [
             self::FIELD_NAME => 'Solgaleo',
             self::FIELD_NAME_SHORT => 'Solgaleo',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TYPE2 => Types::STEEL
@@ -13199,6 +14947,8 @@ class PokemonData
         Pokemon::LUNALA => [
             self::FIELD_NAME => 'Lunala',
             self::FIELD_NAME_SHORT => 'Lunala',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TYPE2 => Types::GHOST
@@ -13206,6 +14956,8 @@ class PokemonData
         Pokemon::NIHILEGO => [
             self::FIELD_NAME => 'Nihilego',
             self::FIELD_NAME_SHORT => 'Nihilego',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ROCK,
             self::FIELD_TYPE2 => Types::POISON
@@ -13213,6 +14965,8 @@ class PokemonData
         Pokemon::BUZZWOLE => [
             self::FIELD_NAME => 'Buzzwole',
             self::FIELD_NAME_SHORT => 'Buzzwole',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TYPE2 => Types::FIGHTING
@@ -13220,6 +14974,8 @@ class PokemonData
         Pokemon::PHEROMOSA => [
             self::FIELD_NAME => 'Pheromosa',
             self::FIELD_NAME_SHORT => 'Pheromosa',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TYPE2 => Types::FIGHTING
@@ -13227,12 +14983,16 @@ class PokemonData
         Pokemon::XURKITREE => [
             self::FIELD_NAME => 'Xurkitree',
             self::FIELD_NAME_SHORT => 'Xurkitree',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ELECTRIC
         ],
         Pokemon::CELESTEELA => [
             self::FIELD_NAME => 'Celesteela',
             self::FIELD_NAME_SHORT => 'Celesteela',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::STEEL,
             self::FIELD_TYPE2 => Types::FLYING
@@ -13240,6 +15000,8 @@ class PokemonData
         Pokemon::KARTANA => [
             self::FIELD_NAME => 'Kartana',
             self::FIELD_NAME_SHORT => 'Kartana',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TYPE2 => Types::STEEL
@@ -13247,6 +15009,8 @@ class PokemonData
         Pokemon::GUZZLORD => [
             self::FIELD_NAME => 'Guzzlord',
             self::FIELD_NAME_SHORT => 'Guzzlord',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::DARK,
             self::FIELD_TYPE2 => Types::DRAGON
@@ -13254,12 +15018,16 @@ class PokemonData
         Pokemon::NECROZMA | FormsAlias::NECROZMA_NORMAL => [
             self::FIELD_NAME => 'Necrozma',
             self::FIELD_NAME_SHORT => 'Necrozma',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::PSYCHIC
         ],
         Pokemon::NECROZMA | FormsAlias::NECROZMA_DUSK => [
             self::FIELD_NAME => 'Necrozma (Dusk Mane)',
             self::FIELD_NAME_SHORT => 'Necrozma',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TYPE2 => Types::STEEL
@@ -13267,6 +15035,8 @@ class PokemonData
         Pokemon::NECROZMA | FormsAlias::NECROZMA_DAWN => [
             self::FIELD_NAME => 'Necrozma (Dawn Wings)',
             self::FIELD_NAME_SHORT => 'Necrozma',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TYPE2 => Types::GHOST
@@ -13274,6 +15044,8 @@ class PokemonData
         Pokemon::NECROZMA | FormsAlias::NECROZMA_ULTRA => [
             self::FIELD_NAME => 'Ultra Necrozma',
             self::FIELD_NAME_SHORT => 'Necrozma',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TYPE2 => Types::DRAGON
@@ -13281,6 +15053,8 @@ class PokemonData
         Pokemon::MAGEARNA => [
             self::FIELD_NAME => 'Magearna',
             self::FIELD_NAME_SHORT => 'Magearna',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::STEEL,
             self::FIELD_TYPE2 => Types::FAIRY
@@ -13288,6 +15062,8 @@ class PokemonData
         Pokemon::MARSHADOW => [
             self::FIELD_NAME => 'Marshadow',
             self::FIELD_NAME_SHORT => 'Marshadow',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TYPE2 => Types::GHOST
@@ -13295,6 +15071,8 @@ class PokemonData
         Pokemon::POIPOLE => [
             self::FIELD_NAME => 'Poipole',
             self::FIELD_NAME_SHORT => 'Poipole',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_EVOLVES => [Pokemon::NAGANADEL]
@@ -13302,6 +15080,8 @@ class PokemonData
         Pokemon::NAGANADEL => [
             self::FIELD_NAME => 'Naganadel',
             self::FIELD_NAME_SHORT => 'Naganadel',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TYPE2 => Types::DRAGON
@@ -13309,6 +15089,8 @@ class PokemonData
         Pokemon::STAKATAKA => [
             self::FIELD_NAME => 'Stakataka',
             self::FIELD_NAME_SHORT => 'Stakataka',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ROCK,
             self::FIELD_TYPE2 => Types::STEEL
@@ -13316,6 +15098,8 @@ class PokemonData
         Pokemon::BLACEPHALON => [
             self::FIELD_NAME => 'Blacephalon',
             self::FIELD_NAME_SHORT => 'Blacephalon',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TYPE2 => Types::GHOST
@@ -13323,12 +15107,16 @@ class PokemonData
         Pokemon::ZERAORA => [
             self::FIELD_NAME => 'Zeraora',
             self::FIELD_NAME_SHORT => 'Zeraora',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ELECTRIC
         ],
         Pokemon::MELTAN => [
             self::FIELD_NAME => 'Meltan',
             self::FIELD_NAME_SHORT => 'Meltan',
+            self::FIELD_DESC => 'It melts particles of iron and other metals found in the subsoil, so it can absorb them into its body of molten steel.',
+            self::FIELD_CATEGORY => 'Hex Nut Pokémon',
             self::FIELD_ATTACK => 118,
             self::FIELD_DEFENSE => 99,
             self::FIELD_STAMINA => 130,
@@ -13346,6 +15134,8 @@ class PokemonData
         Pokemon::MELMETAL => [
             self::FIELD_NAME => 'Melmetal',
             self::FIELD_NAME_SHORT => 'Melmetal',
+            self::FIELD_DESC => 'Revered long ago for its capacity to create iron from nothing, for some reason it has come back to life after 3,000 years.',
+            self::FIELD_CATEGORY => 'Hex Nut Pokémon',
             self::FIELD_ATTACK => 226,
             self::FIELD_DEFENSE => 190,
             self::FIELD_STAMINA => 264,
@@ -13362,6 +15152,8 @@ class PokemonData
         Pokemon::GROOKEY => [
             self::FIELD_NAME => 'Grookey',
             self::FIELD_NAME_SHORT => 'Grookey',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_EVOLVES => [Pokemon::THWACKEY]
@@ -13369,6 +15161,8 @@ class PokemonData
         Pokemon::THWACKEY => [
             self::FIELD_NAME => 'Thwackey',
             self::FIELD_NAME_SHORT => 'Thwackey',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_EVOLVES => [Pokemon::RILLABOOM]
@@ -13376,12 +15170,16 @@ class PokemonData
         Pokemon::RILLABOOM => [
             self::FIELD_NAME => 'Rillaboom',
             self::FIELD_NAME_SHORT => 'Rillaboom',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GRASS
         ],
         Pokemon::SCORBUNNY => [
             self::FIELD_NAME => 'Scorbunny',
             self::FIELD_NAME_SHORT => 'Scorbunny',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_EVOLVES => [Pokemon::RABOOT]
@@ -13389,6 +15187,8 @@ class PokemonData
         Pokemon::RABOOT => [
             self::FIELD_NAME => 'Raboot',
             self::FIELD_NAME_SHORT => 'Raboot',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_EVOLVES => [Pokemon::CINDERACE]
@@ -13396,12 +15196,16 @@ class PokemonData
         Pokemon::CINDERACE => [
             self::FIELD_NAME => 'Cinderace',
             self::FIELD_NAME_SHORT => 'Cinderace',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FIRE
         ],
         Pokemon::SOBBLE => [
             self::FIELD_NAME => 'Sobble',
             self::FIELD_NAME_SHORT => 'Sobble',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_EVOLVES => [Pokemon::DRIZZILE]
@@ -13409,6 +15213,8 @@ class PokemonData
         Pokemon::DRIZZILE => [
             self::FIELD_NAME => 'Drizzile',
             self::FIELD_NAME_SHORT => 'Drizzile',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_EVOLVES => [Pokemon::INTELEON]
@@ -13416,12 +15222,16 @@ class PokemonData
         Pokemon::INTELEON => [
             self::FIELD_NAME => 'Inteleon',
             self::FIELD_NAME_SHORT => 'Inteleon',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::WATER
         ],
         Pokemon::SKWOVET => [
             self::FIELD_NAME => 'Skwovet',
             self::FIELD_NAME_SHORT => 'Skwovet',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_EVOLVES => [Pokemon::GREEDENT]
@@ -13429,12 +15239,16 @@ class PokemonData
         Pokemon::GREEDENT => [
             self::FIELD_NAME => 'Greedent',
             self::FIELD_NAME_SHORT => 'Greedent',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::NORMAL
         ],
         Pokemon::ROOKIDEE => [
             self::FIELD_NAME => 'Rookidee',
             self::FIELD_NAME_SHORT => 'Rookidee',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FLYING,
             self::FIELD_EVOLVES => [Pokemon::CORVISQUIRE]
@@ -13442,6 +15256,8 @@ class PokemonData
         Pokemon::CORVISQUIRE => [
             self::FIELD_NAME => 'Corvisquire',
             self::FIELD_NAME_SHORT => 'Corvisquire',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FLYING,
             self::FIELD_EVOLVES => [Pokemon::CORVIKNIGHT]
@@ -13449,6 +15265,8 @@ class PokemonData
         Pokemon::CORVIKNIGHT => [
             self::FIELD_NAME => 'Corviknight',
             self::FIELD_NAME_SHORT => 'Corviknight',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FLYING,
             self::FIELD_TYPE2 => Types::STEEL
@@ -13456,6 +15274,8 @@ class PokemonData
         Pokemon::BLIPBUG => [
             self::FIELD_NAME => 'Blipbug',
             self::FIELD_NAME_SHORT => 'Blipbug',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_EVOLVES => [Pokemon::DOTTLER]
@@ -13463,6 +15283,8 @@ class PokemonData
         Pokemon::DOTTLER => [
             self::FIELD_NAME => 'Dottler',
             self::FIELD_NAME_SHORT => 'Dottler',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TYPE2 => Types::PSYCHIC,
@@ -13471,6 +15293,8 @@ class PokemonData
         Pokemon::ORBEETLE => [
             self::FIELD_NAME => 'Orbeetle',
             self::FIELD_NAME_SHORT => 'Orbeetle',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TYPE2 => Types::PSYCHIC
@@ -13478,6 +15302,8 @@ class PokemonData
         Pokemon::NICKIT => [
             self::FIELD_NAME => 'Nickit',
             self::FIELD_NAME_SHORT => 'Nickit',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::DARK,
             self::FIELD_EVOLVES => [Pokemon::THIEVUL]
@@ -13485,12 +15311,16 @@ class PokemonData
         Pokemon::THIEVUL => [
             self::FIELD_NAME => 'Thievul',
             self::FIELD_NAME_SHORT => 'Thievul',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::DARK
         ],
         Pokemon::GOSSIFLEUR => [
             self::FIELD_NAME => 'Gossifleur',
             self::FIELD_NAME_SHORT => 'Gossifleur',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_EVOLVES => [Pokemon::ELDEGOSS]
@@ -13498,12 +15328,16 @@ class PokemonData
         Pokemon::ELDEGOSS => [
             self::FIELD_NAME => 'Eldegoss',
             self::FIELD_NAME_SHORT => 'Eldegoss',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GRASS
         ],
         Pokemon::WOOLOO => [
             self::FIELD_NAME => 'Wooloo',
             self::FIELD_NAME_SHORT => 'Wooloo',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_EVOLVES => [Pokemon::DUBWOOL]
@@ -13511,12 +15345,16 @@ class PokemonData
         Pokemon::DUBWOOL => [
             self::FIELD_NAME => 'Dubwool',
             self::FIELD_NAME_SHORT => 'Dubwool',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::NORMAL
         ],
         Pokemon::CHEWTLE => [
             self::FIELD_NAME => 'Chewtle',
             self::FIELD_NAME_SHORT => 'Chewtle',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_EVOLVES => [Pokemon::DREDNAW]
@@ -13524,6 +15362,8 @@ class PokemonData
         Pokemon::DREDNAW => [
             self::FIELD_NAME => 'Drednaw',
             self::FIELD_NAME_SHORT => 'Drednaw',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TYPE2 => Types::ROCK
@@ -13531,6 +15371,8 @@ class PokemonData
         Pokemon::YAMPER => [
             self::FIELD_NAME => 'Yamper',
             self::FIELD_NAME_SHORT => 'Yamper',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_EVOLVES => [Pokemon::BOLTUND]
@@ -13538,12 +15380,16 @@ class PokemonData
         Pokemon::BOLTUND => [
             self::FIELD_NAME => 'Boltund',
             self::FIELD_NAME_SHORT => 'Boltund',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ELECTRIC
         ],
         Pokemon::ROLYCOLY => [
             self::FIELD_NAME => 'Rolycoly',
             self::FIELD_NAME_SHORT => 'Rolycoly',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ROCK,
             self::FIELD_EVOLVES => [Pokemon::CARKOL]
@@ -13551,6 +15397,8 @@ class PokemonData
         Pokemon::CARKOL => [
             self::FIELD_NAME => 'Carkol',
             self::FIELD_NAME_SHORT => 'Carkol',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ROCK,
             self::FIELD_TYPE2 => Types::FIRE,
@@ -13559,6 +15407,8 @@ class PokemonData
         Pokemon::COALOSSAL => [
             self::FIELD_NAME => 'Coalossal',
             self::FIELD_NAME_SHORT => 'Coalossal',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ROCK,
             self::FIELD_TYPE2 => Types::FIRE
@@ -13566,6 +15416,8 @@ class PokemonData
         Pokemon::APPLIN => [
             self::FIELD_NAME => 'Applin',
             self::FIELD_NAME_SHORT => 'Applin',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TYPE2 => Types::DRAGON,
@@ -13574,6 +15426,8 @@ class PokemonData
         Pokemon::FLAPPLE => [
             self::FIELD_NAME => 'Flapple',
             self::FIELD_NAME_SHORT => 'Flapple',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TYPE2 => Types::DRAGON
@@ -13581,6 +15435,8 @@ class PokemonData
         Pokemon::APPLETUN => [
             self::FIELD_NAME => 'Appletun',
             self::FIELD_NAME_SHORT => 'Appletun',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TYPE2 => Types::DRAGON
@@ -13588,6 +15444,8 @@ class PokemonData
         Pokemon::SILICOBRA => [
             self::FIELD_NAME => 'Silicobra',
             self::FIELD_NAME_SHORT => 'Silicobra',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GROUND,
             self::FIELD_EVOLVES => [Pokemon::SANDACONDA]
@@ -13595,12 +15453,16 @@ class PokemonData
         Pokemon::SANDACONDA => [
             self::FIELD_NAME => 'Sandaconda',
             self::FIELD_NAME_SHORT => 'Sandaconda',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GROUND
         ],
         Pokemon::CRAMORANT => [
             self::FIELD_NAME => 'Cramorant',
             self::FIELD_NAME_SHORT => 'Cramorant',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FLYING,
             self::FIELD_TYPE2 => Types::WATER
@@ -13608,6 +15470,8 @@ class PokemonData
         Pokemon::ARROKUDA => [
             self::FIELD_NAME => 'Arrokuda',
             self::FIELD_NAME_SHORT => 'Arrokuda',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_EVOLVES => [Pokemon::BARRASKEWDA]
@@ -13615,12 +15479,16 @@ class PokemonData
         Pokemon::BARRASKEWDA => [
             self::FIELD_NAME => 'Barraskewda',
             self::FIELD_NAME_SHORT => 'Barraskewda',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::WATER
         ],
         Pokemon::TOXEL => [
             self::FIELD_NAME => 'Toxel',
             self::FIELD_NAME_SHORT => 'Toxel',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TYPE2 => Types::POISON,
@@ -13629,6 +15497,8 @@ class PokemonData
         Pokemon::TOXTRICITY | FormsAlias::TOXTRICITY_LOW => [
             self::FIELD_NAME => 'Toxtricity (Low Key Form)',
             self::FIELD_NAME_SHORT => 'Toxtricity',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TYPE2 => Types::POISON
@@ -13636,6 +15506,8 @@ class PokemonData
         Pokemon::TOXTRICITY | FormsAlias::TOXTRICITY_AMPED => [
             self::FIELD_NAME => 'Toxtricity (Amped Form)',
             self::FIELD_NAME_SHORT => 'Toxtricity',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TYPE2 => Types::POISON
@@ -13643,6 +15515,8 @@ class PokemonData
         Pokemon::SIZZLIPEDE => [
             self::FIELD_NAME => 'Sizzlipede',
             self::FIELD_NAME_SHORT => 'Sizzlipede',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TYPE2 => Types::BUG,
@@ -13651,6 +15525,8 @@ class PokemonData
         Pokemon::CENTISKORCH => [
             self::FIELD_NAME => 'Centiskorch',
             self::FIELD_NAME_SHORT => 'Centiskorch',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TYPE2 => Types::BUG
@@ -13658,6 +15534,8 @@ class PokemonData
         Pokemon::CLOBBOPUS => [
             self::FIELD_NAME => 'Clobbopus',
             self::FIELD_NAME_SHORT => 'Clobbopus',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_EVOLVES => [Pokemon::GRAPPLOCT]
@@ -13665,12 +15543,16 @@ class PokemonData
         Pokemon::GRAPPLOCT => [
             self::FIELD_NAME => 'Grapploct',
             self::FIELD_NAME_SHORT => 'Grapploct',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FIGHTING
         ],
         Pokemon::SINISTEA => [
             self::FIELD_NAME => 'Sinistea',
             self::FIELD_NAME_SHORT => 'Sinistea',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GHOST,
             self::FIELD_EVOLVES => [Pokemon::POLTEAGEIST]
@@ -13678,12 +15560,16 @@ class PokemonData
         Pokemon::POLTEAGEIST => [
             self::FIELD_NAME => 'Polteageist',
             self::FIELD_NAME_SHORT => 'Polteageist',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GHOST
         ],
         Pokemon::HATENNA => [
             self::FIELD_NAME => 'Hatenna',
             self::FIELD_NAME_SHORT => 'Hatenna',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_EVOLVES => [Pokemon::HATTREM]
@@ -13691,6 +15577,8 @@ class PokemonData
         Pokemon::HATTREM => [
             self::FIELD_NAME => 'Hattrem',
             self::FIELD_NAME_SHORT => 'Hattrem',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_EVOLVES => [Pokemon::HATTERENE]
@@ -13698,6 +15586,8 @@ class PokemonData
         Pokemon::HATTERENE => [
             self::FIELD_NAME => 'Hatterene',
             self::FIELD_NAME_SHORT => 'Hatterene',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TYPE2 => Types::FAIRY
@@ -13705,6 +15595,8 @@ class PokemonData
         Pokemon::IMPIDIMP => [
             self::FIELD_NAME => 'Impidimp',
             self::FIELD_NAME_SHORT => 'Impidimp',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::DARK,
             self::FIELD_TYPE2 => Types::FAIRY,
@@ -13713,6 +15605,8 @@ class PokemonData
         Pokemon::MORGREM => [
             self::FIELD_NAME => 'Morgrem',
             self::FIELD_NAME_SHORT => 'Morgrem',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::DARK,
             self::FIELD_TYPE2 => Types::FAIRY,
@@ -13721,6 +15615,8 @@ class PokemonData
         Pokemon::GRIMMSNARL => [
             self::FIELD_NAME => 'Grimmsnarl',
             self::FIELD_NAME_SHORT => 'Grimmsnarl',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::DARK,
             self::FIELD_TYPE2 => Types::FAIRY
@@ -13728,6 +15624,8 @@ class PokemonData
         Pokemon::OBSTAGOON => [
             self::FIELD_NAME => 'Obstagoon',
             self::FIELD_NAME_SHORT => 'Obstagoon',
+            self::FIELD_DESC => 'Its voice is staggering in volume. Obstagoon has a tendency to take on a threatening posture and shout—this move is known as Obstruct.',
+            self::FIELD_CATEGORY => 'Blocking Pokémon',
             self::FIELD_ATTACK => 180,
             self::FIELD_DEFENSE => 194,
             self::FIELD_STAMINA => 212,
@@ -13744,6 +15642,8 @@ class PokemonData
         Pokemon::PERRSERKER => [
             self::FIELD_NAME => 'Perrserker',
             self::FIELD_NAME_SHORT => 'Perrserker',
+            self::FIELD_DESC => 'What appears to be an iron helmet is actually hardened hair. This Pokémon lives for the thrill of battle.',
+            self::FIELD_CATEGORY => 'Viking Pokémon',
             self::FIELD_ATTACK => 195,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 172,
@@ -13759,12 +15659,16 @@ class PokemonData
         Pokemon::CURSOLA => [
             self::FIELD_NAME => 'Cursola',
             self::FIELD_NAME_SHORT => 'Cursola',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GHOST
         ],
         Pokemon::SIRFETCH_D => [
             self::FIELD_NAME => 'Sirfetch’d',
             self::FIELD_NAME_SHORT => 'Sirfetch’d',
+            self::FIELD_DESC => 'Only Farfetch’d that have survived many battles can attain this evolution. When this Pokémon’s leek withers, it will retire from combat.',
+            self::FIELD_CATEGORY => 'Wild Duck Pokémon',
             self::FIELD_ATTACK => 248,
             self::FIELD_DEFENSE => 176,
             self::FIELD_STAMINA => 158,
@@ -13780,6 +15684,8 @@ class PokemonData
         Pokemon::MR_RIME => [
             self::FIELD_NAME => 'Mr. Rime',
             self::FIELD_NAME_SHORT => 'Mr. Rime',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 212,
             self::FIELD_DEFENSE => 179,
             self::FIELD_STAMINA => 190,
@@ -13796,6 +15702,8 @@ class PokemonData
         Pokemon::RUNERIGUS => [
             self::FIELD_NAME => 'Runerigus',
             self::FIELD_NAME_SHORT => 'Runerigus',
+            self::FIELD_DESC => 'A powerful curse was woven into an ancient painting. After absorbing the spirit of a Yamask, the painting began to move.',
+            self::FIELD_CATEGORY => 'Grudge Pokémon',
             self::FIELD_ATTACK => 163,
             self::FIELD_DEFENSE => 237,
             self::FIELD_STAMINA => 151,
@@ -13812,6 +15720,8 @@ class PokemonData
         Pokemon::MILCERY => [
             self::FIELD_NAME => 'Milcery',
             self::FIELD_NAME_SHORT => 'Milcery',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FAIRY,
             self::FIELD_EVOLVES => [Pokemon::ALCREMIE | FormsAlias::ALCREMIE_VANILLA]
@@ -13819,24 +15729,32 @@ class PokemonData
         Pokemon::ALCREMIE | FormsAlias::ALCREMIE_VANILLA => [
             self::FIELD_NAME => 'Alcremie (Vanilla Cream)',
             self::FIELD_NAME_SHORT => 'Alcremie',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FAIRY
         ],
         Pokemon::FALINKS => [
             self::FIELD_NAME => 'Falinks',
             self::FIELD_NAME_SHORT => 'Falinks',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FIGHTING
         ],
         Pokemon::PINCURCHIN => [
             self::FIELD_NAME => 'Pincurchin',
             self::FIELD_NAME_SHORT => 'Pincurchin',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ELECTRIC
         ],
         Pokemon::SNOM => [
             self::FIELD_NAME => 'Snom',
             self::FIELD_NAME_SHORT => 'Snom',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ICE,
             self::FIELD_TYPE2 => Types::BUG,
@@ -13845,6 +15763,8 @@ class PokemonData
         Pokemon::FROSMOTH => [
             self::FIELD_NAME => 'Frosmoth',
             self::FIELD_NAME_SHORT => 'Frosmoth',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ICE,
             self::FIELD_TYPE2 => Types::BUG
@@ -13852,18 +15772,24 @@ class PokemonData
         Pokemon::STONJOURNER => [
             self::FIELD_NAME => 'Stonjourner',
             self::FIELD_NAME_SHORT => 'Stonjourner',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ROCK
         ],
         Pokemon::EISCUE => [
             self::FIELD_NAME => 'Eiscue',
             self::FIELD_NAME_SHORT => 'Eiscue',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ICE
         ],
         Pokemon::INDEEDEE | FormsAlias::INDEEDEE_FEMALE => [
             self::FIELD_NAME => 'Indeedee (Female)',
             self::FIELD_NAME_SHORT => 'Indeedee',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TYPE2 => Types::NORMAL
@@ -13871,6 +15797,8 @@ class PokemonData
         Pokemon::INDEEDEE | FormsAlias::INDEEDEE_MALE => [
             self::FIELD_NAME => 'Indeedee (Male)',
             self::FIELD_NAME_SHORT => 'Indeedee',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TYPE2 => Types::NORMAL
@@ -13878,6 +15806,8 @@ class PokemonData
         Pokemon::MORPEKO | FormsAlias::MORPEKO_BELLY => [
             self::FIELD_NAME => 'Morpeko (Full Belly Mode)',
             self::FIELD_NAME_SHORT => 'Morpeko',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TYPE2 => Types::DARK
@@ -13885,6 +15815,8 @@ class PokemonData
         Pokemon::MORPEKO | FormsAlias::MORPEKO_HANGRY => [
             self::FIELD_NAME => 'Morpeko (Hangry Mode)',
             self::FIELD_NAME_SHORT => 'Morpeko',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TYPE2 => Types::DARK
@@ -13892,6 +15824,8 @@ class PokemonData
         Pokemon::CUFANT => [
             self::FIELD_NAME => 'Cufant',
             self::FIELD_NAME_SHORT => 'Cufant',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::STEEL,
             self::FIELD_EVOLVES => [Pokemon::COPPERAJAH]
@@ -13899,12 +15833,16 @@ class PokemonData
         Pokemon::COPPERAJAH => [
             self::FIELD_NAME => 'Copperajah',
             self::FIELD_NAME_SHORT => 'Copperajah',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::STEEL
         ],
         Pokemon::DRACOZOLT => [
             self::FIELD_NAME => 'Dracozolt',
             self::FIELD_NAME_SHORT => 'Dracozolt',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TYPE2 => Types::DRAGON
@@ -13912,6 +15850,8 @@ class PokemonData
         Pokemon::ARCTOZOLT => [
             self::FIELD_NAME => 'Arctozolt',
             self::FIELD_NAME_SHORT => 'Arctozolt',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TYPE2 => Types::ICE
@@ -13919,6 +15859,8 @@ class PokemonData
         Pokemon::DRACOVISH => [
             self::FIELD_NAME => 'Dracovish',
             self::FIELD_NAME_SHORT => 'Dracovish',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TYPE2 => Types::DRAGON
@@ -13926,6 +15868,8 @@ class PokemonData
         Pokemon::ARCTOVISH => [
             self::FIELD_NAME => 'Arctovish',
             self::FIELD_NAME_SHORT => 'Arctovish',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TYPE2 => Types::ICE
@@ -13933,6 +15877,8 @@ class PokemonData
         Pokemon::DURALUDON => [
             self::FIELD_NAME => 'Duraludon',
             self::FIELD_NAME_SHORT => 'Duraludon',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::STEEL,
             self::FIELD_TYPE2 => Types::DRAGON
@@ -13940,6 +15886,8 @@ class PokemonData
         Pokemon::DREEPY => [
             self::FIELD_NAME => 'Dreepy',
             self::FIELD_NAME_SHORT => 'Dreepy',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::DRAGON,
             self::FIELD_TYPE2 => Types::GHOST,
@@ -13948,6 +15896,8 @@ class PokemonData
         Pokemon::DRAKLOAK => [
             self::FIELD_NAME => 'Drakloak',
             self::FIELD_NAME_SHORT => 'Drakloak',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::DRAGON,
             self::FIELD_TYPE2 => Types::GHOST,
@@ -13956,6 +15906,8 @@ class PokemonData
         Pokemon::DRAGAPULT => [
             self::FIELD_NAME => 'Dragapult',
             self::FIELD_NAME_SHORT => 'Dragapult',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::DRAGON,
             self::FIELD_TYPE2 => Types::GHOST
@@ -13963,12 +15915,16 @@ class PokemonData
         Pokemon::ZACIAN | FormsAlias::ZACIAN_HERO => [
             self::FIELD_NAME => 'Zacian (Hero of Many Battles)',
             self::FIELD_NAME_SHORT => 'Zacian',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FAIRY
         ],
         Pokemon::ZACIAN | FormsAlias::ZACIAN_CROWNED => [
             self::FIELD_NAME => 'Zacian (Crowned Sword)',
             self::FIELD_NAME_SHORT => 'Zacian',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FAIRY,
             self::FIELD_TYPE2 => Types::STEEL
@@ -13976,12 +15932,16 @@ class PokemonData
         Pokemon::ZAMAZENTA | FormsAlias::ZAMAZENTA_HERO => [
             self::FIELD_NAME => 'Zamazenta (Hero of Many Battles)',
             self::FIELD_NAME_SHORT => 'Zamazenta',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FIGHTING
         ],
         Pokemon::ZAMAZENTA | FormsAlias::ZAMAZENTA_CROWNED => [
             self::FIELD_NAME => 'Zamazenta (Crowned Shield)',
             self::FIELD_NAME_SHORT => 'Zamazenta',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TYPE2 => Types::STEEL
@@ -13989,6 +15949,8 @@ class PokemonData
         Pokemon::ETERNATUS => [
             self::FIELD_NAME => 'Eternatus',
             self::FIELD_NAME_SHORT => 'Eternatus',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TYPE2 => Types::DRAGON
@@ -13996,6 +15958,8 @@ class PokemonData
         Pokemon::KUBFU => [
             self::FIELD_NAME => 'Kubfu',
             self::FIELD_NAME_SHORT => 'Kubfu',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_EVOLVES => [Pokemon::URSHIFU | FormsAlias::URSHIFU_SINGLE, Pokemon::URSHIFU | FormsAlias::URSHIFU_RAPID]
@@ -14003,6 +15967,8 @@ class PokemonData
         Pokemon::URSHIFU | FormsAlias::URSHIFU_SINGLE => [
             self::FIELD_NAME => 'Urshifu (Single Strike Style)',
             self::FIELD_NAME_SHORT => 'Urshifu',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TYPE2 => Types::DARK
@@ -14010,6 +15976,8 @@ class PokemonData
         Pokemon::URSHIFU | FormsAlias::URSHIFU_RAPID => [
             self::FIELD_NAME => 'Urshifu (Rapid Strike Style)',
             self::FIELD_NAME_SHORT => 'Urshifu',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TYPE2 => Types::WATER
@@ -14017,6 +15985,8 @@ class PokemonData
         Pokemon::ZARUDE => [
             self::FIELD_NAME => 'Zarude',
             self::FIELD_NAME_SHORT => 'Zarude',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::DARK,
             self::FIELD_TYPE2 => Types::GRASS
@@ -14024,6 +15994,8 @@ class PokemonData
         Pokemon::RATATTA | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Rattata',
             self::FIELD_NAME_SHORT => 'Rattata',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mouse Pokémon',
             self::FIELD_ATTACK => 103,
             self::FIELD_DEFENSE => 70,
             self::FIELD_STAMINA => 102,
@@ -14041,6 +16013,8 @@ class PokemonData
         Pokemon::RATICATE | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Raticate',
             self::FIELD_NAME_SHORT => 'Raticate',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mouse Pokémon',
             self::FIELD_ATTACK => 135,
             self::FIELD_DEFENSE => 154,
             self::FIELD_STAMINA => 181,
@@ -14057,6 +16031,8 @@ class PokemonData
         Pokemon::RAICHU | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Raichu',
             self::FIELD_NAME_SHORT => 'Raichu',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mouse Pokémon',
             self::FIELD_ATTACK => 201,
             self::FIELD_DEFENSE => 154,
             self::FIELD_STAMINA => 155,
@@ -14073,6 +16049,8 @@ class PokemonData
         Pokemon::SANDSHREW | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Sandshrew',
             self::FIELD_NAME_SHORT => 'Sandshrew',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mouse Pokémon',
             self::FIELD_ATTACK => 125,
             self::FIELD_DEFENSE => 129,
             self::FIELD_STAMINA => 137,
@@ -14090,6 +16068,8 @@ class PokemonData
         Pokemon::SANDSLASH | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Sandslash',
             self::FIELD_NAME_SHORT => 'Sandslash',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mouse Pokémon',
             self::FIELD_ATTACK => 177,
             self::FIELD_DEFENSE => 195,
             self::FIELD_STAMINA => 181,
@@ -14106,6 +16086,8 @@ class PokemonData
         Pokemon::VULPIX | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Vulpix',
             self::FIELD_NAME_SHORT => 'Vulpix',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Fox Pokémon',
             self::FIELD_ATTACK => 96,
             self::FIELD_DEFENSE => 109,
             self::FIELD_STAMINA => 116,
@@ -14122,6 +16104,8 @@ class PokemonData
         Pokemon::NINETALES | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Ninetales',
             self::FIELD_NAME_SHORT => 'Ninetales',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Fox Pokémon',
             self::FIELD_ATTACK => 170,
             self::FIELD_DEFENSE => 193,
             self::FIELD_STAMINA => 177,
@@ -14138,6 +16122,8 @@ class PokemonData
         Pokemon::DIGLETT | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Diglett',
             self::FIELD_NAME_SHORT => 'Diglett',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mole Pokémon',
             self::FIELD_ATTACK => 108,
             self::FIELD_DEFENSE => 81,
             self::FIELD_STAMINA => 67,
@@ -14155,6 +16141,8 @@ class PokemonData
         Pokemon::DUGTRIO | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Dugtrio',
             self::FIELD_NAME_SHORT => 'Dugtrio',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mole Pokémon',
             self::FIELD_ATTACK => 201,
             self::FIELD_DEFENSE => 142,
             self::FIELD_STAMINA => 111,
@@ -14171,6 +16159,8 @@ class PokemonData
         Pokemon::MEOWTH | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Meowth',
             self::FIELD_NAME_SHORT => 'Meowth',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Scratch Cat Pokémon',
             self::FIELD_ATTACK => 99,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 120,
@@ -14187,6 +16177,8 @@ class PokemonData
         Pokemon::MEOWTH | Mods::GALARIAN => [
             self::FIELD_NAME => 'Galarian Meowth',
             self::FIELD_NAME_SHORT => 'Meowth',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Scratch Cat Pokémon',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 92,
             self::FIELD_STAMINA => 137,
@@ -14203,6 +16195,8 @@ class PokemonData
         Pokemon::PERSIAN | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Persian',
             self::FIELD_NAME_SHORT => 'Persian',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Classy Cat Pokémon',
             self::FIELD_ATTACK => 158,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 163,
@@ -14218,6 +16212,8 @@ class PokemonData
         Pokemon::GEODUDE | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Geodude',
             self::FIELD_NAME_SHORT => 'Geodude',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Rock Pokémon',
             self::FIELD_ATTACK => 132,
             self::FIELD_DEFENSE => 132,
             self::FIELD_STAMINA => 120,
@@ -14235,6 +16231,8 @@ class PokemonData
         Pokemon::GRAVELER | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Graveler',
             self::FIELD_NAME_SHORT => 'Graveler',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Rock Pokémon',
             self::FIELD_ATTACK => 164,
             self::FIELD_DEFENSE => 164,
             self::FIELD_STAMINA => 146,
@@ -14252,6 +16250,8 @@ class PokemonData
         Pokemon::GOLEM | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Golem',
             self::FIELD_NAME_SHORT => 'Golem',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Megaton Pokémon',
             self::FIELD_ATTACK => 211,
             self::FIELD_DEFENSE => 198,
             self::FIELD_STAMINA => 190,
@@ -14268,6 +16268,8 @@ class PokemonData
         Pokemon::PONYTA | Mods::GALARIAN => [
             self::FIELD_NAME => 'Galarian Ponyta',
             self::FIELD_NAME_SHORT => 'Ponyta',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Fire Horse Pokémon',
             self::FIELD_ATTACK => 170,
             self::FIELD_DEFENSE => 127,
             self::FIELD_STAMINA => 137,
@@ -14284,6 +16286,8 @@ class PokemonData
         Pokemon::RAPIDASH | Mods::GALARIAN => [
             self::FIELD_NAME => 'Galarian Rapidash',
             self::FIELD_NAME_SHORT => 'Rapidash',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Fire Horse Pokémon',
             self::FIELD_ATTACK => 207,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 163,
@@ -14300,6 +16304,8 @@ class PokemonData
         Pokemon::SLOWPOKE | Mods::GALARIAN => [
             self::FIELD_NAME => 'Galarian Slowpoke',
             self::FIELD_NAME_SHORT => 'Slowpoke',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Dopey Pokémon',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_EVOLVES => [Pokemon::SLOWBRO | Mods::GALARIAN]
@@ -14307,6 +16313,8 @@ class PokemonData
         Pokemon::SLOWBRO | Mods::GALARIAN => [
             self::FIELD_NAME => 'Galarian Slowbro',
             self::FIELD_NAME_SHORT => 'Slowbro',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Hermit Crab Pokémon',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TYPE2 => Types::PSYCHIC
@@ -14314,6 +16322,8 @@ class PokemonData
         Pokemon::FARFETCH_D | Mods::GALARIAN => [
             self::FIELD_NAME => 'Galarian Farfetch\'d',
             self::FIELD_NAME_SHORT => 'Farfetch\'d',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Wild Duck Pokémon',
             self::FIELD_ATTACK => 174,
             self::FIELD_DEFENSE => 114,
             self::FIELD_STAMINA => 141,
@@ -14330,6 +16340,8 @@ class PokemonData
         Pokemon::GRIMER | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Grimer',
             self::FIELD_NAME_SHORT => 'Grimer',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Sludge Pokémon',
             self::FIELD_ATTACK => 135,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 190,
@@ -14347,6 +16359,8 @@ class PokemonData
         Pokemon::MUK | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Muk',
             self::FIELD_NAME_SHORT => 'Muk',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Sludge Pokémon',
             self::FIELD_ATTACK => 190,
             self::FIELD_DEFENSE => 172,
             self::FIELD_STAMINA => 233,
@@ -14363,6 +16377,8 @@ class PokemonData
         Pokemon::EXEGGUTOR | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Exeggutor',
             self::FIELD_NAME_SHORT => 'Exeggutor',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Coconut Pokémon',
             self::FIELD_ATTACK => 230,
             self::FIELD_DEFENSE => 153,
             self::FIELD_STAMINA => 216,
@@ -14379,6 +16395,8 @@ class PokemonData
         Pokemon::MAROWAK | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Marowak',
             self::FIELD_NAME_SHORT => 'Marowak',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Bone Keeper Pokémon',
             self::FIELD_ATTACK => 144,
             self::FIELD_DEFENSE => 186,
             self::FIELD_STAMINA => 155,
@@ -14396,6 +16414,8 @@ class PokemonData
         Pokemon::WEEZING | Mods::GALARIAN => [
             self::FIELD_NAME => 'Galarian Weezing',
             self::FIELD_NAME_SHORT => 'Weezing',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Poison Gas Pokémon',
             self::FIELD_ATTACK => 174,
             self::FIELD_DEFENSE => 197,
             self::FIELD_STAMINA => 163,
@@ -14412,6 +16432,8 @@ class PokemonData
         Pokemon::MR_MIME | Mods::GALARIAN => [
             self::FIELD_NAME => 'Galarian Mr. Mime',
             self::FIELD_NAME_SHORT => 'Mr. Mime',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Barrier Pokémon',
             self::FIELD_ATTACK => 183,
             self::FIELD_DEFENSE => 169,
             self::FIELD_STAMINA => 137,
@@ -14429,12 +16451,16 @@ class PokemonData
         Pokemon::CORSOLA | Mods::GALARIAN => [
             self::FIELD_NAME => 'Galarian Corsola',
             self::FIELD_NAME_SHORT => 'Corsola',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Coral Pokémon',
             self::FIELD_UNRELEASED => true,
             self::FIELD_TYPE1 => Types::GHOST
         ],
         Pokemon::ZIGZAGOON | Mods::GALARIAN => [
             self::FIELD_NAME => 'Galarian Zigzagoon',
             self::FIELD_NAME_SHORT => 'Zigzagoon',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Tiny Raccoon Pokémon',
             self::FIELD_ATTACK => 58,
             self::FIELD_DEFENSE => 80,
             self::FIELD_STAMINA => 116,
@@ -14452,6 +16478,8 @@ class PokemonData
         Pokemon::LINOONE | Mods::GALARIAN => [
             self::FIELD_NAME => 'Galarian Linoone',
             self::FIELD_NAME_SHORT => 'Linoone',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Rushing Pokémon',
             self::FIELD_ATTACK => 142,
             self::FIELD_DEFENSE => 128,
             self::FIELD_STAMINA => 186,
@@ -14469,6 +16497,8 @@ class PokemonData
         Pokemon::DARUMAKA | Mods::GALARIAN => [
             self::FIELD_NAME => 'Galarian Darumaka',
             self::FIELD_NAME_SHORT => 'Darumaka',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Zen Charm Pokémon',
             self::FIELD_ATTACK => 153,
             self::FIELD_DEFENSE => 86,
             self::FIELD_STAMINA => 172,
@@ -14485,6 +16515,8 @@ class PokemonData
         Pokemon::DARMANITAN | FormsAlias::DARMANITAN_STANDARD | Mods::GALARIAN => [
             self::FIELD_NAME => 'Galarian Darmanitan (Standard Mode)',
             self::FIELD_NAME_SHORT => 'Darmanitan',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Blazing Pokémon',
             self::FIELD_ATTACK => 263,
             self::FIELD_DEFENSE => 114,
             self::FIELD_STAMINA => 233,
@@ -14500,6 +16532,8 @@ class PokemonData
         Pokemon::YAMASK | Mods::GALARIAN => [
             self::FIELD_NAME => 'Galarian Yamask',
             self::FIELD_NAME_SHORT => 'Yamask',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Spirit Pokémon',
             self::FIELD_ATTACK => 95,
             self::FIELD_DEFENSE => 141,
             self::FIELD_STAMINA => 116,
@@ -14517,6 +16551,8 @@ class PokemonData
         Pokemon::STUNFISK | Mods::GALARIAN => [
             self::FIELD_NAME => 'Galarian Stunfisk',
             self::FIELD_NAME_SHORT => 'Stunfisk',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Trap Pokémon',
             self::FIELD_ATTACK => 144,
             self::FIELD_DEFENSE => 171,
             self::FIELD_STAMINA => 240,
@@ -14533,6 +16569,8 @@ class PokemonData
         Pokemon::BULBASAUR | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Bulbasaur',
             self::FIELD_NAME_SHORT => 'Bulbasaur',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Seed Pokémon',
             self::FIELD_ATTACK => 118,
             self::FIELD_DEFENSE => 111,
             self::FIELD_STAMINA => 128,
@@ -14550,6 +16588,8 @@ class PokemonData
         Pokemon::BULBASAUR | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Bulbasaur',
             self::FIELD_NAME_SHORT => 'Bulbasaur',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Seed Pokémon',
             self::FIELD_ATTACK => 118,
             self::FIELD_DEFENSE => 111,
             self::FIELD_STAMINA => 128,
@@ -14569,6 +16609,8 @@ class PokemonData
         Pokemon::IVYSAUR | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Ivysaur',
             self::FIELD_NAME_SHORT => 'Ivysaur',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Seed Pokémon',
             self::FIELD_ATTACK => 151,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 155,
@@ -14586,6 +16628,8 @@ class PokemonData
         Pokemon::IVYSAUR | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Ivysaur',
             self::FIELD_NAME_SHORT => 'Ivysaur',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Seed Pokémon',
             self::FIELD_ATTACK => 151,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 155,
@@ -14605,6 +16649,8 @@ class PokemonData
         Pokemon::VENUSAUR | Mods::MEGA => [
             self::FIELD_NAME => 'Mega Venusaur',
             self::FIELD_NAME_SHORT => 'Venusaur',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'In order to support its flower, which has grown larger due to Mega Evolution, its back and legs have become stronger.',
             self::FIELD_ATTACK => 241,
             self::FIELD_DEFENSE => 246,
             self::FIELD_STAMINA => 190,
@@ -14617,6 +16663,8 @@ class PokemonData
         Pokemon::VENUSAUR | Mods::PURIFIED | Mods::MEGA => [
             self::FIELD_NAME => 'Mega Purified Venusaur',
             self::FIELD_NAME_SHORT => 'Venusaur',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'In order to support its flower, which has grown larger due to Mega Evolution, its back and legs have become stronger.',
             self::FIELD_ATTACK => 241,
             self::FIELD_DEFENSE => 246,
             self::FIELD_STAMINA => 190,
@@ -14629,6 +16677,8 @@ class PokemonData
         Pokemon::VENUSAUR | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Venusaur',
             self::FIELD_NAME_SHORT => 'Venusaur',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Seed Pokémon',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 189,
             self::FIELD_STAMINA => 190,
@@ -14647,6 +16697,8 @@ class PokemonData
         Pokemon::VENUSAUR | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Venusaur',
             self::FIELD_NAME_SHORT => 'Venusaur',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Seed Pokémon',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 189,
             self::FIELD_STAMINA => 190,
@@ -14666,6 +16718,8 @@ class PokemonData
         Pokemon::CHARMANDER | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Charmander',
             self::FIELD_NAME_SHORT => 'Charmander',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Lizard Pokémon',
             self::FIELD_ATTACK => 116,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 118,
@@ -14682,6 +16736,8 @@ class PokemonData
         Pokemon::CHARMANDER | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Charmander',
             self::FIELD_NAME_SHORT => 'Charmander',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Lizard Pokémon',
             self::FIELD_ATTACK => 116,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 118,
@@ -14700,6 +16756,8 @@ class PokemonData
         Pokemon::CHARMELEON | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Charmeleon',
             self::FIELD_NAME_SHORT => 'Charmeleon',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Flame Pokémon',
             self::FIELD_ATTACK => 158,
             self::FIELD_DEFENSE => 126,
             self::FIELD_STAMINA => 151,
@@ -14717,6 +16775,8 @@ class PokemonData
         Pokemon::CHARMELEON | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Charmeleon',
             self::FIELD_NAME_SHORT => 'Charmeleon',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Flame Pokémon',
             self::FIELD_ATTACK => 158,
             self::FIELD_DEFENSE => 126,
             self::FIELD_STAMINA => 151,
@@ -14736,6 +16796,8 @@ class PokemonData
         Pokemon::CHARIZARD | Mods::MEGA_X => [
             self::FIELD_NAME => 'Mega Charizard X',
             self::FIELD_NAME_SHORT => 'Charizard',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'The overwhelming power that fills its entire body causes it to turn black and creates intense blue flames.',
             self::FIELD_ATTACK => 273,
             self::FIELD_DEFENSE => 213,
             self::FIELD_STAMINA => 186,
@@ -14749,6 +16811,8 @@ class PokemonData
         Pokemon::CHARIZARD | Mods::MEGA_Y => [
             self::FIELD_NAME => 'Mega Charizard Y',
             self::FIELD_NAME_SHORT => 'Charizard',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Its bond with its Trainer is the source of its power. It boasts speed and maneuverability greater than that of a jet fighter.',
             self::FIELD_ATTACK => 319,
             self::FIELD_DEFENSE => 212,
             self::FIELD_STAMINA => 186,
@@ -14762,6 +16826,8 @@ class PokemonData
         Pokemon::CHARIZARD | Mods::PURIFIED | Mods::MEGA_X => [
             self::FIELD_NAME => 'Mega Purified Charizard X',
             self::FIELD_NAME_SHORT => 'Charizard',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'The overwhelming power that fills its entire body causes it to turn black and creates intense blue flames.',
             self::FIELD_ATTACK => 273,
             self::FIELD_DEFENSE => 213,
             self::FIELD_STAMINA => 186,
@@ -14775,6 +16841,8 @@ class PokemonData
         Pokemon::CHARIZARD | Mods::PURIFIED | Mods::MEGA_Y => [
             self::FIELD_NAME => 'Mega Purified Charizard Y',
             self::FIELD_NAME_SHORT => 'Charizard',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Its bond with its Trainer is the source of its power. It boasts speed and maneuverability greater than that of a jet fighter.',
             self::FIELD_ATTACK => 319,
             self::FIELD_DEFENSE => 212,
             self::FIELD_STAMINA => 186,
@@ -14788,6 +16856,8 @@ class PokemonData
         Pokemon::CHARIZARD | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Charizard',
             self::FIELD_NAME_SHORT => 'Charizard',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Flame Pokémon',
             self::FIELD_ATTACK => 223,
             self::FIELD_DEFENSE => 173,
             self::FIELD_STAMINA => 186,
@@ -14807,6 +16877,8 @@ class PokemonData
         Pokemon::CHARIZARD | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Charizard',
             self::FIELD_NAME_SHORT => 'Charizard',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Flame Pokémon',
             self::FIELD_ATTACK => 223,
             self::FIELD_DEFENSE => 173,
             self::FIELD_STAMINA => 186,
@@ -14827,6 +16899,8 @@ class PokemonData
         Pokemon::SQUIRTLE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Squirtle',
             self::FIELD_NAME_SHORT => 'Squirtle',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Tiny Turtle Pokémon',
             self::FIELD_ATTACK => 94,
             self::FIELD_DEFENSE => 121,
             self::FIELD_STAMINA => 127,
@@ -14843,6 +16917,8 @@ class PokemonData
         Pokemon::SQUIRTLE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Squirtle',
             self::FIELD_NAME_SHORT => 'Squirtle',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Tiny Turtle Pokémon',
             self::FIELD_ATTACK => 94,
             self::FIELD_DEFENSE => 121,
             self::FIELD_STAMINA => 127,
@@ -14861,6 +16937,8 @@ class PokemonData
         Pokemon::WARTORTLE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Wartortle',
             self::FIELD_NAME_SHORT => 'Wartortle',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Turtle Pokémon',
             self::FIELD_ATTACK => 126,
             self::FIELD_DEFENSE => 155,
             self::FIELD_STAMINA => 153,
@@ -14877,6 +16955,8 @@ class PokemonData
         Pokemon::WARTORTLE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Wartortle',
             self::FIELD_NAME_SHORT => 'Wartortle',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Turtle Pokémon',
             self::FIELD_ATTACK => 126,
             self::FIELD_DEFENSE => 155,
             self::FIELD_STAMINA => 153,
@@ -14895,6 +16975,8 @@ class PokemonData
         Pokemon::BLASTOISE | Mods::MEGA => [
             self::FIELD_NAME => 'Mega Blastoise',
             self::FIELD_NAME_SHORT => 'Blastoise',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'The cannon on its back is as powerful as a tank gun. Its tough legs and back enable it to withstand the recoil from firing the cannon.',
             self::FIELD_ATTACK => 264,
             self::FIELD_DEFENSE => 237,
             self::FIELD_STAMINA => 188,
@@ -14906,6 +16988,8 @@ class PokemonData
         Pokemon::BLASTOISE | Mods::PURIFIED | Mods::MEGA => [
             self::FIELD_NAME => 'Mega Purified Blastoise',
             self::FIELD_NAME_SHORT => 'Blastoise',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'The cannon on its back is as powerful as a tank gun. Its tough legs and back enable it to withstand the recoil from firing the cannon.',
             self::FIELD_ATTACK => 264,
             self::FIELD_DEFENSE => 237,
             self::FIELD_STAMINA => 188,
@@ -14917,6 +17001,8 @@ class PokemonData
         Pokemon::BLASTOISE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Blastoise',
             self::FIELD_NAME_SHORT => 'Blastoise',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Shellfish Pokémon',
             self::FIELD_ATTACK => 171,
             self::FIELD_DEFENSE => 207,
             self::FIELD_STAMINA => 188,
@@ -14934,6 +17020,8 @@ class PokemonData
         Pokemon::BLASTOISE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Blastoise',
             self::FIELD_NAME_SHORT => 'Blastoise',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Shellfish Pokémon',
             self::FIELD_ATTACK => 171,
             self::FIELD_DEFENSE => 207,
             self::FIELD_STAMINA => 188,
@@ -14952,6 +17040,8 @@ class PokemonData
         Pokemon::WEEDLE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Weedle',
             self::FIELD_NAME_SHORT => 'Weedle',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Hairy Bug Pokémon',
             self::FIELD_ATTACK => 63,
             self::FIELD_DEFENSE => 50,
             self::FIELD_STAMINA => 120,
@@ -14969,6 +17059,8 @@ class PokemonData
         Pokemon::WEEDLE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Weedle',
             self::FIELD_NAME_SHORT => 'Weedle',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Hairy Bug Pokémon',
             self::FIELD_ATTACK => 63,
             self::FIELD_DEFENSE => 50,
             self::FIELD_STAMINA => 120,
@@ -14988,6 +17080,8 @@ class PokemonData
         Pokemon::KAKUNA | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Kakuna',
             self::FIELD_NAME_SHORT => 'Kakuna',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Cocoon Pokémon',
             self::FIELD_ATTACK => 46,
             self::FIELD_DEFENSE => 75,
             self::FIELD_STAMINA => 128,
@@ -15005,6 +17099,8 @@ class PokemonData
         Pokemon::KAKUNA | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Kakuna',
             self::FIELD_NAME_SHORT => 'Kakuna',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Cocoon Pokémon',
             self::FIELD_ATTACK => 46,
             self::FIELD_DEFENSE => 75,
             self::FIELD_STAMINA => 128,
@@ -15024,6 +17120,8 @@ class PokemonData
         Pokemon::BEEDRILL | Mods::MEGA => [
             self::FIELD_NAME => 'Mega Beedrill',
             self::FIELD_NAME_SHORT => 'Beedrill',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Its legs have become poison stingers. It stabs its prey repeatedly with the stingers on its limbs, dealing the final blow with the stinger on its rear.',
             self::FIELD_ATTACK => 303,
             self::FIELD_DEFENSE => 148,
             self::FIELD_STAMINA => 163,
@@ -15037,6 +17135,8 @@ class PokemonData
         Pokemon::BEEDRILL | Mods::PURIFIED | Mods::MEGA => [
             self::FIELD_NAME => 'Mega Purified Beedrill',
             self::FIELD_NAME_SHORT => 'Beedrill',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Its legs have become poison stingers. It stabs its prey repeatedly with the stingers on its limbs, dealing the final blow with the stinger on its rear.',
             self::FIELD_ATTACK => 303,
             self::FIELD_DEFENSE => 148,
             self::FIELD_STAMINA => 163,
@@ -15050,6 +17150,8 @@ class PokemonData
         Pokemon::BEEDRILL | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Beedrill',
             self::FIELD_NAME_SHORT => 'Beedrill',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Poison Bee Pokémon',
             self::FIELD_ATTACK => 169,
             self::FIELD_DEFENSE => 130,
             self::FIELD_STAMINA => 163,
@@ -15069,6 +17171,8 @@ class PokemonData
         Pokemon::BEEDRILL | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Beedrill',
             self::FIELD_NAME_SHORT => 'Beedrill',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Poison Bee Pokémon',
             self::FIELD_ATTACK => 169,
             self::FIELD_DEFENSE => 130,
             self::FIELD_STAMINA => 163,
@@ -15089,6 +17193,8 @@ class PokemonData
         Pokemon::PIDGEOT | Mods::MEGA => [
             self::FIELD_NAME => 'Mega Pidgeot',
             self::FIELD_NAME_SHORT => 'Pidgeot',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'With its muscular strength now greatly increased, it can fly continuously for two weeks without resting.',
             self::FIELD_ATTACK => 280,
             self::FIELD_DEFENSE => 175,
             self::FIELD_STAMINA => 195,
@@ -15102,6 +17208,8 @@ class PokemonData
         Pokemon::RATATTA | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Rattata',
             self::FIELD_NAME_SHORT => 'Rattata',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mouse Pokémon',
             self::FIELD_ATTACK => 103,
             self::FIELD_DEFENSE => 70,
             self::FIELD_STAMINA => 102,
@@ -15118,6 +17226,8 @@ class PokemonData
         Pokemon::RATATTA | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Rattata',
             self::FIELD_NAME_SHORT => 'Rattata',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mouse Pokémon',
             self::FIELD_ATTACK => 103,
             self::FIELD_DEFENSE => 70,
             self::FIELD_STAMINA => 102,
@@ -15136,6 +17246,8 @@ class PokemonData
         Pokemon::RATICATE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Raticate',
             self::FIELD_NAME_SHORT => 'Raticate',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mouse Pokémon',
             self::FIELD_ATTACK => 161,
             self::FIELD_DEFENSE => 139,
             self::FIELD_STAMINA => 146,
@@ -15151,6 +17263,8 @@ class PokemonData
         Pokemon::RATICATE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Raticate',
             self::FIELD_NAME_SHORT => 'Raticate',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mouse Pokémon',
             self::FIELD_ATTACK => 161,
             self::FIELD_DEFENSE => 139,
             self::FIELD_STAMINA => 146,
@@ -15168,6 +17282,8 @@ class PokemonData
         Pokemon::EKANS | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Ekans',
             self::FIELD_NAME_SHORT => 'Ekans',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Snake Pokémon',
             self::FIELD_ATTACK => 110,
             self::FIELD_DEFENSE => 97,
             self::FIELD_STAMINA => 111,
@@ -15185,6 +17301,8 @@ class PokemonData
         Pokemon::EKANS | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Ekans',
             self::FIELD_NAME_SHORT => 'Ekans',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Snake Pokémon',
             self::FIELD_ATTACK => 110,
             self::FIELD_DEFENSE => 97,
             self::FIELD_STAMINA => 111,
@@ -15204,6 +17322,8 @@ class PokemonData
         Pokemon::ARBOK | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Arbok',
             self::FIELD_NAME_SHORT => 'Arbok',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Cobra Pokémon',
             self::FIELD_ATTACK => 167,
             self::FIELD_DEFENSE => 153,
             self::FIELD_STAMINA => 155,
@@ -15219,6 +17339,8 @@ class PokemonData
         Pokemon::ARBOK | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Arbok',
             self::FIELD_NAME_SHORT => 'Arbok',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Cobra Pokémon',
             self::FIELD_ATTACK => 167,
             self::FIELD_DEFENSE => 153,
             self::FIELD_STAMINA => 155,
@@ -15236,6 +17358,8 @@ class PokemonData
         Pokemon::SANDSHREW | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Sandshrew',
             self::FIELD_NAME_SHORT => 'Sandshrew',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mouse Pokémon',
             self::FIELD_ATTACK => 126,
             self::FIELD_DEFENSE => 120,
             self::FIELD_STAMINA => 137,
@@ -15253,6 +17377,8 @@ class PokemonData
         Pokemon::SANDSHREW | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Sandshrew',
             self::FIELD_NAME_SHORT => 'Sandshrew',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mouse Pokémon',
             self::FIELD_ATTACK => 126,
             self::FIELD_DEFENSE => 120,
             self::FIELD_STAMINA => 137,
@@ -15272,6 +17398,8 @@ class PokemonData
         Pokemon::SANDSLASH | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Sandslash',
             self::FIELD_NAME_SHORT => 'Sandslash',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mouse Pokémon',
             self::FIELD_ATTACK => 182,
             self::FIELD_DEFENSE => 175,
             self::FIELD_STAMINA => 181,
@@ -15287,6 +17415,8 @@ class PokemonData
         Pokemon::SANDSLASH | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Sandslash',
             self::FIELD_NAME_SHORT => 'Sandslash',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mouse Pokémon',
             self::FIELD_ATTACK => 182,
             self::FIELD_DEFENSE => 175,
             self::FIELD_STAMINA => 181,
@@ -15304,6 +17434,8 @@ class PokemonData
         Pokemon::NIDORAN_F | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Nidoran♀',
             self::FIELD_NAME_SHORT => 'Nidoran♀',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Poison Pin Pokémon',
             self::FIELD_ATTACK => 86,
             self::FIELD_DEFENSE => 89,
             self::FIELD_STAMINA => 146,
@@ -15320,6 +17452,8 @@ class PokemonData
         Pokemon::NIDORAN_F | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Nidoran♀',
             self::FIELD_NAME_SHORT => 'Nidoran♀',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Poison Pin Pokémon',
             self::FIELD_ATTACK => 86,
             self::FIELD_DEFENSE => 89,
             self::FIELD_STAMINA => 146,
@@ -15338,6 +17472,8 @@ class PokemonData
         Pokemon::NIDORINA | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Nidorina',
             self::FIELD_NAME_SHORT => 'Nidorina',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Poison Pin Pokémon',
             self::FIELD_ATTACK => 117,
             self::FIELD_DEFENSE => 120,
             self::FIELD_STAMINA => 172,
@@ -15354,6 +17490,8 @@ class PokemonData
         Pokemon::NIDORINA | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Nidorina',
             self::FIELD_NAME_SHORT => 'Nidorina',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Poison Pin Pokémon',
             self::FIELD_ATTACK => 117,
             self::FIELD_DEFENSE => 120,
             self::FIELD_STAMINA => 172,
@@ -15372,6 +17510,8 @@ class PokemonData
         Pokemon::NIDOQUEEN | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Nidoqueen',
             self::FIELD_NAME_SHORT => 'Nidoqueen',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Drill Pokémon',
             self::FIELD_ATTACK => 180,
             self::FIELD_DEFENSE => 173,
             self::FIELD_STAMINA => 207,
@@ -15388,6 +17528,8 @@ class PokemonData
         Pokemon::NIDOQUEEN | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Nidoqueen',
             self::FIELD_NAME_SHORT => 'Nidoqueen',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Drill Pokémon',
             self::FIELD_ATTACK => 180,
             self::FIELD_DEFENSE => 173,
             self::FIELD_STAMINA => 207,
@@ -15406,6 +17548,8 @@ class PokemonData
         Pokemon::NIDORAN_M | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Nidoran♂',
             self::FIELD_NAME_SHORT => 'Nidoran♂',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Poison Pin Pokémon',
             self::FIELD_ATTACK => 105,
             self::FIELD_DEFENSE => 76,
             self::FIELD_STAMINA => 130,
@@ -15422,6 +17566,8 @@ class PokemonData
         Pokemon::NIDORAN_M | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Nidoran♂',
             self::FIELD_NAME_SHORT => 'Nidoran♂',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Poison Pin Pokémon',
             self::FIELD_ATTACK => 105,
             self::FIELD_DEFENSE => 76,
             self::FIELD_STAMINA => 130,
@@ -15440,6 +17586,8 @@ class PokemonData
         Pokemon::NIDORINO | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Nidorino',
             self::FIELD_NAME_SHORT => 'Nidorino',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Poison Pin Pokémon',
             self::FIELD_ATTACK => 137,
             self::FIELD_DEFENSE => 111,
             self::FIELD_STAMINA => 156,
@@ -15456,6 +17604,8 @@ class PokemonData
         Pokemon::NIDORINO | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Nidorino',
             self::FIELD_NAME_SHORT => 'Nidorino',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Poison Pin Pokémon',
             self::FIELD_ATTACK => 137,
             self::FIELD_DEFENSE => 111,
             self::FIELD_STAMINA => 156,
@@ -15474,6 +17624,8 @@ class PokemonData
         Pokemon::NIDOKING | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Nidoking',
             self::FIELD_NAME_SHORT => 'Nidoking',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Drill Pokémon',
             self::FIELD_ATTACK => 204,
             self::FIELD_DEFENSE => 156,
             self::FIELD_STAMINA => 191,
@@ -15491,6 +17643,8 @@ class PokemonData
         Pokemon::NIDOKING | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Nidoking',
             self::FIELD_NAME_SHORT => 'Nidoking',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Drill Pokémon',
             self::FIELD_ATTACK => 204,
             self::FIELD_DEFENSE => 156,
             self::FIELD_STAMINA => 191,
@@ -15510,6 +17664,8 @@ class PokemonData
         Pokemon::VULPIX | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Vulpix',
             self::FIELD_NAME_SHORT => 'Vulpix',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Fox Pokémon',
             self::FIELD_ATTACK => 96,
             self::FIELD_DEFENSE => 109,
             self::FIELD_STAMINA => 116,
@@ -15526,6 +17682,8 @@ class PokemonData
         Pokemon::VULPIX | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Vulpix',
             self::FIELD_NAME_SHORT => 'Vulpix',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Fox Pokémon',
             self::FIELD_ATTACK => 96,
             self::FIELD_DEFENSE => 109,
             self::FIELD_STAMINA => 116,
@@ -15544,6 +17702,8 @@ class PokemonData
         Pokemon::NINETALES | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Ninetales',
             self::FIELD_NAME_SHORT => 'Ninetales',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Fox Pokémon',
             self::FIELD_ATTACK => 169,
             self::FIELD_DEFENSE => 190,
             self::FIELD_STAMINA => 177,
@@ -15561,6 +17721,8 @@ class PokemonData
         Pokemon::NINETALES | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Ninetales',
             self::FIELD_NAME_SHORT => 'Ninetales',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Fox Pokémon',
             self::FIELD_ATTACK => 169,
             self::FIELD_DEFENSE => 190,
             self::FIELD_STAMINA => 177,
@@ -15580,6 +17742,8 @@ class PokemonData
         Pokemon::ZUBAT | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Zubat',
             self::FIELD_NAME_SHORT => 'Zubat',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Bat Pokémon',
             self::FIELD_ATTACK => 83,
             self::FIELD_DEFENSE => 73,
             self::FIELD_STAMINA => 120,
@@ -15598,6 +17762,8 @@ class PokemonData
         Pokemon::ZUBAT | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Zubat',
             self::FIELD_NAME_SHORT => 'Zubat',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Bat Pokémon',
             self::FIELD_ATTACK => 83,
             self::FIELD_DEFENSE => 73,
             self::FIELD_STAMINA => 120,
@@ -15618,6 +17784,8 @@ class PokemonData
         Pokemon::GOLBAT | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Golbat',
             self::FIELD_NAME_SHORT => 'Golbat',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Bat Pokémon',
             self::FIELD_ATTACK => 161,
             self::FIELD_DEFENSE => 150,
             self::FIELD_STAMINA => 181,
@@ -15636,6 +17804,8 @@ class PokemonData
         Pokemon::GOLBAT | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Golbat',
             self::FIELD_NAME_SHORT => 'Golbat',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Bat Pokémon',
             self::FIELD_ATTACK => 161,
             self::FIELD_DEFENSE => 150,
             self::FIELD_STAMINA => 181,
@@ -15656,6 +17826,8 @@ class PokemonData
         Pokemon::ODDISH | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Oddish',
             self::FIELD_NAME_SHORT => 'Oddish',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Weed Pokémon',
             self::FIELD_ATTACK => 131,
             self::FIELD_DEFENSE => 112,
             self::FIELD_STAMINA => 128,
@@ -15673,6 +17845,8 @@ class PokemonData
         Pokemon::ODDISH | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Oddish',
             self::FIELD_NAME_SHORT => 'Oddish',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Weed Pokémon',
             self::FIELD_ATTACK => 131,
             self::FIELD_DEFENSE => 112,
             self::FIELD_STAMINA => 128,
@@ -15692,6 +17866,8 @@ class PokemonData
         Pokemon::GLOOM | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Gloom',
             self::FIELD_NAME_SHORT => 'Gloom',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Weed Pokémon',
             self::FIELD_ATTACK => 153,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 155,
@@ -15709,6 +17885,8 @@ class PokemonData
         Pokemon::GLOOM | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Gloom',
             self::FIELD_NAME_SHORT => 'Gloom',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Weed Pokémon',
             self::FIELD_ATTACK => 153,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 155,
@@ -15728,6 +17906,8 @@ class PokemonData
         Pokemon::VILEPLUME | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Vileplume',
             self::FIELD_NAME_SHORT => 'Vileplume',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Flower Pokémon',
             self::FIELD_ATTACK => 202,
             self::FIELD_DEFENSE => 167,
             self::FIELD_STAMINA => 181,
@@ -15744,6 +17924,8 @@ class PokemonData
         Pokemon::VILEPLUME | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Vileplume',
             self::FIELD_NAME_SHORT => 'Vileplume',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Flower Pokémon',
             self::FIELD_ATTACK => 202,
             self::FIELD_DEFENSE => 167,
             self::FIELD_STAMINA => 181,
@@ -15762,6 +17944,8 @@ class PokemonData
         Pokemon::VENONAT | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Venonat',
             self::FIELD_NAME_SHORT => 'Venonat',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Insect Pokémon',
             self::FIELD_ATTACK => 100,
             self::FIELD_DEFENSE => 100,
             self::FIELD_STAMINA => 155,
@@ -15779,6 +17963,8 @@ class PokemonData
         Pokemon::VENONAT | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Venonat',
             self::FIELD_NAME_SHORT => 'Venonat',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Insect Pokémon',
             self::FIELD_ATTACK => 100,
             self::FIELD_DEFENSE => 100,
             self::FIELD_STAMINA => 155,
@@ -15798,6 +17984,8 @@ class PokemonData
         Pokemon::VENOMOTH | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Venomoth',
             self::FIELD_NAME_SHORT => 'Venomoth',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Poison Moth Pokémon',
             self::FIELD_ATTACK => 179,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 172,
@@ -15815,6 +18003,8 @@ class PokemonData
         Pokemon::VENOMOTH | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Venomoth',
             self::FIELD_NAME_SHORT => 'Venomoth',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Poison Moth Pokémon',
             self::FIELD_ATTACK => 179,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 172,
@@ -15834,6 +18024,8 @@ class PokemonData
         Pokemon::DIGLETT | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Diglett',
             self::FIELD_NAME_SHORT => 'Diglett',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mole Pokémon',
             self::FIELD_ATTACK => 109,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 67,
@@ -15850,6 +18042,8 @@ class PokemonData
         Pokemon::DIGLETT | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Diglett',
             self::FIELD_NAME_SHORT => 'Diglett',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mole Pokémon',
             self::FIELD_ATTACK => 109,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 67,
@@ -15868,6 +18062,8 @@ class PokemonData
         Pokemon::DUGTRIO | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Dugtrio',
             self::FIELD_NAME_SHORT => 'Dugtrio',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mole Pokémon',
             self::FIELD_ATTACK => 167,
             self::FIELD_DEFENSE => 134,
             self::FIELD_STAMINA => 111,
@@ -15883,6 +18079,8 @@ class PokemonData
         Pokemon::DUGTRIO | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Dugtrio',
             self::FIELD_NAME_SHORT => 'Dugtrio',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mole Pokémon',
             self::FIELD_ATTACK => 167,
             self::FIELD_DEFENSE => 134,
             self::FIELD_STAMINA => 111,
@@ -15900,6 +18098,8 @@ class PokemonData
         Pokemon::MEOWTH | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Meowth',
             self::FIELD_NAME_SHORT => 'Meowth',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Scratch Cat Pokémon',
             self::FIELD_ATTACK => 92,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 120,
@@ -15917,6 +18117,8 @@ class PokemonData
         Pokemon::MEOWTH | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Meowth',
             self::FIELD_NAME_SHORT => 'Meowth',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Scratch Cat Pokémon',
             self::FIELD_ATTACK => 92,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 120,
@@ -15936,6 +18138,8 @@ class PokemonData
         Pokemon::PERSIAN | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Persian',
             self::FIELD_NAME_SHORT => 'Persian',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Classy Cat Pokémon',
             self::FIELD_ATTACK => 150,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 163,
@@ -15952,6 +18156,8 @@ class PokemonData
         Pokemon::PERSIAN | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Persian',
             self::FIELD_NAME_SHORT => 'Persian',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Classy Cat Pokémon',
             self::FIELD_ATTACK => 150,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 163,
@@ -15970,6 +18176,8 @@ class PokemonData
         Pokemon::PSYDUCK | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Psyduck',
             self::FIELD_NAME_SHORT => 'Psyduck',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Duck Pokémon',
             self::FIELD_ATTACK => 122,
             self::FIELD_DEFENSE => 95,
             self::FIELD_STAMINA => 137,
@@ -15986,6 +18194,8 @@ class PokemonData
         Pokemon::PSYDUCK | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Psyduck',
             self::FIELD_NAME_SHORT => 'Psyduck',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Duck Pokémon',
             self::FIELD_ATTACK => 122,
             self::FIELD_DEFENSE => 95,
             self::FIELD_STAMINA => 137,
@@ -16004,6 +18214,8 @@ class PokemonData
         Pokemon::GOLDUCK | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Golduck',
             self::FIELD_NAME_SHORT => 'Golduck',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Duck Pokémon',
             self::FIELD_ATTACK => 191,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 190,
@@ -16019,6 +18231,8 @@ class PokemonData
         Pokemon::GOLDUCK | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Golduck',
             self::FIELD_NAME_SHORT => 'Golduck',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Duck Pokémon',
             self::FIELD_ATTACK => 191,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 190,
@@ -16036,6 +18250,8 @@ class PokemonData
         Pokemon::GROWLITHE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Growlithe',
             self::FIELD_NAME_SHORT => 'Growlithe',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Puppy Pokémon',
             self::FIELD_ATTACK => 136,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 146,
@@ -16052,6 +18268,8 @@ class PokemonData
         Pokemon::GROWLITHE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Growlithe',
             self::FIELD_NAME_SHORT => 'Growlithe',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Puppy Pokémon',
             self::FIELD_ATTACK => 136,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 146,
@@ -16070,6 +18288,8 @@ class PokemonData
         Pokemon::ARCANINE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Arcanine',
             self::FIELD_NAME_SHORT => 'Arcanine',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Legendary Pokémon',
             self::FIELD_ATTACK => 227,
             self::FIELD_DEFENSE => 166,
             self::FIELD_STAMINA => 207,
@@ -16087,6 +18307,8 @@ class PokemonData
         Pokemon::ARCANINE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Arcanine',
             self::FIELD_NAME_SHORT => 'Arcanine',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Legendary Pokémon',
             self::FIELD_ATTACK => 227,
             self::FIELD_DEFENSE => 166,
             self::FIELD_STAMINA => 207,
@@ -16106,6 +18328,8 @@ class PokemonData
         Pokemon::POLIWAG | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Poliwag',
             self::FIELD_NAME_SHORT => 'Poliwag',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Tadpole Pokémon',
             self::FIELD_ATTACK => 101,
             self::FIELD_DEFENSE => 82,
             self::FIELD_STAMINA => 120,
@@ -16122,6 +18346,8 @@ class PokemonData
         Pokemon::POLIWAG | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Poliwag',
             self::FIELD_NAME_SHORT => 'Poliwag',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Tadpole Pokémon',
             self::FIELD_ATTACK => 101,
             self::FIELD_DEFENSE => 82,
             self::FIELD_STAMINA => 120,
@@ -16140,6 +18366,8 @@ class PokemonData
         Pokemon::POLIWHIRL | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Poliwhirl',
             self::FIELD_NAME_SHORT => 'Poliwhirl',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Tadpole Pokémon',
             self::FIELD_ATTACK => 130,
             self::FIELD_DEFENSE => 123,
             self::FIELD_STAMINA => 163,
@@ -16157,6 +18385,8 @@ class PokemonData
         Pokemon::POLIWHIRL | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Poliwhirl',
             self::FIELD_NAME_SHORT => 'Poliwhirl',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Tadpole Pokémon',
             self::FIELD_ATTACK => 130,
             self::FIELD_DEFENSE => 123,
             self::FIELD_STAMINA => 163,
@@ -16176,6 +18406,8 @@ class PokemonData
         Pokemon::POLIWRATH | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Poliwrath',
             self::FIELD_NAME_SHORT => 'Poliwrath',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Tadpole Pokémon',
             self::FIELD_ATTACK => 182,
             self::FIELD_DEFENSE => 184,
             self::FIELD_STAMINA => 207,
@@ -16193,6 +18425,8 @@ class PokemonData
         Pokemon::POLIWRATH | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Poliwrath',
             self::FIELD_NAME_SHORT => 'Poliwrath',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Tadpole Pokémon',
             self::FIELD_ATTACK => 182,
             self::FIELD_DEFENSE => 184,
             self::FIELD_STAMINA => 207,
@@ -16212,6 +18446,8 @@ class PokemonData
         Pokemon::ABRA | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Abra',
             self::FIELD_NAME_SHORT => 'Abra',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Psi Pokémon',
             self::FIELD_ATTACK => 195,
             self::FIELD_DEFENSE => 82,
             self::FIELD_STAMINA => 93,
@@ -16228,6 +18464,8 @@ class PokemonData
         Pokemon::ABRA | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Abra',
             self::FIELD_NAME_SHORT => 'Abra',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Psi Pokémon',
             self::FIELD_ATTACK => 195,
             self::FIELD_DEFENSE => 82,
             self::FIELD_STAMINA => 93,
@@ -16246,6 +18484,8 @@ class PokemonData
         Pokemon::KADABRA | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Kadabra',
             self::FIELD_NAME_SHORT => 'Kadabra',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Psi Pokémon',
             self::FIELD_ATTACK => 232,
             self::FIELD_DEFENSE => 117,
             self::FIELD_STAMINA => 120,
@@ -16262,6 +18502,8 @@ class PokemonData
         Pokemon::KADABRA | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Kadabra',
             self::FIELD_NAME_SHORT => 'Kadabra',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Psi Pokémon',
             self::FIELD_ATTACK => 232,
             self::FIELD_DEFENSE => 117,
             self::FIELD_STAMINA => 120,
@@ -16280,6 +18522,8 @@ class PokemonData
         Pokemon::ALAKAZAM | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Alakazam',
             self::FIELD_NAME_SHORT => 'Alakazam',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Psi Pokémon',
             self::FIELD_ATTACK => 271,
             self::FIELD_DEFENSE => 167,
             self::FIELD_STAMINA => 146,
@@ -16297,6 +18541,8 @@ class PokemonData
         Pokemon::ALAKAZAM | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Alakazam',
             self::FIELD_NAME_SHORT => 'Alakazam',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Psi Pokémon',
             self::FIELD_ATTACK => 271,
             self::FIELD_DEFENSE => 167,
             self::FIELD_STAMINA => 146,
@@ -16316,6 +18562,8 @@ class PokemonData
         Pokemon::MACHOP | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Machop',
             self::FIELD_NAME_SHORT => 'Machop',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Superpower Pokémon',
             self::FIELD_ATTACK => 137,
             self::FIELD_DEFENSE => 82,
             self::FIELD_STAMINA => 172,
@@ -16333,6 +18581,8 @@ class PokemonData
         Pokemon::MACHOP | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Machop',
             self::FIELD_NAME_SHORT => 'Machop',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Superpower Pokémon',
             self::FIELD_ATTACK => 137,
             self::FIELD_DEFENSE => 82,
             self::FIELD_STAMINA => 172,
@@ -16352,6 +18602,8 @@ class PokemonData
         Pokemon::MACHOKE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Machoke',
             self::FIELD_NAME_SHORT => 'Machoke',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Superpower Pokémon',
             self::FIELD_ATTACK => 177,
             self::FIELD_DEFENSE => 125,
             self::FIELD_STAMINA => 190,
@@ -16369,6 +18621,8 @@ class PokemonData
         Pokemon::MACHOKE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Machoke',
             self::FIELD_NAME_SHORT => 'Machoke',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Superpower Pokémon',
             self::FIELD_ATTACK => 177,
             self::FIELD_DEFENSE => 125,
             self::FIELD_STAMINA => 190,
@@ -16388,6 +18642,8 @@ class PokemonData
         Pokemon::MACHAMP | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Machamp',
             self::FIELD_NAME_SHORT => 'Machamp',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Superpower Pokémon',
             self::FIELD_ATTACK => 234,
             self::FIELD_DEFENSE => 159,
             self::FIELD_STAMINA => 207,
@@ -16405,6 +18661,8 @@ class PokemonData
         Pokemon::MACHAMP | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Machamp',
             self::FIELD_NAME_SHORT => 'Machamp',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Superpower Pokémon',
             self::FIELD_ATTACK => 234,
             self::FIELD_DEFENSE => 159,
             self::FIELD_STAMINA => 207,
@@ -16424,6 +18682,8 @@ class PokemonData
         Pokemon::BELLSPROUT | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Bellsprout',
             self::FIELD_NAME_SHORT => 'Bellsprout',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Flower Pokémon',
             self::FIELD_ATTACK => 139,
             self::FIELD_DEFENSE => 61,
             self::FIELD_STAMINA => 137,
@@ -16441,6 +18701,8 @@ class PokemonData
         Pokemon::BELLSPROUT | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Bellsprout',
             self::FIELD_NAME_SHORT => 'Bellsprout',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Flower Pokémon',
             self::FIELD_ATTACK => 139,
             self::FIELD_DEFENSE => 61,
             self::FIELD_STAMINA => 137,
@@ -16460,6 +18722,8 @@ class PokemonData
         Pokemon::WEEPINBELL | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Weepinbell',
             self::FIELD_NAME_SHORT => 'Weepinbell',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Flycatcher Pokémon',
             self::FIELD_ATTACK => 172,
             self::FIELD_DEFENSE => 92,
             self::FIELD_STAMINA => 163,
@@ -16478,6 +18742,8 @@ class PokemonData
         Pokemon::WEEPINBELL | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Weepinbell',
             self::FIELD_NAME_SHORT => 'Weepinbell',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Flycatcher Pokémon',
             self::FIELD_ATTACK => 172,
             self::FIELD_DEFENSE => 92,
             self::FIELD_STAMINA => 163,
@@ -16498,6 +18764,8 @@ class PokemonData
         Pokemon::VICTREEBEL | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Victreebel',
             self::FIELD_NAME_SHORT => 'Victreebel',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Flycatcher Pokémon',
             self::FIELD_ATTACK => 207,
             self::FIELD_DEFENSE => 135,
             self::FIELD_STAMINA => 190,
@@ -16514,6 +18782,8 @@ class PokemonData
         Pokemon::VICTREEBEL | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Victreebel',
             self::FIELD_NAME_SHORT => 'Victreebel',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Flycatcher Pokémon',
             self::FIELD_ATTACK => 207,
             self::FIELD_DEFENSE => 135,
             self::FIELD_STAMINA => 190,
@@ -16532,6 +18802,8 @@ class PokemonData
         Pokemon::GEODUDE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Geodude',
             self::FIELD_NAME_SHORT => 'Geodude',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Rock Pokémon',
             self::FIELD_ATTACK => 132,
             self::FIELD_DEFENSE => 132,
             self::FIELD_STAMINA => 120,
@@ -16549,6 +18821,8 @@ class PokemonData
         Pokemon::GEODUDE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Geodude',
             self::FIELD_NAME_SHORT => 'Geodude',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Rock Pokémon',
             self::FIELD_ATTACK => 132,
             self::FIELD_DEFENSE => 132,
             self::FIELD_STAMINA => 120,
@@ -16568,6 +18842,8 @@ class PokemonData
         Pokemon::GRAVELER | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Graveler',
             self::FIELD_NAME_SHORT => 'Graveler',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Rock Pokémon',
             self::FIELD_ATTACK => 164,
             self::FIELD_DEFENSE => 164,
             self::FIELD_STAMINA => 146,
@@ -16586,6 +18862,8 @@ class PokemonData
         Pokemon::GRAVELER | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Graveler',
             self::FIELD_NAME_SHORT => 'Graveler',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Rock Pokémon',
             self::FIELD_ATTACK => 164,
             self::FIELD_DEFENSE => 164,
             self::FIELD_STAMINA => 146,
@@ -16606,6 +18884,8 @@ class PokemonData
         Pokemon::GOLEM | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Golem',
             self::FIELD_NAME_SHORT => 'Golem',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Megaton Pokémon',
             self::FIELD_ATTACK => 211,
             self::FIELD_DEFENSE => 198,
             self::FIELD_STAMINA => 190,
@@ -16622,6 +18902,8 @@ class PokemonData
         Pokemon::GOLEM | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Golem',
             self::FIELD_NAME_SHORT => 'Golem',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Megaton Pokémon',
             self::FIELD_ATTACK => 211,
             self::FIELD_DEFENSE => 198,
             self::FIELD_STAMINA => 190,
@@ -16640,6 +18922,8 @@ class PokemonData
         Pokemon::PONYTA | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Ponyta',
             self::FIELD_NAME_SHORT => 'Ponyta',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Fire Horse Pokémon',
             self::FIELD_ATTACK => 170,
             self::FIELD_DEFENSE => 127,
             self::FIELD_STAMINA => 137,
@@ -16657,6 +18941,8 @@ class PokemonData
         Pokemon::PONYTA | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Ponyta',
             self::FIELD_NAME_SHORT => 'Ponyta',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Fire Horse Pokémon',
             self::FIELD_ATTACK => 170,
             self::FIELD_DEFENSE => 127,
             self::FIELD_STAMINA => 137,
@@ -16676,6 +18962,8 @@ class PokemonData
         Pokemon::RAPIDASH | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Rapidash',
             self::FIELD_NAME_SHORT => 'Rapidash',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Fire Horse Pokémon',
             self::FIELD_ATTACK => 207,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 163,
@@ -16692,6 +18980,8 @@ class PokemonData
         Pokemon::RAPIDASH | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Rapidash',
             self::FIELD_NAME_SHORT => 'Rapidash',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Fire Horse Pokémon',
             self::FIELD_ATTACK => 207,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 163,
@@ -16710,6 +19000,8 @@ class PokemonData
         Pokemon::SLOWPOKE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Slowpoke',
             self::FIELD_NAME_SHORT => 'Slowpoke',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Dopey Pokémon',
             self::FIELD_ATTACK => 109,
             self::FIELD_DEFENSE => 98,
             self::FIELD_STAMINA => 207,
@@ -16727,6 +19019,8 @@ class PokemonData
         Pokemon::SLOWPOKE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Slowpoke',
             self::FIELD_NAME_SHORT => 'Slowpoke',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Dopey Pokémon',
             self::FIELD_ATTACK => 109,
             self::FIELD_DEFENSE => 98,
             self::FIELD_STAMINA => 207,
@@ -16746,6 +19040,8 @@ class PokemonData
         Pokemon::SLOWBRO | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Slowbro',
             self::FIELD_NAME_SHORT => 'Slowbro',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Hermit Crab Pokémon',
             self::FIELD_ATTACK => 177,
             self::FIELD_DEFENSE => 180,
             self::FIELD_STAMINA => 216,
@@ -16762,6 +19058,8 @@ class PokemonData
         Pokemon::SLOWBRO | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Slowbro',
             self::FIELD_NAME_SHORT => 'Slowbro',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Hermit Crab Pokémon',
             self::FIELD_ATTACK => 177,
             self::FIELD_DEFENSE => 180,
             self::FIELD_STAMINA => 216,
@@ -16780,6 +19078,8 @@ class PokemonData
         Pokemon::MAGNEMITE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Magnemite',
             self::FIELD_NAME_SHORT => 'Magnemite',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Magnet Pokémon',
             self::FIELD_ATTACK => 165,
             self::FIELD_DEFENSE => 121,
             self::FIELD_STAMINA => 93,
@@ -16797,6 +19097,8 @@ class PokemonData
         Pokemon::MAGNEMITE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Magnemite',
             self::FIELD_NAME_SHORT => 'Magnemite',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Magnet Pokémon',
             self::FIELD_ATTACK => 165,
             self::FIELD_DEFENSE => 121,
             self::FIELD_STAMINA => 93,
@@ -16816,6 +19118,8 @@ class PokemonData
         Pokemon::MAGNETON | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Magneton',
             self::FIELD_NAME_SHORT => 'Magneton',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Magnet Pokémon',
             self::FIELD_ATTACK => 223,
             self::FIELD_DEFENSE => 169,
             self::FIELD_STAMINA => 137,
@@ -16833,6 +19137,8 @@ class PokemonData
         Pokemon::MAGNETON | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Magneton',
             self::FIELD_NAME_SHORT => 'Magneton',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Magnet Pokémon',
             self::FIELD_ATTACK => 223,
             self::FIELD_DEFENSE => 169,
             self::FIELD_STAMINA => 137,
@@ -16852,6 +19158,8 @@ class PokemonData
         Pokemon::FARFETCH_D | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Farfetch\'d',
             self::FIELD_NAME_SHORT => 'Farfetch\'d',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Wild Duck Pokémon',
             self::FIELD_ATTACK => 124,
             self::FIELD_DEFENSE => 115,
             self::FIELD_STAMINA => 141,
@@ -16869,6 +19177,8 @@ class PokemonData
         Pokemon::FARFETCH_D | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Farfetch\'d',
             self::FIELD_NAME_SHORT => 'Farfetch\'d',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Wild Duck Pokémon',
             self::FIELD_ATTACK => 124,
             self::FIELD_DEFENSE => 115,
             self::FIELD_STAMINA => 141,
@@ -16888,6 +19198,8 @@ class PokemonData
         Pokemon::GRIMER | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Grimer',
             self::FIELD_NAME_SHORT => 'Grimer',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Sludge Pokémon',
             self::FIELD_ATTACK => 135,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 190,
@@ -16904,6 +19216,8 @@ class PokemonData
         Pokemon::GRIMER | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Grimer',
             self::FIELD_NAME_SHORT => 'Grimer',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Sludge Pokémon',
             self::FIELD_ATTACK => 135,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 190,
@@ -16922,6 +19236,8 @@ class PokemonData
         Pokemon::MUK | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Muk',
             self::FIELD_NAME_SHORT => 'Muk',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Sludge Pokémon',
             self::FIELD_ATTACK => 190,
             self::FIELD_DEFENSE => 172,
             self::FIELD_STAMINA => 233,
@@ -16938,6 +19254,8 @@ class PokemonData
         Pokemon::MUK | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Muk',
             self::FIELD_NAME_SHORT => 'Muk',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Sludge Pokémon',
             self::FIELD_ATTACK => 190,
             self::FIELD_DEFENSE => 172,
             self::FIELD_STAMINA => 233,
@@ -16956,6 +19274,8 @@ class PokemonData
         Pokemon::SHELLDER | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Shellder',
             self::FIELD_NAME_SHORT => 'Shellder',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Bivalve Pokémon',
             self::FIELD_ATTACK => 116,
             self::FIELD_DEFENSE => 134,
             self::FIELD_STAMINA => 102,
@@ -16972,6 +19292,8 @@ class PokemonData
         Pokemon::SHELLDER | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Shellder',
             self::FIELD_NAME_SHORT => 'Shellder',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Bivalve Pokémon',
             self::FIELD_ATTACK => 116,
             self::FIELD_DEFENSE => 134,
             self::FIELD_STAMINA => 102,
@@ -16990,6 +19312,8 @@ class PokemonData
         Pokemon::CLOYSTER | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Cloyster',
             self::FIELD_NAME_SHORT => 'Cloyster',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Bivalve Pokémon',
             self::FIELD_ATTACK => 186,
             self::FIELD_DEFENSE => 256,
             self::FIELD_STAMINA => 137,
@@ -17007,6 +19331,8 @@ class PokemonData
         Pokemon::CLOYSTER | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Cloyster',
             self::FIELD_NAME_SHORT => 'Cloyster',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Bivalve Pokémon',
             self::FIELD_ATTACK => 186,
             self::FIELD_DEFENSE => 256,
             self::FIELD_STAMINA => 137,
@@ -17026,6 +19352,8 @@ class PokemonData
         Pokemon::GENGAR | Mods::MEGA => [
             self::FIELD_NAME => 'Mega Gengar',
             self::FIELD_NAME_SHORT => 'Gengar',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mega Evolution has made it possible for Gengar to access other dimensions. Its entire body is brimming with strange power.',
             self::FIELD_ATTACK => 349,
             self::FIELD_DEFENSE => 199,
             self::FIELD_STAMINA => 155,
@@ -17039,6 +19367,8 @@ class PokemonData
         Pokemon::ONIX | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Onix',
             self::FIELD_NAME_SHORT => 'Onix',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Rock Snake Pokémon',
             self::FIELD_ATTACK => 85,
             self::FIELD_DEFENSE => 232,
             self::FIELD_STAMINA => 111,
@@ -17057,6 +19387,8 @@ class PokemonData
         Pokemon::ONIX | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Onix',
             self::FIELD_NAME_SHORT => 'Onix',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Rock Snake Pokémon',
             self::FIELD_ATTACK => 85,
             self::FIELD_DEFENSE => 232,
             self::FIELD_STAMINA => 111,
@@ -17077,6 +19409,8 @@ class PokemonData
         Pokemon::DROWZEE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Drowzee',
             self::FIELD_NAME_SHORT => 'Drowzee',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Hypnosis Pokémon',
             self::FIELD_ATTACK => 89,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 155,
@@ -17093,6 +19427,8 @@ class PokemonData
         Pokemon::DROWZEE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Drowzee',
             self::FIELD_NAME_SHORT => 'Drowzee',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Hypnosis Pokémon',
             self::FIELD_ATTACK => 89,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 155,
@@ -17111,6 +19447,8 @@ class PokemonData
         Pokemon::HYPNO | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Hypno',
             self::FIELD_NAME_SHORT => 'Hypno',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Hypnosis Pokémon',
             self::FIELD_ATTACK => 144,
             self::FIELD_DEFENSE => 193,
             self::FIELD_STAMINA => 198,
@@ -17127,6 +19465,8 @@ class PokemonData
         Pokemon::HYPNO | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Hypno',
             self::FIELD_NAME_SHORT => 'Hypno',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Hypnosis Pokémon',
             self::FIELD_ATTACK => 144,
             self::FIELD_DEFENSE => 193,
             self::FIELD_STAMINA => 198,
@@ -17145,6 +19485,8 @@ class PokemonData
         Pokemon::KRABBY | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Krabby',
             self::FIELD_NAME_SHORT => 'Krabby',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'River Crab Pokémon',
             self::FIELD_ATTACK => 181,
             self::FIELD_DEFENSE => 124,
             self::FIELD_STAMINA => 102,
@@ -17161,6 +19503,8 @@ class PokemonData
         Pokemon::KRABBY | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Krabby',
             self::FIELD_NAME_SHORT => 'Krabby',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'River Crab Pokémon',
             self::FIELD_ATTACK => 181,
             self::FIELD_DEFENSE => 124,
             self::FIELD_STAMINA => 102,
@@ -17179,6 +19523,8 @@ class PokemonData
         Pokemon::KINGLER | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Kingler',
             self::FIELD_NAME_SHORT => 'Kingler',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Pincer Pokémon',
             self::FIELD_ATTACK => 240,
             self::FIELD_DEFENSE => 181,
             self::FIELD_STAMINA => 146,
@@ -17195,6 +19541,8 @@ class PokemonData
         Pokemon::KINGLER | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Kingler',
             self::FIELD_NAME_SHORT => 'Kingler',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Pincer Pokémon',
             self::FIELD_ATTACK => 240,
             self::FIELD_DEFENSE => 181,
             self::FIELD_STAMINA => 146,
@@ -17213,6 +19561,8 @@ class PokemonData
         Pokemon::EXEGGCUTE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Exeggcute',
             self::FIELD_NAME_SHORT => 'Exeggcute',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Egg Pokémon',
             self::FIELD_ATTACK => 107,
             self::FIELD_DEFENSE => 125,
             self::FIELD_STAMINA => 155,
@@ -17230,6 +19580,8 @@ class PokemonData
         Pokemon::EXEGGCUTE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Exeggcute',
             self::FIELD_NAME_SHORT => 'Exeggcute',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Egg Pokémon',
             self::FIELD_ATTACK => 107,
             self::FIELD_DEFENSE => 125,
             self::FIELD_STAMINA => 155,
@@ -17249,6 +19601,8 @@ class PokemonData
         Pokemon::EXEGGUTOR | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Exeggutor',
             self::FIELD_NAME_SHORT => 'Exeggutor',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Coconut Pokémon',
             self::FIELD_ATTACK => 233,
             self::FIELD_DEFENSE => 149,
             self::FIELD_STAMINA => 216,
@@ -17266,6 +19620,8 @@ class PokemonData
         Pokemon::EXEGGUTOR | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Exeggutor',
             self::FIELD_NAME_SHORT => 'Exeggutor',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Coconut Pokémon',
             self::FIELD_ATTACK => 233,
             self::FIELD_DEFENSE => 149,
             self::FIELD_STAMINA => 216,
@@ -17285,6 +19641,8 @@ class PokemonData
         Pokemon::CUBONE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Cubone',
             self::FIELD_NAME_SHORT => 'Cubone',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Lonely Pokémon',
             self::FIELD_ATTACK => 90,
             self::FIELD_DEFENSE => 144,
             self::FIELD_STAMINA => 137,
@@ -17301,6 +19659,8 @@ class PokemonData
         Pokemon::CUBONE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Cubone',
             self::FIELD_NAME_SHORT => 'Cubone',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Lonely Pokémon',
             self::FIELD_ATTACK => 90,
             self::FIELD_DEFENSE => 144,
             self::FIELD_STAMINA => 137,
@@ -17319,6 +19679,8 @@ class PokemonData
         Pokemon::MAROWAK | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Marowak',
             self::FIELD_NAME_SHORT => 'Marowak',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Bone Keeper Pokémon',
             self::FIELD_ATTACK => 144,
             self::FIELD_DEFENSE => 186,
             self::FIELD_STAMINA => 155,
@@ -17334,6 +19696,8 @@ class PokemonData
         Pokemon::MAROWAK | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Marowak',
             self::FIELD_NAME_SHORT => 'Marowak',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Bone Keeper Pokémon',
             self::FIELD_ATTACK => 144,
             self::FIELD_DEFENSE => 186,
             self::FIELD_STAMINA => 155,
@@ -17351,6 +19715,8 @@ class PokemonData
         Pokemon::HITMONLEE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Hitmonlee',
             self::FIELD_NAME_SHORT => 'Hitmonlee',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Kicking Pokémon',
             self::FIELD_ATTACK => 224,
             self::FIELD_DEFENSE => 181,
             self::FIELD_STAMINA => 137,
@@ -17367,6 +19733,8 @@ class PokemonData
         Pokemon::HITMONLEE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Hitmonlee',
             self::FIELD_NAME_SHORT => 'Hitmonlee',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Kicking Pokémon',
             self::FIELD_ATTACK => 224,
             self::FIELD_DEFENSE => 181,
             self::FIELD_STAMINA => 137,
@@ -17385,6 +19753,8 @@ class PokemonData
         Pokemon::HITMONCHAN | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Hitmonchan',
             self::FIELD_NAME_SHORT => 'Hitmonchan',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Punching Pokémon',
             self::FIELD_ATTACK => 193,
             self::FIELD_DEFENSE => 197,
             self::FIELD_STAMINA => 137,
@@ -17402,6 +19772,8 @@ class PokemonData
         Pokemon::HITMONCHAN | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Hitmonchan',
             self::FIELD_NAME_SHORT => 'Hitmonchan',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Punching Pokémon',
             self::FIELD_ATTACK => 193,
             self::FIELD_DEFENSE => 197,
             self::FIELD_STAMINA => 137,
@@ -17421,6 +19793,8 @@ class PokemonData
         Pokemon::KOFFING | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Koffing',
             self::FIELD_NAME_SHORT => 'Koffing',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Poison Gas Pokémon',
             self::FIELD_ATTACK => 119,
             self::FIELD_DEFENSE => 141,
             self::FIELD_STAMINA => 120,
@@ -17437,6 +19811,8 @@ class PokemonData
         Pokemon::KOFFING | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Koffing',
             self::FIELD_NAME_SHORT => 'Koffing',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Poison Gas Pokémon',
             self::FIELD_ATTACK => 119,
             self::FIELD_DEFENSE => 141,
             self::FIELD_STAMINA => 120,
@@ -17455,6 +19831,8 @@ class PokemonData
         Pokemon::WEEZING | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Weezing',
             self::FIELD_NAME_SHORT => 'Weezing',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Poison Gas Pokémon',
             self::FIELD_ATTACK => 174,
             self::FIELD_DEFENSE => 197,
             self::FIELD_STAMINA => 163,
@@ -17470,6 +19848,8 @@ class PokemonData
         Pokemon::WEEZING | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Weezing',
             self::FIELD_NAME_SHORT => 'Weezing',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Poison Gas Pokémon',
             self::FIELD_ATTACK => 174,
             self::FIELD_DEFENSE => 197,
             self::FIELD_STAMINA => 163,
@@ -17487,6 +19867,8 @@ class PokemonData
         Pokemon::RHYHORN | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Rhyhorn',
             self::FIELD_NAME_SHORT => 'Rhyhorn',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Spikes Pokémon',
             self::FIELD_ATTACK => 140,
             self::FIELD_DEFENSE => 127,
             self::FIELD_STAMINA => 190,
@@ -17504,6 +19886,8 @@ class PokemonData
         Pokemon::RHYHORN | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Rhyhorn',
             self::FIELD_NAME_SHORT => 'Rhyhorn',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Spikes Pokémon',
             self::FIELD_ATTACK => 140,
             self::FIELD_DEFENSE => 127,
             self::FIELD_STAMINA => 190,
@@ -17523,6 +19907,8 @@ class PokemonData
         Pokemon::RHYDON | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Rhydon',
             self::FIELD_NAME_SHORT => 'Rhydon',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Drill Pokémon',
             self::FIELD_ATTACK => 222,
             self::FIELD_DEFENSE => 171,
             self::FIELD_STAMINA => 233,
@@ -17541,6 +19927,8 @@ class PokemonData
         Pokemon::RHYDON | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Rhydon',
             self::FIELD_NAME_SHORT => 'Rhydon',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Drill Pokémon',
             self::FIELD_ATTACK => 222,
             self::FIELD_DEFENSE => 171,
             self::FIELD_STAMINA => 233,
@@ -17561,6 +19949,8 @@ class PokemonData
         Pokemon::KANGASKHAN | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Kangaskhan',
             self::FIELD_NAME_SHORT => 'Kangaskhan',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Parent Pokémon',
             self::FIELD_ATTACK => 181,
             self::FIELD_DEFENSE => 165,
             self::FIELD_STAMINA => 233,
@@ -17577,6 +19967,8 @@ class PokemonData
         Pokemon::KANGASKHAN | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Kangaskhan',
             self::FIELD_NAME_SHORT => 'Kangaskhan',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Parent Pokémon',
             self::FIELD_ATTACK => 181,
             self::FIELD_DEFENSE => 165,
             self::FIELD_STAMINA => 233,
@@ -17595,6 +19987,8 @@ class PokemonData
         Pokemon::MR_MIME | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Mr. Mime',
             self::FIELD_NAME_SHORT => 'Mr. Mime',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Barrier Pokémon',
             self::FIELD_ATTACK => 192,
             self::FIELD_DEFENSE => 205,
             self::FIELD_STAMINA => 120,
@@ -17611,6 +20005,8 @@ class PokemonData
         Pokemon::MR_MIME | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Mr. Mime',
             self::FIELD_NAME_SHORT => 'Mr. Mime',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Barrier Pokémon',
             self::FIELD_ATTACK => 192,
             self::FIELD_DEFENSE => 205,
             self::FIELD_STAMINA => 120,
@@ -17629,6 +20025,8 @@ class PokemonData
         Pokemon::SCYTHER | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Scyther',
             self::FIELD_NAME_SHORT => 'Scyther',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mantis Pokémon',
             self::FIELD_ATTACK => 218,
             self::FIELD_DEFENSE => 170,
             self::FIELD_STAMINA => 172,
@@ -17648,6 +20046,8 @@ class PokemonData
         Pokemon::SCYTHER | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Scyther',
             self::FIELD_NAME_SHORT => 'Scyther',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mantis Pokémon',
             self::FIELD_ATTACK => 218,
             self::FIELD_DEFENSE => 170,
             self::FIELD_STAMINA => 172,
@@ -17669,6 +20069,8 @@ class PokemonData
         Pokemon::ELECTABUZZ | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Electabuzz',
             self::FIELD_NAME_SHORT => 'Electabuzz',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Electric Pokémon',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 158,
             self::FIELD_STAMINA => 163,
@@ -17685,6 +20087,8 @@ class PokemonData
         Pokemon::ELECTABUZZ | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Electabuzz',
             self::FIELD_NAME_SHORT => 'Electabuzz',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Electric Pokémon',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 158,
             self::FIELD_STAMINA => 163,
@@ -17703,6 +20107,8 @@ class PokemonData
         Pokemon::MAGMAR | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Magmar',
             self::FIELD_NAME_SHORT => 'Magmar',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Spitfire Pokémon',
             self::FIELD_ATTACK => 206,
             self::FIELD_DEFENSE => 154,
             self::FIELD_STAMINA => 163,
@@ -17719,6 +20125,8 @@ class PokemonData
         Pokemon::MAGMAR | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Magmar',
             self::FIELD_NAME_SHORT => 'Magmar',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Spitfire Pokémon',
             self::FIELD_ATTACK => 206,
             self::FIELD_DEFENSE => 154,
             self::FIELD_STAMINA => 163,
@@ -17737,6 +20145,8 @@ class PokemonData
         Pokemon::PINSIR | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Pinsir',
             self::FIELD_NAME_SHORT => 'Pinsir',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Stag Beetle Pokémon',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 182,
             self::FIELD_STAMINA => 163,
@@ -17753,6 +20163,8 @@ class PokemonData
         Pokemon::PINSIR | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Pinsir',
             self::FIELD_NAME_SHORT => 'Pinsir',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Stag Beetle Pokémon',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 182,
             self::FIELD_STAMINA => 163,
@@ -17771,6 +20183,8 @@ class PokemonData
         Pokemon::MAGIKARP | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Magikarp',
             self::FIELD_NAME_SHORT => 'Magikarp',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Fish Pokémon',
             self::FIELD_ATTACK => 29,
             self::FIELD_DEFENSE => 85,
             self::FIELD_STAMINA => 85,
@@ -17787,6 +20201,8 @@ class PokemonData
         Pokemon::MAGIKARP | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Magikarp',
             self::FIELD_NAME_SHORT => 'Magikarp',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Fish Pokémon',
             self::FIELD_ATTACK => 29,
             self::FIELD_DEFENSE => 85,
             self::FIELD_STAMINA => 85,
@@ -17805,6 +20221,8 @@ class PokemonData
         Pokemon::GYARADOS | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Gyarados',
             self::FIELD_NAME_SHORT => 'Gyarados',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Atrocious Pokémon',
             self::FIELD_ATTACK => 237,
             self::FIELD_DEFENSE => 186,
             self::FIELD_STAMINA => 216,
@@ -17823,6 +20241,8 @@ class PokemonData
         Pokemon::GYARADOS | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Gyarados',
             self::FIELD_NAME_SHORT => 'Gyarados',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Atrocious Pokémon',
             self::FIELD_ATTACK => 237,
             self::FIELD_DEFENSE => 186,
             self::FIELD_STAMINA => 216,
@@ -17843,6 +20263,8 @@ class PokemonData
         Pokemon::LAPRAS | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Lapras',
             self::FIELD_NAME_SHORT => 'Lapras',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Transport Pokémon',
             self::FIELD_ATTACK => 165,
             self::FIELD_DEFENSE => 174,
             self::FIELD_STAMINA => 277,
@@ -17861,6 +20283,8 @@ class PokemonData
         Pokemon::LAPRAS | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Lapras',
             self::FIELD_NAME_SHORT => 'Lapras',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Transport Pokémon',
             self::FIELD_ATTACK => 165,
             self::FIELD_DEFENSE => 174,
             self::FIELD_STAMINA => 277,
@@ -17881,6 +20305,8 @@ class PokemonData
         Pokemon::PORYGON | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Porygon',
             self::FIELD_NAME_SHORT => 'Porygon',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Virtual Pokémon',
             self::FIELD_ATTACK => 153,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 163,
@@ -17899,6 +20325,8 @@ class PokemonData
         Pokemon::PORYGON | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Porygon',
             self::FIELD_NAME_SHORT => 'Porygon',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Virtual Pokémon',
             self::FIELD_ATTACK => 153,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 163,
@@ -17919,6 +20347,8 @@ class PokemonData
         Pokemon::OMANYTE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Omanyte',
             self::FIELD_NAME_SHORT => 'Omanyte',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Spiral Pokémon',
             self::FIELD_ATTACK => 155,
             self::FIELD_DEFENSE => 153,
             self::FIELD_STAMINA => 111,
@@ -17937,6 +20367,8 @@ class PokemonData
         Pokemon::OMANYTE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Omanyte',
             self::FIELD_NAME_SHORT => 'Omanyte',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Spiral Pokémon',
             self::FIELD_ATTACK => 155,
             self::FIELD_DEFENSE => 153,
             self::FIELD_STAMINA => 111,
@@ -17957,6 +20389,8 @@ class PokemonData
         Pokemon::OMASTAR | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Omastar',
             self::FIELD_NAME_SHORT => 'Omastar',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Spiral Pokémon',
             self::FIELD_ATTACK => 207,
             self::FIELD_DEFENSE => 201,
             self::FIELD_STAMINA => 172,
@@ -17975,6 +20409,8 @@ class PokemonData
         Pokemon::OMASTAR | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Omastar',
             self::FIELD_NAME_SHORT => 'Omastar',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Spiral Pokémon',
             self::FIELD_ATTACK => 207,
             self::FIELD_DEFENSE => 201,
             self::FIELD_STAMINA => 172,
@@ -17995,6 +20431,8 @@ class PokemonData
         Pokemon::KABUTO | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Kabuto',
             self::FIELD_NAME_SHORT => 'Kabuto',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Shellfish Pokémon',
             self::FIELD_ATTACK => 148,
             self::FIELD_DEFENSE => 140,
             self::FIELD_STAMINA => 102,
@@ -18012,6 +20450,8 @@ class PokemonData
         Pokemon::KABUTO | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Kabuto',
             self::FIELD_NAME_SHORT => 'Kabuto',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Shellfish Pokémon',
             self::FIELD_ATTACK => 148,
             self::FIELD_DEFENSE => 140,
             self::FIELD_STAMINA => 102,
@@ -18031,6 +20471,8 @@ class PokemonData
         Pokemon::KABUTOPS | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Kabutops',
             self::FIELD_NAME_SHORT => 'Kabutops',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Shellfish Pokémon',
             self::FIELD_ATTACK => 220,
             self::FIELD_DEFENSE => 186,
             self::FIELD_STAMINA => 155,
@@ -18048,6 +20490,8 @@ class PokemonData
         Pokemon::KABUTOPS | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Kabutops',
             self::FIELD_NAME_SHORT => 'Kabutops',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Shellfish Pokémon',
             self::FIELD_ATTACK => 220,
             self::FIELD_DEFENSE => 186,
             self::FIELD_STAMINA => 155,
@@ -18067,6 +20511,8 @@ class PokemonData
         Pokemon::AERODACTYL | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Aerodactyl',
             self::FIELD_NAME_SHORT => 'Aerodactyl',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Fossil Pokémon',
             self::FIELD_ATTACK => 221,
             self::FIELD_DEFENSE => 159,
             self::FIELD_STAMINA => 190,
@@ -18083,6 +20529,8 @@ class PokemonData
         Pokemon::AERODACTYL | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Aerodactyl',
             self::FIELD_NAME_SHORT => 'Aerodactyl',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Fossil Pokémon',
             self::FIELD_ATTACK => 221,
             self::FIELD_DEFENSE => 159,
             self::FIELD_STAMINA => 190,
@@ -18101,6 +20549,8 @@ class PokemonData
         Pokemon::SNORLAX | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Snorlax',
             self::FIELD_NAME_SHORT => 'Snorlax',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Sleeping Pokémon',
             self::FIELD_ATTACK => 190,
             self::FIELD_DEFENSE => 169,
             self::FIELD_STAMINA => 330,
@@ -18117,6 +20567,8 @@ class PokemonData
         Pokemon::SNORLAX | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Snorlax',
             self::FIELD_NAME_SHORT => 'Snorlax',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Sleeping Pokémon',
             self::FIELD_ATTACK => 190,
             self::FIELD_DEFENSE => 169,
             self::FIELD_STAMINA => 330,
@@ -18135,6 +20587,8 @@ class PokemonData
         Pokemon::ARTICUNO | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Articuno',
             self::FIELD_NAME_SHORT => 'Articuno',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Freeze Pokémon',
             self::FIELD_ATTACK => 192,
             self::FIELD_DEFENSE => 236,
             self::FIELD_STAMINA => 207,
@@ -18152,6 +20606,8 @@ class PokemonData
         Pokemon::ARTICUNO | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Articuno',
             self::FIELD_NAME_SHORT => 'Articuno',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Freeze Pokémon',
             self::FIELD_ATTACK => 192,
             self::FIELD_DEFENSE => 236,
             self::FIELD_STAMINA => 207,
@@ -18171,6 +20627,8 @@ class PokemonData
         Pokemon::ZAPDOS | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Zapdos',
             self::FIELD_NAME_SHORT => 'Zapdos',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Electric Pokémon',
             self::FIELD_ATTACK => 253,
             self::FIELD_DEFENSE => 185,
             self::FIELD_STAMINA => 207,
@@ -18188,6 +20646,8 @@ class PokemonData
         Pokemon::ZAPDOS | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Zapdos',
             self::FIELD_NAME_SHORT => 'Zapdos',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Electric Pokémon',
             self::FIELD_ATTACK => 253,
             self::FIELD_DEFENSE => 185,
             self::FIELD_STAMINA => 207,
@@ -18207,6 +20667,8 @@ class PokemonData
         Pokemon::MOLTRES | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Moltres',
             self::FIELD_NAME_SHORT => 'Moltres',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Flame Pokémon',
             self::FIELD_ATTACK => 251,
             self::FIELD_DEFENSE => 181,
             self::FIELD_STAMINA => 207,
@@ -18224,6 +20686,8 @@ class PokemonData
         Pokemon::MOLTRES | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Moltres',
             self::FIELD_NAME_SHORT => 'Moltres',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Flame Pokémon',
             self::FIELD_ATTACK => 251,
             self::FIELD_DEFENSE => 181,
             self::FIELD_STAMINA => 207,
@@ -18243,6 +20707,8 @@ class PokemonData
         Pokemon::DRATINI | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Dratini',
             self::FIELD_NAME_SHORT => 'Dratini',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Dragon Pokémon',
             self::FIELD_ATTACK => 119,
             self::FIELD_DEFENSE => 91,
             self::FIELD_STAMINA => 121,
@@ -18259,6 +20725,8 @@ class PokemonData
         Pokemon::DRATINI | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Dratini',
             self::FIELD_NAME_SHORT => 'Dratini',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Dragon Pokémon',
             self::FIELD_ATTACK => 119,
             self::FIELD_DEFENSE => 91,
             self::FIELD_STAMINA => 121,
@@ -18277,6 +20745,8 @@ class PokemonData
         Pokemon::DRAGONAIR | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Dragonair',
             self::FIELD_NAME_SHORT => 'Dragonair',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Dragon Pokémon',
             self::FIELD_ATTACK => 163,
             self::FIELD_DEFENSE => 135,
             self::FIELD_STAMINA => 156,
@@ -18293,6 +20763,8 @@ class PokemonData
         Pokemon::DRAGONAIR | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Dragonair',
             self::FIELD_NAME_SHORT => 'Dragonair',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Dragon Pokémon',
             self::FIELD_ATTACK => 163,
             self::FIELD_DEFENSE => 135,
             self::FIELD_STAMINA => 156,
@@ -18311,6 +20783,8 @@ class PokemonData
         Pokemon::DRAGONITE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Dragonite',
             self::FIELD_NAME_SHORT => 'Dragonite',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Dragon Pokémon',
             self::FIELD_ATTACK => 263,
             self::FIELD_DEFENSE => 198,
             self::FIELD_STAMINA => 209,
@@ -18328,6 +20802,8 @@ class PokemonData
         Pokemon::DRAGONITE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Dragonite',
             self::FIELD_NAME_SHORT => 'Dragonite',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Dragon Pokémon',
             self::FIELD_ATTACK => 263,
             self::FIELD_DEFENSE => 198,
             self::FIELD_STAMINA => 209,
@@ -18347,6 +20823,8 @@ class PokemonData
         Pokemon::MEWTWO | FormsAlias::MEWTWO_NORMAL | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Mewtwo',
             self::FIELD_NAME_SHORT => 'Mewtwo',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Genetic Pokémon',
             self::FIELD_ATTACK => 300,
             self::FIELD_DEFENSE => 182,
             self::FIELD_STAMINA => 214,
@@ -18363,6 +20841,8 @@ class PokemonData
         Pokemon::MEWTWO | FormsAlias::MEWTWO_NORMAL | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Mewtwo',
             self::FIELD_NAME_SHORT => 'Mewtwo',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Genetic Pokémon',
             self::FIELD_ATTACK => 300,
             self::FIELD_DEFENSE => 182,
             self::FIELD_STAMINA => 214,
@@ -18381,6 +20861,8 @@ class PokemonData
         Pokemon::CROBAT | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Crobat',
             self::FIELD_NAME_SHORT => 'Crobat',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Bat Pokémon',
             self::FIELD_ATTACK => 194,
             self::FIELD_DEFENSE => 178,
             self::FIELD_STAMINA => 198,
@@ -18397,6 +20879,8 @@ class PokemonData
         Pokemon::CROBAT | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Crobat',
             self::FIELD_NAME_SHORT => 'Crobat',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Bat Pokémon',
             self::FIELD_ATTACK => 194,
             self::FIELD_DEFENSE => 178,
             self::FIELD_STAMINA => 198,
@@ -18415,6 +20899,8 @@ class PokemonData
         Pokemon::MAREEP | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Mareep',
             self::FIELD_NAME_SHORT => 'Mareep',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Wool Pokémon',
             self::FIELD_ATTACK => 114,
             self::FIELD_DEFENSE => 79,
             self::FIELD_STAMINA => 146,
@@ -18431,6 +20917,8 @@ class PokemonData
         Pokemon::MAREEP | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Mareep',
             self::FIELD_NAME_SHORT => 'Mareep',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Wool Pokémon',
             self::FIELD_ATTACK => 114,
             self::FIELD_DEFENSE => 79,
             self::FIELD_STAMINA => 146,
@@ -18449,6 +20937,8 @@ class PokemonData
         Pokemon::FLAAFFY | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Flaaffy',
             self::FIELD_NAME_SHORT => 'Flaaffy',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Wool Pokémon',
             self::FIELD_ATTACK => 145,
             self::FIELD_DEFENSE => 109,
             self::FIELD_STAMINA => 172,
@@ -18465,6 +20955,8 @@ class PokemonData
         Pokemon::FLAAFFY | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Flaaffy',
             self::FIELD_NAME_SHORT => 'Flaaffy',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Wool Pokémon',
             self::FIELD_ATTACK => 145,
             self::FIELD_DEFENSE => 109,
             self::FIELD_STAMINA => 172,
@@ -18483,6 +20975,8 @@ class PokemonData
         Pokemon::AMPHAROS | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Ampharos',
             self::FIELD_NAME_SHORT => 'Ampharos',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Light Pokémon',
             self::FIELD_ATTACK => 211,
             self::FIELD_DEFENSE => 169,
             self::FIELD_STAMINA => 207,
@@ -18499,6 +20993,8 @@ class PokemonData
         Pokemon::AMPHAROS | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Ampharos',
             self::FIELD_NAME_SHORT => 'Ampharos',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Light Pokémon',
             self::FIELD_ATTACK => 211,
             self::FIELD_DEFENSE => 169,
             self::FIELD_STAMINA => 207,
@@ -18517,6 +21013,8 @@ class PokemonData
         Pokemon::BELLOSSOM | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Bellossom',
             self::FIELD_NAME_SHORT => 'Bellossom',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Flower Pokémon',
             self::FIELD_ATTACK => 169,
             self::FIELD_DEFENSE => 186,
             self::FIELD_STAMINA => 181,
@@ -18532,6 +21030,8 @@ class PokemonData
         Pokemon::BELLOSSOM | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Bellossom',
             self::FIELD_NAME_SHORT => 'Bellossom',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Flower Pokémon',
             self::FIELD_ATTACK => 169,
             self::FIELD_DEFENSE => 186,
             self::FIELD_STAMINA => 181,
@@ -18549,6 +21049,8 @@ class PokemonData
         Pokemon::POLITOED | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Politoed',
             self::FIELD_NAME_SHORT => 'Politoed',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Frog Pokémon',
             self::FIELD_ATTACK => 174,
             self::FIELD_DEFENSE => 179,
             self::FIELD_STAMINA => 207,
@@ -18565,6 +21067,8 @@ class PokemonData
         Pokemon::POLITOED | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Politoed',
             self::FIELD_NAME_SHORT => 'Politoed',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Frog Pokémon',
             self::FIELD_ATTACK => 174,
             self::FIELD_DEFENSE => 179,
             self::FIELD_STAMINA => 207,
@@ -18583,6 +21087,8 @@ class PokemonData
         Pokemon::HOPPIP | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Hoppip',
             self::FIELD_NAME_SHORT => 'Hoppip',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Cottonweed Pokémon',
             self::FIELD_ATTACK => 67,
             self::FIELD_DEFENSE => 94,
             self::FIELD_STAMINA => 111,
@@ -18600,6 +21106,8 @@ class PokemonData
         Pokemon::HOPPIP | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Hoppip',
             self::FIELD_NAME_SHORT => 'Hoppip',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Cottonweed Pokémon',
             self::FIELD_ATTACK => 67,
             self::FIELD_DEFENSE => 94,
             self::FIELD_STAMINA => 111,
@@ -18619,6 +21127,8 @@ class PokemonData
         Pokemon::SKIPLOOM | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Skiploom',
             self::FIELD_NAME_SHORT => 'Skiploom',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Cottonweed Pokémon',
             self::FIELD_ATTACK => 91,
             self::FIELD_DEFENSE => 120,
             self::FIELD_STAMINA => 146,
@@ -18636,6 +21146,8 @@ class PokemonData
         Pokemon::SKIPLOOM | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Skiploom',
             self::FIELD_NAME_SHORT => 'Skiploom',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Cottonweed Pokémon',
             self::FIELD_ATTACK => 91,
             self::FIELD_DEFENSE => 120,
             self::FIELD_STAMINA => 146,
@@ -18655,6 +21167,8 @@ class PokemonData
         Pokemon::JUMPLUFF | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Jumpluff',
             self::FIELD_NAME_SHORT => 'Jumpluff',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Cottonweed Pokémon',
             self::FIELD_ATTACK => 118,
             self::FIELD_DEFENSE => 183,
             self::FIELD_STAMINA => 181,
@@ -18671,6 +21185,8 @@ class PokemonData
         Pokemon::JUMPLUFF | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Jumpluff',
             self::FIELD_NAME_SHORT => 'Jumpluff',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Cottonweed Pokémon',
             self::FIELD_ATTACK => 118,
             self::FIELD_DEFENSE => 183,
             self::FIELD_STAMINA => 181,
@@ -18689,6 +21205,8 @@ class PokemonData
         Pokemon::AIPOM | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Aipom',
             self::FIELD_NAME_SHORT => 'Aipom',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Long Tail Pokémon',
             self::FIELD_ATTACK => 136,
             self::FIELD_DEFENSE => 112,
             self::FIELD_STAMINA => 146,
@@ -18705,6 +21223,8 @@ class PokemonData
         Pokemon::AIPOM | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Aipom',
             self::FIELD_NAME_SHORT => 'Aipom',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Long Tail Pokémon',
             self::FIELD_ATTACK => 136,
             self::FIELD_DEFENSE => 112,
             self::FIELD_STAMINA => 146,
@@ -18723,6 +21243,8 @@ class PokemonData
         Pokemon::WOOPER | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Wooper',
             self::FIELD_NAME_SHORT => 'Wooper',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Water Fish Pokémon',
             self::FIELD_ATTACK => 75,
             self::FIELD_DEFENSE => 66,
             self::FIELD_STAMINA => 146,
@@ -18740,6 +21262,8 @@ class PokemonData
         Pokemon::WOOPER | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Wooper',
             self::FIELD_NAME_SHORT => 'Wooper',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Water Fish Pokémon',
             self::FIELD_ATTACK => 75,
             self::FIELD_DEFENSE => 66,
             self::FIELD_STAMINA => 146,
@@ -18759,6 +21283,8 @@ class PokemonData
         Pokemon::QUAGSIRE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Quagsire',
             self::FIELD_NAME_SHORT => 'Quagsire',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Water Fish Pokémon',
             self::FIELD_ATTACK => 152,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 216,
@@ -18775,6 +21301,8 @@ class PokemonData
         Pokemon::QUAGSIRE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Quagsire',
             self::FIELD_NAME_SHORT => 'Quagsire',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Water Fish Pokémon',
             self::FIELD_ATTACK => 152,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 216,
@@ -18793,6 +21321,8 @@ class PokemonData
         Pokemon::MURKROW | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Murkrow',
             self::FIELD_NAME_SHORT => 'Murkrow',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Darkness Pokémon',
             self::FIELD_ATTACK => 175,
             self::FIELD_DEFENSE => 87,
             self::FIELD_STAMINA => 155,
@@ -18810,6 +21340,8 @@ class PokemonData
         Pokemon::MURKROW | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Murkrow',
             self::FIELD_NAME_SHORT => 'Murkrow',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Darkness Pokémon',
             self::FIELD_ATTACK => 175,
             self::FIELD_DEFENSE => 87,
             self::FIELD_STAMINA => 155,
@@ -18829,6 +21361,8 @@ class PokemonData
         Pokemon::SLOWKING | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Slowking',
             self::FIELD_NAME_SHORT => 'Slowking',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Royal Pokémon',
             self::FIELD_ATTACK => 177,
             self::FIELD_DEFENSE => 180,
             self::FIELD_STAMINA => 216,
@@ -18845,6 +21379,8 @@ class PokemonData
         Pokemon::SLOWKING | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Slowking',
             self::FIELD_NAME_SHORT => 'Slowking',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Royal Pokémon',
             self::FIELD_ATTACK => 177,
             self::FIELD_DEFENSE => 180,
             self::FIELD_STAMINA => 216,
@@ -18863,6 +21399,8 @@ class PokemonData
         Pokemon::MISDREAVUS | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Misdreavus',
             self::FIELD_NAME_SHORT => 'Misdreavus',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Screech Pokémon',
             self::FIELD_ATTACK => 167,
             self::FIELD_DEFENSE => 154,
             self::FIELD_STAMINA => 155,
@@ -18879,6 +21417,8 @@ class PokemonData
         Pokemon::MISDREAVUS | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Misdreavus',
             self::FIELD_NAME_SHORT => 'Misdreavus',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Screech Pokémon',
             self::FIELD_ATTACK => 167,
             self::FIELD_DEFENSE => 154,
             self::FIELD_STAMINA => 155,
@@ -18897,6 +21437,8 @@ class PokemonData
         Pokemon::WOBBUFFET | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Wobbuffet',
             self::FIELD_NAME_SHORT => 'Wobbuffet',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Patient Pokémon',
             self::FIELD_ATTACK => 60,
             self::FIELD_DEFENSE => 106,
             self::FIELD_STAMINA => 382,
@@ -18912,6 +21454,8 @@ class PokemonData
         Pokemon::WOBBUFFET | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Wobbuffet',
             self::FIELD_NAME_SHORT => 'Wobbuffet',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Patient Pokémon',
             self::FIELD_ATTACK => 60,
             self::FIELD_DEFENSE => 106,
             self::FIELD_STAMINA => 382,
@@ -18929,6 +21473,8 @@ class PokemonData
         Pokemon::PINECO | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Pineco',
             self::FIELD_NAME_SHORT => 'Pineco',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Bagworm Pokémon',
             self::FIELD_ATTACK => 108,
             self::FIELD_DEFENSE => 122,
             self::FIELD_STAMINA => 137,
@@ -18945,6 +21491,8 @@ class PokemonData
         Pokemon::PINECO | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Pineco',
             self::FIELD_NAME_SHORT => 'Pineco',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Bagworm Pokémon',
             self::FIELD_ATTACK => 108,
             self::FIELD_DEFENSE => 122,
             self::FIELD_STAMINA => 137,
@@ -18963,6 +21511,8 @@ class PokemonData
         Pokemon::FORRETRESS | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Forretress',
             self::FIELD_NAME_SHORT => 'Forretress',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Bagworm Pokémon',
             self::FIELD_ATTACK => 161,
             self::FIELD_DEFENSE => 205,
             self::FIELD_STAMINA => 181,
@@ -18979,6 +21529,8 @@ class PokemonData
         Pokemon::FORRETRESS | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Forretress',
             self::FIELD_NAME_SHORT => 'Forretress',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Bagworm Pokémon',
             self::FIELD_ATTACK => 161,
             self::FIELD_DEFENSE => 205,
             self::FIELD_STAMINA => 181,
@@ -18997,6 +21549,8 @@ class PokemonData
         Pokemon::GLIGAR | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Gligar',
             self::FIELD_NAME_SHORT => 'Gligar',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Fly Scorpion Pokémon',
             self::FIELD_ATTACK => 143,
             self::FIELD_DEFENSE => 184,
             self::FIELD_STAMINA => 163,
@@ -19014,6 +21568,8 @@ class PokemonData
         Pokemon::GLIGAR | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Gligar',
             self::FIELD_NAME_SHORT => 'Gligar',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Fly Scorpion Pokémon',
             self::FIELD_ATTACK => 143,
             self::FIELD_DEFENSE => 184,
             self::FIELD_STAMINA => 163,
@@ -19033,6 +21589,8 @@ class PokemonData
         Pokemon::STEELIX | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Steelix',
             self::FIELD_NAME_SHORT => 'Steelix',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Iron Snake Pokémon',
             self::FIELD_ATTACK => 148,
             self::FIELD_DEFENSE => 272,
             self::FIELD_STAMINA => 181,
@@ -19049,6 +21607,8 @@ class PokemonData
         Pokemon::STEELIX | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Steelix',
             self::FIELD_NAME_SHORT => 'Steelix',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Iron Snake Pokémon',
             self::FIELD_ATTACK => 148,
             self::FIELD_DEFENSE => 272,
             self::FIELD_STAMINA => 181,
@@ -19067,6 +21627,8 @@ class PokemonData
         Pokemon::SCIZOR | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Scizor',
             self::FIELD_NAME_SHORT => 'Scizor',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Pincer Pokémon',
             self::FIELD_ATTACK => 236,
             self::FIELD_DEFENSE => 181,
             self::FIELD_STAMINA => 172,
@@ -19083,6 +21645,8 @@ class PokemonData
         Pokemon::SCIZOR | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Scizor',
             self::FIELD_NAME_SHORT => 'Scizor',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Pincer Pokémon',
             self::FIELD_ATTACK => 236,
             self::FIELD_DEFENSE => 181,
             self::FIELD_STAMINA => 172,
@@ -19101,6 +21665,8 @@ class PokemonData
         Pokemon::SHUCKLE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Shuckle',
             self::FIELD_NAME_SHORT => 'Shuckle',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mold Pokémon',
             self::FIELD_ATTACK => 17,
             self::FIELD_DEFENSE => 396,
             self::FIELD_STAMINA => 85,
@@ -19117,6 +21683,8 @@ class PokemonData
         Pokemon::SHUCKLE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Shuckle',
             self::FIELD_NAME_SHORT => 'Shuckle',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mold Pokémon',
             self::FIELD_ATTACK => 17,
             self::FIELD_DEFENSE => 396,
             self::FIELD_STAMINA => 85,
@@ -19135,6 +21703,8 @@ class PokemonData
         Pokemon::SNEASEL | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Sneasel',
             self::FIELD_NAME_SHORT => 'Sneasel',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Sharp Claw Pokémon',
             self::FIELD_ATTACK => 189,
             self::FIELD_DEFENSE => 146,
             self::FIELD_STAMINA => 146,
@@ -19152,6 +21722,8 @@ class PokemonData
         Pokemon::SNEASEL | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Sneasel',
             self::FIELD_NAME_SHORT => 'Sneasel',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Sharp Claw Pokémon',
             self::FIELD_ATTACK => 189,
             self::FIELD_DEFENSE => 146,
             self::FIELD_STAMINA => 146,
@@ -19171,6 +21743,8 @@ class PokemonData
         Pokemon::TEDDIURSA | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Teddiursa',
             self::FIELD_NAME_SHORT => 'Teddiursa',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Little Bear Pokémon',
             self::FIELD_ATTACK => 142,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 155,
@@ -19187,6 +21761,8 @@ class PokemonData
         Pokemon::TEDDIURSA | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Teddiursa',
             self::FIELD_NAME_SHORT => 'Teddiursa',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Little Bear Pokémon',
             self::FIELD_ATTACK => 142,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 155,
@@ -19205,6 +21781,8 @@ class PokemonData
         Pokemon::URSARING | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Ursaring',
             self::FIELD_NAME_SHORT => 'Ursaring',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Hibernator Pokémon',
             self::FIELD_ATTACK => 236,
             self::FIELD_DEFENSE => 144,
             self::FIELD_STAMINA => 207,
@@ -19220,6 +21798,8 @@ class PokemonData
         Pokemon::URSARING | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Ursaring',
             self::FIELD_NAME_SHORT => 'Ursaring',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Hibernator Pokémon',
             self::FIELD_ATTACK => 236,
             self::FIELD_DEFENSE => 144,
             self::FIELD_STAMINA => 207,
@@ -19237,6 +21817,8 @@ class PokemonData
         Pokemon::DELIBIRD | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Delibird',
             self::FIELD_NAME_SHORT => 'Delibird',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Delivery Pokémon',
             self::FIELD_ATTACK => 128,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 128,
@@ -19253,6 +21835,8 @@ class PokemonData
         Pokemon::DELIBIRD | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Delibird',
             self::FIELD_NAME_SHORT => 'Delibird',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Delivery Pokémon',
             self::FIELD_ATTACK => 128,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 128,
@@ -19271,6 +21855,8 @@ class PokemonData
         Pokemon::SKARMORY | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Skarmory',
             self::FIELD_NAME_SHORT => 'Skarmory',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Armor Bird Pokémon',
             self::FIELD_ATTACK => 148,
             self::FIELD_DEFENSE => 226,
             self::FIELD_STAMINA => 163,
@@ -19287,6 +21873,8 @@ class PokemonData
         Pokemon::SKARMORY | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Skarmory',
             self::FIELD_NAME_SHORT => 'Skarmory',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Armor Bird Pokémon',
             self::FIELD_ATTACK => 148,
             self::FIELD_DEFENSE => 226,
             self::FIELD_STAMINA => 163,
@@ -19305,6 +21893,8 @@ class PokemonData
         Pokemon::HOUNDOUR | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Houndour',
             self::FIELD_NAME_SHORT => 'Houndour',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Dark Pokémon',
             self::FIELD_ATTACK => 152,
             self::FIELD_DEFENSE => 83,
             self::FIELD_STAMINA => 128,
@@ -19322,6 +21912,8 @@ class PokemonData
         Pokemon::HOUNDOUR | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Houndour',
             self::FIELD_NAME_SHORT => 'Houndour',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Dark Pokémon',
             self::FIELD_ATTACK => 152,
             self::FIELD_DEFENSE => 83,
             self::FIELD_STAMINA => 128,
@@ -19341,6 +21933,8 @@ class PokemonData
         Pokemon::HOUNDOOM | Mods::MEGA => [
             self::FIELD_NAME => 'Mega Houndoom',
             self::FIELD_NAME_SHORT => 'Houndoom',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Houndoom\'s entire body generates heat when it Mega Evolves. Its fearsome fiery breath turns its opponents to ash.',
             self::FIELD_ATTACK => 289,
             self::FIELD_DEFENSE => 194,
             self::FIELD_STAMINA => 181,
@@ -19352,6 +21946,8 @@ class PokemonData
         Pokemon::HOUNDOOM | Mods::PURIFIED | Mods::MEGA => [
             self::FIELD_NAME => 'Mega Purified Houndoom',
             self::FIELD_NAME_SHORT => 'Houndoom',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Houndoom\'s entire body generates heat when it Mega Evolves. Its fearsome fiery breath turns its opponents to ash.',
             self::FIELD_ATTACK => 289,
             self::FIELD_DEFENSE => 194,
             self::FIELD_STAMINA => 181,
@@ -19363,6 +21959,8 @@ class PokemonData
         Pokemon::HOUNDOOM | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Houndoom',
             self::FIELD_NAME_SHORT => 'Houndoom',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Dark Pokémon',
             self::FIELD_ATTACK => 224,
             self::FIELD_DEFENSE => 144,
             self::FIELD_STAMINA => 181,
@@ -19380,6 +21978,8 @@ class PokemonData
         Pokemon::HOUNDOOM | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Houndoom',
             self::FIELD_NAME_SHORT => 'Houndoom',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Dark Pokémon',
             self::FIELD_ATTACK => 224,
             self::FIELD_DEFENSE => 144,
             self::FIELD_STAMINA => 181,
@@ -19398,6 +21998,8 @@ class PokemonData
         Pokemon::PORYGON2 | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Porygon2',
             self::FIELD_NAME_SHORT => 'Porygon2',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Virtual Pokémon',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 180,
             self::FIELD_STAMINA => 198,
@@ -19414,6 +22016,8 @@ class PokemonData
         Pokemon::PORYGON2 | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Porygon2',
             self::FIELD_NAME_SHORT => 'Porygon2',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Virtual Pokémon',
             self::FIELD_ATTACK => 198,
             self::FIELD_DEFENSE => 180,
             self::FIELD_STAMINA => 198,
@@ -19432,6 +22036,8 @@ class PokemonData
         Pokemon::STANTLER | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Stantler',
             self::FIELD_NAME_SHORT => 'Stantler',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Big Horn Pokémon',
             self::FIELD_ATTACK => 192,
             self::FIELD_DEFENSE => 131,
             self::FIELD_STAMINA => 177,
@@ -19447,6 +22053,8 @@ class PokemonData
         Pokemon::STANTLER | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Stantler',
             self::FIELD_NAME_SHORT => 'Stantler',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Big Horn Pokémon',
             self::FIELD_ATTACK => 192,
             self::FIELD_DEFENSE => 131,
             self::FIELD_STAMINA => 177,
@@ -19464,6 +22072,8 @@ class PokemonData
         Pokemon::RAIKOU | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Raikou',
             self::FIELD_NAME_SHORT => 'Raikou',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Thunder Pokémon',
             self::FIELD_ATTACK => 241,
             self::FIELD_DEFENSE => 195,
             self::FIELD_STAMINA => 207,
@@ -19479,6 +22089,8 @@ class PokemonData
         Pokemon::RAIKOU | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Raikou',
             self::FIELD_NAME_SHORT => 'Raikou',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Thunder Pokémon',
             self::FIELD_ATTACK => 241,
             self::FIELD_DEFENSE => 195,
             self::FIELD_STAMINA => 207,
@@ -19496,6 +22108,8 @@ class PokemonData
         Pokemon::ENTEI | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Entei',
             self::FIELD_NAME_SHORT => 'Entei',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Volcano Pokémon',
             self::FIELD_ATTACK => 235,
             self::FIELD_DEFENSE => 171,
             self::FIELD_STAMINA => 251,
@@ -19511,6 +22125,8 @@ class PokemonData
         Pokemon::ENTEI | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Entei',
             self::FIELD_NAME_SHORT => 'Entei',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Volcano Pokémon',
             self::FIELD_ATTACK => 235,
             self::FIELD_DEFENSE => 171,
             self::FIELD_STAMINA => 251,
@@ -19528,6 +22144,8 @@ class PokemonData
         Pokemon::SUICUNE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Suicune',
             self::FIELD_NAME_SHORT => 'Suicune',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Aurora Pokémon',
             self::FIELD_ATTACK => 180,
             self::FIELD_DEFENSE => 235,
             self::FIELD_STAMINA => 225,
@@ -19544,6 +22162,8 @@ class PokemonData
         Pokemon::SUICUNE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Suicune',
             self::FIELD_NAME_SHORT => 'Suicune',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Aurora Pokémon',
             self::FIELD_ATTACK => 180,
             self::FIELD_DEFENSE => 235,
             self::FIELD_STAMINA => 225,
@@ -19562,6 +22182,8 @@ class PokemonData
         Pokemon::LARVITAR | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Larvitar',
             self::FIELD_NAME_SHORT => 'Larvitar',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Rock Skin Pokémon',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 137,
@@ -19579,6 +22201,8 @@ class PokemonData
         Pokemon::LARVITAR | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Larvitar',
             self::FIELD_NAME_SHORT => 'Larvitar',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Rock Skin Pokémon',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 137,
@@ -19598,6 +22222,8 @@ class PokemonData
         Pokemon::PUPITAR | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Pupitar',
             self::FIELD_NAME_SHORT => 'Pupitar',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Hard Shell Pokémon',
             self::FIELD_ATTACK => 155,
             self::FIELD_DEFENSE => 133,
             self::FIELD_STAMINA => 172,
@@ -19615,6 +22241,8 @@ class PokemonData
         Pokemon::PUPITAR | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Pupitar',
             self::FIELD_NAME_SHORT => 'Pupitar',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Hard Shell Pokémon',
             self::FIELD_ATTACK => 155,
             self::FIELD_DEFENSE => 133,
             self::FIELD_STAMINA => 172,
@@ -19634,6 +22262,8 @@ class PokemonData
         Pokemon::TYRANITAR | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Tyranitar',
             self::FIELD_NAME_SHORT => 'Tyranitar',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Armor Pokémon',
             self::FIELD_ATTACK => 251,
             self::FIELD_DEFENSE => 207,
             self::FIELD_STAMINA => 225,
@@ -19651,6 +22281,8 @@ class PokemonData
         Pokemon::TYRANITAR | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Tyranitar',
             self::FIELD_NAME_SHORT => 'Tyranitar',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Armor Pokémon',
             self::FIELD_ATTACK => 251,
             self::FIELD_DEFENSE => 207,
             self::FIELD_STAMINA => 225,
@@ -19670,6 +22302,8 @@ class PokemonData
         Pokemon::MUDKIP | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Mudkip',
             self::FIELD_NAME_SHORT => 'Mudkip',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mud Fish Pokémon',
             self::FIELD_ATTACK => 126,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 137,
@@ -19686,6 +22320,8 @@ class PokemonData
         Pokemon::MUDKIP | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Mudkip',
             self::FIELD_NAME_SHORT => 'Mudkip',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mud Fish Pokémon',
             self::FIELD_ATTACK => 126,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 137,
@@ -19704,6 +22340,8 @@ class PokemonData
         Pokemon::MARSHTOMP | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Marshtomp',
             self::FIELD_NAME_SHORT => 'Marshtomp',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mud Fish Pokémon',
             self::FIELD_ATTACK => 156,
             self::FIELD_DEFENSE => 133,
             self::FIELD_STAMINA => 172,
@@ -19721,6 +22359,8 @@ class PokemonData
         Pokemon::MARSHTOMP | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Marshtomp',
             self::FIELD_NAME_SHORT => 'Marshtomp',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mud Fish Pokémon',
             self::FIELD_ATTACK => 156,
             self::FIELD_DEFENSE => 133,
             self::FIELD_STAMINA => 172,
@@ -19740,6 +22380,8 @@ class PokemonData
         Pokemon::SWAMPERT | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Swampert',
             self::FIELD_NAME_SHORT => 'Swampert',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mud Fish Pokémon',
             self::FIELD_ATTACK => 208,
             self::FIELD_DEFENSE => 175,
             self::FIELD_STAMINA => 225,
@@ -19757,6 +22399,8 @@ class PokemonData
         Pokemon::SWAMPERT | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Swampert',
             self::FIELD_NAME_SHORT => 'Swampert',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mud Fish Pokémon',
             self::FIELD_ATTACK => 208,
             self::FIELD_DEFENSE => 175,
             self::FIELD_STAMINA => 225,
@@ -19776,6 +22420,8 @@ class PokemonData
         Pokemon::ZIGZAGOON | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Zigzagoon',
             self::FIELD_NAME_SHORT => 'Zigzagoon',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Tiny Raccoon Pokémon',
             self::FIELD_ATTACK => 58,
             self::FIELD_DEFENSE => 80,
             self::FIELD_STAMINA => 116,
@@ -19792,6 +22438,8 @@ class PokemonData
         Pokemon::ZIGZAGOON | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Zigzagoon',
             self::FIELD_NAME_SHORT => 'Zigzagoon',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Tiny Raccoon Pokémon',
             self::FIELD_ATTACK => 58,
             self::FIELD_DEFENSE => 80,
             self::FIELD_STAMINA => 116,
@@ -19810,6 +22458,8 @@ class PokemonData
         Pokemon::LINOONE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Linoone',
             self::FIELD_NAME_SHORT => 'Linoone',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Rushing Pokémon',
             self::FIELD_ATTACK => 142,
             self::FIELD_DEFENSE => 128,
             self::FIELD_STAMINA => 186,
@@ -19825,6 +22475,8 @@ class PokemonData
         Pokemon::LINOONE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Linoone',
             self::FIELD_NAME_SHORT => 'Linoone',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Rushing Pokémon',
             self::FIELD_ATTACK => 142,
             self::FIELD_DEFENSE => 128,
             self::FIELD_STAMINA => 186,
@@ -19842,6 +22494,8 @@ class PokemonData
         Pokemon::SEEDOT | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Seedot',
             self::FIELD_NAME_SHORT => 'Seedot',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Acorn Pokémon',
             self::FIELD_ATTACK => 71,
             self::FIELD_DEFENSE => 77,
             self::FIELD_STAMINA => 120,
@@ -19858,6 +22512,8 @@ class PokemonData
         Pokemon::SEEDOT | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Seedot',
             self::FIELD_NAME_SHORT => 'Seedot',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Acorn Pokémon',
             self::FIELD_ATTACK => 71,
             self::FIELD_DEFENSE => 77,
             self::FIELD_STAMINA => 120,
@@ -19876,6 +22532,8 @@ class PokemonData
         Pokemon::NUZLEAF | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Nuzleaf',
             self::FIELD_NAME_SHORT => 'Nuzleaf',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Wily Pokémon',
             self::FIELD_ATTACK => 134,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 172,
@@ -19893,6 +22551,8 @@ class PokemonData
         Pokemon::NUZLEAF | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Nuzleaf',
             self::FIELD_NAME_SHORT => 'Nuzleaf',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Wily Pokémon',
             self::FIELD_ATTACK => 134,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 172,
@@ -19912,6 +22572,8 @@ class PokemonData
         Pokemon::SHIFTRY | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Shiftry',
             self::FIELD_NAME_SHORT => 'Shiftry',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Wicked Pokémon',
             self::FIELD_ATTACK => 200,
             self::FIELD_DEFENSE => 121,
             self::FIELD_STAMINA => 207,
@@ -19929,6 +22591,8 @@ class PokemonData
         Pokemon::SHIFTRY | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Shiftry',
             self::FIELD_NAME_SHORT => 'Shiftry',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Wicked Pokémon',
             self::FIELD_ATTACK => 200,
             self::FIELD_DEFENSE => 121,
             self::FIELD_STAMINA => 207,
@@ -19948,6 +22612,8 @@ class PokemonData
         Pokemon::RALTS | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Ralts',
             self::FIELD_NAME_SHORT => 'Ralts',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Feeling Pokémon',
             self::FIELD_ATTACK => 79,
             self::FIELD_DEFENSE => 59,
             self::FIELD_STAMINA => 99,
@@ -19965,6 +22631,8 @@ class PokemonData
         Pokemon::RALTS | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Ralts',
             self::FIELD_NAME_SHORT => 'Ralts',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Feeling Pokémon',
             self::FIELD_ATTACK => 79,
             self::FIELD_DEFENSE => 59,
             self::FIELD_STAMINA => 99,
@@ -19984,6 +22652,8 @@ class PokemonData
         Pokemon::KIRLIA | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Kirlia',
             self::FIELD_NAME_SHORT => 'Kirlia',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Emotion Pokémon',
             self::FIELD_ATTACK => 117,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 116,
@@ -20001,6 +22671,8 @@ class PokemonData
         Pokemon::KIRLIA | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Kirlia',
             self::FIELD_NAME_SHORT => 'Kirlia',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Emotion Pokémon',
             self::FIELD_ATTACK => 117,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 116,
@@ -20020,6 +22692,8 @@ class PokemonData
         Pokemon::GARDEVOIR | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Gardevoir',
             self::FIELD_NAME_SHORT => 'Gardevoir',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Embrace Pokémon',
             self::FIELD_ATTACK => 237,
             self::FIELD_DEFENSE => 195,
             self::FIELD_STAMINA => 169,
@@ -20037,6 +22711,8 @@ class PokemonData
         Pokemon::GARDEVOIR | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Gardevoir',
             self::FIELD_NAME_SHORT => 'Gardevoir',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Embrace Pokémon',
             self::FIELD_ATTACK => 237,
             self::FIELD_DEFENSE => 195,
             self::FIELD_STAMINA => 169,
@@ -20056,6 +22732,8 @@ class PokemonData
         Pokemon::SABLEYE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Sableye',
             self::FIELD_NAME_SHORT => 'Sableye',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Darkness Pokémon',
             self::FIELD_ATTACK => 141,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 137,
@@ -20072,6 +22750,8 @@ class PokemonData
         Pokemon::SABLEYE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Sableye',
             self::FIELD_NAME_SHORT => 'Sableye',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Darkness Pokémon',
             self::FIELD_ATTACK => 141,
             self::FIELD_DEFENSE => 136,
             self::FIELD_STAMINA => 137,
@@ -20090,6 +22770,8 @@ class PokemonData
         Pokemon::MAWILE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Mawile',
             self::FIELD_NAME_SHORT => 'Mawile',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Deceiver Pokémon',
             self::FIELD_ATTACK => 155,
             self::FIELD_DEFENSE => 141,
             self::FIELD_STAMINA => 137,
@@ -20106,6 +22788,8 @@ class PokemonData
         Pokemon::MAWILE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Mawile',
             self::FIELD_NAME_SHORT => 'Mawile',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Deceiver Pokémon',
             self::FIELD_ATTACK => 155,
             self::FIELD_DEFENSE => 141,
             self::FIELD_STAMINA => 137,
@@ -20124,6 +22808,8 @@ class PokemonData
         Pokemon::CARAVANHA | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Carvanha',
             self::FIELD_NAME_SHORT => 'Carvanha',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Savage Pokémon',
             self::FIELD_ATTACK => 171,
             self::FIELD_DEFENSE => 39,
             self::FIELD_STAMINA => 128,
@@ -20141,6 +22827,8 @@ class PokemonData
         Pokemon::CARAVANHA | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Carvanha',
             self::FIELD_NAME_SHORT => 'Carvanha',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Savage Pokémon',
             self::FIELD_ATTACK => 171,
             self::FIELD_DEFENSE => 39,
             self::FIELD_STAMINA => 128,
@@ -20160,6 +22848,8 @@ class PokemonData
         Pokemon::SHARPEDO | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Sharpedo',
             self::FIELD_NAME_SHORT => 'Sharpedo',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Brutal Pokémon',
             self::FIELD_ATTACK => 243,
             self::FIELD_DEFENSE => 83,
             self::FIELD_STAMINA => 172,
@@ -20176,6 +22866,8 @@ class PokemonData
         Pokemon::SHARPEDO | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Sharpedo',
             self::FIELD_NAME_SHORT => 'Sharpedo',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Brutal Pokémon',
             self::FIELD_ATTACK => 243,
             self::FIELD_DEFENSE => 83,
             self::FIELD_STAMINA => 172,
@@ -20194,6 +22886,8 @@ class PokemonData
         Pokemon::TRAPINCH | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Trapinch',
             self::FIELD_NAME_SHORT => 'Trapinch',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Ant Pit Pokémon',
             self::FIELD_ATTACK => 162,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 128,
@@ -20210,6 +22904,8 @@ class PokemonData
         Pokemon::TRAPINCH | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Trapinch',
             self::FIELD_NAME_SHORT => 'Trapinch',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Ant Pit Pokémon',
             self::FIELD_ATTACK => 162,
             self::FIELD_DEFENSE => 78,
             self::FIELD_STAMINA => 128,
@@ -20228,6 +22924,8 @@ class PokemonData
         Pokemon::VIBRAVA | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Vibrava',
             self::FIELD_NAME_SHORT => 'Vibrava',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Vibration Pokémon',
             self::FIELD_ATTACK => 134,
             self::FIELD_DEFENSE => 99,
             self::FIELD_STAMINA => 137,
@@ -20245,6 +22943,8 @@ class PokemonData
         Pokemon::VIBRAVA | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Vibrava',
             self::FIELD_NAME_SHORT => 'Vibrava',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Vibration Pokémon',
             self::FIELD_ATTACK => 134,
             self::FIELD_DEFENSE => 99,
             self::FIELD_STAMINA => 137,
@@ -20264,6 +22964,8 @@ class PokemonData
         Pokemon::FLYGON | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Flygon',
             self::FIELD_NAME_SHORT => 'Flygon',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mystic Pokémon',
             self::FIELD_ATTACK => 205,
             self::FIELD_DEFENSE => 168,
             self::FIELD_STAMINA => 190,
@@ -20281,6 +22983,8 @@ class PokemonData
         Pokemon::FLYGON | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Flygon',
             self::FIELD_NAME_SHORT => 'Flygon',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mystic Pokémon',
             self::FIELD_ATTACK => 205,
             self::FIELD_DEFENSE => 168,
             self::FIELD_STAMINA => 190,
@@ -20300,6 +23004,8 @@ class PokemonData
         Pokemon::CACNEA | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Cacnea',
             self::FIELD_NAME_SHORT => 'Cacnea',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Cactus Pokémon',
             self::FIELD_ATTACK => 156,
             self::FIELD_DEFENSE => 74,
             self::FIELD_STAMINA => 137,
@@ -20316,6 +23022,8 @@ class PokemonData
         Pokemon::CACNEA | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Cacnea',
             self::FIELD_NAME_SHORT => 'Cacnea',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Cactus Pokémon',
             self::FIELD_ATTACK => 156,
             self::FIELD_DEFENSE => 74,
             self::FIELD_STAMINA => 137,
@@ -20334,6 +23042,8 @@ class PokemonData
         Pokemon::CACTURNE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Cacturne',
             self::FIELD_NAME_SHORT => 'Cacturne',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Scarecrow Pokémon',
             self::FIELD_ATTACK => 221,
             self::FIELD_DEFENSE => 115,
             self::FIELD_STAMINA => 172,
@@ -20350,6 +23060,8 @@ class PokemonData
         Pokemon::CACTURNE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Cacturne',
             self::FIELD_NAME_SHORT => 'Cacturne',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Scarecrow Pokémon',
             self::FIELD_ATTACK => 221,
             self::FIELD_DEFENSE => 115,
             self::FIELD_STAMINA => 172,
@@ -20368,6 +23080,8 @@ class PokemonData
         Pokemon::SHUPPET | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Shuppet',
             self::FIELD_NAME_SHORT => 'Shuppet',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Puppet Pokémon',
             self::FIELD_ATTACK => 138,
             self::FIELD_DEFENSE => 65,
             self::FIELD_STAMINA => 127,
@@ -20384,6 +23098,8 @@ class PokemonData
         Pokemon::SHUPPET | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Shuppet',
             self::FIELD_NAME_SHORT => 'Shuppet',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Puppet Pokémon',
             self::FIELD_ATTACK => 138,
             self::FIELD_DEFENSE => 65,
             self::FIELD_STAMINA => 127,
@@ -20402,6 +23118,8 @@ class PokemonData
         Pokemon::BANETTE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Banette',
             self::FIELD_NAME_SHORT => 'Banette',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Marionette Pokémon',
             self::FIELD_ATTACK => 218,
             self::FIELD_DEFENSE => 126,
             self::FIELD_STAMINA => 162,
@@ -20417,6 +23135,8 @@ class PokemonData
         Pokemon::BANETTE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Banette',
             self::FIELD_NAME_SHORT => 'Banette',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Marionette Pokémon',
             self::FIELD_ATTACK => 218,
             self::FIELD_DEFENSE => 126,
             self::FIELD_STAMINA => 162,
@@ -20434,6 +23154,8 @@ class PokemonData
         Pokemon::DUSKULL | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Duskull',
             self::FIELD_NAME_SHORT => 'Duskull',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Requiem Pokémon',
             self::FIELD_ATTACK => 70,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 85,
@@ -20450,6 +23172,8 @@ class PokemonData
         Pokemon::DUSKULL | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Duskull',
             self::FIELD_NAME_SHORT => 'Duskull',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Requiem Pokémon',
             self::FIELD_ATTACK => 70,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 85,
@@ -20468,6 +23192,8 @@ class PokemonData
         Pokemon::DUSCLOPS | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Dusclops',
             self::FIELD_NAME_SHORT => 'Dusclops',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Beckon Pokémon',
             self::FIELD_ATTACK => 124,
             self::FIELD_DEFENSE => 234,
             self::FIELD_STAMINA => 120,
@@ -20484,6 +23210,8 @@ class PokemonData
         Pokemon::DUSCLOPS | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Dusclops',
             self::FIELD_NAME_SHORT => 'Dusclops',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Beckon Pokémon',
             self::FIELD_ATTACK => 124,
             self::FIELD_DEFENSE => 234,
             self::FIELD_STAMINA => 120,
@@ -20502,6 +23230,8 @@ class PokemonData
         Pokemon::ABSOL | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Absol',
             self::FIELD_NAME_SHORT => 'Absol',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Disaster Pokémon',
             self::FIELD_ATTACK => 246,
             self::FIELD_DEFENSE => 120,
             self::FIELD_STAMINA => 163,
@@ -20517,6 +23247,8 @@ class PokemonData
         Pokemon::ABSOL | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Absol',
             self::FIELD_NAME_SHORT => 'Absol',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Disaster Pokémon',
             self::FIELD_ATTACK => 246,
             self::FIELD_DEFENSE => 120,
             self::FIELD_STAMINA => 163,
@@ -20534,6 +23266,8 @@ class PokemonData
         Pokemon::BAGON | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Bagon',
             self::FIELD_NAME_SHORT => 'Bagon',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Rock Head Pokémon',
             self::FIELD_ATTACK => 134,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 128,
@@ -20550,6 +23284,8 @@ class PokemonData
         Pokemon::BAGON | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Bagon',
             self::FIELD_NAME_SHORT => 'Bagon',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Rock Head Pokémon',
             self::FIELD_ATTACK => 134,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 128,
@@ -20568,6 +23304,8 @@ class PokemonData
         Pokemon::SHELGON | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Shelgon',
             self::FIELD_NAME_SHORT => 'Shelgon',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Endurance Pokémon',
             self::FIELD_ATTACK => 172,
             self::FIELD_DEFENSE => 155,
             self::FIELD_STAMINA => 163,
@@ -20584,6 +23322,8 @@ class PokemonData
         Pokemon::SHELGON | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Shelgon',
             self::FIELD_NAME_SHORT => 'Shelgon',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Endurance Pokémon',
             self::FIELD_ATTACK => 172,
             self::FIELD_DEFENSE => 155,
             self::FIELD_STAMINA => 163,
@@ -20602,6 +23342,8 @@ class PokemonData
         Pokemon::SALAMENCE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Salamence',
             self::FIELD_NAME_SHORT => 'Salamence',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Dragon Pokémon',
             self::FIELD_ATTACK => 277,
             self::FIELD_DEFENSE => 168,
             self::FIELD_STAMINA => 216,
@@ -20619,6 +23361,8 @@ class PokemonData
         Pokemon::SALAMENCE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Salamence',
             self::FIELD_NAME_SHORT => 'Salamence',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Dragon Pokémon',
             self::FIELD_ATTACK => 277,
             self::FIELD_DEFENSE => 168,
             self::FIELD_STAMINA => 216,
@@ -20638,6 +23382,8 @@ class PokemonData
         Pokemon::BELDUM | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Beldum',
             self::FIELD_NAME_SHORT => 'Beldum',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Iron Ball Pokémon',
             self::FIELD_ATTACK => 96,
             self::FIELD_DEFENSE => 132,
             self::FIELD_STAMINA => 120,
@@ -20655,6 +23401,8 @@ class PokemonData
         Pokemon::BELDUM | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Beldum',
             self::FIELD_NAME_SHORT => 'Beldum',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Iron Ball Pokémon',
             self::FIELD_ATTACK => 96,
             self::FIELD_DEFENSE => 132,
             self::FIELD_STAMINA => 120,
@@ -20674,6 +23422,8 @@ class PokemonData
         Pokemon::METANG | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Metang',
             self::FIELD_NAME_SHORT => 'Metang',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Iron Claw Pokémon',
             self::FIELD_ATTACK => 138,
             self::FIELD_DEFENSE => 176,
             self::FIELD_STAMINA => 155,
@@ -20691,6 +23441,8 @@ class PokemonData
         Pokemon::METANG | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Metang',
             self::FIELD_NAME_SHORT => 'Metang',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Iron Claw Pokémon',
             self::FIELD_ATTACK => 138,
             self::FIELD_DEFENSE => 176,
             self::FIELD_STAMINA => 155,
@@ -20710,6 +23462,8 @@ class PokemonData
         Pokemon::METAGROSS | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Metagross',
             self::FIELD_NAME_SHORT => 'Metagross',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Iron Leg Pokémon',
             self::FIELD_ATTACK => 257,
             self::FIELD_DEFENSE => 228,
             self::FIELD_STAMINA => 190,
@@ -20727,6 +23481,8 @@ class PokemonData
         Pokemon::METAGROSS | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Metagross',
             self::FIELD_NAME_SHORT => 'Metagross',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Iron Leg Pokémon',
             self::FIELD_ATTACK => 257,
             self::FIELD_DEFENSE => 228,
             self::FIELD_STAMINA => 190,
@@ -20746,6 +23502,8 @@ class PokemonData
         Pokemon::TURTWIG | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Turtwig',
             self::FIELD_NAME_SHORT => 'Turtwig',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Tiny Leaf Pokémon',
             self::FIELD_ATTACK => 119,
             self::FIELD_DEFENSE => 110,
             self::FIELD_STAMINA => 146,
@@ -20762,6 +23520,8 @@ class PokemonData
         Pokemon::TURTWIG | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Turtwig',
             self::FIELD_NAME_SHORT => 'Turtwig',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Tiny Leaf Pokémon',
             self::FIELD_ATTACK => 119,
             self::FIELD_DEFENSE => 110,
             self::FIELD_STAMINA => 146,
@@ -20780,6 +23540,8 @@ class PokemonData
         Pokemon::GROTLE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Grotle',
             self::FIELD_NAME_SHORT => 'Grotle',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Grove Pokémon',
             self::FIELD_ATTACK => 157,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 181,
@@ -20796,6 +23558,8 @@ class PokemonData
         Pokemon::GROTLE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Grotle',
             self::FIELD_NAME_SHORT => 'Grotle',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Grove Pokémon',
             self::FIELD_ATTACK => 157,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 181,
@@ -20814,6 +23578,8 @@ class PokemonData
         Pokemon::TORTERRA | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Torterra',
             self::FIELD_NAME_SHORT => 'Torterra',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Continent Pokémon',
             self::FIELD_ATTACK => 202,
             self::FIELD_DEFENSE => 188,
             self::FIELD_STAMINA => 216,
@@ -20831,6 +23597,8 @@ class PokemonData
         Pokemon::TORTERRA | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Torterra',
             self::FIELD_NAME_SHORT => 'Torterra',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Continent Pokémon',
             self::FIELD_ATTACK => 202,
             self::FIELD_DEFENSE => 188,
             self::FIELD_STAMINA => 216,
@@ -20850,6 +23618,8 @@ class PokemonData
         Pokemon::CHIMCHAR | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Chimchar',
             self::FIELD_NAME_SHORT => 'Chimchar',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Chimp Pokémon',
             self::FIELD_ATTACK => 113,
             self::FIELD_DEFENSE => 86,
             self::FIELD_STAMINA => 127,
@@ -20866,6 +23636,8 @@ class PokemonData
         Pokemon::CHIMCHAR | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Chimchar',
             self::FIELD_NAME_SHORT => 'Chimchar',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Chimp Pokémon',
             self::FIELD_ATTACK => 113,
             self::FIELD_DEFENSE => 86,
             self::FIELD_STAMINA => 127,
@@ -20884,6 +23656,8 @@ class PokemonData
         Pokemon::MONFERNO | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Monferno',
             self::FIELD_NAME_SHORT => 'Monferno',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Playful Pokémon',
             self::FIELD_ATTACK => 158,
             self::FIELD_DEFENSE => 105,
             self::FIELD_STAMINA => 162,
@@ -20901,6 +23675,8 @@ class PokemonData
         Pokemon::MONFERNO | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Monferno',
             self::FIELD_NAME_SHORT => 'Monferno',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Playful Pokémon',
             self::FIELD_ATTACK => 158,
             self::FIELD_DEFENSE => 105,
             self::FIELD_STAMINA => 162,
@@ -20920,6 +23696,8 @@ class PokemonData
         Pokemon::INFERNAPE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Infernape',
             self::FIELD_NAME_SHORT => 'Infernape',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Flame Pokémon',
             self::FIELD_ATTACK => 222,
             self::FIELD_DEFENSE => 151,
             self::FIELD_STAMINA => 183,
@@ -20937,6 +23715,8 @@ class PokemonData
         Pokemon::INFERNAPE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Infernape',
             self::FIELD_NAME_SHORT => 'Infernape',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Flame Pokémon',
             self::FIELD_ATTACK => 222,
             self::FIELD_DEFENSE => 151,
             self::FIELD_STAMINA => 183,
@@ -20956,6 +23736,8 @@ class PokemonData
         Pokemon::AMBIPOM | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Ambipom',
             self::FIELD_NAME_SHORT => 'Ambipom',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Long Tail Pokémon',
             self::FIELD_ATTACK => 205,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 181,
@@ -20971,6 +23753,8 @@ class PokemonData
         Pokemon::AMBIPOM | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Ambipom',
             self::FIELD_NAME_SHORT => 'Ambipom',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Long Tail Pokémon',
             self::FIELD_ATTACK => 205,
             self::FIELD_DEFENSE => 143,
             self::FIELD_STAMINA => 181,
@@ -20988,6 +23772,8 @@ class PokemonData
         Pokemon::MISMAGIUS | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Mismagius',
             self::FIELD_NAME_SHORT => 'Mismagius',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Magical Pokémon',
             self::FIELD_ATTACK => 211,
             self::FIELD_DEFENSE => 187,
             self::FIELD_STAMINA => 155,
@@ -21003,6 +23789,8 @@ class PokemonData
         Pokemon::MISMAGIUS | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Mismagius',
             self::FIELD_NAME_SHORT => 'Mismagius',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Magical Pokémon',
             self::FIELD_ATTACK => 211,
             self::FIELD_DEFENSE => 187,
             self::FIELD_STAMINA => 155,
@@ -21020,6 +23808,8 @@ class PokemonData
         Pokemon::HONCHKROW | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Honchkrow',
             self::FIELD_NAME_SHORT => 'Honchkrow',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Big Boss Pokémon',
             self::FIELD_ATTACK => 243,
             self::FIELD_DEFENSE => 103,
             self::FIELD_STAMINA => 225,
@@ -21036,6 +23826,8 @@ class PokemonData
         Pokemon::HONCHKROW | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Honchkrow',
             self::FIELD_NAME_SHORT => 'Honchkrow',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Big Boss Pokémon',
             self::FIELD_ATTACK => 243,
             self::FIELD_DEFENSE => 103,
             self::FIELD_STAMINA => 225,
@@ -21054,6 +23846,8 @@ class PokemonData
         Pokemon::STUNKY | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Stunky',
             self::FIELD_NAME_SHORT => 'Stunky',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Skunk Pokémon',
             self::FIELD_ATTACK => 121,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 160,
@@ -21071,6 +23865,8 @@ class PokemonData
         Pokemon::STUNKY | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Stunky',
             self::FIELD_NAME_SHORT => 'Stunky',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Skunk Pokémon',
             self::FIELD_ATTACK => 121,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 160,
@@ -21090,6 +23886,8 @@ class PokemonData
         Pokemon::SKUNTANK | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Skuntank',
             self::FIELD_NAME_SHORT => 'Skuntank',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Skunk Pokémon',
             self::FIELD_ATTACK => 184,
             self::FIELD_DEFENSE => 132,
             self::FIELD_STAMINA => 230,
@@ -21106,6 +23904,8 @@ class PokemonData
         Pokemon::SKUNTANK | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Skuntank',
             self::FIELD_NAME_SHORT => 'Skuntank',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Skunk Pokémon',
             self::FIELD_ATTACK => 184,
             self::FIELD_DEFENSE => 132,
             self::FIELD_STAMINA => 230,
@@ -21124,6 +23924,8 @@ class PokemonData
         Pokemon::GIBLE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Gible',
             self::FIELD_NAME_SHORT => 'Gible',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Land Shark Pokémon',
             self::FIELD_ATTACK => 124,
             self::FIELD_DEFENSE => 84,
             self::FIELD_STAMINA => 151,
@@ -21141,6 +23943,8 @@ class PokemonData
         Pokemon::GIBLE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Gible',
             self::FIELD_NAME_SHORT => 'Gible',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Land Shark Pokémon',
             self::FIELD_ATTACK => 124,
             self::FIELD_DEFENSE => 84,
             self::FIELD_STAMINA => 151,
@@ -21160,6 +23964,8 @@ class PokemonData
         Pokemon::GABITE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Gabite',
             self::FIELD_NAME_SHORT => 'Gabite',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Cave Pokémon',
             self::FIELD_ATTACK => 172,
             self::FIELD_DEFENSE => 125,
             self::FIELD_STAMINA => 169,
@@ -21177,6 +23983,8 @@ class PokemonData
         Pokemon::GABITE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Gabite',
             self::FIELD_NAME_SHORT => 'Gabite',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Cave Pokémon',
             self::FIELD_ATTACK => 172,
             self::FIELD_DEFENSE => 125,
             self::FIELD_STAMINA => 169,
@@ -21196,6 +24004,8 @@ class PokemonData
         Pokemon::GARCHOMP | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Garchomp',
             self::FIELD_NAME_SHORT => 'Garchomp',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mach Pokémon',
             self::FIELD_ATTACK => 261,
             self::FIELD_DEFENSE => 193,
             self::FIELD_STAMINA => 239,
@@ -21212,6 +24022,8 @@ class PokemonData
         Pokemon::GARCHOMP | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Garchomp',
             self::FIELD_NAME_SHORT => 'Garchomp',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Mach Pokémon',
             self::FIELD_ATTACK => 261,
             self::FIELD_DEFENSE => 193,
             self::FIELD_STAMINA => 239,
@@ -21230,6 +24042,8 @@ class PokemonData
         Pokemon::HIPPOPOTAS | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Hippopotas',
             self::FIELD_NAME_SHORT => 'Hippopotas',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Hippo Pokémon',
             self::FIELD_ATTACK => 124,
             self::FIELD_DEFENSE => 118,
             self::FIELD_STAMINA => 169,
@@ -21246,6 +24060,8 @@ class PokemonData
         Pokemon::HIPPOPOTAS | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Hippopotas',
             self::FIELD_NAME_SHORT => 'Hippopotas',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Hippo Pokémon',
             self::FIELD_ATTACK => 124,
             self::FIELD_DEFENSE => 118,
             self::FIELD_STAMINA => 169,
@@ -21264,6 +24080,8 @@ class PokemonData
         Pokemon::HIPPOWDON | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Hippowdon',
             self::FIELD_NAME_SHORT => 'Hippowdon',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Heavyweight Pokémon',
             self::FIELD_ATTACK => 201,
             self::FIELD_DEFENSE => 191,
             self::FIELD_STAMINA => 239,
@@ -21279,6 +24097,8 @@ class PokemonData
         Pokemon::HIPPOWDON | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Hippowdon',
             self::FIELD_NAME_SHORT => 'Hippowdon',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Heavyweight Pokémon',
             self::FIELD_ATTACK => 201,
             self::FIELD_DEFENSE => 191,
             self::FIELD_STAMINA => 239,
@@ -21296,6 +24116,8 @@ class PokemonData
         Pokemon::SNOVER | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Snover',
             self::FIELD_NAME_SHORT => 'Snover',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Frost Tree Pokémon',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 105,
             self::FIELD_STAMINA => 155,
@@ -21313,6 +24135,8 @@ class PokemonData
         Pokemon::SNOVER | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Snover',
             self::FIELD_NAME_SHORT => 'Snover',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Frost Tree Pokémon',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 105,
             self::FIELD_STAMINA => 155,
@@ -21332,6 +24156,8 @@ class PokemonData
         Pokemon::ABOMASNOW | Mods::MEGA => [
             self::FIELD_NAME => 'Mega Abomasnow',
             self::FIELD_NAME_SHORT => 'Abomasnow',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'It blankets wide areas in snow by whipping up blizzards. It is also known as "The Ice Monster."',
             self::FIELD_ATTACK => 240,
             self::FIELD_DEFENSE => 191,
             self::FIELD_STAMINA => 207,
@@ -21343,6 +24169,8 @@ class PokemonData
         Pokemon::ABOMASNOW | Mods::PURIFIED | Mods::MEGA => [
             self::FIELD_NAME => 'Mega Purified Abomasnow',
             self::FIELD_NAME_SHORT => 'Abomasnow',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'It blankets wide areas in snow by whipping up blizzards. It is also known as "The Ice Monster."',
             self::FIELD_ATTACK => 240,
             self::FIELD_DEFENSE => 191,
             self::FIELD_STAMINA => 207,
@@ -21354,6 +24182,8 @@ class PokemonData
         Pokemon::ABOMASNOW | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Abomasnow',
             self::FIELD_NAME_SHORT => 'Abomasnow',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Frost Tree Pokémon',
             self::FIELD_ATTACK => 178,
             self::FIELD_DEFENSE => 158,
             self::FIELD_STAMINA => 207,
@@ -21371,6 +24201,8 @@ class PokemonData
         Pokemon::ABOMASNOW | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Abomasnow',
             self::FIELD_NAME_SHORT => 'Abomasnow',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Frost Tree Pokémon',
             self::FIELD_ATTACK => 178,
             self::FIELD_DEFENSE => 158,
             self::FIELD_STAMINA => 207,
@@ -21389,6 +24221,8 @@ class PokemonData
         Pokemon::WEAVILE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Weavile',
             self::FIELD_NAME_SHORT => 'Weavile',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Sharp Claw Pokémon',
             self::FIELD_ATTACK => 243,
             self::FIELD_DEFENSE => 171,
             self::FIELD_STAMINA => 172,
@@ -21405,6 +24239,8 @@ class PokemonData
         Pokemon::WEAVILE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Weavile',
             self::FIELD_NAME_SHORT => 'Weavile',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Sharp Claw Pokémon',
             self::FIELD_ATTACK => 243,
             self::FIELD_DEFENSE => 171,
             self::FIELD_STAMINA => 172,
@@ -21423,6 +24259,8 @@ class PokemonData
         Pokemon::MAGNEZONE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Magnezone',
             self::FIELD_NAME_SHORT => 'Magnezone',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Magnet Area Pokémon',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 205,
             self::FIELD_STAMINA => 172,
@@ -21439,6 +24277,8 @@ class PokemonData
         Pokemon::MAGNEZONE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Magnezone',
             self::FIELD_NAME_SHORT => 'Magnezone',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Magnet Area Pokémon',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 205,
             self::FIELD_STAMINA => 172,
@@ -21457,6 +24297,8 @@ class PokemonData
         Pokemon::RHYPERIOR | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Rhyperior',
             self::FIELD_NAME_SHORT => 'Rhyperior',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Drill Pokémon',
             self::FIELD_ATTACK => 241,
             self::FIELD_DEFENSE => 190,
             self::FIELD_STAMINA => 251,
@@ -21474,6 +24316,8 @@ class PokemonData
         Pokemon::RHYPERIOR | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Rhyperior',
             self::FIELD_NAME_SHORT => 'Rhyperior',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Drill Pokémon',
             self::FIELD_ATTACK => 241,
             self::FIELD_DEFENSE => 190,
             self::FIELD_STAMINA => 251,
@@ -21493,6 +24337,8 @@ class PokemonData
         Pokemon::ELECTIVIRE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Electivire',
             self::FIELD_NAME_SHORT => 'Electivire',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Thunderbolt Pokémon',
             self::FIELD_ATTACK => 249,
             self::FIELD_DEFENSE => 163,
             self::FIELD_STAMINA => 181,
@@ -21509,6 +24355,8 @@ class PokemonData
         Pokemon::ELECTIVIRE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Electivire',
             self::FIELD_NAME_SHORT => 'Electivire',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Thunderbolt Pokémon',
             self::FIELD_ATTACK => 249,
             self::FIELD_DEFENSE => 163,
             self::FIELD_STAMINA => 181,
@@ -21527,6 +24375,8 @@ class PokemonData
         Pokemon::MAGMORTAR | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Magmortar',
             self::FIELD_NAME_SHORT => 'Magmortar',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Blast Pokémon',
             self::FIELD_ATTACK => 247,
             self::FIELD_DEFENSE => 172,
             self::FIELD_STAMINA => 181,
@@ -21543,6 +24393,8 @@ class PokemonData
         Pokemon::MAGMORTAR | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Magmortar',
             self::FIELD_NAME_SHORT => 'Magmortar',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Blast Pokémon',
             self::FIELD_ATTACK => 247,
             self::FIELD_DEFENSE => 172,
             self::FIELD_STAMINA => 181,
@@ -21561,6 +24413,8 @@ class PokemonData
         Pokemon::GLISCOR | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Gliscor',
             self::FIELD_NAME_SHORT => 'Gliscor',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Fang Scorpion Pokémon',
             self::FIELD_ATTACK => 185,
             self::FIELD_DEFENSE => 222,
             self::FIELD_STAMINA => 181,
@@ -21577,6 +24431,8 @@ class PokemonData
         Pokemon::GLISCOR | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Gliscor',
             self::FIELD_NAME_SHORT => 'Gliscor',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Fang Scorpion Pokémon',
             self::FIELD_ATTACK => 185,
             self::FIELD_DEFENSE => 222,
             self::FIELD_STAMINA => 181,
@@ -21595,6 +24451,8 @@ class PokemonData
         Pokemon::PORYGON_Z | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Porygon-Z',
             self::FIELD_NAME_SHORT => 'Porygon-Z',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Virtual Pokémon',
             self::FIELD_ATTACK => 264,
             self::FIELD_DEFENSE => 150,
             self::FIELD_STAMINA => 198,
@@ -21611,6 +24469,8 @@ class PokemonData
         Pokemon::PORYGON_Z | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Porygon-Z',
             self::FIELD_NAME_SHORT => 'Porygon-Z',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Virtual Pokémon',
             self::FIELD_ATTACK => 264,
             self::FIELD_DEFENSE => 150,
             self::FIELD_STAMINA => 198,
@@ -21629,6 +24489,8 @@ class PokemonData
         Pokemon::GALLADE | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Gallade',
             self::FIELD_NAME_SHORT => 'Gallade',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Blade Pokémon',
             self::FIELD_ATTACK => 237,
             self::FIELD_DEFENSE => 195,
             self::FIELD_STAMINA => 169,
@@ -21646,6 +24508,8 @@ class PokemonData
         Pokemon::GALLADE | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Gallade',
             self::FIELD_NAME_SHORT => 'Gallade',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Blade Pokémon',
             self::FIELD_ATTACK => 237,
             self::FIELD_DEFENSE => 195,
             self::FIELD_STAMINA => 169,
@@ -21665,6 +24529,8 @@ class PokemonData
         Pokemon::DUSKNOIR | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Dusknoir',
             self::FIELD_NAME_SHORT => 'Dusknoir',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Gripper Pokémon',
             self::FIELD_ATTACK => 180,
             self::FIELD_DEFENSE => 254,
             self::FIELD_STAMINA => 128,
@@ -21680,6 +24546,8 @@ class PokemonData
         Pokemon::DUSKNOIR | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Dusknoir',
             self::FIELD_NAME_SHORT => 'Dusknoir',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Gripper Pokémon',
             self::FIELD_ATTACK => 180,
             self::FIELD_DEFENSE => 254,
             self::FIELD_STAMINA => 128,
@@ -21697,6 +24565,8 @@ class PokemonData
         Pokemon::DARUMAKA | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Darumaka',
             self::FIELD_NAME_SHORT => 'Darumaka',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Zen Charm Pokémon',
             self::FIELD_ATTACK => 153,
             self::FIELD_DEFENSE => 86,
             self::FIELD_STAMINA => 172,
@@ -21712,6 +24582,8 @@ class PokemonData
         Pokemon::DARUMAKA | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Darumaka',
             self::FIELD_NAME_SHORT => 'Darumaka',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Zen Charm Pokémon',
             self::FIELD_ATTACK => 153,
             self::FIELD_DEFENSE => 86,
             self::FIELD_STAMINA => 172,
@@ -21729,6 +24601,8 @@ class PokemonData
         Pokemon::DARMANITAN | FormsAlias::DARMANITAN_ZEN | Mods::GALARIAN => [
             self::FIELD_NAME => 'Galarian Darmanitan (Zen Mode)',
             self::FIELD_NAME_SHORT => 'Darmanitan',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Blazing Pokémon',
             self::FIELD_ATTACK => 323,
             self::FIELD_DEFENSE => 123,
             self::FIELD_STAMINA => 233,
@@ -21745,6 +24619,8 @@ class PokemonData
         Pokemon::YAMASK | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Yamask',
             self::FIELD_NAME_SHORT => 'Yamask',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Spirit Pokémon',
             self::FIELD_ATTACK => 95,
             self::FIELD_DEFENSE => 141,
             self::FIELD_STAMINA => 116,
@@ -21761,6 +24637,8 @@ class PokemonData
         Pokemon::YAMASK | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Yamask',
             self::FIELD_NAME_SHORT => 'Yamask',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Spirit Pokémon',
             self::FIELD_ATTACK => 95,
             self::FIELD_DEFENSE => 141,
             self::FIELD_STAMINA => 116,
@@ -21779,6 +24657,8 @@ class PokemonData
         Pokemon::COFAGRIGUS | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Cofagrigus',
             self::FIELD_NAME_SHORT => 'Cofagrigus',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Coffin Pokémon',
             self::FIELD_ATTACK => 163,
             self::FIELD_DEFENSE => 237,
             self::FIELD_STAMINA => 151,
@@ -21794,6 +24674,8 @@ class PokemonData
         Pokemon::COFAGRIGUS | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Cofagrigus',
             self::FIELD_NAME_SHORT => 'Cofagrigus',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Coffin Pokémon',
             self::FIELD_ATTACK => 163,
             self::FIELD_DEFENSE => 237,
             self::FIELD_STAMINA => 151,
@@ -21811,6 +24693,8 @@ class PokemonData
         Pokemon::STUNFISK | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Stunfisk',
             self::FIELD_NAME_SHORT => 'Stunfisk',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Trap Pokémon',
             self::FIELD_ATTACK => 144,
             self::FIELD_DEFENSE => 171,
             self::FIELD_STAMINA => 240,
@@ -21827,6 +24711,8 @@ class PokemonData
         Pokemon::STUNFISK | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Stunfisk',
             self::FIELD_NAME_SHORT => 'Stunfisk',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Trap Pokémon',
             self::FIELD_ATTACK => 144,
             self::FIELD_DEFENSE => 171,
             self::FIELD_STAMINA => 240,
@@ -21845,6 +24731,8 @@ class PokemonData
         Pokemon::OBSTAGOON | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Obstagoon',
             self::FIELD_NAME_SHORT => 'Obstagoon',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Blocking Pokémon',
             self::FIELD_ATTACK => 180,
             self::FIELD_DEFENSE => 194,
             self::FIELD_STAMINA => 212,
@@ -21861,6 +24749,8 @@ class PokemonData
         Pokemon::OBSTAGOON | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Obstagoon',
             self::FIELD_NAME_SHORT => 'Obstagoon',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Blocking Pokémon',
             self::FIELD_ATTACK => 180,
             self::FIELD_DEFENSE => 194,
             self::FIELD_STAMINA => 212,
@@ -21879,6 +24769,8 @@ class PokemonData
         Pokemon::PERRSERKER | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Perrserker',
             self::FIELD_NAME_SHORT => 'Perrserker',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Viking Pokémon',
             self::FIELD_ATTACK => 195,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 172,
@@ -21894,6 +24786,8 @@ class PokemonData
         Pokemon::PERRSERKER | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Perrserker',
             self::FIELD_NAME_SHORT => 'Perrserker',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Viking Pokémon',
             self::FIELD_ATTACK => 195,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 172,
@@ -21911,6 +24805,8 @@ class PokemonData
         Pokemon::SIRFETCH_D | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Sirfetch’d',
             self::FIELD_NAME_SHORT => 'Sirfetch’d',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Wild Duck Pokémon',
             self::FIELD_ATTACK => 248,
             self::FIELD_DEFENSE => 176,
             self::FIELD_STAMINA => 158,
@@ -21926,6 +24822,8 @@ class PokemonData
         Pokemon::SIRFETCH_D | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Sirfetch’d',
             self::FIELD_NAME_SHORT => 'Sirfetch’d',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Wild Duck Pokémon',
             self::FIELD_ATTACK => 248,
             self::FIELD_DEFENSE => 176,
             self::FIELD_STAMINA => 158,
@@ -21943,6 +24841,8 @@ class PokemonData
         Pokemon::MR_RIME | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Mr. Rime',
             self::FIELD_NAME_SHORT => 'Mr. Rime',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 212,
             self::FIELD_DEFENSE => 179,
             self::FIELD_STAMINA => 190,
@@ -21959,6 +24859,8 @@ class PokemonData
         Pokemon::MR_RIME | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Mr. Rime',
             self::FIELD_NAME_SHORT => 'Mr. Rime',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 212,
             self::FIELD_DEFENSE => 179,
             self::FIELD_STAMINA => 190,
@@ -21977,6 +24879,8 @@ class PokemonData
         Pokemon::RUNERIGUS | Mods::PURIFIED => [
             self::FIELD_NAME => 'Purified Runerigus',
             self::FIELD_NAME_SHORT => 'Runerigus',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Grudge Pokémon',
             self::FIELD_ATTACK => 163,
             self::FIELD_DEFENSE => 237,
             self::FIELD_STAMINA => 151,
@@ -21993,6 +24897,8 @@ class PokemonData
         Pokemon::RUNERIGUS | Mods::SHADOW => [
             self::FIELD_NAME => 'Shadow Runerigus',
             self::FIELD_NAME_SHORT => 'Runerigus',
+            self::FIELD_DESC => '',
+            self::FIELD_CATEGORY => 'Grudge Pokémon',
             self::FIELD_ATTACK => 163,
             self::FIELD_DEFENSE => 237,
             self::FIELD_STAMINA => 151,

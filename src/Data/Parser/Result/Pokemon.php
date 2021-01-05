@@ -173,6 +173,8 @@ class Pokemon
             $data = [
                 "self::FIELD_NAME => '" . addcslashes($this->getPokemonName($code), "'") . "'",
                 "self::FIELD_NAME_SHORT => '" . addcslashes($this->getPokemonName($code, true), "'") . "'",
+                "self::FIELD_DESC => '" . addcslashes(Locale::getDescription($code), "'") . "'",
+                "self::FIELD_CATEGORY => '" . addcslashes(Locale::getCategory($code), "'") . "'"
             ];
 
             if (empty($pokemon[self::FIELD_UNRELEASED])) {
@@ -332,6 +334,8 @@ class PokemonData
 {
     const FIELD_NAME = 'name';
     const FIELD_NAME_SHORT = 'short';
+    const FIELD_DESC = 'desc';
+    const FIELD_CATEGORY = 'category';
     const FIELD_TYPE1 = 'type1';
     const FIELD_TYPE2 = 'type2';
     const FIELD_ATTACK = 'attack';
