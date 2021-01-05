@@ -151,6 +151,16 @@ class Pokemon extends Data\Manual\PokemonList
         return PokemonData::POKEMON[$this->code][PokemonData::FIELD_NAME_SHORT];
     }
 
+    public function isMythical()
+    {
+        return !empty(PokemonData::POKEMON[$this->code][PokemonData::FIELD_MYTHIC]);
+    }
+
+    public function isLegendary()
+    {
+        return !empty(PokemonData::POKEMON[$this->code][PokemonData::FIELD_LEGENDARY]);
+    }
+
     public function getLinkHash($forceForm = false): string
     {
         $hash = [];
