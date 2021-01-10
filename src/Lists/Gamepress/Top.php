@@ -38,7 +38,7 @@ class Top
         Types::DRAGON => [
             Pokemon::SALAMENCE | Mods::SHADOW,
             Pokemon::DRAGONITE | Mods::SHADOW,
-            Pokemon::CHARIZARD | Mods::MEGA,
+            Pokemon::CHARIZARD | Mods::MEGA_X,
             Pokemon::RAYQUAZA,
             Pokemon::PALKIA,
             Pokemon::SALAMENCE,
@@ -77,7 +77,8 @@ class Top
             Pokemon::BLAZIKEN,
         ],
         Types::FIRE => [
-            Pokemon::CHARIZARD | Mods::MEGA,
+            Pokemon::CHARIZARD | Mods::MEGA_X,
+            Pokemon::CHARIZARD | Mods::MEGA_Y,
             Pokemon::ENTEI | Mods::SHADOW,
             Pokemon::RESHIRAM,
             Pokemon::MOLTRES | Mods::SHADOW,
