@@ -45,7 +45,7 @@ return [
         ],
         'mainLastmod' => '2020-12-20',
         'pokemon' => [
-            'lastmod' => '2021-01-04',
+            'lastmod' => '2021-01-10',
             'changefreq' => 'weekly'
         ],
         'counters' => [
