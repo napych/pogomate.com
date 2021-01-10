@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'version' => '0.99.34',
+    'version' => '0.99.35',
 
     'locale' => 'en_US',
     'plugins' => [
@@ -49,7 +49,7 @@ return [
             'changefreq' => 'weekly'
         ],
         'counters' => [
-            'lastmod' => '2020-09-22',
+            'lastmod' => '2021-01-10',
             'changefreq' => 'monthly'
         ],
         'moves' => [
