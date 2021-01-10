@@ -251,6 +251,8 @@ class Pokemon extends Data\Manual\PokemonList
         $node->setAttribute('attack', $data[PokemonData::FIELD_ATTACK] ?? '');
         $node->setAttribute('defense', $data[PokemonData::FIELD_DEFENSE] ?? '');
         $node->setAttribute('stamina', $data[PokemonData::FIELD_STAMINA] ?? '');
+        $node->setAttribute('desc', $data[PokemonData::FIELD_DESC] ?? '');
+        $node->setAttribute('category', $data[PokemonData::FIELD_CATEGORY] ?? '');
         foreach (
             [
                 PokemonData::FIELD_FAST_MOVES,

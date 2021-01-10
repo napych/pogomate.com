@@ -15994,7 +15994,7 @@ class PokemonData
         Pokemon::RATATTA | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Rattata',
             self::FIELD_NAME_SHORT => 'Rattata',
-            self::FIELD_DESC => '',
+            self::FIELD_DESC => 'Night after night, they sneak into people\'s homes seeking food. A massive outbreak of them has become an issue of public concern.',
             self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 103,
             self::FIELD_DEFENSE => 70,
@@ -16013,7 +16013,7 @@ class PokemonData
         Pokemon::RATICATE | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Raticate',
             self::FIELD_NAME_SHORT => 'Raticate',
-            self::FIELD_DESC => '',
+            self::FIELD_DESC => 'It commands a nest of Rattata. Different nests don\'t get along, whipping up severe fights over feeding grounds.',
             self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 135,
             self::FIELD_DEFENSE => 154,
@@ -16031,7 +16031,7 @@ class PokemonData
         Pokemon::RAICHU | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Raichu',
             self::FIELD_NAME_SHORT => 'Raichu',
-            self::FIELD_DESC => '',
+            self::FIELD_DESC => 'When you rub its cheeks, a sweet fragrance comes wafting out. However, you\'ll also get a light shock!',
             self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 201,
             self::FIELD_DEFENSE => 154,
@@ -16049,7 +16049,7 @@ class PokemonData
         Pokemon::SANDSHREW | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Sandshrew',
             self::FIELD_NAME_SHORT => 'Sandshrew',
-            self::FIELD_DESC => '',
+            self::FIELD_DESC => 'The skin on its back is as hard as steel. Predators go after its soft belly, so it clings to the ground desperately.',
             self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 125,
             self::FIELD_DEFENSE => 129,
@@ -16068,7 +16068,7 @@ class PokemonData
         Pokemon::SANDSLASH | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Sandslash',
             self::FIELD_NAME_SHORT => 'Sandslash',
-            self::FIELD_DESC => '',
+            self::FIELD_DESC => 'A long, long time ago, it lived in the desert. With its sharp claws fully extended, it can climb right up an iceberg without slipping.',
             self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 177,
             self::FIELD_DEFENSE => 195,
@@ -16086,7 +16086,7 @@ class PokemonData
         Pokemon::VULPIX | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Vulpix',
             self::FIELD_NAME_SHORT => 'Vulpix',
-            self::FIELD_DESC => '',
+            self::FIELD_DESC => 'They live together in a skulk, helping one another. Before eating their prey, they freeze it solid with their –58 degree Fahrenheit breath.',
             self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 96,
             self::FIELD_DEFENSE => 109,
@@ -16104,7 +16104,7 @@ class PokemonData
         Pokemon::NINETALES | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Ninetales',
             self::FIELD_NAME_SHORT => 'Ninetales',
-            self::FIELD_DESC => '',
+            self::FIELD_DESC => 'Some said that deities visited mountains where Ninetales live, so in times long past, no one was allowed to go into those mountains.',
             self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 170,
             self::FIELD_DEFENSE => 193,
@@ -16122,7 +16122,7 @@ class PokemonData
         Pokemon::DIGLETT | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Diglett',
             self::FIELD_NAME_SHORT => 'Diglett',
-            self::FIELD_DESC => '',
+            self::FIELD_DESC => 'The need to dig through volcanic rock in the ground has made them more powerful than the Diglett of other regions.',
             self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 108,
             self::FIELD_DEFENSE => 81,
@@ -16141,7 +16141,7 @@ class PokemonData
         Pokemon::DUGTRIO | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Dugtrio',
             self::FIELD_NAME_SHORT => 'Dugtrio',
-            self::FIELD_DESC => '',
+            self::FIELD_DESC => 'Its shining gold whiskers are advanced sensors that can detect vibrations from sounds several miles away.',
             self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 201,
             self::FIELD_DEFENSE => 142,
@@ -16159,7 +16159,7 @@ class PokemonData
         Pokemon::MEOWTH | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Meowth',
             self::FIELD_NAME_SHORT => 'Meowth',
-            self::FIELD_DESC => '',
+            self::FIELD_DESC => 'A royal house that flourished in the distant past brought it here from another region. Meowth is both selfish and prideful.',
             self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 99,
             self::FIELD_DEFENSE => 78,
@@ -16177,7 +16177,7 @@ class PokemonData
         Pokemon::MEOWTH | Mods::GALARIAN => [
             self::FIELD_NAME => 'Galarian Meowth',
             self::FIELD_NAME_SHORT => 'Meowth',
-            self::FIELD_DESC => '',
+            self::FIELD_DESC => 'Living with a savage, seafaring people has toughened this Pokémon\'s body so much that parts of it have turned to iron.',
             self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 115,
             self::FIELD_DEFENSE => 92,
@@ -16195,7 +16195,7 @@ class PokemonData
         Pokemon::PERSIAN | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Persian',
             self::FIELD_NAME_SHORT => 'Persian',
-            self::FIELD_DESC => '',
+            self::FIELD_DESC => 'Its round face is a symbol of wealth. Persian that have bigger, plumper faces are considered more beautiful.',
             self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 158,
             self::FIELD_DEFENSE => 136,
@@ -16212,7 +16212,7 @@ class PokemonData
         Pokemon::GEODUDE | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Geodude',
             self::FIELD_NAME_SHORT => 'Geodude',
-            self::FIELD_DESC => '',
+            self::FIELD_DESC => 'Geodude compete against each other with headbutts. The iron sand on their heads will stick to whichever one has stronger magnetism.',
             self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 132,
             self::FIELD_DEFENSE => 132,
@@ -16231,7 +16231,7 @@ class PokemonData
         Pokemon::GRAVELER | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Graveler',
             self::FIELD_NAME_SHORT => 'Graveler',
-            self::FIELD_DESC => '',
+            self::FIELD_DESC => 'Graveler\'s entire body is tinged with electricity due to the stones it likes to eat. It\'s very quick-tempered.',
             self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 164,
             self::FIELD_DEFENSE => 164,
@@ -16250,7 +16250,7 @@ class PokemonData
         Pokemon::GOLEM | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Golem',
             self::FIELD_NAME_SHORT => 'Golem',
-            self::FIELD_DESC => '',
+            self::FIELD_DESC => 'It shoots large rocks that are charged with electricity. Tremendous electric shocks are flung out across the whole area of impact.',
             self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 211,
             self::FIELD_DEFENSE => 198,
@@ -16268,7 +16268,7 @@ class PokemonData
         Pokemon::PONYTA | Mods::GALARIAN => [
             self::FIELD_NAME => 'Galarian Ponyta',
             self::FIELD_NAME_SHORT => 'Ponyta',
-            self::FIELD_DESC => '',
+            self::FIELD_DESC => 'Its small horn hides a healing power. With a few rubs from this Pokémon’s horn, any slight wound you have will be healed.',
             self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 170,
             self::FIELD_DEFENSE => 127,
@@ -16286,7 +16286,7 @@ class PokemonData
         Pokemon::RAPIDASH | Mods::GALARIAN => [
             self::FIELD_NAME => 'Galarian Rapidash',
             self::FIELD_NAME_SHORT => 'Rapidash',
-            self::FIELD_DESC => '',
+            self::FIELD_DESC => 'Little can stand up to its psycho cut. Unleashed from this Pokémon’s horn, the move will punch a hole right through a thick metal sheet.',
             self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 207,
             self::FIELD_DEFENSE => 162,
@@ -16322,7 +16322,7 @@ class PokemonData
         Pokemon::FARFETCH_D | Mods::GALARIAN => [
             self::FIELD_NAME => 'Galarian Farfetch\'d',
             self::FIELD_NAME_SHORT => 'Farfetch\'d',
-            self::FIELD_DESC => '',
+            self::FIELD_DESC => 'The Farfetch\'d of the Galar region are brave warriors, and they wield thick, tough leeks in battle.',
             self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 174,
             self::FIELD_DEFENSE => 114,
@@ -16340,7 +16340,7 @@ class PokemonData
         Pokemon::GRIMER | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Grimer',
             self::FIELD_NAME_SHORT => 'Grimer',
-            self::FIELD_DESC => '',
+            self::FIELD_DESC => 'Brought to Alola to solve the garbage problem, Grimer seems to relish any and all kinds of trash.',
             self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 135,
             self::FIELD_DEFENSE => 90,
@@ -16359,7 +16359,7 @@ class PokemonData
         Pokemon::MUK | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Muk',
             self::FIELD_NAME_SHORT => 'Muk',
-            self::FIELD_DESC => '',
+            self::FIELD_DESC => 'What look like fangs and claws are actually crystallized poison that will afflict you at a mere touch, so don\'t get too close.',
             self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 190,
             self::FIELD_DEFENSE => 172,
@@ -16377,7 +16377,7 @@ class PokemonData
         Pokemon::EXEGGUTOR | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Exeggutor',
             self::FIELD_NAME_SHORT => 'Exeggutor',
-            self::FIELD_DESC => '',
+            self::FIELD_DESC => 'It swings its long neck like a whip and smacks its opponents. This makes Exeggutor itself dizzy, too.',
             self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 230,
             self::FIELD_DEFENSE => 153,
@@ -16395,7 +16395,7 @@ class PokemonData
         Pokemon::MAROWAK | Mods::ALOLAN => [
             self::FIELD_NAME => 'Alolan Marowak',
             self::FIELD_NAME_SHORT => 'Marowak',
-            self::FIELD_DESC => '',
+            self::FIELD_DESC => 'When it beats opponents with its bone, the cursed flames spread to them. No amount of water will stop those flames from burning.',
             self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 144,
             self::FIELD_DEFENSE => 186,
@@ -16414,7 +16414,7 @@ class PokemonData
         Pokemon::WEEZING | Mods::GALARIAN => [
             self::FIELD_NAME => 'Galarian Weezing',
             self::FIELD_NAME_SHORT => 'Weezing',
-            self::FIELD_DESC => '',
+            self::FIELD_DESC => 'This Pokémon consumes particles that contaminate the air. Instead of leaving droppings, it expels clean air.',
             self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 174,
             self::FIELD_DEFENSE => 197,
@@ -16459,7 +16459,7 @@ class PokemonData
         Pokemon::ZIGZAGOON | Mods::GALARIAN => [
             self::FIELD_NAME => 'Galarian Zigzagoon',
             self::FIELD_NAME_SHORT => 'Zigzagoon',
-            self::FIELD_DESC => '',
+            self::FIELD_DESC => 'Its restlessness has it constantly running around. If it sees another Pokémon, it will purposely run into them in order to start a fight.',
             self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 58,
             self::FIELD_DEFENSE => 80,
@@ -16478,7 +16478,7 @@ class PokemonData
         Pokemon::LINOONE | Mods::GALARIAN => [
             self::FIELD_NAME => 'Galarian Linoone',
             self::FIELD_NAME_SHORT => 'Linoone',
-            self::FIELD_DESC => '',
+            self::FIELD_DESC => 'It uses its long tongue to taunt opponents. Once the opposition is enraged, this Pokémon hurls itself at the opponent, tackling them forcefully.',
             self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 142,
             self::FIELD_DEFENSE => 128,
@@ -16497,7 +16497,7 @@ class PokemonData
         Pokemon::DARUMAKA | Mods::GALARIAN => [
             self::FIELD_NAME => 'Galarian Darumaka',
             self::FIELD_NAME_SHORT => 'Darumaka',
-            self::FIELD_DESC => '',
+            self::FIELD_DESC => 'It lived in snowy areas for so long that its fire sac cooled off and atrophied. It now has an organ that generates cold instead.',
             self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 153,
             self::FIELD_DEFENSE => 86,
@@ -16515,7 +16515,7 @@ class PokemonData
         Pokemon::DARMANITAN | FormsAlias::DARMANITAN_STANDARD | Mods::GALARIAN => [
             self::FIELD_NAME => 'Galarian Darmanitan (Standard Mode)',
             self::FIELD_NAME_SHORT => 'Darmanitan',
-            self::FIELD_DESC => '',
+            self::FIELD_DESC => 'On days when blizzards blow through, it comes down to where people live. It stashes food in the snowball on its head, taking it home for later.',
             self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 263,
             self::FIELD_DEFENSE => 114,
@@ -16532,7 +16532,7 @@ class PokemonData
         Pokemon::YAMASK | Mods::GALARIAN => [
             self::FIELD_NAME => 'Galarian Yamask',
             self::FIELD_NAME_SHORT => 'Yamask',
-            self::FIELD_DESC => '',
+            self::FIELD_DESC => 'A clay slab with cursed engravings took possession of a Yamask. The slab is said to be absorbing the Yamask’s dark power.',
             self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 95,
             self::FIELD_DEFENSE => 141,
@@ -16551,7 +16551,7 @@ class PokemonData
         Pokemon::STUNFISK | Mods::GALARIAN => [
             self::FIELD_NAME => 'Galarian Stunfisk',
             self::FIELD_NAME_SHORT => 'Stunfisk',
-            self::FIELD_DESC => '',
+            self::FIELD_DESC => 'Living in mud with a high iron content has given it a strong steel body.',
             self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 144,
             self::FIELD_DEFENSE => 171,

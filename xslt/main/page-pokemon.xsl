@@ -97,6 +97,18 @@
             <xsl:value-of select="@name"/>
         </h2>
         <div class="pokemon-info">
+            <xsl:if test="@category and @category!=''">
+                <p class="pokemon-category">
+                    <xsl:value-of select="@category"/>
+                </p>
+            </xsl:if>
+
+            <xsl:if test="@desc and @desc!=''">
+                <p class="pokemon-desc">
+                    <xsl:value-of select="@desc"/>
+                </p>
+            </xsl:if>
+
             <!-- Pokedex ID -->
             <p class="pokemon-id">
                 <xsl:text>Pokedex ID: #</xsl:text>
