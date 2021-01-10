@@ -2,6 +2,10 @@
 
 namespace Pogo\Mate;
 
+use Pogo\Data\Generated\PokemonData;
+use Pogo\Data\Manual\PokemonList;
+use Pogo\Lists\Gamepress\Top;
+use Pogo\Pokemon;
 use Pogo\Pokemon\Types;
 use Pogo\Data\Generated\TypeEffectiveness;
 
@@ -48,16 +52,21 @@ class Counters
         $this->bossTypes[] = $types;
     }
 
+    protected $bestAttacks = null;
+    protected $goodAttacks = null;
+    protected $bestAttacksString = null;
+    protected $goodAttacksString = null;
+
     /**
-     * Get search string
-     * @return array
+     * Fill best and good attacks
      */
-    public function getStrings()
+    protected function fillAttacks()
     {
-        if (empty($this->bossAttacks)) {
-            $this->bossAttacks = $this->bossTypes;
+        if ($this->bestAttacks !== null || $this->goodAttacks !== null) {
+            return;
         }
 
+        // get attack effectiveness for every attack type
         $attacks = [];
         foreach (Types::TYPE_ENUM as $attackType) {
             $attacks[$attackType] = 1;
@@ -67,33 +76,76 @@ class Counters
                 $attacks[$attackType] *= $effectivenessData[$bossType] ?? 1;
             }
         }
+
+        // find out best and good attacks
         $bestEffect = 0;
-        $bestAttacks = [];
-        $goodAttacks = [];
+        $this->bestAttacks = [];
+        $this->goodAttacks = [];
         foreach ($attacks as $attackType => $effectiveness) {
             if ($effectiveness > $bestEffect) {
                 $bestEffect = $effectiveness;
-                $bestAttacks = [$attackType];
+                $this->bestAttacks = [$attackType];
             } elseif ($effectiveness === $bestEffect) {
-                $bestAttacks[] = $attackType;
+                $this->bestAttacks[] = $attackType;
             }
             if ($effectiveness > 1) {
-                $goodAttacks[] = $attackType;
+                $this->goodAttacks[] = $attackType;
             }
         }
-        $bestAttacksString = '@1' . implode(',@1', $bestAttacks) . '&@2' . implode(',@2', $bestAttacks) . ',@3' . implode(',@3', $bestAttacks);
-        if (empty($goodAttacks)) {
-            $goodAttacksString = $bestAttacksString;
-            $bestAttacksString = '';
+
+        if ($this->bestAttacks === $this->goodAttacks) {
+            $this->bestAttacks = [];
+        }
+        if (empty($this->goodAttacks)) {
+            $this->goodAttacks = $this->bestAttacks;
+            $this->bestAttacks = [];
+        }
+    }
+
+    public function getBestAttacksString()
+    {
+        if ($this->bestAttacksString !== null) {
+            return $this->bestAttacksString;
+        }
+        $this->fillAttacks();
+        if (!empty($this->bestAttacks)) {
+            return $this->bestAttacksString =
+                '@1' . implode(',@1', $this->bestAttacks)
+                . '&@2' . implode(',@2', $this->bestAttacks)
+                . ',@3' . implode(',@3', $this->bestAttacks);
         } else {
-            $goodAttacksString = '@1' . implode(',@1', $goodAttacks) . '&@2' . implode(',@2', $goodAttacks) . ',@3' . implode(',@3', $goodAttacks);
-            if ($goodAttacksString === $bestAttacksString) {
-                $bestAttacksString = '';
-            }
+            return $this->bestAttacksString = '';
+        }
+    }
+
+    public function getGoodAttacksString()
+    {
+        if ($this->goodAttacksString !== null) {
+            return $this->goodAttacksString;
+        }
+        $this->fillAttacks();
+        if (!empty($this->goodAttacks)) {
+            return $this->goodAttacksString =
+                '@1' . implode(',@1', $this->goodAttacks)
+                . '&@2' . implode(',@2', $this->goodAttacks)
+                . ',@3' . implode(',@3', $this->goodAttacks);
+        } else {
+            return $this->goodAttacksString = '';
+        }
+    }
+
+    protected $badTypes = null;
+
+    protected function fillBadTypes(): void
+    {
+        if ($this->badTypes !== null) {
+            return;
+        }
+        if (empty($this->bossAttacks)) {
+            $this->bossAttacks = $this->bossTypes;
         }
 
-
-        $badTypes = [];
+        $this->badTypes = [];
         foreach ($this->bossAttacks as $n => $bossAttack) {
             foreach (Types::TYPE_ENUM as $pokemonType) {
                 $effectiveness = TypeEffectiveness::EFFECTIVENESS[$bossAttack][$pokemonType] ?? 1;
@@ -105,30 +157,70 @@ class Counters
                             $skip[] = $pokemonType2;
                         }
                     }
-                    if (isset($badTypes[$pokemonType])) {
-                        $badTypes[$pokemonType] = array_intersect($badTypes[$pokemonType], $skip);
+                    if (isset($this->badTypes[$pokemonType])) {
+                        $this->badTypes[$pokemonType] = array_intersect($this->badTypes[$pokemonType], $skip);
                     } else {
-                        $badTypes[$pokemonType] = $skip;
+                        $this->badTypes[$pokemonType] = $skip;
                     }
                 }
             }
         }
-//        $goodTypes = array_unique($goodTypes);
-        if (!empty($badTypes)) {
-            $badTypesString = '';
-            foreach ($badTypes as $badType => $skip) {
-                $badTypesString .= '&!' . $badType;
-                if (!empty($skip)) {
-                    $badTypesString .= ',' . implode(',', $skip);
-                }
-            }
-        } else {
-            $badTypesString = '';
+    }
+
+    /**
+     * Get search string
+     * @return string
+     */
+    public function getBadTypesString()
+    {
+        $this->fillBadTypes();
+        if (empty($this->badTypes)) {
+            return '';
         }
-        return [
-            'front' => $bestAttacksString,
-            'team' => $goodAttacksString . $badTypesString
-        ];
+
+        $badTypesString = '';
+        foreach ($this->badTypes as $badType => $skip) {
+            $badTypesString .= '&!' . $badType;
+            if (!empty($skip)) {
+                $badTypesString .= ',' . implode(',', $skip);
+            }
+        }
+        return $badTypesString;
+    }
+
+    /**
+     * @return Pokemon[]
+     */
+    protected function getSuggestions(): array
+    {
+        $this->fillAttacks();
+        $this->fillBadTypes();
+
+        $suggestions = ['best' => [], 'good' => []];
+
+        foreach (Top::TIERS as $type => $list) {
+            if (in_array($type, $this->bestAttacks)) {
+                $grade = 'best';
+            } elseif (in_array($type, $this->goodAttacks)) {
+                $grade = 'good';
+            } else {
+                continue;
+            }
+            foreach ($list as $code) {
+                $pokemon = Pokemon::get($code);
+                $type1 = $pokemon->getType1();
+                $type2 = $pokemon->getType2();
+                if (isset($this->badTypes[$type1]) && (!$type2 || !in_array($type2, $this->badTypes[$type1]))) {
+                    continue;
+                }
+                if ($type2 && isset($this->badTypes[$type2]) && !in_array($type1, $this->badTypes[$type2])) {
+                    continue;
+                }
+                $suggestions[$grade][] = $pokemon;
+            }
+        }
+
+        return $suggestions;
     }
 
     /**
@@ -146,11 +238,27 @@ class Counters
         } elseif ($addNode) {
             $node = $node->appendChild($node->ownerDocument->createElement($addNode));
         }
-        $data = $this->getStrings();
-        if (!empty($data['front'])) {
-            $node->setAttribute('front', $data['front']);
+        if ($front = $this->getBestAttacksString()) {
+            $node->setAttribute('front', $front);
         }
-        $node->setAttribute('team', $data['team']);
+        $node->setAttribute('team', $this->getGoodAttacksString() . $this->getBadTypesString());
+
+        $suggestions = $this->getSuggestions();
+        if (!empty($suggestions['best'])) {
+            $suggestionsNode = $node->appendChild($node->ownerDocument->createElement('suggestions'));
+            $suggestionsNode->setAttribute('set', 'best');
+            foreach ($suggestions['best'] as $suggestion) {
+                $suggestion->getXML($suggestionsNode, true, false);
+            }
+        }
+        if (!empty($suggestions['good'])) {
+            $suggestionsNode = $node->appendChild($node->ownerDocument->createElement('suggestions'));
+            $suggestionsNode->setAttribute('set', 'good');
+            foreach ($suggestions['good'] as $suggestion) {
+                $suggestion->getXML($suggestionsNode, true, false);
+            }
+        }
+
         return $node;
     }
 }

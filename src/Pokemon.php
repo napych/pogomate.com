@@ -106,6 +106,16 @@ class Pokemon extends Data\Manual\PokemonList
         return Mods::getForm($this->code);
     }
 
+    public function getType1(): ?string
+    {
+        return PokemonData::POKEMON[$this->code][PokemonData::FIELD_TYPE1] ?? null;
+    }
+
+    public function getType2(): ?string
+    {
+        return PokemonData::POKEMON[$this->code][PokemonData::FIELD_TYPE2] ?? null;
+    }
+
     /**
      * @return int|null
      * @throws Exception
