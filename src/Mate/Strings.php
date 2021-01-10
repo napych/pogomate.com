@@ -56,50 +56,6 @@ class Strings
         }
     }
 
-    /*
-    public function getReasonsOld(int $pokedexId = null)
-    {
-        // sort pokemon list
-        if (!$pokedexId) {
-            $pokemonList = $this->pokemon;
-        } else {
-            $pokemonList = [];
-            foreach ($this->pokemon as $code => $pokemon) {
-                if ($pokemon->getPokedexId() === $pokedexId) {
-                    $pokemonList[$code] = $pokemon;
-                }
-            }
-        }
-        usort($pokemonList, function ($v1, $v2) {
-            if ($v1->getPokedexId() > $v2->getPokedexId()) {
-                return 1;
-            } elseif ($v1->getPokedexId() < $v2->getPokedexId()) {
-                return -1;
-            } elseif ($v1->getCode() > $v2->getCode()) {
-                return 1;
-            } elseif ($v1->getCode() < $v2->getCode()) {
-                return -1;
-            }
-            return 0;
-        });
-
-        $result = [];
-        foreach ($pokemonList as $pokemon) {
-            $result[] = [
-                'pokemon' => $pokemon,
-                'reasons' => $this->reasons[$pokemon->getCode()]
-            ];
-//            $name = '#' . $pokemon->getPokedexId() . ' ' . $pokemon->getName();
-//            $subResult = [];
-//            foreach ($this->reasons[$pokemon->getCode()] as $reason) {
-//                $subResult[] = $reason;
-//            }
-//            $result[$name] = $subResult;
-        }
-        return $result;
-    }
-    */
-
     public function getReasons(Pokemon $pokemon)
     {
         return $this->reasons[$pokemon->getCode()] ?? null;
@@ -171,14 +127,7 @@ class Strings
                 }
             }
             if (!empty($sortedBits)) {
-                // TODO: re-enable this when !alola and !galar work again
                 $result[] = '!' . $id . ',!' . implode(',!', $sortedBits);
-                // TODO: remove this when !alola and !galar work again
-//                if (!empty($bits[self::SHADOW])) {
-//                    $result[] = '!' . $id . ',!shadow';
-//                } else {
-//                    $result[] = '!' . $id;
-//                }
             }
         }
 
