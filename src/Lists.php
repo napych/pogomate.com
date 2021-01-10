@@ -22,6 +22,7 @@ class Lists
     const ENT_DATA = 'data';
     const ENT_DEFAULT = 'default';
     const ENT_CLEANUP = 'cleanup';
+    const ENT_LINK = 'link';
 
     const BLOCK_GAMEPRESS = 'GamePress';
     const BLOCK_EVOLUTIONS = 'Evolutions';
@@ -58,13 +59,14 @@ class Lists
             [
                 self::ENT_BLOCK => self::BLOCK_GAMEPRESS,
                 self::ENT_TAG => 'GP_PVE',
-                self::ENT_NAME => 'PVE Attackers',
+                self::ENT_NAME => 'Top Attackers',
                 self::ENT_DESCRIPTION => Gamepress\PVE::DESCRIPTION,
                 self::ENT_CONTENT => self::CONTENT_TIERS,
                 self::ENT_TYPE => self::TYPE_PVE,
                 self::ENT_DATA => Gamepress\PVE::TIERS,
                 self::ENT_DEFAULT => true,
-                self::ENT_CLEANUP => true
+                self::ENT_CLEANUP => true,
+                self::ENT_LINK => 'https://gamepress.gg/pokemongo/attackers-tier-list'
             ],
             [
                 self::ENT_BLOCK => self::BLOCK_GAMEPRESS,
@@ -75,7 +77,8 @@ class Lists
                 self::ENT_TYPE => self::TYPE_GL,
                 self::ENT_DATA => Gamepress\GL::TIERS,
                 self::ENT_DEFAULT => true,
-                self::ENT_CLEANUP => true
+                self::ENT_CLEANUP => true,
+                self::ENT_LINK => 'https://gamepress.gg/pokemongo/great-league-pvp-tier-list'
             ],
             [
                 self::ENT_BLOCK => self::BLOCK_GAMEPRESS,
@@ -86,7 +89,8 @@ class Lists
                 self::ENT_TYPE => self::TYPE_UL,
                 self::ENT_DATA => Gamepress\UL::TIERS,
                 self::ENT_DEFAULT => true,
-                self::ENT_CLEANUP => true
+                self::ENT_CLEANUP => true,
+                self::ENT_LINK => 'https://gamepress.gg/pokemongo/ultra-league-pvp-tier-list'
             ],
             [
                 self::ENT_BLOCK => self::BLOCK_GAMEPRESS,
@@ -97,7 +101,8 @@ class Lists
                 self::ENT_TYPE => self::TYPE_ML,
                 self::ENT_DATA => Gamepress\ML::TIERS,
                 self::ENT_DEFAULT => true,
-                self::ENT_CLEANUP => true
+                self::ENT_CLEANUP => true,
+                self::ENT_LINK => 'https://gamepress.gg/pokemongo/master-league-pvp-tier-list'
             ],
             /*
             [
@@ -115,24 +120,26 @@ class Lists
             [
                 self::ENT_BLOCK => self::BLOCK_GAMEPRESS,
                 self::ENT_TAG => 'GP_DEF',
-                self::ENT_NAME => 'Defenders',
+                self::ENT_NAME => 'Gym defenders',
                 self::ENT_DESCRIPTION => Gamepress\Defenders::DESCRIPTION,
                 self::ENT_CONTENT => self::CONTENT_TIERS,
                 self::ENT_TYPE => self::TYPE_PVE,
                 self::ENT_DATA => Gamepress\Defenders::TIERS,
                 self::ENT_DEFAULT => false,
-                self::ENT_CLEANUP => true
+                self::ENT_CLEANUP => true,
+                self::ENT_LINK => 'https://gamepress.gg/pokemongo/gym-defenders-tier-list'
             ],
             [
                 self::ENT_BLOCK => self::BLOCK_GAMEPRESS,
                 self::ENT_TAG => 'GP_TOP',
-                self::ENT_NAME => 'Top non-legendary',
+                self::ENT_NAME => 'Best by type',
                 self::ENT_DESCRIPTION => Gamepress\Top::DESCRIPTION,
                 self::ENT_CONTENT => self::CONTENT_TIERS,
                 self::ENT_TYPE => self::TYPE_PVE,
                 self::ENT_DATA => Gamepress\Top::TIERS,
                 self::ENT_DEFAULT => true,
-                self::ENT_CLEANUP => true
+                self::ENT_CLEANUP => true,
+                self::ENT_LINK => 'https://gamepress.gg/pokemongo/best-attackers-type'
             ],
         ];
     }
