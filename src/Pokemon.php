@@ -116,6 +116,21 @@ class Pokemon extends Data\Manual\PokemonList
         return PokemonData::POKEMON[$this->code][PokemonData::FIELD_TYPE2] ?? null;
     }
 
+    public function getAttack(): ?int
+    {
+        return PokemonData::POKEMON[$this->code][PokemonData::FIELD_ATTACK] ?? null;
+    }
+
+    public function getDefense(): ?int
+    {
+        return PokemonData::POKEMON[$this->code][PokemonData::FIELD_DEFENSE] ?? null;
+    }
+
+    public function getStamina(): ?int
+    {
+        return PokemonData::POKEMON[$this->code][PokemonData::FIELD_STAMINA] ?? null;
+    }
+
     /**
      * @return int|null
      * @throws Exception

@@ -6,6 +6,9 @@ use Difra\Debugger;
 use Difra\Param\AnyString;
 use Difra\View;
 use Difra\View\HttpError;
+use Pogo\Mate\CP;
+use Pogo\Mate\Level;
+use Pogo\Pokemon\Mods;
 
 class Pokemon extends \Difra\Controller
 {
@@ -67,7 +70,9 @@ class Pokemon extends \Difra\Controller
             $this->setDescription($commonName . ' pokémon information');
         }
 
-        $this->setKeywords(implode(', ', $keywords) . ', attacker tier list, PVP tiers, top PVP, defenders, top by type');
+        $this->setKeywords(
+            implode(', ', $keywords) . ', attacker tier list, PVP tiers, top PVP, defenders, top by type'
+        );
 
         $node = $this->root->appendChild($this->xml->createElement('page-pokemon'));
         $node->setAttribute('name', $commonName);
@@ -139,5 +144,10 @@ class Pokemon extends \Difra\Controller
         }
         $this->outputType = 'application/javascript';
         $this->output = 'const searchList = ' . json_encode($json);
+    }
+
+    protected function testAction()
+    {
+        $this->output = CP::getCP(\Pogo\Pokemon::get(\Pogo\Pokemon::ROSERADE), 14, 15, 12, 36.5);
     }
 }
