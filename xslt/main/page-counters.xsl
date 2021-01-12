@@ -90,7 +90,10 @@
         <xsl:choose>
             <xsl:when test="@front">
                 <h3 class="h5">Front liners</h3>
-                <p>Use them first if you have high CP ones. Those are top DPS attackers, even if they won't last long.
+                <p>
+                    <xsl:text>Use them first if you have high CP ones. They are the best counters dealing x</xsl:text>
+                    <xsl:value-of select="@frontEffect"/>
+                    <xsl:text> damage. It's worth using them, even if they won't last long.</xsl:text>
                 </p>
                 <xsl:call-template name="snippet-string">
                     <xsl:with-param name="name" select="''"/>
@@ -99,8 +102,7 @@
                 <xsl:call-template name="page-counters-suggestions">
                     <xsl:with-param name="pokemon" select="suggestions[@set='best']/pokemon"/>
                 </xsl:call-template>
-                <h3 class="h5">More</h3>
-                <p>The rest of the team.</p>
+                <h3 class="h5">The rest of the team</h3>
                 <xsl:call-template name="snippet-string">
                     <xsl:with-param name="name" select="''"/>
                     <xsl:with-param name="string" select="@team"/>

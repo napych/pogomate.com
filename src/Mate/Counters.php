@@ -56,6 +56,7 @@ class Counters
     protected $goodAttacks = null;
     protected $bestAttacksString = null;
     protected $goodAttacksString = null;
+    protected $bestEffect = 0;
 
     /**
      * Fill best and good attacks
@@ -78,14 +79,14 @@ class Counters
         }
 
         // find out best and good attacks
-        $bestEffect = 0;
+        $this->bestEffect = 0;
         $this->bestAttacks = [];
         $this->goodAttacks = [];
         foreach ($attacks as $attackType => $effectiveness) {
-            if ($effectiveness > $bestEffect) {
-                $bestEffect = $effectiveness;
+            if ($effectiveness > $this->bestEffect) {
+                $this->bestEffect = $effectiveness;
                 $this->bestAttacks = [$attackType];
-            } elseif ($effectiveness === $bestEffect) {
+            } elseif ($effectiveness === $this->bestEffect) {
                 $this->bestAttacks[] = $attackType;
             }
             if ($effectiveness > 1) {
@@ -240,6 +241,7 @@ class Counters
         }
         if ($front = $this->getBestAttacksString()) {
             $node->setAttribute('front', $front);
+            $node->setAttribute('frontEffect', $this->bestEffect);
         }
         $node->setAttribute('team', $this->getGoodAttacksString() . $this->getBadTypesString());
 
