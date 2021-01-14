@@ -25,9 +25,8 @@ class CP
         $attack = $pokemon->getAttack() + $indAttack;
         $defense = $pokemon->getDefense() + $indDefense;
         $stamina = $pokemon->getStamina() + $indStamina;
-        return
-            $attack * sqrt($defense) * sqrt($stamina)
-            * Level::getCpMultiplier($level) * Level::getCpMultiplier($level) / 10
-        ;
+        $cp = $attack * sqrt($defense) * sqrt($stamina)
+            * Level::getCpMultiplier($level) * Level::getCpMultiplier($level) / 10;
+        return $cp >= 10 ? $cp : 10;
     }
 }
