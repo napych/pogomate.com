@@ -7,8 +7,6 @@ use PHPUnit\Framework\TestCase;
 use Pogo\Pokemon;
 use Pogo\Pokemon\Mods;
 
-// CP::getCP(\Pogo\Pokemon::get(\Pogo\Pokemon::ROSERADE), 14, 15, 12, 36.5);
-
 class CPTest extends TestCase
 {
     public function testGetCP1()
@@ -18,6 +16,24 @@ class CPTest extends TestCase
                 $case[5],
                 CP::getCP(Pokemon::get($case[0]), $case[1], $case[2], $case[3], $case[4])
             );
+        }
+    }
+
+    public function testGetCP2()
+    {
+        foreach (self::MULTICASES as $multicase) {
+            $pokemon = Pokemon::get($multicase[0]);
+            $attack = $multicase[1];
+            $defense = $multicase[2];
+            $stamina = $multicase[3];
+            $level = $multicase[4];
+            foreach ($multicase[5] as $cp) {
+                $this->assertEquals(
+                    $cp,
+                    CP::getCP($pokemon, $attack, $defense, $stamina, $level)
+                );
+                $level += 0.5;
+            }
         }
     }
 
@@ -57,11 +73,13 @@ class CPTest extends TestCase
     ];
 
     const MULTICASES = [
+        // pokemon, attack, defense, stamina, starting level, cp list
         [
             Pokemon::RALTS,
             14,
             13,
             14,
+            1,
             [
                 10,
                 15,
@@ -162,6 +180,114 @@ class CPTest extends TestCase
                 585,
                 588,
                 592,
+            ]
+        ],
+        [
+            Pokemon::BLAZIKEN,
+            14,
+            15,
+            13,
+            1,
+            [
+                39,
+                82,
+                125,
+                167,
+                210,
+                252,
+                295,
+                338,
+                380,
+                423,
+                466,
+                508,
+                551,
+                593,
+                636,
+                679,
+                721,
+                764,
+                806,
+                847,
+                887,
+                927,
+                968,
+                1008,
+                1048,
+                1089,
+                1129,
+                1169,
+                1210,
+                1250,
+                1290,
+                1330,
+                1371,
+                1411,
+                1451,
+                1492,
+                1532,
+                1572,
+                1613,
+                1653,
+                1693,
+                1734,
+                1774,
+                1814,
+                1855,
+                1895,
+                1935,
+                1976,
+                2016,
+                2056,
+                2097,
+                2137,
+                2177,
+                2218,
+                2258,
+                2298,
+                2339,
+                2379,
+                2419,
+                2440,
+                2460,
+                2480,
+                2500,
+                2520,
+                2540,
+                2561,
+                2581,
+                2601,
+                2621,
+                2641,
+                2661,
+                2682,
+                2702,
+                2722,
+                2742,
+                2762,
+                2782,
+                2802,
+                2823,
+                2841,
+                2858,
+                2876,
+                2895,
+                2913,
+                2931,
+                2949,
+                2967,
+                2986,
+                3004,
+                3023,
+                3041,
+                3060,
+                3078,
+                3097,
+                3116,
+                3134,
+                3153,
+                3172,
+                3191
             ]
         ]
     ];
