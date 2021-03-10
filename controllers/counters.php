@@ -11,7 +11,7 @@ class Counters extends \Difra\Controller
     {
         $this->setTitle('Pokémon Go raid counters search strings generator');
         $this->setDescription('Pokémon Go Counters search strings generator');
-        $this->setKeywords('pókemon go, team rocket, raid boss, counters');
+        $this->setKeywords('pókemon go, team rocket, raid boss, search string, best counters');
         $this->putExpires(86400);
 
         $node = $this->root->appendChild($this->xml->createElement('page-counters'));
@@ -47,18 +47,15 @@ class Counters extends \Difra\Controller
             } catch (\Exception $e) {
                 throw new \Exception(404);
             }
-            $typeStr = implode('/', $types) . ' type';
+            $typeStr = implode('/', $types);
             if (!empty($attacks)) {
-                $typeStr .= ' with ' . implode('/', $attacks) . ' attacks';
+                $typeStr .= ' type with ' . implode('/', $attacks) . ' attacks';
             }
             $this->setTitle('Pokémon counters for ' . $typeStr);
             $this->setDescription(
-                'Pokémon Go Counters search string for ' . $typeStr . ' bosses, Team Rocket, etc.'
+                'Pokémon Go Counters search string for ' . $typeStr
             );
-            $this->setKeywords(
-                $this->getKeywords() .
-                ', ' . implode(' type, ', $types) . ' type'
-            );
+            $this->setKeywords(implode('/', $types) . ' counters, ' . $this->getKeywords());
             $subNode = $counters->getXML($node, true);
             $subNode->setAttribute('typeStr', $typeStr);
         }
