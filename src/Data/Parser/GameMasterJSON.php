@@ -10,7 +10,7 @@ use Pogo\Pokemon;
 
 class GameMasterJSON
 {
-    const FILE = __DIR__ . '/../blobs/master/1608378319559.json';
+    const FILE = __DIR__ . '/../blobs/master/1612468746305.json';
     const IGNORE_KEYS = [
         'templateId',
         'arTelemetrySettings',

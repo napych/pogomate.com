@@ -373,6 +373,9 @@ class Evolutions
             self::FIELD_PARENT => Pokemon::MAGIKARP,
             self::FIELD_CANDY => 400
         ],
+        Pokemon::GYARADOS | Mods::MEGA => [
+            self::FIELD_PARENT => Pokemon::GYARADOS
+        ],
         Pokemon::VAPOREON => [
             self::FIELD_PARENT => Pokemon::EEVEE,
             self::FIELD_CANDY => 25
@@ -510,6 +513,9 @@ class Evolutions
         Pokemon::AMPHAROS => [
             self::FIELD_PARENT => Pokemon::FLAAFFY,
             self::FIELD_CANDY => 100
+        ],
+        Pokemon::AMPHAROS | Mods::MEGA => [
+            self::FIELD_PARENT => Pokemon::AMPHAROS
         ],
         Pokemon::AZUMARILL => [
             self::FIELD_PARENT => Pokemon::MARILL,
@@ -2342,6 +2348,9 @@ class Evolutions
             self::FIELD_PARENT => Pokemon::MAGIKARP | Mods::SHADOW,
             self::FIELD_CANDY => 400
         ],
+        Pokemon::GYARADOS | Mods::PURIFIED | Mods::MEGA => [
+            self::FIELD_PARENT => Pokemon::GYARADOS | Mods::PURIFIED
+        ],
         Pokemon::PORYGON2 | Mods::PURIFIED => [
             self::FIELD_PARENT => Pokemon::PORYGON | Mods::PURIFIED,
             self::FIELD_ITEM => 'ITEM_UP_GRADE',
@@ -2399,6 +2408,9 @@ class Evolutions
         Pokemon::AMPHAROS | Mods::SHADOW => [
             self::FIELD_PARENT => Pokemon::FLAAFFY | Mods::SHADOW,
             self::FIELD_CANDY => 100
+        ],
+        Pokemon::AMPHAROS | Mods::PURIFIED | Mods::MEGA => [
+            self::FIELD_PARENT => Pokemon::AMPHAROS | Mods::PURIFIED
         ],
         Pokemon::SKIPLOOM | Mods::PURIFIED => [
             self::FIELD_PARENT => Pokemon::HOPPIP | Mods::PURIFIED,
@@ -2489,6 +2501,24 @@ class Evolutions
         Pokemon::URSARING | Mods::SHADOW => [
             self::FIELD_PARENT => Pokemon::TEDDIURSA | Mods::SHADOW,
             self::FIELD_CANDY => 50
+        ],
+        Pokemon::PILOSWINE | Mods::PURIFIED => [
+            self::FIELD_PARENT => Pokemon::SWINUB | Mods::PURIFIED,
+            self::FIELD_CANDY => 22
+        ],
+        Pokemon::PILOSWINE | Mods::SHADOW => [
+            self::FIELD_PARENT => Pokemon::SWINUB | Mods::SHADOW,
+            self::FIELD_CANDY => 25
+        ],
+        Pokemon::MAMOSWINE | Mods::PURIFIED => [
+            self::FIELD_PARENT => Pokemon::PILOSWINE | Mods::PURIFIED,
+            self::FIELD_ITEM => 'ITEM_GEN4_EVOLUTION_STONE',
+            self::FIELD_CANDY => 90
+        ],
+        Pokemon::MAMOSWINE | Mods::SHADOW => [
+            self::FIELD_PARENT => Pokemon::PILOSWINE | Mods::SHADOW,
+            self::FIELD_ITEM => 'ITEM_GEN4_EVOLUTION_STONE',
+            self::FIELD_CANDY => 100
         ],
         Pokemon::HOUNDOOM | Mods::PURIFIED => [
             self::FIELD_PARENT => Pokemon::HOUNDOUR | Mods::PURIFIED,
@@ -2595,6 +2625,32 @@ class Evolutions
             self::FIELD_PARENT => Pokemon::KIRLIA | Mods::SHADOW,
             self::FIELD_CANDY => 100
         ],
+        Pokemon::PROBOPASS | Mods::PURIFIED => [
+            self::FIELD_PARENT => Pokemon::NOSEPASS | Mods::PURIFIED,
+            self::FIELD_CANDY => 45,
+            self::FIELD_LURE => 'ITEM_TROY_DISK_MAGNETIC'
+        ],
+        Pokemon::PROBOPASS | Mods::SHADOW => [
+            self::FIELD_PARENT => Pokemon::NOSEPASS | Mods::SHADOW,
+            self::FIELD_CANDY => 50,
+            self::FIELD_LURE => 'ITEM_TROY_DISK_MAGNETIC'
+        ],
+        Pokemon::LAIRON | Mods::PURIFIED => [
+            self::FIELD_PARENT => Pokemon::ARON | Mods::PURIFIED,
+            self::FIELD_CANDY => 22
+        ],
+        Pokemon::LAIRON | Mods::SHADOW => [
+            self::FIELD_PARENT => Pokemon::ARON | Mods::SHADOW,
+            self::FIELD_CANDY => 25
+        ],
+        Pokemon::AGGRON | Mods::PURIFIED => [
+            self::FIELD_PARENT => Pokemon::LAIRON | Mods::PURIFIED,
+            self::FIELD_CANDY => 90
+        ],
+        Pokemon::AGGRON | Mods::SHADOW => [
+            self::FIELD_PARENT => Pokemon::LAIRON | Mods::SHADOW,
+            self::FIELD_CANDY => 100
+        ],
         Pokemon::SHARPEDO | Mods::PURIFIED => [
             self::FIELD_PARENT => Pokemon::CARAVANHA | Mods::PURIFIED,
             self::FIELD_CANDY => 45
@@ -2627,6 +2683,22 @@ class Evolutions
             self::FIELD_PARENT => Pokemon::CACNEA | Mods::SHADOW,
             self::FIELD_CANDY => 50
         ],
+        Pokemon::CRADILY | Mods::PURIFIED => [
+            self::FIELD_PARENT => Pokemon::LILEEP | Mods::PURIFIED,
+            self::FIELD_CANDY => 45
+        ],
+        Pokemon::CRADILY | Mods::SHADOW => [
+            self::FIELD_PARENT => Pokemon::LILEEP | Mods::SHADOW,
+            self::FIELD_CANDY => 50
+        ],
+        Pokemon::ARMALDO | Mods::PURIFIED => [
+            self::FIELD_PARENT => Pokemon::ANORITH | Mods::PURIFIED,
+            self::FIELD_CANDY => 45
+        ],
+        Pokemon::ARMALDO | Mods::SHADOW => [
+            self::FIELD_PARENT => Pokemon::ANORITH | Mods::SHADOW,
+            self::FIELD_CANDY => 50
+        ],
         Pokemon::BANETTE | Mods::PURIFIED => [
             self::FIELD_PARENT => Pokemon::SHUPPET | Mods::PURIFIED,
             self::FIELD_CANDY => 45
@@ -2651,6 +2723,22 @@ class Evolutions
         Pokemon::DUSKNOIR | Mods::SHADOW => [
             self::FIELD_PARENT => Pokemon::DUSCLOPS | Mods::SHADOW,
             self::FIELD_ITEM => 'ITEM_GEN4_EVOLUTION_STONE',
+            self::FIELD_CANDY => 100
+        ],
+        Pokemon::SEALEO | Mods::PURIFIED => [
+            self::FIELD_PARENT => Pokemon::SPHEAL | Mods::PURIFIED,
+            self::FIELD_CANDY => 22
+        ],
+        Pokemon::SEALEO | Mods::SHADOW => [
+            self::FIELD_PARENT => Pokemon::SPHEAL | Mods::SHADOW,
+            self::FIELD_CANDY => 25
+        ],
+        Pokemon::WALREIN | Mods::PURIFIED => [
+            self::FIELD_PARENT => Pokemon::SEALEO | Mods::PURIFIED,
+            self::FIELD_CANDY => 90
+        ],
+        Pokemon::WALREIN | Mods::SHADOW => [
+            self::FIELD_PARENT => Pokemon::SEALEO | Mods::SHADOW,
             self::FIELD_CANDY => 100
         ],
         Pokemon::SHELGON | Mods::PURIFIED => [

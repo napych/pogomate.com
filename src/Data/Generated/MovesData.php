@@ -552,7 +552,7 @@ class MovesData extends Moves
             self::FIELD_DURATION => 2.7,
             self::FIELD_DMG_WINDOW_START => 1500,
             self::FIELD_DMG_WINDOW_END => 2600,
-            self::FIELD_COMBAT_POWER => 80,
+            self::FIELD_COMBAT_POWER => 75,
             self::FIELD_COMBAT_ENERGY => -45
         ],
         self::MOVE_POWER_GEM => [
@@ -1477,7 +1477,7 @@ class MovesData extends Moves
             self::FIELD_DMG_WINDOW_START => 600,
             self::FIELD_DMG_WINDOW_END => 800,
             self::FIELD_COMBAT_POWER => 5,
-            self::FIELD_COMBAT_ENERGY => 7
+            self::FIELD_COMBAT_ENERGY => 8
         ],
         self::MOVE_EMBER_FAST => [
             self::FIELD_NAME => 'Ember',
@@ -1490,7 +1490,7 @@ class MovesData extends Moves
             self::FIELD_DURATION => 1,
             self::FIELD_DMG_WINDOW_START => 600,
             self::FIELD_DMG_WINDOW_END => 800,
-            self::FIELD_COMBAT_POWER => 6,
+            self::FIELD_COMBAT_POWER => 7,
             self::FIELD_COMBAT_ENERGY => 6
         ],
         self::MOVE_WING_ATTACK_FAST => [
@@ -1574,7 +1574,7 @@ class MovesData extends Moves
             self::FIELD_DURATION => 1,
             self::FIELD_DMG_WINDOW_START => 600,
             self::FIELD_DMG_WINDOW_END => 850,
-            self::FIELD_COMBAT_POWER => 11,
+            self::FIELD_COMBAT_POWER => 10,
             self::FIELD_COMBAT_ENERGY => 4
         ],
         self::MOVE_MUD_SHOT_FAST => [
@@ -1882,7 +1882,7 @@ class MovesData extends Moves
             self::FIELD_DURATION => 1.2,
             self::FIELD_DMG_WINDOW_START => 750,
             self::FIELD_DMG_WINDOW_END => 1000,
-            self::FIELD_COMBAT_POWER => 8,
+            self::FIELD_COMBAT_POWER => 7,
             self::FIELD_COMBAT_ENERGY => 11
         ],
         self::MOVE_FEINT_ATTACK_FAST => [
@@ -2162,7 +2162,7 @@ class MovesData extends Moves
             self::FIELD_DURATION => 2,
             self::FIELD_DMG_WINDOW_START => 1500,
             self::FIELD_DMG_WINDOW_END => 1700,
-            self::FIELD_COMBAT_POWER => 80,
+            self::FIELD_COMBAT_POWER => 75,
             self::FIELD_COMBAT_ENERGY => -45
         ],
         self::MOVE_SAND_TOMB => [
@@ -2834,7 +2834,7 @@ class MovesData extends Moves
             self::FIELD_DURATION => 1.9,
             self::FIELD_DMG_WINDOW_START => 1500,
             self::FIELD_DMG_WINDOW_END => 1750,
-            self::FIELD_COMBAT_POWER => 75,
+            self::FIELD_COMBAT_POWER => 85,
             self::FIELD_COMBAT_ENERGY => -50
         ],
         self::MOVE_LUNGE => [
@@ -2974,7 +2974,7 @@ class MovesData extends Moves
             self::FIELD_DURATION => 2.8,
             self::FIELD_DMG_WINDOW_START => 2250,
             self::FIELD_DMG_WINDOW_END => 2700,
-            self::FIELD_COMBAT_POWER => 80,
+            self::FIELD_COMBAT_POWER => 75,
             self::FIELD_COMBAT_ENERGY => -45
         ],
         self::MOVE_MUDDY_WATER => [
@@ -3215,6 +3215,20 @@ class MovesData extends Moves
             self::FIELD_COMBAT_POWER => 100,
             self::FIELD_COMBAT_ENERGY => -55
         ],
+        self::MOVE_PAYBACK => [
+            self::FIELD_NAME => 'Payback',
+            self::FIELD_CLASS => self::CLASS_CHARGE,
+            self::FIELD_TYPE => Types::DARK,
+            self::FIELD_POWER => 100,
+            self::FIELD_ACCURACY => 1,
+            self::FIELD_CRIT => null,
+            self::FIELD_ENERGY => -100,
+            self::FIELD_DURATION => 2.2,
+            self::FIELD_DMG_WINDOW_START => 1100,
+            self::FIELD_DMG_WINDOW_END => 2000,
+            self::FIELD_COMBAT_POWER => 110,
+            self::FIELD_COMBAT_ENERGY => -60
+        ],
         self::MOVE_ROCK_WRECKER => [
             self::FIELD_NAME => 'Rock Wrecker',
             self::FIELD_CLASS => self::CLASS_CHARGE,
@@ -3242,6 +3256,76 @@ class MovesData extends Moves
             self::FIELD_DMG_WINDOW_END => 3400,
             self::FIELD_COMBAT_POWER => 170,
             self::FIELD_COMBAT_ENERGY => -75
+        ],
+        self::MOVE_TECHNO_BLAST_NORMAL => [
+            self::FIELD_NAME => '',
+            self::FIELD_CLASS => self::CLASS_CHARGE,
+            self::FIELD_TYPE => Types::NORMAL,
+            self::FIELD_POWER => 120,
+            self::FIELD_ACCURACY => 1,
+            self::FIELD_CRIT => null,
+            self::FIELD_ENERGY => -100,
+            self::FIELD_DURATION => 2,
+            self::FIELD_DMG_WINDOW_START => 1600,
+            self::FIELD_DMG_WINDOW_END => 2000,
+            self::FIELD_COMBAT_POWER => 120,
+            self::FIELD_COMBAT_ENERGY => -55
+        ],
+        self::MOVE_TECHNO_BLAST_BURN => [
+            self::FIELD_NAME => '',
+            self::FIELD_CLASS => self::CLASS_CHARGE,
+            self::FIELD_TYPE => Types::FIRE,
+            self::FIELD_POWER => 120,
+            self::FIELD_ACCURACY => 1,
+            self::FIELD_CRIT => null,
+            self::FIELD_ENERGY => -100,
+            self::FIELD_DURATION => 2,
+            self::FIELD_DMG_WINDOW_START => 1400,
+            self::FIELD_DMG_WINDOW_END => 2000,
+            self::FIELD_COMBAT_POWER => 120,
+            self::FIELD_COMBAT_ENERGY => -55
+        ],
+        self::MOVE_TECHNO_BLAST_CHILL => [
+            self::FIELD_NAME => '',
+            self::FIELD_CLASS => self::CLASS_CHARGE,
+            self::FIELD_TYPE => Types::ICE,
+            self::FIELD_POWER => 120,
+            self::FIELD_ACCURACY => 1,
+            self::FIELD_CRIT => null,
+            self::FIELD_ENERGY => -100,
+            self::FIELD_DURATION => 2,
+            self::FIELD_DMG_WINDOW_START => 1400,
+            self::FIELD_DMG_WINDOW_END => 2000,
+            self::FIELD_COMBAT_POWER => 120,
+            self::FIELD_COMBAT_ENERGY => -55
+        ],
+        self::MOVE_TECHNO_BLAST_WATER => [
+            self::FIELD_NAME => '',
+            self::FIELD_CLASS => self::CLASS_CHARGE,
+            self::FIELD_TYPE => Types::WATER,
+            self::FIELD_POWER => 120,
+            self::FIELD_ACCURACY => 1,
+            self::FIELD_CRIT => null,
+            self::FIELD_ENERGY => -100,
+            self::FIELD_DURATION => 2,
+            self::FIELD_DMG_WINDOW_START => 1500,
+            self::FIELD_DMG_WINDOW_END => 2000,
+            self::FIELD_COMBAT_POWER => 120,
+            self::FIELD_COMBAT_ENERGY => -55
+        ],
+        self::MOVE_TECHNO_BLAST_SHOCK => [
+            self::FIELD_NAME => '',
+            self::FIELD_CLASS => self::CLASS_CHARGE,
+            self::FIELD_TYPE => Types::ELECTRIC,
+            self::FIELD_POWER => 120,
+            self::FIELD_ACCURACY => 1,
+            self::FIELD_CRIT => null,
+            self::FIELD_ENERGY => -100,
+            self::FIELD_DURATION => 2,
+            self::FIELD_DMG_WINDOW_START => 1600,
+            self::FIELD_DMG_WINDOW_END => 2000,
+            self::FIELD_COMBAT_POWER => 120,
+            self::FIELD_COMBAT_ENERGY => -55
         ],
         self::MOVE_FLY => [
             self::FIELD_NAME => 'Fly',

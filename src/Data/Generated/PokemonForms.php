@@ -612,6 +612,8 @@ class PokemonForms
         ],
         Pokemon::GYARADOS => [
             Pokemon::GYARADOS,
+            Pokemon::GYARADOS | Mods::MEGA,
+            Pokemon::GYARADOS | Mods::PURIFIED | Mods::MEGA,
             Pokemon::GYARADOS | Mods::PURIFIED,
             Pokemon::GYARADOS | Mods::SHADOW,
         ],
@@ -804,6 +806,8 @@ class PokemonForms
         ],
         Pokemon::AMPHAROS => [
             Pokemon::AMPHAROS,
+            Pokemon::AMPHAROS | Mods::MEGA,
+            Pokemon::AMPHAROS | Mods::PURIFIED | Mods::MEGA,
             Pokemon::AMPHAROS | Mods::PURIFIED,
             Pokemon::AMPHAROS | Mods::SHADOW,
         ],
@@ -965,9 +969,13 @@ class PokemonForms
         ],
         Pokemon::SWINUB => [
             Pokemon::SWINUB,
+            Pokemon::SWINUB | Mods::PURIFIED,
+            Pokemon::SWINUB | Mods::SHADOW,
         ],
         Pokemon::PILOSWINE => [
             Pokemon::PILOSWINE,
+            Pokemon::PILOSWINE | Mods::PURIFIED,
+            Pokemon::PILOSWINE | Mods::SHADOW,
         ],
         Pokemon::CORSOLA => [
             Pokemon::CORSOLA,
@@ -1253,6 +1261,8 @@ class PokemonForms
         ],
         Pokemon::NOSEPASS => [
             Pokemon::NOSEPASS,
+            Pokemon::NOSEPASS | Mods::PURIFIED,
+            Pokemon::NOSEPASS | Mods::SHADOW,
         ],
         Pokemon::SKITTY => [
             Pokemon::SKITTY,
@@ -1272,12 +1282,18 @@ class PokemonForms
         ],
         Pokemon::ARON => [
             Pokemon::ARON,
+            Pokemon::ARON | Mods::PURIFIED,
+            Pokemon::ARON | Mods::SHADOW,
         ],
         Pokemon::LAIRON => [
             Pokemon::LAIRON,
+            Pokemon::LAIRON | Mods::PURIFIED,
+            Pokemon::LAIRON | Mods::SHADOW,
         ],
         Pokemon::AGGRON => [
             Pokemon::AGGRON,
+            Pokemon::AGGRON | Mods::PURIFIED,
+            Pokemon::AGGRON | Mods::SHADOW,
         ],
         Pokemon::MEDITITE => [
             Pokemon::MEDITITE,
@@ -1409,15 +1425,23 @@ class PokemonForms
         ],
         Pokemon::LILEEP => [
             Pokemon::LILEEP,
+            Pokemon::LILEEP | Mods::PURIFIED,
+            Pokemon::LILEEP | Mods::SHADOW,
         ],
         Pokemon::CRADILY => [
             Pokemon::CRADILY,
+            Pokemon::CRADILY | Mods::PURIFIED,
+            Pokemon::CRADILY | Mods::SHADOW,
         ],
         Pokemon::ANORITH => [
             Pokemon::ANORITH,
+            Pokemon::ANORITH | Mods::PURIFIED,
+            Pokemon::ANORITH | Mods::SHADOW,
         ],
         Pokemon::ARMALDO => [
             Pokemon::ARMALDO,
+            Pokemon::ARMALDO | Mods::PURIFIED,
+            Pokemon::ARMALDO | Mods::SHADOW,
         ],
         Pokemon::FEEBAS => [
             Pokemon::FEEBAS,
@@ -1476,12 +1500,18 @@ class PokemonForms
         ],
         Pokemon::SPHEAL => [
             Pokemon::SPHEAL,
+            Pokemon::SPHEAL | Mods::PURIFIED,
+            Pokemon::SPHEAL | Mods::SHADOW,
         ],
         Pokemon::SEALEO => [
             Pokemon::SEALEO,
+            Pokemon::SEALEO | Mods::PURIFIED,
+            Pokemon::SEALEO | Mods::SHADOW,
         ],
         Pokemon::WALREIN => [
             Pokemon::WALREIN,
+            Pokemon::WALREIN | Mods::PURIFIED,
+            Pokemon::WALREIN | Mods::SHADOW,
         ],
         Pokemon::CLAMPERL => [
             Pokemon::CLAMPERL,
@@ -1878,6 +1908,8 @@ class PokemonForms
         ],
         Pokemon::MAMOSWINE => [
             Pokemon::MAMOSWINE,
+            Pokemon::MAMOSWINE | Mods::PURIFIED,
+            Pokemon::MAMOSWINE | Mods::SHADOW,
         ],
         Pokemon::PORYGON_Z => [
             Pokemon::PORYGON_Z,
@@ -1891,6 +1923,8 @@ class PokemonForms
         ],
         Pokemon::PROBOPASS => [
             Pokemon::PROBOPASS,
+            Pokemon::PROBOPASS | Mods::PURIFIED,
+            Pokemon::PROBOPASS | Mods::SHADOW,
         ],
         Pokemon::DUSKNOIR => [
             Pokemon::DUSKNOIR,

@@ -232,8 +232,14 @@ class Moves
     const MOVE_SACRED_SWORD = 330;
     const MOVE_FLYING_PRESS = 331;
     const MOVE_AURA_SPHERE = 332;
+    const MOVE_PAYBACK = 333;
     const MOVE_ROCK_WRECKER = 334;
     const MOVE_AEROBLAST = 335;
+    const MOVE_TECHNO_BLAST_NORMAL = 336;
+    const MOVE_TECHNO_BLAST_BURN = 337;
+    const MOVE_TECHNO_BLAST_CHILL = 338;
+    const MOVE_TECHNO_BLAST_WATER = 339;
+    const MOVE_TECHNO_BLAST_SHOCK = 340;
     const MOVE_FLY = 341;
     const MOVE_V_CREATE = 342;
     const MOVE_TRI_ATTACK = 344;

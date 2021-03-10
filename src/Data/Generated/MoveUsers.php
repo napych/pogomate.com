@@ -186,6 +186,8 @@ class MoveUsers
             Pokemon::SKIPLOOM | Mods::SHADOW,
             Pokemon::PINECO | Mods::PURIFIED,
             Pokemon::PINECO | Mods::SHADOW,
+            Pokemon::SWINUB | Mods::PURIFIED,
+            Pokemon::SWINUB | Mods::SHADOW,
             Pokemon::STANTLER | Mods::PURIFIED,
             Pokemon::STANTLER | Mods::SHADOW,
             Pokemon::MUDKIP | Mods::PURIFIED,
@@ -194,6 +196,8 @@ class MoveUsers
             Pokemon::ZIGZAGOON | Mods::SHADOW,
             Pokemon::LINOONE | Mods::PURIFIED,
             Pokemon::LINOONE | Mods::SHADOW,
+            Pokemon::ARON | Mods::PURIFIED,
+            Pokemon::ARON | Mods::SHADOW,
             Pokemon::TURTWIG | Mods::PURIFIED,
             Pokemon::TURTWIG | Mods::SHADOW,
             Pokemon::HIPPOPOTAS | Mods::PURIFIED,
@@ -692,6 +696,8 @@ class MoveUsers
             Pokemon::AIPOM | Mods::SHADOW,
             Pokemon::TEDDIURSA | Mods::PURIFIED,
             Pokemon::TEDDIURSA | Mods::SHADOW,
+            Pokemon::ANORITH | Mods::PURIFIED,
+            Pokemon::ANORITH | Mods::SHADOW,
             Pokemon::CHIMCHAR | Mods::PURIFIED,
             Pokemon::CHIMCHAR | Mods::SHADOW,
             Pokemon::AMBIPOM | Mods::PURIFIED,
@@ -1079,6 +1085,8 @@ class MoveUsers
             Pokemon::CHARIZARD | Mods::PURIFIED | Mods::MEGA_Y,
             Pokemon::CHARIZARD | Mods::PURIFIED,
             Pokemon::CHARIZARD | Mods::SHADOW,
+            Pokemon::GYARADOS | Mods::MEGA,
+            Pokemon::GYARADOS | Mods::PURIFIED | Mods::MEGA,
             Pokemon::GYARADOS | Mods::PURIFIED,
             Pokemon::GYARADOS | Mods::SHADOW,
             Pokemon::DRATINI | Mods::PURIFIED,
@@ -1316,7 +1324,9 @@ class MoveUsers
             Pokemon::KABUTO | Mods::PURIFIED,
             Pokemon::KABUTO | Mods::SHADOW,
             Pokemon::CARAVANHA | Mods::PURIFIED,
-            Pokemon::CARAVANHA | Mods::SHADOW
+            Pokemon::CARAVANHA | Mods::SHADOW,
+            Pokemon::ANORITH | Mods::PURIFIED,
+            Pokemon::ANORITH | Mods::SHADOW
         ],
         Moves::MOVE_AQUA_TAIL => [
             Pokemon::SQUIRTLE,
@@ -1350,6 +1360,8 @@ class MoveUsers
             Pokemon::SQUIRTLE | Mods::SHADOW,
             Pokemon::PSYDUCK | Mods::PURIFIED,
             Pokemon::PSYDUCK | Mods::SHADOW,
+            Pokemon::GYARADOS | Mods::MEGA,
+            Pokemon::GYARADOS | Mods::PURIFIED | Mods::MEGA,
             Pokemon::GYARADOS | Mods::PURIFIED,
             Pokemon::GYARADOS | Mods::SHADOW,
             Pokemon::DRATINI | Mods::PURIFIED,
@@ -1427,7 +1439,15 @@ class MoveUsers
             Pokemon::KABUTOPS | Mods::PURIFIED,
             Pokemon::KABUTOPS | Mods::SHADOW,
             Pokemon::SUICUNE | Mods::PURIFIED,
-            Pokemon::SUICUNE | Mods::SHADOW
+            Pokemon::SUICUNE | Mods::SHADOW,
+            Pokemon::ARMALDO | Mods::PURIFIED,
+            Pokemon::ARMALDO | Mods::SHADOW,
+            Pokemon::SPHEAL | Mods::PURIFIED,
+            Pokemon::SPHEAL | Mods::SHADOW,
+            Pokemon::SEALEO | Mods::PURIFIED,
+            Pokemon::SEALEO | Mods::SHADOW,
+            Pokemon::WALREIN | Mods::PURIFIED,
+            Pokemon::WALREIN | Mods::SHADOW
         ],
         Moves::MOVE_WATER_GUN_FAST => [
             Pokemon::WARTORTLE,
@@ -1529,7 +1549,11 @@ class MoveUsers
             Pokemon::MARSHTOMP | Mods::PURIFIED,
             Pokemon::MARSHTOMP | Mods::SHADOW,
             Pokemon::SWAMPERT | Mods::PURIFIED,
-            Pokemon::SWAMPERT | Mods::SHADOW
+            Pokemon::SWAMPERT | Mods::SHADOW,
+            Pokemon::SPHEAL | Mods::PURIFIED,
+            Pokemon::SPHEAL | Mods::SHADOW,
+            Pokemon::SEALEO | Mods::PURIFIED,
+            Pokemon::SEALEO | Mods::SHADOW
         ],
         Moves::MOVE_BITE_FAST => [
             Pokemon::WARTORTLE,
@@ -1622,6 +1646,8 @@ class MoveUsers
             Pokemon::GROWLITHE | Mods::SHADOW,
             Pokemon::ARCANINE | Mods::PURIFIED,
             Pokemon::ARCANINE | Mods::SHADOW,
+            Pokemon::GYARADOS | Mods::MEGA,
+            Pokemon::GYARADOS | Mods::PURIFIED | Mods::MEGA,
             Pokemon::GYARADOS | Mods::PURIFIED,
             Pokemon::GYARADOS | Mods::SHADOW,
             Pokemon::AERODACTYL | Mods::PURIFIED,
@@ -1685,6 +1711,7 @@ class MoveUsers
             Pokemon::SWALOT,
             Pokemon::SWABLU,
             Pokemon::BARBOACH,
+            Pokemon::CLAYDOL,
             Pokemon::CASTFORM | FormsAlias::CASTFORM_SNOWY,
             Pokemon::KECLEON,
             Pokemon::CLAMPERL,
@@ -1778,6 +1805,8 @@ class MoveUsers
             Pokemon::POLIWRATH | Mods::SHADOW,
             Pokemon::CLOYSTER | Mods::PURIFIED,
             Pokemon::CLOYSTER | Mods::SHADOW,
+            Pokemon::GYARADOS | Mods::MEGA,
+            Pokemon::GYARADOS | Mods::PURIFIED | Mods::MEGA,
             Pokemon::GYARADOS | Mods::PURIFIED,
             Pokemon::GYARADOS | Mods::SHADOW,
             Pokemon::LAPRAS | Mods::PURIFIED,
@@ -1987,7 +2016,11 @@ class MoveUsers
             Pokemon::SHUCKLE | Mods::PURIFIED,
             Pokemon::SHUCKLE | Mods::SHADOW,
             Pokemon::TRAPINCH | Mods::PURIFIED,
-            Pokemon::TRAPINCH | Mods::SHADOW
+            Pokemon::TRAPINCH | Mods::SHADOW,
+            Pokemon::ANORITH | Mods::PURIFIED,
+            Pokemon::ANORITH | Mods::SHADOW,
+            Pokemon::ARMALDO | Mods::PURIFIED,
+            Pokemon::ARMALDO | Mods::SHADOW
         ],
         Moves::MOVE_CONFUSION_FAST => [
             Pokemon::BUTTERFREE,
@@ -2341,7 +2374,11 @@ class MoveUsers
             Pokemon::WEEZING | Mods::PURIFIED,
             Pokemon::WEEZING | Mods::SHADOW,
             Pokemon::JUMPLUFF | Mods::PURIFIED,
-            Pokemon::JUMPLUFF | Mods::SHADOW
+            Pokemon::JUMPLUFF | Mods::SHADOW,
+            Pokemon::LILEEP | Mods::PURIFIED,
+            Pokemon::LILEEP | Mods::SHADOW,
+            Pokemon::CRADILY | Mods::PURIFIED,
+            Pokemon::CRADILY | Mods::SHADOW
         ],
         Moves::MOVE_POISON_JAB_FAST => [
             Pokemon::BEEDRILL,
@@ -2618,6 +2655,8 @@ class MoveUsers
             Pokemon::GIBLE,
             Pokemon::GABITE,
             Pokemon::SKRELP,
+            Pokemon::GYARADOS | Mods::MEGA,
+            Pokemon::GYARADOS | Mods::PURIFIED | Mods::MEGA,
             Pokemon::GYARADOS | Mods::PURIFIED,
             Pokemon::GYARADOS | Mods::SHADOW,
             Pokemon::DRATINI | Mods::PURIFIED,
@@ -2705,6 +2744,7 @@ class MoveUsers
             Pokemon::SHIFTRY,
             Pokemon::PELIPPER,
             Pokemon::CASTFORM | FormsAlias::CASTFORM_NORMAL,
+            Pokemon::RAYQUAZA,
             Pokemon::WHIMSICOTT,
             Pokemon::SWANNA,
             Pokemon::VOLCARONA,
@@ -2932,6 +2972,16 @@ class MoveUsers
             Pokemon::MAREEP | Mods::SHADOW,
             Pokemon::WOOPER | Mods::PURIFIED,
             Pokemon::WOOPER | Mods::SHADOW,
+            Pokemon::SWINUB | Mods::PURIFIED,
+            Pokemon::SWINUB | Mods::SHADOW,
+            Pokemon::ARON | Mods::PURIFIED,
+            Pokemon::ARON | Mods::SHADOW,
+            Pokemon::LAIRON | Mods::PURIFIED,
+            Pokemon::LAIRON | Mods::SHADOW,
+            Pokemon::SPHEAL | Mods::PURIFIED,
+            Pokemon::SPHEAL | Mods::SHADOW,
+            Pokemon::SEALEO | Mods::PURIFIED,
+            Pokemon::SEALEO | Mods::SHADOW,
             Pokemon::TURTWIG | Mods::PURIFIED,
             Pokemon::TURTWIG | Mods::SHADOW,
             Pokemon::GROTLE | Mods::PURIFIED,
@@ -3147,7 +3197,11 @@ class MoveUsers
             Pokemon::VICTREEBEL | Mods::PURIFIED,
             Pokemon::VICTREEBEL | Mods::SHADOW,
             Pokemon::BELLOSSOM | Mods::PURIFIED,
-            Pokemon::BELLOSSOM | Mods::SHADOW
+            Pokemon::BELLOSSOM | Mods::SHADOW,
+            Pokemon::LILEEP | Mods::PURIFIED,
+            Pokemon::LILEEP | Mods::SHADOW,
+            Pokemon::CRADILY | Mods::PURIFIED,
+            Pokemon::CRADILY | Mods::SHADOW
         ],
         Moves::MOVE_WRAP => [
             Pokemon::EKANS,
@@ -3258,12 +3312,16 @@ class MoveUsers
             Pokemon::EXEGGUTOR | Mods::ALOLAN,
             Pokemon::ARBOK | Mods::PURIFIED,
             Pokemon::ARBOK | Mods::SHADOW,
+            Pokemon::GYARADOS | Mods::MEGA,
+            Pokemon::GYARADOS | Mods::PURIFIED | Mods::MEGA,
             Pokemon::GYARADOS | Mods::PURIFIED,
             Pokemon::GYARADOS | Mods::SHADOW,
             Pokemon::DRAGONITE | Mods::PURIFIED,
             Pokemon::DRAGONITE | Mods::SHADOW,
             Pokemon::STEELIX | Mods::PURIFIED,
             Pokemon::STEELIX | Mods::SHADOW,
+            Pokemon::AGGRON | Mods::PURIFIED,
+            Pokemon::AGGRON | Mods::SHADOW,
             Pokemon::FLYGON | Mods::PURIFIED,
             Pokemon::FLYGON | Mods::SHADOW,
             Pokemon::SALAMENCE | Mods::PURIFIED,
@@ -3574,8 +3632,12 @@ class MoveUsers
             Pokemon::RAIKOU | Mods::SHADOW,
             Pokemon::ZIGZAGOON | Mods::PURIFIED,
             Pokemon::ZIGZAGOON | Mods::SHADOW,
+            Pokemon::NOSEPASS | Mods::PURIFIED,
+            Pokemon::NOSEPASS | Mods::SHADOW,
             Pokemon::MAGMORTAR | Mods::PURIFIED,
-            Pokemon::MAGMORTAR | Mods::SHADOW
+            Pokemon::MAGMORTAR | Mods::SHADOW,
+            Pokemon::PROBOPASS | Mods::PURIFIED,
+            Pokemon::PROBOPASS | Mods::SHADOW
         ],
         Moves::MOVE_WILD_CHARGE => [
             Pokemon::PIKACHU,
@@ -3700,12 +3762,16 @@ class MoveUsers
             Pokemon::ELECTABUZZ | Mods::SHADOW,
             Pokemon::ZAPDOS | Mods::PURIFIED,
             Pokemon::ZAPDOS | Mods::SHADOW,
+            Pokemon::AMPHAROS | Mods::MEGA,
+            Pokemon::AMPHAROS | Mods::PURIFIED | Mods::MEGA,
             Pokemon::AMPHAROS | Mods::PURIFIED,
             Pokemon::AMPHAROS | Mods::SHADOW,
             Pokemon::RAIKOU | Mods::PURIFIED,
             Pokemon::RAIKOU | Mods::SHADOW,
             Pokemon::LINOONE | Mods::PURIFIED,
             Pokemon::LINOONE | Mods::SHADOW,
+            Pokemon::AGGRON | Mods::PURIFIED,
+            Pokemon::AGGRON | Mods::SHADOW,
             Pokemon::BANETTE | Mods::PURIFIED,
             Pokemon::BANETTE | Mods::SHADOW,
             Pokemon::ABSOL | Mods::PURIFIED,
@@ -3729,6 +3795,8 @@ class MoveUsers
             Pokemon::GEODUDE | Mods::ALOLAN,
             Pokemon::GRAVELER | Mods::ALOLAN,
             Pokemon::GOLEM | Mods::ALOLAN,
+            Pokemon::AMPHAROS | Mods::MEGA,
+            Pokemon::AMPHAROS | Mods::PURIFIED | Mods::MEGA,
             Pokemon::AMPHAROS | Mods::PURIFIED,
             Pokemon::AMPHAROS | Mods::SHADOW,
             Pokemon::RAIKOU | Mods::PURIFIED,
@@ -3763,8 +3831,12 @@ class MoveUsers
             Pokemon::MAGNEMITE | Mods::SHADOW,
             Pokemon::MAGNETON | Mods::PURIFIED,
             Pokemon::MAGNETON | Mods::SHADOW,
+            Pokemon::NOSEPASS | Mods::PURIFIED,
+            Pokemon::NOSEPASS | Mods::SHADOW,
             Pokemon::MAGNEZONE | Mods::PURIFIED,
-            Pokemon::MAGNEZONE | Mods::SHADOW
+            Pokemon::MAGNEZONE | Mods::SHADOW,
+            Pokemon::PROBOPASS | Mods::PURIFIED,
+            Pokemon::PROBOPASS | Mods::SHADOW
         ],
         Moves::MOVE_CHARM_FAST => [
             Pokemon::RAICHU,
@@ -3872,6 +3944,8 @@ class MoveUsers
             Pokemon::HITMONCHAN | Mods::SHADOW,
             Pokemon::ELECTABUZZ | Mods::PURIFIED,
             Pokemon::ELECTABUZZ | Mods::SHADOW,
+            Pokemon::AMPHAROS | Mods::MEGA,
+            Pokemon::AMPHAROS | Mods::PURIFIED | Mods::MEGA,
             Pokemon::AMPHAROS | Mods::PURIFIED,
             Pokemon::AMPHAROS | Mods::SHADOW,
             Pokemon::ELECTIVIRE | Mods::PURIFIED,
@@ -3907,6 +3981,7 @@ class MoveUsers
             Pokemon::GIBLE,
             Pokemon::GABITE,
             Pokemon::GARCHOMP,
+            Pokemon::EXCADRILL,
             Pokemon::TYMPOLE,
             Pokemon::PALPITOAD,
             Pokemon::SEISMITOAD,
@@ -4023,7 +4098,15 @@ class MoveUsers
             Pokemon::OMASTAR | Mods::PURIFIED,
             Pokemon::OMASTAR | Mods::SHADOW,
             Pokemon::AERODACTYL | Mods::PURIFIED,
-            Pokemon::AERODACTYL | Mods::SHADOW
+            Pokemon::AERODACTYL | Mods::SHADOW,
+            Pokemon::SWINUB | Mods::PURIFIED,
+            Pokemon::SWINUB | Mods::SHADOW,
+            Pokemon::NOSEPASS | Mods::PURIFIED,
+            Pokemon::NOSEPASS | Mods::SHADOW,
+            Pokemon::LAIRON | Mods::PURIFIED,
+            Pokemon::LAIRON | Mods::SHADOW,
+            Pokemon::PROBOPASS | Mods::PURIFIED,
+            Pokemon::PROBOPASS | Mods::SHADOW
         ],
         Moves::MOVE_SAND_TOMB => [
             Pokemon::SANDSHREW,
@@ -4101,6 +4184,8 @@ class MoveUsers
             Pokemon::PINECO | Mods::SHADOW,
             Pokemon::FORRETRESS | Mods::PURIFIED,
             Pokemon::FORRETRESS | Mods::SHADOW,
+            Pokemon::ARON | Mods::PURIFIED,
+            Pokemon::ARON | Mods::SHADOW,
             Pokemon::HIPPOPOTAS | Mods::PURIFIED,
             Pokemon::HIPPOPOTAS | Mods::SHADOW,
             Pokemon::RUNERIGUS | Mods::PURIFIED,
@@ -4143,6 +4228,10 @@ class MoveUsers
             Pokemon::KINGLER | Mods::SHADOW,
             Pokemon::URSARING | Mods::PURIFIED,
             Pokemon::URSARING | Mods::SHADOW,
+            Pokemon::ARON | Mods::PURIFIED,
+            Pokemon::ARON | Mods::SHADOW,
+            Pokemon::LAIRON | Mods::PURIFIED,
+            Pokemon::LAIRON | Mods::SHADOW,
             Pokemon::METANG | Mods::PURIFIED,
             Pokemon::METANG | Mods::SHADOW,
             Pokemon::PERRSERKER | Mods::PURIFIED,
@@ -4232,6 +4321,8 @@ class MoveUsers
             Pokemon::SWAMPERT | Mods::SHADOW,
             Pokemon::FLYGON | Mods::PURIFIED,
             Pokemon::FLYGON | Mods::SHADOW,
+            Pokemon::WALREIN | Mods::PURIFIED,
+            Pokemon::WALREIN | Mods::SHADOW,
             Pokemon::METAGROSS | Mods::PURIFIED,
             Pokemon::METAGROSS | Mods::SHADOW,
             Pokemon::TORTERRA | Mods::PURIFIED,
@@ -4280,8 +4371,14 @@ class MoveUsers
             Pokemon::CUBONE | Mods::SHADOW,
             Pokemon::RHYHORN | Mods::PURIFIED,
             Pokemon::RHYHORN | Mods::SHADOW,
+            Pokemon::PILOSWINE | Mods::PURIFIED,
+            Pokemon::PILOSWINE | Mods::SHADOW,
             Pokemon::VIBRAVA | Mods::PURIFIED,
-            Pokemon::VIBRAVA | Mods::SHADOW
+            Pokemon::VIBRAVA | Mods::SHADOW,
+            Pokemon::CRADILY | Mods::PURIFIED,
+            Pokemon::CRADILY | Mods::SHADOW,
+            Pokemon::MAMOSWINE | Mods::PURIFIED,
+            Pokemon::MAMOSWINE | Mods::SHADOW
         ],
         Moves::MOVE_STONE_EDGE => [
             Pokemon::NIDOQUEEN,
@@ -4349,16 +4446,24 @@ class MoveUsers
             Pokemon::QUAGSIRE | Mods::SHADOW,
             Pokemon::SHUCKLE | Mods::PURIFIED,
             Pokemon::SHUCKLE | Mods::SHADOW,
+            Pokemon::PILOSWINE | Mods::PURIFIED,
+            Pokemon::PILOSWINE | Mods::SHADOW,
             Pokemon::TYRANITAR | Mods::PURIFIED,
             Pokemon::TYRANITAR | Mods::SHADOW,
+            Pokemon::AGGRON | Mods::PURIFIED,
+            Pokemon::AGGRON | Mods::SHADOW,
             Pokemon::FLYGON | Mods::PURIFIED,
             Pokemon::FLYGON | Mods::SHADOW,
+            Pokemon::CRADILY | Mods::PURIFIED,
+            Pokemon::CRADILY | Mods::SHADOW,
             Pokemon::TORTERRA | Mods::PURIFIED,
             Pokemon::TORTERRA | Mods::SHADOW,
             Pokemon::HIPPOWDON | Mods::PURIFIED,
             Pokemon::HIPPOWDON | Mods::SHADOW,
             Pokemon::RHYPERIOR | Mods::PURIFIED,
-            Pokemon::RHYPERIOR | Mods::SHADOW
+            Pokemon::RHYPERIOR | Mods::SHADOW,
+            Pokemon::MAMOSWINE | Mods::PURIFIED,
+            Pokemon::MAMOSWINE | Mods::SHADOW
         ],
         Moves::MOVE_EARTH_POWER => [
             Pokemon::NIDOQUEEN,
@@ -4445,7 +4550,11 @@ class MoveUsers
             Pokemon::STEELIX | Mods::PURIFIED,
             Pokemon::STEELIX | Mods::SHADOW,
             Pokemon::TYRANITAR | Mods::PURIFIED,
-            Pokemon::TYRANITAR | Mods::SHADOW
+            Pokemon::TYRANITAR | Mods::SHADOW,
+            Pokemon::LAIRON | Mods::PURIFIED,
+            Pokemon::LAIRON | Mods::SHADOW,
+            Pokemon::AGGRON | Mods::PURIFIED,
+            Pokemon::AGGRON | Mods::SHADOW
         ],
         Moves::MOVE_FURY_CUTTER_FAST => [
             Pokemon::NIDOKING,
@@ -4495,6 +4604,8 @@ class MoveUsers
             Pokemon::GLIGAR | Mods::SHADOW,
             Pokemon::SCIZOR | Mods::PURIFIED,
             Pokemon::SCIZOR | Mods::SHADOW,
+            Pokemon::ARMALDO | Mods::PURIFIED,
+            Pokemon::ARMALDO | Mods::SHADOW,
             Pokemon::GLISCOR | Mods::PURIFIED,
             Pokemon::GLISCOR | Mods::SHADOW,
             Pokemon::SIRFETCH_D | Mods::PURIFIED,
@@ -4738,6 +4849,8 @@ class MoveUsers
             Pokemon::ZAPDOS | Mods::SHADOW,
             Pokemon::FLAAFFY | Mods::PURIFIED,
             Pokemon::FLAAFFY | Mods::SHADOW,
+            Pokemon::AMPHAROS | Mods::MEGA,
+            Pokemon::AMPHAROS | Mods::PURIFIED | Mods::MEGA,
             Pokemon::AMPHAROS | Mods::PURIFIED,
             Pokemon::AMPHAROS | Mods::SHADOW,
             Pokemon::PORYGON2 | Mods::PURIFIED,
@@ -4816,6 +4929,16 @@ class MoveUsers
             Pokemon::METAGROSS,
             Pokemon::METAGROSS | Mods::PURIFIED,
             Pokemon::METAGROSS | Mods::SHADOW
+        ],
+        Moves::MOVE_WEATHER_BALL_FIRE => [
+            Pokemon::VULPIX,
+            Pokemon::NINETALES,
+            Pokemon::CASTFORM | FormsAlias::CASTFORM_SUNNY,
+            Pokemon::CHERRIM | FormsAlias::CHERRIM_SUNNY,
+            Pokemon::VULPIX | Mods::PURIFIED,
+            Pokemon::VULPIX | Mods::SHADOW,
+            Pokemon::NINETALES | Mods::PURIFIED,
+            Pokemon::NINETALES | Mods::SHADOW
         ],
         Moves::MOVE_FEINT_ATTACK_FAST => [
             Pokemon::NINETALES,
@@ -5077,6 +5200,7 @@ class MoveUsers
             Pokemon::NINJASK,
             Pokemon::SPOINK,
             Pokemon::GRUMPIG,
+            Pokemon::CLAYDOL,
             Pokemon::BANETTE,
             Pokemon::CHIMECHO,
             Pokemon::SNORUNT,
@@ -5182,7 +5306,11 @@ class MoveUsers
             Pokemon::ARMALDO,
             Pokemon::SKORUPI,
             Pokemon::JOLTIK,
-            Pokemon::GALVANTULA
+            Pokemon::GALVANTULA,
+            Pokemon::ANORITH | Mods::PURIFIED,
+            Pokemon::ANORITH | Mods::SHADOW,
+            Pokemon::ARMALDO | Mods::PURIFIED,
+            Pokemon::ARMALDO | Mods::SHADOW
         ],
         Moves::MOVE_PSYBEAM => [
             Pokemon::VENONAT,
@@ -5299,7 +5427,9 @@ class MoveUsers
             Pokemon::KANGASKHAN | Mods::PURIFIED,
             Pokemon::KANGASKHAN | Mods::SHADOW,
             Pokemon::RHYPERIOR | Mods::PURIFIED,
-            Pokemon::RHYPERIOR | Mods::SHADOW
+            Pokemon::RHYPERIOR | Mods::SHADOW,
+            Pokemon::MAMOSWINE | Mods::PURIFIED,
+            Pokemon::MAMOSWINE | Mods::SHADOW
         ],
         Moves::MOVE_MUD_BOMB => [
             Pokemon::DIGLETT,
@@ -5481,6 +5611,8 @@ class MoveUsers
             Pokemon::PERSIAN | Mods::SHADOW,
             Pokemon::FLAAFFY | Mods::PURIFIED,
             Pokemon::FLAAFFY | Mods::SHADOW,
+            Pokemon::AMPHAROS | Mods::MEGA,
+            Pokemon::AMPHAROS | Mods::PURIFIED | Mods::MEGA,
             Pokemon::AMPHAROS | Mods::PURIFIED,
             Pokemon::AMPHAROS | Mods::SHADOW,
             Pokemon::SABLEYE | Mods::PURIFIED,
@@ -5766,6 +5898,47 @@ class MoveUsers
             Pokemon::SIRFETCH_D | Mods::PURIFIED,
             Pokemon::SIRFETCH_D | Mods::SHADOW
         ],
+        Moves::MOVE_ICE_PUNCH => [
+            Pokemon::PRIMEAPE,
+            Pokemon::POLIWRATH,
+            Pokemon::HYPNO,
+            Pokemon::HITMONCHAN,
+            Pokemon::JYNX,
+            Pokemon::CROCONAW,
+            Pokemon::SNEASEL,
+            Pokemon::DELIBIRD,
+            Pokemon::SMEARGLE,
+            Pokemon::SMOOCHUM,
+            Pokemon::MEDITITE,
+            Pokemon::MEDICHAM,
+            Pokemon::DUSCLOPS,
+            Pokemon::ELECTIVIRE,
+            Pokemon::CUBCHOO,
+            Pokemon::BEARTIC,
+            Pokemon::MELOETTA | FormsAlias::MELOETTA_PIROUETTE,
+            Pokemon::MR_RIME,
+            Pokemon::SANDSLASH | Mods::ALOLAN,
+            Pokemon::MR_MIME | Mods::GALARIAN,
+            Pokemon::DARUMAKA | Mods::GALARIAN,
+            Pokemon::DARMANITAN | FormsAlias::DARMANITAN_STANDARD | Mods::GALARIAN,
+            Pokemon::POLIWRATH | Mods::PURIFIED,
+            Pokemon::POLIWRATH | Mods::SHADOW,
+            Pokemon::HYPNO | Mods::PURIFIED,
+            Pokemon::HYPNO | Mods::SHADOW,
+            Pokemon::HITMONCHAN | Mods::PURIFIED,
+            Pokemon::HITMONCHAN | Mods::SHADOW,
+            Pokemon::SNEASEL | Mods::PURIFIED,
+            Pokemon::SNEASEL | Mods::SHADOW,
+            Pokemon::DELIBIRD | Mods::PURIFIED,
+            Pokemon::DELIBIRD | Mods::SHADOW,
+            Pokemon::DUSCLOPS | Mods::PURIFIED,
+            Pokemon::DUSCLOPS | Mods::SHADOW,
+            Pokemon::ELECTIVIRE | Mods::PURIFIED,
+            Pokemon::ELECTIVIRE | Mods::SHADOW,
+            Pokemon::DARMANITAN | FormsAlias::DARMANITAN_ZEN | Mods::GALARIAN,
+            Pokemon::MR_RIME | Mods::PURIFIED,
+            Pokemon::MR_RIME | Mods::SHADOW
+        ],
         Moves::MOVE_FLAME_WHEEL => [
             Pokemon::GROWLITHE,
             Pokemon::PONYTA,
@@ -5909,6 +6082,8 @@ class MoveUsers
             Pokemon::ARCANINE | Mods::SHADOW,
             Pokemon::KANGASKHAN | Mods::PURIFIED,
             Pokemon::KANGASKHAN | Mods::SHADOW,
+            Pokemon::GYARADOS | Mods::MEGA,
+            Pokemon::GYARADOS | Mods::PURIFIED | Mods::MEGA,
             Pokemon::GYARADOS | Mods::PURIFIED,
             Pokemon::GYARADOS | Mods::SHADOW,
             Pokemon::STEELIX | Mods::PURIFIED,
@@ -6009,6 +6184,8 @@ class MoveUsers
             Pokemon::PUPITAR | Mods::SHADOW,
             Pokemon::ZIGZAGOON | Mods::PURIFIED,
             Pokemon::ZIGZAGOON | Mods::SHADOW,
+            Pokemon::SPHEAL | Mods::PURIFIED,
+            Pokemon::SPHEAL | Mods::SHADOW,
             Pokemon::MONFERNO | Mods::PURIFIED,
             Pokemon::MONFERNO | Mods::SHADOW,
             Pokemon::INFERNAPE | Mods::PURIFIED,
@@ -6035,46 +6212,6 @@ class MoveUsers
             Pokemon::MACHAMP | Mods::SHADOW,
             Pokemon::CACTURNE | Mods::PURIFIED,
             Pokemon::CACTURNE | Mods::SHADOW
-        ],
-        Moves::MOVE_ICE_PUNCH => [
-            Pokemon::POLIWRATH,
-            Pokemon::HYPNO,
-            Pokemon::HITMONCHAN,
-            Pokemon::JYNX,
-            Pokemon::CROCONAW,
-            Pokemon::SNEASEL,
-            Pokemon::DELIBIRD,
-            Pokemon::SMEARGLE,
-            Pokemon::SMOOCHUM,
-            Pokemon::MEDITITE,
-            Pokemon::MEDICHAM,
-            Pokemon::DUSCLOPS,
-            Pokemon::ELECTIVIRE,
-            Pokemon::CUBCHOO,
-            Pokemon::BEARTIC,
-            Pokemon::MELOETTA | FormsAlias::MELOETTA_PIROUETTE,
-            Pokemon::MR_RIME,
-            Pokemon::SANDSLASH | Mods::ALOLAN,
-            Pokemon::MR_MIME | Mods::GALARIAN,
-            Pokemon::DARUMAKA | Mods::GALARIAN,
-            Pokemon::DARMANITAN | FormsAlias::DARMANITAN_STANDARD | Mods::GALARIAN,
-            Pokemon::POLIWRATH | Mods::PURIFIED,
-            Pokemon::POLIWRATH | Mods::SHADOW,
-            Pokemon::HYPNO | Mods::PURIFIED,
-            Pokemon::HYPNO | Mods::SHADOW,
-            Pokemon::HITMONCHAN | Mods::PURIFIED,
-            Pokemon::HITMONCHAN | Mods::SHADOW,
-            Pokemon::SNEASEL | Mods::PURIFIED,
-            Pokemon::SNEASEL | Mods::SHADOW,
-            Pokemon::DELIBIRD | Mods::PURIFIED,
-            Pokemon::DELIBIRD | Mods::SHADOW,
-            Pokemon::DUSCLOPS | Mods::PURIFIED,
-            Pokemon::DUSCLOPS | Mods::SHADOW,
-            Pokemon::ELECTIVIRE | Mods::PURIFIED,
-            Pokemon::ELECTIVIRE | Mods::SHADOW,
-            Pokemon::DARMANITAN | FormsAlias::DARMANITAN_ZEN | Mods::GALARIAN,
-            Pokemon::MR_RIME | Mods::PURIFIED,
-            Pokemon::MR_RIME | Mods::SHADOW
         ],
         Moves::MOVE_POWER_UP_PUNCH => [
             Pokemon::POLIWRATH,
@@ -6211,6 +6348,8 @@ class MoveUsers
             Pokemon::HYPNO | Mods::SHADOW,
             Pokemon::MEWTWO | FormsAlias::MEWTWO_NORMAL | Mods::PURIFIED,
             Pokemon::MEWTWO | FormsAlias::MEWTWO_NORMAL | Mods::SHADOW,
+            Pokemon::AMPHAROS | Mods::MEGA,
+            Pokemon::AMPHAROS | Mods::PURIFIED | Mods::MEGA,
             Pokemon::AMPHAROS | Mods::PURIFIED,
             Pokemon::AMPHAROS | Mods::SHADOW,
             Pokemon::WEAVILE | Mods::PURIFIED,
@@ -6260,7 +6399,16 @@ class MoveUsers
             Pokemon::FORRETRESS | Mods::PURIFIED,
             Pokemon::FORRETRESS | Mods::SHADOW,
             Pokemon::STEELIX | Mods::PURIFIED,
-            Pokemon::STEELIX | Mods::SHADOW
+            Pokemon::STEELIX | Mods::SHADOW,
+            Pokemon::LAIRON | Mods::PURIFIED,
+            Pokemon::LAIRON | Mods::SHADOW,
+            Pokemon::AGGRON | Mods::PURIFIED,
+            Pokemon::AGGRON | Mods::SHADOW
+        ],
+        Moves::MOVE_PAYBACK => [
+            Pokemon::MACHAMP,
+            Pokemon::MACHAMP | Mods::PURIFIED,
+            Pokemon::MACHAMP | Mods::SHADOW
         ],
         Moves::MOVE_BULLET_SEED_FAST => [
             Pokemon::WEEPINBELL,
@@ -6304,7 +6452,9 @@ class MoveUsers
             Pokemon::SEEDOT | Mods::PURIFIED,
             Pokemon::SEEDOT | Mods::SHADOW,
             Pokemon::SHIFTRY | Mods::PURIFIED,
-            Pokemon::SHIFTRY | Mods::SHADOW
+            Pokemon::SHIFTRY | Mods::SHADOW,
+            Pokemon::CRADILY | Mods::PURIFIED,
+            Pokemon::CRADILY | Mods::SHADOW
         ],
         Moves::MOVE_LEAF_BLADE => [
             Pokemon::VICTREEBEL,
@@ -6396,6 +6546,8 @@ class MoveUsers
             Pokemon::POLITOED | Mods::SHADOW,
             Pokemon::SLOWKING | Mods::PURIFIED,
             Pokemon::SLOWKING | Mods::SHADOW,
+            Pokemon::WALREIN | Mods::PURIFIED,
+            Pokemon::WALREIN | Mods::SHADOW,
             Pokemon::ABOMASNOW | Mods::MEGA,
             Pokemon::ABOMASNOW | Mods::PURIFIED | Mods::MEGA,
             Pokemon::ABOMASNOW | Mods::PURIFIED,
@@ -6443,7 +6595,11 @@ class MoveUsers
             Pokemon::AERODACTYL | Mods::PURIFIED,
             Pokemon::AERODACTYL | Mods::SHADOW,
             Pokemon::SHUCKLE | Mods::PURIFIED,
-            Pokemon::SHUCKLE | Mods::SHADOW
+            Pokemon::SHUCKLE | Mods::SHADOW,
+            Pokemon::NOSEPASS | Mods::PURIFIED,
+            Pokemon::NOSEPASS | Mods::SHADOW,
+            Pokemon::PROBOPASS | Mods::PURIFIED,
+            Pokemon::PROBOPASS | Mods::SHADOW
         ],
         Moves::MOVE_ROCK_BLAST => [
             Pokemon::GRAVELER,
@@ -6470,7 +6626,11 @@ class MoveUsers
             Pokemon::OMASTAR | Mods::PURIFIED,
             Pokemon::OMASTAR | Mods::SHADOW,
             Pokemon::SHUCKLE | Mods::PURIFIED,
-            Pokemon::SHUCKLE | Mods::SHADOW
+            Pokemon::SHUCKLE | Mods::SHADOW,
+            Pokemon::NOSEPASS | Mods::PURIFIED,
+            Pokemon::NOSEPASS | Mods::SHADOW,
+            Pokemon::ARMALDO | Mods::PURIFIED,
+            Pokemon::ARMALDO | Mods::SHADOW
         ],
         Moves::MOVE_ANCIENT_POWER => [
             Pokemon::GOLEM,
@@ -6535,7 +6695,13 @@ class MoveUsers
             Pokemon::LARVITAR | Mods::PURIFIED,
             Pokemon::LARVITAR | Mods::SHADOW,
             Pokemon::PUPITAR | Mods::PURIFIED,
-            Pokemon::PUPITAR | Mods::SHADOW
+            Pokemon::PUPITAR | Mods::SHADOW,
+            Pokemon::LILEEP | Mods::PURIFIED,
+            Pokemon::LILEEP | Mods::SHADOW,
+            Pokemon::ANORITH | Mods::PURIFIED,
+            Pokemon::ANORITH | Mods::SHADOW,
+            Pokemon::MAMOSWINE | Mods::PURIFIED,
+            Pokemon::MAMOSWINE | Mods::SHADOW
         ],
         Moves::MOVE_STOMP => [
             Pokemon::PONYTA,
@@ -6595,7 +6761,9 @@ class MoveUsers
             Pokemon::MAGNEMITE | Mods::PURIFIED,
             Pokemon::MAGNEMITE | Mods::SHADOW,
             Pokemon::MAGNETON | Mods::PURIFIED,
-            Pokemon::MAGNETON | Mods::SHADOW
+            Pokemon::MAGNETON | Mods::SHADOW,
+            Pokemon::PROBOPASS | Mods::PURIFIED,
+            Pokemon::PROBOPASS | Mods::SHADOW
         ],
         Moves::MOVE_ZAP_CANNON => [
             Pokemon::MAGNETON,
@@ -6618,6 +6786,8 @@ class MoveUsers
             Pokemon::PORYGON | Mods::SHADOW,
             Pokemon::ZAPDOS | Mods::PURIFIED,
             Pokemon::ZAPDOS | Mods::SHADOW,
+            Pokemon::AMPHAROS | Mods::MEGA,
+            Pokemon::AMPHAROS | Mods::PURIFIED | Mods::MEGA,
             Pokemon::AMPHAROS | Mods::PURIFIED,
             Pokemon::AMPHAROS | Mods::SHADOW,
             Pokemon::PORYGON2 | Mods::PURIFIED,
@@ -6662,6 +6832,8 @@ class MoveUsers
             Pokemon::ARTICUNO | Mods::SHADOW,
             Pokemon::SNEASEL | Mods::PURIFIED,
             Pokemon::SNEASEL | Mods::SHADOW,
+            Pokemon::PILOSWINE | Mods::PURIFIED,
+            Pokemon::PILOSWINE | Mods::SHADOW,
             Pokemon::SNOVER | Mods::PURIFIED,
             Pokemon::SNOVER | Mods::SHADOW,
             Pokemon::WEAVILE | Mods::PURIFIED,
@@ -6711,7 +6883,11 @@ class MoveUsers
             Pokemon::CRYOGONAL,
             Pokemon::AMAURA,
             Pokemon::CLOYSTER | Mods::PURIFIED,
-            Pokemon::CLOYSTER | Mods::SHADOW
+            Pokemon::CLOYSTER | Mods::SHADOW,
+            Pokemon::SPHEAL | Mods::PURIFIED,
+            Pokemon::SPHEAL | Mods::SHADOW,
+            Pokemon::SEALEO | Mods::PURIFIED,
+            Pokemon::SEALEO | Mods::SHADOW
         ],
         Moves::MOVE_ICY_WIND => [
             Pokemon::SEEL,
@@ -6741,6 +6917,8 @@ class MoveUsers
             Pokemon::CLOYSTER | Mods::SHADOW,
             Pokemon::ARTICUNO | Mods::PURIFIED,
             Pokemon::ARTICUNO | Mods::SHADOW,
+            Pokemon::SWINUB | Mods::PURIFIED,
+            Pokemon::SWINUB | Mods::SHADOW,
             Pokemon::DELIBIRD | Mods::PURIFIED,
             Pokemon::DELIBIRD | Mods::SHADOW,
             Pokemon::MR_RIME | Mods::PURIFIED,
@@ -6769,7 +6947,9 @@ class MoveUsers
             Pokemon::LAPRAS | Mods::PURIFIED,
             Pokemon::LAPRAS | Mods::SHADOW,
             Pokemon::ARTICUNO | Mods::PURIFIED,
-            Pokemon::ARTICUNO | Mods::SHADOW
+            Pokemon::ARTICUNO | Mods::SHADOW,
+            Pokemon::WALREIN | Mods::PURIFIED,
+            Pokemon::WALREIN | Mods::SHADOW
         ],
         Moves::MOVE_SLUDGE => [
             Pokemon::GRIMER,
@@ -6806,8 +6986,12 @@ class MoveUsers
             Pokemon::CLOYSTER | Mods::SHADOW,
             Pokemon::SNEASEL | Mods::PURIFIED,
             Pokemon::SNEASEL | Mods::SHADOW,
+            Pokemon::PILOSWINE | Mods::PURIFIED,
+            Pokemon::PILOSWINE | Mods::SHADOW,
             Pokemon::WEAVILE | Mods::PURIFIED,
             Pokemon::WEAVILE | Mods::SHADOW,
+            Pokemon::MAMOSWINE | Mods::PURIFIED,
+            Pokemon::MAMOSWINE | Mods::SHADOW,
             Pokemon::DARMANITAN | FormsAlias::DARMANITAN_ZEN | Mods::GALARIAN
         ],
         Moves::MOVE_ASTONISH_FAST => [
@@ -7025,6 +7209,8 @@ class MoveUsers
             Pokemon::ENTEI | Mods::SHADOW,
             Pokemon::MAWILE | Mods::PURIFIED,
             Pokemon::MAWILE | Mods::SHADOW,
+            Pokemon::ARON | Mods::PURIFIED,
+            Pokemon::ARON | Mods::SHADOW,
             Pokemon::PERRSERKER | Mods::PURIFIED,
             Pokemon::PERRSERKER | Mods::SHADOW
         ],
@@ -7149,7 +7335,11 @@ class MoveUsers
             Pokemon::CACNEA | Mods::PURIFIED,
             Pokemon::CACNEA | Mods::SHADOW,
             Pokemon::CACTURNE | Mods::PURIFIED,
-            Pokemon::CACTURNE | Mods::SHADOW
+            Pokemon::CACTURNE | Mods::SHADOW,
+            Pokemon::LILEEP | Mods::PURIFIED,
+            Pokemon::LILEEP | Mods::SHADOW,
+            Pokemon::CRADILY | Mods::PURIFIED,
+            Pokemon::CRADILY | Mods::SHADOW
         ],
         Moves::MOVE_OUTRAGE => [
             Pokemon::KANGASKHAN,
@@ -7192,6 +7382,8 @@ class MoveUsers
             Pokemon::ZYGARGE | FormsAlias::ZYGARGE_HALF,
             Pokemon::KANGASKHAN | Mods::PURIFIED,
             Pokemon::KANGASKHAN | Mods::SHADOW,
+            Pokemon::GYARADOS | Mods::MEGA,
+            Pokemon::GYARADOS | Mods::PURIFIED | Mods::MEGA,
             Pokemon::GYARADOS | Mods::PURIFIED,
             Pokemon::GYARADOS | Mods::SHADOW,
             Pokemon::SNORLAX | Mods::PURIFIED,
@@ -7228,6 +7420,8 @@ class MoveUsers
             Pokemon::SLIGGOO,
             Pokemon::NOIBAT,
             Pokemon::EXEGGUTOR | Mods::ALOLAN,
+            Pokemon::GYARADOS | Mods::MEGA,
+            Pokemon::GYARADOS | Mods::PURIFIED | Mods::MEGA,
             Pokemon::GYARADOS | Mods::PURIFIED,
             Pokemon::GYARADOS | Mods::SHADOW,
             Pokemon::LAPRAS | Mods::PURIFIED,
@@ -7236,6 +7430,8 @@ class MoveUsers
             Pokemon::DRAGONAIR | Mods::SHADOW,
             Pokemon::DRAGONITE | Mods::PURIFIED,
             Pokemon::DRAGONITE | Mods::SHADOW,
+            Pokemon::AMPHAROS | Mods::MEGA,
+            Pokemon::AMPHAROS | Mods::PURIFIED | Mods::MEGA,
             Pokemon::AMPHAROS | Mods::PURIFIED,
             Pokemon::AMPHAROS | Mods::SHADOW,
             Pokemon::SHELGON | Mods::PURIFIED,
@@ -7261,12 +7457,16 @@ class MoveUsers
             Pokemon::MANAPHY,
             Pokemon::SAMUROTT,
             Pokemon::ALOMOMOLA,
+            Pokemon::GYARADOS | Mods::MEGA,
+            Pokemon::GYARADOS | Mods::PURIFIED | Mods::MEGA,
             Pokemon::GYARADOS | Mods::PURIFIED,
             Pokemon::GYARADOS | Mods::SHADOW,
             Pokemon::KABUTOPS | Mods::PURIFIED,
             Pokemon::KABUTOPS | Mods::SHADOW,
             Pokemon::SHARPEDO | Mods::PURIFIED,
-            Pokemon::SHARPEDO | Mods::SHADOW
+            Pokemon::SHARPEDO | Mods::SHADOW,
+            Pokemon::WALREIN | Mods::PURIFIED,
+            Pokemon::WALREIN | Mods::SHADOW
         ],
         Moves::MOVE_HIDDEN_POWER_FAST => [
             Pokemon::STARMIE,
@@ -7507,6 +7707,13 @@ class MoveUsers
             Pokemon::DUSKULL | Mods::PURIFIED,
             Pokemon::DUSKULL | Mods::SHADOW
         ],
+        Moves::MOVE_WEATHER_BALL_WATER => [
+            Pokemon::POLITOED,
+            Pokemon::PELIPPER,
+            Pokemon::CASTFORM | FormsAlias::CASTFORM_RAINY,
+            Pokemon::POLITOED | Mods::PURIFIED,
+            Pokemon::POLITOED | Mods::SHADOW
+        ],
         Moves::MOVE_MIRROR_COAT => [
             Pokemon::WOBBUFFET,
             Pokemon::GIRAFARIG,
@@ -7519,7 +7726,9 @@ class MoveUsers
             Pokemon::BERGMITE,
             Pokemon::AVALUGG,
             Pokemon::WOBBUFFET | Mods::PURIFIED,
-            Pokemon::WOBBUFFET | Mods::SHADOW
+            Pokemon::WOBBUFFET | Mods::SHADOW,
+            Pokemon::LILEEP | Mods::PURIFIED,
+            Pokemon::LILEEP | Mods::SHADOW
         ],
         Moves::MOVE_MIRROR_SHOT => [
             Pokemon::FORRETRESS,
@@ -7552,12 +7761,20 @@ class MoveUsers
             Pokemon::SANDSLASH | Mods::ALOLAN,
             Pokemon::VULPIX | Mods::ALOLAN,
             Pokemon::NINETALES | Mods::ALOLAN,
+            Pokemon::SWINUB | Mods::PURIFIED,
+            Pokemon::SWINUB | Mods::SHADOW,
+            Pokemon::PILOSWINE | Mods::PURIFIED,
+            Pokemon::PILOSWINE | Mods::SHADOW,
+            Pokemon::SEALEO | Mods::PURIFIED,
+            Pokemon::SEALEO | Mods::SHADOW,
             Pokemon::SNOVER | Mods::PURIFIED,
             Pokemon::SNOVER | Mods::SHADOW,
             Pokemon::ABOMASNOW | Mods::MEGA,
             Pokemon::ABOMASNOW | Mods::PURIFIED | Mods::MEGA,
             Pokemon::ABOMASNOW | Mods::PURIFIED,
-            Pokemon::ABOMASNOW | Mods::SHADOW
+            Pokemon::ABOMASNOW | Mods::SHADOW,
+            Pokemon::MAMOSWINE | Mods::PURIFIED,
+            Pokemon::MAMOSWINE | Mods::SHADOW
         ],
         Moves::MOVE_OCTAZOOKA => [
             Pokemon::OCTILLERY,
@@ -7568,6 +7785,14 @@ class MoveUsers
             Pokemon::REGIROCK,
             Pokemon::REGICE,
             Pokemon::REGISTEEL,
+            Pokemon::PORYGON_Z,
+            Pokemon::PORYGON2 | Mods::PURIFIED,
+            Pokemon::PORYGON2 | Mods::SHADOW,
+            Pokemon::PORYGON_Z | Mods::PURIFIED,
+            Pokemon::PORYGON_Z | Mods::SHADOW
+        ],
+        Moves::MOVE_TRI_ATTACK => [
+            Pokemon::PORYGON2,
             Pokemon::PORYGON_Z,
             Pokemon::PORYGON2 | Mods::PURIFIED,
             Pokemon::PORYGON2 | Mods::SHADOW,
@@ -7624,6 +7849,8 @@ class MoveUsers
             Pokemon::CLAWITZER,
             Pokemon::TYRANITAR | Mods::PURIFIED,
             Pokemon::TYRANITAR | Mods::SHADOW,
+            Pokemon::AGGRON | Mods::PURIFIED,
+            Pokemon::AGGRON | Mods::SHADOW,
             Pokemon::RHYPERIOR | Mods::PURIFIED,
             Pokemon::RHYPERIOR | Mods::SHADOW
         ],
@@ -7655,10 +7882,6 @@ class MoveUsers
             Pokemon::STUNFISK | Mods::PURIFIED,
             Pokemon::STUNFISK | Mods::SHADOW
         ],
-        Moves::MOVE_WEATHER_BALL_WATER => [
-            Pokemon::PELIPPER,
-            Pokemon::CASTFORM | FormsAlias::CASTFORM_RAINY
-        ],
         Moves::MOVE_LUNGE => [
             Pokemon::MASQUERAIN,
             Pokemon::GALVANTULA
@@ -7671,14 +7894,12 @@ class MoveUsers
             Pokemon::ABOMASNOW,
             Pokemon::AMAURA,
             Pokemon::AURORUS,
+            Pokemon::VULPIX | Mods::ALOLAN,
+            Pokemon::NINETALES | Mods::ALOLAN,
             Pokemon::ABOMASNOW | Mods::MEGA,
             Pokemon::ABOMASNOW | Mods::PURIFIED | Mods::MEGA,
             Pokemon::ABOMASNOW | Mods::PURIFIED,
             Pokemon::ABOMASNOW | Mods::SHADOW
-        ],
-        Moves::MOVE_WEATHER_BALL_FIRE => [
-            Pokemon::CASTFORM | FormsAlias::CASTFORM_SUNNY,
-            Pokemon::CHERRIM | FormsAlias::CHERRIM_SUNNY
         ],
         Moves::MOVE_DOOM_DESIRE => [
             Pokemon::JIRACHI
@@ -7690,11 +7911,6 @@ class MoveUsers
             Pokemon::RHYPERIOR,
             Pokemon::RHYPERIOR | Mods::PURIFIED,
             Pokemon::RHYPERIOR | Mods::SHADOW
-        ],
-        Moves::MOVE_TRI_ATTACK => [
-            Pokemon::PORYGON_Z,
-            Pokemon::PORYGON_Z | Mods::PURIFIED,
-            Pokemon::PORYGON_Z | Mods::SHADOW
         ],
         Moves::MOVE_GIGA_IMPACT => [
             Pokemon::REGIGIGAS,
