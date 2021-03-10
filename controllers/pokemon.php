@@ -62,7 +62,7 @@ class Pokemon extends \Difra\Controller
         }
         if ($mythical) {
             $this->setDescription($commonName . ' mythical pokémon information');
-            $keywords[] = 'mytical pokémon';
+            $keywords[] = 'mythical pokémon';
         } elseif ($legendary) {
             $this->setDescription($commonName . ' legendary pokémon information');
             $keywords[] = 'legendary pokémon';
