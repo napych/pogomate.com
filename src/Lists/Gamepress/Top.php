@@ -22,6 +22,7 @@ class Top
             Pokemon::ESCAVALIER,
             Pokemon::SCIZOR,
             Pokemon::YANMEGA,
+            Pokemon::HERACROSS,
         ],
         Types::DARK => [
             Pokemon::HOUNDOOM | Mods::MEGA,
