@@ -6,7 +6,7 @@ use Difra\Debugger;
 use Difra\Param\AnyString;
 use Difra\View;
 use Difra\View\HttpError;
-use Pogo\Mate\CP;
+use Pogo\Mate\Stats;
 use Pogo\Mate\Level;
 use Pogo\Pokemon\Mods;
 
@@ -148,6 +148,35 @@ class Pokemon extends \Difra\Controller
 
     protected function testAction()
     {
-        $this->output = CP::getCP(\Pogo\Pokemon::get(\Pogo\Pokemon::ROSERADE), 14, 15, 12, 36.5);
+        $pokemon = \Pogo\Pokemon::get(\Pogo\Pokemon::RAICHU | \Pogo\Pokemon\Mods::ALOLAN);
+        $matches = [];
+        for ($attack = 0; $attack <= 15; $attack++) {
+            for ($defense = 0; $defense <= 15; $defense++) {
+                for ($stamina = 0; $stamina <= 15; $stamina++) {
+                    $level = $matchedLevel = 0;
+                    $cp = $matchedCP = 0;
+                    while ($cp <= 1500) {
+                        $matchedLevel = $level;
+                        $matchedCP = $cp;
+                        if ($matchedLevel == 50) {
+                            break;
+                        }
+                        $level += .5;
+                        $cp = Stats::getCP($pokemon, $attack, $defense, $stamina, $level);
+                    }
+                    $prod = Stats::getStatProduct($pokemon, $attack, $defense, $stamina, $matchedLevel);
+                    $matches[] = [$attack, $defense, $stamina, $matchedLevel, $matchedCP, $prod];
+                }
+            }
+        }
+        usort(
+            $matches,
+            function ($v1, $v2) {
+                return $v2[5] <=> $v1[5];
+            }
+        );
+        foreach ($matches as $match) {
+            echo "$match[0]/$match[1]/$match[2] L:$match[3] CP:$match[4] SP:$match[5]<br/>\n";
+        }
     }
 }

@@ -4,7 +4,7 @@ namespace Pogo\Mate;
 
 use Pogo\Pokemon;
 
-class CP
+class Stats
 {
     /**
      * Don't create objects
@@ -28,5 +28,14 @@ class CP
         $cp = $attack * sqrt($defense) * sqrt($stamina)
             * Level::getCpMultiplier($level) * Level::getCpMultiplier($level) / 10;
         return $cp >= 10 ? $cp : 10;
+    }
+
+    public static function getStatProduct(Pokemon $pokemon, int $indAttack, int $indDefense, int $indStamina, float $level): float
+    {
+        $multiplier = Level::getCpMultiplier($level);
+        $attack = ($pokemon->getAttack() + $indAttack) * $multiplier;
+        $defense = ($pokemon->getDefense() + $indDefense) * $multiplier;
+        $stamina = floor(($pokemon->getStamina() + $indStamina) * $multiplier);
+        return round($attack * $defense * $stamina) / 1000;
     }
 }

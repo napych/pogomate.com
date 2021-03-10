@@ -2,7 +2,7 @@
 
 namespace Mate;
 
-use Pogo\Mate\CP;
+use Pogo\Mate\Stats;
 use PHPUnit\Framework\TestCase;
 use Pogo\Pokemon;
 use Pogo\Pokemon\Mods;
@@ -14,7 +14,7 @@ class CPTest extends TestCase
         foreach (self::CASES as $case) {
             $this->assertEquals(
                 $case[5],
-                CP::getCP(Pokemon::get($case[0]), $case[1], $case[2], $case[3], $case[4])
+                Stats::getCP(Pokemon::get($case[0]), $case[1], $case[2], $case[3], $case[4])
             );
         }
     }
@@ -30,7 +30,7 @@ class CPTest extends TestCase
             foreach ($multicase[5] as $cp) {
                 $this->assertEquals(
                     $cp,
-                    CP::getCP($pokemon, $attack, $defense, $stamina, $level)
+                    Stats::getCP($pokemon, $attack, $defense, $stamina, $level)
                 );
                 $level += 0.5;
             }
