@@ -250,10 +250,13 @@ class Pokemon extends Data\Manual\PokemonList
             $hash[] = 'mega';
         }
         if ($this->code & Mods::MEGA_X) {
-            $hash[] = 'mega-x';
+            $hash[] = 'megaX';
         }
         if ($this->code & Mods::MEGA_Y) {
-            $hash[] = 'mega-y';
+            $hash[] = 'megaY';
+        }
+        if (($n = Mods::getFormNum($this->code)) > 1) {
+            $hash[] = 'form' . $n;
         }
         if (!$forceForm || !empty($hash)) {
             return implode('-', $hash);

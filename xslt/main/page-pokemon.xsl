@@ -14,6 +14,14 @@
         <xsl:if test="count(../pokemon)&gt;1">
             <h3 class="h5">
                 <xsl:value-of select="@name"/>
+                <xsl:text> </xsl:text>
+                <a>
+                    <xsl:attribute name="href">
+                        <xsl:text>#</xsl:text>
+                        <xsl:value-of select="@form"/>
+                    </xsl:attribute>
+                    <small>↓</small>
+                </a>
             </h3>
         </xsl:if>
         <div class="evolution-reasons-list">
@@ -109,30 +117,32 @@
                 </p>
             </xsl:if>
 
-            <!-- Pokedex ID -->
-            <p class="pokemon-id">
-                <xsl:text>Pokedex ID: #</xsl:text>
-                <xsl:value-of select="@pokedexId"/>
-            </p>
+            <div class="pokemon-info-bar">
+                <!-- Pokedex ID -->
+                <span class="pokemon-id">
+                    <xsl:text>#</xsl:text>
+                    <xsl:value-of select="@pokedexId"/>
+                </span>
+                <!-- Types -->
+
+                <span class="pokemon-types">
+                    <xsl:call-template name="snippet-type">
+                        <xsl:with-param name="size" select="16"/>
+                        <xsl:with-param name="type" select="@type1"/>
+                    </xsl:call-template>
+                    <xsl:if test="@type2 != ''">
+                        <xsl:call-template name="snippet-type">
+                            <xsl:with-param name="size" select="16"/>
+                            <xsl:with-param name="type" select="@type2"/>
+                        </xsl:call-template>
+                    </xsl:if>
+                </span>
+            </div>
 
             <!-- Unreleased -->
             <xsl:if test="@unreleased>0">
                 <p class="pokemon-unreleased">Not released yet</p>
             </xsl:if>
-
-            <!-- Types -->
-            <p class="pokemon-types">
-                <xsl:text>Type: </xsl:text>
-                <span class="type-{@type1}">
-                    <xsl:value-of select="@type1"/>
-                </span>
-                <xsl:text> &#160; </xsl:text>
-                <xsl:if test="@type2 != ''">
-                    <span class="type-{@type2}">
-                        <xsl:value-of select="@type2"/>
-                    </span>
-                </xsl:if>
-            </p>
 
             <!-- Evolutions -->
             <xsl:if test="count(evolve/evolve)>0">
