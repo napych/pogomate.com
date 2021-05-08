@@ -70,6 +70,9 @@ class CPTest extends TestCase
         [Pokemon::TERRAKION, 12, 12, 10, 25, 2564],
         [Pokemon::DIALGA, 13, 12, 12, 23, 2600],
         [Pokemon::RESHIRAM, 15, 13, 12, 22.5, 2567],
+        [Pokemon::MACHOP | Mods::SHADOW, 11, 14, 4, 13, 446],
+        [Pokemon::MEWTWO | Mods::SHADOW, 15, 11, 12, 40, 4108],
+        [Pokemon::SNORLAX | Mods::SHADOW, 10, 9, 15, 13, 1149]
     ];
 
     const MULTICASES = [
