@@ -4,6 +4,7 @@ namespace Pogo\Data\Parser\Generator;
 
 use Pogo\Data\Manual\Evolve;
 use Pogo\Data\Manual\FormsAlias;
+use Pogo\Data\Manual\Names;
 use Pogo\Data\Manual\PokemonList;
 use Pogo\Data\Manual\PokemonTypes;
 use Pogo\Data\Parser\Locale;
@@ -92,6 +93,7 @@ class ResultPokemon
     {
         $new = clone static::$list[$oldCode];
         $new->code = $newCode;
+        $new->evolutions = [];
         return static::$list[$newCode] = $new;
     }
 
@@ -122,7 +124,7 @@ class ResultPokemon
         $ref1 = new ReflectionClass(\Pogo\Data\Generated\Moves::class);
         $constants = $ref1->getConstants();
         foreach ($constants as $k => $v) {
-            self::$moveConstList[$v] = $k;
+            self::$moveConstList[$v] = 'Moves::' . $k;
         }
     }
 
@@ -134,12 +136,75 @@ class ResultPokemon
 
     public function getName(): string
     {
-        return Locale::getPokemon($this->code) ?: '';
+        $name = '';
+        if (Mods::isShadow($this->code)) {
+            $name .= 'Shadow ';
+        }
+        if (Mods::isAlolan($this->code)) {
+            $name .= 'Alolan ';
+        }
+        if (Mods::isGalarian($this->code)) {
+            $name .= 'Galarian ';
+        }
+        if (Mods::isPurified($this->code)) {
+            $name .= 'Purified ';
+        }
+        if ($this->code & (Mods::MEGA | Mods::MEGA_X | Mods::MEGA_Y)) {
+            $name = 'Mega ' . $name;
+        }
+
+        $pokemonName = $this->getShortName();
+        if (empty($pokemonName)) {
+            echo $this->code;
+            die();
+        }
+        if ($form = \Pogo\Pokemon\Form::getFormName($this->code)) {
+            if (strpos($form, $pokemonName) !== false) {
+                $name .= $form;
+            } else {
+                $name .= "$pokemonName ($form)";
+            }
+        } else {
+            $name .= $pokemonName;
+        }
+
+        if ($this->code & Mods::MEGA_X) {
+            $name .= ' X';
+        }
+        if ($this->code & Mods::MEGA_Y) {
+            $name .= ' Y';
+        }
+        return $name;
     }
 
     public function getShortName(): string
     {
-        return Locale::getPokemon($this->code & Mods::ID_MASK) ?: '';
+        // get from locale
+        if ($shortName = Locale::getPokemon($this->code)) {
+            return $shortName;
+        }
+
+        // get from custom names
+        if (!empty(Names::CUSTOM[$this->code])) {
+            return Names::CUSTOM[$this->code];
+        }
+
+        // get from PokemonList
+        static $autoNames = null;
+        if ($autoNames === null) {
+            $autoNames = [];
+            $reflection = new \ReflectionClass(\Pogo\Data\Manual\PokemonList::class);
+            $constants = $reflection->getConstants();
+            foreach ($constants as $name => $value) {
+                $autoNames[$value] = ucfirst(strtolower($name));
+            }
+        }
+        if (!empty($autoNames[$this->code])) {
+            return $autoNames[$this->code];
+        }
+
+        // not found
+        return "Unknown/{$this->code}";
     }
 
     public function getDescription(): ?string
@@ -877,9 +942,14 @@ PHP;
         $moves = [];
         foreach (static::$list as $pokemon) {
             $pokemonConst = $pokemon->getConst();
-            $arr = array_merge($pokemon->fastMoves, $pokemon->eliteFastMoves, $pokemon->chargeMoves, $pokemon->eliteChargeMoves);
+            $arr = array_merge(
+                $pokemon->fastMoves,
+                $pokemon->eliteFastMoves,
+                $pokemon->chargeMoves,
+                $pokemon->eliteChargeMoves
+            );
             foreach ($arr as $move) {
-                $moveConst = 'Moves::' . self::$moveConstList[$move];
+                $moveConst = self::$moveConstList[$move];
                 if (!isset($moves[$moveConst])) {
                     $moves[$moveConst] = [$pokemonConst];
                 } else {

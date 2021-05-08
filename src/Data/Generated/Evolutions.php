@@ -32,7 +32,7 @@ class Evolutions
                 self::FIELD_CANDY => 100
             ],
             Pokemon::VENUSAUR | Mods::MEGA => [
-                self::FIELD_PARENT => Pokemon::VENUSAUR | Mods::MEGA,
+                self::FIELD_PARENT => Pokemon::VENUSAUR,
                 self::FIELD_ENERGY_FIRST => 200,
                 self::FIELD_ENERGY => 40,
                 self::FIELD_TEMPORARY => true
@@ -46,13 +46,13 @@ class Evolutions
                 self::FIELD_CANDY => 100
             ],
             Pokemon::CHARIZARD | Mods::MEGA_X => [
-                self::FIELD_PARENT => Pokemon::CHARIZARD | Mods::MEGA_Y,
+                self::FIELD_PARENT => Pokemon::CHARIZARD,
                 self::FIELD_ENERGY_FIRST => 200,
                 self::FIELD_ENERGY => 40,
                 self::FIELD_TEMPORARY => true
             ],
             Pokemon::CHARIZARD | Mods::MEGA_Y => [
-                self::FIELD_PARENT => Pokemon::CHARIZARD | Mods::MEGA_Y,
+                self::FIELD_PARENT => Pokemon::CHARIZARD,
                 self::FIELD_ENERGY_FIRST => 200,
                 self::FIELD_ENERGY => 40,
                 self::FIELD_TEMPORARY => true
@@ -66,7 +66,7 @@ class Evolutions
                 self::FIELD_CANDY => 100
             ],
             Pokemon::BLASTOISE | Mods::MEGA => [
-                self::FIELD_PARENT => Pokemon::BLASTOISE | Mods::MEGA,
+                self::FIELD_PARENT => Pokemon::BLASTOISE,
                 self::FIELD_ENERGY_FIRST => 200,
                 self::FIELD_ENERGY => 40,
                 self::FIELD_TEMPORARY => true
@@ -88,7 +88,7 @@ class Evolutions
                 self::FIELD_CANDY => 50
             ],
             Pokemon::BEEDRILL | Mods::MEGA => [
-                self::FIELD_PARENT => Pokemon::BEEDRILL | Mods::MEGA,
+                self::FIELD_PARENT => Pokemon::BEEDRILL,
                 self::FIELD_ENERGY_FIRST => 100,
                 self::FIELD_ENERGY => 20,
                 self::FIELD_TEMPORARY => true
@@ -306,7 +306,7 @@ class Evolutions
                 self::FIELD_TRADED => true
             ],
             Pokemon::GENGAR | Mods::MEGA => [
-                self::FIELD_PARENT => Pokemon::GENGAR | Mods::MEGA,
+                self::FIELD_PARENT => Pokemon::GENGAR,
                 self::FIELD_ENERGY_FIRST => 200,
                 self::FIELD_ENERGY => 40,
                 self::FIELD_TEMPORARY => true
@@ -408,7 +408,7 @@ class Evolutions
                 self::FIELD_CANDY => 400
             ],
             Pokemon::GYARADOS | Mods::MEGA => [
-                self::FIELD_PARENT => Pokemon::GYARADOS | Mods::MEGA,
+                self::FIELD_PARENT => Pokemon::GYARADOS,
                 self::FIELD_ENERGY_FIRST => 200,
                 self::FIELD_ENERGY => 40,
                 self::FIELD_TEMPORARY => true
@@ -555,7 +555,7 @@ class Evolutions
                 self::FIELD_CANDY => 100
             ],
             Pokemon::AMPHAROS | Mods::MEGA => [
-                self::FIELD_PARENT => Pokemon::AMPHAROS | Mods::MEGA,
+                self::FIELD_PARENT => Pokemon::AMPHAROS,
                 self::FIELD_ENERGY_FIRST => 200,
                 self::FIELD_ENERGY => 40,
                 self::FIELD_TEMPORARY => true
@@ -653,7 +653,7 @@ class Evolutions
                 self::FIELD_CANDY => 50
             ],
             Pokemon::HOUNDOOM | Mods::MEGA => [
-                self::FIELD_PARENT => Pokemon::HOUNDOOM | Mods::MEGA,
+                self::FIELD_PARENT => Pokemon::HOUNDOOM,
                 self::FIELD_ENERGY_FIRST => 200,
                 self::FIELD_ENERGY => 40,
                 self::FIELD_TEMPORARY => true
@@ -1158,7 +1158,7 @@ class Evolutions
                 self::FIELD_CANDY => 50
             ],
             Pokemon::ABOMASNOW | Mods::MEGA => [
-                self::FIELD_PARENT => Pokemon::ABOMASNOW | Mods::MEGA,
+                self::FIELD_PARENT => Pokemon::ABOMASNOW,
                 self::FIELD_ENERGY_FIRST => 200,
                 self::FIELD_ENERGY => 40,
                 self::FIELD_TEMPORARY => true
@@ -1963,7 +1963,7 @@ class Evolutions
                 self::FIELD_CANDY => 100
             ],
             Pokemon::CHARIZARD | Mods::PURIFIED | Mods::MEGA_X => [
-                self::FIELD_PARENT => Pokemon::CHARIZARD | Mods::PURIFIED | Mods::MEGA_Y,
+                self::FIELD_PARENT => Pokemon::CHARIZARD | Mods::PURIFIED,
                 self::FIELD_ENERGY_FIRST => 200,
                 self::FIELD_ENERGY => 40,
                 self::FIELD_TEMPORARY => true
