@@ -8,6 +8,7 @@ use Pogo\Data\Manual\PokemonList;
 use Pogo\Data\Manual\PokemonTypes;
 use Pogo\Data\Parser\Locale;
 use Pogo\Data\Parser\Result\All;
+use Pogo\Pokemon;
 use Pogo\Pokemon\Mods;
 use Pogo\Pokemon\Types;
 use ReflectionClass;
@@ -586,6 +587,35 @@ class ResultPokemon
             'self::FIELD_UNRELEASED' => $this->getUnreleased() ?: null
         ];
         return self::array2php($data, $this->getConst() . ' => ', '', 2);
+    }
+
+    protected function isModified(): bool
+    {
+        $previous = Pokemon::get($this->code);
+        $modified =
+            $previous->getName() != $this->getName() ||
+            $previous->getShortName() != $this->getShortName() ||
+            $previous->getDescription() != $this->getDescription() ||
+            $previous->getCategory() != $this->getCategory() ||
+            $previous->getAttack() != $this->getAttack() ||
+            $previous->getDefense() != $this->getDefense() ||
+            $previous->getStamina() != $this->getStamina() ||
+            $previous->isLegendary() != $this->getLegendary() ||
+            $previous->isMythical() != $this->getMythic() ||
+            $previous->isTransferable() != $this->getTransferable() ||
+            $previous->isDeployable() != $this->getDeployable() ||
+            $previous->isTradable() != $this->getTradable() ||
+            $previous->getBuddyDistance() != $this->getBuddyDistance() ||
+            $previous->getThirdMoveCandy() != $this->getThirdMoveCandy() ||
+            $previous->getThirdMoveDust() != $this->getThirdMoveDust() ||
+            $previous->isUnreleased() != $this->getUnreleased();
+        if (!$modified) {
+            $types = $this->getTypes();
+            $type2 = $types[1] ?: null;
+            $modified = $types[0] != $previous->getType1() || $type2 != $previous->getType2();
+        }
+        // TODO: all moves
+        // TODO: evolves
     }
 
     protected static function array2php(

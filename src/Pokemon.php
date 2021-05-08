@@ -176,6 +176,31 @@ class Pokemon extends Data\Manual\PokemonList
         return PokemonData::POKEMON[$this->code][PokemonData::FIELD_NAME_SHORT];
     }
 
+    public function getDescription()
+    {
+        return PokemonData::POKEMON[$this->code][PokemonData::FIELD_DESC] ?? null;
+    }
+
+    public function getCategory()
+    {
+        return PokemonData::POKEMON[$this->code][PokemonData::FIELD_CATEGORY] ?? null;
+    }
+
+    public function isTransferable()
+    {
+        return PokemonData::POKEMON[$this->code][PokemonData::FIELD_TRANSFERABLE] ?? false;
+    }
+
+    public function isDeployable()
+    {
+        return PokemonData::POKEMON[$this->code][PokemonData::FIELD_DEPLOYABLE] ?? false;
+    }
+
+    public function isTradable()
+    {
+        return PokemonData::POKEMON[$this->code][PokemonData::FIELD_TRADABLE] ?? false;
+    }
+
     public function isMythical()
     {
         return !empty(PokemonData::POKEMON[$this->code][PokemonData::FIELD_MYTHIC]);
@@ -184,6 +209,26 @@ class Pokemon extends Data\Manual\PokemonList
     public function isLegendary()
     {
         return !empty(PokemonData::POKEMON[$this->code][PokemonData::FIELD_LEGENDARY]);
+    }
+
+    public function getBuddyDistance(): ?int
+    {
+        return PokemonData::POKEMON[$this->code][PokemonData::FIELD_BUDDY_DISTANCE] ?? null;
+    }
+
+    public function getThirdMoveCandy(): ?int
+    {
+        return PokemonData::POKEMON[$this->code][PokemonData::FIELD_THIRD_MOVE_CANDY] ?? null;
+    }
+
+    public function getThirdMoveDust(): ?int
+    {
+        return PokemonData::POKEMON[$this->code][PokemonData::FIELD_THIRD_MOVE_STARDUST] ?? null;
+    }
+
+    public function isUnreleased(): bool
+    {
+        return PokemonData::POKEMON[$this->code][PokemonData::FIELD_UNRELEASED] ?? false;
     }
 
     public function getLinkHash($forceForm = false): string
