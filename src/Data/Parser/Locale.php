@@ -116,6 +116,7 @@ class Locale
         'pokemon_desc_0103_0078' => Pokemon::EXEGGUTOR | Mods::ALOLAN,
         'pokemon_desc_0105_0080' => Pokemon::MAROWAK | Mods::ALOLAN,
         'pokemon_desc_0110_0944' => Pokemon::WEEZING | Mods::GALARIAN,
+        'pokemon_desc_0122_2339' => Pokemon::MR_MIME | Mods::GALARIAN,
         'pokemon_desc_0263_0946' => Pokemon::ZIGZAGOON | Mods::GALARIAN,
         'pokemon_desc_0264_0948' => Pokemon::LINOONE | Mods::GALARIAN,
         'pokemon_desc_0554_2341' => Pokemon::DARUMAKA | Mods::GALARIAN,

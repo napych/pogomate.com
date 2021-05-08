@@ -54,7 +54,9 @@ class Moves
                 }
                 switch ($k) {
                     case self::FIELD_CLASS:
-                        $moveStr[] = 'self::FIELD_CLASS => self::' . self::CLASS_TRANSLATE[$move[self::FIELD_CLASS]];
+                        if (!empty($move[self::FIELD_CLASS])) {
+                            $moveStr[] = 'self::FIELD_CLASS => self::' . self::CLASS_TRANSLATE[$move[self::FIELD_CLASS]];
+                        }
                         break;
                     case self::FIELD_TYPE:
                         $moveStr[] = 'self::FIELD_TYPE => Types::' . \Pogo\Pokemon\Types::getConst($move[self::FIELD_TYPE]);

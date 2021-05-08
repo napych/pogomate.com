@@ -236,13 +236,14 @@ class MovesLinks
         Moves::MOVE_PAYBACK => 'payback',
         Moves::MOVE_ROCK_WRECKER => 'rock-wrecker',
         Moves::MOVE_AEROBLAST => 'aeroblast',
-        Moves::MOVE_TECHNO_BLAST_NORMAL => '',
-        Moves::MOVE_TECHNO_BLAST_BURN => '',
-        Moves::MOVE_TECHNO_BLAST_CHILL => '',
-        Moves::MOVE_TECHNO_BLAST_WATER => '',
-        Moves::MOVE_TECHNO_BLAST_SHOCK => '',
+        Moves::MOVE_TECHNO_BLAST_NORMAL => 'techno-blast',
+        Moves::MOVE_TECHNO_BLAST_BURN => 'techno-blast',
+        Moves::MOVE_TECHNO_BLAST_CHILL => 'techno-blast',
+        Moves::MOVE_TECHNO_BLAST_WATER => 'techno-blast',
+        Moves::MOVE_TECHNO_BLAST_SHOCK => 'techno-blast',
         Moves::MOVE_FLY => 'fly',
         Moves::MOVE_V_CREATE => 'v-create',
+        Moves::MOVE_LEAF_STORM => '',
         Moves::MOVE_TRI_ATTACK => 'tri-attack',
         Moves::MOVE_GUST_FAST => 'gust',
         Moves::MOVE_INCINERATE_FAST => 'incinerate'
@@ -490,7 +491,7 @@ class MovesLinks
         'payback' => [Moves::MOVE_PAYBACK],
         'rock-wrecker' => [Moves::MOVE_ROCK_WRECKER],
         'aeroblast' => [Moves::MOVE_AEROBLAST],
-        '' => [
+        'techno-blast' => [
             Moves::MOVE_TECHNO_BLAST_NORMAL,
             Moves::MOVE_TECHNO_BLAST_BURN,
             Moves::MOVE_TECHNO_BLAST_CHILL,
@@ -499,6 +500,7 @@ class MovesLinks
         ],
         'fly' => [Moves::MOVE_FLY],
         'v-create' => [Moves::MOVE_V_CREATE],
+        '' => [Moves::MOVE_LEAF_STORM],
         'tri-attack' => [Moves::MOVE_TRI_ATTACK],
         'gust' => [Moves::MOVE_GUST_FAST],
         'incinerate' => [Moves::MOVE_INCINERATE_FAST]

@@ -2,15 +2,18 @@
 
 namespace Pogo\Data\Parser;
 
+use Exception;
+use Pogo\Data\Parser\Generator\ResultEvolution;
 use Pogo\Data\Parser\Result\All;
 use Pogo\Pokemon\Mods;
 use Pogo\Pokemon\Types;
 use Pogo\Data\Manual\Forms;
 use Pogo\Pokemon;
+use Pogo\Data\Parser\Generator\ResultPokemon as RP;
 
 class GameMasterJSON
 {
-    const FILE = __DIR__ . '/../blobs/master/1612468746305.json';
+    const FILE = __DIR__ . '/../blobs/master/1619227212704.json';
     const IGNORE_KEYS = [
         'templateId',
         'arTelemetrySettings',
@@ -53,7 +56,6 @@ class GameMasterJSON
         'moveSequence',
         'crossGameSocialSettings',
         'exRaidSettings',
-        'formSettings',
         'friendshipMilestoneSettings',
         'iapCategoryDisplay',
         'pokestopInvasionAvailabilitySettings',
@@ -84,16 +86,21 @@ class GameMasterJSON
     /** @var int */
     protected $batch = null;
 
+    protected $forms = [];
+
     public function __construct()
     {
         $this->result = new All();
     }
 
-    public function getResult()
+    public function getResult(): All
     {
         return $this->result;
     }
 
+    /**
+     * @throws \Exception
+     */
     public function parse($file = self::FILE)
     {
         $data = $this->prepare($file);
@@ -106,14 +113,19 @@ class GameMasterJSON
         unset($data['combatMove']);
         unset($data['move']);
 
+        $this->parsePokemonForms($data['formSettings']);
         $this->parsePokemon($data['pokemon']);
-        unset($data['pokemon']);
 
         if (!empty($data)) {
             echo '*** WARNING *** parse data has keys left: ' . implode(', ', array_keys($data)), PHP_EOL;
         }
     }
 
+    /**
+     * @param string $file
+     * @return array[]|null
+     * @throws \Exception
+     */
     protected function prepare(string $file)
     {
         $data = json_decode(file_get_contents($file), true);
@@ -131,7 +143,7 @@ class GameMasterJSON
                 case 'result': // "COMPLETE" string
                     break;
                 default:
-                    throw new \Exception("Unknown level 1 entry: " . $k);
+                    throw new Exception("Unknown level 1 entry: " . $k);
             }
         }
         return $templates;
@@ -142,7 +154,7 @@ class GameMasterJSON
      * @return array[]
      * @throws \Exception
      */
-    protected function prepareTemplates(array $templates)
+    protected function prepareTemplates(array $templates): array
     {
         $stackedData = [];
 
@@ -159,10 +171,10 @@ class GameMasterJSON
 
         foreach ($templates as $template) {
             if (empty($template['templateId'])) {
-                throw new \Exception('Missing templateId');
+                throw new Exception('Missing templateId');
             }
             if (empty($template['data'])) {
-                throw new \Exception('Empty template data');
+                throw new Exception('Empty template data');
             }
             $templateId = $template['templateId'];
             $templateData = $template['data'];
@@ -232,12 +244,12 @@ class GameMasterJSON
                 [
                     Result\Moves::FIELD_CONST => 'MOVE_' . $movementId,
                     //Result\Moves::FIELD_CLASS => static::MOVE_TYPE_TRANSLATE[$move['animationId']],
-                    Result\Moves::FIELD_CLASS => $move['energyDelta'] < 0 ? Result\Moves::MOVES_CLASS_CHARGE : Result\Moves::MOVES_CLASS_FAST,
+                    Result\Moves::FIELD_CLASS => isset($move['energyDelta']) ? ($move['energyDelta'] < 0 ? Result\Moves::MOVES_CLASS_CHARGE : Result\Moves::MOVES_CLASS_FAST) : null,
                     Result\Moves::FIELD_TYPE => static::TYPE_TRANSLATE[$move['type']],
-                    Result\Moves::FIELD_POWER => $move['power'],
+                    Result\Moves::FIELD_POWER => $move['power'] ?? null,
                     Result\Moves::FIELD_ACCURACY => $move['accuracyChance'],
-                    Result\Moves::FIELD_CRIT => $move['criticalChance'],
-                    Result\Moves::FIELD_ENERGY => $move['energyDelta'],
+                    Result\Moves::FIELD_CRIT => $move['criticalChance'] ?? null,
+                    Result\Moves::FIELD_ENERGY => $move['energyDelta'] ?? null,
                     Result\Moves::FIELD_DURATION => $move['durationMs'] / 1000,
                     Result\Moves::FIELD_DMG_WINDOW_START => $move['damageWindowStartMs'],
                     Result\Moves::FIELD_DMG_WINDOW_END => $move['damageWindowEndMs'],
@@ -258,8 +270,8 @@ class GameMasterJSON
     {
         foreach ($data as $move) {
             $this->pvpMoves[$move['uniqueId']] = [
-                'power' => $move['power'],
-                'energy' => $move['energyDelta']
+                'power' => $move['power'] ?? null,
+                'energy' => $move['energyDelta'] ?? null
             ];
         }
     }
@@ -268,61 +280,55 @@ class GameMasterJSON
     {
         foreach ($data as $template => $pokemon) {
             $this->checkPokemon($pokemon);
-            $chunks = explode('_', $template);
-            $id = (int)substr($chunks[0], 1);
-            $code = $id;
-
-            // TODO: detect forms
-            // Result\Pokemon::FIELD_SHADOW => !empty($pokemon['shadow']),
-
-            if (!empty($pokemon['form'])) {
-                try {
-                    $code = $this->getCode($id, $pokemon['uniqueId'], $pokemon['form']);
-                } catch (\Exception $e) {
-                    continue;
-                }
+            if (isset($pokemon['form']) && isset($this->forms[$pokemon['form']])) {
+                $code = $this->forms[$pokemon['form']];
+            } else {
+                $chunks = explode('_', $template);
+                $code = ((int)substr($chunks[0], 1));
             }
 
-            $add = [
-                Result\Pokemon::FIELD_CONST => $pokemon['form'] ?? $pokemon['uniqueId'],
-                Result\Pokemon::FIELD_NAME => $pokemon['uniqueId'],
-                Result\Pokemon::FIELD_FORM => $pokemon['form'],
-                Result\Pokemon::FIELD_TYPE1 => self::TYPE_TRANSLATE[$pokemon['type1']],
-                Result\Pokemon::FIELD_TYPE2 => self::TYPE_TRANSLATE[$pokemon['type2']] ?? null,
-                // 'encounter' => ['baseCaptureRate' => 0.2, 'baseFleeRate' => 0.1, 'collisionRadiusM' => 0.3815, 'collisionHeightM' => 0.654,
-                //                 'collisionHeadRadiusM' => 0.2725, 'movementType' => 'MOVEMENT_JUMP', 'movementTimerS' => 10.0, 'jumpTimeS' => 1.15,
-                //                 'attackTimerS' => 29.0, 'attackProbability' => 0.1, 'dodgeProbability' => 0.15, 'dodgeDurationS' => 1.0,
-                //                 'dodgeDistance' => 1.0, 'cameraDistance' => 3.75, 'minPokemonActionFrequencyS' => 0.2, 'maxPokemonActionFrequencyS' => 1.6],
-                Result\Pokemon::FIELD_ATTACK => $pokemon['stats']['baseAttack'] ?? null,
-                Result\Pokemon::FIELD_DEFENSE => $pokemon['stats']['baseDefense'] ?? null,
-                Result\Pokemon::FIELD_STAMINA => $pokemon['stats']['baseStamina'] ?? null,
-                Result\Pokemon::FIELD_FAST_MOVES => [],
-                // fill later
-                Result\Pokemon::FIELD_FAST_MOVES_ELITE => [],
-                // fill later
-                Result\Pokemon::FIELD_CHARGE_MOVES => [],
-                // fill later
-                Result\Pokemon::FIELD_CHARGE_MOVES_ELITE => [],
-                // fill later
-                // 'evolution' => ['IVYSAUR'],
-                // 'evolutionPips' => 1,
-                // 'pokedexHeightM' => 0.7,
-                // 'pokedexWeightKg' => 6.9,
-                // 'heightStdDev' => 0.0875,
-                // 'weightStdDev' => 0.8625,
-                // 'familyId' => 'FAMILY_BULBASAUR',
-                Result\Pokemon::FIELD_THIRD_MOVE_CANDY => $pokemon['thirdMove']['candyToUnlock'] ?? null,
-                Result\Pokemon::FIELD_THIRD_MOVE_DUST => $pokemon['thirdMove']['stardustToUnlock'] ?? null,
-                Result\Pokemon::FIELD_TRANSFERABLE => (bool)$pokemon['isTransferable'] ?? false,
-                Result\Pokemon::FIELD_DEPLOYABLE => (bool)$pokemon['isDeployable'] ?? false,
-                Result\Pokemon::FIELD_PARENT => $pokemon['parentId'] ?? null,
-                Result\Pokemon::FIELD_BUDDY_DISTANCE => $pokemon['kmBuddyDistance'] ?? null,
-                Result\Pokemon::FIELD_PURIFY_CANDY => $pokemon['shadow']['purificationCandyNeeded'],
-                Result\Pokemon::FIELD_PURIFY_DUST => $pokemon['shadow']['purificationStardustNeeded'],
-                Result\Pokemon::FIELD_LEGENDARY => isset ($pokemon['pokemonClass']) && $pokemon['pokemonClass'] === 'POKEMON_CLASS_LEGENDARY',
-                Result\Pokemon::FIELD_MYTHIC => isset ($pokemon['pokemonClass']) && $pokemon['pokemonClass'] === 'POKEMON_CLASS_MYTHIC'
-            ];
+            // TODO: detect forms (upd: hmm?)
+            // Result\Pokemon::FIELD_SHADOW => !empty($pokemon['shadow']),
 
+            if (!$code) {
+                die('Failed to get code for ' . $template . PHP_EOL);
+            }
+
+            $rp = RP::get($code)
+                ->setTypes(
+                    self::TYPE_TRANSLATE[$pokemon['type1']],
+                    isset($pokemon['type2']) ? self::TYPE_TRANSLATE[$pokemon['type2']] : null
+                )
+                ->setAttack($pokemon['stats']['baseAttack'] ?? null)
+                ->setDefense($pokemon['stats']['baseDefense'] ?? null)
+                ->setStamina($pokemon['stats']['baseStamina'] ?? null)
+                ->setThirdMoveCandy($pokemon['thirdMove']['candyToUnlock'] ?? null)
+                ->setThirdMoveDust($pokemon['thirdMove']['stardustToUnlock'] ?? null)
+                ->setPurifyCandy($pokemon['shadow']['purificationCandyNeeded'] ?? null)
+                ->setPurifyDust($pokemon['shadow']['purificationStardustNeeded'] ?? null)
+                ->setBuddyDistance($pokemon['kmBuddyDistance'] ?? null)
+                ->setTransferable(isset($pokemon['isTransferable']) ? (bool)$pokemon['isTransferable'] : null)
+                ->setTradable(isset($pokemon['isTradable']) ? (bool)$pokemon['isTradable'] : null)
+                ->setDeployable(isset($pokemon['isDeployable']) ? (bool)$pokemon['isDeployable'] : null)
+                ->setLegendary(
+                    isset($pokemon['pokemonClass']) && $pokemon['pokemonClass'] === 'POKEMON_CLASS_LEGENDARY'
+                )
+                ->setMythic(isset($pokemon['pokemonClass']) && $pokemon['pokemonClass'] === 'POKEMON_CLASS_MYTHIC')
+                ->setUnreleased(false);
+
+            // 'encounter' => ['baseCaptureRate' => 0.2, 'baseFleeRate' => 0.1, 'collisionRadiusM' => 0.3815, 'collisionHeightM' => 0.654,
+            //                 'collisionHeadRadiusM' => 0.2725, 'movementType' => 'MOVEMENT_JUMP', 'movementTimerS' => 10.0, 'jumpTimeS' => 1.15,
+            //                 'attackTimerS' => 29.0, 'attackProbability' => 0.1, 'dodgeProbability' => 0.15, 'dodgeDurationS' => 1.0,
+            //                 'dodgeDistance' => 1.0, 'cameraDistance' => 3.75, 'minPokemonActionFrequencyS' => 0.2, 'maxPokemonActionFrequencyS' => 1.6],
+            // 'evolution' => ['IVYSAUR'],
+            // 'evolutionPips' => 1,
+            // 'pokedexHeightM' => 0.7,
+            // 'pokedexWeightKg' => 6.9,
+            // 'heightStdDev' => 0.0875,
+            // 'weightStdDev' => 0.8625,
+            // 'familyId' => 'FAMILY_BULBASAUR',
+
+            $rp->clearMoves();
             // fast moves
             if (empty($pokemon['quickMoves'])) {
                 echo 'WARNING: no quickMoves for ', $template, PHP_EOL;
@@ -331,21 +337,19 @@ class GameMasterJSON
                     if (!isset($this->move2id[$quickMove])) {
                         echo 'WARNING: quickMove ID is missing: ', $quickMove, PHP_EOL;
                     }
-                    $add[Result\Pokemon::FIELD_FAST_MOVES][] = $this->move2id[$quickMove];
+                    $rp->addFastMove($this->move2id[$quickMove]);
                 }
             }
 
-            // elite fast moves
+            // moves
             if (!empty($pokemon['eliteQuickMove'])) {
                 foreach ($pokemon['eliteQuickMove'] as $eliteQuickMove) {
                     if (!isset($this->move2id[$eliteQuickMove])) {
                         echo 'WARNING: quickMove ID is missing: ', $eliteQuickMove, PHP_EOL;
                     }
-                    $add[Result\Pokemon::FIELD_FAST_MOVES_ELITE][] = $this->move2id[$eliteQuickMove];
+                    $rp->addFastMove($this->move2id[$eliteQuickMove], true);
                 }
             }
-
-            // charge moves
             if (empty($pokemon['cinematicMoves'])) {
                 echo 'WARNING: no cinematicMoves for ', $template, PHP_EOL;
             } else {
@@ -353,28 +357,26 @@ class GameMasterJSON
                     if (!isset($this->move2id[$cinematicMove])) {
                         echo 'WARNING: cinematicMove ID is missing: ', $cinematicMove, PHP_EOL;
                     }
-                    $add[Result\Pokemon::FIELD_CHARGE_MOVES][] = $this->move2id[$cinematicMove];
+                    $rp->addChargeMove($this->move2id[$cinematicMove]);
                 }
             }
-
-            // elite charge moves
             if (!empty($pokemon['eliteCinematicMove'])) {
                 foreach ($pokemon['eliteCinematicMove'] as $eliteCinematicMove) {
                     if (!isset($this->move2id[$eliteCinematicMove])) {
                         echo 'WARNING: cinematicMove ID is missing: ', $eliteCinematicMove, PHP_EOL;
                     }
-                    $add[Result\Pokemon::FIELD_CHARGE_MOVES_ELITE][] = $this->move2id[$eliteCinematicMove];
+                    $rp->addChargeMove($this->move2id[$eliteCinematicMove], true);
                 }
             }
 
             // evolutions
+            $tempBranches = [];
             if (!empty($pokemon['evolutionBranch'])) {
-                $add[Result\Pokemon::FIELD_EVOLUTIONS] = [];
                 foreach ($pokemon['evolutionBranch'] as $branch) {
                     if (!empty($branch['evolution'])) {
-                        $add[Result\Pokemon::FIELD_EVOLUTIONS][] = $this->parseEvolutionBranch($template, $branch);
+                        $rp->addEvolution($this->parseEvolutionBranch($template, $branch));
                     } elseif (!empty($branch['temporaryEvolution'])) {
-//                        $add[Result\Pokemon::FIELD_EVOLUTIONS][] = $this->parseTempEvolutionBranch($template, $branch);
+                        $tempBranches[$branch['temporaryEvolution']] = $branch;
                     }
                 }
             }
@@ -387,112 +389,107 @@ class GameMasterJSON
                         continue;
                     }
 
-                    $mega = $add;
-                    $mega['parent'] = $mega['const']; // TODO: or $mega['name'] ?
                     switch ($tempEvo['tempEvoId']) {
                         case 'TEMP_EVOLUTION_MEGA':
                             $megaMod = Mods::MEGA;
-                            $mega['const'] .= '_MEGA';
                             break;
                         case 'TEMP_EVOLUTION_MEGA_X':
                             $megaMod = Mods::MEGA_X;
-                            $mega['const'] .= '_MEGA_X';
                             break;
                         case 'TEMP_EVOLUTION_MEGA_Y':
                             $megaMod = Mods::MEGA_Y;
-                            $mega['const'] .= '_MEGA_Y';
                             break;
                         default:
                             echo 'WARNING: invalid tempEvoId: ', $tempEvo['tempEvoId'], PHP_EOL;
                             continue 2;
                     }
-                    if (!empty($tempEvo['stats'])) {
-                        if (!empty($tempEvo['stats']['baseAttack'])) {
-                            $mega[\Pogo\Data\Parser\Result\Pokemon::FIELD_ATTACK] = $tempEvo['stats']['baseAttack'];
-                        }
-                        if (!empty($tempEvo['stats']['baseDefense'])) {
-                            $mega[\Pogo\Data\Parser\Result\Pokemon::FIELD_DEFENSE] = $tempEvo['stats']['baseDefense'];
-                        }
-                        if (!empty($tempEvo['stats']['baseStamina'])) {
-                            $mega[\Pogo\Data\Parser\Result\Pokemon::FIELD_STAMINA] = $tempEvo['stats']['baseStamina'];
-                        }
-                    }
+                    $megaId = $rp->getCode() | $megaMod;
+                    $mega = RP::clone($megaId, $rp->getCode());
+                    $mega->setAttack($tempEvo['stats']['baseAttack'] ?? null);
+                    $mega->setDefense($tempEvo['stats']['baseDefense'] ?? null);
+                    $mega->setStamina($tempEvo['stats']['baseStamina'] ?? null);
+                    $megaTypes = $mega->getTypes();
                     if (!empty($tempEvo['typeOverride1'])) {
-                        $mega[\Pogo\Data\Parser\Result\Pokemon::FIELD_TYPE1] = self::TYPE_TRANSLATE[$tempEvo['typeOverride1']];
+                        $megaTypes[0] = self::TYPE_TRANSLATE[$tempEvo['typeOverride1']];
                     }
                     if (!empty($tempEvo['typeOverride2'])) {
-                        $mega[\Pogo\Data\Parser\Result\Pokemon::FIELD_TYPE2] = self::TYPE_TRANSLATE[$tempEvo['typeOverride2']];
+                        $megaTypes[1] = self::TYPE_TRANSLATE[$tempEvo['typeOverride2']];
                     } else {
-                        unset($mega[\Pogo\Data\Parser\Result\Pokemon::FIELD_TYPE2]);
+                        unset($megaTypes[1]);
                     }
-                    unset($mega['evolutions']);
-                    unset($mega['thirdCandy']);
-                    unset($mega['thirdDust']);
-                    unset($mega['buddyDistance']);
-                    unset($mega['transferable']);
-                    unset($mega['deployable']);
-                    unset($mega['purifyCandy']);
-                    unset($mega['purifyDust']);
-                    unset($mega['legendary']);
-                    unset($mega['mythic']);
-//                    var_dump($mega);
-//                    echo $code | $megaMod;
-//                    die();
-                    $add[Result\Pokemon::FIELD_EVOLUTIONS][] = [
-                        \Pogo\Data\Parser\Result\Pokemon::FIELD_EVOLUTION_POKEMON => $mega['const'],
-                        \Pogo\Data\Parser\Result\Pokemon::FIELD_EVOLUTION_FORM => $mega['const']
-                    ];
-                    $this->result->pokemon->add($code | $megaMod, $mega);
+                    $mega->setTypes($megaTypes[0], $megaTypes[1] ?? null);
+                    $megaEvo = new ResultEvolution($megaId);
+                    $megaEvo->setTemporary(true);
+                    $megaEvo->setRequireEnergyFirst(
+                        $tempBranches[$tempEvo['tempEvoId']]['temporaryEvolutionEnergyCost']
+                    );
+                    $megaEvo->setRequireEnergy(
+                        $tempBranches[$tempEvo['tempEvoId']]['temporaryEvolutionEnergyCostSubsequent']
+                    );
+                    $rp->addEvolution($megaEvo);
                 }
             }
-
-            $this->result->pokemon->add($code, $add);
         }
     }
 
-    protected function parseEvolutionBranch(string $template, array $branch)
+    protected function parseEvolutionBranch(string $template, array $branch): ResultEvolution
     {
-        $evolution = [];
+        $this->checkBranch($branch);
+        if (!empty($branch['form']) && !empty($this->forms[$branch['form']])) {
+            $key = $branch['form'];
+        } elseif (!empty($branch['form']) && !empty($this->forms[$branch['form'] . '_NORMAL'])) {
+            $key = $branch['form'] . '_NORMAL';
+        } elseif (!empty($this->forms[$branch['evolution']])) {
+            $key = $branch['evolution'];
+        } else {
+            $key = $branch['evolution'] . '_NORMAL';
+        }
+        $evoId = $this->forms[$key];
+        if (!$evoId) {
+            var_dump($branch);
+            echo 'Missing branch for form "', $branch['form'] ?? '', '", evolution "', $branch['evolution'], '"', PHP_EOL;
+        }
+        $evolution = new ResultEvolution($evoId);
         foreach ($branch as $k => $v) {
             switch ($k) {
                 case 'evolution':
-                    $evolution[Result\Pokemon::FIELD_EVOLUTION_POKEMON] = $v;
+//                    $evolution[Result\Pokemon::FIELD_EVOLUTION_POKEMON] = $v;
                     break;
                 case 'form':
-                    $evolution[Result\Pokemon::FIELD_EVOLUTION_FORM] = $v;
+//                    $evolution[Result\Pokemon::FIELD_EVOLUTION_FORM] = $v;
                     break;
                 case 'candyCost':
-                    $evolution[Result\Pokemon::FIELD_EVOLUTION_CANDY] = $v;
+                    $evolution->setCostCandy($v);
                     break;
                 case 'evolutionItemRequirement':
-                    $evolution[Result\Pokemon::FIELD_EVOLUTION_ITEM] = $v;
+                    $evolution->setRequiredItem($v);
                     break;
                 case 'noCandyCostViaTrade':
-                    $evolution[Result\Pokemon::FIELD_EVOLUTION_FREE_TRADED] = true;
+                    $evolution->setTradedNoCandy(true);
                     break;
                 case 'lureItemRequirement':
-                    $evolution[Result\Pokemon::FIELD_EVOLUTION_LURE] = $v;
+                    $evolution->setRequiredLure($v);
                     break;
                 case 'kmBuddyDistanceRequirement':
-                    $evolution[Result\Pokemon::FIELD_EVOLUTION_DISTANCE] = $v;
+                    $evolution->setRequireWalk($v);
                     break;
                 case 'mustBeBuddy':
-                    $evolution[Result\Pokemon::FIELD_EVOLUTION_BUDDY] = true;
+                    $evolution->setRequireBuddy(true);
                     break;
                 case 'onlyNighttime':
-                    $evolution[Result\Pokemon::FIELD_EVOLUTION_NIGHT] = true;
+                    $evolution->setRequireNight(true);
                     break;
                 case 'onlyDaytime':
-                    $evolution[Result\Pokemon::FIELD_EVOLUTION_DAY] = true;
+                    $evolution->setRequireDay(true);
                     break;
                 case 'priority':
-                    $evolution[Result\Pokemon::FIELD_EVOLUTION_PRIORITY] = $v;
+                    $evolution->setPriority($v);
                     break;
                 case 'genderRequirement':
                     if ($v === 'MALE') {
-                        $evolution[Result\Pokemon::FIELD_EVOLUTION_MALE] = true;
+                        $evolution->setRequireGender(ResultEvolution::GENDER_MALE);
                     } elseif ($v === 'FEMALE') {
-                        $evolution[Result\Pokemon::FIELD_EVOLUTION_FEMALE] = true;
+                        $evolution->setRequireGender(ResultEvolution::GENDER_FEMALE);
                     } else {
                         echo 'WARNING: Unknown genderRequirement: ', $v, PHP_EOL;
                     }
@@ -508,60 +505,6 @@ class GameMasterJSON
         return $evolution;
     }
 
-    protected function getCode(int $id, string $uniqueId, string $form)
-    {
-        $ignore = ['PIKACHU_ADVENTURE_HAT_2020', 'PIKACHU_WINTER_2020', 'DELIBIRD_WINTER_2020', 'CUBCHOO_WINTER_2020', ''];
-        if (in_array($uniqueId, $ignore)) {
-            throw new \Exception('Skip thrash form');
-        }
-        $code = $id;
-        $cut = str_replace($uniqueId, '', $form);
-        $flags = explode('_', $cut);
-        for ($i = 0; $i < sizeof($flags); $i++) {
-            switch ($flags[$i]) {
-                case '':
-                case 'NORMAL':
-                case 'NIDORAN':
-                    break;
-                case 'PURIFIED':
-                    $code |= Mods::PURIFIED;
-                    break;
-                case 'SHADOW':
-                    $code |= Mods::SHADOW;
-                    break;
-                case 'GALARIAN':
-                    $code |= Mods::GALARIAN;
-                    break;
-                case 'ALOLA':
-                    $code |= Mods::ALOLAN;
-                    break;
-                case 'COSTUME':
-                case 'COPY':
-                case 'VS':
-                case 'FALL':
-                case '2020':
-                case '2021':
-                    throw new \Exception('Skip thrash pokemon');
-                default:
-                    if (isset(self::FLAG2FORM[$id][$flags[$i]])) {
-                        $code |= self::FLAG2FORM[$id][$flags[$i]];
-                        break;
-                    }
-                    if (isset($flags[$i + 1])) {
-                        $tw = $flags[$i] . '_' . $flags[$i + 1];
-                        if (isset(self::FLAG2FORM[$id][$tw])) {
-                            $code |= self::FLAG2FORM[$id][$tw];
-                            ++$i;
-                            break;
-                        }
-                    }
-                    echo 'WARNING: unknown flag ', $flags[$i], ' (', $form, ')', PHP_EOL;
-                    throw new \Exception('Invalid flag');
-            }
-        }
-        return $code;
-    }
-
     protected function checkBranch(array $branch)
     {
         if (empty($branch['candyCost']) || empty($branch['evolution'])) {
@@ -575,6 +518,14 @@ class GameMasterJSON
                 case 'form':
                 case 'noCandyCostViaTrade':
                 case 'evolutionItemRequirement':
+                case 'genderRequirement':
+                case 'kmBuddyDistanceRequirement':
+                case 'lureItemRequirement':
+                case 'questDisplay': // TODO
+                case 'mustBeBuddy':
+                case 'onlyDaytime':
+                case 'onlyNighttime':
+                case 'priority':
                     break;
                 default:
                     echo 'WARNING: strange evolutionBranch (check #2):', print_r($branch, true), PHP_EOL;
@@ -599,26 +550,78 @@ class GameMasterJSON
         }
     }
 
-    public function parsePokemonForms(string $template, array $data)
+    public function parsePokemonForms(array $data)
     {
-        /*
-        $data = [
-            'templateId' => 'FORMS_V0001_POKEMON_BULBASAUR',
-            'formSettings' => [
-                'pokemon' => 'BULBASAUR',
-                'forms' => [
-                    ['form' => 'BULBASAUR_NORMAL'],
-                    ['form' => 'BULBASAUR_SHADOW'],
-                    ['form' => 'BULBASAUR_PURIFIED'],
-                    [
-                        'form' => 'BULBASAUR_FALL_2019'
-                    'assetBundleSuffix' => 'pm0001_00_pgo_fall2019',
-                ],
-            ]
+        $ignore = [
+            'PIKACHU_ADVENTURE_HAT_2020',
+            'PIKACHU_WINTER_2020',
+            'DELIBIRD_WINTER_2020',
+            'CUBCHOO_WINTER_2020',
+            ''
         ];
-         */
-        foreach ($data as $pokemonForm) {
-            // todo
+        foreach ($data as $template => $formData) {
+            $chunks = explode('_', $template);
+            $baseId = (int)substr($chunks[1], 1);
+            $baseName = $formData['pokemon'];
+            if (empty($formData['forms']) || $baseName === 'UNOWN' || $baseName === 'SPINDA') {
+                $this->forms[$baseName] = $baseId;
+                continue;
+            }
+            foreach ($formData['forms'] as $formArray) {
+                $form = $formArray['form'];
+                if (in_array($form, $ignore)) {
+                    continue;
+                }
+                $code = $baseId;
+                try {
+                    $flags = explode('_', str_replace($baseName, '', $form));
+                    for ($i = 0; $i < sizeof($flags); $i++) {
+                        switch ($flags[$i]) {
+                            case '':
+                            case 'NORMAL':
+                            case 'NIDORAN':
+                                break;
+                            case 'PURIFIED':
+                                $code |= Mods::PURIFIED;
+                                break;
+                            case 'SHADOW':
+                                $code |= Mods::SHADOW;
+                                break;
+                            case 'GALARIAN':
+                                $code |= Mods::GALARIAN;
+                                break;
+                            case 'ALOLA':
+                                $code |= Mods::ALOLAN;
+                                break;
+                            case 'COSTUME':
+                            case 'COPY':
+                            case 'VS':
+                            case 'FALL':
+                            case '2020':
+                            case '2021':
+                                throw new Exception('Skip thrash pokemon');
+                            default:
+
+                                if (isset(self::FLAG2FORM[$baseId][$flags[$i]])) {
+                                    $code |= self::FLAG2FORM[$baseId][$flags[$i]];
+                                    break;
+                                }
+                                if (isset($flags[$i + 1])) {
+                                    $tw = $flags[$i] . '_' . $flags[$i + 1];
+                                    if (isset(self::FLAG2FORM[$baseId][$tw])) {
+                                        $code |= self::FLAG2FORM[$baseId][$tw];
+                                        ++$i;
+                                        break;
+                                    }
+                                }
+                                echo 'WARNING: unknown flag ', $flags[$i], ' (', $form, ')', PHP_EOL;
+                                throw new Exception('Invalid flag');
+                        }
+                    }
+                    $this->forms[$form] = $code;
+                } catch (Exception $e) {
+                }
+            }
         }
     }
 
@@ -645,13 +648,7 @@ class GameMasterJSON
 
     public function parseTypeEffectives(array $data)
     {
-        /*
-        $data = [
-            'attackScalar' => [1.0, 0.625, 0.625, 0.625, 1.0, 1.0, 1.0, 0.625, 0.625, 0.625, 1.0, 1.6, 1.0, 1.6, 1.0, 1.0, 1.6, 0.625],
-            'attackType' => 'POKEMON_TYPE_BUG',
-        ];
-         */
-        foreach ($data as $templateName => $effective) {
+        foreach ($data as $effective) {
             foreach ($effective['attackScalar'] as $k => $v) {
                 $this->result->types->setEffectiveness(
                     self::TYPE_TRANSLATE[$effective['attackType']],
@@ -699,6 +696,7 @@ class GameMasterJSON
         'buddyOffsetFemale',
         'isTransferable',
         'isDeployable',
+        'isTradable',
         'modelHeight',
         'modelScaleV2',
         'thirdMove',
@@ -857,6 +855,14 @@ class GameMasterJSON
             'CHILL' => Forms::GENESECT_CHILL,
             'DOUSE' => Forms::GENESECT_DOUSE,
             'SHOCK' => Forms::GENESECT_SHOCK
+        ],
+        Pokemon::PYROAR => [
+            'NORMAL' => Forms::PYROAR_MALE,
+            'FEMALE' => Forms::PYROAR_FEMALE
+        ],
+        Pokemon::MEOWSTIC => [
+            'NORMAL' => Forms::MEOWSTIC_MALE,
+            'FEMALE' => Forms::MEOWSTIC_FEMALE
         ]
     ];
 

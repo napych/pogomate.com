@@ -1,12 +1,10 @@
 <?php
 
 namespace Pogo\Data\Generated;
-
 use Pogo\Pokemon;
-
 class Mythics
 {
-    const LEGENDARIES = [
+    const MYTHICS = [
         Pokemon::MEW,
         Pokemon::CELEBI,
         Pokemon::JIRACHI,

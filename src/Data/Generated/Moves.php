@@ -242,6 +242,7 @@ class Moves
     const MOVE_TECHNO_BLAST_SHOCK = 340;
     const MOVE_FLY = 341;
     const MOVE_V_CREATE = 342;
+    const MOVE_LEAF_STORM = 343;
     const MOVE_TRI_ATTACK = 344;
     const MOVE_GUST_FAST = 345;
     const MOVE_INCINERATE_FAST = 346;

@@ -2,6 +2,7 @@
 
 namespace Pogo\Misc\Commands\Data;
 
+use Pogo\Data\Parser\Generator\ResultPokemon;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -38,6 +39,7 @@ class GameMaster extends Command
 //        }
         $parser =  new \Pogo\Data\Parser\GameMasterJSON();
         $parser->parse();
+        ResultPokemon::writePHP();
         $result = $parser->getResult();
         $result->writePHP();
         return 0;

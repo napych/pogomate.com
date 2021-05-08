@@ -1285,7 +1285,6 @@ class MovesData extends Moves
         ],
         self::MOVE_STRUGGLE => [
             self::FIELD_NAME => 'Struggle',
-            self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 35,
             self::FIELD_ACCURACY => 1,
@@ -1943,7 +1942,6 @@ class MovesData extends Moves
         ],
         self::MOVE_TRANSFORM_FAST => [
             self::FIELD_NAME => 'Transform',
-            self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => null,
             self::FIELD_ACCURACY => 1,
@@ -2853,7 +2851,6 @@ class MovesData extends Moves
         ],
         self::MOVE_CRUSH_CLAW => [
             self::FIELD_NAME => 'Crush Claw',
-            self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => null,
             self::FIELD_ACCURACY => 1,
@@ -2937,7 +2934,6 @@ class MovesData extends Moves
         ],
         self::MOVE_LEECH_LIFE => [
             self::FIELD_NAME => 'Leech Life',
-            self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::BUG,
             self::FIELD_POWER => null,
             self::FIELD_ACCURACY => 1,
@@ -2951,7 +2947,6 @@ class MovesData extends Moves
         ],
         self::MOVE_DRAIN_PUNCH => [
             self::FIELD_NAME => 'Drain Punch',
-            self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::FIGHTING,
             self::FIELD_POWER => null,
             self::FIELD_ACCURACY => 1,
@@ -3007,7 +3002,6 @@ class MovesData extends Moves
         ],
         self::MOVE_RAZOR_SHELL => [
             self::FIELD_NAME => 'Razor Shell',
-            self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::WATER,
             self::FIELD_POWER => null,
             self::FIELD_ACCURACY => 1,
@@ -3147,7 +3141,6 @@ class MovesData extends Moves
         ],
         self::MOVE_HORN_DRILL => [
             self::FIELD_NAME => 'Horn Drill',
-            self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => null,
             self::FIELD_ACCURACY => 1,
@@ -3161,7 +3154,6 @@ class MovesData extends Moves
         ],
         self::MOVE_FISSURE => [
             self::FIELD_NAME => 'Fissure',
-            self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::GROUND,
             self::FIELD_POWER => null,
             self::FIELD_ACCURACY => 1,
@@ -3258,7 +3250,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -75
         ],
         self::MOVE_TECHNO_BLAST_NORMAL => [
-            self::FIELD_NAME => '',
+            self::FIELD_NAME => 'Techno Blast',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 120,
@@ -3272,7 +3264,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -55
         ],
         self::MOVE_TECHNO_BLAST_BURN => [
-            self::FIELD_NAME => '',
+            self::FIELD_NAME => 'Techno Blast',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FIRE,
             self::FIELD_POWER => 120,
@@ -3286,7 +3278,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -55
         ],
         self::MOVE_TECHNO_BLAST_CHILL => [
-            self::FIELD_NAME => '',
+            self::FIELD_NAME => 'Techno Blast',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::ICE,
             self::FIELD_POWER => 120,
@@ -3300,7 +3292,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -55
         ],
         self::MOVE_TECHNO_BLAST_WATER => [
-            self::FIELD_NAME => '',
+            self::FIELD_NAME => 'Techno Blast',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::WATER,
             self::FIELD_POWER => 120,
@@ -3314,7 +3306,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -55
         ],
         self::MOVE_TECHNO_BLAST_SHOCK => [
-            self::FIELD_NAME => '',
+            self::FIELD_NAME => 'Techno Blast',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::ELECTRIC,
             self::FIELD_POWER => 120,
@@ -3354,6 +3346,20 @@ class MovesData extends Moves
             self::FIELD_DMG_WINDOW_END => 2500,
             self::FIELD_COMBAT_POWER => 95,
             self::FIELD_COMBAT_ENERGY => -40
+        ],
+        self::MOVE_LEAF_STORM => [
+            self::FIELD_NAME => '',
+            self::FIELD_CLASS => self::CLASS_CHARGE,
+            self::FIELD_TYPE => Types::GRASS,
+            self::FIELD_POWER => 130,
+            self::FIELD_ACCURACY => 1,
+            self::FIELD_CRIT => null,
+            self::FIELD_ENERGY => -100,
+            self::FIELD_DURATION => 2.5,
+            self::FIELD_DMG_WINDOW_START => 1100,
+            self::FIELD_DMG_WINDOW_END => 1250,
+            self::FIELD_COMBAT_POWER => 130,
+            self::FIELD_COMBAT_ENERGY => -55
         ],
         self::MOVE_TRI_ATTACK => [
             self::FIELD_NAME => 'Tri Attack',

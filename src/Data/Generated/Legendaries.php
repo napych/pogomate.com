@@ -1,9 +1,7 @@
 <?php
 
 namespace Pogo\Data\Generated;
-
 use Pogo\Pokemon;
-
 class Legendaries
 {
     const LEGENDARIES = [
