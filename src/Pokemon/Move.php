@@ -89,7 +89,7 @@ class Move
 
     public function getPower(): int
     {
-        return $this->moveData[MovesData::FIELD_POWER];
+        return $this->moveData[MovesData::FIELD_POWER] ?? 0;
     }
 
     public function getCrit(): float
@@ -99,17 +99,17 @@ class Move
 
     public function getEnergy(): int
     {
-        return $this->moveData[MovesData::FIELD_ENERGY];
+        return $this->moveData[MovesData::FIELD_ENERGY] ?? 0;
     }
 
     public function getCombatPower(): int
     {
-        return $this->moveData[MovesData::FIELD_COMBAT_POWER];
+        return $this->moveData[MovesData::FIELD_COMBAT_POWER] ?? 0;
     }
 
     public function getCombatEnergy(): int
     {
-        return $this->moveData[MovesData::FIELD_COMBAT_ENERGY];
+        return $this->moveData[MovesData::FIELD_COMBAT_ENERGY] ?? 0;
     }
 
     public function getDuration(): float

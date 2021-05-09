@@ -23,7 +23,7 @@
                     </xsl:when>
                 </xsl:choose>
             </div>
-            <xsl:if test="@power or @energy">
+            <xsl:if test="@power&gt;0 or @energy&gt;0">
                 <h6>Stats</h6>
                 <div class="stats">
                     <xsl:text>Power: </xsl:text>
@@ -33,7 +33,7 @@
                     <xsl:value-of select="@energy"/>
                 </div>
             </xsl:if>
-            <xsl:if test="@pvpPower or @pvpEnergy">
+            <xsl:if test="@pvpPower&gt;0 or @pvpEnergy&gt;0">
                 <h6>PVP Stats</h6>
                 <div class="stats-pvp">
                     <xsl:text>Power: </xsl:text>
@@ -48,6 +48,9 @@
                 <div class="move-users">
                     <xsl:apply-templates select="pokemon" mode="page-move"/>
                 </div>
+            </xsl:if>
+            <xsl:if test="not(pokemon)">
+                <xsl:text>This move is not available in the game now.</xsl:text>
             </xsl:if>
         </div>
     </xsl:template>

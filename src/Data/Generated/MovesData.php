@@ -1285,6 +1285,7 @@ class MovesData extends Moves
         ],
         self::MOVE_STRUGGLE => [
             self::FIELD_NAME => 'Struggle',
+            self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 35,
             self::FIELD_ACCURACY => 1,
@@ -1942,6 +1943,7 @@ class MovesData extends Moves
         ],
         self::MOVE_TRANSFORM_FAST => [
             self::FIELD_NAME => 'Transform',
+            self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => null,
             self::FIELD_ACCURACY => 1,
@@ -2851,6 +2853,7 @@ class MovesData extends Moves
         ],
         self::MOVE_CRUSH_CLAW => [
             self::FIELD_NAME => 'Crush Claw',
+            self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => null,
             self::FIELD_ACCURACY => 1,
@@ -2934,6 +2937,7 @@ class MovesData extends Moves
         ],
         self::MOVE_LEECH_LIFE => [
             self::FIELD_NAME => 'Leech Life',
+            self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::BUG,
             self::FIELD_POWER => null,
             self::FIELD_ACCURACY => 1,
@@ -2947,6 +2951,7 @@ class MovesData extends Moves
         ],
         self::MOVE_DRAIN_PUNCH => [
             self::FIELD_NAME => 'Drain Punch',
+            self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::FIGHTING,
             self::FIELD_POWER => null,
             self::FIELD_ACCURACY => 1,
@@ -3002,6 +3007,7 @@ class MovesData extends Moves
         ],
         self::MOVE_RAZOR_SHELL => [
             self::FIELD_NAME => 'Razor Shell',
+            self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::WATER,
             self::FIELD_POWER => null,
             self::FIELD_ACCURACY => 1,
@@ -3141,6 +3147,7 @@ class MovesData extends Moves
         ],
         self::MOVE_HORN_DRILL => [
             self::FIELD_NAME => 'Horn Drill',
+            self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => null,
             self::FIELD_ACCURACY => 1,
@@ -3154,6 +3161,7 @@ class MovesData extends Moves
         ],
         self::MOVE_FISSURE => [
             self::FIELD_NAME => 'Fissure',
+            self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::GROUND,
             self::FIELD_POWER => null,
             self::FIELD_ACCURACY => 1,

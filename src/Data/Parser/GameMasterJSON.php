@@ -235,16 +235,27 @@ class GameMasterJSON
             $this->move2id[$move['uniqueId']] = $id;
 
             $movementId = $move['uniqueId'];
-            if (!isset($this->pvpMoves[$movementId])) {
-                echo 'WARNING: missing combatMove data for ', $movementId, PHP_EOL;
-            }
+//            if (!isset($this->pvpMoves[$movementId])) {
+//                echo 'WARNING: missing combatMove data for ', $movementId, PHP_EOL;
+//            }
 
+            if (!empty($move['energyDelta'])) {
+                $class = $move['energyDelta'] < 0 ? Result\Moves::MOVES_CLASS_CHARGE : Result\Moves::MOVES_CLASS_FAST;
+            } else {
+                if (strpos($movementId, '_FAST') === strlen($movementId) - 5) {
+                    echo 'WARNING: supposing that move "' . $movementId . '" is fast.', PHP_EOL;
+                    $class = Result\Moves::MOVES_CLASS_FAST;
+                } else {
+                    echo 'WARNING: supposing that move "' . $movementId . '" is charged.', PHP_EOL;
+                    $class = Result\Moves::MOVES_CLASS_CHARGE;
+                }
+            }
             $this->result->moves->add(
                 $id,
                 [
                     Result\Moves::FIELD_CONST => 'MOVE_' . $movementId,
                     //Result\Moves::FIELD_CLASS => static::MOVE_TYPE_TRANSLATE[$move['animationId']],
-                    Result\Moves::FIELD_CLASS => isset($move['energyDelta']) ? ($move['energyDelta'] < 0 ? Result\Moves::MOVES_CLASS_CHARGE : Result\Moves::MOVES_CLASS_FAST) : null,
+                    Result\Moves::FIELD_CLASS => $class,
                     Result\Moves::FIELD_TYPE => static::TYPE_TRANSLATE[$move['type']],
                     Result\Moves::FIELD_POWER => $move['power'] ?? null,
                     Result\Moves::FIELD_ACCURACY => $move['accuracyChance'],
