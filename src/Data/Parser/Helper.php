@@ -2,6 +2,7 @@
 
 namespace Pogo\Data\Parser;
 
+use Pogo\Data\Generated\PokemonData;
 use Pogo\Data\Manual\FormsAlias;
 use Pogo\Data\Manual\PokemonList;
 use Pogo\Pokemon\Mods;
@@ -30,4 +31,34 @@ class Helper
         return $codeConst;
     }
 
+    protected static $names = [];
+    const TRANSLATE_NAME = [
+        'Sirfetch\'d' => PokemonList::SIRFETCH_D,
+        'Jellicent' => PokemonList::JELLICENT,
+        'Galarian Darmanitan' => PokemonList::DARMANITAN | Mods::GALARIAN,
+        'Darmanitan' => PokemonList::DARMANITAN,
+        'Genesect - Burn Drive' => PokemonList::GENESECT | FormsAlias::GENESECT_BURN
+    ];
+
+
+    protected static function loadNames()
+    {
+        if (!empty(self::$names)) {
+            return;
+        }
+        self::$names = self::TRANSLATE_NAME;
+        foreach (PokemonData::POKEMON as $id => $pokemonData) {
+            self::$names[$pokemonData[PokemonData::FIELD_NAME]] = $id;
+        }
+    }
+
+    public static function getCodeByName(string $name): ?int
+    {
+        self::loadNames();
+        if (!isset(self::$names[$name])) {
+            echo 'WARNING: can\'t find code for "' . $name . '"', PHP_EOL;
+            return null;
+        }
+        return self::$names[$name];
+    }
 }

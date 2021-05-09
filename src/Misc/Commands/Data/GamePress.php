@@ -3,6 +3,7 @@
 namespace Pogo\Misc\Commands\Data;
 
 use Pogo\Data\GamePress\ParseGL;
+use Pogo\Data\GamePress\ParsePVE;
 use Pogo\Data\GamePress\ParseUL;
 use Pogo\Data\GamePress\ParseML;
 use Symfony\Component\Console\Command\Command;
@@ -45,8 +46,10 @@ class GamePress extends Command
         sleep($sleep);
         echo 'Parsing ML', PHP_EOL;
         ParseML::run();
-//        echo 'Sleeping for ', $sleep, 's', PHP_EOL;
-//        sleep($sleep);
+        echo 'Sleeping for ', $sleep, 's', PHP_EOL;
+        sleep($sleep);
+        echo 'Parsing Attackers', PHP_EOL;
+        ParsePVE::run();
         return 0;
     }
 }

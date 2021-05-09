@@ -2,7 +2,7 @@
 
 namespace Pogo\Data\GamePress;
 
-class ParseUL extends PVP
+class ParseUL extends CommonPVP
 {
     const URL = 'https://gamepress.gg/pokemongo/ultra-league-pvp-tier-list';
     const MIN_TIER = 3.5;

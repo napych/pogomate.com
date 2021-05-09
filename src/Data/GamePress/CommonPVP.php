@@ -2,16 +2,13 @@
 
 namespace Pogo\Data\GamePress;
 
-use Pogo\Data\Manual\PokemonList;
 use Pogo\Data\Parser\Helper;
-use Pogo\Pokemon;
 
-abstract class PVP extends Common
+abstract class CommonPVP extends Common
 {
     public static function run(): void
     {
         $page = self::loadSource(static::URL);
-//        $page = file_get_contents(__DIR__ . '/../../../ul.txt');
         $list = static::parse($page);
         self::writePHP(static::CLASS_NAME, static::DESC, $list);
     }
@@ -36,7 +33,12 @@ abstract class PVP extends Common
             foreach ($cellSpans as $cellSpan) {
                 if ($cellSpan->hasAttribute('class') && $cellSpan->getAttribute('class') === 'tier-number') {
                     $tier = $cellSpan->nodeValue;
+                    break;
                 }
+            }
+            if ($tier === null) {
+                echo 'WARNING: can\'t get tier for "', $cell->getAttribute('data-title'), "'", PHP_EOL;
+                continue;
             }
             if ($tier < static::MIN_TIER) {
                 continue;

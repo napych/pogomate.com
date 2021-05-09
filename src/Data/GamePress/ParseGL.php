@@ -2,7 +2,7 @@
 
 namespace Pogo\Data\GamePress;
 
-class ParseGL extends PVP
+class ParseGL extends CommonPVP
 {
     const URL = 'https://gamepress.gg/pokemongo/great-league-pvp-tier-list';
     const MIN_TIER = 3.5;

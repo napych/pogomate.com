@@ -4,6 +4,7 @@ namespace Pogo\Data\GamePress;
 
 use Pogo\Data\Generated\PokemonData;
 use Pogo\Data\Manual\PokemonList;
+use Pogo\Data\Parser\Helper;
 
 abstract class Common
 {
@@ -35,28 +36,44 @@ abstract class Common
         return curl_exec($curl);
     }
 
-    protected static $names = [];
-
-    protected static function loadNames()
-    {
-        if (!empty($names)) {
-            return;
-        }
-        foreach (PokemonData::POKEMON as $id => $pokemonData)
-        {
-            self::$names[$pokemonData[PokemonData::FIELD_NAME]] = $id;
-        }
-        self::$names['Sirfetch\'d'] = PokemonList::SIRFETCH_D;
-        self::$names['Jellicent'] = PokemonList::JELLICENT;
-    }
-
     protected static function getCodeByName(string $name): ?int
     {
-        self::loadNames();
-        if (!isset(self::$names[$name])) {
-            echo 'WARNING: can\'t find code for "' . $name . '"', PHP_EOL;
-            return null;
-        }
-        return self::$names[$name];
+        return Helper::getCodeByName($name);
     }
+
+    protected static function writePHP(string $class, string $description, array $data)
+    {
+        $description = addcslashes($description, "'");
+        $code = [];
+        foreach ($data as $tier => $list) {
+            $code[] = "        '" . $tier . "' => [";
+            foreach ($list as $info) {
+                if (empty($info['code'])) {
+                    continue;
+                }
+                $code[] = '            ' . Helper::generatePokemonConst($info['code']) . ',';
+            }
+            $code[] = "        ],";
+        }
+        $code = implode("\n", $code);
+        $output = <<<PHP
+<?php
+
+namespace Pogo\Data\Generated\GamePress;
+
+use Pogo\Data\Manual\FormsAlias;
+use Pogo\Pokemon\Mods;
+use Pogo\Pokemon;
+
+class $class {
+    const DESCRIPTION = '$description';
+    
+    const TIERS = [
+$code
+    ];
+}
+PHP;
+        file_put_contents(self::DIR . $class . '.php', $output);
+    }
+
 }

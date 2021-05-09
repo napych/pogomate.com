@@ -2,7 +2,7 @@
 
 namespace Pogo\Data\GamePress;
 
-class ParseML extends PVP
+class ParseML extends CommonPVP
 {
     const URL = 'https://gamepress.gg/pokemongo/master-league-pvp-tier-list';
     const MIN_TIER = 3.5;
