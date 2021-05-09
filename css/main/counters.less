@@ -1,3 +1,61 @@
-p.suggestions > a {
-    display: inline-block;
+//p.suggestions > a {
+//    display: inline-block;
+//}
+
+.suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    .suggestion {
+        display: flex;
+        margin-right: 10px;
+        border-bottom: 1px dotted #ccc;
+        .pokemon {
+            width: 300px;
+            @media (min-width: 1215px) { // fit two
+                width: 250px;
+            }
+            @media (max-width: 630px) {
+                width: 280px;
+            }
+            @media (max-width: 610px) {
+                width: 260px;
+            }
+            @media (max-width: 590px) {
+                width: 240px;
+            }
+            @media (max-width: 570px) {
+                width: 220px;
+            }
+            @media (max-width: 550px) {
+                width: 200px;
+            }
+        }
+        .attack {
+            width: 100px;
+        }
+        .defenses {
+            min-width: 160px;
+            .defense {
+                display: inline-block;
+                width: 80px;
+            }
+        }
+    }
+    @media (max-width: 530px) {
+        .suggestion {
+            display: block;
+            width: 100%;
+            .pokemon {
+                width: 100%;
+                display: block;
+            }
+            .attack {
+                display: inline-block;
+            }
+            .defenses {
+                display: inline-block;
+            }
+        }
+    }
 }

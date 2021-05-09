@@ -14,6 +14,9 @@ class Counters
     protected $bossAttacks = [];
     protected $bossTypes = [];
 
+    protected $attackEffect = [];
+    protected $defenseEffect = [];
+
     /**
      * Add attack type(s)
      * @param string|string[] $attackTypes
@@ -68,13 +71,13 @@ class Counters
         }
 
         // get attack effectiveness for every attack type
-        $attacks = [];
+        $this->attackEffect = [];
         foreach (Types::TYPE_ENUM as $attackType) {
-            $attacks[$attackType] = 1;
+            $this->attackEffect[$attackType] = 1;
         }
         foreach ($this->bossTypes as $bossType) {
             foreach (TypeEffectiveness::EFFECTIVENESS as $attackType => $effectivenessData) {
-                $attacks[$attackType] *= $effectivenessData[$bossType] ?? 1;
+                $this->attackEffect[$attackType] *= $effectivenessData[$bossType] ?? 1;
             }
         }
 
@@ -82,7 +85,7 @@ class Counters
         $this->bestEffect = 0;
         $this->bestAttacks = [];
         $this->goodAttacks = [];
-        foreach ($attacks as $attackType => $effectiveness) {
+        foreach ($this->attackEffect as $attackType => $effectiveness) {
             if ($effectiveness > $this->bestEffect) {
                 $this->bestEffect = $effectiveness;
                 $this->bestAttacks = [$attackType];
@@ -168,6 +171,26 @@ class Counters
         }
     }
 
+    protected function fillDefense()
+    {
+        if (!empty($this->defenseEffect) || empty($this->bossAttacks)) {
+            return;
+        }
+        foreach ($this->bossAttacks as $attackN => $bossAttack) {
+            foreach (Types::TYPE_ENUM as $type1) {
+                $effect1 = TypeEffectiveness::EFFECTIVENESS[$bossAttack][$type1];
+                foreach (Types::TYPE_ENUM as $type2) {
+                    if ($type1 === $type2) {
+                        $this->defenseEffect[$type1][$type2][$attackN] = $effect1;
+                        continue;
+                    }
+                    $effect2 = TypeEffectiveness::EFFECTIVENESS[$bossAttack][$type2];
+                    $this->defenseEffect[$type1][$type2][$attackN] = $effect1 * $effect2;
+                }
+            }
+        }
+    }
+
     /**
      * Get search string
      * @return string
@@ -190,14 +213,15 @@ class Counters
     }
 
     /**
-     * @return Pokemon[]
+     * @return Pokemon[][]
      */
     protected function getSuggestions(): array
     {
         $this->fillAttacks();
         $this->fillBadTypes();
 
-        $suggestions = ['best' => [], 'good' => []];
+        $this->fillDefense();
+        $suggestions = [];
 
         foreach (Top::TIERS as $type => $list) {
             if (in_array($type, $this->bestAttacks)) {
@@ -210,14 +234,24 @@ class Counters
             foreach ($list as $code) {
                 $pokemon = Pokemon::get($code);
                 $type1 = $pokemon->getType1();
-                $type2 = $pokemon->getType2();
-                if (isset($this->badTypes[$type1]) && (!$type2 || !in_array($type2, $this->badTypes[$type1]))) {
-                    continue;
+                $type2 = $pokemon->getType2() ?: $type1;
+                $defEffects = [];
+                for ($i = 0; $i < sizeof($this->defenseEffect[$type1][$type2]); $i++) {
+                    if (($effect = $this->defenseEffect[$type1][$type2][$i]) > 1 && $grade === 'good') {
+                        continue 2;
+                    }
+                    $defEffects[$i] = ['type' => $this->bossAttacks[$i], 'effect' => round($effect, 3)];
                 }
-                if ($type2 && isset($this->badTypes[$type2]) && !in_array($type1, $this->badTypes[$type2])) {
-                    continue;
-                }
-                $suggestions[$grade][] = $pokemon;
+                $suggestion = [
+                    'pokemon' => $pokemon,
+                    'attack' => [
+                        'grade' => $grade,
+                        'type' => $type,
+                        'effect' => round($this->attackEffect[$type], 3),
+                    ],
+                    'defense' => $defEffects
+                ];
+                $suggestions[] = $suggestion;
             }
         }
 
@@ -246,18 +280,20 @@ class Counters
         $node->setAttribute('team', $this->getGoodAttacksString() . $this->getBadTypesString());
 
         $suggestions = $this->getSuggestions();
-        if (!empty($suggestions['best'])) {
+        if (!empty($suggestions)) {
             $suggestionsNode = $node->appendChild($node->ownerDocument->createElement('suggestions'));
-            $suggestionsNode->setAttribute('set', 'best');
-            foreach ($suggestions['best'] as $suggestion) {
-                $suggestion->getXML($suggestionsNode, true, false);
-            }
-        }
-        if (!empty($suggestions['good'])) {
-            $suggestionsNode = $node->appendChild($node->ownerDocument->createElement('suggestions'));
-            $suggestionsNode->setAttribute('set', 'good');
-            foreach ($suggestions['good'] as $suggestion) {
-                $suggestion->getXML($suggestionsNode, true, false);
+            foreach ($suggestions as $suggestion) {
+                $suggestionNode = $suggestion['pokemon']->getXML($suggestionsNode, 'suggestion', false);
+                $attackNode = $suggestionNode->appendChild($suggestionNode->ownerDocument->createElement('attack'));
+                foreach ($suggestion['attack'] as $k => $v) {
+                    $attackNode->setAttribute($k, $v);
+                }
+                foreach ($suggestion['defense'] as $defense) {
+                    $defenseNode = $suggestionNode->appendChild($suggestionNode->ownerDocument->createElement('defense'));
+                    foreach ($defense as $k => $v) {
+                        $defenseNode->setAttribute($k, $v);
+                    }
+                }
             }
         }
 

@@ -91,52 +91,100 @@
             <xsl:when test="@front">
                 <h3 class="h5">Front liners</h3>
                 <p>
-                    <xsl:text>Use them first if you have high CP ones. They are the best counters dealing x</xsl:text>
-                    <xsl:value-of select="@frontEffect"/>
-                    <xsl:text> damage. It's worth using them, even if they won't last long.</xsl:text>
+                    <xsl:text>Highest DPS multiplier.</xsl:text>
                 </p>
                 <xsl:call-template name="snippet-string">
                     <xsl:with-param name="name" select="''"/>
                     <xsl:with-param name="string" select="@front"/>
                 </xsl:call-template>
-                <xsl:call-template name="page-counters-suggestions">
-                    <xsl:with-param name="pokemon" select="suggestions[@set='best']/pokemon"/>
-                </xsl:call-template>
+                <xsl:apply-templates select="suggestions" mode="page-counters">
+                    <xsl:with-param name="grade" select="'best'"/>
+                </xsl:apply-templates>
                 <h3 class="h5">The rest of the team</h3>
                 <xsl:call-template name="snippet-string">
                     <xsl:with-param name="name" select="''"/>
                     <xsl:with-param name="string" select="@team"/>
                 </xsl:call-template>
-                <xsl:call-template name="page-counters-suggestions">
-                    <xsl:with-param name="pokemon" select="suggestions[@set='good']/pokemon"/>
-                </xsl:call-template>
+                <xsl:apply-templates select="suggestions" mode="page-counters">
+                    <xsl:with-param name="grade" select="'good'"/>
+                </xsl:apply-templates>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:call-template name="snippet-string">
                     <xsl:with-param name="name" select="''"/>
                     <xsl:with-param name="string" select="@team"/>
                 </xsl:call-template>
-                <xsl:call-template name="page-counters-suggestions">
-                    <xsl:with-param name="pokemon" select="suggestions[@set='good']/pokemon"/>
-                </xsl:call-template>
+                <xsl:apply-templates select="suggestions" mode="page-counters">
+                    <xsl:with-param name="grade" select="'good'"/>
+                </xsl:apply-templates>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
 
-    <xsl:template name="page-counters-suggestions">
-        <xsl:param name="pokemon"/>
-        <xsl:if test="count($pokemon)&gt;0">
-            <p class="suggestions">
-                <xsl:text>Suggestions: </xsl:text>
-                <xsl:for-each select="$pokemon">
-                    <xsl:if test="position() &gt; 0">
-                        <xsl:text> &#160; </xsl:text>
-                    </xsl:if>
-                    <a href="/pokemon/{@linkForm}">
-                        <xsl:value-of select="@name"/>
-                    </a>
-                </xsl:for-each>
-            </p>
+    <xsl:template match="suggestions" mode="page-counters">
+        <xsl:param name="grade"/>
+        <xsl:if test="count(suggestion[attack/@grade=$grade])&gt;0">
+            <h6>Suggestions:</h6>
+            <div class="suggestions">
+                <xsl:apply-templates select="suggestion[attack/@grade=$grade]" mode="page-counters">
+                    <xsl:sort select="attack/@effect" order="descending"/>
+                    <xsl:sort select="sum(defense/@effect)" order="ascending"/>
+                </xsl:apply-templates>
+            </div>
         </xsl:if>
+    </xsl:template>
+
+    <xsl:template match="suggestion" mode="page-counters">
+        <div class="suggestion">
+            <div class="pokemon">
+                <a href="/pokemon/{@linkForm}">
+                    <xsl:value-of select="@name"/>
+                </a>
+            </div>
+            <div class="attack">
+                <xsl:attribute name="style">
+                    <xsl:choose>
+                        <xsl:when test="attack/@effect&gt;2">font-weight:bold;color:#0c0</xsl:when>
+                        <xsl:when test="attack/@effect&gt;1">color:#0c0</xsl:when>
+                        <xsl:when test="attack/@effect=1">color:#cc0</xsl:when>
+                        <xsl:otherwise>color:#c00</xsl:otherwise>
+                    </xsl:choose>
+                </xsl:attribute>
+                <xsl:call-template name="snippet-icon">
+                    <xsl:with-param name="name" select="'Attack'"/>
+                    <xsl:with-param name="size" select="16"/>
+                </xsl:call-template>
+                <xsl:call-template name="snippet-type">
+                    <xsl:with-param name="type" select="attack/@type"/>
+                    <xsl:with-param name="size" select="16"/>
+                </xsl:call-template>
+                <xsl:text> x</xsl:text>
+                <xsl:value-of select="attack/@effect"/>
+            </div>
+            <div class="defenses">
+                <xsl:call-template name="snippet-icon">
+                    <xsl:with-param name="name" select="'Defense'"/>
+                    <xsl:with-param name="size" select="16"/>
+                </xsl:call-template>
+                <xsl:for-each select="defense">
+                    <span class="defense">
+                        <xsl:attribute name="style">
+                            <xsl:choose>
+                                <xsl:when test="@effect&lt;0.5">font-weight:bold;color:#0c0</xsl:when>
+                                <xsl:when test="@effect&lt;1">color:#0c0</xsl:when>
+                                <xsl:when test="@effect=1">color:#cc0</xsl:when>
+                                <xsl:otherwise>color:#c00</xsl:otherwise>
+                            </xsl:choose>
+                        </xsl:attribute>
+                        <xsl:call-template name="snippet-type">
+                            <xsl:with-param name="type" select="@type"/>
+                            <xsl:with-param name="size" select="16"/>
+                        </xsl:call-template>
+                        <xsl:text> x</xsl:text>
+                        <xsl:value-of select="@effect"/>
+                    </span>
+                </xsl:for-each>
+            </div>
+        </div>
     </xsl:template>
 </xsl:stylesheet>

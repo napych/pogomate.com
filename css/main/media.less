@@ -1,4 +1,15 @@
 @max-width-phone: 414px;
 @min-width-tablet: 415px;
-@max-width-tablet: 1366px;
-@min-width-desktop: 1367px;
+// ipad pro:
+//@max-width-tablet: 1366px;
+//@min-width-desktop: 1367px;
+@max-width-tablet: 1024px;
+@min-width-desktop: 1025px;
+
+.container {
+  @media (max-width: @max-width-tablet) {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
+  }
+}
