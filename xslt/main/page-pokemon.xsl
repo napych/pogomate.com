@@ -137,6 +137,26 @@
                         </xsl:call-template>
                     </xsl:if>
                 </span>
+
+                <xsl:if test="@attack != ''">
+                    <span class="pokemon-stats">
+                        <xsl:call-template name="snippet-icon">
+                            <xsl:with-param name="name" select="'Attack'"/>
+                            <xsl:with-param name="size" select="16"/>
+                        </xsl:call-template>
+                        <xsl:value-of select="@attack"/>
+                        <xsl:call-template name="snippet-icon">
+                            <xsl:with-param name="name" select="'Defense'"/>
+                            <xsl:with-param name="size" select="16"/>
+                        </xsl:call-template>
+                        <xsl:value-of select="@defense"/>
+                        <xsl:call-template name="snippet-icon">
+                            <xsl:with-param name="name" select="'Stamina'"/>
+                            <xsl:with-param name="size" select="16"/>
+                        </xsl:call-template>
+                        <xsl:value-of select="@stamina"/>
+                    </span>
+                </xsl:if>
             </div>
 
             <!-- Unreleased -->
