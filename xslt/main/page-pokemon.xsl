@@ -196,16 +196,23 @@
         <xsl:param name="title"/>
         <xsl:param name="moves"/>
         <xsl:if test="$moves">
-            <p class="pokemon-moves {$moves/../@type}">
+            <div class="pokemon-moves {$moves/../@type}">
+                <h6>
                 <xsl:value-of select="$title"/>
-                <xsl:text>: </xsl:text>
+                </h6>
+<!--                <xsl:text>: </xsl:text>-->
                 <xsl:for-each select="$moves">
-                    <a href="/move/{@link}" class="type-{@type}">
-                        <xsl:value-of select="@name"/>
-                    </a>
-                    <xsl:text> &#160; </xsl:text>
+                    <span class="pokemon-move">
+                        <xsl:call-template name="snippet-type">
+                            <xsl:with-param name="size" select="16"/>
+                            <xsl:with-param name="type" select="@type"/>
+                        </xsl:call-template>
+                        <a href="/move/{@link}" class="type-{@type}">
+                            <xsl:value-of select="@name"/>
+                        </a>
+                    </span>
                 </xsl:for-each>
-            </p>
+            </div>
         </xsl:if>
     </xsl:template>
 </xsl:stylesheet>
