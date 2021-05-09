@@ -5,49 +5,51 @@
     </xsl:template>
 
     <xsl:template match="move" mode="page-move">
-        <h2>
+        <h1>
             <xsl:value-of select="@name"/>
-        </h2>
-        <xsl:choose>
-            <xsl:when test="@class='fast'">
-                <p>Fast move</p>
-            </xsl:when>
-            <xsl:when test="@class='charge'">
-                <p>Charge move</p>
-            </xsl:when>
-        </xsl:choose>
-        <xsl:if test="@type">
-            <p>
-                <xsl:text>Type: </xsl:text>
-                <span class="type-{@type}">
-                    <xsl:value-of select="@type"/>
-                </span>
-            </p>
-        </xsl:if>
-        <xsl:if test="@power or @energy">
-            <p>
-                <xsl:text>Power: </xsl:text>
-                <xsl:value-of select="@power"/>
-                <br/>
-                <xsl:text>Energy: </xsl:text>
-                <xsl:value-of select="@energy"/>
-            </p>
-        </xsl:if>
-        <xsl:if test="@pvpPower or @pvpEnergy">
-            <p>
-                <xsl:text>PVP power: </xsl:text>
-                <xsl:value-of select="@pvpPower"/>
-                <br/>
-                <xsl:text>PVP energy: </xsl:text>
-                <xsl:value-of select="@pvpEnergy"/>
-            </p>
-        </xsl:if>
-        <xsl:if test="pokemon">
-            <xsl:text>Available for: </xsl:text>
-            <p class="move-users">
-                <xsl:apply-templates select="pokemon" mode="page-move"/>
-            </p>
-        </xsl:if>
+        </h1>
+        <div class="move-info">
+            <div class="move-type">
+                <xsl:call-template name="snippet-type">
+                    <xsl:with-param name="size" select="16"/>
+                    <xsl:with-param name="type" select="@type"/>
+                </xsl:call-template>
+                <xsl:choose>
+                    <xsl:when test="@class='fast'">
+                        <xsl:text>Fast move</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="@class='charge'">
+                        <xsl:text>Charge move</xsl:text>
+                    </xsl:when>
+                </xsl:choose>
+            </div>
+            <xsl:if test="@power or @energy">
+                <h6>Stats</h6>
+                <div class="stats">
+                    <xsl:text>Power: </xsl:text>
+                    <xsl:value-of select="@power"/>
+                    <br/>
+                    <xsl:text>Energy: </xsl:text>
+                    <xsl:value-of select="@energy"/>
+                </div>
+            </xsl:if>
+            <xsl:if test="@pvpPower or @pvpEnergy">
+                <h6>PVP Stats</h6>
+                <div class="stats-pvp">
+                    <xsl:text>Power: </xsl:text>
+                    <xsl:value-of select="@pvpPower"/>
+                    <br/>
+                    <xsl:text>Energy: </xsl:text>
+                    <xsl:value-of select="@pvpEnergy"/>
+                </div>
+            </xsl:if>
+            <xsl:if test="pokemon">
+                <h6>Available to</h6>
+                <div class="move-users">
+                    <xsl:apply-templates select="pokemon" mode="page-move"/>
+                </div>
+            </xsl:if>
+        </div>
     </xsl:template>
 
     <xsl:template match="pokemon" mode="page-move">
