@@ -20,7 +20,8 @@
         "difra/jquery3": "*",
         "symfony/console": "*",
         "ext-dom": "*",
-        "ext-json": "*"
+        "ext-json": "*",
+        "ext-curl": "*"
     },
     "autoload": {
         "psr-4": {

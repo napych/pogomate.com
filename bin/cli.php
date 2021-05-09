@@ -12,6 +12,7 @@ ini_set('error_reporting', E_ALL);
 $app = new \Symfony\Component\Console\Application();
 $app->addCommands([
     new Commands\Data\GameMaster(),
+    new Commands\Data\GamePress(),
     new Commands\Sitemap()
 ]);
 $output = new ConsoleOutput();

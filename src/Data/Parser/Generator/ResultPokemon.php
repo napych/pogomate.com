@@ -7,6 +7,7 @@ use Pogo\Data\Manual\FormsAlias;
 use Pogo\Data\Manual\Names;
 use Pogo\Data\Manual\PokemonList;
 use Pogo\Data\Manual\PokemonTypes;
+use Pogo\Data\Parser\Helper;
 use Pogo\Data\Parser\Locale;
 use Pogo\Data\Parser\Result\All;
 use Pogo\Pokemon;
@@ -219,24 +220,7 @@ class ResultPokemon
 
     public function getConst(): string
     {
-        $shortConst = PokemonList::getConst(Mods::getId($this->code));
-        $codeConst = 'Pokemon::' . $shortConst;
-        $formBits = ($this->code & Mods::FORM_MASK);
-        $formConst = FormsAlias::getConst($shortConst, $formBits);
-        if ($formConst) {
-            $codeConst .= ' | FormsAlias::' . $formConst;
-        } elseif ($formBits) {
-            echo 'WARNING: missing form ', Mods::getFormNum($this->code), ' description for ', $shortConst, PHP_EOL;
-            $codeConst .= ' | Mods::FORM' . Mods::getFormNum($this->code);
-        }
-        !($this->code & Mods::SHADOW) ?: $codeConst .= ' | Mods::SHADOW';
-        !($this->code & Mods::ALOLAN) ?: $codeConst .= ' | Mods::ALOLAN';
-        !($this->code & Mods::PURIFIED) ?: $codeConst .= ' | Mods::PURIFIED';
-        !($this->code & Mods::GALARIAN) ?: $codeConst .= ' | Mods::GALARIAN';
-        !($this->code & Mods::MEGA) ?: $codeConst .= ' | Mods::MEGA';
-        !($this->code & Mods::MEGA_X) ?: $codeConst .= ' | Mods::MEGA_X';
-        !($this->code & Mods::MEGA_Y) ?: $codeConst .= ' | Mods::MEGA_Y';
-        return $codeConst;
+        return Helper::generatePokemonConst($this->code);
     }
 
     public function getBaseConst(): string
