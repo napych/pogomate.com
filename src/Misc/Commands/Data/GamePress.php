@@ -2,6 +2,7 @@
 
 namespace Pogo\Misc\Commands\Data;
 
+use Pogo\Data\GamePress\ParseDefenders;
 use Pogo\Data\GamePress\ParseGL;
 use Pogo\Data\GamePress\ParsePVE;
 use Pogo\Data\GamePress\ParseTop;
@@ -55,6 +56,10 @@ class GamePress extends Command
         sleep($sleep);
         echo 'Parsing Top By Type', PHP_EOL;
         ParseTop::run();
+        echo 'Sleeping for ', $sleep, 's', PHP_EOL;
+        sleep($sleep);
+        echo 'Parsing Defenders', PHP_EOL;
+        ParseDefenders::run();
         return 0;
     }
 }

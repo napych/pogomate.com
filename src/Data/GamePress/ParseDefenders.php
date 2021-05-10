@@ -2,35 +2,13 @@
 
 namespace Pogo\Data\GamePress;
 
-use Pogo\Data\Manual\Types;
 use Pogo\Data\Parser\Helper;
 
-class ParseTop extends Common
+class ParseDefenders extends Common
 {
-    const URL = 'https://gamepress.gg/pokemongo/best-attackers-type';
-    const CLASS_NAME = 'Top';
-    const DESC = 'GamePress Top By Type';
-
-    const TRANSLATE_TYPE = [
-        'Bug Type' => Types::BUG,
-        'Dark Type' => Types::DARK,
-        'Dragon Type' => Types::DRAGON,
-        'Electric Type' => Types::ELECTRIC,
-        'Fairy Type' => Types::FAIRY,
-        'Fighting Type' => Types::FIGHTING,
-        'Fire Type' => Types::FIRE,
-        'Flying Type' => Types::FLYING,
-        'Ghost Type' => Types::GHOST,
-        'Grass Types' => Types::GRASS,
-        'Ground Type' => Types::GROUND,
-        'Ice Type' => Types::ICE,
-        'Poison Type' => Types::POISON,
-        'Psychic Type' => Types::PSYCHIC,
-        'Rock Type' => Types::ROCK,
-        'Steel Type' => Types::STEEL,
-        'Water Type' => Types::WATER,
-        'Normal Type' => Types::NORMAL
-    ];
+    const URL = 'https://gamepress.gg/pokemongo/gym-defenders-tier-list';
+    const CLASS_NAME = 'Defenders';
+    const DESC = 'GamePress Defenders';
 
     public static function run()
     {
@@ -57,9 +35,9 @@ class ParseTop extends Common
                 foreach ($h2s as $h2) {
                     if (
                         $h2->getAttribute('class') === 'main-title'
-                        && !empty(self::TRANSLATE_TYPE[$h2->nodeValue])
+                        && strpos($h2->nodeValue, 'Tier ') !== false
                     ) {
-                        $title = 'Types::' . Types::getConst(self::TRANSLATE_TYPE[$h2->nodeValue]);
+                        $title = $h2->nodeValue;
                         break;
                     }
                 }
@@ -80,9 +58,6 @@ class ParseTop extends Common
                     }
                 }
             }
-        }
-        if (sizeof($list) !== sizeof(Types::TYPE_ENUM)) {
-            echo 'WARNING: result arrray contains only ', sizeof($list), ' type elements! Something\'s wrong?', PHP_EOL;
         }
         return $list;
     }
