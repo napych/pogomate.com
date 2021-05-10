@@ -16807,8 +16807,8 @@ class PokemonData
                 Moves::MOVE_GRASS_KNOT
             ]
         ],
-        Pokemon::FRILLISH | FormsAlias::FRILLISH_MALE => [
-            self::FIELD_NAME => 'Frillish (Male)',
+        Pokemon::FRILLISH => [
+            self::FIELD_NAME => 'Frillish',
             self::FIELD_NAME_SHORT => 'Frillish',
             self::FIELD_DESC => 'Using the invisible poison spikes on its veillike arms and legs, it paralyzes its enemies and causes them to drown.',
             self::FIELD_CATEGORY => 'Floating Pokémon',
@@ -16824,7 +16824,7 @@ class PokemonData
             self::FIELD_THIRD_MOVE_CANDY => 50,
             self::FIELD_THIRD_MOVE_STARDUST => 50000,
             self::FIELD_EVOLVES => [
-                Pokemon::JELLICENT | FormsAlias::JELLICENT_MALE
+                Pokemon::JELLICENT
             ],
             self::FIELD_FAST_MOVES => [
                 Moves::MOVE_BUBBLE_FAST,
@@ -16836,8 +16836,8 @@ class PokemonData
                 Moves::MOVE_OMINOUS_WIND
             ]
         ],
-        Pokemon::JELLICENT | FormsAlias::JELLICENT_MALE => [
-            self::FIELD_NAME => 'Jellicent (Male)',
+        Pokemon::JELLICENT => [
+            self::FIELD_NAME => 'Jellicent',
             self::FIELD_NAME_SHORT => 'Jellicent',
             self::FIELD_DESC => 'Fishermen are terrified of Jellicent. It\'s rumored to drag them into the sea and steal their lives away.',
             self::FIELD_CATEGORY => 'Floating Pokémon',
@@ -18870,8 +18870,8 @@ class PokemonData
             self::FIELD_THIRD_MOVE_CANDY => 25,
             self::FIELD_THIRD_MOVE_STARDUST => 10000,
             self::FIELD_EVOLVES => [
-                Pokemon::PYROAR | FormsAlias::PYROAR_MALE,
-                Pokemon::PYROAR | FormsAlias::PYROAR_FEMALE
+                Pokemon::PYROAR,
+                Pokemon::PYROAR
             ],
             self::FIELD_FAST_MOVES => [
                 Moves::MOVE_FIRE_FANG_FAST,
@@ -18884,8 +18884,8 @@ class PokemonData
                 Moves::MOVE_CRUNCH
             ]
         ],
-        Pokemon::PYROAR | FormsAlias::PYROAR_MALE => [
-            self::FIELD_NAME => 'Pyroar (Male)',
+        Pokemon::PYROAR => [
+            self::FIELD_NAME => 'Pyroar',
             self::FIELD_NAME_SHORT => 'Pyroar',
             self::FIELD_DESC => 'The male with the largest mane of fire is the leader of the pride.',
             self::FIELD_CATEGORY => 'Royal Pokémon',
@@ -22303,32 +22303,14 @@ class PokemonData
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_UNRELEASED => true
         ],
-        Pokemon::PYROAR | FormsAlias::PYROAR_FEMALE => [
-            self::FIELD_NAME => 'Pyroar (Female)',
+        Pokemon::PYROAR => [
+            self::FIELD_NAME => 'Pyroar',
             self::FIELD_NAME_SHORT => 'Pyroar',
             self::FIELD_DESC => '',
             self::FIELD_CATEGORY => '',
-            self::FIELD_ATTACK => 221,
-            self::FIELD_DEFENSE => 149,
-            self::FIELD_STAMINA => 200,
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TYPE2 => Types::NORMAL,
-            self::FIELD_TRANSFERABLE => true,
-            self::FIELD_DEPLOYABLE => true,
-            self::FIELD_TRADABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3,
-            self::FIELD_THIRD_MOVE_CANDY => 25,
-            self::FIELD_THIRD_MOVE_STARDUST => 10000,
-            self::FIELD_FAST_MOVES => [
-                Moves::MOVE_FIRE_FANG_FAST,
-                Moves::MOVE_TAKE_DOWN_FAST
-            ],
-            self::FIELD_CHARGE_MOVES => [
-                Moves::MOVE_FLAME_CHARGE,
-                Moves::MOVE_SOLAR_BEAM,
-                Moves::MOVE_DARK_PULSE,
-                Moves::MOVE_OVERHEAT
-            ]
+            self::FIELD_UNRELEASED => true
         ],
         Pokemon::FURFROU | FormsAlias::FURFROU_HEART => [
             self::FIELD_NAME => 'Furfrou (Heart Trim)',
@@ -22416,8 +22398,8 @@ class PokemonData
             self::FIELD_UNRELEASED => true
         ],
         Pokemon::ORICORIO | FormsAlias::ORICORIO_POMPOM => [
-            self::FIELD_NAME => 'Unknown/4837 (Pom-Pom Style)',
-            self::FIELD_NAME_SHORT => 'Unknown/4837',
+            self::FIELD_NAME => 'Oricorio (Pom-Pom Style)',
+            self::FIELD_NAME_SHORT => 'Oricorio',
             self::FIELD_DESC => '',
             self::FIELD_CATEGORY => '',
             self::FIELD_TYPE1 => Types::ELECTRIC,
@@ -22425,8 +22407,8 @@ class PokemonData
             self::FIELD_UNRELEASED => true
         ],
         Pokemon::ORICORIO | FormsAlias::ORICORIO_PAU => [
-            self::FIELD_NAME => 'Unknown/8933 (Pa\'u Style)',
-            self::FIELD_NAME_SHORT => 'Unknown/8933',
+            self::FIELD_NAME => 'Oricorio (Pa\'u Style)',
+            self::FIELD_NAME_SHORT => 'Oricorio',
             self::FIELD_DESC => '',
             self::FIELD_CATEGORY => '',
             self::FIELD_TYPE1 => Types::PSYCHIC,
@@ -22434,8 +22416,8 @@ class PokemonData
             self::FIELD_UNRELEASED => true
         ],
         Pokemon::ORICORIO | FormsAlias::ORICORIO_SENSU => [
-            self::FIELD_NAME => 'Unknown/13029 (Sensu Style)',
-            self::FIELD_NAME_SHORT => 'Unknown/13029',
+            self::FIELD_NAME => 'Oricorio (Sensu Style)',
+            self::FIELD_NAME_SHORT => 'Oricorio',
             self::FIELD_DESC => '',
             self::FIELD_CATEGORY => '',
             self::FIELD_TYPE1 => Types::GHOST,
@@ -22443,32 +22425,32 @@ class PokemonData
             self::FIELD_UNRELEASED => true
         ],
         Pokemon::LYCANROC | FormsAlias::LYCANROC_MIDNIGHT => [
-            self::FIELD_NAME => 'Unknown/4841 (Midnight Form)',
-            self::FIELD_NAME_SHORT => 'Unknown/4841',
+            self::FIELD_NAME => 'Lycanroc (Midnight Form)',
+            self::FIELD_NAME_SHORT => 'Lycanroc',
             self::FIELD_DESC => '',
             self::FIELD_CATEGORY => '',
             self::FIELD_TYPE1 => Types::ROCK,
             self::FIELD_UNRELEASED => true
         ],
         Pokemon::LYCANROC | FormsAlias::LYCANROC_DUSK => [
-            self::FIELD_NAME => 'Unknown/8937 (Dusk Form)',
-            self::FIELD_NAME_SHORT => 'Unknown/8937',
+            self::FIELD_NAME => 'Lycanroc (Dusk Form)',
+            self::FIELD_NAME_SHORT => 'Lycanroc',
             self::FIELD_DESC => '',
             self::FIELD_CATEGORY => '',
             self::FIELD_TYPE1 => Types::ROCK,
             self::FIELD_UNRELEASED => true
         ],
         Pokemon::WISHIWASHI | FormsAlias::WISHIWASHI_SCHOOL => [
-            self::FIELD_NAME => 'Unknown/4842 (School Form)',
-            self::FIELD_NAME_SHORT => 'Unknown/4842',
+            self::FIELD_NAME => 'Wishiwashi (School Form)',
+            self::FIELD_NAME_SHORT => 'Wishiwashi',
             self::FIELD_DESC => '',
             self::FIELD_CATEGORY => '',
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_UNRELEASED => true
         ],
         Pokemon::MINIOR | FormsAlias::MINIOR_RED => [
-            self::FIELD_NAME => 'Unknown/4870 (Red Core)',
-            self::FIELD_NAME_SHORT => 'Unknown/4870',
+            self::FIELD_NAME => 'Minior (Red Core)',
+            self::FIELD_NAME_SHORT => 'Minior',
             self::FIELD_DESC => '',
             self::FIELD_CATEGORY => '',
             self::FIELD_TYPE1 => Types::ROCK,
@@ -22476,8 +22458,8 @@ class PokemonData
             self::FIELD_UNRELEASED => true
         ],
         Pokemon::NECROZMA | FormsAlias::NECROZMA_DUSK => [
-            self::FIELD_NAME => 'Unknown/4896 (Dusk Mane)',
-            self::FIELD_NAME_SHORT => 'Unknown/4896',
+            self::FIELD_NAME => 'Necrozma (Dusk Mane)',
+            self::FIELD_NAME_SHORT => 'Necrozma',
             self::FIELD_DESC => '',
             self::FIELD_CATEGORY => '',
             self::FIELD_TYPE1 => Types::PSYCHIC,
@@ -22485,8 +22467,8 @@ class PokemonData
             self::FIELD_UNRELEASED => true
         ],
         Pokemon::NECROZMA | FormsAlias::NECROZMA_DAWN => [
-            self::FIELD_NAME => 'Unknown/8992 (Dawn Wings)',
-            self::FIELD_NAME_SHORT => 'Unknown/8992',
+            self::FIELD_NAME => 'Necrozma (Dawn Wings)',
+            self::FIELD_NAME_SHORT => 'Necrozma',
             self::FIELD_DESC => '',
             self::FIELD_CATEGORY => '',
             self::FIELD_TYPE1 => Types::PSYCHIC,
@@ -22494,8 +22476,8 @@ class PokemonData
             self::FIELD_UNRELEASED => true
         ],
         Pokemon::NECROZMA | FormsAlias::NECROZMA_ULTRA => [
-            self::FIELD_NAME => 'Unknown/13088 (Ultra Necrozma)',
-            self::FIELD_NAME_SHORT => 'Unknown/13088',
+            self::FIELD_NAME => 'Ultra Necrozma',
+            self::FIELD_NAME_SHORT => 'Necrozma',
             self::FIELD_DESC => '',
             self::FIELD_CATEGORY => '',
             self::FIELD_TYPE1 => Types::PSYCHIC,
@@ -22503,8 +22485,8 @@ class PokemonData
             self::FIELD_UNRELEASED => true
         ],
         Pokemon::TOXTRICITY | FormsAlias::TOXTRICITY_AMPED => [
-            self::FIELD_NAME => 'Unknown/4945 (Amped Form)',
-            self::FIELD_NAME_SHORT => 'Unknown/4945',
+            self::FIELD_NAME => 'Toxtricity (Amped Form)',
+            self::FIELD_NAME_SHORT => 'Toxtricity',
             self::FIELD_DESC => '',
             self::FIELD_CATEGORY => '',
             self::FIELD_TYPE1 => Types::ELECTRIC,
@@ -22512,8 +22494,8 @@ class PokemonData
             self::FIELD_UNRELEASED => true
         ],
         Pokemon::INDEEDEE | FormsAlias::INDEEDEE_MALE => [
-            self::FIELD_NAME => 'Unknown/4972 (Male)',
-            self::FIELD_NAME_SHORT => 'Unknown/4972',
+            self::FIELD_NAME => 'Indeedee (Male)',
+            self::FIELD_NAME_SHORT => 'Indeedee',
             self::FIELD_DESC => '',
             self::FIELD_CATEGORY => '',
             self::FIELD_TYPE1 => Types::PSYCHIC,
@@ -22521,8 +22503,8 @@ class PokemonData
             self::FIELD_UNRELEASED => true
         ],
         Pokemon::MORPEKO | FormsAlias::MORPEKO_HANGRY => [
-            self::FIELD_NAME => 'Unknown/4973 (Hangry Mode)',
-            self::FIELD_NAME_SHORT => 'Unknown/4973',
+            self::FIELD_NAME => 'Morpeko (Hangry Mode)',
+            self::FIELD_NAME_SHORT => 'Morpeko',
             self::FIELD_DESC => '',
             self::FIELD_CATEGORY => '',
             self::FIELD_TYPE1 => Types::ELECTRIC,
@@ -22530,8 +22512,8 @@ class PokemonData
             self::FIELD_UNRELEASED => true
         ],
         Pokemon::ZACIAN | FormsAlias::ZACIAN_CROWNED => [
-            self::FIELD_NAME => 'Unknown/4984 (Crowned Sword)',
-            self::FIELD_NAME_SHORT => 'Unknown/4984',
+            self::FIELD_NAME => 'Zacian (Crowned Sword)',
+            self::FIELD_NAME_SHORT => 'Zacian',
             self::FIELD_DESC => '',
             self::FIELD_CATEGORY => '',
             self::FIELD_TYPE1 => Types::FAIRY,
@@ -22539,8 +22521,8 @@ class PokemonData
             self::FIELD_UNRELEASED => true
         ],
         Pokemon::ZAMAZENTA | FormsAlias::ZAMAZENTA_CROWNED => [
-            self::FIELD_NAME => 'Unknown/4985 (Crowned Shield)',
-            self::FIELD_NAME_SHORT => 'Unknown/4985',
+            self::FIELD_NAME => 'Zamazenta (Crowned Shield)',
+            self::FIELD_NAME_SHORT => 'Zamazenta',
             self::FIELD_DESC => '',
             self::FIELD_CATEGORY => '',
             self::FIELD_TYPE1 => Types::FIGHTING,
@@ -22548,8 +22530,8 @@ class PokemonData
             self::FIELD_UNRELEASED => true
         ],
         Pokemon::URSHIFU | FormsAlias::URSHIFU_RAPID => [
-            self::FIELD_NAME => 'Unknown/4988 (Rapid Strike Style)',
-            self::FIELD_NAME_SHORT => 'Unknown/4988',
+            self::FIELD_NAME => 'Urshifu (Rapid Strike Style)',
+            self::FIELD_NAME_SHORT => 'Urshifu',
             self::FIELD_DESC => '',
             self::FIELD_CATEGORY => '',
             self::FIELD_TYPE1 => Types::FIGHTING,
@@ -37493,61 +37475,6 @@ class PokemonData
                 Moves::MOVE_SOLAR_BEAM,
                 Moves::MOVE_WILD_CHARGE,
                 Moves::MOVE_HYPER_BEAM
-            ]
-        ],
-        Pokemon::FRILLISH | FormsAlias::FRILLISH_FEMALE => [
-            self::FIELD_NAME => 'Frillish (Female)',
-            self::FIELD_NAME_SHORT => 'Frillish',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
-            self::FIELD_ATTACK => 115,
-            self::FIELD_DEFENSE => 134,
-            self::FIELD_STAMINA => 146,
-            self::FIELD_TYPE1 => Types::WATER,
-            self::FIELD_TYPE2 => Types::GHOST,
-            self::FIELD_TRANSFERABLE => true,
-            self::FIELD_DEPLOYABLE => true,
-            self::FIELD_TRADABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3,
-            self::FIELD_THIRD_MOVE_CANDY => 50,
-            self::FIELD_THIRD_MOVE_STARDUST => 50000,
-            self::FIELD_EVOLVES => [
-                Pokemon::JELLICENT | FormsAlias::JELLICENT_FEMALE
-            ],
-            self::FIELD_FAST_MOVES => [
-                Moves::MOVE_BUBBLE_FAST,
-                Moves::MOVE_HEX_FAST
-            ],
-            self::FIELD_CHARGE_MOVES => [
-                Moves::MOVE_NIGHT_SHADE,
-                Moves::MOVE_ICE_BEAM,
-                Moves::MOVE_OMINOUS_WIND
-            ]
-        ],
-        Pokemon::JELLICENT | FormsAlias::JELLICENT_FEMALE => [
-            self::FIELD_NAME => 'Jellicent (Female)',
-            self::FIELD_NAME_SHORT => 'Jellicent',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
-            self::FIELD_ATTACK => 159,
-            self::FIELD_DEFENSE => 178,
-            self::FIELD_STAMINA => 225,
-            self::FIELD_TYPE1 => Types::WATER,
-            self::FIELD_TYPE2 => Types::GHOST,
-            self::FIELD_TRANSFERABLE => true,
-            self::FIELD_DEPLOYABLE => true,
-            self::FIELD_TRADABLE => true,
-            self::FIELD_BUDDY_DISTANCE => 3,
-            self::FIELD_THIRD_MOVE_CANDY => 50,
-            self::FIELD_THIRD_MOVE_STARDUST => 50000,
-            self::FIELD_FAST_MOVES => [
-                Moves::MOVE_BUBBLE_FAST,
-                Moves::MOVE_HEX_FAST
-            ],
-            self::FIELD_CHARGE_MOVES => [
-                Moves::MOVE_SHADOW_BALL,
-                Moves::MOVE_ICE_BEAM,
-                Moves::MOVE_BUBBLE_BEAM
             ]
         ],
         Pokemon::STUNFISK | Mods::PURIFIED => [

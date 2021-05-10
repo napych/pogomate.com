@@ -2315,13 +2315,11 @@ class PokemonForms
         Pokemon::AMOONGUSS => [
             Pokemon::AMOONGUSS
         ],
-        Pokemon::FRILLISH | FormsAlias::FRILLISH_MALE => [
-            Pokemon::FRILLISH | FormsAlias::FRILLISH_MALE,
-            Pokemon::FRILLISH | FormsAlias::FRILLISH_FEMALE
+        Pokemon::FRILLISH => [
+            Pokemon::FRILLISH
         ],
-        Pokemon::JELLICENT | FormsAlias::JELLICENT_MALE => [
-            Pokemon::JELLICENT | FormsAlias::JELLICENT_MALE,
-            Pokemon::JELLICENT | FormsAlias::JELLICENT_FEMALE
+        Pokemon::JELLICENT => [
+            Pokemon::JELLICENT
         ],
         Pokemon::ALOMOMOLA => [
             Pokemon::ALOMOMOLA
@@ -2566,9 +2564,9 @@ class PokemonForms
         Pokemon::LITLEO => [
             Pokemon::LITLEO
         ],
-        Pokemon::PYROAR | FormsAlias::PYROAR_MALE => [
-            Pokemon::PYROAR | FormsAlias::PYROAR_MALE,
-            Pokemon::PYROAR | FormsAlias::PYROAR_FEMALE
+        Pokemon::PYROAR => [
+            Pokemon::PYROAR,
+            Pokemon::PYROAR
         ],
         Pokemon::FLABEBE => [
             Pokemon::FLABEBE

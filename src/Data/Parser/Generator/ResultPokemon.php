@@ -3,6 +3,7 @@
 namespace Pogo\Data\Parser\Generator;
 
 use Pogo\Data\Manual\Evolve;
+use Pogo\Data\Manual\Forms;
 use Pogo\Data\Manual\FormsAlias;
 use Pogo\Data\Manual\Names;
 use Pogo\Data\Manual\PokemonList;
@@ -159,7 +160,7 @@ class ResultPokemon
             echo $this->code;
             die();
         }
-        if ($form = \Pogo\Pokemon\Form::getFormName($this->code)) {
+        if ($form = Helper::getFormName($this->code)) {
             if (strpos($form, $pokemonName) !== false) {
                 $name .= $form;
             } else {
@@ -200,8 +201,9 @@ class ResultPokemon
                 $autoNames[$value] = ucfirst(strtolower($name));
             }
         }
-        if (!empty($autoNames[$this->code])) {
-            return $autoNames[$this->code];
+        $id = Mods::getId($this->code);
+        if (!empty($autoNames[$id])) {
+            return $autoNames[$id];
         }
 
         // not found
@@ -708,7 +710,7 @@ class ResultPokemon
     public static function writePokemonData()
     {
         $code = [];
-        foreach (static::$list as $rp) {
+        foreach (static::$list as $pkCode => $rp) {
             $code[] = $rp->getPHP();
         }
         $code = implode(",\n", $code);

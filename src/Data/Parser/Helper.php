@@ -3,6 +3,7 @@
 namespace Pogo\Data\Parser;
 
 use Pogo\Data\Generated\PokemonData;
+use Pogo\Data\Manual\Forms;
 use Pogo\Data\Manual\FormsAlias;
 use Pogo\Data\Manual\PokemonList;
 use Pogo\Pokemon\Mods;
@@ -11,15 +12,18 @@ class Helper
 {
     public static function generatePokemonConst(int $code): string
     {
-        $shortConst = PokemonList::getConst(Mods::getId($code));
+        $id = Mods::getId($code);
+        $shortConst = PokemonList::getConst($id);
         $codeConst = 'Pokemon::' . $shortConst;
-        $formBits = ($code & Mods::FORM_MASK);
-        $formConst = FormsAlias::getConst($shortConst, $formBits);
-        if ($formConst) {
-            $codeConst .= ' | FormsAlias::' . $formConst;
-        } elseif ($formBits) {
-            echo 'WARNING: missing form ', Mods::getFormNum($code), ' description for ', $shortConst, PHP_EOL;
-            $codeConst .= ' | Mods::FORM' . Mods::getFormNum($code);
+        if (!in_array($id, Forms::IGNORE_FORMS)) {
+            $formBits = ($code & Mods::FORM_MASK);
+            $formConst = FormsAlias::getConst($shortConst, $formBits);
+            if ($formConst) {
+                $codeConst .= ' | FormsAlias::' . $formConst;
+            } elseif ($formBits) {
+                echo 'WARNING: missing form ', Mods::getFormNum($code), ' description for ', $shortConst, PHP_EOL;
+                $codeConst .= ' | Mods::FORM' . Mods::getFormNum($code);
+            }
         }
         !($code & Mods::SHADOW) ?: $codeConst .= ' | Mods::SHADOW';
         !($code & Mods::ALOLAN) ?: $codeConst .= ' | Mods::ALOLAN';
@@ -60,5 +64,13 @@ class Helper
             return null;
         }
         return self::$names[$name];
+    }
+
+    public static function getFormName(int $code): ?string
+    {
+        if (in_array(Mods::getId($code), Forms::IGNORE_FORMS)) {
+            return null;
+        }
+        return Forms::NAMES[Mods::getId($code)][Mods::getForm($code)] ?? null;
     }
 }

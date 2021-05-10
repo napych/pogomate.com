@@ -243,4 +243,10 @@ class Forms extends FormsAlias
         Pokemon::KYOGRE => [null, 'Primal Reversion'],
         Pokemon::GROUDON => [null, 'Primal Reversion'],
     ];
+
+    const IGNORE_FORMS = [
+        Pokemon::FRILLISH,
+        Pokemon::JELLICENT,
+        Pokemon::PYROAR
+    ];
 }

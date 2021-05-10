@@ -305,6 +305,11 @@ class GameMasterJSON
                 die('Failed to get code for ' . $template . PHP_EOL);
             }
 
+            $pid = Mods::getId($code);
+            if (Mods::getForm($code) && in_array($pid, Forms::IGNORE_FORMS)) {
+                continue;
+            }
+
             $rp = RP::get($code)
                 ->setTypes(
                     self::TYPE_TRANSLATE[$pokemon['type1']],

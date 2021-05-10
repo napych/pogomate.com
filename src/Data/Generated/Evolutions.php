@@ -1389,8 +1389,8 @@ class Evolutions
                 self::FIELD_PARENT => Pokemon::FOONGUS,
                 self::FIELD_CANDY => 50
             ],
-            Pokemon::JELLICENT | FormsAlias::JELLICENT_MALE => [
-                self::FIELD_PARENT => Pokemon::FRILLISH | FormsAlias::FRILLISH_MALE,
+            Pokemon::JELLICENT => [
+                self::FIELD_PARENT => Pokemon::FRILLISH,
                 self::FIELD_CANDY => 50
             ],
             Pokemon::GALVANTULA => [
@@ -1526,12 +1526,7 @@ class Evolutions
                 self::FIELD_PARENT => Pokemon::SPEWPA,
                 self::FIELD_CANDY => 50
             ],
-            Pokemon::PYROAR | FormsAlias::PYROAR_MALE => [
-                self::FIELD_PARENT => Pokemon::LITLEO,
-                self::FIELD_CANDY => 50,
-                self::FIELD_MALE => true
-            ],
-            Pokemon::PYROAR | FormsAlias::PYROAR_FEMALE => [
+            Pokemon::PYROAR => [
                 self::FIELD_PARENT => Pokemon::LITLEO,
                 self::FIELD_CANDY => 50,
                 self::FIELD_FEMALE => true
@@ -2990,10 +2985,6 @@ class Evolutions
             ],
             Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_WINTER => [
                 self::FIELD_PARENT => Pokemon::DEERLING | FormsAlias::DEERLING_WINTER,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::JELLICENT | FormsAlias::JELLICENT_FEMALE => [
-                self::FIELD_PARENT => Pokemon::FRILLISH | FormsAlias::FRILLISH_FEMALE,
                 self::FIELD_CANDY => 50
             ]
         ];
