@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'version' => '0.99.36',
+    'version' => '0.99.37',
 
     'locale' => 'en_US',
     'plugins' => [
@@ -43,17 +43,17 @@ return [
             ['loc' => '/lists', 'changefreq' => 'weekly'],
             ['loc' => '/pokemon', 'changefreq' => 'monthly']
         ],
-        'mainLastmod' => '2020-12-20',
+        'mainLastmod' => '2021-05-10',
         'pokemon' => [
-            'lastmod' => '2021-01-10',
+            'lastmod' => '2021-05-10',
             'changefreq' => 'weekly'
         ],
         'counters' => [
-            'lastmod' => '2021-01-10',
+            'lastmod' => '2021-05-10',
             'changefreq' => 'monthly'
         ],
         'moves' => [
-            'lastmod' => '2021-01-04',
+            'lastmod' => '2021-05-10',
             'changefreq' => 'monthly'
         ]
     ]

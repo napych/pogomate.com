@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
     <xsl:template match="page-move">
+        <h1>
+            <xsl:value-of select="move/@name"/>
+        </h1>
         <xsl:apply-templates select="move" mode="page-move"/>
     </xsl:template>
 
     <xsl:template match="move" mode="page-move">
-        <h1>
-            <xsl:value-of select="@name"/>
-        </h1>
         <div class="move-info">
+            <xsl:if test="count(../move)&gt;1">
+                <h2>
+                    <xsl:call-template name="snippet-type">
+                        <xsl:with-param name="size" select="24"/>
+                        <xsl:with-param name="type" select="@type"/>
+                    </xsl:call-template>
+                    <xsl:value-of select="@name"/>
+                </h2>
+            </xsl:if>
             <div class="move-type">
-                <xsl:call-template name="snippet-type">
-                    <xsl:with-param name="size" select="16"/>
-                    <xsl:with-param name="type" select="@type"/>
-                </xsl:call-template>
+                <xsl:if test="count(../move)=1">
+                    <xsl:call-template name="snippet-type">
+                        <xsl:with-param name="size" select="16"/>
+                        <xsl:with-param name="type" select="@type"/>
+                    </xsl:call-template>
+                </xsl:if>
                 <xsl:choose>
                     <xsl:when test="@class='fast'">
                         <xsl:text>Fast attack</xsl:text>

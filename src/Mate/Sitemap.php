@@ -134,7 +134,9 @@ class Sitemap
                     continue;
                 }
                 $node = $root->appendChild($doc->createElement('url'));
-                $node->appendChild($doc->createElement('loc', 'https://pogomate.com' . str_replace('&', '&amp;', $result[$i])));
+                $node->appendChild(
+                    $doc->createElement('loc', 'https://pogomate.com' . str_replace('&', '&amp;', $result[$i]))
+                );
                 $node->appendChild($doc->createElement('lastmod', $conf['lastmod']));
                 $node->appendChild($doc->createElement('changefreq', $conf['changefreq']));
             }
@@ -149,8 +151,7 @@ class Sitemap
         $doc = new \DOMDocument();
         $doc->formatOutput = true;
         $root = $doc->appendChild($doc->createElementNS('http://www.sitemaps.org/schemas/sitemap/0.9', 'urlset'));
-        foreach (PokemonLinks::POKEMON2LINK as $link)
-        {
+        foreach (PokemonLinks::POKEMON2LINK as $link) {
             $node = $root->appendChild($doc->createElement('url'));
             $node->appendChild($doc->createElement('loc', 'https://pogomate.com/pokemon/' . $link));
             $node->appendChild($doc->createElement('lastmod', $conf['lastmod']));
@@ -166,8 +167,12 @@ class Sitemap
         $doc = new \DOMDocument();
         $doc->formatOutput = true;
         $root = $doc->appendChild($doc->createElementNS('http://www.sitemaps.org/schemas/sitemap/0.9', 'urlset'));
-        foreach (MovesLinks::MOVE2LINK as $link)
-        {
+        $links = array_unique(MovesLinks::MOVE2LINK);
+        $dupes = array_diff_key(MovesLinks::MOVE2LINK, $links);
+        if (!empty($dupes)) {
+            echo "WARNING: sitemap filtered dupes: ", implode(', ', $dupes), PHP_EOL;
+        }
+        foreach ($links as $link) {
             $node = $root->appendChild($doc->createElement('url'));
             $node->appendChild($doc->createElement('loc', 'https://pogomate.com/move/' . $link));
             $node->appendChild($doc->createElement('lastmod', $conf['lastmod']));

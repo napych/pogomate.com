@@ -2,6 +2,7 @@
 
 namespace Pogo\Data\Parser;
 
+use Pogo\Data\Manual\MoveNames;
 use Pogo\Pokemon;
 use Pogo\Pokemon\Mods;
 
@@ -40,6 +41,9 @@ class Locale
 
     public static function getMove(int $id): ?string
     {
+        if (!empty(MoveNames::CUSTOM[$id])) {
+            return MoveNames::CUSTOM[$id];
+        }
         $id = (string)$id;
         while (strlen($id) < 4) {
             $id = '0' . $id;

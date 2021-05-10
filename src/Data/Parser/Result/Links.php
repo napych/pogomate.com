@@ -14,12 +14,7 @@ class Links
         $reflection = new \ReflectionClass(PokemonList::class);
         $constants = $reflection->getConstants();
         foreach ($constants as $name => $value) {
-            $link = strtolower($name);
-            for ($i = 0; $i < strlen($link); $i++) {
-                if (!ctype_alnum($link{$i})) {
-                    $link{$i} = '-';
-                }
-            }
+            $link = self::makeLink($name);
             $link2id[] = "'$link' => Pokemon::$name";
             $id2link[] = "Pokemon::$name => '$link'";
         }
@@ -53,12 +48,7 @@ PHP
         $reflection = new \ReflectionClass(\Pogo\Data\Generated\Moves::class);
         $constants = $reflection->getConstants();
         foreach ($constants as $name => $value) {
-            $link = strtolower(MovesData::MOVES[$value][MovesData::FIELD_NAME]);
-            for ($i = 0; $i < strlen($link); $i++) {
-                if (!ctype_alnum($link{$i})) {
-                    $link{$i} = '-';
-                }
-            }
+            $link = self::makeLink(MovesData::MOVES[$value][MovesData::FIELD_NAME]);
             $link2id[$link][] = "Moves::$name";
             $id2link[] = "Moves::$name => '$link'";
         }
@@ -94,5 +84,20 @@ PHP
     {
         $this->generatePokemonPHP();
         $this->generateMovePHP();
+    }
+
+    protected static function makeLink(string $name): string
+    {
+        $link = strtolower($name);
+        for ($i = 0; $i < strlen($link); $i++) {
+            if (!ctype_alnum($link{$i})) {
+                $link{$i} = '-';
+            }
+        }
+        $link = trim($link, '-');
+        while (strpos($link,'--') !== false) {
+            $link = str_replace('--', '-', $link);
+        }
+        return $link;
     }
 }

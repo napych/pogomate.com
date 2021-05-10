@@ -104,19 +104,8 @@
         <h2 class="h3" id="{@form}">
             <xsl:value-of select="@name"/>
         </h2>
+        <!-- Info bar -->
         <div class="pokemon-info">
-            <xsl:if test="@category and @category!=''">
-                <p class="pokemon-category">
-                    <xsl:value-of select="@category"/>
-                </p>
-            </xsl:if>
-
-            <xsl:if test="@desc and @desc!=''">
-                <p class="pokemon-desc">
-                    <xsl:value-of select="@desc"/>
-                </p>
-            </xsl:if>
-
             <div class="pokemon-info-bar">
                 <!-- Pokedex ID -->
                 <span class="pokemon-id">
@@ -124,7 +113,6 @@
                     <xsl:value-of select="@pokedexId"/>
                 </span>
                 <!-- Types -->
-
                 <span class="pokemon-types">
                     <xsl:call-template name="snippet-type">
                         <xsl:with-param name="size" select="16"/>
@@ -138,6 +126,7 @@
                     </xsl:if>
                 </span>
 
+                <!-- Stats -->
                 <xsl:if test="@attack != ''">
                     <span class="pokemon-stats">
                         <xsl:call-template name="snippet-icon">
@@ -159,17 +148,23 @@
                 </xsl:if>
             </div>
 
+            <!-- Category -->
+            <xsl:if test="@category and @category!=''">
+                <p class="pokemon-category">
+                    <xsl:value-of select="@category"/>
+                </p>
+            </xsl:if>
+
+            <!-- Description -->
+            <xsl:if test="@desc and @desc!=''">
+                <p class="pokemon-desc">
+                    <xsl:value-of select="@desc"/>
+                </p>
+            </xsl:if>
+
             <!-- Unreleased -->
             <xsl:if test="@unreleased>0">
                 <p class="pokemon-unreleased">Not released yet</p>
-            </xsl:if>
-
-            <!-- Evolutions -->
-            <xsl:if test="count(evolve/evolve)>0">
-                <p class="pokemon-evolutions">
-                    <xsl:text>Evolutions: </xsl:text>
-                    <xsl:apply-templates select="evolve"/>
-                </p>
             </xsl:if>
 
             <!-- Moves -->
@@ -189,6 +184,14 @@
                 <xsl:with-param name="title" select="'Elite charged attacks'"/>
                 <xsl:with-param name="moves" select="moves[@type='chargeMovesElite']/move"/>
             </xsl:call-template>
+
+            <!-- Evolutions -->
+            <xsl:if test="count(evolve/evolve)>0">
+                <div class="pokemon-evolutions">
+                    <h6>Evolutions</h6>
+                    <xsl:apply-templates select="evolve"/>
+                </div>
+            </xsl:if>
         </div>
     </xsl:template>
 

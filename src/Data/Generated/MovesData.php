@@ -1298,7 +1298,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -100
         ],
         self::MOVE_SCALD_BLASTOISE => [
-            self::FIELD_NAME => 'Scald',
+            self::FIELD_NAME => 'Scald (Blastoise)',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::WATER,
             self::FIELD_POWER => 50,
@@ -1312,7 +1312,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -80
         ],
         self::MOVE_HYDRO_PUMP_BLASTOISE => [
-            self::FIELD_NAME => 'Hydro Pump',
+            self::FIELD_NAME => 'Hydro Pump (Blastoise)',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::WATER,
             self::FIELD_POWER => 90,
@@ -1326,7 +1326,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -80
         ],
         self::MOVE_WRAP_GREEN => [
-            self::FIELD_NAME => 'Wrap',
+            self::FIELD_NAME => 'Wrap (Green)',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 25,
@@ -1340,7 +1340,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -45
         ],
         self::MOVE_WRAP_PINK => [
-            self::FIELD_NAME => 'Wrap',
+            self::FIELD_NAME => 'Wrap (Pink)',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 25,
@@ -1802,7 +1802,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => 12
         ],
         self::MOVE_WATER_GUN_FAST_BLASTOISE => [
-            self::FIELD_NAME => 'Water Gun',
+            self::FIELD_NAME => 'Water Gun (Blastoise)',
             self::FIELD_CLASS => self::CLASS_FAST,
             self::FIELD_TYPE => Types::WATER,
             self::FIELD_POWER => 10,

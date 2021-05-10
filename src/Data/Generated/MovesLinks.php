@@ -96,10 +96,10 @@ class MovesLinks
         Moves::MOVE_BODY_SLAM => 'body-slam',
         Moves::MOVE_REST => 'rest',
         Moves::MOVE_STRUGGLE => 'struggle',
-        Moves::MOVE_SCALD_BLASTOISE => 'scald',
-        Moves::MOVE_HYDRO_PUMP_BLASTOISE => 'hydro-pump',
-        Moves::MOVE_WRAP_GREEN => 'wrap',
-        Moves::MOVE_WRAP_PINK => 'wrap',
+        Moves::MOVE_SCALD_BLASTOISE => 'scald-blastoise',
+        Moves::MOVE_HYDRO_PUMP_BLASTOISE => 'hydro-pump-blastoise',
+        Moves::MOVE_WRAP_GREEN => 'wrap-green',
+        Moves::MOVE_WRAP_PINK => 'wrap-pink',
         Moves::MOVE_FURY_CUTTER_FAST => 'fury-cutter',
         Moves::MOVE_BUG_BITE_FAST => 'bug-bite',
         Moves::MOVE_BITE_FAST => 'bite',
@@ -132,7 +132,7 @@ class MovesLinks
         Moves::MOVE_BULLET_PUNCH_FAST => 'bullet-punch',
         Moves::MOVE_WATER_GUN_FAST => 'water-gun',
         Moves::MOVE_SPLASH_FAST => 'splash',
-        Moves::MOVE_WATER_GUN_FAST_BLASTOISE => 'water-gun',
+        Moves::MOVE_WATER_GUN_FAST_BLASTOISE => 'water-gun-blastoise',
         Moves::MOVE_MUD_SLAP_FAST => 'mud-slap',
         Moves::MOVE_ZEN_HEADBUTT_FAST => 'zen-headbutt',
         Moves::MOVE_CONFUSION_FAST => 'confusion',
@@ -250,11 +250,7 @@ class MovesLinks
     ];
     
     const LINK2MOVE = [
-        'wrap' => [
-            Moves::MOVE_WRAP,
-            Moves::MOVE_WRAP_GREEN,
-            Moves::MOVE_WRAP_PINK
-        ],
+        'wrap' => [Moves::MOVE_WRAP],
         'hyper-beam' => [Moves::MOVE_HYPER_BEAM],
         'dark-pulse' => [Moves::MOVE_DARK_PULSE],
         'sludge' => [Moves::MOVE_SLUDGE],
@@ -325,14 +321,8 @@ class MovesLinks
         'fire-blast' => [Moves::MOVE_FIRE_BLAST],
         'brine' => [Moves::MOVE_BRINE],
         'water-pulse' => [Moves::MOVE_WATER_PULSE],
-        'scald' => [
-            Moves::MOVE_SCALD,
-            Moves::MOVE_SCALD_BLASTOISE
-        ],
-        'hydro-pump' => [
-            Moves::MOVE_HYDRO_PUMP,
-            Moves::MOVE_HYDRO_PUMP_BLASTOISE
-        ],
+        'scald' => [Moves::MOVE_SCALD],
+        'hydro-pump' => [Moves::MOVE_HYDRO_PUMP],
         'psychic' => [Moves::MOVE_PSYCHIC],
         'psystrike' => [Moves::MOVE_PSYSTRIKE],
         'icy-wind' => [Moves::MOVE_ICY_WIND],
@@ -351,6 +341,10 @@ class MovesLinks
         'body-slam' => [Moves::MOVE_BODY_SLAM],
         'rest' => [Moves::MOVE_REST],
         'struggle' => [Moves::MOVE_STRUGGLE],
+        'scald-blastoise' => [Moves::MOVE_SCALD_BLASTOISE],
+        'hydro-pump-blastoise' => [Moves::MOVE_HYDRO_PUMP_BLASTOISE],
+        'wrap-green' => [Moves::MOVE_WRAP_GREEN],
+        'wrap-pink' => [Moves::MOVE_WRAP_PINK],
         'fury-cutter' => [Moves::MOVE_FURY_CUTTER_FAST],
         'bug-bite' => [Moves::MOVE_BUG_BITE_FAST],
         'bite' => [Moves::MOVE_BITE_FAST],
@@ -381,11 +375,9 @@ class MovesLinks
         'rock-throw' => [Moves::MOVE_ROCK_THROW_FAST],
         'metal-claw' => [Moves::MOVE_METAL_CLAW_FAST],
         'bullet-punch' => [Moves::MOVE_BULLET_PUNCH_FAST],
-        'water-gun' => [
-            Moves::MOVE_WATER_GUN_FAST,
-            Moves::MOVE_WATER_GUN_FAST_BLASTOISE
-        ],
+        'water-gun' => [Moves::MOVE_WATER_GUN_FAST],
         'splash' => [Moves::MOVE_SPLASH_FAST],
+        'water-gun-blastoise' => [Moves::MOVE_WATER_GUN_FAST_BLASTOISE],
         'mud-slap' => [Moves::MOVE_MUD_SLAP_FAST],
         'zen-headbutt' => [Moves::MOVE_ZEN_HEADBUTT_FAST],
         'confusion' => [Moves::MOVE_CONFUSION_FAST],
