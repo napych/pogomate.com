@@ -46,7 +46,11 @@ abstract class Common
         $description = addcslashes($description, "'");
         $code = [];
         foreach ($data as $tier => $list) {
-            $code[] = "        '" . $tier . "' => [";
+            if (strpos($tier, '::') === false) {
+                $code[] = "        '" . $tier . "' => [";
+            } else {
+                $code[] = '        ' . $tier . ' => [';
+            }
             foreach ($list as $info) {
                 if (empty($info['code'])) {
                     continue;
@@ -64,8 +68,10 @@ namespace Pogo\Data\Generated\GamePress;
 use Pogo\Data\Manual\FormsAlias;
 use Pogo\Pokemon\Mods;
 use Pogo\Pokemon;
+use Pogo\Pokemon\Types;
 
-class $class {
+class $class
+{
     const DESCRIPTION = '$description';
     
     const TIERS = [
