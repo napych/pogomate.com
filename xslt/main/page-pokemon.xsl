@@ -174,19 +174,19 @@
 
             <!-- Moves -->
             <xsl:call-template name="pokemon-moves">
-                <xsl:with-param name="title" select="'Fast moves'"/>
+                <xsl:with-param name="title" select="'Fast attacks'"/>
                 <xsl:with-param name="moves" select="moves[@type='fastMoves']/move"/>
             </xsl:call-template>
             <xsl:call-template name="pokemon-moves">
-                <xsl:with-param name="title" select="'Elite fast moves'"/>
+                <xsl:with-param name="title" select="'Elite fast attacks'"/>
                 <xsl:with-param name="moves" select="moves[@type='fastMovesElite']/move"/>
             </xsl:call-template>
             <xsl:call-template name="pokemon-moves">
-                <xsl:with-param name="title" select="'Charge moves'"/>
+                <xsl:with-param name="title" select="'Charged attacks'"/>
                 <xsl:with-param name="moves" select="moves[@type='chargeMoves']/move"/>
             </xsl:call-template>
             <xsl:call-template name="pokemon-moves">
-                <xsl:with-param name="title" select="'Elite charge moves'"/>
+                <xsl:with-param name="title" select="'Elite charged attacks'"/>
                 <xsl:with-param name="moves" select="moves[@type='chargeMovesElite']/move"/>
             </xsl:call-template>
         </div>

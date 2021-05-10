@@ -16,10 +16,10 @@
                 </xsl:call-template>
                 <xsl:choose>
                     <xsl:when test="@class='fast'">
-                        <xsl:text>Fast move</xsl:text>
+                        <xsl:text>Fast attack</xsl:text>
                     </xsl:when>
                     <xsl:when test="@class='charge'">
-                        <xsl:text>Charge move</xsl:text>
+                        <xsl:text>Charged attack</xsl:text>
                     </xsl:when>
                 </xsl:choose>
             </div>
