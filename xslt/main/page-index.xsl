@@ -60,7 +60,7 @@
             <h2 class="h3">How to use search strings</h2>
             <ol>
                 <li>Press “Copy” button to copy a string.</li>
-                <li>Open the Pokémon Storage screen in the Pokémon Go game and paste a string to the search field.</li>
+                <li>Open the Pokémon Storage screen in the Pokémon Go game and paste a string into the search field.</li>
             </ol>
         </div>
         <div id="contacts">
