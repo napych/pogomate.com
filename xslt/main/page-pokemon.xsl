@@ -14,6 +14,7 @@
         <xsl:if test="count(../pokemon)&gt;1">
             <h3 class="h5">
                 <xsl:value-of select="@name"/>
+                <!--
                 <xsl:text> </xsl:text>
                 <a>
                     <xsl:attribute name="href">
@@ -22,6 +23,7 @@
                     </xsl:attribute>
                     <small>↓</small>
                 </a>
+                -->
             </h3>
         </xsl:if>
         <div class="evolution-reasons-list">
