@@ -899,7 +899,12 @@ class PokemonLinks
         Pokemon::ETERNATUS => 'eternatus',
         Pokemon::KUBFU => 'kubfu',
         Pokemon::URSHIFU => 'urshifu',
-        Pokemon::ZARUDE => 'zarude'
+        Pokemon::ZARUDE => 'zarude',
+        Pokemon::REGIELEKI => 'regieleki',
+        Pokemon::REGIDRAGO => 'regidrago',
+        Pokemon::GLASTRIER => 'glastrier',
+        Pokemon::SPECTRIER => 'spectrier',
+        Pokemon::CALYREX => 'calyrex'
     ];
     
     const LINK2POKEMON = [
@@ -1795,6 +1800,11 @@ class PokemonLinks
         'eternatus' => Pokemon::ETERNATUS,
         'kubfu' => Pokemon::KUBFU,
         'urshifu' => Pokemon::URSHIFU,
-        'zarude' => Pokemon::ZARUDE
+        'zarude' => Pokemon::ZARUDE,
+        'regieleki' => Pokemon::REGIELEKI,
+        'regidrago' => Pokemon::REGIDRAGO,
+        'glastrier' => Pokemon::GLASTRIER,
+        'spectrier' => Pokemon::SPECTRIER,
+        'calyrex' => Pokemon::CALYREX
     ];
 }

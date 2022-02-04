@@ -208,7 +208,7 @@ class Forms extends FormsAlias
             self::NECROZMA_ULTRA => 'Ultra Necrozma'
         ],
         Pokemon::TOXTRICITY => [
-            self::TOXTRICITY_LOW => 'Low Key Form',
+            self::TOXTRICITY_LOW_KEY => 'Low Key Form',
             self::TOXTRICITY_AMPED => 'Amped Form'
         ],
         Pokemon::ALCREMIE => [
@@ -247,6 +247,7 @@ class Forms extends FormsAlias
     const IGNORE_FORMS = [
         Pokemon::FRILLISH,
         Pokemon::JELLICENT,
-        Pokemon::PYROAR
+        Pokemon::PYROAR,
+        Pokemon::POLTEAGEIST
     ];
 }

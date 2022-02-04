@@ -246,4 +246,8 @@ class Moves
     const MOVE_TRI_ATTACK = 344;
     const MOVE_GUST_FAST = 345;
     const MOVE_INCINERATE_FAST = 346;
+    const MOVE_FEATHER_DANCE = 348;
+    const MOVE_WEATHER_BALL_NORMAL = 352;
+    const MOVE_PSYCHIC_FANGS = 353;
+    const MOVE_ICICLE_SPEAR = 359;
 }

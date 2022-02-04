@@ -272,6 +272,12 @@ class Evolutions
                 self::FIELD_ITEM => 'ITEM_KINGS_ROCK',
                 self::FIELD_LURE => 'ITEM_KINGS_ROCK'
             ],
+            Pokemon::SLOWBRO | Mods::MEGA => [
+                self::FIELD_PARENT => Pokemon::SLOWBRO,
+                self::FIELD_ENERGY_FIRST => 200,
+                self::FIELD_ENERGY => 40,
+                self::FIELD_TEMPORARY => true
+            ],
             Pokemon::MAGNETON => [
                 self::FIELD_PARENT => Pokemon::MAGNEMITE,
                 self::FIELD_CANDY => 25
@@ -452,7 +458,9 @@ class Evolutions
                 self::FIELD_PRIORITY => 200
             ],
             Pokemon::SYLVEON => [
-                self::FIELD_PARENT => Pokemon::EEVEE
+                self::FIELD_PARENT => Pokemon::EEVEE,
+                self::FIELD_CANDY => 25,
+                self::FIELD_PRIORITY => 100
             ],
             Pokemon::PORYGON2 => [
                 self::FIELD_PARENT => Pokemon::PORYGON,
@@ -467,6 +475,12 @@ class Evolutions
             Pokemon::KABUTOPS => [
                 self::FIELD_PARENT => Pokemon::KABUTO,
                 self::FIELD_CANDY => 50
+            ],
+            Pokemon::AERODACTYL | Mods::MEGA => [
+                self::FIELD_PARENT => Pokemon::AERODACTYL,
+                self::FIELD_ENERGY_FIRST => 200,
+                self::FIELD_ENERGY => 40,
+                self::FIELD_TEMPORARY => true
             ],
             Pokemon::DRAGONAIR => [
                 self::FIELD_PARENT => Pokemon::DRATINI,
@@ -615,6 +629,12 @@ class Evolutions
                 self::FIELD_CANDY => 100,
                 self::FIELD_ITEM => 'ITEM_GEN4_EVOLUTION_STONE',
                 self::FIELD_LURE => 'ITEM_GEN4_EVOLUTION_STONE'
+            ],
+            Pokemon::STEELIX | Mods::MEGA => [
+                self::FIELD_PARENT => Pokemon::STEELIX,
+                self::FIELD_ENERGY_FIRST => 200,
+                self::FIELD_ENERGY => 40,
+                self::FIELD_TEMPORARY => true
             ],
             Pokemon::GRANBULL => [
                 self::FIELD_PARENT => Pokemon::SNUBBULL,
@@ -895,6 +915,12 @@ class Evolutions
                 self::FIELD_PARENT => Pokemon::SWABLU,
                 self::FIELD_CANDY => 400
             ],
+            Pokemon::ALTARIA | Mods::MEGA => [
+                self::FIELD_PARENT => Pokemon::ALTARIA,
+                self::FIELD_ENERGY_FIRST => 200,
+                self::FIELD_ENERGY => 40,
+                self::FIELD_TEMPORARY => true
+            ],
             Pokemon::WHISCASH => [
                 self::FIELD_PARENT => Pokemon::BARBOACH,
                 self::FIELD_CANDY => 50
@@ -933,6 +959,12 @@ class Evolutions
                 self::FIELD_CANDY => 100,
                 self::FIELD_ITEM => 'ITEM_GEN4_EVOLUTION_STONE',
                 self::FIELD_LURE => 'ITEM_GEN4_EVOLUTION_STONE'
+            ],
+            Pokemon::ABSOL | Mods::MEGA => [
+                self::FIELD_PARENT => Pokemon::ABSOL,
+                self::FIELD_ENERGY_FIRST => 200,
+                self::FIELD_ENERGY => 40,
+                self::FIELD_TEMPORARY => true
             ],
             Pokemon::WOBBUFFET => [
                 self::FIELD_PARENT => Pokemon::WYNAUT,
@@ -1558,7 +1590,7 @@ class Evolutions
                 self::FIELD_FEMALE => true
             ],
             Pokemon::DOUBLADE => [
-                self::FIELD_PARENT => Pokemon::DOUBLADE,
+                self::FIELD_PARENT => Pokemon::AEGISLASH | FormsAlias::AEGISLASH_SHIELD,
                 self::FIELD_CANDY => 100
             ],
             Pokemon::AEGISLASH | FormsAlias::AEGISLASH_SHIELD => [
@@ -1590,15 +1622,19 @@ class Evolutions
             ],
             Pokemon::HELIOLISK => [
                 self::FIELD_PARENT => Pokemon::HELIOPTILE,
-                self::FIELD_CANDY => 50
+                self::FIELD_CANDY => 50,
+                self::FIELD_ITEM => 'ITEM_SUN_STONE',
+                self::FIELD_LURE => 'ITEM_SUN_STONE'
             ],
             Pokemon::TYRANTRUM => [
                 self::FIELD_PARENT => Pokemon::TYRUNT,
-                self::FIELD_CANDY => 50
+                self::FIELD_CANDY => 50,
+                self::FIELD_DAY => true
             ],
             Pokemon::AURORUS => [
                 self::FIELD_PARENT => Pokemon::AMAURA,
-                self::FIELD_CANDY => 50
+                self::FIELD_CANDY => 50,
+                self::FIELD_NIGHT => true
             ],
             Pokemon::SLIGGOO => [
                 self::FIELD_PARENT => Pokemon::GOOMY,
@@ -1610,11 +1646,13 @@ class Evolutions
             ],
             Pokemon::TREVEANT => [
                 self::FIELD_PARENT => Pokemon::PHANTUMP,
-                self::FIELD_CANDY => 50
+                self::FIELD_CANDY => 200,
+                self::FIELD_TRADED => true
             ],
-            Pokemon::GOURGEIST => [
-                self::FIELD_PARENT => Pokemon::PUMPKABOO,
-                self::FIELD_CANDY => 50
+            Pokemon::GOURGEIST | FormsAlias::GOURGEIST_SMALL => [
+                self::FIELD_PARENT => Pokemon::PUMPKABOO | FormsAlias::PUMPKABOO_SMALL,
+                self::FIELD_CANDY => 200,
+                self::FIELD_TRADED => true
             ],
             Pokemon::AVALUGG => [
                 self::FIELD_PARENT => Pokemon::BERGMITE,
@@ -1731,122 +1769,170 @@ class Evolutions
                 self::FIELD_CANDY => 400
             ],
             Pokemon::THWACKEY => [
-                self::FIELD_PARENT => Pokemon::GROOKEY
+                self::FIELD_PARENT => Pokemon::GROOKEY,
+                self::FIELD_CANDY => 25
             ],
             Pokemon::RILLABOOM => [
-                self::FIELD_PARENT => Pokemon::THWACKEY
+                self::FIELD_PARENT => Pokemon::THWACKEY,
+                self::FIELD_CANDY => 100
             ],
             Pokemon::RABOOT => [
-                self::FIELD_PARENT => Pokemon::SCORBUNNY
+                self::FIELD_PARENT => Pokemon::SCORBUNNY,
+                self::FIELD_CANDY => 25
             ],
             Pokemon::CINDERACE => [
-                self::FIELD_PARENT => Pokemon::RABOOT
+                self::FIELD_PARENT => Pokemon::RABOOT,
+                self::FIELD_CANDY => 100
             ],
             Pokemon::DRIZZILE => [
-                self::FIELD_PARENT => Pokemon::SOBBLE
+                self::FIELD_PARENT => Pokemon::SOBBLE,
+                self::FIELD_CANDY => 25
             ],
             Pokemon::INTELEON => [
-                self::FIELD_PARENT => Pokemon::DRIZZILE
+                self::FIELD_PARENT => Pokemon::DRIZZILE,
+                self::FIELD_CANDY => 100
             ],
             Pokemon::GREEDENT => [
-                self::FIELD_PARENT => Pokemon::SKWOVET
+                self::FIELD_PARENT => Pokemon::SKWOVET,
+                self::FIELD_CANDY => 50
             ],
             Pokemon::CORVISQUIRE => [
-                self::FIELD_PARENT => Pokemon::ROOKIDEE
+                self::FIELD_PARENT => Pokemon::ROOKIDEE,
+                self::FIELD_CANDY => 25
             ],
             Pokemon::CORVIKNIGHT => [
-                self::FIELD_PARENT => Pokemon::CORVISQUIRE
+                self::FIELD_PARENT => Pokemon::CORVISQUIRE,
+                self::FIELD_CANDY => 100
             ],
             Pokemon::DOTTLER => [
-                self::FIELD_PARENT => Pokemon::BLIPBUG
+                self::FIELD_PARENT => Pokemon::BLIPBUG,
+                self::FIELD_CANDY => 25
             ],
             Pokemon::ORBEETLE => [
-                self::FIELD_PARENT => Pokemon::DOTTLER
+                self::FIELD_PARENT => Pokemon::DOTTLER,
+                self::FIELD_CANDY => 100
             ],
             Pokemon::THIEVUL => [
-                self::FIELD_PARENT => Pokemon::NICKIT
+                self::FIELD_PARENT => Pokemon::NICKIT,
+                self::FIELD_CANDY => 50
             ],
             Pokemon::ELDEGOSS => [
-                self::FIELD_PARENT => Pokemon::GOSSIFLEUR
+                self::FIELD_PARENT => Pokemon::GOSSIFLEUR,
+                self::FIELD_CANDY => 50
             ],
             Pokemon::DUBWOOL => [
-                self::FIELD_PARENT => Pokemon::WOOLOO
+                self::FIELD_PARENT => Pokemon::WOOLOO,
+                self::FIELD_CANDY => 50
             ],
             Pokemon::DREDNAW => [
-                self::FIELD_PARENT => Pokemon::CHEWTLE
+                self::FIELD_PARENT => Pokemon::CHEWTLE,
+                self::FIELD_CANDY => 50
             ],
             Pokemon::BOLTUND => [
-                self::FIELD_PARENT => Pokemon::YAMPER
+                self::FIELD_PARENT => Pokemon::YAMPER,
+                self::FIELD_CANDY => 50
             ],
             Pokemon::CARKOL => [
-                self::FIELD_PARENT => Pokemon::ROLYCOLY
+                self::FIELD_PARENT => Pokemon::ROLYCOLY,
+                self::FIELD_CANDY => 25
             ],
             Pokemon::COALOSSAL => [
-                self::FIELD_PARENT => Pokemon::CARKOL
+                self::FIELD_PARENT => Pokemon::CARKOL,
+                self::FIELD_CANDY => 100
             ],
             Pokemon::FLAPPLE => [
-                self::FIELD_PARENT => Pokemon::APPLIN
+                self::FIELD_PARENT => Pokemon::APPLIN,
+                self::FIELD_CANDY => 400
             ],
             Pokemon::APPLETUN => [
-                self::FIELD_PARENT => Pokemon::APPLIN
+                self::FIELD_PARENT => Pokemon::APPLIN,
+                self::FIELD_CANDY => 400
             ],
             Pokemon::SANDACONDA => [
-                self::FIELD_PARENT => Pokemon::SILICOBRA
+                self::FIELD_PARENT => Pokemon::SILICOBRA,
+                self::FIELD_CANDY => 50
             ],
             Pokemon::BARRASKEWDA => [
-                self::FIELD_PARENT => Pokemon::ARROKUDA
+                self::FIELD_PARENT => Pokemon::ARROKUDA,
+                self::FIELD_CANDY => 50
             ],
-            Pokemon::TOXTRICITY | FormsAlias::TOXTRICITY_LOW => [
-                self::FIELD_PARENT => Pokemon::TOXEL
+            Pokemon::TOXTRICITY | FormsAlias::TOXTRICITY_LOW_KEY => [
+                self::FIELD_PARENT => Pokemon::TOXEL,
+                self::FIELD_CANDY => 50
+            ],
+            Pokemon::TOXTRICITY | FormsAlias::TOXTRICITY_AMPED => [
+                self::FIELD_PARENT => Pokemon::TOXEL,
+                self::FIELD_CANDY => 50
             ],
             Pokemon::CENTISKORCH => [
-                self::FIELD_PARENT => Pokemon::SIZZLIPEDE
+                self::FIELD_PARENT => Pokemon::SIZZLIPEDE,
+                self::FIELD_CANDY => 50
             ],
             Pokemon::GRAPPLOCT => [
-                self::FIELD_PARENT => Pokemon::CLOBBOPUS
+                self::FIELD_PARENT => Pokemon::CLOBBOPUS,
+                self::FIELD_CANDY => 50
             ],
             Pokemon::POLTEAGEIST => [
-                self::FIELD_PARENT => Pokemon::SINISTEA
+                self::FIELD_PARENT => Pokemon::SINISTEA,
+                self::FIELD_CANDY => 50
             ],
             Pokemon::HATTREM => [
-                self::FIELD_PARENT => Pokemon::HATENNA
+                self::FIELD_PARENT => Pokemon::HATENNA,
+                self::FIELD_CANDY => 25
             ],
             Pokemon::HATTERENE => [
-                self::FIELD_PARENT => Pokemon::HATTREM
+                self::FIELD_PARENT => Pokemon::HATTREM,
+                self::FIELD_CANDY => 100
             ],
             Pokemon::MORGREM => [
-                self::FIELD_PARENT => Pokemon::IMPIDIMP
+                self::FIELD_PARENT => Pokemon::IMPIDIMP,
+                self::FIELD_CANDY => 25
             ],
             Pokemon::GRIMMSNARL => [
-                self::FIELD_PARENT => Pokemon::MORGREM
+                self::FIELD_PARENT => Pokemon::MORGREM,
+                self::FIELD_CANDY => 100
             ],
             Pokemon::ALCREMIE | FormsAlias::ALCREMIE_VANILLA => [
-                self::FIELD_PARENT => Pokemon::MILCERY
+                self::FIELD_PARENT => Pokemon::MILCERY,
+                self::FIELD_CANDY => 50
             ],
             Pokemon::FROSMOTH => [
-                self::FIELD_PARENT => Pokemon::SNOM
+                self::FIELD_PARENT => Pokemon::SNOM,
+                self::FIELD_CANDY => 50
             ],
             Pokemon::COPPERAJAH => [
-                self::FIELD_PARENT => Pokemon::CUFANT
+                self::FIELD_PARENT => Pokemon::CUFANT,
+                self::FIELD_CANDY => 50
             ],
             Pokemon::DRAKLOAK => [
-                self::FIELD_PARENT => Pokemon::DREEPY
+                self::FIELD_PARENT => Pokemon::DREEPY,
+                self::FIELD_CANDY => 25
             ],
             Pokemon::DRAGAPULT => [
-                self::FIELD_PARENT => Pokemon::DRAKLOAK
+                self::FIELD_PARENT => Pokemon::DRAKLOAK,
+                self::FIELD_CANDY => 100
             ],
             Pokemon::URSHIFU | FormsAlias::URSHIFU_SINGLE => [
-                self::FIELD_PARENT => Pokemon::KUBFU
+                self::FIELD_PARENT => Pokemon::KUBFU,
+                self::FIELD_CANDY => 400
             ],
             Pokemon::URSHIFU | FormsAlias::URSHIFU_RAPID => [
-                self::FIELD_PARENT => Pokemon::KUBFU
+                self::FIELD_PARENT => Pokemon::KUBFU,
+                self::FIELD_CANDY => 400
             ],
             Pokemon::RAPIDASH | Mods::GALARIAN => [
                 self::FIELD_PARENT => Pokemon::PONYTA | Mods::GALARIAN,
                 self::FIELD_CANDY => 50
             ],
             Pokemon::SLOWBRO | Mods::GALARIAN => [
-                self::FIELD_PARENT => Pokemon::SLOWPOKE | Mods::GALARIAN
+                self::FIELD_PARENT => Pokemon::SLOWPOKE | Mods::GALARIAN,
+                self::FIELD_CANDY => 50,
+                self::FIELD_PRIORITY => 1
+            ],
+            Pokemon::SLOWKING | Mods::GALARIAN => [
+                self::FIELD_PARENT => Pokemon::SLOWPOKE | Mods::GALARIAN,
+                self::FIELD_CANDY => 50,
+                self::FIELD_PRIORITY => 1
             ],
             Pokemon::MR_RIME => [
                 self::FIELD_PARENT => Pokemon::MR_MIME | Mods::GALARIAN,
@@ -1919,1060 +2005,8 @@ class Evolutions
                 self::FIELD_PARENT => Pokemon::DARUMAKA | Mods::GALARIAN,
                 self::FIELD_CANDY => 50
             ],
-            Pokemon::IVYSAUR | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::BULBASAUR | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::IVYSAUR | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::BULBASAUR | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::VENUSAUR | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::IVYSAUR | Mods::PURIFIED,
-                self::FIELD_CANDY => 90
-            ],
-            Pokemon::VENUSAUR | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::IVYSAUR | Mods::SHADOW,
-                self::FIELD_CANDY => 100
-            ],
-            Pokemon::VENUSAUR | Mods::PURIFIED | Mods::MEGA => [
-                self::FIELD_PARENT => Pokemon::VENUSAUR | Mods::PURIFIED,
-                self::FIELD_ENERGY_FIRST => 200,
-                self::FIELD_ENERGY => 40,
-                self::FIELD_TEMPORARY => true
-            ],
-            Pokemon::CHARMELEON | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::CHARMANDER | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::CHARMELEON | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::CHARMANDER | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::CHARIZARD | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::CHARMELEON | Mods::PURIFIED,
-                self::FIELD_CANDY => 90
-            ],
-            Pokemon::CHARIZARD | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::CHARMELEON | Mods::SHADOW,
-                self::FIELD_CANDY => 100
-            ],
-            Pokemon::CHARIZARD | Mods::PURIFIED | Mods::MEGA_X => [
-                self::FIELD_PARENT => Pokemon::CHARIZARD | Mods::PURIFIED,
-                self::FIELD_ENERGY_FIRST => 200,
-                self::FIELD_ENERGY => 40,
-                self::FIELD_TEMPORARY => true
-            ],
-            Pokemon::CHARIZARD | Mods::PURIFIED | Mods::MEGA_Y => [
-                self::FIELD_PARENT => Pokemon::CHARIZARD | Mods::PURIFIED,
-                self::FIELD_ENERGY_FIRST => 200,
-                self::FIELD_ENERGY => 40,
-                self::FIELD_TEMPORARY => true
-            ],
-            Pokemon::WARTORTLE | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::SQUIRTLE | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::WARTORTLE | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::SQUIRTLE | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::BLASTOISE | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::WARTORTLE | Mods::PURIFIED,
-                self::FIELD_CANDY => 90
-            ],
-            Pokemon::BLASTOISE | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::WARTORTLE | Mods::SHADOW,
-                self::FIELD_CANDY => 100
-            ],
-            Pokemon::BLASTOISE | Mods::PURIFIED | Mods::MEGA => [
-                self::FIELD_PARENT => Pokemon::BLASTOISE | Mods::PURIFIED,
-                self::FIELD_ENERGY_FIRST => 200,
-                self::FIELD_ENERGY => 40,
-                self::FIELD_TEMPORARY => true
-            ],
-            Pokemon::KAKUNA | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::WEEDLE | Mods::PURIFIED,
-                self::FIELD_CANDY => 10
-            ],
-            Pokemon::KAKUNA | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::WEEDLE | Mods::SHADOW,
-                self::FIELD_CANDY => 12
-            ],
-            Pokemon::BEEDRILL | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::KAKUNA | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::BEEDRILL | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::KAKUNA | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::BEEDRILL | Mods::PURIFIED | Mods::MEGA => [
-                self::FIELD_PARENT => Pokemon::BEEDRILL | Mods::PURIFIED,
-                self::FIELD_ENERGY_FIRST => 100,
-                self::FIELD_ENERGY => 20,
-                self::FIELD_TEMPORARY => true
-            ],
-            Pokemon::RATICATE | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::RATATTA | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::RATICATE | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::RATATTA | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::ARBOK | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::EKANS | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::ARBOK | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::EKANS | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::SANDSLASH | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::SANDSHREW | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::SANDSLASH | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::SANDSHREW | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::NIDORINA | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::NIDORAN_M | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::NIDORINO | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::NIDORAN_M | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::NIDORINA | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::NIDORAN_M | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::NIDORINO | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::NIDORAN_M | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::NIDOQUEEN | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::NIDORINA | Mods::PURIFIED,
-                self::FIELD_CANDY => 90
-            ],
-            Pokemon::NIDOQUEEN | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::NIDORINA | Mods::SHADOW,
-                self::FIELD_CANDY => 100
-            ],
-            Pokemon::NIDOKING | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::NIDORINO | Mods::PURIFIED,
-                self::FIELD_CANDY => 90
-            ],
-            Pokemon::NIDOKING | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::NIDORINO | Mods::SHADOW,
-                self::FIELD_CANDY => 100
-            ],
-            Pokemon::NINETALES | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::VULPIX | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::NINETALES | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::VULPIX | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::GOLBAT | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::ZUBAT | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::GOLBAT | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::ZUBAT | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::CROBAT | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::GOLBAT | Mods::PURIFIED,
-                self::FIELD_CANDY => 90
-            ],
-            Pokemon::CROBAT | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::GOLBAT | Mods::SHADOW,
-                self::FIELD_CANDY => 100
-            ],
-            Pokemon::GLOOM | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::ODDISH | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::GLOOM | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::ODDISH | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::VILEPLUME | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::GLOOM | Mods::PURIFIED,
-                self::FIELD_CANDY => 90
-            ],
-            Pokemon::BELLOSSOM | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::GLOOM | Mods::PURIFIED,
-                self::FIELD_CANDY => 90,
-                self::FIELD_ITEM => 'ITEM_SUN_STONE',
-                self::FIELD_LURE => 'ITEM_SUN_STONE'
-            ],
-            Pokemon::VILEPLUME | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::GLOOM | Mods::SHADOW,
-                self::FIELD_CANDY => 100
-            ],
-            Pokemon::BELLOSSOM | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::GLOOM | Mods::SHADOW,
-                self::FIELD_CANDY => 100,
-                self::FIELD_ITEM => 'ITEM_SUN_STONE',
-                self::FIELD_LURE => 'ITEM_SUN_STONE'
-            ],
-            Pokemon::VENOMOTH | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::VENONAT | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::VENOMOTH | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::VENONAT | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::DUGTRIO | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::DIGLETT | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::DUGTRIO | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::DIGLETT | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::PERSIAN | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::MEOWTH | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::PERSIAN | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::MEOWTH | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::GOLDUCK | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::PSYDUCK | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::GOLDUCK | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::PSYDUCK | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::ARCANINE | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::GROWLITHE | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::ARCANINE | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::GROWLITHE | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::POLIWHIRL | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::POLIWAG | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::POLIWHIRL | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::POLIWAG | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::POLIWRATH | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::POLIWHIRL | Mods::PURIFIED,
-                self::FIELD_CANDY => 90
-            ],
-            Pokemon::POLITOED | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::POLIWHIRL | Mods::PURIFIED,
-                self::FIELD_CANDY => 90,
-                self::FIELD_ITEM => 'ITEM_KINGS_ROCK',
-                self::FIELD_LURE => 'ITEM_KINGS_ROCK'
-            ],
-            Pokemon::POLIWRATH | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::POLIWHIRL | Mods::SHADOW,
-                self::FIELD_CANDY => 100
-            ],
-            Pokemon::POLITOED | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::POLIWHIRL | Mods::SHADOW,
-                self::FIELD_CANDY => 100,
-                self::FIELD_ITEM => 'ITEM_KINGS_ROCK',
-                self::FIELD_LURE => 'ITEM_KINGS_ROCK'
-            ],
-            Pokemon::KADABRA | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::ABRA | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::KADABRA | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::ABRA | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::ALAKAZAM | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::KADABRA | Mods::PURIFIED,
-                self::FIELD_CANDY => 90,
-                self::FIELD_TRADED => true
-            ],
-            Pokemon::ALAKAZAM | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::KADABRA | Mods::SHADOW,
-                self::FIELD_CANDY => 100
-            ],
-            Pokemon::MACHOKE | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::MACHOP | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::MACHOKE | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::MACHOP | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::MACHAMP | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::MACHOKE | Mods::PURIFIED,
-                self::FIELD_CANDY => 90,
-                self::FIELD_TRADED => true
-            ],
-            Pokemon::MACHAMP | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::MACHOKE | Mods::SHADOW,
-                self::FIELD_CANDY => 100,
-                self::FIELD_TRADED => true
-            ],
-            Pokemon::WEEPINBELL | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::BELLSPROUT | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::WEEPINBELL | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::BELLSPROUT | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::VICTREEBEL | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::WEEPINBELL | Mods::PURIFIED,
-                self::FIELD_CANDY => 90
-            ],
-            Pokemon::VICTREEBEL | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::WEEPINBELL | Mods::SHADOW,
-                self::FIELD_CANDY => 100
-            ],
-            Pokemon::GRAVELER | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::GEODUDE | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::GRAVELER | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::GEODUDE | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::GOLEM | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::GRAVELER | Mods::PURIFIED,
-                self::FIELD_CANDY => 90,
-                self::FIELD_TRADED => true
-            ],
-            Pokemon::GOLEM | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::GRAVELER | Mods::SHADOW,
-                self::FIELD_CANDY => 100
-            ],
-            Pokemon::RAPIDASH | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::PONYTA | Mods::PURIFIED,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::RAPIDASH | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::PONYTA | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::SLOWBRO | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::SLOWPOKE | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::SLOWKING | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::SLOWPOKE | Mods::PURIFIED,
-                self::FIELD_CANDY => 45,
-                self::FIELD_ITEM => 'ITEM_KINGS_ROCK',
-                self::FIELD_LURE => 'ITEM_KINGS_ROCK'
-            ],
-            Pokemon::SLOWBRO | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::SLOWPOKE | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::SLOWKING | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::SLOWPOKE | Mods::SHADOW,
-                self::FIELD_CANDY => 50,
-                self::FIELD_ITEM => 'ITEM_KINGS_ROCK',
-                self::FIELD_LURE => 'ITEM_KINGS_ROCK'
-            ],
-            Pokemon::MAGNETON | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::MAGNEMITE | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::MAGNETON | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::MAGNEMITE | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::MAGNEZONE | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::MAGNETON | Mods::PURIFIED,
-                self::FIELD_CANDY => 90
-            ],
-            Pokemon::MAGNEZONE | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::MAGNETON | Mods::SHADOW,
-                self::FIELD_CANDY => 100
-            ],
-            Pokemon::MUK | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::GRIMER | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::MUK | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::GRIMER | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::CLOYSTER | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::SHELLDER | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::CLOYSTER | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::SHELLDER | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::STEELIX | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::ONIX | Mods::PURIFIED,
-                self::FIELD_CANDY => 45,
-                self::FIELD_ITEM => 'ITEM_METAL_COAT',
-                self::FIELD_LURE => 'ITEM_METAL_COAT'
-            ],
-            Pokemon::STEELIX | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::ONIX | Mods::SHADOW,
-                self::FIELD_CANDY => 50,
-                self::FIELD_ITEM => 'ITEM_METAL_COAT',
-                self::FIELD_LURE => 'ITEM_METAL_COAT'
-            ],
-            Pokemon::HYPNO | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::DROWZEE | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::HYPNO | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::DROWZEE | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::KINGLER | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::KRABBY | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::KINGLER | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::KRABBY | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::EXEGGUTOR | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::EXEGGCUTE | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::EXEGGUTOR | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::EXEGGCUTE | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::MAROWAK | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::CUBONE | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::MAROWAK | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::CUBONE | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::WEEZING | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::KOFFING | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::WEEZING | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::KOFFING | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::RHYDON | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::RHYHORN | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::RHYDON | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::RHYHORN | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::RHYPERIOR | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::RHYDON | Mods::PURIFIED,
-                self::FIELD_CANDY => 90,
-                self::FIELD_ITEM => 'ITEM_GEN4_EVOLUTION_STONE',
-                self::FIELD_LURE => 'ITEM_GEN4_EVOLUTION_STONE'
-            ],
-            Pokemon::RHYPERIOR | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::RHYDON | Mods::SHADOW,
-                self::FIELD_CANDY => 100,
-                self::FIELD_ITEM => 'ITEM_GEN4_EVOLUTION_STONE',
-                self::FIELD_LURE => 'ITEM_GEN4_EVOLUTION_STONE'
-            ],
-            Pokemon::SCIZOR | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::SCYTHER | Mods::PURIFIED,
-                self::FIELD_CANDY => 45,
-                self::FIELD_ITEM => 'ITEM_METAL_COAT',
-                self::FIELD_LURE => 'ITEM_METAL_COAT'
-            ],
-            Pokemon::SCIZOR | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::SCYTHER | Mods::SHADOW,
-                self::FIELD_CANDY => 50,
-                self::FIELD_ITEM => 'ITEM_METAL_COAT',
-                self::FIELD_LURE => 'ITEM_METAL_COAT'
-            ],
-            Pokemon::ELECTIVIRE | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::ELECTABUZZ | Mods::PURIFIED,
-                self::FIELD_CANDY => 90,
-                self::FIELD_ITEM => 'ITEM_GEN4_EVOLUTION_STONE',
-                self::FIELD_LURE => 'ITEM_GEN4_EVOLUTION_STONE'
-            ],
-            Pokemon::ELECTIVIRE | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::ELECTABUZZ | Mods::SHADOW,
-                self::FIELD_CANDY => 100,
-                self::FIELD_ITEM => 'ITEM_GEN4_EVOLUTION_STONE',
-                self::FIELD_LURE => 'ITEM_GEN4_EVOLUTION_STONE'
-            ],
-            Pokemon::MAGMORTAR | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::MAGMAR | Mods::PURIFIED,
-                self::FIELD_CANDY => 90,
-                self::FIELD_ITEM => 'ITEM_GEN4_EVOLUTION_STONE',
-                self::FIELD_LURE => 'ITEM_GEN4_EVOLUTION_STONE'
-            ],
-            Pokemon::MAGMORTAR | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::MAGMAR | Mods::SHADOW,
-                self::FIELD_CANDY => 100,
-                self::FIELD_ITEM => 'ITEM_GEN4_EVOLUTION_STONE',
-                self::FIELD_LURE => 'ITEM_GEN4_EVOLUTION_STONE'
-            ],
-            Pokemon::GYARADOS | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::MAGIKARP | Mods::PURIFIED,
-                self::FIELD_CANDY => 360
-            ],
-            Pokemon::GYARADOS | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::MAGIKARP | Mods::SHADOW,
-                self::FIELD_CANDY => 400
-            ],
-            Pokemon::GYARADOS | Mods::PURIFIED | Mods::MEGA => [
-                self::FIELD_PARENT => Pokemon::GYARADOS | Mods::PURIFIED,
-                self::FIELD_ENERGY_FIRST => 200,
-                self::FIELD_ENERGY => 40,
-                self::FIELD_TEMPORARY => true
-            ],
-            Pokemon::PORYGON2 | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::PORYGON | Mods::PURIFIED,
-                self::FIELD_CANDY => 22,
-                self::FIELD_ITEM => 'ITEM_UP_GRADE',
-                self::FIELD_LURE => 'ITEM_UP_GRADE'
-            ],
-            Pokemon::PORYGON2 | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::PORYGON | Mods::SHADOW,
-                self::FIELD_CANDY => 25,
-                self::FIELD_ITEM => 'ITEM_UP_GRADE',
-                self::FIELD_LURE => 'ITEM_UP_GRADE'
-            ],
-            Pokemon::OMASTAR | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::OMANYTE | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::OMASTAR | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::OMANYTE | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::KABUTOPS | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::KABUTO | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::KABUTOPS | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::KABUTO | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::DRAGONAIR | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::DRATINI | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::DRAGONAIR | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::DRATINI | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::DRAGONITE | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::DRAGONAIR | Mods::PURIFIED,
-                self::FIELD_CANDY => 90
-            ],
-            Pokemon::DRAGONITE | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::DRAGONAIR | Mods::SHADOW,
-                self::FIELD_CANDY => 100
-            ],
-            Pokemon::FLAAFFY | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::MAREEP | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::FLAAFFY | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::MAREEP | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::AMPHAROS | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::FLAAFFY | Mods::PURIFIED,
-                self::FIELD_CANDY => 90
-            ],
-            Pokemon::AMPHAROS | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::FLAAFFY | Mods::SHADOW,
-                self::FIELD_CANDY => 100
-            ],
-            Pokemon::AMPHAROS | Mods::PURIFIED | Mods::MEGA => [
-                self::FIELD_PARENT => Pokemon::AMPHAROS | Mods::PURIFIED,
-                self::FIELD_ENERGY_FIRST => 200,
-                self::FIELD_ENERGY => 40,
-                self::FIELD_TEMPORARY => true
-            ],
-            Pokemon::SKIPLOOM | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::HOPPIP | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::SKIPLOOM | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::HOPPIP | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::JUMPLUFF | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::SKIPLOOM | Mods::PURIFIED,
-                self::FIELD_CANDY => 90
-            ],
-            Pokemon::JUMPLUFF | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::SKIPLOOM | Mods::SHADOW,
-                self::FIELD_CANDY => 100
-            ],
-            Pokemon::AMBIPOM | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::AIPOM | Mods::PURIFIED,
-                self::FIELD_CANDY => 90,
-                self::FIELD_ITEM => 'ITEM_GEN4_EVOLUTION_STONE',
-                self::FIELD_LURE => 'ITEM_GEN4_EVOLUTION_STONE'
-            ],
-            Pokemon::AMBIPOM | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::AIPOM | Mods::SHADOW,
-                self::FIELD_CANDY => 100,
-                self::FIELD_ITEM => 'ITEM_GEN4_EVOLUTION_STONE',
-                self::FIELD_LURE => 'ITEM_GEN4_EVOLUTION_STONE'
-            ],
-            Pokemon::QUAGSIRE | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::WOOPER | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::QUAGSIRE | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::WOOPER | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::HONCHKROW | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::MURKROW | Mods::PURIFIED,
-                self::FIELD_CANDY => 90,
-                self::FIELD_ITEM => 'ITEM_GEN4_EVOLUTION_STONE',
-                self::FIELD_LURE => 'ITEM_GEN4_EVOLUTION_STONE'
-            ],
-            Pokemon::HONCHKROW | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::MURKROW | Mods::SHADOW,
-                self::FIELD_CANDY => 100,
-                self::FIELD_ITEM => 'ITEM_GEN4_EVOLUTION_STONE',
-                self::FIELD_LURE => 'ITEM_GEN4_EVOLUTION_STONE'
-            ],
-            Pokemon::MISMAGIUS | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::MISDREAVUS | Mods::PURIFIED,
-                self::FIELD_CANDY => 90,
-                self::FIELD_ITEM => 'ITEM_GEN4_EVOLUTION_STONE',
-                self::FIELD_LURE => 'ITEM_GEN4_EVOLUTION_STONE'
-            ],
-            Pokemon::MISMAGIUS | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::MISDREAVUS | Mods::SHADOW,
-                self::FIELD_CANDY => 100,
-                self::FIELD_ITEM => 'ITEM_GEN4_EVOLUTION_STONE',
-                self::FIELD_LURE => 'ITEM_GEN4_EVOLUTION_STONE'
-            ],
-            Pokemon::FORRETRESS | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::PINECO | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::FORRETRESS | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::PINECO | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::GLISCOR | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::GLIGAR | Mods::PURIFIED,
-                self::FIELD_CANDY => 90,
-                self::FIELD_ITEM => 'ITEM_GEN4_EVOLUTION_STONE',
-                self::FIELD_LURE => 'ITEM_GEN4_EVOLUTION_STONE'
-            ],
-            Pokemon::GLISCOR | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::GLIGAR | Mods::SHADOW,
-                self::FIELD_CANDY => 100,
-                self::FIELD_ITEM => 'ITEM_GEN4_EVOLUTION_STONE',
-                self::FIELD_LURE => 'ITEM_GEN4_EVOLUTION_STONE'
-            ],
-            Pokemon::WEAVILE | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::SNEASEL | Mods::PURIFIED,
-                self::FIELD_CANDY => 90,
-                self::FIELD_ITEM => 'ITEM_GEN4_EVOLUTION_STONE',
-                self::FIELD_LURE => 'ITEM_GEN4_EVOLUTION_STONE'
-            ],
-            Pokemon::WEAVILE | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::SNEASEL | Mods::SHADOW,
-                self::FIELD_CANDY => 100,
-                self::FIELD_ITEM => 'ITEM_GEN4_EVOLUTION_STONE',
-                self::FIELD_LURE => 'ITEM_GEN4_EVOLUTION_STONE'
-            ],
-            Pokemon::URSARING | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::TEDDIURSA | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::URSARING | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::TEDDIURSA | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::PILOSWINE | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::SWINUB | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::PILOSWINE | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::SWINUB | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::MAMOSWINE | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::PILOSWINE | Mods::PURIFIED,
-                self::FIELD_CANDY => 90,
-                self::FIELD_ITEM => 'ITEM_GEN4_EVOLUTION_STONE',
-                self::FIELD_LURE => 'ITEM_GEN4_EVOLUTION_STONE'
-            ],
-            Pokemon::MAMOSWINE | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::PILOSWINE | Mods::SHADOW,
-                self::FIELD_CANDY => 100,
-                self::FIELD_ITEM => 'ITEM_GEN4_EVOLUTION_STONE',
-                self::FIELD_LURE => 'ITEM_GEN4_EVOLUTION_STONE'
-            ],
-            Pokemon::HOUNDOOM | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::HOUNDOUR | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::HOUNDOOM | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::HOUNDOUR | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::HOUNDOOM | Mods::PURIFIED | Mods::MEGA => [
-                self::FIELD_PARENT => Pokemon::HOUNDOOM | Mods::PURIFIED,
-                self::FIELD_ENERGY_FIRST => 200,
-                self::FIELD_ENERGY => 40,
-                self::FIELD_TEMPORARY => true
-            ],
-            Pokemon::PORYGON_Z | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::PORYGON2 | Mods::PURIFIED,
-                self::FIELD_CANDY => 90,
-                self::FIELD_ITEM => 'ITEM_GEN4_EVOLUTION_STONE',
-                self::FIELD_LURE => 'ITEM_GEN4_EVOLUTION_STONE'
-            ],
-            Pokemon::PORYGON_Z | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::PORYGON2 | Mods::SHADOW,
-                self::FIELD_CANDY => 100,
-                self::FIELD_ITEM => 'ITEM_GEN4_EVOLUTION_STONE',
-                self::FIELD_LURE => 'ITEM_GEN4_EVOLUTION_STONE'
-            ],
-            Pokemon::PUPITAR | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::LARVITAR | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::PUPITAR | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::LARVITAR | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::TYRANITAR | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::PUPITAR | Mods::PURIFIED,
-                self::FIELD_CANDY => 90
-            ],
-            Pokemon::TYRANITAR | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::PUPITAR | Mods::SHADOW,
-                self::FIELD_CANDY => 100
-            ],
-            Pokemon::MARSHTOMP | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::MUDKIP | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::MARSHTOMP | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::MUDKIP | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::SWAMPERT | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::MARSHTOMP | Mods::PURIFIED,
-                self::FIELD_CANDY => 90
-            ],
-            Pokemon::SWAMPERT | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::MARSHTOMP | Mods::SHADOW,
-                self::FIELD_CANDY => 100
-            ],
-            Pokemon::LINOONE | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::ZIGZAGOON | Mods::PURIFIED,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::LINOONE | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::ZIGZAGOON | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::NUZLEAF | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::SEEDOT | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::NUZLEAF | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::SEEDOT | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::SHIFTRY | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::NUZLEAF | Mods::PURIFIED,
-                self::FIELD_CANDY => 90
-            ],
-            Pokemon::SHIFTRY | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::NUZLEAF | Mods::SHADOW,
-                self::FIELD_CANDY => 100
-            ],
-            Pokemon::KIRLIA | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::RALTS | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::KIRLIA | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::RALTS | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::GALLADE | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::KIRLIA | Mods::PURIFIED,
-                self::FIELD_CANDY => 90,
-                self::FIELD_ITEM => 'ITEM_GEN4_EVOLUTION_STONE',
-                self::FIELD_LURE => 'ITEM_GEN4_EVOLUTION_STONE',
-                self::FIELD_MALE => true
-            ],
-            Pokemon::GARDEVOIR | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::KIRLIA | Mods::PURIFIED,
-                self::FIELD_CANDY => 90
-            ],
-            Pokemon::GALLADE | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::KIRLIA | Mods::SHADOW,
-                self::FIELD_CANDY => 100,
-                self::FIELD_ITEM => 'ITEM_GEN4_EVOLUTION_STONE',
-                self::FIELD_LURE => 'ITEM_GEN4_EVOLUTION_STONE',
-                self::FIELD_MALE => true
-            ],
-            Pokemon::GARDEVOIR | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::KIRLIA | Mods::SHADOW,
-                self::FIELD_CANDY => 100
-            ],
-            Pokemon::PROBOPASS | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::NOSEPASS | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::PROBOPASS | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::NOSEPASS | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::LAIRON | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::ARON | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::LAIRON | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::ARON | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::AGGRON | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::LAIRON | Mods::PURIFIED,
-                self::FIELD_CANDY => 90
-            ],
-            Pokemon::AGGRON | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::LAIRON | Mods::SHADOW,
-                self::FIELD_CANDY => 100
-            ],
-            Pokemon::SHARPEDO | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::CARAVANHA | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::SHARPEDO | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::CARAVANHA | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::VIBRAVA | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::TRAPINCH | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::VIBRAVA | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::TRAPINCH | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::FLYGON | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::VIBRAVA | Mods::PURIFIED,
-                self::FIELD_CANDY => 90
-            ],
-            Pokemon::FLYGON | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::VIBRAVA | Mods::SHADOW,
-                self::FIELD_CANDY => 100
-            ],
-            Pokemon::CACTURNE | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::CACNEA | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::CACTURNE | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::CACNEA | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::CRADILY | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::LILEEP | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::CRADILY | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::LILEEP | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::ARMALDO | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::ANORITH | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::ARMALDO | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::ANORITH | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::BANETTE | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::SHUPPET | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::BANETTE | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::SHUPPET | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::DUSCLOPS | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::DUSKULL | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::DUSCLOPS | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::DUSKULL | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::DUSKNOIR | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::DUSCLOPS | Mods::PURIFIED,
-                self::FIELD_CANDY => 90,
-                self::FIELD_ITEM => 'ITEM_GEN4_EVOLUTION_STONE',
-                self::FIELD_LURE => 'ITEM_GEN4_EVOLUTION_STONE'
-            ],
-            Pokemon::DUSKNOIR | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::DUSCLOPS | Mods::SHADOW,
-                self::FIELD_CANDY => 100,
-                self::FIELD_ITEM => 'ITEM_GEN4_EVOLUTION_STONE',
-                self::FIELD_LURE => 'ITEM_GEN4_EVOLUTION_STONE'
-            ],
-            Pokemon::SEALEO | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::SPHEAL | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::SEALEO | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::SPHEAL | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::WALREIN | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::SEALEO | Mods::PURIFIED,
-                self::FIELD_CANDY => 90
-            ],
-            Pokemon::WALREIN | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::SEALEO | Mods::SHADOW,
-                self::FIELD_CANDY => 100
-            ],
-            Pokemon::SHELGON | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::BAGON | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::SHELGON | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::BAGON | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::SALAMENCE | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::SHELGON | Mods::PURIFIED,
-                self::FIELD_CANDY => 90
-            ],
-            Pokemon::SALAMENCE | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::SHELGON | Mods::SHADOW,
-                self::FIELD_CANDY => 100
-            ],
-            Pokemon::METANG | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::BELDUM | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::METANG | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::BELDUM | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::METAGROSS | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::METANG | Mods::PURIFIED,
-                self::FIELD_CANDY => 90
-            ],
-            Pokemon::METAGROSS | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::METANG | Mods::SHADOW,
-                self::FIELD_CANDY => 100
-            ],
-            Pokemon::GROTLE | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::TURTWIG | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::GROTLE | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::TURTWIG | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::TORTERRA | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::GROTLE | Mods::PURIFIED,
-                self::FIELD_CANDY => 90
-            ],
-            Pokemon::TORTERRA | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::GROTLE | Mods::SHADOW,
-                self::FIELD_CANDY => 100
-            ],
-            Pokemon::MONFERNO | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::CHIMCHAR | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::MONFERNO | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::CHIMCHAR | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::INFERNAPE | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::MONFERNO | Mods::PURIFIED,
-                self::FIELD_CANDY => 90
-            ],
-            Pokemon::INFERNAPE | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::MONFERNO | Mods::SHADOW,
-                self::FIELD_CANDY => 100
-            ],
             Pokemon::GASTRODON | FormsAlias::GASTRODON_WEST_SEA => [
                 self::FIELD_PARENT => Pokemon::SHELLOS | FormsAlias::SHELLOS_WEST_SEA,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::SKUNTANK | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::STUNKY | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::SKUNTANK | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::STUNKY | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::GABITE | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::GIBLE | Mods::PURIFIED,
-                self::FIELD_CANDY => 22
-            ],
-            Pokemon::GABITE | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::GIBLE | Mods::SHADOW,
-                self::FIELD_CANDY => 25
-            ],
-            Pokemon::GARCHOMP | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::GABITE | Mods::PURIFIED,
-                self::FIELD_CANDY => 90
-            ],
-            Pokemon::GARCHOMP | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::GABITE | Mods::SHADOW,
-                self::FIELD_CANDY => 100
-            ],
-            Pokemon::HIPPOWDON | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::HIPPOPOTAS | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::HIPPOWDON | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::HIPPOPOTAS | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::ABOMASNOW | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::SNOVER | Mods::PURIFIED,
-                self::FIELD_CANDY => 45
-            ],
-            Pokemon::ABOMASNOW | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::SNOVER | Mods::SHADOW,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::ABOMASNOW | Mods::PURIFIED | Mods::MEGA => [
-                self::FIELD_PARENT => Pokemon::ABOMASNOW | Mods::PURIFIED,
-                self::FIELD_ENERGY_FIRST => 200,
-                self::FIELD_ENERGY => 40,
-                self::FIELD_TEMPORARY => true
-            ],
-            Pokemon::COFAGRIGUS | Mods::PURIFIED => [
-                self::FIELD_PARENT => Pokemon::YAMASK | Mods::PURIFIED,
-                self::FIELD_CANDY => 50
-            ],
-            Pokemon::COFAGRIGUS | Mods::SHADOW => [
-                self::FIELD_PARENT => Pokemon::YAMASK | Mods::SHADOW,
                 self::FIELD_CANDY => 50
             ],
             Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_AUTUMN => [
@@ -2986,6 +2020,21 @@ class Evolutions
             Pokemon::SAWSBUCK | FormsAlias::SAWSBUCK_WINTER => [
                 self::FIELD_PARENT => Pokemon::DEERLING | FormsAlias::DEERLING_WINTER,
                 self::FIELD_CANDY => 50
+            ],
+            Pokemon::GOURGEIST | FormsAlias::GOURGEIST_AVERAGE => [
+                self::FIELD_PARENT => Pokemon::PUMPKABOO | FormsAlias::PUMPKABOO_AVERAGE,
+                self::FIELD_CANDY => 200,
+                self::FIELD_TRADED => true
+            ],
+            Pokemon::GOURGEIST | FormsAlias::GOURGEIST_LARGE => [
+                self::FIELD_PARENT => Pokemon::PUMPKABOO | FormsAlias::PUMPKABOO_LARGE,
+                self::FIELD_CANDY => 200,
+                self::FIELD_TRADED => true
+            ],
+            Pokemon::GOURGEIST | FormsAlias::GOURGEIST_SUPER => [
+                self::FIELD_PARENT => Pokemon::PUMPKABOO | FormsAlias::PUMPKABOO_SUPER,
+                self::FIELD_CANDY => 200,
+                self::FIELD_TRADED => true
             ]
         ];
 }

@@ -129,8 +129,10 @@ class FormsAlias
     const NECROZMA_DUSK = Mods::FORM2;
     const NECROZMA_DAWN = Mods::FORM3;
     const NECROZMA_ULTRA = Mods::FORM4;
-    const TOXTRICITY_LOW = Mods::FORM1;
+    const TOXTRICITY_LOW_KEY = Mods::FORM1;
     const TOXTRICITY_AMPED = Mods::FORM2;
+    const POLTEAGEIST_PHONY = Mods::FORM1;
+    const POLTEAGEIST_ANTIQUE = Mods::FORM2;
     const ALCREMIE_VANILLA = Mods::FORM1;
     const INDEEDEE_FEMALE = Mods::FORM1;
     const INDEEDEE_MALE = Mods::FORM2;
@@ -142,6 +144,14 @@ class FormsAlias
     const ZAMAZENTA_CROWNED = Mods::FORM2;
     const URSHIFU_SINGLE = Mods::FORM1;
     const URSHIFU_RAPID = Mods::FORM2;
+    const GOURGEIST_SMALL = Mods::FORM1;
+    const GOURGEIST_AVERAGE = Mods::FORM2;
+    const GOURGEIST_LARGE = Mods::FORM3;
+    const GOURGEIST_SUPER = Mods::FORM4;
+    const PUMPKABOO_SMALL = Mods::FORM1;
+    const PUMPKABOO_AVERAGE = Mods::FORM2;
+    const PUMPKABOO_LARGE = Mods::FORM3;
+    const PUMPKABOO_SUPER = Mods::FORM4;
 
     /**
      * Get constant name from code (for code generation)

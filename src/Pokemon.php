@@ -319,7 +319,7 @@ class Pokemon extends Data\Manual\PokemonList
 
         $data = PokemonData::POKEMON[$this->code];
         $node->setAttribute('unreleased', !empty($data[PokemonData::FIELD_UNRELEASED]) ? '1' : '0');
-        $node->setAttribute('type1', $data[PokemonData::FIELD_TYPE1]);
+        $node->setAttribute('type1', $data[PokemonData::FIELD_TYPE1] ?? '');
         $node->setAttribute('type2', $data[PokemonData::FIELD_TYPE2] ?? '');
         $node->setAttribute('attack', $data[PokemonData::FIELD_ATTACK] ?? '');
         $node->setAttribute('defense', $data[PokemonData::FIELD_DEFENSE] ?? '');

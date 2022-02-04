@@ -42,6 +42,16 @@ class Legendaries
         Pokemon::KYUREM,
         Pokemon::XERNEAS,
         Pokemon::YVELTAL,
-        Pokemon::ZYGARGE
+        Pokemon::ZYGARGE,
+        Pokemon::ZACIAN,
+        Pokemon::ZAMAZENTA,
+        Pokemon::ETERNATUS,
+        Pokemon::KUBFU,
+        Pokemon::URSHIFU,
+        Pokemon::REGIELEKI,
+        Pokemon::REGIDRAGO,
+        Pokemon::GLASTRIER,
+        Pokemon::SPECTRIER,
+        Pokemon::CALYREX
     ];
 }

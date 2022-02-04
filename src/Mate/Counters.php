@@ -11,18 +11,18 @@ use Pogo\Data\Generated\TypeEffectiveness;
 
 class Counters
 {
-    protected $bossAttacks = [];
-    protected $bossTypes = [];
+    protected array $bossAttacks = [];
+    protected array $bossTypes = [];
 
-    protected $attackEffect = [];
-    protected $defenseEffect = [];
+    protected array $attackEffect = [];
+    protected array $defenseEffect = [];
 
     /**
      * Add attack type(s)
      * @param string|string[] $attackTypes
      * @throws \Exception
      */
-    public function addAttackTypes($attackTypes)
+    public function addAttackTypes(array|string $attackTypes)
     {
         if (is_array($attackTypes)) {
             foreach ($attackTypes as $attackType) {
@@ -233,6 +233,9 @@ class Counters
             }
             foreach ($list as $code) {
                 $pokemon = Pokemon::get($code);
+                if (!$pokemon->getType1()) {
+                    echo "[{$pokemon->getName()}]";
+                }
                 $type1 = $pokemon->getType1();
                 $type2 = $pokemon->getType2() ?: $type1;
                 $defEffects = [];

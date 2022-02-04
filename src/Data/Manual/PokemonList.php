@@ -899,6 +899,11 @@ class PokemonList
     const KUBFU = 891;
     const URSHIFU = 892;
     const ZARUDE = 893;
+    const REGIELEKI = 894;
+    const REGIDRAGO = 895;
+    const GLASTRIER = 896;
+    const SPECTRIER = 897;
+    const CALYREX = 898;
 
     /**
      * Get constant name from value (for code generation)

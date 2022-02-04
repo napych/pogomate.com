@@ -18,8 +18,8 @@ class Links
             $link2id[] = "'$link' => Pokemon::$name";
             $id2link[] = "Pokemon::$name => '$link'";
         }
-        $link2id = "        " . implode(",\n        ", $link2id);
-        $id2link = "        " . implode(",\n        ", $id2link);
+        $link2id = '        ' . implode(",\n        ", $link2id);
+        $id2link = '        ' . implode(",\n        ", $id2link);
         file_put_contents(All::PHP_PATH . 'PokemonLinks.php', <<<PHP
 <?php
 
@@ -59,8 +59,8 @@ PHP
                 $str = "'$link' => [{$str[0]}]";
             }
         }
-        $link2id = "        " . implode(",\n        ", $link2id);
-        $id2link = "        " . implode(",\n        ", $id2link);
+        $link2id = '        ' . implode(",\n        ", $link2id);
+        $id2link = '        ' . implode(",\n        ", $id2link);
         file_put_contents(All::PHP_PATH . 'MovesLinks.php', <<<PHP
 <?php
 
@@ -90,12 +90,12 @@ PHP
     {
         $link = strtolower($name);
         for ($i = 0; $i < strlen($link); $i++) {
-            if (!ctype_alnum($link{$i})) {
-                $link{$i} = '-';
+            if (!ctype_alnum($link[$i])) {
+                $link[$i] = '-';
             }
         }
         $link = trim($link, '-');
-        while (strpos($link,'--') !== false) {
+        while (str_contains($link, '--')) {
             $link = str_replace('--', '-', $link);
         }
         return $link;

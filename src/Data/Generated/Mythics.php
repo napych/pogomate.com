@@ -18,7 +18,11 @@ class Mythics
         Pokemon::KELDEO,
         Pokemon::MELOETTA,
         Pokemon::GENESECT,
+        Pokemon::DIANCIE,
+        Pokemon::HOOPA,
+        Pokemon::VOLCANION,
         Pokemon::MELTAN,
-        Pokemon::MELMETAL
+        Pokemon::MELMETAL,
+        Pokemon::ZARUDE
     ];
 }

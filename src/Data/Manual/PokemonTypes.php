@@ -831,7 +831,7 @@ class PokemonTypes
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TYPE2 => Types::POISON
         ],
-        PokemonList::TOXTRICITY | FormsAlias::TOXTRICITY_LOW => [
+        PokemonList::TOXTRICITY | FormsAlias::TOXTRICITY_LOW_KEY => [
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TYPE2 => Types::POISON
         ],

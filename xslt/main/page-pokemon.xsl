@@ -28,7 +28,7 @@
         </xsl:if>
         <div class="evolution-reasons-list">
             <xsl:if test="count(reason)&lt;1">
-                <p>No known usages were found for this pokémon.</p>
+                <p>—</p>
             </xsl:if>
             <xsl:if test="reason[not(evolve)]">
                 <p class="reason-title">

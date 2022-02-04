@@ -246,7 +246,11 @@ class MovesLinks
         Moves::MOVE_LEAF_STORM => '',
         Moves::MOVE_TRI_ATTACK => 'tri-attack',
         Moves::MOVE_GUST_FAST => 'gust',
-        Moves::MOVE_INCINERATE_FAST => 'incinerate'
+        Moves::MOVE_INCINERATE_FAST => 'incinerate',
+        Moves::MOVE_FEATHER_DANCE => 'feather-dance',
+        Moves::MOVE_WEATHER_BALL_NORMAL => '',
+        Moves::MOVE_PSYCHIC_FANGS => '',
+        Moves::MOVE_ICICLE_SPEAR => ''
     ];
     
     const LINK2MOVE = [
@@ -492,9 +496,15 @@ class MovesLinks
         ],
         'fly' => [Moves::MOVE_FLY],
         'v-create' => [Moves::MOVE_V_CREATE],
-        '' => [Moves::MOVE_LEAF_STORM],
+        '' => [
+            Moves::MOVE_LEAF_STORM,
+            Moves::MOVE_WEATHER_BALL_NORMAL,
+            Moves::MOVE_PSYCHIC_FANGS,
+            Moves::MOVE_ICICLE_SPEAR
+        ],
         'tri-attack' => [Moves::MOVE_TRI_ATTACK],
         'gust' => [Moves::MOVE_GUST_FAST],
-        'incinerate' => [Moves::MOVE_INCINERATE_FAST]
+        'incinerate' => [Moves::MOVE_INCINERATE_FAST],
+        'feather-dance' => [Moves::MOVE_FEATHER_DANCE]
     ];
 }

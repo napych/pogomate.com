@@ -237,7 +237,7 @@ class ResultPokemon
      */
 
     /**
-     * @return int
+     * @return int|null
      */
     public function getCode(): ?int
     {
@@ -259,10 +259,7 @@ class ResultPokemon
      */
     public function setTypes(string $type1, ?string $type2): ResultPokemon
     {
-        $this->types = [$type1];
-        if ($type2) {
-            $this->types[] = $type2;
-        }
+        $this->types = $type2 ? [$type1, $type2] : [$type1];
         return $this;
     }
 
@@ -587,9 +584,11 @@ class ResultPokemon
         return $this->evolutions;
     }
 
-    public function addEvolution(ResultEvolution $evolution): ResultPokemon
+    public function addEvolution(?ResultEvolution $evolution): ResultPokemon
     {
-        $this->evolutions[$evolution->getCode()] = $evolution;
+        if ($evolution) {
+            $this->evolutions[$evolution->getCode()] = $evolution;
+        }
         return $this;
     }
 
@@ -612,6 +611,8 @@ class ResultPokemon
     public function getPHP()
     {
         $types = $this->getTypes();
+        if (!isset($types[0]))
+            echo "[" . $this->getName() . "]";
         $data = [
             'self::FIELD_NAME' => $this->getName(),
             'self::FIELD_NAME_SHORT' => $this->getShortName(),
@@ -620,7 +621,7 @@ class ResultPokemon
             'self::FIELD_ATTACK' => $this->getAttack(),
             'self::FIELD_DEFENSE' => $this->getDefense(),
             'self::FIELD_STAMINA' => $this->getStamina(),
-            'self::FIELD_TYPE1' => 'Types::' . Types::getConst($types[0]),
+            'self::FIELD_TYPE1' => !empty($types[0]) ? 'Types::' . Types::getConst($types[0]) : null,
             'self::FIELD_TYPE2' => !empty($types[1]) ? 'Types::' . Types::getConst($types[1]) : null,
             'self::FIELD_LEGENDARY' => $this->getLegendary() ?: null,
             'self::FIELD_MYTHIC' => $this->getMythic() ?: null,
@@ -710,7 +711,7 @@ class ResultPokemon
     public static function writePokemonData()
     {
         $code = [];
-        foreach (static::$list as $pkCode => $rp) {
+        foreach (static::$list as $rp) {
             $code[] = $rp->getPHP();
         }
         $code = implode(",\n", $code);
@@ -802,7 +803,9 @@ PHP;
         }
         $result = [];
         foreach ($moves as $move) {
-            $result[] = self::$moveConstList[$move];
+            if (isset(self::$moveConstList[$move])) {
+                $result[] = self::$moveConstList[$move];
+            }
         }
         return $result;
     }
@@ -949,5 +952,10 @@ PHP;
             ->setData($moves)
             ->setUseString('Pogo\Pokemon, Pogo\Pokemon\Mods, Pogo\Data\Manual\FormsAlias')
             ->writePHP();
+    }
+
+    public function hasShadow()
+    {
+        self::clone($this->code | Mods::SHADOW, $this->code);
     }
 }

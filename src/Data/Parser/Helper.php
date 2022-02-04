@@ -41,7 +41,13 @@ class Helper
         'Jellicent' => PokemonList::JELLICENT,
         'Galarian Darmanitan' => PokemonList::DARMANITAN | Mods::GALARIAN,
         'Darmanitan' => PokemonList::DARMANITAN,
-        'Genesect - Burn Drive' => PokemonList::GENESECT | FormsAlias::GENESECT_BURN
+        'Genesect - Burn Drive' => PokemonList::GENESECT | FormsAlias::GENESECT_BURN,
+        'Genesect - Chill Drive' => PokemonList::GENESECT | FormsAlias::GENESECT_CHILL,
+        'Genesect - Douse Drive' => PokemonList::GENESECT | FormsAlias::GENESECT_DOUSE,
+        'Genesect - Shock Drive' => PokemonList::GENESECT | FormsAlias::GENESECT_SHOCK,
+        'Hoopa (Unbound)' => PokemonList::HOOPA | FormsAlias::HOOPA_UNBOUND,
+        'Zacian - Hero of Many Battles' => PokemonList::ZACIAN | FormsAlias::ZACIAN_HERO,
+        'Zamazenta - Hero of Many Battles' => PokemonList::ZAMAZENTA | FormsAlias::ZAMAZENTA_HERO
     ];
 
 
