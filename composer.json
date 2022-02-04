@@ -1,27 +1,26 @@
 {
     "minimum-stability": "dev",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "git@github.com:difra-org/difra.git"
-        },
-        {
-            "type": "vcs",
-            "url": "git@github.com:difra-org/bootstrap4.git"
-        },
-        {
-            "type": "vcs",
-            "url": "git@github.com:difra-org/jquery3.git"
+    "config": {
+        "preferred-install": {
+            "difra/*": "source",
+            "*": "dist"
         }
-    ],
+    },
     "require": {
-        "difra/difra": "dev-master as 7.0.0",
+        "difra/difra": "dev-master as 8.0.0",
         "difra/bootstrap4": "*",
         "difra/jquery3": "*",
         "symfony/console": "*",
         "ext-dom": "*",
         "ext-json": "*",
-        "ext-curl": "*"
+        "ext-curl": "*",
+        "ext-simplexml": "*",
+        "ext-xsl": "*",
+        "ext-libxml": "*",
+        "ext-mysqli": "*",
+        "ext-mbstring": "*",
+        "ext-pdo": "*",
+        "ext-imagick": "*"
     },
     "autoload": {
         "psr-4": {

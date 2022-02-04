@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Controller;
 
 use Difra\Debugger;
@@ -10,8 +12,15 @@ use Pogo\Mate\Stats;
 use Pogo\Mate\Level;
 use Pogo\Pokemon\Mods;
 
+/**
+ * /pokemon controller
+ */
 class Pokemon extends \Difra\Controller
 {
+    /**
+     * @param \Difra\Param\AnyString|null $link
+     * @throws \Difra\View\HttpError
+     */
     protected function indexAction(AnyString $link = null)
     {
         $this->putExpires(86400);
@@ -24,6 +33,9 @@ class Pokemon extends \Difra\Controller
         }
     }
 
+    /**
+     * Add search form
+     */
     private function searchForm()
     {
         $this->setTitle('Pokémon search');
@@ -33,10 +45,14 @@ class Pokemon extends \Difra\Controller
         $this->root->appendChild($this->xml->createElement('page-pokemon-search'));
     }
 
+    /**
+     * @param string $name
+     * @throws \Difra\View\HttpError
+     */
     private function pokemon(string $name)
     {
         // old links correction
-        if (strpos($name, '_') !== false) {
+        if (str_contains($name, '_')) {
             View::redirect($this->getUri() . '/' . str_replace('_', '-', $name), true);
         }
 
@@ -96,7 +112,7 @@ class Pokemon extends \Difra\Controller
                                 \Pogo\Pokemon::get($v)->getXML($reasonNode, 'evolve');
                                 break;
                             default:
-                                $reasonNode->setAttribute($k, $v);
+                                $reasonNode->setAttribute($k, $v ?? '');
                         }
                     }
                 }

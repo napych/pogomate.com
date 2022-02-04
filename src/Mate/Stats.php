@@ -27,7 +27,7 @@ class Stats
         $stamina = $pokemon->getStamina() + $indStamina;
         $cp = $attack * sqrt($defense) * sqrt($stamina)
             * Level::getCpMultiplier($level) * Level::getCpMultiplier($level) / 10;
-        return $cp >= 10 ? $cp : 10;
+        return $cp >= 10 ? floor($cp) : 10;
     }
 
     public static function getStatProduct(Pokemon $pokemon, int $indAttack, int $indDefense, int $indStamina, float $level): float
