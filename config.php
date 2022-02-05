@@ -45,17 +45,17 @@ return [
             ['loc' => '/lists', 'changefreq' => 'weekly'],
             ['loc' => '/pokemon', 'changefreq' => 'monthly']
         ],
-        'mainLastmod' => '2021-05-10',
+        'mainLastmod' => '2022-02-05',
         'pokemon' => [
-            'lastmod' => '2021-05-10',
+            'lastmod' => '2022-02-05',
             'changefreq' => 'weekly'
         ],
         'counters' => [
-            'lastmod' => '2021-05-10',
+            'lastmod' => '2022-02-05',
             'changefreq' => 'monthly'
         ],
         'moves' => [
-            'lastmod' => '2021-05-10',
+            'lastmod' => '2022-02-05',
             'changefreq' => 'monthly'
         ]
     ]
