@@ -8,8 +8,8 @@
     },
     "require": {
         "difra/difra": "dev-master as 8.0.0",
-        "difra/binding-bootstrap4": "dev-master as ~8.0.0",
-        "difra/binding-jquery3": "dev-master as ~8.0.0",
+        "difra/binding-bootstrap4": "dev-master as 8.0.0",
+        "difra/binding-jquery3": "dev-master as 8.0.0",
         "symfony/console": "*",
         "ext-dom": "*",
         "ext-json": "*",
