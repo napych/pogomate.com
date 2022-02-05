@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Pogo\Mate;
 
 use Pogo\Data\Manual\Settings;
@@ -8,19 +10,21 @@ use Pogo\Pokemon;
 
 class Strings
 {
-    const ALOLAN = 'alola';
-    const GALARIAN = 'galar';
-    const SHADOW = 'shadow';
-    const FLAG_ENUM = [
+    protected const ALOLAN = 'alola';
+    protected const GALARIAN = 'galar';
+    protected const SHADOW = 'shadow';
+    protected const FLAG_ENUM = [
         self::ALOLAN,
         self::GALARIAN,
         self::SHADOW
     ];
 
     /** @var Pokemon[] */
-    protected $pokemon = [];
+    protected array $pokemon = [];
     /** @var array[] */
-    protected $reasons = [];
+    protected array $reasons = [];
+    /** @var int|null */
+    protected int|null $maxCP = null;
 
     public function __construct()
     {
@@ -51,6 +55,14 @@ class Strings
                 $reason['evolve'] = $newPok->getCode();
                 while ($newPokId = $newPok->getEvolveFrom()) {
                     $newPok = $this->addPokemon($newPokId, $reason);
+                }
+
+                if (is_null($this->maxCP)) {
+                    $this->maxCP = $list[Lists::ENT_MAXCP] ?? 0;
+                } elseif (!isset($list[Lists::ENT_MAXCP])) {
+                    $this->maxCP = 0;
+                } elseif ($this->maxCP && $this->maxCP < $list[Lists::ENT_MAXCP]) {
+                    $this->maxCP = $list[Lists::ENT_MAXCP];
                 }
             }
         }
@@ -225,6 +237,9 @@ class Strings
             }
         }
 
+        if ($this->maxCP) {
+            $result[] = 'cp-' . $this->maxCP;
+        }
         return implode(',', $includes) . (!empty($result) ? '&' . implode('&', $result) : '');
     }
 }

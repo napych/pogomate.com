@@ -23,6 +23,7 @@ class Lists
     const ENT_DEFAULT = 'default';
     const ENT_CLEANUP = 'cleanup';
     const ENT_LINK = 'link';
+    const ENT_MAXCP = 'max-cp';
 
     const BLOCK_GAMEPRESS = 'GamePress';
     const BLOCK_EVOLUTIONS = 'Evolutions';
@@ -78,7 +79,8 @@ class Lists
                 self::ENT_DATA => Gamepress\GL::TIERS,
                 self::ENT_DEFAULT => true,
                 self::ENT_CLEANUP => true,
-                self::ENT_LINK => 'https://gamepress.gg/pokemongo/great-league-pvp-tier-list'
+                self::ENT_LINK => 'https://gamepress.gg/pokemongo/great-league-pvp-tier-list',
+                self::ENT_MAXCP => 1500
             ],
             [
                 self::ENT_BLOCK => self::BLOCK_GAMEPRESS,
@@ -90,7 +92,8 @@ class Lists
                 self::ENT_DATA => Gamepress\UL::TIERS,
                 self::ENT_DEFAULT => true,
                 self::ENT_CLEANUP => true,
-                self::ENT_LINK => 'https://gamepress.gg/pokemongo/ultra-league-pvp-tier-list'
+                self::ENT_LINK => 'https://gamepress.gg/pokemongo/ultra-league-pvp-tier-list',
+                self::ENT_MAXCP => 2500
             ],
             [
                 self::ENT_BLOCK => self::BLOCK_GAMEPRESS,
