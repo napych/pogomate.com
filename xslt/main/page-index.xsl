@@ -29,28 +29,28 @@
             <h2 class="h3">Tools</h2>
             <div class="entry">
                 <a href="/cleanup">
-                    <img src="https://test.pogomate.com/fontawesome/svgs/solid/broom.svg" width="16" height="16"/>
+                    <img src="/fontawesome/svgs/solid/broom.svg" width="16" height="16"/>
                     <h3 class="h6">Cleanup</h3>
                 </a>
                 <span> pokémon storage fast. Configure your search string and mass delete species you don't need.</span>
             </div>
             <div class="entry">
                 <a href="/lists">
-                    <img src="https://test.pogomate.com/fontawesome/svgs/solid/list-ul.svg" width="16" height="16"/>
+                    <img src="/fontawesome/svgs/solid/list-ul.svg" width="16" height="16"/>
                     <h3 class="h6">Lists</h3>
                 </a>
                 <span> — use search strings for effortless tagging.</span>
             </div>
             <div class="entry">
                 <a href="/counters">
-                    <img src="https://test.pogomate.com/fontawesome/svgs/solid/fire-alt.svg" width="16" height="16"/>
+                    <img src="/fontawesome/svgs/solid/fire-alt.svg" width="16" height="16"/>
                     <h3 class="h6">Counters</h3>
                 </a>
                 <span> — build teams to effectively fight bosses, find your best counters against Team R, etc.</span>
             </div>
             <div class="entry">
                 <a href="/pokemon">
-                    <img src="https://test.pogomate.com/fontawesome/svgs/solid/search.svg" width="16" height="16"/>
+                    <img src="/fontawesome/svgs/solid/search.svg" width="16" height="16"/>
                     <h3 class="h6">Search</h3>
                 </a>
                 <span> for a pokémon by name or ID to find out what's it good for.</span>
