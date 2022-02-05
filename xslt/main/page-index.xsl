@@ -39,14 +39,14 @@
                     <img src="https://test.pogomate.com/fontawesome/svgs/solid/list-ul.svg" width="16" height="16"/>
                     <h3 class="h6">Lists</h3>
                 </a>
-                <span> — use search strings to sort or rename species depending on their usage.</span>
+                <span> — use search strings for effortless tagging.</span>
             </div>
             <div class="entry">
                 <a href="/counters">
                     <img src="https://test.pogomate.com/fontawesome/svgs/solid/fire-alt.svg" width="16" height="16"/>
                     <h3 class="h6">Counters</h3>
                 </a>
-                <span> — build teams for effectively fighting bosses, find your best counters against Team R, etc.</span>
+                <span> — build teams to effectively fight bosses, find your best counters against Team R, etc.</span>
             </div>
             <div class="entry">
                 <a href="/pokemon">
@@ -60,7 +60,7 @@
             <h2 class="h3">How to use search strings</h2>
             <ol>
                 <li>Press “Copy” button to copy a string.</li>
-                <li>Open the Pokémon Storage screen in the Pokémon Go game and paste a string into the search field.</li>
+                <li>Open the Pokémon Storage screen in the Pokémon Go game and paste a string to the search field.</li>
             </ol>
         </div>
         <div id="contacts">
