@@ -3064,7 +3064,7 @@ class PokemonData
         Pokemon::EXEGGCUTE => [
             self::FIELD_NAME => 'Exeggcute',
             self::FIELD_NAME_SHORT => 'Exeggcute',
-            self::FIELD_DESC => 'This Pokémon consists of six eggs that form a closely knit cluster. The six eggs attract each other and spin around. When cracks increasingly appear on the eggs, Exeggcute is close to Evolution.',
+            self::FIELD_DESC => 'This Pokémon consists of six eggs that form a closely knit cluster. The six eggs attract each other and spin around. When cracks increasingly appear on the eggs, Exeggcute is close to evolution.',
             self::FIELD_CATEGORY => 'Egg Pokémon',
             self::FIELD_ATTACK => 107,
             self::FIELD_DEFENSE => 125,
@@ -18537,7 +18537,7 @@ class PokemonData
         Pokemon::QUILLADIN => [
             self::FIELD_NAME => 'Quilladin',
             self::FIELD_NAME_SHORT => 'Quilladin',
-            self::FIELD_DESC => 'It relies on its sturdy shell to deflect predators’ attacks. It counterattacks with its sharp quills.',
+            self::FIELD_DESC => 'It relies on its sturdy shell to deflect predators\' attacks. It counterattacks with its sharp quills.',
             self::FIELD_CATEGORY => 'Spiny Armor Pokémon',
             self::FIELD_ATTACK => 146,
             self::FIELD_DEFENSE => 156,
@@ -19209,7 +19209,7 @@ class PokemonData
         Pokemon::PANGORO => [
             self::FIELD_NAME => 'Pangoro',
             self::FIELD_NAME_SHORT => 'Pangoro',
-            self::FIELD_DESC => 'Although it possesses a violent temperament, it won’t put up with bullying. It uses the leaf in its mouth to sense the movements of its enemies.',
+            self::FIELD_DESC => 'Although it possesses a violent temperament, it won\'t put up with bullying. It uses the leaf in its mouth to sense the movements of its enemies.',
             self::FIELD_CATEGORY => 'Daunting Pokémon',
             self::FIELD_ATTACK => 226,
             self::FIELD_DEFENSE => 146,
@@ -19867,7 +19867,7 @@ class PokemonData
         Pokemon::AURORUS => [
             self::FIELD_NAME => 'Aurorus',
             self::FIELD_NAME_SHORT => 'Aurorus',
-            self::FIELD_DESC => 'The diamond-shaped crystals on its body expel air as cold as –240 degrees Fahrenheit, surrounding its enemies and encasing them in ice.',
+            self::FIELD_DESC => 'The diamond-shaped crystals on its body expel air as cold as -240 degrees Fahrenheit, surrounding its enemies and encasing them in ice.',
             self::FIELD_CATEGORY => 'Tundra Pokémon',
             self::FIELD_ATTACK => 186,
             self::FIELD_DEFENSE => 163,
@@ -20004,7 +20004,7 @@ class PokemonData
         Pokemon::GOOMY => [
             self::FIELD_NAME => 'Goomy',
             self::FIELD_NAME_SHORT => 'Goomy',
-            self::FIELD_DESC => 'The weakest Dragon-type Pokémon, it lives in damp, shady places, so its body doesn’t dry out.',
+            self::FIELD_DESC => 'The weakest Dragon-type Pokémon, it lives in damp, shady places, so its body doesn\'t dry out.',
             self::FIELD_CATEGORY => 'Soft Tissue Pokémon',
             self::FIELD_ATTACK => 101,
             self::FIELD_DEFENSE => 112,
@@ -20032,7 +20032,7 @@ class PokemonData
         Pokemon::SLIGGOO => [
             self::FIELD_NAME => 'Sliggoo',
             self::FIELD_NAME_SHORT => 'Sliggoo',
-            self::FIELD_DESC => 'It drives away opponents by excreting a sticky liquid that can dissolve anything. Its eyes devolved, so it can’t see anything.',
+            self::FIELD_DESC => 'It drives away opponents by excreting a sticky liquid that can dissolve anything. Its eyes devolved, so it can\'t see anything.',
             self::FIELD_CATEGORY => 'Soft Tissue Pokémon',
             self::FIELD_ATTACK => 159,
             self::FIELD_DEFENSE => 176,
@@ -20225,7 +20225,7 @@ class PokemonData
         Pokemon::BERGMITE => [
             self::FIELD_NAME => 'Bergmite',
             self::FIELD_NAME_SHORT => 'Bergmite',
-            self::FIELD_DESC => 'It blocks opponents’ attacks with the ice that shields its body. It uses cold air to repair any cracks with new ice.',
+            self::FIELD_DESC => 'It blocks opponents\' attacks with the ice that shields its body. It uses cold air to repair any cracks with new ice.',
             self::FIELD_CATEGORY => 'Ice Chunk Pokémon',
             self::FIELD_ATTACK => 117,
             self::FIELD_DEFENSE => 120,
@@ -20363,7 +20363,7 @@ class PokemonData
         Pokemon::YVELTAL => [
             self::FIELD_NAME => 'Yveltal',
             self::FIELD_NAME_SHORT => 'Yveltal',
-            self::FIELD_DESC => 'When this legendary Pokémon’s wings and tail feathers spread wide and glow red, it absorbs the life force of living creatures.',
+            self::FIELD_DESC => 'When this legendary Pokémon\'s wings and tail feathers spread wide and glow red, it absorbs the life force of living creatures.',
             self::FIELD_CATEGORY => 'Destruction Pokémon',
             self::FIELD_ATTACK => 250,
             self::FIELD_DEFENSE => 185,
@@ -20392,7 +20392,7 @@ class PokemonData
         Pokemon::ZYGARGE | FormsAlias::ZYGARGE_HALF => [
             self::FIELD_NAME => 'Zygarde (50% Forme)',
             self::FIELD_NAME_SHORT => 'Zygarde',
-            self::FIELD_DESC => 'When the Kalos region’s ecosystem falls into disarray, it appears and reveals its secret power.',
+            self::FIELD_DESC => 'When the Kalos region\'s ecosystem falls into disarray, it appears and reveals its secret power.',
             self::FIELD_CATEGORY => 'Order Pokémon',
             self::FIELD_TYPE1 => Types::DRAGON,
             self::FIELD_TYPE2 => Types::GROUND,
@@ -20442,7 +20442,7 @@ class PokemonData
         Pokemon::HOOPA | FormsAlias::HOOPA_CONFINED => [
             self::FIELD_NAME => 'Hoopa Confined',
             self::FIELD_NAME_SHORT => 'Hoopa',
-            self::FIELD_DESC => 'In its true form, it possesses a huge amount of power. Legends of its avarice tell how it once carried off an entire castle to gain the treasure hidden within.',
+            self::FIELD_DESC => 'In its true form, it possess a huge amount of power. Legends of its avarice tell how it once carried off an entire castle to gain the treasure hidden within.',
             self::FIELD_CATEGORY => 'Mischief Pokémon',
             self::FIELD_ATTACK => 311,
             self::FIELD_DEFENSE => 191,
@@ -20466,7 +20466,7 @@ class PokemonData
         Pokemon::VOLCANION => [
             self::FIELD_NAME => 'Volcanion',
             self::FIELD_NAME_SHORT => 'Volcanion',
-            self::FIELD_DESC => 'It lets out billows of steam and disappears into the dense fog. It’s said to live in mountains where humans do not tread.',
+            self::FIELD_DESC => 'It lets out billows of steam and disappears into the dense fog. It\'s said to live in mountains where humans do not tread.',
             self::FIELD_CATEGORY => 'Steam Pokémon',
             self::FIELD_ATTACK => 252,
             self::FIELD_DEFENSE => 216,
@@ -20492,8 +20492,8 @@ class PokemonData
         Pokemon::ROWLET => [
             self::FIELD_NAME => 'Rowlet',
             self::FIELD_NAME_SHORT => 'Rowlet',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It feels relaxed in tight, dark places and has been known to use its Trainer\'s pocket or bag as a nest.',
+            self::FIELD_CATEGORY => 'Grass Quill Pokémon',
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_EVOLVES => [
@@ -20504,8 +20504,8 @@ class PokemonData
         Pokemon::DARTRIX => [
             self::FIELD_NAME => 'Dartrix',
             self::FIELD_NAME_SHORT => 'Dartrix',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Supremely sensitive to the presence of others, it can detect opponents standing behind it, flinging its sharp feathers to take them out.',
+            self::FIELD_CATEGORY => 'Blade Quill Pokémon',
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_EVOLVES => [
@@ -20516,8 +20516,8 @@ class PokemonData
         Pokemon::DECIDUEYE => [
             self::FIELD_NAME => 'Decidueye',
             self::FIELD_NAME_SHORT => 'Decidueye',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Decidueye can nock and fire an arrow at an enemy in a tenth of a second, so its battles are decided in the blink of an eye.',
+            self::FIELD_CATEGORY => 'Arrow Quill Pokémon',
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TYPE2 => Types::GHOST,
             self::FIELD_UNRELEASED => true
@@ -20525,8 +20525,8 @@ class PokemonData
         Pokemon::LITTEN => [
             self::FIELD_NAME => 'Litten',
             self::FIELD_NAME_SHORT => 'Litten',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Its coat regrows twice a year. When the time comes, Litten sets its own body on fire and burns away the old fur.',
+            self::FIELD_CATEGORY => 'Fire Cat Pokémon',
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_EVOLVES => [
                 Pokemon::TORRACAT
@@ -20536,8 +20536,8 @@ class PokemonData
         Pokemon::TORRACAT => [
             self::FIELD_NAME => 'Torracat',
             self::FIELD_NAME_SHORT => 'Torracat',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'When its mane is standing on end, you can tell it\'s feeling good. When it isn\'t feeling well, its fur will lie down flat.',
+            self::FIELD_CATEGORY => 'Fire Cat Pokémon',
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_EVOLVES => [
                 Pokemon::INCINEROAR
@@ -20547,8 +20547,8 @@ class PokemonData
         Pokemon::INCINEROAR => [
             self::FIELD_NAME => 'Incineroar',
             self::FIELD_NAME_SHORT => 'Incineroar',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'When its fighting spirit is set alight, the flames around its waist become especially intense.',
+            self::FIELD_CATEGORY => 'Heel Pokémon',
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TYPE2 => Types::DARK,
             self::FIELD_UNRELEASED => true
@@ -20556,8 +20556,8 @@ class PokemonData
         Pokemon::POPPLIO => [
             self::FIELD_NAME => 'Popplio',
             self::FIELD_NAME_SHORT => 'Popplio',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Popplio gets on top of its bouncy water balloons to jump higher. It\'s quite the acrobatic fighter!',
+            self::FIELD_CATEGORY => 'Sea Lion Pokémon',
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_EVOLVES => [
                 Pokemon::BRIONNE
@@ -20567,8 +20567,8 @@ class PokemonData
         Pokemon::BRIONNE => [
             self::FIELD_NAME => 'Brionne',
             self::FIELD_NAME_SHORT => 'Brionne',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It attacks by smacking its enemies with the exploding water balloons that it creates.',
+            self::FIELD_CATEGORY => 'Pop Star Pokémon',
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_EVOLVES => [
                 Pokemon::PRIMARINA
@@ -20578,8 +20578,8 @@ class PokemonData
         Pokemon::PRIMARINA => [
             self::FIELD_NAME => 'Primarina',
             self::FIELD_NAME_SHORT => 'Primarina',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Also known as a songstress, it has a fantastical look on moonlit nights when it leads its colony in song.',
+            self::FIELD_CATEGORY => 'Soloist Pokémon',
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_UNRELEASED => true
@@ -20587,8 +20587,8 @@ class PokemonData
         Pokemon::PIKIPEK => [
             self::FIELD_NAME => 'Pikipek',
             self::FIELD_NAME_SHORT => 'Pikipek',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It may look spindly, but its neck muscles are heavy-duty. It can peck at a tree 16 times per second!',
+            self::FIELD_CATEGORY => 'Woodpecker Pokémon',
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_EVOLVES => [
@@ -20599,8 +20599,8 @@ class PokemonData
         Pokemon::TRUMBEAK => [
             self::FIELD_NAME => 'Trumbeak',
             self::FIELD_NAME_SHORT => 'Trumbeak',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'From its mouth, it fires the seeds of berries it has eaten. The scattered seeds give rise to new plants.',
+            self::FIELD_CATEGORY => 'Bugle Beak Pokémon',
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_EVOLVES => [
@@ -20611,8 +20611,8 @@ class PokemonData
         Pokemon::TOUCANNON => [
             self::FIELD_NAME => 'Toucannon',
             self::FIELD_NAME_SHORT => 'Toucannon',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Known for forming harmonious couples, this Pokémon is brought to wedding ceremonies as a good luck charm.',
+            self::FIELD_CATEGORY => 'Cannon Pokémon',
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_UNRELEASED => true
@@ -20620,8 +20620,8 @@ class PokemonData
         Pokemon::YUNGOOS => [
             self::FIELD_NAME => 'Yungoos',
             self::FIELD_NAME_SHORT => 'Yungoos',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Although it will eat anything, it prefers fresh living things, so it marches down streets in search of prey.',
+            self::FIELD_CATEGORY => 'Loitering Pokémon',
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_EVOLVES => [
                 Pokemon::GUMSHOOS
@@ -20631,16 +20631,16 @@ class PokemonData
         Pokemon::GUMSHOOS => [
             self::FIELD_NAME => 'Gumshoos',
             self::FIELD_NAME_SHORT => 'Gumshoos',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Patient by nature, this Pokémon loses control of itself and pounces when it spots its favorite meal—Rattata!',
+            self::FIELD_CATEGORY => 'Stakeout Pokémon',
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_UNRELEASED => true
         ],
         Pokemon::GRUBBIN => [
             self::FIELD_NAME => 'Grubbin',
             self::FIELD_NAME_SHORT => 'Grubbin',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It spits a sticky thread to stop opponents in their tracks, and then it grabs them in its sharp, sturdy mandibles to take them down.',
+            self::FIELD_CATEGORY => 'Larva Pokémon',
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_EVOLVES => [
                 Pokemon::CHARJABUG
@@ -20650,8 +20650,8 @@ class PokemonData
         Pokemon::CHARJABUG => [
             self::FIELD_NAME => 'Charjabug',
             self::FIELD_NAME_SHORT => 'Charjabug',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Its stout shell provides excellent defense from attacks. It uses electricity on persistent opponents.',
+            self::FIELD_CATEGORY => 'Battery Pokémon',
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TYPE2 => Types::ELECTRIC,
             self::FIELD_EVOLVES => [
@@ -20662,17 +20662,17 @@ class PokemonData
         Pokemon::VIKAVOLT => [
             self::FIELD_NAME => 'Vikavolt',
             self::FIELD_NAME_SHORT => 'Vikavolt',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Vikavolt flusters opponents with acrobatic flying maneuvers. This creates an opening for it to deliver an electric beam attack.',
+            self::FIELD_CATEGORY => 'Stag Beetle Pokémon',
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TYPE2 => Types::ELECTRIC,
             self::FIELD_UNRELEASED => true
         ],
         Pokemon::CRABAWLER => [
-            self::FIELD_NAME => 'Crabawler',
-            self::FIELD_NAME_SHORT => 'Crabawler',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_NAME => 'Crabrawler',
+            self::FIELD_NAME_SHORT => 'Crabrawler',
+            self::FIELD_DESC => 'Crabrawler has been known to mistake Exeggutor for a coconut tree and climb it. The enraged Exeggutor shakes it off and stomps it.',
+            self::FIELD_CATEGORY => 'Boxing Pokémon',
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_EVOLVES => [
                 Pokemon::CRABOMINABLE
@@ -20682,8 +20682,8 @@ class PokemonData
         Pokemon::CRABOMINABLE => [
             self::FIELD_NAME => 'Crabominable',
             self::FIELD_NAME_SHORT => 'Crabominable',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Before it stops to think, it just starts pummeling. There are records of its turning back avalanches with a flurry of punches.',
+            self::FIELD_CATEGORY => 'Woolly Crab Pokémon',
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TYPE2 => Types::ICE,
             self::FIELD_UNRELEASED => true
@@ -20691,8 +20691,8 @@ class PokemonData
         Pokemon::ORICORIO | FormsAlias::ORICORIO_BAILE => [
             self::FIELD_NAME => 'Oricorio (Baile Style)',
             self::FIELD_NAME_SHORT => 'Oricorio',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'This Oricorio has drunk red nectar. If its Trainer gives the wrong order, this passionate Pokémon becomes fiercely angry.',
+            self::FIELD_CATEGORY => 'Dancing Pokémon',
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_UNRELEASED => true
@@ -20700,8 +20700,8 @@ class PokemonData
         Pokemon::CUTIEFLY => [
             self::FIELD_NAME => 'Cutiefly',
             self::FIELD_NAME_SHORT => 'Cutiefly',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Cutiefly can pick up the auras of living things. It skillfully reads those auras to predict its foes\' movements and make fools of them.',
+            self::FIELD_CATEGORY => 'Bee Fly Pokémon',
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_EVOLVES => [
@@ -20712,8 +20712,8 @@ class PokemonData
         Pokemon::RIBOMBEE => [
             self::FIELD_NAME => 'Ribombee',
             self::FIELD_NAME_SHORT => 'Ribombee',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It can predict the weather from moisture levels and wind direction. Ribombee only reveals itself when there are a few clear days in a row.',
+            self::FIELD_CATEGORY => 'Bee Fly Pokémon',
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_UNRELEASED => true
@@ -20721,8 +20721,8 @@ class PokemonData
         Pokemon::ROCKRUFF => [
             self::FIELD_NAME => 'Rockruff',
             self::FIELD_NAME_SHORT => 'Rockruff',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'When it rubs the rocks on its neck against you, that\'s proof of its love for you. However, the rocks are sharp, so the gesture is quite painful!',
+            self::FIELD_CATEGORY => 'Puppy Pokémon',
             self::FIELD_TYPE1 => Types::ROCK,
             self::FIELD_EVOLVES => [
                 Pokemon::LYCANROC | FormsAlias::LYCANROC_MIDDAY,
@@ -20734,24 +20734,24 @@ class PokemonData
         Pokemon::LYCANROC | FormsAlias::LYCANROC_MIDDAY => [
             self::FIELD_NAME => 'Lycanroc (Midday Form)',
             self::FIELD_NAME_SHORT => 'Lycanroc',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'The rocks in its mane are sharper than a knife. Fragments that break off are treasured as good luck charms.',
+            self::FIELD_CATEGORY => 'Wolf Pokémon',
             self::FIELD_TYPE1 => Types::ROCK,
             self::FIELD_UNRELEASED => true
         ],
         Pokemon::WISHIWASHI | FormsAlias::WISHIWASHI_SOLO => [
             self::FIELD_NAME => 'Wishiwashi (Solo Form)',
             self::FIELD_NAME_SHORT => 'Wishiwashi',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'When it\'s in a jam, its shining eyes attract others of its kind. The light from its eyes is visible almost 25 miles away.',
+            self::FIELD_CATEGORY => 'Small Fry Pokémon',
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_UNRELEASED => true
         ],
         Pokemon::MAREANIE => [
             self::FIELD_NAME => 'Mareanie',
             self::FIELD_NAME_SHORT => 'Mareanie',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Aside from its head, its body parts regenerate quickly if they\'re cut off. After a good night\'s sleep, Mareanie is back to normal.',
+            self::FIELD_CATEGORY => 'Brutal Star Pokémon',
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TYPE2 => Types::WATER,
             self::FIELD_EVOLVES => [
@@ -20762,8 +20762,8 @@ class PokemonData
         Pokemon::TOXAPEX => [
             self::FIELD_NAME => 'Toxapex',
             self::FIELD_NAME_SHORT => 'Toxapex',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'With its 12 legs, it creates a dome to shelter within. The flow of the tides doesn\'t affect Toxapex in there, so it\'s very comfortable.',
+            self::FIELD_CATEGORY => 'Brutal Star Pokémon',
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TYPE2 => Types::WATER,
             self::FIELD_UNRELEASED => true
@@ -20771,8 +20771,8 @@ class PokemonData
         Pokemon::MUDBRAY => [
             self::FIELD_NAME => 'Mudbray',
             self::FIELD_NAME_SHORT => 'Mudbray',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Possessing mighty power, Mudbray can be loaded with 50 times its own body weight and will be totally fine.',
+            self::FIELD_CATEGORY => 'Donkey Pokémon',
             self::FIELD_TYPE1 => Types::GROUND,
             self::FIELD_EVOLVES => [
                 Pokemon::MUDSDALE
@@ -20782,16 +20782,16 @@ class PokemonData
         Pokemon::MUDSDALE => [
             self::FIELD_NAME => 'Mudsdale',
             self::FIELD_NAME_SHORT => 'Mudsdale',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It can trudge mountain roads without rest for three days and three nights, all the while dragging a 10-ton load.',
+            self::FIELD_CATEGORY => 'Draft Horse Pokémon',
             self::FIELD_TYPE1 => Types::GROUND,
             self::FIELD_UNRELEASED => true
         ],
         Pokemon::DEWPIDER => [
             self::FIELD_NAME => 'Dewpider',
             self::FIELD_NAME_SHORT => 'Dewpider',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It can only breathe oxygen that has dissolved in water, so it wears a water bubble on its head when it walks around on land.',
+            self::FIELD_CATEGORY => 'Water Bubble Pokémon',
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TYPE2 => Types::BUG,
             self::FIELD_EVOLVES => [
@@ -20802,8 +20802,8 @@ class PokemonData
         Pokemon::ARAQUANID => [
             self::FIELD_NAME => 'Araquanid',
             self::FIELD_NAME_SHORT => 'Araquanid',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It has a habit of storing things it values in its water bubble. If its Trainer doesn\'t watch out, Araquanid will try to put them in its bubble!',
+            self::FIELD_CATEGORY => 'Water Bubble Pokémon',
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TYPE2 => Types::BUG,
             self::FIELD_UNRELEASED => true
@@ -20811,8 +20811,8 @@ class PokemonData
         Pokemon::FOMANTIS => [
             self::FIELD_NAME => 'Fomantis',
             self::FIELD_NAME_SHORT => 'Fomantis',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It loves the sunshine. When it basks in the sunlight regularly, it grows up with vivid coloration.',
+            self::FIELD_CATEGORY => 'Sickle Grass Pokémon',
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_EVOLVES => [
                 Pokemon::LURANTIS
@@ -20822,16 +20822,16 @@ class PokemonData
         Pokemon::LURANTIS => [
             self::FIELD_NAME => 'Lurantis',
             self::FIELD_NAME_SHORT => 'Lurantis',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'As it slashes into its enemies, it looks like it\'s dancing. Its elegant appearance has led some to call it the most glamorous Grass Pokémon.',
+            self::FIELD_CATEGORY => 'Bloom Sickle Pokémon',
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_UNRELEASED => true
         ],
         Pokemon::MORELULL => [
             self::FIELD_NAME => 'Morelull',
             self::FIELD_NAME_SHORT => 'Morelull',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It likes damp dark places. When night falls, the spores filling the caps of its mushrooms glow.',
+            self::FIELD_CATEGORY => 'Illuminating Pokémon',
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_EVOLVES => [
@@ -20842,8 +20842,8 @@ class PokemonData
         Pokemon::SHIINOTIC => [
             self::FIELD_NAME => 'Shiinotic',
             self::FIELD_NAME_SHORT => 'Shiinotic',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'When it starts fighting for territory with Parasect, the entire area gets completely coated in spores!',
+            self::FIELD_CATEGORY => 'Illuminating Pokémon',
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_UNRELEASED => true
@@ -20851,8 +20851,8 @@ class PokemonData
         Pokemon::SALANDIT => [
             self::FIELD_NAME => 'Salandit',
             self::FIELD_NAME_SHORT => 'Salandit',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It weakens opponents and sends them reeling with its poisonous gas. Salandit doesn\'t deal well with Spinda, since it\'s always reeling.',
+            self::FIELD_CATEGORY => 'Toxic Lizard Pokémon',
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TYPE2 => Types::FIRE,
             self::FIELD_EVOLVES => [
@@ -20863,8 +20863,8 @@ class PokemonData
         Pokemon::SALAZZLE => [
             self::FIELD_NAME => 'Salazzle',
             self::FIELD_NAME_SHORT => 'Salazzle',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It punishes Salandit that couldn\'t bring it food with a fierce slap of its flame-spewing palm.',
+            self::FIELD_CATEGORY => 'Toxic Lizard Pokémon',
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TYPE2 => Types::FIRE,
             self::FIELD_UNRELEASED => true
@@ -20872,8 +20872,8 @@ class PokemonData
         Pokemon::STUFFUL => [
             self::FIELD_NAME => 'Stufful',
             self::FIELD_NAME_SHORT => 'Stufful',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Stufful hates to be hugged or touched in any way. It will squirm, thrash, and resist with amazing power.',
+            self::FIELD_CATEGORY => 'Flailing Pokémon',
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TYPE2 => Types::FIGHTING,
             self::FIELD_EVOLVES => [
@@ -20884,8 +20884,8 @@ class PokemonData
         Pokemon::BEWEAR => [
             self::FIELD_NAME => 'Bewear',
             self::FIELD_NAME_SHORT => 'Bewear',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It boasts tremendous physical strength. Many people call it the most dangerous Pokémon in the Alola region.',
+            self::FIELD_CATEGORY => 'Strong Arm Pokémon',
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TYPE2 => Types::FIGHTING,
             self::FIELD_UNRELEASED => true
@@ -20893,8 +20893,8 @@ class PokemonData
         Pokemon::BOUNSWEET => [
             self::FIELD_NAME => 'Bounsweet',
             self::FIELD_NAME_SHORT => 'Bounsweet',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It tries to resist being swallowed by a bird Pokémon by spinning the sepals on its head. It\'s usually a fruitless attempt.',
+            self::FIELD_CATEGORY => 'Fruit Pokémon',
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_EVOLVES => [
                 Pokemon::STEENEE
@@ -20904,8 +20904,8 @@ class PokemonData
         Pokemon::STEENEE => [
             self::FIELD_NAME => 'Steenee',
             self::FIELD_NAME_SHORT => 'Steenee',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It bounces around, swinging the sepals on its head with abandon. They\'re quite painful when they smack you!',
+            self::FIELD_CATEGORY => 'Fruit Pokémon',
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_EVOLVES => [
                 Pokemon::TSAREENA
@@ -20915,24 +20915,24 @@ class PokemonData
         Pokemon::TSAREENA => [
             self::FIELD_NAME => 'Tsareena',
             self::FIELD_NAME_SHORT => 'Tsareena',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'A Pokémon with an aggressive personality and a mastery of kicking, it cackles every time it kicks an opponent.',
+            self::FIELD_CATEGORY => 'Fruit Pokémon',
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_UNRELEASED => true
         ],
         Pokemon::COMFEY => [
             self::FIELD_NAME => 'Comfey',
             self::FIELD_NAME_SHORT => 'Comfey',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It picks flowers and sticks them to its body with fluids it produces. The aroma that wafts from its petals has a healing effect.',
+            self::FIELD_CATEGORY => 'Posy Picker Pokémon',
             self::FIELD_TYPE1 => Types::FAIRY,
             self::FIELD_UNRELEASED => true
         ],
         Pokemon::ORANGURU => [
             self::FIELD_NAME => 'Oranguru',
             self::FIELD_NAME_SHORT => 'Oranguru',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Oranguru don\'t get along with each other, so they\'re always engaging in battles of wits to decide which one is superior.',
+            self::FIELD_CATEGORY => 'Sage Pokémon',
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_UNRELEASED => true
@@ -20940,16 +20940,16 @@ class PokemonData
         Pokemon::PASSIMIAN => [
             self::FIELD_NAME => 'Passimian',
             self::FIELD_NAME_SHORT => 'Passimian',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Berries are its weapons as well as the staple of its diet. The one that can throw a berry the farthest is the boss of the troop.',
+            self::FIELD_CATEGORY => 'Teamwork Pokémon',
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_UNRELEASED => true
         ],
         Pokemon::WIMPOD => [
             self::FIELD_NAME => 'Wimpod',
             self::FIELD_NAME_SHORT => 'Wimpod',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'An astonishingly cowardly Pokémon, Wimpod will whir its legs at high speeds to run away if anything comes near it.',
+            self::FIELD_CATEGORY => 'Turn Tail Pokémon',
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TYPE2 => Types::WATER,
             self::FIELD_EVOLVES => [
@@ -20960,8 +20960,8 @@ class PokemonData
         Pokemon::GOLISOPOD => [
             self::FIELD_NAME => 'Golisopod',
             self::FIELD_NAME_SHORT => 'Golisopod',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Its claws, which it can extend and retract at will, are its greatest weapons. Golisopod is sometimes accompanied by Wimpod.',
+            self::FIELD_CATEGORY => 'Hard Scale Pokémon',
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TYPE2 => Types::WATER,
             self::FIELD_UNRELEASED => true
@@ -20969,8 +20969,8 @@ class PokemonData
         Pokemon::SANDYGAST => [
             self::FIELD_NAME => 'Sandygast',
             self::FIELD_NAME_SHORT => 'Sandygast',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'If you build sand mounds when you\'re playing, destroy them before you go home, or they may get possessed and become Sandygast.',
+            self::FIELD_CATEGORY => 'Sand Heap Pokémon',
             self::FIELD_TYPE1 => Types::GHOST,
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_EVOLVES => [
@@ -20981,8 +20981,8 @@ class PokemonData
         Pokemon::PALOSSAND => [
             self::FIELD_NAME => 'Palossand',
             self::FIELD_NAME_SHORT => 'Palossand',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Once it has whipped up a sandstorm to halt its opponents in their tracks, this terrifying Pokémon snatches away their vitality.',
+            self::FIELD_CATEGORY => 'Sand Castle Pokémon',
             self::FIELD_TYPE1 => Types::GHOST,
             self::FIELD_TYPE2 => Types::GROUND,
             self::FIELD_UNRELEASED => true
@@ -20990,16 +20990,16 @@ class PokemonData
         Pokemon::PYUKUMUKU => [
             self::FIELD_NAME => 'Pyukumuku',
             self::FIELD_NAME_SHORT => 'Pyukumuku',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Its entire body is covered in its own slime. If you accidentally step on one, you\'ll slip, and it will get mad and smack you!',
+            self::FIELD_CATEGORY => 'Sea Cucumber Pokémon',
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_UNRELEASED => true
         ],
         Pokemon::TYPE_NULL => [
             self::FIELD_NAME => 'Type: Null',
             self::FIELD_NAME_SHORT => 'Type: Null',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'There\'s danger of its going on a rampage, so its true power is sealed away beneath its control mask.',
+            self::FIELD_CATEGORY => 'Synthetic Pokémon',
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_EVOLVES => [
                 Pokemon::SILVALLY
@@ -21009,16 +21009,16 @@ class PokemonData
         Pokemon::SILVALLY => [
             self::FIELD_NAME => 'Silvally',
             self::FIELD_NAME_SHORT => 'Silvally',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Through the bond it formed with its Trainer, its will was strengthened, and it was able to destroy its control mask.',
+            self::FIELD_CATEGORY => 'Synthetic Pokémon',
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_UNRELEASED => true
         ],
         Pokemon::MINIOR | FormsAlias::MINIOR_METEOR => [
             self::FIELD_NAME => 'Minior (Meteor Form)',
             self::FIELD_NAME_SHORT => 'Minior',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Although its outer shell is uncommonly durable, the shock of falling to the ground smashes the shell to smithereens.',
+            self::FIELD_CATEGORY => 'Meteor Pokémon',
             self::FIELD_TYPE1 => Types::ROCK,
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_UNRELEASED => true
@@ -21026,16 +21026,16 @@ class PokemonData
         Pokemon::KOMALA => [
             self::FIELD_NAME => 'Komala',
             self::FIELD_NAME_SHORT => 'Komala',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It remains asleep from birth to death as a result of the sedative properties of the leaves that form its diet.',
+            self::FIELD_CATEGORY => 'Drowsing Pokémon',
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_UNRELEASED => true
         ],
         Pokemon::TURTONATOR => [
             self::FIELD_NAME => 'Turtonator',
             self::FIELD_NAME_SHORT => 'Turtonator',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Its exploding shell poses a real danger but is sensitive to moisture. On rainy days, Turtonator takes silent refuge in caves.',
+            self::FIELD_CATEGORY => 'Blast Turtle Pokémon',
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TYPE2 => Types::DRAGON,
             self::FIELD_UNRELEASED => true
@@ -21043,8 +21043,8 @@ class PokemonData
         Pokemon::TOGEDEMARU => [
             self::FIELD_NAME => 'Togedemaru',
             self::FIELD_NAME_SHORT => 'Togedemaru',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Its capacity to produce electricity is somewhat limited, so it gets charged up by letting lightning strike it!',
+            self::FIELD_CATEGORY => 'Roly-Poly Pokémon',
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_UNRELEASED => true
@@ -21052,8 +21052,8 @@ class PokemonData
         Pokemon::MIMIKYU => [
             self::FIELD_NAME => 'Mimikyu',
             self::FIELD_NAME_SHORT => 'Mimikyu',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'A gust of wind revealed what hides under this Pokémon\'s rag to a passing Trainer, who went home and died painfully that very night.',
+            self::FIELD_CATEGORY => 'Disguise Pokémon',
             self::FIELD_TYPE1 => Types::GHOST,
             self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_UNRELEASED => true
@@ -21061,8 +21061,8 @@ class PokemonData
         Pokemon::BRUXISH => [
             self::FIELD_NAME => 'Bruxish',
             self::FIELD_NAME_SHORT => 'Bruxish',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Its skin is thick enough to fend off Mareanie\'s spikes. With its robust teeth, Bruxish crunches up the spikes and eats them.',
+            self::FIELD_CATEGORY => 'Gnash Teeth Pokémon',
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TYPE2 => Types::PSYCHIC,
             self::FIELD_UNRELEASED => true
@@ -21070,8 +21070,8 @@ class PokemonData
         Pokemon::DRAMPA => [
             self::FIELD_NAME => 'Drampa',
             self::FIELD_NAME_SHORT => 'Drampa',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It appears in towns and plays with the children. Drampa will protect kids when they\'re in danger, so their moms don\'t have to worry.',
+            self::FIELD_CATEGORY => 'Placid Pokémon',
             self::FIELD_TYPE1 => Types::NORMAL,
             self::FIELD_TYPE2 => Types::DRAGON,
             self::FIELD_UNRELEASED => true
@@ -21079,8 +21079,8 @@ class PokemonData
         Pokemon::DHELMISE => [
             self::FIELD_NAME => 'Dhelmise',
             self::FIELD_NAME_SHORT => 'Dhelmise',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Its chain-like green seaweed can stretch outward for hundreds of yards. For some reason, it gets along well with Skrelp.',
+            self::FIELD_CATEGORY => 'Sea Creeper Pokémon',
             self::FIELD_TYPE1 => Types::GHOST,
             self::FIELD_TYPE2 => Types::GRASS,
             self::FIELD_UNRELEASED => true
@@ -21088,8 +21088,8 @@ class PokemonData
         Pokemon::JANGMO_O => [
             self::FIELD_NAME => 'Jangmo-o',
             self::FIELD_NAME_SHORT => 'Jangmo-o',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It will never show an enemy its back in battle. Ancient warriors liked Jangmo-o for its valiant disposition and made it one of their own.',
+            self::FIELD_CATEGORY => 'Scaly Pokémon',
             self::FIELD_TYPE1 => Types::DRAGON,
             self::FIELD_EVOLVES => [
                 Pokemon::HAKAMO_O
@@ -21099,8 +21099,8 @@ class PokemonData
         Pokemon::HAKAMO_O => [
             self::FIELD_NAME => 'Hakamo-o',
             self::FIELD_NAME_SHORT => 'Hakamo-o',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'The scales it sheds can be molded and processed to make pots and pans. They conduct heat well, so they\'re a popular item.',
+            self::FIELD_CATEGORY => 'Scaly Pokémon',
             self::FIELD_TYPE1 => Types::DRAGON,
             self::FIELD_TYPE2 => Types::FIGHTING,
             self::FIELD_EVOLVES => [
@@ -21111,8 +21111,8 @@ class PokemonData
         Pokemon::KOMMO_O => [
             self::FIELD_NAME => 'Kommo-o',
             self::FIELD_NAME_SHORT => 'Kommo-o',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It battles valiantly with its fists, which are armored in steel scales. Kommo-o specializes in uppercuts.',
+            self::FIELD_CATEGORY => 'Scaly Pokémon',
             self::FIELD_TYPE1 => Types::DRAGON,
             self::FIELD_TYPE2 => Types::FIGHTING,
             self::FIELD_UNRELEASED => true
@@ -21120,8 +21120,8 @@ class PokemonData
         Pokemon::TAPU_KOKO => [
             self::FIELD_NAME => 'Tapu Koko',
             self::FIELD_NAME_SHORT => 'Tapu Koko',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'The lightning-wielding guardian deity of Melemele, Tapu Koko is brimming with curiosity and appears before people from time to time.',
+            self::FIELD_CATEGORY => 'Land Spirit Pokémon',
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_UNRELEASED => true
@@ -21129,8 +21129,8 @@ class PokemonData
         Pokemon::TAPU_LELE => [
             self::FIELD_NAME => 'Tapu Lele',
             self::FIELD_NAME_SHORT => 'Tapu Lele',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Although called a guardian deity, Tapu Lele is devoid of guilt about its cruel disposition and can be described as nature incarnate.',
+            self::FIELD_CATEGORY => 'Land Spirit Pokémon',
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_UNRELEASED => true
@@ -21138,8 +21138,8 @@ class PokemonData
         Pokemon::TAPU_BULU => [
             self::FIELD_NAME => 'Tapu Bulu',
             self::FIELD_NAME_SHORT => 'Tapu Bulu',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It makes ringing sounds with its tail to let others know where it is, avoiding unneeded conflicts. This guardian deity of Ula\'ula controls plants.',
+            self::FIELD_CATEGORY => 'Land Spirit Pokémon',
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_UNRELEASED => true
@@ -21147,8 +21147,8 @@ class PokemonData
         Pokemon::TAPU_FINI => [
             self::FIELD_NAME => 'Tapu Fini',
             self::FIELD_NAME_SHORT => 'Tapu Fini',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Although it\'s called a guardian deity, terrible calamities sometimes befall those who recklessly approach Tapu Fini.',
+            self::FIELD_CATEGORY => 'Land Spirit Pokémon',
             self::FIELD_TYPE1 => Types::WATER,
             self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_UNRELEASED => true
@@ -21156,8 +21156,8 @@ class PokemonData
         Pokemon::COSMOG => [
             self::FIELD_NAME => 'Cosmog',
             self::FIELD_NAME_SHORT => 'Cosmog',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Whether or not it\'s a Pokémon from this world is a mystery. When it\'s in a jam, it warps away to a safe place to hide.',
+            self::FIELD_CATEGORY => 'Nebula Pokémon',
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_EVOLVES => [
                 Pokemon::COSMOEM
@@ -21167,8 +21167,8 @@ class PokemonData
         Pokemon::COSMOEM => [
             self::FIELD_NAME => 'Cosmoem',
             self::FIELD_NAME_SHORT => 'Cosmoem',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'As it absorbs light, Cosmoem continues to grow. Its golden shell is surprisingly solid.',
+            self::FIELD_CATEGORY => 'Protostar Pokémon',
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_EVOLVES => [
                 Pokemon::SOLGALEO,
@@ -21179,8 +21179,8 @@ class PokemonData
         Pokemon::SOLGALEO => [
             self::FIELD_NAME => 'Solgaleo',
             self::FIELD_NAME_SHORT => 'Solgaleo',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'In writings from the distant past, it\'s called by the name “the beast that devours the sun."',
+            self::FIELD_CATEGORY => 'Sunne Pokémon',
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_UNRELEASED => true
@@ -21188,8 +21188,8 @@ class PokemonData
         Pokemon::LUNALA => [
             self::FIELD_NAME => 'Lunala',
             self::FIELD_NAME_SHORT => 'Lunala',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It sometimes summons unknown powers and life-forms here to this world from holes that lead to other worlds.',
+            self::FIELD_CATEGORY => 'Moone Pokémon',
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_TYPE2 => Types::GHOST,
             self::FIELD_UNRELEASED => true
@@ -21197,8 +21197,8 @@ class PokemonData
         Pokemon::NIHILEGO => [
             self::FIELD_NAME => 'Nihilego',
             self::FIELD_NAME_SHORT => 'Nihilego',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It appeared in this world from an Ultra Wormhole. Nihilego appears to be a parasite that lives by feeding on people and Pokémon.',
+            self::FIELD_CATEGORY => 'Parasite Pokémon',
             self::FIELD_TYPE1 => Types::ROCK,
             self::FIELD_TYPE2 => Types::POISON,
             self::FIELD_UNRELEASED => true
@@ -21206,8 +21206,8 @@ class PokemonData
         Pokemon::BUZZWOLE => [
             self::FIELD_NAME => 'Buzzwole',
             self::FIELD_NAME_SHORT => 'Buzzwole',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Buzzwole goes around showing off its abnormally swollen muscles. It is one kind of Ultra Beast.',
+            self::FIELD_CATEGORY => 'Swollen Pokémon',
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TYPE2 => Types::FIGHTING,
             self::FIELD_UNRELEASED => true
@@ -21215,8 +21215,8 @@ class PokemonData
         Pokemon::PHEROMOSA => [
             self::FIELD_NAME => 'Pheromosa',
             self::FIELD_NAME_SHORT => 'Pheromosa',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'A life-form that lives in another world, its body is thin and supple, but it also possesses great power.',
+            self::FIELD_CATEGORY => 'Lissome Pokémon',
             self::FIELD_TYPE1 => Types::BUG,
             self::FIELD_TYPE2 => Types::FIGHTING,
             self::FIELD_UNRELEASED => true
@@ -21224,16 +21224,16 @@ class PokemonData
         Pokemon::XURKITREE => [
             self::FIELD_NAME => 'Xurkitree',
             self::FIELD_NAME_SHORT => 'Xurkitree',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'They\'ve been dubbed Ultra Beasts. Some of them stand unmoving, like trees, with their arms and legs stuck into the ground.',
+            self::FIELD_CATEGORY => 'Glowing Pokémon',
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_UNRELEASED => true
         ],
         Pokemon::CELESTEELA => [
             self::FIELD_NAME => 'Celesteela',
             self::FIELD_NAME_SHORT => 'Celesteela',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'One of the dangerous UBs, high energy readings can be detected coming from both of its huge arms.',
+            self::FIELD_CATEGORY => 'Launch Pokémon',
             self::FIELD_TYPE1 => Types::STEEL,
             self::FIELD_TYPE2 => Types::FLYING,
             self::FIELD_UNRELEASED => true
@@ -21241,8 +21241,8 @@ class PokemonData
         Pokemon::KARTANA => [
             self::FIELD_NAME => 'Kartana',
             self::FIELD_NAME_SHORT => 'Kartana',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'This Ultra Beast\'s body, which is as thin as paper, is like a sharpened sword.',
+            self::FIELD_CATEGORY => 'Drawn Sword Pokémon',
             self::FIELD_TYPE1 => Types::GRASS,
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_UNRELEASED => true
@@ -21250,8 +21250,8 @@ class PokemonData
         Pokemon::GUZZLORD => [
             self::FIELD_NAME => 'Guzzlord',
             self::FIELD_NAME_SHORT => 'Guzzlord',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'An unknown life-form called a UB. It may be constantly hungry—it is certainly always devouring something.',
+            self::FIELD_CATEGORY => 'Junkivore Pokémon',
             self::FIELD_TYPE1 => Types::DARK,
             self::FIELD_TYPE2 => Types::DRAGON,
             self::FIELD_UNRELEASED => true
@@ -21259,16 +21259,16 @@ class PokemonData
         Pokemon::NECROZMA | FormsAlias::NECROZMA_NORMAL => [
             self::FIELD_NAME => 'Necrozma',
             self::FIELD_NAME_SHORT => 'Necrozma',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Light is the source of its energy. If it isn\'t devouring light, impurities build up in it and on it, and Necrozma darkens and stops moving.',
+            self::FIELD_CATEGORY => 'Prism Pokémon',
             self::FIELD_TYPE1 => Types::PSYCHIC,
             self::FIELD_UNRELEASED => true
         ],
         Pokemon::MAGEARNA => [
             self::FIELD_NAME => 'Magearna',
             self::FIELD_NAME_SHORT => 'Magearna',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Built roughly 500 years ago by a scientist, the part called the Soul-Heart is the actual life-form.',
+            self::FIELD_CATEGORY => 'Artificial Pokémon',
             self::FIELD_TYPE1 => Types::STEEL,
             self::FIELD_TYPE2 => Types::FAIRY,
             self::FIELD_UNRELEASED => true
@@ -21276,8 +21276,8 @@ class PokemonData
         Pokemon::MARSHADOW => [
             self::FIELD_NAME => 'Marshadow',
             self::FIELD_NAME_SHORT => 'Marshadow',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It sinks into the shadows of people and Pokémon, where it can understand their feelings and copy their capabilities.',
+            self::FIELD_CATEGORY => 'Gloomdweller Pokémon',
             self::FIELD_TYPE1 => Types::FIGHTING,
             self::FIELD_TYPE2 => Types::GHOST,
             self::FIELD_UNRELEASED => true
@@ -21285,8 +21285,8 @@ class PokemonData
         Pokemon::POIPOLE => [
             self::FIELD_NAME => 'Poipole',
             self::FIELD_NAME_SHORT => 'Poipole',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'An Ultra Beast that lives in a different world, it cackles wildly as it sprays its opponents with poison from the needles on its head.',
+            self::FIELD_CATEGORY => 'Poison Pin Pokémon',
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_EVOLVES => [
                 Pokemon::NAGANADEL
@@ -21296,8 +21296,8 @@ class PokemonData
         Pokemon::NAGANADEL => [
             self::FIELD_NAME => 'Naganadel',
             self::FIELD_NAME_SHORT => 'Naganadel',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'One kind of Ultra Beast, it fires a glowing, venomous liquid from its needles. This liquid is also immensely adhesive.',
+            self::FIELD_CATEGORY => 'Poison Pin Pokémon',
             self::FIELD_TYPE1 => Types::POISON,
             self::FIELD_TYPE2 => Types::DRAGON,
             self::FIELD_UNRELEASED => true
@@ -21305,8 +21305,8 @@ class PokemonData
         Pokemon::STAKATAKA => [
             self::FIELD_NAME => 'Stakataka',
             self::FIELD_NAME_SHORT => 'Stakataka',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'When stone walls started moving and attacking, the brute\'s true identity was this mysterious life-form, which brings to mind an Ultra Beast.',
+            self::FIELD_CATEGORY => 'Rampart Pokémon',
             self::FIELD_TYPE1 => Types::ROCK,
             self::FIELD_TYPE2 => Types::STEEL,
             self::FIELD_UNRELEASED => true
@@ -21314,8 +21314,8 @@ class PokemonData
         Pokemon::BLACEPHALON => [
             self::FIELD_NAME => 'Blacephalon',
             self::FIELD_NAME_SHORT => 'Blacephalon',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'A UB that appeared from an Ultra Wormhole, it causes explosions, then takes advantage of opponents\' surprise to rob them of their vitality.',
+            self::FIELD_CATEGORY => 'Fireworks Pokémon',
             self::FIELD_TYPE1 => Types::FIRE,
             self::FIELD_TYPE2 => Types::GHOST,
             self::FIELD_UNRELEASED => true
@@ -21323,8 +21323,8 @@ class PokemonData
         Pokemon::ZERAORA => [
             self::FIELD_NAME => 'Zeraora',
             self::FIELD_NAME_SHORT => 'Zeraora',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It approaches its enemies at the speed of lightning, then tears them limb from limb with its sharp claws.',
+            self::FIELD_CATEGORY => 'Thunderclap Pokémon',
             self::FIELD_TYPE1 => Types::ELECTRIC,
             self::FIELD_UNRELEASED => true
         ],
@@ -21385,8 +21385,8 @@ class PokemonData
         Pokemon::GROOKEY => [
             self::FIELD_NAME => 'Grookey',
             self::FIELD_NAME_SHORT => 'Grookey',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'When it uses its special stick to strike up a beat, the sound waves produced carry revitalizing energy to the plants and flowers in the area.',
+            self::FIELD_CATEGORY => 'Chimp Pokémon',
             self::FIELD_ATTACK => 122,
             self::FIELD_DEFENSE => 91,
             self::FIELD_STAMINA => 137,
@@ -21412,8 +21412,8 @@ class PokemonData
         Pokemon::THWACKEY => [
             self::FIELD_NAME => 'Thwackey',
             self::FIELD_NAME_SHORT => 'Thwackey',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'The faster a Thwackey can beat out a rhythm with its two sticks, the more respect it wins from its peers.',
+            self::FIELD_CATEGORY => 'Beat Pokémon',
             self::FIELD_ATTACK => 165,
             self::FIELD_DEFENSE => 134,
             self::FIELD_STAMINA => 172,
@@ -21439,8 +21439,8 @@ class PokemonData
         Pokemon::RILLABOOM => [
             self::FIELD_NAME => 'Rillaboom',
             self::FIELD_NAME_SHORT => 'Rillaboom',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'By drumming, it taps into the power of its special tree stump. The roots of the stump follow its direction in battle.',
+            self::FIELD_CATEGORY => 'Drummer Pokémon',
             self::FIELD_ATTACK => 239,
             self::FIELD_DEFENSE => 168,
             self::FIELD_STAMINA => 225,
@@ -21464,8 +21464,8 @@ class PokemonData
         Pokemon::SCORBUNNY => [
             self::FIELD_NAME => 'Scorbunny',
             self::FIELD_NAME_SHORT => 'Scorbunny',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'A warm-up of running around gets fire energy coursing through this Pokémon\'s body. Once that happens, it\'s ready to fight at full power.',
+            self::FIELD_CATEGORY => 'Rabbit Pokémon',
             self::FIELD_ATTACK => 132,
             self::FIELD_DEFENSE => 79,
             self::FIELD_STAMINA => 137,
@@ -21491,8 +21491,8 @@ class PokemonData
         Pokemon::RABOOT => [
             self::FIELD_NAME => 'Raboot',
             self::FIELD_NAME_SHORT => 'Raboot',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Its thick and fluffy fur protects it from the cold and enables it to use hotter fire moves.',
+            self::FIELD_CATEGORY => 'Rabbit Pokémon',
             self::FIELD_ATTACK => 170,
             self::FIELD_DEFENSE => 125,
             self::FIELD_STAMINA => 163,
@@ -21518,8 +21518,8 @@ class PokemonData
         Pokemon::CINDERACE => [
             self::FIELD_NAME => 'Cinderace',
             self::FIELD_NAME_SHORT => 'Cinderace',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It juggles a pebble with its feet, turning it into a burning soccer ball. Its shots strike opponents hard and leave them scorched.',
+            self::FIELD_CATEGORY => 'Striker Pokémon',
             self::FIELD_ATTACK => 238,
             self::FIELD_DEFENSE => 163,
             self::FIELD_STAMINA => 190,
@@ -21543,8 +21543,8 @@ class PokemonData
         Pokemon::SOBBLE => [
             self::FIELD_NAME => 'Sobble',
             self::FIELD_NAME_SHORT => 'Sobble',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'When scared, this Pokémon cries. Its tears pack the chemical punch of 100 onions, and attackers won\'t be able to resist weeping.',
+            self::FIELD_CATEGORY => 'Water Lizard Pokémon',
             self::FIELD_ATTACK => 132,
             self::FIELD_DEFENSE => 79,
             self::FIELD_STAMINA => 137,
@@ -21570,8 +21570,8 @@ class PokemonData
         Pokemon::DRIZZILE => [
             self::FIELD_NAME => 'Drizzile',
             self::FIELD_NAME_SHORT => 'Drizzile',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'A clever combatant, this Pokémon battles using water balloons created with moisture secreted from its palms.',
+            self::FIELD_CATEGORY => 'Water Lizard Pokémon',
             self::FIELD_ATTACK => 186,
             self::FIELD_DEFENSE => 113,
             self::FIELD_STAMINA => 163,
@@ -21597,8 +21597,8 @@ class PokemonData
         Pokemon::INTELEON => [
             self::FIELD_NAME => 'Inteleon',
             self::FIELD_NAME_SHORT => 'Inteleon',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It has many hidden capabilities, such as fingertips that can shoot water and a membrane on its back that it can use to glide through the air.',
+            self::FIELD_CATEGORY => 'Secret Agent Pokémon',
             self::FIELD_ATTACK => 262,
             self::FIELD_DEFENSE => 142,
             self::FIELD_STAMINA => 172,
@@ -21622,8 +21622,8 @@ class PokemonData
         Pokemon::SKWOVET => [
             self::FIELD_NAME => 'Skwovet',
             self::FIELD_NAME_SHORT => 'Skwovet',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Found throughout the Galar region, this Pokémon becomes uneasy if its cheeks are ever completely empty of berries.',
+            self::FIELD_CATEGORY => 'Cheeky Pokémon',
             self::FIELD_ATTACK => 95,
             self::FIELD_DEFENSE => 86,
             self::FIELD_STAMINA => 172,
@@ -21650,8 +21650,8 @@ class PokemonData
         Pokemon::GREEDENT => [
             self::FIELD_NAME => 'Greedent',
             self::FIELD_NAME_SHORT => 'Greedent',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It stashes berries in its tail—so many berries that they fall out constantly. But this Pokémon is a bit slow-witted, so it doesn\'t notice the loss.',
+            self::FIELD_CATEGORY => 'Greedy Pokémon',
             self::FIELD_ATTACK => 160,
             self::FIELD_DEFENSE => 156,
             self::FIELD_STAMINA => 260,
@@ -21675,8 +21675,8 @@ class PokemonData
         Pokemon::ROOKIDEE => [
             self::FIELD_NAME => 'Rookidee',
             self::FIELD_NAME_SHORT => 'Rookidee',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It will bravely challenge any opponent, no matter how powerful. This Pokémon benefits from every battle—even a defeat increases its strength a bit.',
+            self::FIELD_CATEGORY => 'Tiny Bird Pokémon',
             self::FIELD_ATTACK => 88,
             self::FIELD_DEFENSE => 67,
             self::FIELD_STAMINA => 116,
@@ -21702,8 +21702,8 @@ class PokemonData
         Pokemon::CORVISQUIRE => [
             self::FIELD_NAME => 'Corvisquire',
             self::FIELD_NAME_SHORT => 'Corvisquire',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Smart enough to use tools in battle, these Pokémon have been seen picking up rocks and flinging them or using ropes to wrap up enemies.',
+            self::FIELD_CATEGORY => 'Raven Pokémon',
             self::FIELD_ATTACK => 129,
             self::FIELD_DEFENSE => 110,
             self::FIELD_STAMINA => 169,
@@ -21729,8 +21729,8 @@ class PokemonData
         Pokemon::CORVIKNIGHT => [
             self::FIELD_NAME => 'Corviknight',
             self::FIELD_NAME_SHORT => 'Corviknight',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'This Pokémon reigns supreme in the skies of the Galar region. The black luster of its steel body could drive terror into the heart of any foe.',
+            self::FIELD_CATEGORY => 'Raven Pokémon',
             self::FIELD_ATTACK => 163,
             self::FIELD_DEFENSE => 192,
             self::FIELD_STAMINA => 221,
@@ -21755,8 +21755,8 @@ class PokemonData
         Pokemon::BLIPBUG => [
             self::FIELD_NAME => 'Blipbug',
             self::FIELD_NAME_SHORT => 'Blipbug',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'A constant collector of information, this Pokémon is very smart. Very strong is what it isn\'t.',
+            self::FIELD_CATEGORY => 'Larva Pokémon',
             self::FIELD_ATTACK => 46,
             self::FIELD_DEFENSE => 67,
             self::FIELD_STAMINA => 93,
@@ -21780,8 +21780,8 @@ class PokemonData
         Pokemon::DOTTLER => [
             self::FIELD_NAME => 'Dottler',
             self::FIELD_NAME_SHORT => 'Dottler',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It barely moves, but it\'s still alive. Hiding in its shell without food or water seems to have awakened its psychic powers.',
+            self::FIELD_CATEGORY => 'Radome Pokémon',
             self::FIELD_ATTACK => 87,
             self::FIELD_DEFENSE => 157,
             self::FIELD_STAMINA => 137,
@@ -21808,8 +21808,8 @@ class PokemonData
         Pokemon::ORBEETLE => [
             self::FIELD_NAME => 'Orbeetle',
             self::FIELD_NAME_SHORT => 'Orbeetle',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It\'s famous for its high level of intelligence, and the large size of its brain is proof that it also possesses immense psychic power.',
+            self::FIELD_CATEGORY => 'Seven Spot Pokémon',
             self::FIELD_ATTACK => 156,
             self::FIELD_DEFENSE => 240,
             self::FIELD_STAMINA => 155,
@@ -21833,8 +21833,8 @@ class PokemonData
         Pokemon::NICKIT => [
             self::FIELD_NAME => 'Nickit',
             self::FIELD_NAME_SHORT => 'Nickit',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Aided by the soft pads on its feet, it silently raids the food stores of other Pokémon. It survives off its ill-gotten gains.',
+            self::FIELD_CATEGORY => 'Fox Pokémon',
             self::FIELD_ATTACK => 85,
             self::FIELD_DEFENSE => 82,
             self::FIELD_STAMINA => 120,
@@ -21860,8 +21860,8 @@ class PokemonData
         Pokemon::THIEVUL => [
             self::FIELD_NAME => 'Thievul',
             self::FIELD_NAME_SHORT => 'Thievul',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It secretly marks potential targets with a scent. By following the scent, it stalks its targets and steals from them when they least expect it.',
+            self::FIELD_CATEGORY => 'Fox Pokémon',
             self::FIELD_ATTACK => 172,
             self::FIELD_DEFENSE => 164,
             self::FIELD_STAMINA => 172,
@@ -21884,8 +21884,8 @@ class PokemonData
         Pokemon::GOSSIFLEUR => [
             self::FIELD_NAME => 'Gossifleur',
             self::FIELD_NAME_SHORT => 'Gossifleur',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It anchors itself in the ground with its single leg, then basks in the sun. After absorbing enough sunlight, its petals spread as it blooms brilliantly.',
+            self::FIELD_CATEGORY => 'Flowering Pokémon',
             self::FIELD_ATTACK => 70,
             self::FIELD_DEFENSE => 104,
             self::FIELD_STAMINA => 120,
@@ -21911,8 +21911,8 @@ class PokemonData
         Pokemon::ELDEGOSS => [
             self::FIELD_NAME => 'Eldegoss',
             self::FIELD_NAME_SHORT => 'Eldegoss',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'The seeds attached to its cotton fluff are full of nutrients. It spreads them on the wind so that plants and other Pokémon can benefit from them.',
+            self::FIELD_CATEGORY => 'Cotton Bloom Pokémon',
             self::FIELD_ATTACK => 148,
             self::FIELD_DEFENSE => 211,
             self::FIELD_STAMINA => 155,
@@ -21935,8 +21935,8 @@ class PokemonData
         Pokemon::WOOLOO => [
             self::FIELD_NAME => 'Wooloo',
             self::FIELD_NAME_SHORT => 'Wooloo',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Its curly fleece is such an effective cushion that this Pokémon could fall off a cliff and stand right back up at the bottom, unharmed.',
+            self::FIELD_CATEGORY => 'Sheep Pokémon',
             self::FIELD_ATTACK => 76,
             self::FIELD_DEFENSE => 97,
             self::FIELD_STAMINA => 123,
@@ -21963,8 +21963,8 @@ class PokemonData
         Pokemon::DUBWOOL => [
             self::FIELD_NAME => 'Dubwool',
             self::FIELD_NAME_SHORT => 'Dubwool',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Weave a carpet from its springy wool, and you end up with something closer to a trampoline. You\'ll start to bounce the moment you set foot on it.',
+            self::FIELD_CATEGORY => 'Sheep Pokémon',
             self::FIELD_ATTACK => 159,
             self::FIELD_DEFENSE => 198,
             self::FIELD_STAMINA => 176,
@@ -21988,8 +21988,8 @@ class PokemonData
         Pokemon::CHEWTLE => [
             self::FIELD_NAME => 'Chewtle',
             self::FIELD_NAME_SHORT => 'Chewtle',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Apparently the itch of its teething impels it to snap its jaws at anything in front of it.',
+            self::FIELD_CATEGORY => 'Snapping Pokémon',
             self::FIELD_ATTACK => 114,
             self::FIELD_DEFENSE => 85,
             self::FIELD_STAMINA => 137,
@@ -22015,8 +22015,8 @@ class PokemonData
         Pokemon::DREDNAW => [
             self::FIELD_NAME => 'Drednaw',
             self::FIELD_NAME_SHORT => 'Drednaw',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'With jaws that can shear through steel rods, this highly aggressive Pokémon chomps down on its unfortunate prey.',
+            self::FIELD_CATEGORY => 'Bite Pokémon',
             self::FIELD_ATTACK => 213,
             self::FIELD_DEFENSE => 164,
             self::FIELD_STAMINA => 207,
@@ -22041,8 +22041,8 @@ class PokemonData
         Pokemon::YAMPER => [
             self::FIELD_NAME => 'Yamper',
             self::FIELD_NAME_SHORT => 'Yamper',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'This Pokémon is very popular as a herding dog in the Galar region. As it runs, it generates electricity from the base of its tail.',
+            self::FIELD_CATEGORY => 'Puppy Pokémon',
             self::FIELD_ATTACK => 80,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 153,
@@ -22068,8 +22068,8 @@ class PokemonData
         Pokemon::BOLTUND => [
             self::FIELD_NAME => 'Boltund',
             self::FIELD_NAME_SHORT => 'Boltund',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'This Pokémon generates electricity and channels it into its legs to keep them going strong. Boltund can run nonstop for three full days.',
+            self::FIELD_CATEGORY => 'Dog Pokémon',
             self::FIELD_ATTACK => 197,
             self::FIELD_DEFENSE => 131,
             self::FIELD_STAMINA => 170,
@@ -22092,8 +22092,8 @@ class PokemonData
         Pokemon::ROLYCOLY => [
             self::FIELD_NAME => 'Rolycoly',
             self::FIELD_NAME_SHORT => 'Rolycoly',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Most of its body has the same composition as coal. Fittingly, this Pokémon was first discovered in coal mines about 400 years ago.',
+            self::FIELD_CATEGORY => 'Coal Pokémon',
             self::FIELD_ATTACK => 73,
             self::FIELD_DEFENSE => 91,
             self::FIELD_STAMINA => 102,
@@ -22119,8 +22119,8 @@ class PokemonData
         Pokemon::CARKOL => [
             self::FIELD_NAME => 'Carkol',
             self::FIELD_NAME_SHORT => 'Carkol',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It forms coal inside its body. Coal dropped by this Pokémon once helped fuel the lives of people in the Galar region.',
+            self::FIELD_CATEGORY => 'Coal Pokémon',
             self::FIELD_ATTACK => 114,
             self::FIELD_DEFENSE => 157,
             self::FIELD_STAMINA => 190,
@@ -22148,8 +22148,8 @@ class PokemonData
         Pokemon::COALOSSAL => [
             self::FIELD_NAME => 'Coalossal',
             self::FIELD_NAME_SHORT => 'Coalossal',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It\'s usually peaceful, but the vandalism of mines enrages it. Offenders will be incinerated with flames that reach 2,700 degrees Fahrenheit.',
+            self::FIELD_CATEGORY => 'Coal Pokémon',
             self::FIELD_ATTACK => 146,
             self::FIELD_DEFENSE => 198,
             self::FIELD_STAMINA => 242,
@@ -22174,8 +22174,8 @@ class PokemonData
         Pokemon::APPLIN => [
             self::FIELD_NAME => 'Applin',
             self::FIELD_NAME_SHORT => 'Applin',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It spends its entire life inside an apple. It hides from its natural enemies, bird Pokémon, by pretending it\'s just an apple and nothing more.',
+            self::FIELD_CATEGORY => 'Apple Core Pokémon',
             self::FIELD_ATTACK => 71,
             self::FIELD_DEFENSE => 116,
             self::FIELD_STAMINA => 120,
@@ -22201,8 +22201,8 @@ class PokemonData
         Pokemon::FLAPPLE => [
             self::FIELD_NAME => 'Flapple',
             self::FIELD_NAME_SHORT => 'Flapple',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It ate a sour apple, and that induced its evolution. In its cheeks, it stores an acid capable of causing chemical burns.',
+            self::FIELD_CATEGORY => 'Apple Wing Pokémon',
             self::FIELD_ATTACK => 214,
             self::FIELD_DEFENSE => 144,
             self::FIELD_STAMINA => 172,
@@ -22228,8 +22228,8 @@ class PokemonData
         Pokemon::APPLETUN => [
             self::FIELD_NAME => 'Appletun',
             self::FIELD_NAME_SHORT => 'Appletun',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Eating a sweet apple caused its evolution. A nectarous scent wafts from its body, luring in the bug Pokémon it preys on.',
+            self::FIELD_CATEGORY => 'Apple Nectar Pokémon',
             self::FIELD_ATTACK => 178,
             self::FIELD_DEFENSE => 146,
             self::FIELD_STAMINA => 242,
@@ -22255,8 +22255,8 @@ class PokemonData
         Pokemon::SILICOBRA => [
             self::FIELD_NAME => 'Silicobra',
             self::FIELD_NAME_SHORT => 'Silicobra',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'As it digs, it swallows sand and stores it in its neck pouch. The pouch can hold more than 17 pounds of sand.',
+            self::FIELD_CATEGORY => 'Sand Snake Pokémon',
             self::FIELD_ATTACK => 103,
             self::FIELD_DEFENSE => 123,
             self::FIELD_STAMINA => 141,
@@ -22283,8 +22283,8 @@ class PokemonData
         Pokemon::SANDACONDA => [
             self::FIELD_NAME => 'Sandaconda',
             self::FIELD_NAME_SHORT => 'Sandaconda',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'When it contracts its body, over 220 pounds of sand sprays from its nose. If it ever runs out of sand, it becomes disheartened.',
+            self::FIELD_CATEGORY => 'Sand Snake Pokémon',
             self::FIELD_ATTACK => 202,
             self::FIELD_DEFENSE => 207,
             self::FIELD_STAMINA => 176,
@@ -22308,8 +22308,8 @@ class PokemonData
         Pokemon::CRAMORANT => [
             self::FIELD_NAME => 'Cramorant',
             self::FIELD_NAME_SHORT => 'Cramorant',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It\'s so strong that it can knock out some opponents in a single hit, but it also may forget what it\'s battling midfight.',
+            self::FIELD_CATEGORY => 'Gulp Pokémon',
             self::FIELD_ATTACK => 173,
             self::FIELD_DEFENSE => 163,
             self::FIELD_STAMINA => 172,
@@ -22334,8 +22334,8 @@ class PokemonData
         Pokemon::ARROKUDA => [
             self::FIELD_NAME => 'Arrokuda',
             self::FIELD_NAME_SHORT => 'Arrokuda',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'If it sees any movement around it, this Pokémon charges for it straightaway, leading with its sharply pointed jaw. It\'s very proud of that jaw.',
+            self::FIELD_CATEGORY => 'Rush Pokémon',
             self::FIELD_ATTACK => 118,
             self::FIELD_DEFENSE => 72,
             self::FIELD_STAMINA => 121,
@@ -22363,8 +22363,8 @@ class PokemonData
         Pokemon::BARRASKEWDA => [
             self::FIELD_NAME => 'Barraskewda',
             self::FIELD_NAME_SHORT => 'Barraskewda',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'This Pokémon has a jaw that\'s as sharp as a spear and as strong as steel. Apparently Barraskewda\'s flesh is surprisingly tasty, too.',
+            self::FIELD_CATEGORY => 'Skewer Pokémon',
             self::FIELD_ATTACK => 258,
             self::FIELD_DEFENSE => 127,
             self::FIELD_STAMINA => 156,
@@ -22389,8 +22389,8 @@ class PokemonData
         Pokemon::TOXEL => [
             self::FIELD_NAME => 'Toxel',
             self::FIELD_NAME_SHORT => 'Toxel',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It stores poison in an internal poison sac and secretes that poison through its skin. If you touch this Pokémon, a tingling sensation follows.',
+            self::FIELD_CATEGORY => 'Baby Pokémon',
             self::FIELD_ATTACK => 97,
             self::FIELD_DEFENSE => 65,
             self::FIELD_STAMINA => 120,
@@ -22416,8 +22416,8 @@ class PokemonData
         Pokemon::TOXTRICITY | FormsAlias::TOXTRICITY_LOW_KEY => [
             self::FIELD_NAME => 'Toxtricity (Low Key Form)',
             self::FIELD_NAME_SHORT => 'Toxtricity',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'When this Pokémon sounds as if it\'s strumming a guitar, it\'s actually clawing at the protrusions on its chest to generate electricity.',
+            self::FIELD_CATEGORY => 'Punk Pokémon',
             self::FIELD_ATTACK => 224,
             self::FIELD_DEFENSE => 140,
             self::FIELD_STAMINA => 181,
@@ -22444,8 +22444,8 @@ class PokemonData
         Pokemon::SIZZLIPEDE => [
             self::FIELD_NAME => 'Sizzlipede',
             self::FIELD_NAME_SHORT => 'Sizzlipede',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It stores flammable gas in its body and uses it to generate heat. The yellow sections on its belly get particularly hot.',
+            self::FIELD_CATEGORY => 'Radiator Pokémon',
             self::FIELD_ATTACK => 118,
             self::FIELD_DEFENSE => 90,
             self::FIELD_STAMINA => 137,
@@ -22473,8 +22473,8 @@ class PokemonData
         Pokemon::CENTISKORCH => [
             self::FIELD_NAME => 'Centiskorch',
             self::FIELD_NAME_SHORT => 'Centiskorch',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'When it heats up, its body temperature reaches about 1,500 degrees Fahrenheit. It lashes its body like a whip and launches itself at enemies.',
+            self::FIELD_CATEGORY => 'Radiator Pokémon',
             self::FIELD_ATTACK => 220,
             self::FIELD_DEFENSE => 158,
             self::FIELD_STAMINA => 225,
@@ -22500,8 +22500,8 @@ class PokemonData
         Pokemon::CLOBBOPUS => [
             self::FIELD_NAME => 'Clobbopus',
             self::FIELD_NAME_SHORT => 'Clobbopus',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It\'s very curious, but its means of investigating things is to try to punch them with its tentacles. The search for food is what brings it onto land.',
+            self::FIELD_CATEGORY => 'Tantrum Pokémon',
             self::FIELD_ATTACK => 121,
             self::FIELD_DEFENSE => 103,
             self::FIELD_STAMINA => 137,
@@ -22527,8 +22527,8 @@ class PokemonData
         Pokemon::GRAPPLOCT => [
             self::FIELD_NAME => 'Grapploct',
             self::FIELD_NAME_SHORT => 'Grapploct',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'A body made up of nothing but muscle makes the grappling moves this Pokémon performs with its tentacles tremendously powerful.',
+            self::FIELD_CATEGORY => 'Jujitsu Pokémon',
             self::FIELD_ATTACK => 209,
             self::FIELD_DEFENSE => 162,
             self::FIELD_STAMINA => 190,
@@ -22553,8 +22553,8 @@ class PokemonData
         Pokemon::SINISTEA => [
             self::FIELD_NAME => 'Sinistea',
             self::FIELD_NAME_SHORT => 'Sinistea',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'This Pokémon is said to have been born when a lonely spirit possessed a cold, leftover cup of tea.',
+            self::FIELD_CATEGORY => 'Black Tea Pokémon',
             self::FIELD_ATTACK => 134,
             self::FIELD_DEFENSE => 96,
             self::FIELD_STAMINA => 120,
@@ -22582,8 +22582,8 @@ class PokemonData
         Pokemon::POLTEAGEIST => [
             self::FIELD_NAME => 'Polteageist',
             self::FIELD_NAME_SHORT => 'Polteageist',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'This species lives in antique teapots. Most pots are forgeries, but on rare occasions, an authentic work is found.',
+            self::FIELD_CATEGORY => 'Black Tea Pokémon',
             self::FIELD_ATTACK => 248,
             self::FIELD_DEFENSE => 189,
             self::FIELD_STAMINA => 155,
@@ -22608,8 +22608,8 @@ class PokemonData
         Pokemon::HATENNA => [
             self::FIELD_NAME => 'Hatenna',
             self::FIELD_NAME_SHORT => 'Hatenna',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Via the protrusion on its head, it senses other creatures\' emotions. If you don\'t have a calm disposition, it will never warm up to you.',
+            self::FIELD_CATEGORY => 'Calm Pokémon',
             self::FIELD_ATTACK => 98,
             self::FIELD_DEFENSE => 93,
             self::FIELD_STAMINA => 123,
@@ -22636,8 +22636,8 @@ class PokemonData
         Pokemon::HATTREM => [
             self::FIELD_NAME => 'Hattrem',
             self::FIELD_NAME_SHORT => 'Hattrem',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'No matter who you are, if you bring strong emotions near this Pokémon, it will silence you violently.',
+            self::FIELD_CATEGORY => 'Serene Pokémon',
             self::FIELD_ATTACK => 153,
             self::FIELD_DEFENSE => 133,
             self::FIELD_STAMINA => 149,
@@ -22664,8 +22664,8 @@ class PokemonData
         Pokemon::HATTERENE => [
             self::FIELD_NAME => 'Hatterene',
             self::FIELD_NAME_SHORT => 'Hatterene',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It emits psychic power strong enough to cause headaches as a deterrent to the approach of others.',
+            self::FIELD_CATEGORY => 'Silent Pokémon',
             self::FIELD_ATTACK => 237,
             self::FIELD_DEFENSE => 182,
             self::FIELD_STAMINA => 149,
@@ -22692,8 +22692,8 @@ class PokemonData
         Pokemon::IMPIDIMP => [
             self::FIELD_NAME => 'Impidimp',
             self::FIELD_NAME_SHORT => 'Impidimp',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Through its nose, it sucks in the emanations produced by people and Pokémon when they feel annoyed. It thrives off this negative energy.',
+            self::FIELD_CATEGORY => 'Wily Pokémon',
             self::FIELD_ATTACK => 103,
             self::FIELD_DEFENSE => 69,
             self::FIELD_STAMINA => 128,
@@ -22721,8 +22721,8 @@ class PokemonData
         Pokemon::MORGREM => [
             self::FIELD_NAME => 'Morgrem',
             self::FIELD_NAME_SHORT => 'Morgrem',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'When it gets down on all fours as if to beg for forgiveness, it\'s trying to lure opponents in so that it can stab them with its spear-like hair.',
+            self::FIELD_CATEGORY => 'Devious Pokémon',
             self::FIELD_ATTACK => 145,
             self::FIELD_DEFENSE => 102,
             self::FIELD_STAMINA => 163,
@@ -22750,8 +22750,8 @@ class PokemonData
         Pokemon::GRIMMSNARL => [
             self::FIELD_NAME => 'Grimmsnarl',
             self::FIELD_NAME_SHORT => 'Grimmsnarl',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'With the hair wrapped around its body helping to enhance its muscles, this Pokémon can overwhelm even Machamp.',
+            self::FIELD_CATEGORY => 'Bulk Up Pokémon',
             self::FIELD_ATTACK => 227,
             self::FIELD_DEFENSE => 139,
             self::FIELD_STAMINA => 216,
@@ -22831,8 +22831,8 @@ class PokemonData
         Pokemon::CURSOLA => [
             self::FIELD_NAME => 'Cursola',
             self::FIELD_NAME_SHORT => 'Cursola',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Its shell is overflowing with its heightened otherworldly energy. The ectoplasm serves as protection for this Pokémon\'s core spirit.',
+            self::FIELD_CATEGORY => 'Coral Pokémon',
             self::FIELD_ATTACK => 253,
             self::FIELD_DEFENSE => 182,
             self::FIELD_STAMINA => 155,
@@ -22855,9 +22855,9 @@ class PokemonData
             ]
         ],
         Pokemon::SIRFETCH_D => [
-            self::FIELD_NAME => 'Sirfetch’d',
-            self::FIELD_NAME_SHORT => 'Sirfetch’d',
-            self::FIELD_DESC => 'Only Farfetch’d that have survived many battles can attain this evolution. When this Pokémon’s leek withers, it will retire from combat.',
+            self::FIELD_NAME => 'Sirfetch\'d',
+            self::FIELD_NAME_SHORT => 'Sirfetch\'d',
+            self::FIELD_DESC => 'Only Farfetch\'d that have survived many battles can attain this evolution. When this Pokémon\'s leek withers, it will retire from combat.',
             self::FIELD_CATEGORY => 'Wild Duck Pokémon',
             self::FIELD_ATTACK => 248,
             self::FIELD_DEFENSE => 176,
@@ -22883,7 +22883,7 @@ class PokemonData
         Pokemon::MR_RIME => [
             self::FIELD_NAME => 'Mr. Rime',
             self::FIELD_NAME_SHORT => 'Mr. Rime',
-            self::FIELD_DESC => 'It’s highly skilled at tap-dancing. It waves its cane of ice in time with its graceful movements.',
+            self::FIELD_DESC => 'It\'s highly skilled at tap-dancing. It waves its cane of ice in time with its graceful movements.',
             self::FIELD_CATEGORY => 'Comedian Pokémon',
             self::FIELD_ATTACK => 212,
             self::FIELD_DEFENSE => 179,
@@ -22936,8 +22936,8 @@ class PokemonData
         Pokemon::MILCERY => [
             self::FIELD_NAME => 'Milcery',
             self::FIELD_NAME_SHORT => 'Milcery',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'This Pokémon was born from sweet-smelling particles in the air. Its body is made of cream.',
+            self::FIELD_CATEGORY => 'Cream Pokémon',
             self::FIELD_ATTACK => 90,
             self::FIELD_DEFENSE => 97,
             self::FIELD_STAMINA => 128,
@@ -22962,8 +22962,8 @@ class PokemonData
         Pokemon::ALCREMIE | FormsAlias::ALCREMIE_VANILLA => [
             self::FIELD_NAME => 'Alcremie (Vanilla Cream)',
             self::FIELD_NAME_SHORT => 'Alcremie',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'When it trusts a Trainer, it will treat them to berries it\'s decorated with cream.',
+            self::FIELD_CATEGORY => 'Cream Pokémon',
             self::FIELD_ATTACK => 203,
             self::FIELD_DEFENSE => 203,
             self::FIELD_STAMINA => 163,
@@ -22987,8 +22987,8 @@ class PokemonData
         Pokemon::FALINKS => [
             self::FIELD_NAME => 'Falinks',
             self::FIELD_NAME_SHORT => 'Falinks',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Five of them are troopers, and one is the brass. The brass\'s orders are absolute.',
+            self::FIELD_CATEGORY => 'Formation Pokémon',
             self::FIELD_ATTACK => 193,
             self::FIELD_DEFENSE => 170,
             self::FIELD_STAMINA => 163,
@@ -23012,8 +23012,8 @@ class PokemonData
         Pokemon::PINCURCHIN => [
             self::FIELD_NAME => 'Pincurchin',
             self::FIELD_NAME_SHORT => 'Pincurchin',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It feeds on seaweed, using its teeth to scrape it off rocks. Electric current flows from the tips of its spines.',
+            self::FIELD_CATEGORY => 'Sea Urchin Pokémon',
             self::FIELD_ATTACK => 176,
             self::FIELD_DEFENSE => 161,
             self::FIELD_STAMINA => 134,
@@ -23038,8 +23038,8 @@ class PokemonData
         Pokemon::SNOM => [
             self::FIELD_NAME => 'Snom',
             self::FIELD_NAME_SHORT => 'Snom',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It spits out thread imbued with a frigid sort of energy and uses it to tie its body to branches, disguising itself as an icicle while it sleeps.',
+            self::FIELD_CATEGORY => 'Worm Pokémon',
             self::FIELD_ATTACK => 76,
             self::FIELD_DEFENSE => 59,
             self::FIELD_STAMINA => 102,
@@ -23066,8 +23066,8 @@ class PokemonData
         Pokemon::FROSMOTH => [
             self::FIELD_NAME => 'Frosmoth',
             self::FIELD_NAME_SHORT => 'Frosmoth',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Icy scales fall from its wings like snow as it flies over fields and mountains. The temperature of its wings is less than −290 degrees Fahrenheit.',
+            self::FIELD_CATEGORY => 'Frost Moth Pokémon',
             self::FIELD_ATTACK => 230,
             self::FIELD_DEFENSE => 155,
             self::FIELD_STAMINA => 172,
@@ -23093,8 +23093,8 @@ class PokemonData
         Pokemon::STONJOURNER => [
             self::FIELD_NAME => 'Stonjourner',
             self::FIELD_NAME_SHORT => 'Stonjourner',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It stands in grasslands, watching the sun\'s descent from zenith to horizon. This Pokémon has a talent for delivering dynamic kicks.',
+            self::FIELD_CATEGORY => 'Big Rock Pokémon',
             self::FIELD_ATTACK => 222,
             self::FIELD_DEFENSE => 182,
             self::FIELD_STAMINA => 225,
@@ -23117,8 +23117,8 @@ class PokemonData
         Pokemon::EISCUE => [
             self::FIELD_NAME => 'Eiscue',
             self::FIELD_NAME_SHORT => 'Eiscue',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It drifted in on the flow of ocean waters from a frigid place. It keeps its head iced constantly to make sure it stays nice and cold.',
+            self::FIELD_CATEGORY => 'Penguin Pokémon',
             self::FIELD_ATTACK => 173,
             self::FIELD_DEFENSE => 139,
             self::FIELD_STAMINA => 181,
@@ -23141,8 +23141,8 @@ class PokemonData
         Pokemon::INDEEDEE | FormsAlias::INDEEDEE_FEMALE => [
             self::FIELD_NAME => 'Indeedee (Female)',
             self::FIELD_NAME_SHORT => 'Indeedee',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It uses the horns on its head to sense the emotions of others. Males will act as valets for those they serve, looking after their every need.',
+            self::FIELD_CATEGORY => 'Emotion Pokémon',
             self::FIELD_ATTACK => 208,
             self::FIELD_DEFENSE => 166,
             self::FIELD_STAMINA => 155,
@@ -23166,8 +23166,8 @@ class PokemonData
         Pokemon::MORPEKO | FormsAlias::MORPEKO_BELLY => [
             self::FIELD_NAME => 'Morpeko (Full Belly Mode)',
             self::FIELD_NAME_SHORT => 'Morpeko',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'As it eats the seeds stored up in its pocket-like pouches, this Pokémon is not just satisfying its constant hunger. It\'s also generating electricity.',
+            self::FIELD_CATEGORY => 'Two-Sided Pokémon',
             self::FIELD_ATTACK => 192,
             self::FIELD_DEFENSE => 121,
             self::FIELD_STAMINA => 151,
@@ -23193,8 +23193,8 @@ class PokemonData
         Pokemon::CUFANT => [
             self::FIELD_NAME => 'Cufant',
             self::FIELD_NAME_SHORT => 'Cufant',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It digs up the ground with its trunk. It\'s also very strong, being able to carry loads of over five tons without any problem at all.',
+            self::FIELD_CATEGORY => 'Copperderm Pokémon',
             self::FIELD_ATTACK => 140,
             self::FIELD_DEFENSE => 91,
             self::FIELD_STAMINA => 176,
@@ -23221,8 +23221,8 @@ class PokemonData
         Pokemon::COPPERAJAH => [
             self::FIELD_NAME => 'Copperajah',
             self::FIELD_NAME_SHORT => 'Copperajah',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'They came over from another region long ago and worked together with humans. Their green skin is resistant to water.',
+            self::FIELD_CATEGORY => 'Copperderm Pokémon',
             self::FIELD_ATTACK => 226,
             self::FIELD_DEFENSE => 126,
             self::FIELD_STAMINA => 263,
@@ -23247,8 +23247,8 @@ class PokemonData
         Pokemon::DRACOZOLT => [
             self::FIELD_NAME => 'Dracozolt',
             self::FIELD_NAME_SHORT => 'Dracozolt',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'In ancient times, it was unbeatable thanks to its powerful lower body, but it went extinct anyway after it depleted all its plant-based food sources.',
+            self::FIELD_CATEGORY => 'Fossil Pokémon',
             self::FIELD_ATTACK => 195,
             self::FIELD_DEFENSE => 165,
             self::FIELD_STAMINA => 207,
@@ -23273,8 +23273,8 @@ class PokemonData
         Pokemon::ARCTOZOLT => [
             self::FIELD_NAME => 'Arctozolt',
             self::FIELD_NAME_SHORT => 'Arctozolt',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'The shaking of its freezing upper half is what generates its electricity. It has a hard time walking around.',
+            self::FIELD_CATEGORY => 'Fossil Pokémon',
             self::FIELD_ATTACK => 190,
             self::FIELD_DEFENSE => 166,
             self::FIELD_STAMINA => 207,
@@ -23299,8 +23299,8 @@ class PokemonData
         Pokemon::DRACOVISH => [
             self::FIELD_NAME => 'Dracovish',
             self::FIELD_NAME_SHORT => 'Dracovish',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Powerful legs and jaws made it the apex predator of its time. Its own overhunting of its prey was what drove it to extinction.',
+            self::FIELD_CATEGORY => 'Fossil Pokémon',
             self::FIELD_ATTACK => 175,
             self::FIELD_DEFENSE => 185,
             self::FIELD_STAMINA => 207,
@@ -23325,8 +23325,8 @@ class PokemonData
         Pokemon::ARCTOVISH => [
             self::FIELD_NAME => 'Arctovish',
             self::FIELD_NAME_SHORT => 'Arctovish',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Though it\'s able to capture prey by freezing its surroundings, it has trouble eating the prey afterward because its mouth is on top of its head.',
+            self::FIELD_CATEGORY => 'Fossil Pokémon',
             self::FIELD_ATTACK => 171,
             self::FIELD_DEFENSE => 185,
             self::FIELD_STAMINA => 207,
@@ -23351,8 +23351,8 @@ class PokemonData
         Pokemon::DURALUDON => [
             self::FIELD_NAME => 'Duraludon',
             self::FIELD_NAME_SHORT => 'Duraludon',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Its body resembles polished metal, and it\'s both lightweight and strong. The only drawback is that it rusts easily.',
+            self::FIELD_CATEGORY => 'Alloy Pokémon',
             self::FIELD_ATTACK => 239,
             self::FIELD_DEFENSE => 185,
             self::FIELD_STAMINA => 172,
@@ -23377,8 +23377,8 @@ class PokemonData
         Pokemon::DREEPY => [
             self::FIELD_NAME => 'Dreepy',
             self::FIELD_NAME_SHORT => 'Dreepy',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'After being reborn as a ghost Pokémon, Dreepy wanders the areas it used to inhabit back when it was alive in prehistoric seas.',
+            self::FIELD_CATEGORY => 'Lingering Pokémon',
             self::FIELD_ATTACK => 117,
             self::FIELD_DEFENSE => 61,
             self::FIELD_STAMINA => 99,
@@ -23404,8 +23404,8 @@ class PokemonData
         Pokemon::DRAKLOAK => [
             self::FIELD_NAME => 'Drakloak',
             self::FIELD_NAME_SHORT => 'Drakloak',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It\'s capable of flying faster than 120 mph. It battles alongside Dreepy and dotes on them until they successfully evolve.',
+            self::FIELD_CATEGORY => 'Caretaker Pokémon',
             self::FIELD_ATTACK => 163,
             self::FIELD_DEFENSE => 105,
             self::FIELD_STAMINA => 169,
@@ -23433,8 +23433,8 @@ class PokemonData
         Pokemon::DRAGAPULT => [
             self::FIELD_NAME => 'Dragapult',
             self::FIELD_NAME_SHORT => 'Dragapult',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'When it isn\'t battling, it keeps Dreepy in the holes on its horns. Once a fight starts, it launches the Dreepy like supersonic missiles.',
+            self::FIELD_CATEGORY => 'Stealth Pokémon',
             self::FIELD_ATTACK => 266,
             self::FIELD_DEFENSE => 170,
             self::FIELD_STAMINA => 204,
@@ -23459,8 +23459,8 @@ class PokemonData
         Pokemon::ZACIAN | FormsAlias::ZACIAN_HERO => [
             self::FIELD_NAME => 'Zacian (Hero of Many Battles)',
             self::FIELD_NAME_SHORT => 'Zacian',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Known as a legendary hero, this Pokémon absorbs metal particles, transforming them into a weapon it uses to battle.',
+            self::FIELD_CATEGORY => 'Warrior Pokémon',
             self::FIELD_ATTACK => 254,
             self::FIELD_DEFENSE => 236,
             self::FIELD_STAMINA => 192,
@@ -23487,8 +23487,8 @@ class PokemonData
         Pokemon::ZAMAZENTA | FormsAlias::ZAMAZENTA_HERO => [
             self::FIELD_NAME => 'Zamazenta (Hero of Many Battles)',
             self::FIELD_NAME_SHORT => 'Zamazenta',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'In times past, it worked together with a king of the people to save the Galar region. It absorbs metal that it then uses in battle.',
+            self::FIELD_CATEGORY => 'Warrior Pokémon',
             self::FIELD_ATTACK => 254,
             self::FIELD_DEFENSE => 236,
             self::FIELD_STAMINA => 192,
@@ -23515,8 +23515,8 @@ class PokemonData
         Pokemon::ETERNATUS => [
             self::FIELD_NAME => 'Eternatus',
             self::FIELD_NAME_SHORT => 'Eternatus',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'The core on its chest absorbs energy emanating from the lands of the Galar region. This energy is what allows Eternatus to stay active.',
+            self::FIELD_CATEGORY => 'Gigantic Pokémon',
             self::FIELD_ATTACK => 278,
             self::FIELD_DEFENSE => 192,
             self::FIELD_STAMINA => 268,
@@ -23541,8 +23541,8 @@ class PokemonData
         Pokemon::KUBFU => [
             self::FIELD_NAME => 'Kubfu',
             self::FIELD_NAME_SHORT => 'Kubfu',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Kubfu trains hard to perfect its moves. The moves it masters will determine which form it takes when it evolves.',
+            self::FIELD_CATEGORY => 'Wushu Pokémon',
             self::FIELD_ATTACK => 170,
             self::FIELD_DEFENSE => 112,
             self::FIELD_STAMINA => 155,
@@ -23570,8 +23570,8 @@ class PokemonData
         Pokemon::URSHIFU | FormsAlias::URSHIFU_SINGLE => [
             self::FIELD_NAME => 'Urshifu (Single Strike Style)',
             self::FIELD_NAME_SHORT => 'Urshifu',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'This form of Urshifu is a strong believer in the one-hit KO. Its strategy is to leap in close to foes and land a devastating blow with a hardened fist.',
+            self::FIELD_CATEGORY => 'Wushu Pokémon',
             self::FIELD_ATTACK => 254,
             self::FIELD_DEFENSE => 177,
             self::FIELD_STAMINA => 225,
@@ -23598,8 +23598,8 @@ class PokemonData
         Pokemon::ZARUDE => [
             self::FIELD_NAME => 'Zarude',
             self::FIELD_NAME_SHORT => 'Zarude',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Within dense forests, this Pokémon lives in a pack with others of its kind. It\'s incredibly aggressive, and the other Pokémon of the forest fear it.',
+            self::FIELD_CATEGORY => 'Rogue Monkey Pokémon',
             self::FIELD_ATTACK => 242,
             self::FIELD_DEFENSE => 215,
             self::FIELD_STAMINA => 233,
@@ -23622,8 +23622,8 @@ class PokemonData
         Pokemon::REGIELEKI => [
             self::FIELD_NAME => 'Regieleki',
             self::FIELD_NAME_SHORT => 'Regieleki',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'This Pokémon is a cluster of electrical energy. It’s said that removing the rings on Regieleki’s body will unleash the Pokémon’s latent power.',
+            self::FIELD_CATEGORY => 'Electron Pokémon',
             self::FIELD_ATTACK => 250,
             self::FIELD_DEFENSE => 125,
             self::FIELD_STAMINA => 190,
@@ -23647,8 +23647,8 @@ class PokemonData
         Pokemon::REGIDRAGO => [
             self::FIELD_NAME => 'Regidrago',
             self::FIELD_NAME_SHORT => 'Regidrago',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'An academic theory proposes that Regidrago’s arms were once the head of an ancient dragon Pokémon. The theory remains unproven.',
+            self::FIELD_CATEGORY => 'Dragon Orb Pokémon',
             self::FIELD_ATTACK => 202,
             self::FIELD_DEFENSE => 101,
             self::FIELD_STAMINA => 400,
@@ -23671,8 +23671,8 @@ class PokemonData
         Pokemon::GLASTRIER => [
             self::FIELD_NAME => 'Glastrier',
             self::FIELD_NAME_SHORT => 'Glastrier',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Glastrier emits intense cold from its hooves. It’s also a belligerent Pokémon—anything it wants, it takes by force.',
+            self::FIELD_CATEGORY => 'Wild Horse Pokémon',
             self::FIELD_ATTACK => 246,
             self::FIELD_DEFENSE => 223,
             self::FIELD_STAMINA => 225,
@@ -23696,8 +23696,8 @@ class PokemonData
         Pokemon::SPECTRIER => [
             self::FIELD_NAME => 'Spectrier',
             self::FIELD_NAME_SHORT => 'Spectrier',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'It probes its surroundings with all its senses save one—it doesn’t use its sense of sight. Spectrier’s kicks are said to separate soul from body.',
+            self::FIELD_CATEGORY => 'Swift Horse Pokémon',
             self::FIELD_ATTACK => 273,
             self::FIELD_DEFENSE => 146,
             self::FIELD_STAMINA => 205,
@@ -23721,8 +23721,8 @@ class PokemonData
         Pokemon::CALYREX => [
             self::FIELD_NAME => 'Calyrex',
             self::FIELD_NAME_SHORT => 'Calyrex',
-            self::FIELD_DESC => '',
-            self::FIELD_CATEGORY => '',
+            self::FIELD_DESC => 'Calyrex is a merciful Pokémon, capable of providing healing and blessings. It reigned over the Galar region in times of yore.',
+            self::FIELD_CATEGORY => 'King Pokémon',
             self::FIELD_ATTACK => 324,
             self::FIELD_DEFENSE => 194,
             self::FIELD_STAMINA => 205,
@@ -35116,8 +35116,8 @@ class PokemonData
             ]
         ],
         Pokemon::SIRFETCH_D | Mods::SHADOW => [
-            self::FIELD_NAME => 'Shadow Sirfetch’d',
-            self::FIELD_NAME_SHORT => 'Sirfetch’d',
+            self::FIELD_NAME => 'Shadow Sirfetch\'d',
+            self::FIELD_NAME_SHORT => 'Sirfetch\'d',
             self::FIELD_DESC => '',
             self::FIELD_CATEGORY => '',
             self::FIELD_ATTACK => 248,

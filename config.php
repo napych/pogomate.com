@@ -1,7 +1,9 @@
 <?php
 
+declare(strict_types=1);
+
 return [
-    'version' => '0.99.37',
+    'version' => '0.99.38',
 
     'locale' => 'en_US',
     'plugins' => [

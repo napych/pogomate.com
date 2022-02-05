@@ -3356,7 +3356,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -40
         ],
         self::MOVE_LEAF_STORM => [
-            self::FIELD_NAME => '',
+            self::FIELD_NAME => 'Leaf Storm',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::GRASS,
             self::FIELD_POWER => 130,
@@ -3426,7 +3426,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -50
         ],
         self::MOVE_WEATHER_BALL_NORMAL => [
-            self::FIELD_NAME => '',
+            self::FIELD_NAME => 'Weather Ball',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::NORMAL,
             self::FIELD_POWER => 55,
@@ -3440,7 +3440,7 @@ class MovesData extends Moves
             self::FIELD_COMBAT_ENERGY => -35
         ],
         self::MOVE_PSYCHIC_FANGS => [
-            self::FIELD_NAME => '',
+            self::FIELD_NAME => 'Psychic Fangs',
             self::FIELD_CLASS => self::CLASS_CHARGE,
             self::FIELD_TYPE => Types::PSYCHIC,
             self::FIELD_POWER => 30,

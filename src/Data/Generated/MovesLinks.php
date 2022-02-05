@@ -243,13 +243,13 @@ class MovesLinks
         Moves::MOVE_TECHNO_BLAST_SHOCK => 'techno-blast',
         Moves::MOVE_FLY => 'fly',
         Moves::MOVE_V_CREATE => 'v-create',
-        Moves::MOVE_LEAF_STORM => '',
+        Moves::MOVE_LEAF_STORM => 'leaf-storm',
         Moves::MOVE_TRI_ATTACK => 'tri-attack',
         Moves::MOVE_GUST_FAST => 'gust',
         Moves::MOVE_INCINERATE_FAST => 'incinerate',
         Moves::MOVE_FEATHER_DANCE => 'feather-dance',
-        Moves::MOVE_WEATHER_BALL_NORMAL => '',
-        Moves::MOVE_PSYCHIC_FANGS => '',
+        Moves::MOVE_WEATHER_BALL_NORMAL => 'weather-ball',
+        Moves::MOVE_PSYCHIC_FANGS => 'psychic-fangs',
         Moves::MOVE_ICICLE_SPEAR => ''
     ];
     
@@ -445,7 +445,8 @@ class MovesLinks
             Moves::MOVE_WEATHER_BALL_FIRE,
             Moves::MOVE_WEATHER_BALL_ICE,
             Moves::MOVE_WEATHER_BALL_ROCK,
-            Moves::MOVE_WEATHER_BALL_WATER
+            Moves::MOVE_WEATHER_BALL_WATER,
+            Moves::MOVE_WEATHER_BALL_NORMAL
         ],
         'frenzy-plant' => [Moves::MOVE_FRENZY_PLANT],
         'smack-down' => [Moves::MOVE_SMACK_DOWN_FAST],
@@ -496,15 +497,12 @@ class MovesLinks
         ],
         'fly' => [Moves::MOVE_FLY],
         'v-create' => [Moves::MOVE_V_CREATE],
-        '' => [
-            Moves::MOVE_LEAF_STORM,
-            Moves::MOVE_WEATHER_BALL_NORMAL,
-            Moves::MOVE_PSYCHIC_FANGS,
-            Moves::MOVE_ICICLE_SPEAR
-        ],
+        'leaf-storm' => [Moves::MOVE_LEAF_STORM],
         'tri-attack' => [Moves::MOVE_TRI_ATTACK],
         'gust' => [Moves::MOVE_GUST_FAST],
         'incinerate' => [Moves::MOVE_INCINERATE_FAST],
-        'feather-dance' => [Moves::MOVE_FEATHER_DANCE]
+        'feather-dance' => [Moves::MOVE_FEATHER_DANCE],
+        'psychic-fangs' => [Moves::MOVE_PSYCHIC_FANGS],
+        '' => [Moves::MOVE_ICICLE_SPEAR]
     ];
 }
