@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 return [
-    'version' => '0.99.38',
+    'version' => '0.99.39',
 
     'locale' => 'en_US',
     'plugins' => [
@@ -47,7 +47,7 @@ return [
         ],
         'mainLastmod' => '2022-02-05',
         'pokemon' => [
-            'lastmod' => '2022-02-05',
+            'lastmod' => '2022-02-07',
             'changefreq' => 'weekly'
         ],
         'counters' => [
