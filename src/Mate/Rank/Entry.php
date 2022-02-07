@@ -19,27 +19,38 @@ class Entry
     public int $stamina;
     public string $league;
     public int $rank40;
-    public int $level40;
+    public float $level40;
     public float $prod40;
     public float $percent40;
-    public int $rank41;
-    public int $level41;
-    public float $prod41;
-    public float $percent41;
+    public int $cp40;
     public int $rank50;
-    public int $level50;
+    public float $level50;
     public float $prod50;
     public float $percent50;
-    public int $rank51;
-    public int $level51;
-    public float $prod51;
-    public float $percent51;
-    public int $cp40;
-    public int $cp41;
     public int $cp50;
-    public int $cp51;
 
     public float $statCache;
+
+    public static function load(array $data): static
+    {
+        $obj = new static();
+        $obj->pokemon = Pokemon::get($data['pokemon']);
+        $obj->attack = $data['attack'];
+        $obj->defense = $data['defense'];
+        $obj->stamina = $data['stamina'];
+        $obj->league = $data['league'];
+        $obj->rank40 = $data['rank40'];
+        $obj->rank50 = $data['rank50'];
+        $obj->level40 = $data['level40'] / 2;
+        $obj->level50 = $data['level50'] / 2;
+        $obj->prod40 = $data['prod40'];
+        $obj->prod50 = $data['prod50'];
+        $obj->percent40 = $data['percent40'];
+        $obj->percent50 = $data['percent50'];
+        $obj->cp40 = $data['cp40'];
+        $obj->cp50 = $data['cp50'];
+        return $obj;
+    }
 
     /**
      * @param \Pogo\Pokemon $pokemon
@@ -65,14 +76,8 @@ class Entry
         $newRank->stamina = $indStamina;
         $newRank->league = $league;
 
-        // 51
-        if (($cp = Stats::getRankCP($newRank, 51)) <= $maxCP) {
-            $newRank->level51 = 51;
-            $newRank->prod51 = Calc::getStatProduct($pokemon, $indAttack, $indDefense, $indStamina, 51);
-            $newRank->cp51 = $cp;
-        }
-        // 50-42
-        for ($level = 50; $level >= 42; $level--) {
+        // 50-40.5
+        for ($level = 50.0; $level >= 40.5; $level -= 0.5) {
             if (($cp = Stats::getRankCP($newRank, $level)) <= $maxCP) {
                 $newRank->level50 = $level;
                 $newRank->prod50 = Calc::getStatProduct($pokemon, $indAttack, $indDefense, $indStamina, $level);
@@ -80,72 +85,67 @@ class Entry
                 break;
             }
         }
-        // 41
-        if (($cp = Stats::getRankCP($newRank, 41)) <= $maxCP) {
-            $newRank->level41 = 41;
-            $newRank->prod41 = Calc::getStatProduct($pokemon, $indAttack, $indDefense, $indStamina, 41);
-            $newRank->cp41 = $cp;
-        }
         // 40-1
-        for ($level = 40; $level >= 1; $level--) {
+        for ($level = 40.0; $level >= 1.0; $level -= 0.5) {
             if (($cp = Stats::getRankCP($newRank, $level)) <= $maxCP) {
                 $newRank->level40 = $level;
-                $newRank->prod40 = Calc::getStatProduct($pokemon, $indAttack, $indDefense, $indStamina, 40);
+                $newRank->prod40 = Calc::getStatProduct($pokemon, $indAttack, $indDefense, $indStamina, $level);
                 $newRank->cp40 = $cp;
                 break;
             }
         }
-        if (!isset($newRank->prod41)) {
-            $newRank->level41 = $newRank->level40;
-            $newRank->prod41 = $newRank->prod40;
-            $newRank->cp41 = $newRank->cp40;
-        }
         if (!isset($newRank->prod50)) {
-            $newRank->level50 = $newRank->level41;
-            $newRank->prod50 = $newRank->prod41;
-            $newRank->cp50 = $newRank->cp41;
-        }
-        if (!isset($newRank->prod51)) {
-            $newRank->level51 = $newRank->level50;
-            $newRank->prod51 = $newRank->prod50;
-            $newRank->cp51 = $newRank->cp50;
+            $newRank->level50 = $newRank->level40;
+            $newRank->prod50 = $newRank->prod40;
+            $newRank->cp50 = $newRank->cp40;
         }
         return $newRank;
     }
 
     public function getSql(): string
     {
-        $ins = [
+        $ins = $this->toArray(true);
+        $line = [];
+        foreach ($ins as $key => $value) {
+            $line[] = "`$key`='$value'";
+        }
+        return 'REPLACE INTO `rank` SET ' . implode(',', $line);
+    }
+
+    /**
+     * @param bool $forSql
+     * @return array
+     */
+    public function toArray(bool $forSql = false): array
+    {
+        $levelK = $forSql ? 2 : 1;
+        return [
             'pokemon' => $this->pokemon->getCode(),
             'attack' => $this->attack,
             'defense' => $this->defense,
             'stamina' => $this->stamina,
             'league' => $this->league,
             'rank40' => $this->rank40,
-            'level40' => $this->level40,
+            'level40' => $this->level40 * $levelK,
             'prod40' => $this->prod40,
             'percent40' => $this->percent40,
-            'rank41' => $this->rank41,
-            'level41' => $this->level41,
-            'prod41' => $this->prod41,
-            'percent41' => $this->percent41,
             'rank50' => $this->rank50,
-            'level50' => $this->level50,
+            'level50' => $this->level50 * $levelK,
             'prod50' => $this->prod50,
             'percent50' => $this->percent50,
-            'rank51' => $this->rank51,
-            'level51' => $this->level51,
-            'prod51' => $this->prod51,
-            'percent51' => $this->percent51,
             'cp40' => $this->cp40,
-            'cp41' => $this->cp41,
             'cp50' => $this->cp50,
-            'cp51' => $this->cp51
         ];
-        $line = [];
-        foreach ($ins as $key => $value) {
-            $line[] = "`$key`='$value'";
+    }
+
+    public function getXML(\DOMElement $node, string|bool $addNode = false): \DOMElement
+    {
+        if ($addNode) {
+            $node = $node->appendChild($node->ownerDocument->createElement(is_string($addNode) ? $addNode : 'rank'));
         }
-        return 'INSERT INTO `rank` SET ' . implode(',', $line);
+        foreach ($this->toArray() as $key => $value) {
+            $node->setAttribute($key, (string) $value);
+        }
+        return $node;
     }
 }

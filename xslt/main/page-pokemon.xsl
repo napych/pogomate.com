@@ -76,6 +76,45 @@
                 <xsl:text>: </xsl:text>
                 <xsl:value-of select="@subList"/>
             </xsl:if>
+            <xsl:if test="rank">
+                <xsl:text> (</xsl:text>
+                <xsl:for-each select="rank">
+                    <xsl:sort select="@rank40"/>
+                    <xsl:if test="position()>1">
+                        <xsl:text>, </xsl:text>
+                    </xsl:if>
+                    <xsl:choose>
+                        <xsl:when test="@rank40=1">
+                            <xsl:if test="count(../rank)&gt;1">
+                                <xsl:text>L</xsl:text>
+                                <xsl:value-of select="@level40"/>
+                                <xsl:text>:</xsl:text>
+                            </xsl:if>
+                            <xsl:value-of select="@attack"/>
+                            <xsl:text>/</xsl:text>
+                            <xsl:value-of select="@defense"/>
+                            <xsl:text>/</xsl:text>
+                            <xsl:value-of select="@stamina"/>
+                        </xsl:when>
+                        <xsl:when test="@rank50=1">
+                            <xsl:if test="count(../rank)&gt;1">
+                                <xsl:text>L</xsl:text>
+                                <xsl:value-of select="@level50"/>
+                                <xsl:text>:</xsl:text>
+                            </xsl:if>
+                            <xsl:value-of select="@attack"/>
+                            <xsl:text>/</xsl:text>
+                            <xsl:value-of select="@defense"/>
+                            <xsl:text>/</xsl:text>
+                            <xsl:value-of select="@stamina"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:text>?</xsl:text>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:for-each>
+                <xsl:text>)</xsl:text>
+            </xsl:if>
         </p>
     </xsl:template>
 
@@ -203,9 +242,9 @@
         <xsl:if test="$moves">
             <div class="pokemon-moves {$moves/../@type}">
                 <h6>
-                <xsl:value-of select="$title"/>
+                    <xsl:value-of select="$title"/>
                 </h6>
-<!--                <xsl:text>: </xsl:text>-->
+                <!--                <xsl:text>: </xsl:text>-->
                 <xsl:for-each select="$moves">
                     <span class="pokemon-move">
                         <xsl:call-template name="snippet-type">

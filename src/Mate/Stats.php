@@ -36,7 +36,7 @@ class Stats
         return $cp >= 10 ? (int) floor($cp) : 10;
     }
 
-    public static function getRankCP(Entry &$entry, int $level)
+    public static function getRankCP(Entry &$entry, float $level)
     {
         if (!isset($entry->statCache)) {
             $attack = $entry->pokemon->getAttack() + $entry->attack;

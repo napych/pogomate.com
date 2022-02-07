@@ -8,6 +8,8 @@ use Difra\Debugger;
 use Difra\Param\AnyString;
 use Difra\View;
 use Difra\View\HttpError;
+use Pogo\Mate\Leagues;
+use Pogo\Mate\Rank;
 use Pogo\Mate\Rank\Calc;
 use Pogo\Mate\Stats;
 use Pogo\Mate\Level;
@@ -107,10 +109,14 @@ class Pokemon extends \Difra\Controller
             if (!empty($reasons)) {
                 foreach ($reasons as $reason) {
                     $reasonNode = $pokemonNode->appendChild($this->xml->createElement('reason'));
+                    if ($reason['type'] === Leagues::GL || $reason['type'] === Leagues::UL) {
+                        Rank::getBestXML(node: $reasonNode, pokemon: $reason['evolve'] ?? $pokemon, league: $reason['type'], addNode: false);
+                    }
                     foreach ($reason as $k => $v) {
                         switch ($k) {
                             case 'evolve':
-                                \Pogo\Pokemon::get($v)->getXML($reasonNode, 'evolve');
+                                $evoPoke = \Pogo\Pokemon::get($v);
+                                $evoPoke->getXML($reasonNode, 'evolve');
                                 break;
                             default:
                                 $reasonNode->setAttribute($k, $v ?? '');

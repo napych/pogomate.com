@@ -35,9 +35,9 @@ class Ranks extends Command
     {
         $total = sizeof(PokemonData::POKEMON);
         $current = 0;
-        unlink('bin/ranks.sql');
+        @unlink('bin/ranks.sql');
         foreach (PokemonData::POKEMON as $code => $data) {
-            if ($data[PokemonData::FIELD_ATTACK] && $data[PokemonData::FIELD_DEFENSE] && $data[PokemonData::FIELD_STAMINA]) {
+            if (isset($data[PokemonData::FIELD_ATTACK]) && isset($data[PokemonData::FIELD_DEFENSE]) && isset($data[PokemonData::FIELD_STAMINA])) {
                 echo $code, ': ', $data[PokemonData::FIELD_NAME], ' (', round($current / $total * 100, 2), '%)';
                 RankList::generate(Pokemon::get($code));
                 echo PHP_EOL;
