@@ -6,9 +6,11 @@
         <xsl:param name="withReveal" select="1"/>
 
         <div class="string" data-string="{$string}">
-            <h5>
-                <xsl:value-of select="$name"/>
-            </h5>
+            <xsl:if test="$name">
+                <h5>
+                    <xsl:value-of select="$name"/>
+                </h5>
+            </xsl:if>
             <p>
                 <a href="#" class="string-copy btn btn-primary">Copy</a>
                 <xsl:if test="$withReveal">
