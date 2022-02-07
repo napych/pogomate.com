@@ -34,6 +34,37 @@
                     </xsl:for-each>
                 </div>
             </xsl:for-each>
+            <h2>Fine search</h2>
+            <div class="fine-search">
+                <xsl:for-each select="list">
+                    <xsl:if test="tier">
+                        <h3 class="h4">
+                            <xsl:call-template name="snippet-icon">
+                                <xsl:with-param name="name" select="@type"/>
+                                <xsl:with-param name="type" select="@type"/>
+                                <xsl:with-param name="size" select="20"/>
+                            </xsl:call-template>
+                            <xsl:value-of select="@description"/>
+                        </h3>
+                        <div class="fine-search-block">
+                            <xsl:for-each select="tier">
+                                <div class="entry">
+                                    <div class="inner">
+                                        <h4 class="h5">
+                                            <xsl:value-of select="@description"/>
+                                        </h4>
+                                        <xsl:call-template name="snippet-string">
+                                            <xsl:with-param name="name" select="''"/>
+                                            <xsl:with-param name="string" select="@string"/>
+                                            <xsl:with-param name="withReveal" select="0"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </div>
+                            </xsl:for-each>
+                        </div>
+                    </xsl:if>
+                </xsl:for-each>
+            </div>
         </div>
     </xsl:template>
 </xsl:stylesheet>

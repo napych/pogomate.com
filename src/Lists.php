@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Pogo;
 
 use Pogo\Lists\Evolutions;
@@ -148,17 +150,16 @@ class Lists
     }
 
     /**
-     * @param \DOMElement|\DOMNode $node
+     * @param \DOMElement $node
      * @param string|bool $addNode
-     * @param bool $strings
-     * @return \DOMElement|\DOMNode
+     * @param bool $withStrings
+     * @param bool $withSubLists
+     * @return \DOMElement
      */
-    public static function getAllXML($node, $addNode = false, bool $strings = false)
+    public static function getListsXML(\DOMElement $node, string|bool $addNode = false, bool $withStrings = false, bool $withSubLists = true): \DOMElement
     {
-        if ($addNode === true) {
-            $node = $node->appendChild($node->ownerDocument->createElement('lists'));
-        } elseif ($addNode) {
-            $node = $node->appendChild($node->ownerDocument->createElement($addNode));
+        if ($addNode) {
+            $node = $node->appendChild($node->ownerDocument->createElement(is_string($addNode) ? $addNode : 'lists'));
         }
         foreach (self::getAll() as $list) {
             /** @var \DOMElement $listNode */
@@ -170,15 +171,22 @@ class Lists
             $listNode->setAttribute('type', $list[Lists::ENT_TYPE]);
             $listNode->setAttribute('default', $list[Lists::ENT_DEFAULT] ? '1' : '0');
             $listNode->setAttribute('block', $list[Lists::ENT_BLOCK]);
-            $listNode->setAttribute('cleanup', $list[Lists::ENT_CLEANUP]);
-            if ($list[Lists::ENT_CONTENT] === Lists::CONTENT_TIERS) {
-                foreach ($list[Lists::ENT_DATA] as $tier => $data) {
-                    /** @var \DOMElement $tierNode */
-                    $tierNode = $listNode->appendChild($node->ownerDocument->createElement('tier'));
-                    $tierNode->setAttribute('description', $tier);
+            $listNode->setAttribute('cleanup', $list[Lists::ENT_CLEANUP] ? '1' : '0');
+            if ($withSubLists) {
+                if ($list[Lists::ENT_CONTENT] === Lists::CONTENT_TIERS) {
+                    foreach ($list[Lists::ENT_DATA] as $tier => $data) {
+                        /** @var \DOMElement $tierNode */
+                        $tierNode = $listNode->appendChild($node->ownerDocument->createElement('tier'));
+                        $tierNode->setAttribute('description', $tier);
+                        if ($withStrings) {
+                            $subList = new Mate\Strings();
+                            $subList->addList($list, $tier);
+                            $tierNode->setAttribute('string', $subList->getIncludeString());
+                        }
+                    }
                 }
             }
-            if ($strings) {
+            if ($withStrings) {
                 $single = new Mate\Strings();
                 $single->addList($list);
                 $listNode->setAttribute('string', $single->getIncludeString());

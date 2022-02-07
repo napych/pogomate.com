@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Controller;
 
 class Lists extends \Difra\Controller
@@ -13,6 +15,6 @@ class Lists extends \Difra\Controller
         $this->setKeywords('pokémon go, gamepress, tier list, search strings, top attackers, battle league');
 
         $node = $this->root->appendChild($this->xml->createElement('page-lists'));
-        \Pogo\Lists::getAllXML($node, false, true);
+        \Pogo\Lists::getListsXML(node: $node, addNode: false, withStrings: true, withSubLists: true);
     }
 }

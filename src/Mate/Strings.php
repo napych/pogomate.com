@@ -37,13 +37,16 @@ class Strings
         }
     }
 
-    public function addList($list)
+    public function addList($list, ?string $subList = null)
     {
         $listData = $list[Lists::ENT_DATA];
         if ($list[Lists::ENT_CONTENT] === Lists::CONTENT_LIST) {
             $listData = [$listData];
         }
         foreach ($listData as $title => $data) {
+            if ($subList && $title !== $subList) {
+                continue;
+            }
             foreach ($data as $code) {
                 $reason = [
                     'list' => $list[Lists::ENT_DESCRIPTION],

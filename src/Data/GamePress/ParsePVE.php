@@ -8,7 +8,7 @@ class ParsePVE extends Common
 {
     const URL = 'https://gamepress.gg/pokemongo/attackers-tier-list';
     const CLASS_NAME = 'PVE';
-    const DESC = 'GamePress Attackers';
+    const DESC = 'GamePress Top Attackers';
 
     public static function run()
     {
@@ -35,8 +35,8 @@ class ParsePVE extends Common
                 foreach ($h2s as $h2) {
                     if (
                         $h2->getAttribute('class') === 'main-title'
-                        && strpos($h2->nodeValue, 'Tier') !== false
-                        && strpos($h2->nodeValue, 'Overview') === false
+                        && str_contains($h2->nodeValue, 'Tier')
+                        && !str_contains($h2->nodeValue, 'Overview')
                     ) {
                         $title = $h2->nodeValue;
                         break;

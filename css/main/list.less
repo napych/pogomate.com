@@ -1,16 +1,55 @@
 #page-lists {
-    .entries {
-        display: flex;
-        flex-wrap: wrap;
-        .entry {
-            display: flex;
-            padding-right: 32px;
-            //width: 33%;
-            //min-width: 280px;
+  .entries {
+    display: flex;
+    flex-wrap: wrap;
 
-            .icon {
-                padding-right: 16px;
-            }
-        }
+    .entry {
+      display: flex;
+      padding-right: 32px;
+
+      .icon {
+        padding-right: 16px;
+      }
     }
+  }
+
+  .fine-search {
+    position: relative;
+
+    h3 {
+      margin-top: 16px;
+      margin-bottom: 20px;
+
+      img {
+        position: relative;
+        margin-right: 8px;
+        margin-top: -4px;
+      }
+    }
+
+    .fine-search-block {
+      display: flex;
+      flex-wrap: wrap;
+
+      .entry {
+        display: flex;
+        padding-right: 16px;
+
+        .inner {
+          display: flex;
+
+          h4 {
+            width: 85px;
+            margin-top: 7px;
+            margin-right: 8px;
+            text-align: right;
+          }
+
+          div {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
 }

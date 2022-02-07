@@ -9,7 +9,7 @@ use Pogo\Pokemon\Types;
 
 class PVE
 {
-    const DESCRIPTION = 'GamePress Attackers';
+    const DESCRIPTION = 'GamePress Top Attackers';
     
     const TIERS = [
         'S Tier' => [

@@ -60,7 +60,7 @@ class Cleanup extends \Difra\Controller
             }
         }
 
-        \Pogo\Lists::getAllXML($node, true);
+        \Pogo\Lists::getListsXML($node, true);
 
         $result = [];
         if ($cleanup['perfect']) {
