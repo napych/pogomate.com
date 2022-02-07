@@ -12,7 +12,7 @@ class Move extends Controller
 {
     protected function indexAction(AnyString $link)
     {
-        View::addExpires(60 * 60 * 24 * 7);
+        View::addExpires(31536000); // 1y
         $moves = \Pogo\Pokemon\Move::getByLink($link->val());
         if (empty($moves)) {
             throw new HttpError(404);
