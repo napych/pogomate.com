@@ -105,7 +105,9 @@ class Level
         0.8328,
         0.8353,
         0.8378,
-        0.8403 // 50
+        0.8403, // 50
+        0.8428,
+        0.8453
     ];
 
     public static function getCpMultiplier(float $level)

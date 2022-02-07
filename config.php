@@ -16,7 +16,7 @@ return [
     'db' => [
         'default' => [
             'type' => 'mysql',
-            'hostname' => '127.0.0.1',
+            'hostname' => '10.99.0.8',
             'database' => 'pogomate',
             'username' => 'pogomate',
             'password' => 'ooFu9QueooFu9Que'

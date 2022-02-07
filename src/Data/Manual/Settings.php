@@ -5,5 +5,5 @@ namespace Pogo\Data\Manual;
 /** @deprecated */
 class Settings
 {
-    const MAX_POKEDEX_ID = 720;
+    const MAX_POKEDEX_ID = 999;
 }

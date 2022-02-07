@@ -1,9 +1,15 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Pogo\Mate;
 
+use Pogo\Mate\Rank\Entry;
 use Pogo\Pokemon;
 
+/**
+ * Stats calc
+ */
 class Stats
 {
     /**
@@ -27,15 +33,18 @@ class Stats
         $stamina = $pokemon->getStamina() + $indStamina;
         $cp = $attack * sqrt($defense) * sqrt($stamina)
             * Level::getCpMultiplier($level) * Level::getCpMultiplier($level) / 10;
-        return $cp >= 10 ? floor($cp) : 10;
+        return $cp >= 10 ? (int) floor($cp) : 10;
     }
 
-    public static function getStatProduct(Pokemon $pokemon, int $indAttack, int $indDefense, int $indStamina, float $level): float
+    public static function getRankCP(Entry &$entry, int $level)
     {
-        $multiplier = Level::getCpMultiplier($level);
-        $attack = ($pokemon->getAttack() + $indAttack) * $multiplier;
-        $defense = ($pokemon->getDefense() + $indDefense) * $multiplier;
-        $stamina = floor(($pokemon->getStamina() + $indStamina) * $multiplier);
-        return round($attack * $defense * $stamina) / 1000;
+        if (!isset($entry->statCache)) {
+            $attack = $entry->pokemon->getAttack() + $entry->attack;
+            $defense = $entry->pokemon->getDefense() + $entry->defense;
+            $stamina = $entry->pokemon->getStamina() + $entry->stamina;
+            $entry->statCache = $attack * sqrt($defense) * sqrt($stamina) / 10;
+        }
+        $cp = $entry->statCache * Level::getCpMultiplier($level) * Level::getCpMultiplier($level);
+        return $cp >= 10 ? (int) floor($cp) : 10;
     }
 }

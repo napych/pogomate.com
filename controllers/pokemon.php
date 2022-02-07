@@ -8,6 +8,7 @@ use Difra\Debugger;
 use Difra\Param\AnyString;
 use Difra\View;
 use Difra\View\HttpError;
+use Pogo\Mate\Rank\Calc;
 use Pogo\Mate\Stats;
 use Pogo\Mate\Level;
 use Pogo\Pokemon\Mods;
@@ -180,7 +181,7 @@ class Pokemon extends \Difra\Controller
                         $level += .5;
                         $cp = Stats::getCP($pokemon, $attack, $defense, $stamina, $level);
                     }
-                    $prod = Stats::getStatProduct($pokemon, $attack, $defense, $stamina, $matchedLevel);
+                    $prod = Calc::getStatProduct($pokemon, $attack, $defense, $stamina, $matchedLevel);
                     $matches[] = [$attack, $defense, $stamina, $matchedLevel, $matchedCP, $prod];
                 }
             }

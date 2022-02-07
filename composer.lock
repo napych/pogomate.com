@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6ffa13d62bea702e3e9b95143cbd0b70",
+    "content-hash": "2ee3a4504755c5cd96669690449d2acc",
     "packages": [
         {
             "name": "components/jquery",
@@ -56,49 +56,7 @@
             "time": "2021-03-20T19:13:42+00:00"
         },
         {
-            "name": "difra/binding-jquery3",
-            "version": "8.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/difra-org/binding-jquery3.git",
-                "reference": "91387ba6bbc60e15f896a23d0b8bacd3d4d02225"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/difra-org/jquery3/archive/8.0.0.zip"
-            },
-            "require": {
-                "components/jquery": "3.*"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "main.php"
-                ],
-                "psr-4": {
-                    "Difra\\Jquery3\\": "src"
-                },
-                "classmap": []
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Ed Kutuev",
-                    "email": "ed@napych.com"
-                }
-            ],
-            "description": "jQuery bindings for Difra",
-            "support": {
-                "issues": "https://github.com/difra-org/binding-jquery3/issues",
-                "source": "https://github.com/difra-org/binding-jquery3/tree/8.0.0"
-            },
-            "time": "2022-02-01T19:24:13+00:00"
-        },
-        {
-            "name": "difra/bootstrap4",
+            "name": "difra/binding-bootstrap4",
             "version": "dev-master",
             "source": {
                 "type": "git",
@@ -140,8 +98,51 @@
                 "issues": "https://github.com/difra-org/binding-bootstrap4/issues",
                 "source": "https://github.com/difra-org/binding-bootstrap4/tree/master"
             },
-            "abandoned": "difra/binding-bootstrap4",
             "time": "2022-02-04T10:11:45+00:00"
+        },
+        {
+            "name": "difra/binding-jquery3",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/difra-org/binding-jquery3.git",
+                "reference": "7e1572283500b7511c424a1c226634228c00c646"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/difra-org/jquery3/archive/refs/tags/8.0.0.zip"
+            },
+            "require": {
+                "components/jquery": "3.*",
+                "difra/lib-events": "~8.0.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "main.php"
+                ],
+                "psr-4": {
+                    "Difra\\Jquery3\\": "src"
+                },
+                "classmap": []
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ed Kutuev",
+                    "email": "ed@napych.com"
+                }
+            ],
+            "description": "jQuery bindings for Difra",
+            "support": {
+                "issues": "https://github.com/difra-org/binding-jquery3/issues",
+                "source": "https://github.com/difra-org/binding-jquery3/tree/master"
+            },
+            "time": "2022-02-04T10:26:47+00:00"
         },
         {
             "name": "difra/difra",
@@ -149,7 +150,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/difra-org/difra.git",
-                "reference": "79e0b0e466873e69f710949cdb91becb5d1d9998"
+                "reference": "12f3a32b434d092667b337c6bd83c822cc75de21"
             },
             "dist": {
                 "type": "zip",
@@ -207,64 +208,19 @@
                 "issues": "https://github.com/difra-org/difra/issues",
                 "source": "https://github.com/difra-org/difra/tree/master"
             },
-            "time": "2022-02-04T10:39:52+00:00"
-        },
-        {
-            "name": "difra/jquery3",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/difra-org/binding-jquery3.git",
-                "reference": "7e1572283500b7511c424a1c226634228c00c646"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/difra-org/jquery3/archive/refs/tags/8.0.0.zip"
-            },
-            "require": {
-                "components/jquery": "3.*",
-                "difra/lib-events": "~8.0.0"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "main.php"
-                ],
-                "psr-4": {
-                    "Difra\\Jquery3\\": "src"
-                },
-                "classmap": []
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Ed Kutuev",
-                    "email": "ed@napych.com"
-                }
-            ],
-            "description": "jQuery bindings for Difra",
-            "support": {
-                "issues": "https://github.com/difra-org/binding-jquery3/issues",
-                "source": "https://github.com/difra-org/binding-jquery3/tree/master"
-            },
-            "abandoned": "difra/binding-jquery3",
-            "time": "2022-02-04T10:26:47+00:00"
+            "time": "2022-02-05T08:30:03+00:00"
         },
         {
             "name": "difra/lib-cache",
-            "version": "8.0.1",
+            "version": "8.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/difra-org/lib-cache.git",
-                "reference": "3fa5cceb0922b23f53f20ab6eb742cc337a537d6"
+                "reference": "e4481c743f40ed3179087d7c2c352401a60a380a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/difra-org/lib-cache/archive/refs/tags/8.0.1.zip"
+                "url": "https://github.com/difra-org/lib-cache/archive/refs/tags/8.0.5.zip"
             },
             "type": "library",
             "autoload": {
@@ -288,9 +244,9 @@
             "description": "Backend-independent caching library",
             "support": {
                 "issues": "https://github.com/difra-org/lib-cache/issues",
-                "source": "https://github.com/difra-org/lib-cache/tree/8.0.1"
+                "source": "https://github.com/difra-org/lib-cache/tree/8.0.5"
             },
-            "time": "2022-02-02T10:28:28+00:00"
+            "time": "2022-02-05T08:26:07+00:00"
         },
         {
             "name": "difra/lib-db",
@@ -730,12 +686,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Intl\\Grapheme\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Grapheme\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -811,12 +767,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
-                },
                 "files": [
                     "bootstrap.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
+                },
                 "classmap": [
                     "Resources/stubs"
                 ]
@@ -3261,6 +3217,18 @@
     ],
     "aliases": [
         {
+            "package": "difra/binding-bootstrap4",
+            "version": "9999999-dev",
+            "alias": "8.0.0",
+            "alias_normalized": "8.0.0.0"
+        },
+        {
+            "package": "difra/binding-jquery3",
+            "version": "9999999-dev",
+            "alias": "8.0.0",
+            "alias_normalized": "8.0.0.0"
+        },
+        {
             "package": "difra/difra",
             "version": "9999999-dev",
             "alias": "8.0.0",
@@ -3269,7 +3237,9 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "difra/difra": 20
+        "difra/difra": 20,
+        "difra/binding-bootstrap4": 20,
+        "difra/binding-jquery3": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
