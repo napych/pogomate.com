@@ -30,8 +30,7 @@ appService.install = function (e) {
                 '/site.webmanifest?' + appService.build,
                 '/img/maskable-512.png',
 
-                './',
-                '/cleanup',
+                '/',
                 '/lists',
                 '/counters',
                 '/pokemon',
@@ -39,7 +38,25 @@ appService.install = function (e) {
                 '/img/pokeball-special.svg',
                 '/img/gl.svg',
                 '/img/ul.svg',
-                '/img/ml.svg'
+                '/img/ml.svg',
+                '/img/type/Bug.svg',
+                '/img/type/Dark.svg',
+                '/img/type/Dragon.svg',
+                '/img/type/Electric.svg',
+                '/img/type/Fairy.svg',
+                '/img/type/Fighting.svg',
+                '/img/type/Fire.svg',
+                '/img/type/Flying.svg',
+                '/img/type/Ghost.svg',
+                '/img/type/Grass.svg',
+                '/img/type/Ground.svg',
+                '/img/type/Ice.svg',
+                '/img/type/Normal.svg',
+                '/img/type/Poison.svg',
+                '/img/type/Psychic.svg',
+                '/img/type/Rock.svg',
+                '/img/type/Steel.svg',
+                '/img/type/Water.svg'
             ]);
         })
     );
