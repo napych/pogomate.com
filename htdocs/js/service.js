@@ -10,9 +10,9 @@ appService.install = function (e) {
             return cache.addAll([
                 '/js/main.js?' + appService.build,
                 '/css/main.css?' + appService.build,
-                '/js/jquery/jquery-3.5.1.js',
-                '/css/bootstrap/bootstrap.css',
-                '/js/bootstrap/bootstrap.js',
+                '/jquery3/jquery.min.js',
+                '/bootstrap4/css/bootstrap.min.css',
+                '/bootstrap4/js/bootstrap.min.js',
                 '/js/list.js?' + appService.build,
                 '/js/search.js?' + appService.build,
                 '/js/clipboard-polyfill.promise.js?' + appService.build,
