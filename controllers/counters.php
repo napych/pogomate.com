@@ -44,7 +44,7 @@ class Counters extends \Difra\Controller
             }
             try {
                 $counters->addAttackTypes($attacks);
-            } catch (\Exception $e) {
+            } catch (\Exception) {
                 throw new \Exception(404);
             }
             $typeStr = implode('/', $types);
@@ -55,7 +55,10 @@ class Counters extends \Difra\Controller
             $this->setDescription(
                 'Pokémon Go Counters search string for ' . $typeStr
             );
-            $this->setKeywords(implode('/', $types) . ' counters, ' . $this->getKeywords());
+            $this->setKeywords(
+                implode('/', $types) . ' counters, '
+                . 'what counters ' . implode('/', $types) .', '
+                . $this->getKeywords());
             $subNode = $counters->getXML($node, true);
             $subNode->setAttribute('typeStr', $typeStr);
         }

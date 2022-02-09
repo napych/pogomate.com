@@ -70,6 +70,7 @@ class Pokemon extends \Difra\Controller
 
         $keywords = ['pokémon go'];
         $mythical = $legendary = false;
+        $types = [];
         foreach ($pokemonList as $pokemon) {
             $keywords[] = $pokemon->getName();
             if ($pokemon->isLegendary()) {
@@ -78,19 +79,30 @@ class Pokemon extends \Difra\Controller
             if ($pokemon->isMythical()) {
                 $mythical = true;
             }
+            if ($type = $pokemon->getType1()) {
+                $types[$type] = 1;
+            }
+            if ($type = $pokemon->getType2()) {
+                $types[$type] = 1;
+            }
         }
         if ($mythical) {
             $this->setDescription($commonName . ' mythical pokémon information');
-            $keywords[] = 'mythical pokémon';
+            $keywords[] = $postfix = 'mythical pokémon';
         } elseif ($legendary) {
             $this->setDescription($commonName . ' legendary pokémon information');
-            $keywords[] = 'legendary pokémon';
+            $keywords[] = $postfix = 'legendary pokémon';
         } else {
             $this->setDescription($commonName . ' pokémon information');
+            $postfix = 'pokémon';
+        }
+
+        if (!empty($types)) {
+            $keywords[] = implode(' ', array_keys($types)) . ' ' . $postfix;
         }
 
         $this->setKeywords(
-            implode(', ', $keywords) . ', attacker tier list, PVP tiers, top PVP, defenders, top by type'
+            implode(', ', $keywords),
         );
 
         $node = $this->root->appendChild($this->xml->createElement('page-pokemon'));
